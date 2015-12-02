@@ -1,48 +1,52 @@
-# openFrameworks site
+# openFrameworks.kr 프로젝트
 
-This repository stores the content and code that generates the [openFrameworks](http://openFrameworks.cc/) website.
+이 저장소는 [openFrameworks](http://openFrameworks.cc)웹사이트의 한글페이지를 생성하는 코드와 콘텐츠를 저장하는 곳입니다.
 
-## Setting up the site to build locally
+## 로컬상에서 페이지를 빌드하는 세팅법
 
-To contribute, fork the repository and download to your local machine. You'll need to install Python, lxml and [blogofile 0.8b1](http://blogofile.com/):
+참여하기 위해서는, 본 저장소를 fork하고 로컬에 다운받으시면 됩니다.
+Python, lxml 그리고 [blogofile 0.8b1](http://blogofile.com/)을 필요로 합니다:
 
 	easy_install lxml
 	easy_install blogofile
 
-To generate and view the site locally, you have to run:
+사이트를 로컬상에서 생성하여 보고 싶다면, 아래와 같이 실행하면 됩니다 :
 
 	blogofile build
 	blogofile serve
 
-And access the local site in http://localhost:8080/ 
+http://localhost:8080/ 의 주소를 사용하여 로컬에서 접근할 수 있습니다.
 
-You can start editing pages right away. In order to see your changes on your local version you'll have always have to run build & serve before.
+이후부터는 편집이 바로 가능합니다. 로컬에서 변경된 내용을 확인하기 위해서는 확인전 반드시 build, 그리고 serve를 해줘야 합니다.
 
-#### Installing on OS X:
+#### OS X에서 인스톨 하기:
 
-There's a thorough description of the installation procedure on OS X in the [Contributing to the Documentation ](http://www.openframeworks.cc/tutorials/developers/003_contributing_to_the_documentation.html) tutorial.
+맥 OSX상에서 설치 방법은 [문서작성 돕기 ](http://www.openframeworks.cc/tutorials/developers/003_contributing_to_the_documentation.html) 페이지에서 제공되고 있습니다.
 
 
-#### Installing on Debian: 
-You can install blogofile from the Debian (Jessie) repositories by running
+
+#### Debian 환경에서 인스톨하기: 
+아래의 명령어로 Debian(Jessie)의 저장소에서 blogofile을 설치할 수 있습니다.
 
     sudo sudo apt-get install -y blogofile python-lxml
 
-You can also install it by downloading the [package](http://pypi.python.org/packages/source/B/Blogofile/Blogofile-0.8b1.tar.gz) from the [project's page](http://www.blogofile.com/).
 Then inside the blogofile folder run (as root)
+
+위 방법과 다르게, [패키지](http://pypi.python.org/packages/source/B/Blogofile/Blogofile-0.8b1.tar.gz)를 [프로젝트 페이지](http://www.blogofile.com/)에서 다운받을 수 있습니다. 이후 blogofile폴더안에서 아래의 명령어를 사용합니다(as root)
 
 	python setup.py install
 	
 Your may also need to install [asciidoc](http://www.methods.co.nz/asciidoc/manpage.html)
+또한 어쩌면(?; 필요시) [asciidoc](http://www.methods.co.nz/asciidoc/manpage.html)를 설치할 수도 있습니다.
 
-
-#### Installing on Vanilla Ubuntu 12.04:
+#### Vanilla Ubuntu 12.04에서 인스톨하기:
 
 	aptitude install build-essential gcc python-dev libxslt1-dev git python-setuptools python-pip 
 	easy_install lxml
 
 	git clone https://github.com/EnigmaCurry/blogofile
 	cd blogofile
+	checkout 0.8b1
 	python setup.py install
 
 	cd ..
@@ -50,7 +54,34 @@ Your may also need to install [asciidoc](http://www.methods.co.nz/asciidoc/manpa
 	blogofile build
 	blogofile serve
 
-----
+
+
+#### blogofile build시`python ValueError: unknown locale: UTF-8` 오류가 발생할 경우
+
+	해결방법으로 bash_profile에 export LC_ALL=en_US.UTF-8 ,export LANG=en_US.UTF-8 를 추가한다.
+
+`sudo nano ~/.bash_profile`
+
+아래의 코드를 추가한다.
+
+<pre>
+export LC_ALL=en_US.UTF-8    
+export LANG=en_US.UTF-8</pre>
+
+#### 우분투에서 blogofile build시 `python ValueError: unknown locale: UTF-8` 오류가 발생할경우
+
+- 아래의 명령어를 사용하여 
+
+`sudo nano ~/.profile`
+
+아래의 코드를 추가한다
+
+<pre>
+export LC_ALL=un_US.UTF-8
+export LANG=en_US.UTF-8</pre>
+
+- 콘솔을 한번 재시작한다.
+
 
 ## Documentation-style markdown
 
