@@ -2,6 +2,8 @@
 
 이 저장소는 [openFrameworks](http://openFrameworks.cc)웹사이트의 한글페이지를 생성하는 코드와 콘텐츠를 저장하는 곳입니다.
 
+[openFrameworks 영문페이지](http://openFrameworks.cc)의 0.9.0버전 업데이트 이후의 콘텐츠를 번역하는것을 목표로 하고 있습니다.
+
 ## 로컬상에서 페이지를 빌드하는 세팅법
 
 참여하기 위해서는, 본 저장소를 fork하고 로컬에 다운받으시면 됩니다.
