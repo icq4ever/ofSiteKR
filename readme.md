@@ -1,6 +1,7 @@
 # openFrameworks.kr 프로젝트
 
 이 저장소는 [openFrameworks](http://openFrameworks.cc)웹사이트의 한글페이지를 생성하는 코드와 콘텐츠를 저장하는 곳입니다.
+0.9.0업데트 후 페이지 번역을  목표로 하고 있습니다.
 
 ## 로컬상에서 페이지를 빌드하는 세팅법
 
