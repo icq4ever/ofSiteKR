@@ -6,7 +6,7 @@ author: roxlu
 author_site: http://www.roxlu.com/
 ---
 
-These presentations were originally prepared by roxlu, and posted on his [blog](http://www.roxlu.com/blog/entry/145/openframeworks-007-presentations) after a FreakDay meeting in Antwerp.
+아래 프리젠테이션들은 roxlu에 의해 제작되었으며, Antwerp에서 있었던 FreakDay 미팅 이후, 그의 [블로그](http://www.roxlu.com/blog/entry/145/openframeworks-007-presentations)에 게시되어있습니다.
 
 ## Sound
 
