@@ -14,19 +14,18 @@ There's several boards that come with ARMv7 processors, like Pandaboard, BeagleB
 -------------------------------
 
 ## Installing OF
-## OF 설치하기
 
-리눅스 배포판을 보드에 업로드후 구동중이라면, armv7버전의 오픈프레임웍스를 다운받습니다. 압축을 풀고 아래의 명령어를 따라주십시오.
+Once you have a linux distribution up and running in your board, download the armv7 version of openFrameworks. Uncompress it in some folder in your sdcard and follow the next steps:
+
         cd OF_ROOT/scripts/linux/ubuntu
         sudo ./install_dependencies.sh
         sudo ./install_codecs.sh
         
-`ubuntu`키워드대신 여러분이 사용하고 있는 배포판으로 바꿔주십시오. 만약 수행중 에러가 발생하면 [code github](http://github.com/openframeworks/openFrameworks/issues)의 이슈 섹션에 보고해주시기 바랍니다.
-이제 어플리케이션을 컴파일할 수 있습니다.
-
-		cd OF_ROOT/examples/graphics/polygonExample
-
 Replace ubuntu with the distribution you are using. If you get errors in any of this steps please report them in the issues section in our [code github repo](http://github.com/openframeworks/openFrameworks/issues)
+
+Now you can compile applications:
+
+        cd OF_ROOT/examples/graphics/polygonExample
         make
         make run
 
