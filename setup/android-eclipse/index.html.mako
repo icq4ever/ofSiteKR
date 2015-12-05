@@ -1,8 +1,8 @@
 ## -*- coding: utf-8 -*-
 <%inherit file="/_templates/markdown.mako" />
 
-Android
-=======
+안드로이드 
+==========
 
 The Android distribution of openFrameworks is setup to work with either the Eclipse IDE or experimentally with the newer Android Studio IDE. The projects are currently using a custom toolchain based on Makefiles to compile and install applications.
 
