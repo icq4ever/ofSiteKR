@@ -1,5 +1,5 @@
 @import url("http://fonts.googleapis.com/css?family=Roboto");
-@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css); /*add NotoSans Font for KR*/
 
 html {
 	height: 100%;

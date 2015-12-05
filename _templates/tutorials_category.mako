@@ -13,12 +13,12 @@
       <div id="body-wrap">	
 	    <div class="page-wide">
             <!--ul class="submenu">
-                <li><a href="/documentation">reference</a></li>
-                <li><a href="/tutorials">tutorials</a></li>
+                <li><a href="/documentation">레퍼런스</a></li>
+                <li><a href="/tutorials">튜토리얼</a></li>
             </ul-->
 
             
-            <h1>tutorials</h1>    
+            <h1>튜토리얼모음</h1>    
 
 
         	<div class="submenucol-left">
