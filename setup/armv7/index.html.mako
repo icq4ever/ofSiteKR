@@ -2,8 +2,7 @@
 <%inherit file="/_templates/markdown.mako" />
 ${'''
 
-#Linux for ARMv7 generic install
-
+#ARMv7 범용 보드를 위한 리눅스 인스톨 
 There's several boards that come with ARMv7 processors, like Pandaboard, BeagleBoard, BeagleBone (Black), Cubieboard and many others. All of them should be compatible with openFrameworks, the only things you need to check:
 
 - use an armhf (hard float) distribution, OF is compiled with hard float flags and it won't work on OS's compiled with soft float
@@ -13,7 +12,6 @@ There's several boards that come with ARMv7 processors, like Pandaboard, BeagleB
 
 -------------------------------
 
-## Installing OF
 ## OF 설치하기
 
 리눅스 배포판을 보드에 업로드후 구동중이라면, armv7버전의 오픈프레임웍스를 다운받습니다. 압축을 풀고 아래의 명령어를 따라주십시오.
