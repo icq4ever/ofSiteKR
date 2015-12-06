@@ -7,6 +7,7 @@ v0.2, September 2013:
 :numbered:
 :doctype: book
 :author_site: http://www.jeffcrouse.info
+:translator: Yi donghoon <icq4ever@gmail.com>
 :summary: 이 챕터에서는 openFrameworks를 소개하고 여러분이 첫 프로젝트를 시작할 수 있도록 준비하는 과정을 소개합니다.
 
 이 챕터에서는 openFrameworks를 소개하고 여러분이 첫 프로젝트를 시작할 수 있도록 준비하는 과정을 소개합니다.
@@ -14,7 +15,7 @@ v0.2, September 2013:
 image::images/ofw-logo.png["oF Logo",float="right"]
 
 오픈프레임웍스가 뭔가요 ?
-=======================
+=========================
 
 [quote, openframeworks.cc/about]
 __________________________
