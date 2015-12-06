@@ -7,25 +7,38 @@ v0.2, September 2013:
 :numbered:
 :doctype: book
 :author_site: http://www.jeffcrouse.info
-:summary: This chapter will introduce openFrameworks and prepare you to start your first project.
+:summary: 이 챕터에서는 openFrameworks를 소개하고 여러분이 첫 프로젝트를 시작할 수 있도록 준비하는 과정을 소개합니다.
 
-This chapter will introduce openFrameworks and prepare you to start your first project.
+이 챕터에서는 openFrameworks를 소개하고 여러분이 첫 프로젝트를 시작할 수 있도록 준비하는 과정을 소개합니다.
 
 image::images/ofw-logo.png["oF Logo",float="right"]
 
-What is OpenFrameworks?
+오픈프레임웍스가 뭔가요 ?
 =======================
 
 [quote, openframeworks.cc/about]
 __________________________
-openFrameworks is an http://www.openframeworks.cc/about/license.html[open source] http://en.wikipedia.org/wiki/C%2B%2B"[C++] toolkit designed to assist the creative process by providing a simple and intuitive framework for experimentation. The toolkit is designed to work as a general purpose glue, and wraps together several commonly used libraries, including:
+오픈프레임웍스는 실험적인 작업을 위한 간단하고 직관적인 프레임워크를 제공하여 생산적인 프로세스를 돕는 창조적 http://www.openframeworks.cc/about/license.html[오픈소스] http://en.wikipedia.org/wiki/C%2B%2B"[C++] 저작도구입니다. 이 저작도구는 범용적인 "접착제"의 역활을 하도록 디자인 되었으며 아래에 나열된 일반적으로 사용되는 라이브러리들을 포함하고 있습니다. 
 
-- http://www.opengl.org/[OpenGL], http://glew.sourceforge.net/[GLEW], http://www.opengl.org/resources/libraries/glut/[GLUT], http://www.glfw.org/[GLFW], https://code.google.com/p/libtess2/[libtess2] and http://cairographics.org/[cairo] for graphics
-- http://www.music.mcgill.ca/~gary/rtaudio/[rtAudio], http://www.portaudio.com/[PortAudio] or http://www.fmod.org/[FMOD] and http://kissfft.sourceforge.net/[Kiss FFT] for audio input, output and analysis
-- http://freetype.sourceforge.net/index2.html[FreeType] for fonts
-- http://freeimage.sourceforge.net/[FreeImage] for image saving and loading
-- http://developer.apple.com/quicktime/[Quicktime] and https://github.com/ofTheo/videoInput[videoInput] for video playback and grabbing
-- http://pocoproject.org/[Poco] for a variety of utilities
+-   그래픽 :http://www.opengl.org/[OpenGL],
+    http://glew.sourceforge.net/[GLEW],
+    http://www.opengl.org/resources/libraries/glut/[GLUT],
+    http://www.glfw.org/[GLFW],
+    https://code.google.com/p/libtess2/[libtess2],
+    http://cairographics.org/[cairo] 
+
+-   오디오 입력, 출력 및 분석 :http://www.music.mcgill.ca/~gary/rtaudio/[rtAudio],
+    http://www.portaudio.com/[PortAudio]또는 http://www.fmod.org/[FMOD],
+    http://kissfft.sourceforge.net/[KissFFT] 
+
+-   폰트 :http://freetype.sourceforge.net/index2.html[FreeType]
+
+-   이미지 불러오기와 저장 :http://freeimage.sourceforge.net/[FreeImage]
+
+-   비디오 재생 :http://developer.apple.com/quicktime/[Quicktime],
+    https://github.com/ofTheo/videoInput[videoInput]
+
+-   다양한 유틸리티 :http://pocoproject.org/[Poco]
 
 The code is written to be massively cross-compatible. Right now we support five operating systems (Windows, OSX, Linux, iOS, Android) and four IDEs (XCode, Code::Blocks, and Visual Studio and Eclipse). The API is designed to be minimal and easy to grasp.
 

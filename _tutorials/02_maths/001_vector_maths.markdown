@@ -1,7 +1,7 @@
 ---
 date: 2012/02/23 10:00:00
-title: Vector Maths
-summary: Basic concept of vector maths
+title: 벡터 수학
+summary: 벡터 수학의 기초 개념
 author: Keith Pasko
 ---
 

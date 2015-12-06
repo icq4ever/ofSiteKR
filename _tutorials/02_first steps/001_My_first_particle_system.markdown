@@ -1,7 +1,7 @@
 ---
 date: 2012/02/24 10:00:00
 title: 파티클 시스템을 만들어보는 첫 단계
-summary: Is there something more fun than a particle system for making your first steps?
+summary: 첫 단계로 파티클 시스템을 만들어보는것보다 재미난게 있을까요 ?
 author: Patricio Gonzalez Vivo
 author_site: http://patriciogonzalezvivo.com
 ---

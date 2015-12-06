@@ -9,7 +9,7 @@
 
 		<div id="head-right">
 		<ul>
-		        <li><a href="${bf.config.site.url}/about" class="${'active' if active=='소개' else ''}">소개</a></li>
+	        <li><a href="${bf.config.site.url}/about" class="${'active' if active=='소개' else ''}">소개</a></li>
 	        <li><a href="${bf.config.site.url}/download" class="${'active' if active=='다운로드' else ''}" >다운로드</a></li>
 	        <li><a href="${bf.config.site.url}/documentation" class="${'active' if active=='도큐먼트' else ''}">도큐먼트</a></li>
 	        <li><a href="${bf.config.site.url}/tutorials" class="${'active' if active=='튜토리얼' else ''}">튜토리얼</a></li>
