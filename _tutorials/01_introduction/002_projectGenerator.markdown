@@ -1,7 +1,7 @@
 ---
 date: 2012/10/20 17:00:00
-title: Create a new project with the projectGenerator
-summary: openframeworks 0072 comes with a new tool to generate projects
+title: projectGenerator로 새 프로젝트를 생성하세요
+summary: 오픈프레임웍스 0072 부터 새로운 프로젝트 생성기가 추가되었습니다
 author: Jesus Gollonet
 author_site: http://jesusgollonet.com
 ---

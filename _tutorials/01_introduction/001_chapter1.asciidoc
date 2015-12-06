@@ -8,18 +8,18 @@ v0.1, February 2012:
 :numbered:
 :doctype: book
 :author_site: http://jeffcrouse.info
-:summary: This chapter will help you get started with the basics of openFrameworks, such as the proper method for creating a project, setting window size, and basic drawing. But first...
+:summary: 이 챕터에서는 프로젝트를 생성 및 실행윈도우 크기를 지정, 기본 도형을 그리는 등의 오픈프레임웍스를 처음 시작하는 기초적인 단계들을 다룹니다. 하지만 먼저...
 
 ____________
-*Update! New project generator*: _As of openFrameworks 0072 we have a link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[new tool called projectGenerator] to create new openFrameworks projects, including addons. In previous versions, creating a new openFrameworks project involved duplicating an existing example app and adding the addons by hand as described in the tutorial below. With the project generator project creation is faster and less error-prone. We highly recommend it. link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[Check it out now!]_
+*업데이트! 새로운 프로젝트 생성기*: _As of openFrameworks 0072 we have a link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[new tool called projectGenerator] to create new openFrameworks projects, including addons. In previous versions, creating a new openFrameworks project involved duplicating an existing example app and adding the addons by hand as described in the tutorial below. With the project generator project creation is faster and less error-prone. We highly recommend it. link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[Check it out now!]_
 ____________
 
-This chapter will help you get started with the basics of openFrameworks, such as the proper method for creating a project, setting window size, and basic drawing. But first...
+이 챕터에서는 프로젝트를 생성 및 실행윈도우 크기를 지정, 기본 도형을 그리는 등의 오픈프레임웍스를 처음 시작하는 기초적인 단계들을 다룹니다. 하지만 먼저 ...
 
-Your First Look inside oF
--------------------------
+여러분이 처음으로 보는 오픈프레임웍스의 내부 
+--------------------------------------
 
-By this point, I assume that you've http://www.openframeworks.cc/download/[downloaded openFrameworks and followed the appropriate setup guide]. So the first thing you'll want to do is unpack the openFrameworks archive and place the resulting folder somewhere you can easily access. Personally, I like to drop it in my Documents folder and then put a shortcut in my sidebar, like this:
+여기서는, 여러분이 http://www.openframeworks.cc/download/[오픈프레임웍스를 다운및 셋업가이드]를 따라했다고 가정합니다. 우선 여러분이 해야할 일은 압축된 오픈프레임웍스를 여러분이 접근하기 쉬운 폴더에 압축을 푸는 것입니다. 개인적으로, 저는 폴더를 내문서에 위치시키고 사이드바에 바로가기를 만들어둡니다. 이렇게 말이죠 :
 
 image:images/shortcut.png["Shortcut",width="600"]
 
