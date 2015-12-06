@@ -13,8 +13,6 @@ author: Keith Pasko
 ##백터 연산
 
 ###스칼라 곱
-Let's say we want to go 3.14 units "to the right" ("along x", "along the first basis"). We multiply by component, so the result is [1 * 3.14, 0 * 3.14, 0 * 3.14] = [3.14, 0, 0]. Similarly, if we want to go "up" ("along y", "along the second basis") by 1.71, we have [0,1,0] * 1.71 = [1 * 1.71,0 * 1.71,0 * 1.71] = [0,1.71,0]. We can see that multiplying by a scalar, fittingly, scales the vector, keeping the direction the same (or reversing it, if the scalar is negative).
-
 자, "우측방향"으로 3.14만큼 가자 라고 해봅시다.("x를 따라", "첫번째 요소를 따라"). 우리는 각 요소에 곱을 합니다. 따라서 결과는 아래가 됩니다.
 <br/>[ 1\*3.14, 0\*3.14 , 0\*3.14 ] = [ 3.14 , 0 , 0 ]
 
