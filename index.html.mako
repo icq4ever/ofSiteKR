@@ -27,7 +27,7 @@
 </div>
 
 <div class="sectiontext home">
-    <h2>Latest images</h2>
+    <h2>최신 이미지</h2>
 </div>
 <div class="gallery home">
     <div id="flickr"></div>
