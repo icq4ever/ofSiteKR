@@ -104,9 +104,6 @@ drawAim();
 
 우리가 원래 설명했던것 기억나세요? a에서 b로 간다고 했던것? 맞습니다. a와 b가 공간에서 얼마나 떨어져있느냐 - 이것이 바로 c :(b - a) 의 길이입니다. 이는 시뮬레이션이나 그래픽 프로그램에서 엄청 중요한 정보입니다. 벡터의 길이는 보통 |v| 또는 ||v||로 표기합니다. 만약 위키피디아나 어디선가 이것을 본다면 이제 이것이 무엇을 의미하는지 알 수 있을 것입니다.
 
-
-Normalization is the concept of dividing a vector by its length, turning it into a "unit vector", or vector pointed in the same direction, but with a length of 1; this makes sure that the length of the vector doesn't "contaminate" any operations on it. Imagine if our basis vector from the first example wasn't normalized- say (1,0,0) was (25504.77707,0,0), then 3.14*basis1 = (80085,0,0), which is a bit counterintuitive (its more natural to think that the vector (3.14,0,0) actually goes 3.14 units in the x-direction, not 80085 units). Now when we see v / |v| , we know it is the normalized vector in the v direction; holla.
-
 정규화(Normalization)는 벡터를 벡터의 길이로 나누는 것을 의미하는데, 이렇게 하면 "단위 벡터"로 바뀌게 됩니다. 이렇게 정규화된 단위 벡터는 여전히 같은 방향을 가리키지만, 벡터의 길이만 1이 됩니다. 이렇게 되면, 벡터의 길이는 더이상 계산할 정보를 갖고 있지 않게 됩니다. 
 
 자, 처음 섹션에서 예시로 들었던 단위벡터가 정규화 되지 않았다고 생각해보죠 - ( 1, 0, 0)이 아니라 (25504.77707, 0, 0)이라구요. 그리고 나서 3.14 * basis1 = (80085, 0, 0) 이러한 계산을 하계 된다면, 뭔가 직관적이지 않고 혼란스럽지 않나요? (벡터 (3.14, 0, 0)은 사실 x방향으로 3.14만큼 이동한거야 라고 생각하는게 훨씬 자연스럽죠, 80085라는 단위는 일단 제쳐두고요). 자 v / |v|을 보면 이제 이것은 정규화된 단위벡터이고, v의 방향을 갖는다 라고 이해하면 됩니다, 만세!
@@ -118,8 +115,6 @@ v1.normalize(); return v1.length(); // 1을 리턴한다.
 ~~~~
 
 ###내적/투영/반사 (dot product / projection / reflection)
-The dot product can be a confusing thing. In keeping with the somewhat anal-retentive nature of this tutorial, let's just start with a definition- the dot product of a and b [ lets call it dot(a,b) ] = |a|*|b|*cos(theta), where theta is the angle between the two vectors, and |a| and |b| are the lengths of a and b, as described in the last section. Great, but why is that useful? Well, first of all, it enables us to find the angle between any two vectors in any dimension (2d, 3d,...10d?); since dot(a,b) = |a|*|b|*cos(theta), theta, the angle between the vectors, is equal to acos(dot(a,b)/|a|*|b|) (a motivation for learning normalizing, as it quite simplifies this calculation...if a and b are unit vectors, this is just acos(dot(a,b)) ).
-
 백터의 내적(dot product)는 좀 설명하기 어렵습니다. 일단 정의부터 살펴보죠. 
 
 벡터 a와 b의 의 내적은 아래와 같습니다. (dot(a,b))<br/>
@@ -140,7 +135,7 @@ drawDot();
 
 As you can see from the diagram, we can use the dot product to compute the projection of one vector onto the other; it is just |b|*dot(a,|b|). We can also find the smallest distance from a vector a to a vector b, since it is e in the diagram, the perpendicular projection. We can even compute the reflection of a vector across another, since it is d - e ( = 2*d - a, or 2*|b|*dot(a,|b|) - a). The beauty of this formulation is that this abstracts to multiple dimensions- if you want to find the projection of a vector on a plane, you project onto the first basis, project onto the second basis, and add. All this comes from just the innocent looking dot product.
 
-<!--다이어그램에서 보시다시피, 벡터의 내적은 하나의 벡터에서 다른 벡터로의 투영을 계산한다는 것을 알 수 있습니다. |b|\*dot(a, |b|) 이 수식으로요. 또한 a벡터와 벡터 b와의 최소 거리를 구할 수도 있습니다. 해당벡터 e가 수직을 이루고 있지요. 심지어 벡터를 기준으로 반사를 구할 수도 있습니다. d-e (= 2d-2 또는 2|b|*dot(a,|b|))이지요. 이 공식의 훌륭한 점은 다차원에서 두드러집니다. 만약 평면상의 벡터에 대한 투영을 구하고 싶다면, 첫 요소에 project를 하고, 두번쨰 요소에 project를 한다음, 더하면 됩니다. 이 모든게 내적(dot product)를 통해 가능합니다.
+<!--다이어그램에서 보시다시피, 벡터의 내적은 하나의 벡터에서 다른 벡터로의 투영을 계산한다는 것을 알 수 있습니다. |b|\*dot(a, |b|) 이 수식으로요. 또한 벡터 a와 벡터 b와의 최소 거리를 구할 수도 있습니다. 해당벡터 e가 수직을 이루고 있기 때문입니다. 심지어 벡터의 반영(refelction of a vector across another)를 구할 수도 있습니다. d - e ( = 2*d - 2 또는 2*|b|*dot(a,|b|)-a)를 통해서요. 이 공식의 훌륭함은 다차원에서 두드러집니다. 만약 평면상의 어떠한 벡터에 대한 투영을 구하고 싶다면, 첫 요소에 project를 하고, 두번쨰 요소에 project를 한다음, 더하면 됩니다. 이 모든게 내적(dot product)를 통해 가능합니다.
 -->
 OF에서는, 내적을 구할때는 그냥 dot() 함수로 쉽게 다룰 수 있습니다 -
 ~~~~{.cpp}
@@ -149,8 +144,6 @@ ofVec3f v2(4,5,6);
 return v1.dot(v2); //  1*4 + 2*5 + 3*6 = 32; 을 리턴합니다.
 ~~~~
 
-
-OF reference can be found 
 이와 관련된 OF 예제는 <a href = "http://www.openframeworks.cc/documentation/math/ofVec3f.html#dot">이곳</a>에서 확인하실 수 있습니다.
 
 ##수학 nerd들을 위하여(hardcore nerding action for the math-minded)
