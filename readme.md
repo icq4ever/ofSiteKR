@@ -91,6 +91,7 @@ export LANG=en_US.UTF-8</pre>
 	현재 이 저장소에 적용이 되어있습니다.
 
 	폴더 상위의 _config.py를 `vi _config.py`로 열어 아래의 문구를 추가합니다.
+	
 	<pre>
 	...
 
@@ -100,8 +101,7 @@ export LANG=en_US.UTF-8</pre>
 	sys.setdefaultencoding('utf-8')	#이 라인을 추가하세요.
 
 	olderVersion = "0.8.4"
-	...
-	</pre>
+	...	</pre>
 
 ## Documentation-style markdown
 
