@@ -84,6 +84,24 @@ export LANG=en_US.UTF-8</pre>
 
 - 콘솔을 한번 재시작한다.
 
+#### blogfile build시 `ascii codec cannot decode byte 0xec in position..` 오류가 발생할 경우
+
+	추측컨데 이 오류는 python에서의 한글 오류와 관련되어있습니다.
+	구글링 및 테스트 결과 위 오류는 아래와 같은 방법으로 해결이 가능합니다.
+	현재 이 저장소에 적용이 되어있습니다.
+
+	폴더 상위의 _config.py를 `vi _config.py`로 열어 아래의 문구를 추가합니다.
+	<pre>
+	...
+
+	import inspect, os
+	import sys	# 이 라인을 추가하세요.
+	reload(sys) # 이 라인을 추가하세요
+	sys.setdefaultencoding('utf-8')	#이 라인을 추가하세요.
+
+	olderVersion = "0.8.4"
+	...
+	</pre>
 
 ## Documentation-style markdown
 
