@@ -15,8 +15,13 @@
 #  (almost all sites will want to configure these settings)
 ######################################################################
 import inspect, os
+import sys # for encoding issue
+
 sys.path.append( os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe()))) ) # script directory
 #from _version import currentVersion 
+
+reload(sys)
+sys.setdefaultencoding('utf-8') #for encoding issue
 olderVersion = "0.8.4"
 majorVersion = "0.9.0"
 currentVersion = "0.9.0"

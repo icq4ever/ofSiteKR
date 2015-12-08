@@ -61,6 +61,7 @@ Your may also need to install [asciidoc](http://www.methods.co.nz/asciidoc/manpa
 #### blogofile build시`python ValueError: unknown locale: UTF-8` 오류가 발생할 경우
 
 	해결방법으로 bash_profile에 export LC_ALL=en_US.UTF-8 ,export LANG=en_US.UTF-8 를 추가한다.
+	*우분투의 경우는 .bash_profile이 아니라 .profile을 수정하세요*
 
 `sudo nano ~/.bash_profile`
 
@@ -70,20 +71,22 @@ Your may also need to install [asciidoc](http://www.methods.co.nz/asciidoc/manpa
 export LC_ALL=en_US.UTF-8    
 export LANG=en_US.UTF-8</pre>
 
-#### 우분투에서 blogofile build시 `python ValueError: unknown locale: UTF-8` 오류가 발생할경우
+#### blogfile build시 `ascii codec cannot decode byte 0xec in position..` 오류가 발생할 경우
 
-- 아래의 명령어를 사용하여 
+	추측컨데 이 오류는 python에서의 한글 오류와 관련되어있습니다.
+	구글링 및 테스트 결과 위 오류는 아래와 같은 방법으로 해결이 가능합니다.
+	현재 이 저장소에 적용이 되어있습니다.
 
-`sudo nano ~/.profile`
-
-아래의 코드를 추가한다
-
+	폴더 상위의 _config.py를 `vi _config.py`로 열어 아래의 문구를 추가합니다.
+	
 <pre>
-export LC_ALL=un_US.UTF-8
-export LANG=en_US.UTF-8</pre>
-
-- 콘솔을 한번 재시작한다.
-
+...
+import inspect, os
+import sys	# 이 라인을 추가하세요.
+reload(sys) # 이 라인을 추가하세요
+sys.setdefaultencoding('utf-8')	#이 라인을 추가하세요.
+olderVersion = "0.8.4"
+...	</pre>
 
 ## Documentation-style markdown
 
