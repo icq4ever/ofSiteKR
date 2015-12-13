@@ -1,4 +1,4 @@
-ofTutorials - 소개
+ofTutorials - Introduction
 ==========================
 Jeff Crouse <jeff@crouse.cc>
 v0.2, September 2013:
