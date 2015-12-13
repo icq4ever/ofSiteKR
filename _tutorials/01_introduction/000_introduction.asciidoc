@@ -7,7 +7,6 @@ v0.2, September 2013:
 :numbered:
 :doctype: book
 :author_site: http://www.jeffcrouse.info
-:translator: Yi donghoon <icq4ever@gmail.com>
 :summary: 이 챕터에서는 openFrameworks를 소개하고 여러분이 첫 프로젝트를 시작할 수 있도록 준비하는 과정을 소개합니다.
 
 이 챕터에서는 openFrameworks를 소개하고 여러분이 첫 프로젝트를 시작할 수 있도록 준비하는 과정을 소개합니다.
@@ -15,7 +14,7 @@ v0.2, September 2013:
 image::images/ofw-logo.png["oF Logo",float="right"]
 
 오픈프레임웍스가 뭔가요 ?
-=========================
+=======================
 
 [quote, openframeworks.cc/about]
 __________________________
@@ -34,18 +33,18 @@ __________________________
 
 -   폰트 :http://freetype.sourceforge.net/index2.html[FreeType]
 
--   이미지 불러오기와 저장 :http://freeimage.sourceforge.net/[FreeImage]
+-   이미지 불러오기 및 저장 :http://freeimage.sourceforge.net/[FreeImage]
 
 -   비디오 재생 :http://developer.apple.com/quicktime/[Quicktime],
     https://github.com/ofTheo/videoInput[videoInput]
 
 -   다양한 유틸리티 :http://pocoproject.org/[Poco]
 
-The code is written to be massively cross-compatible. Right now we support five operating systems (Windows, OSX, Linux, iOS, Android) and four IDEs (XCode, Code::Blocks, and Visual Studio and Eclipse). The API is designed to be minimal and easy to grasp.
+openFrameworks는 강력한 크로스플랫폼을 지원합니다. 현재만 하더라도 5개의 운영체제와(윈도우, 맥OSX, 리눅스, iOS, 안드로이드) 네 종류의 IDE(XCode, Code::Blocks, Visual Studio, Eclipse)를 지원합니다. API는 최소한으로, 그리고 쉽게 이해되도록 디자인 되었습니다.
 
-Simply put, openFrameworks is a tool that makes it much easier to make things with code. We find it super useful, and we hope you do too.
+간단히 요약하자면, openFrameworks는 코드를 사용하여 쉽게 무언가를 제작할 수 있는 도구라고 할 수 있습니다. 저희에게 상당히 유용한 이 툴이 여러분들께도 도움이 되었으면 좋겠습니다.
 
-openFrameworks is actively developed by http://thesystemis.com/[Zach Lieberman], http://muonics.net/[Theodore Watson], and http://arturocastro.net/[Arturo Castro], with help from the http://www.openframeworks.cc/community/[OF community]. openFrameworks is indebted to two significant precursors: the http://processing.org/[Processing development environment], created by http://reas.com/[Casey Reas], http://benfry.com/[Ben Fry] and the Processing community; and the ACU Toolkit, a privately distributed C++ library developed by Ben Fry and others in the http://acg.media.mit.edu/[MIT Media Lab's Aesthetics and Computation Group].
+openFrameworks는 [Zach Lieberman](http://thesystemis.com/), [Theodore Watson](http://muonics.net/), and [Arturo Castro](http://arturocastro.net/) ("the core")에 의해 활발히 개발되었으며, [OF community](../community/)의 의 도움을 받았습니다. openFrameworks는 두 선지자들의 은혜를 입었습니다: [Casey Reas](http://reas.com/)와 [Ben Fry](http://benfry.com/)에 의해 개발된 [Processing development environment](http://processing.org/), 프로세싱 커뮤니티; 그리고 Ben Fry와 [MIT Media Lab's Aesthetics and Computation Group](http://acg.media.mit.edu/)의 구성원들에 의해 개발된 비공개 c++ 배포판 ACU Toolkit입니다.
 __________________________
 
 
