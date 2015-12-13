@@ -44,7 +44,7 @@ openFrameworks는 강력한 크로스플랫폼을 지원합니다. 현재만 하
 
 간단히 요약하자면, openFrameworks는 코드를 사용하여 쉽게 무언가를 제작할 수 있는 도구라고 할 수 있습니다. 저희에게 상당히 유용한 이 툴이 여러분들께도 도움이 되었으면 좋겠습니다.
 
-openFrameworks는 [Zach Lieberman](http://thesystemis.com/), [Theodore Watson](http://muonics.net/), and [Arturo Castro](http://arturocastro.net/) ("the core")에 의해 활발히 개발되었으며, [OF community](../community/)의 의 도움을 받았습니다. openFrameworks는 두 선지자들의 은혜를 입었습니다: [Casey Reas](http://reas.com/)와 [Ben Fry](http://benfry.com/)에 의해 개발된 [Processing development environment](http://processing.org/), 프로세싱 커뮤니티; 그리고 Ben Fry와 [MIT Media Lab's Aesthetics and Computation Group](http://acg.media.mit.edu/)의 구성원들에 의해 개발된 비공개 c++ 배포판 ACU Toolkit입니다.
+openFrameworks는 http://thesystemis.com/[Zach Lieberman], http://muonics.net/[Theodore Watson], and http://arturocastro.net/[Arturo Castro] ("the core")에 의해 활발히 개발되었으며, http://www.openframeworks.kr/community/[OF community]의 도움을 받았습니다. openFrameworks는 두 선지자들의 은혜를 입었습니다: http://reas.com/[Casey Reas], http://benfry.com/[Ben Fry]에 의해 개발된 http://processing.org/[Processing development environment], 프로세싱 커뮤니티; 그리고 Ben Fry와 http://acg.media.mit.edu/[MIT Media Lab's Aesthetics and Computation Group]의 구성원들에 의해 개발된 비공개 c++ 배포판 ACU Toolkit입니다.
 __________________________
 
 
