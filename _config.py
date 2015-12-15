@@ -33,7 +33,7 @@ breaking = True
 #  non-blogofile site, then you would set the site_url to the full URL
 #  including that subdirectory: "http://www.yoursite.com/path/to/blogofile-dir"
 #site.url = "http://localhost:8080"
-site.url = "http://icq4ever.iptime.org"
+site.url = "http://openframeworks.kr"
 
 #### Blog Settings ####
 blog = controllers.blog
