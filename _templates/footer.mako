@@ -1,7 +1,7 @@
 ## -*- coding: utf-8 -*-
 <p id="credits">
 
-Last updated ${self.getTime()}&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/openframeworks/ofSite/commit/${self.getLastCommitHash()}">${self.getLastCommitHash()}</a>
+Last updated ${self.getTime()}&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR090-/commit/${self.getLastCommitHash()}">${self.getLastCommitHash()}</a>
 
 <!--br/>RSS feeds for <a href="${bf.util.site_path_helper(bf.config.blog.path,'feed')}">Entries</a-->
 
@@ -10,10 +10,11 @@ Last updated ${self.getTime()}&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;<
 href="http://${bf.config.blog.disqus.name}.disqus.com/latest.rss">Comments</a>.
 % endif
 <br/>
-<a href="http://www.rackspace.com" target="_blank" class="rackspace">
-Hosting for openFrameworks is generously provided by Rackspace
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
 <br/>
-<img src="http://c1776742.cdn.cloudfiles.rackspacecloud.com/images/information/mediacenter/links/130x33_grey.png">
+	<img src="http://icq4ever.net/apple-touch-icon.png">
 </a>
 
 </p>
