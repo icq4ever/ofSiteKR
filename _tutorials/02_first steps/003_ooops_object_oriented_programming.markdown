@@ -438,7 +438,7 @@ similarly when we want to draw and update the objects we've created we'll need '
 
 [source code download here][41]
 
-[2]: #overview "개요"
+[2]: #overview "Overview"
 [3]: #oop "What is OOP"
 [4]: #classes "How to build your own Classes"
 [5]: #objects-part-1 "Make objects from your own Classes - Part 1"
