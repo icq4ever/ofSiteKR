@@ -307,9 +307,9 @@ draw()함수에 이와같이 작성합니다:
 
 [![Image:ex21Ball.jpg](003_images/Ex21Ball.jpg)][30]
 
-[source code download here][31]
+[소스코드 다운받기][31]
 
-<h2 id="objects-part-3">make objects from your own Classes - part 3</h2>
+<h2 id="objects-part-3">나만의 클래스로 오브젝트 만들기 - 파트 3</h2>
 
 <!-- As we've seen each of the objects has a set of properties defined by its variables (position, speed and direction and dimension). -->
 <!-- Another advantage of object oriented programming is that the objects created can have different values on each of its properties. -->
@@ -436,7 +436,7 @@ similarly when we want to draw and update the objects we've created we'll need '
 
 [![Image:ex4Ball.jpg](003_images/Ex4Ball.jpg)][40]
 
-[source code download here][41]
+[소스코드 다운받기][41]
 
 [2]: #overview "Overview"
 [3]: #oop "What is OOP"
