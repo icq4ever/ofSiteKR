@@ -19,7 +19,7 @@
 		</ul>
 		
 		<ul class="menu-externals">
-			<!--<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>-->
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
 			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
 			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
 			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
