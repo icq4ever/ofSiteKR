@@ -1,7 +1,7 @@
 ---
 date: 2013/11/20 4:00:00
-title: Generating Meshes
-summary: Basics of Generating Meshes from an Image
+title: 메시 생성하기
+summary: 이미지로부터 메시 생성하기 기초편
 author: [Michael Hadley](www.mikewesthad.wordpress.com/me)
 ---
 
@@ -52,7 +52,7 @@ mesh는 다양한 방법으로 연결이 가능한 **정점들**(Vertices. Verte
 
 1. [ofMesh](http://www.openframeworks.cc/documentation/3d/ofMesh.html)변수를 선언합니다. 여기서는 mesh라고 선언하도록 하죠.
 2. mesh.[setMode()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#!show_setMode)함수를 사용하여, 메쉬가 사용할 정점들을 연결할때 사용할 그리기모드를 지정합니다. (점, 선, 기타 등등..) 우리는 그리기 모드로 점을 사용할 것이므로, **OF_PRIMIRIVE_POINTS**라고 지정해주어야 합니다.
-3. mesh.[addVertex()]](http://www.openframeworks.cc/documentation/3d/ofMesh.html#show_addVertex)를 사용하여 정점들을 추가해줍니다. 정점은 [ofVec3f](http://www.openframeworks.cc/documentation/math/ofVec3f.html)형이므로, 이 클래스를 사용해본적이 없다면, 도큐먼트 페이지의 예제를 참고하시길 바랍니다.
+3. mesh.[addVertex()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#show_addVertex)를 사용하여 정점들을 추가해줍니다. 정점은 [ofVec3f](http://www.openframeworks.cc/documentation/math/ofVec3f.html)형이므로, 이 클래스를 사용해본적이 없다면, 도큐먼트 페이지의 예제를 참고하시길 바랍니다.
 4. mesh.[draw()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#show_draw)를 사용하여 메쉬를 그립니다.
 
 자 이제 코드를 직접 작성해보죠!

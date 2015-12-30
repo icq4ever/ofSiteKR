@@ -1090,7 +1090,7 @@ breakpoint를 지나ㄹ때 프로그램이 멈추면서 디버깅 콘솔을 보�
 
 이것은 프로그램을 디버깅하는데 있어서 정말로 편리합니다. 하지만 이게 뭔지 모른다면 혼란에 빠지게 되겠지요. 또한 프로그램이 왜 멈추는지도 모를것입니다.
 
-To remove a debug point just click on it and drag it out of the window. You'll get a friendly poof of smoke and it'll be gone.
+<!-- To remove a debug point just click on it and drag it out of the window. You'll get a friendly poof of smoke and it'll be gone. -->
 
 breaking point(debug point)를 제거하려면, 그냥 해당 포인트를 클릭하여 윈도우의 바깥으로 드래그하면 됩니다. 
 
