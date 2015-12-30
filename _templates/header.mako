@@ -47,11 +47,11 @@
                 <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
             </form-->
         <ul class="submenu">
-            <li>english</li>
+            <li><a href="http://openframeworks.cc">english></a></li>
             <li>/</li>
             <li><a href="http://openframeworks.jp">japanese</a></li>
 			<li>/</li>
-			<li><a href="http://openframeworks.kr">korean</a></li>
+			<li>korean</li>
         </ul>
 		</div>
 </div><!-- head -->
