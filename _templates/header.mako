@@ -47,7 +47,7 @@
                 <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
             </form-->
         <ul class="submenu">
-            <li><a href="http://openframeworks.cc">english></a></li>
+            <li><a href="http://openframeworks.cc">english</a></li>
             <li>/</li>
             <li><a href="http://openframeworks.jp">japanese</a></li>
 			<li>/</li>
