@@ -115,7 +115,7 @@ author_site:
 
 ### remote상의 가지(branch)를 local에 복사하기 
 
-If you want to check out a branch on a repository, which does not yet exist in your local repository, you use
+<!-- If you want to check out a branch on a repository, which does not yet exist in your local repository, you use -->
 만약 로컬 저장소에 존재하지 않는, 저장소의 branch로 체크아웃하고 싶으시다면
 
 	git fetch origin
