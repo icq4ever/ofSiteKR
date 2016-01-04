@@ -1,0 +1,860 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+    <script src="http://icq4ever.iptime.org//js/jquery.columnizer.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/2.1.08/jquery.masonry.min.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation_index.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43083059-1', 'auto');
+  ga('send', 'pageview');
+
+  </script>
+  </head>
+  <body>
+    <div id="content">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">	
+	    <div class="page-wide-tutorial">
+            <!--ul class="submenu">
+                <li><a href="/documentation">레퍼런스</a></li>
+                <li><a href="/tutorials">튜토리얼</a></li>
+            </ul-->
+    	    <h1>ofxEmscripten</h1>
+    	    <div class="article">
+    	    
+  <h2 id="export-openframeworks-applications-to-work-on-the-web">Export openFrameworks applications to work on the  web</h2>
+
+    		</div>
+        </div><!-- End Page Wide Tutorial --> 
+        <div class="page-wide">
+        	
+<div class="documentation_group">
+	
+
+	<!-- CLASSES -->
+
+    <div class="documentation_index_group">
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxAppEmscriptenWindow.html" class="documentation_class_link"><strong>ofxAppEmscriptenWindow</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxAppEmscriptenWindow.html#!show_ofxAppEmscriptenWindow" title="ofxAppEmscriptenWindow" class="documentation_func">ofxAppEmscriptenWindow()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxAppEmscriptenWindow.html#!show_~ofxAppEmscriptenWindow" title="~ofxAppEmscriptenWindow" class="documentation_func">~ofxAppEmscriptenWindow()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxAppEmscriptenWindow.html#!show_allowsMultiWindow" title="allowsMultiWindow" class="documentation_func">allowsMultiWindow()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxAppEmscriptenWindow.html#!show_disableSetupScreen" title="disableSetupScreen" class="documentation_func">disableSetupScreen()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxAppEmscriptenWindow.html#!show_doesHWOrientation" title="doesHWOrientation" class="documentation_func">doesHWOrientation()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxAppEmscriptenWindow.html#!show_doesLoop" title="doesLoop" class="documentation_func">doesLoop()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxAppEmscriptenWindow.html#!show_enableSetupScreen" title="enableSetupScreen" class="documentation_func">enableSetupScreen()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxAppEmscriptenWindow.html#!show_events" title="events" class="documentation_func">events()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxAppEmscriptenWindow.html#!show_getEGLContext" title="getEGLContext" class="documentation_func">getEGLContext()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxAppEmscriptenWindow.html#!show_getEGLDisplay" title="getEGLDisplay" class="documentation_func">getEGLDisplay()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxAppEmscriptenWindow.html#!show_getEGLSurface" title="getEGLSurface" class="documentation_func">getEGLSurface()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxAppEmscriptenWindow.html#!show_getHeight" title="getHeight" class="documentation_func">getHeight()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxAppEmscriptenWindow.html#!show_getOrientation" title="getOrientation" class="documentation_func">getOrientation()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxAppEmscriptenWindow.html#!show_getScreenSize" title="getScreenSize" class="documentation_func">getScreenSize()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxAppEmscriptenWindow.html#!show_getWidth" title="getWidth" class="documentation_func">getWidth()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxAppEmscriptenWindow.html#!show_getWindowMode" title="getWindowMode" class="documentation_func">getWindowMode()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxAppEmscriptenWindow.html#!show_getWindowPosition" title="getWindowPosition" class="documentation_func">getWindowPosition()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxAppEmscriptenWindow.html#!show_getWindowSize" title="getWindowSize" class="documentation_func">getWindowSize()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxAppEmscriptenWindow.html#!show_hideCursor" title="hideCursor" class="documentation_func">hideCursor()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxAppEmscriptenWindow.html#!show_loop" title="loop" class="documentation_func">loop()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxAppEmscriptenWindow.html#!show_needsPolling" title="needsPolling" class="documentation_func">needsPolling()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxAppEmscriptenWindow.html#!show_pollEvents" title="pollEvents" class="documentation_func">pollEvents()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxAppEmscriptenWindow.html#!show_renderer" title="renderer" class="documentation_func">renderer()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxAppEmscriptenWindow.html#!show_setFullscreen" title="setFullscreen" class="documentation_func">setFullscreen()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxAppEmscriptenWindow.html#!show_setOrientation" title="setOrientation" class="documentation_func">setOrientation()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxAppEmscriptenWindow.html#!show_setVerticalSync" title="setVerticalSync" class="documentation_func">setVerticalSync()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxAppEmscriptenWindow.html#!show_setWindowPosition" title="setWindowPosition" class="documentation_func">setWindowPosition()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxAppEmscriptenWindow.html#!show_setWindowShape" title="setWindowShape" class="documentation_func">setWindowShape()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxAppEmscriptenWindow.html#!show_setWindowTitle" title="setWindowTitle" class="documentation_func">setWindowTitle()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxAppEmscriptenWindow.html#!show_setup" title="setup" class="documentation_func">setup()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxAppEmscriptenWindow.html#!show_showCursor" title="showCursor" class="documentation_func">showCursor()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxAppEmscriptenWindow.html#!show_toggleFullscreen" title="toggleFullscreen" class="documentation_func">toggleFullscreen()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundPlayer.html" class="documentation_class_link"><strong>ofxEmscriptenSoundPlayer</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundPlayer.html#!show_ofxEmscriptenSoundPlayer" title="ofxEmscriptenSoundPlayer" class="documentation_func">ofxEmscriptenSoundPlayer()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundPlayer.html#!show_~ofxEmscriptenSoundPlayer" title="~ofxEmscriptenSoundPlayer" class="documentation_func">~ofxEmscriptenSoundPlayer()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundPlayer.html#!show_getDurationMS" title="getDurationMS" class="documentation_func">getDurationMS()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundPlayer.html#!show_getDurationSecs" title="getDurationSecs" class="documentation_func">getDurationSecs()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundPlayer.html#!show_getPan" title="getPan" class="documentation_func">getPan()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundPlayer.html#!show_getPosition" title="getPosition" class="documentation_func">getPosition()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundPlayer.html#!show_getPositionMS" title="getPositionMS" class="documentation_func">getPositionMS()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundPlayer.html#!show_getSpeed" title="getSpeed" class="documentation_func">getSpeed()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundPlayer.html#!show_getSystemSpectrum" title="getSystemSpectrum" class="documentation_func">getSystemSpectrum()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundPlayer.html#!show_getVolume" title="getVolume" class="documentation_func">getVolume()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundPlayer.html#!show_isLoaded" title="isLoaded" class="documentation_func">isLoaded()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundPlayer.html#!show_isPlaying" title="isPlaying" class="documentation_func">isPlaying()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundPlayer.html#!show_load" title="load" class="documentation_func">load()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundPlayer.html#!show_play" title="play" class="documentation_func">play()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundPlayer.html#!show_setLoop" title="setLoop" class="documentation_func">setLoop()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundPlayer.html#!show_setMultiPlay" title="setMultiPlay" class="documentation_func">setMultiPlay()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundPlayer.html#!show_setPan" title="setPan" class="documentation_func">setPan()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundPlayer.html#!show_setPaused" title="setPaused" class="documentation_func">setPaused()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundPlayer.html#!show_setPosition" title="setPosition" class="documentation_func">setPosition()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundPlayer.html#!show_setPositionMS" title="setPositionMS" class="documentation_func">setPositionMS()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundPlayer.html#!show_setSpeed" title="setSpeed" class="documentation_func">setSpeed()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundPlayer.html#!show_setVolume" title="setVolume" class="documentation_func">setVolume()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundPlayer.html#!show_stop" title="stop" class="documentation_func">stop()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundPlayer.html#!show_unload" title="unload" class="documentation_func">unload()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundStream.html" class="documentation_class_link"><strong>ofxEmscriptenSoundStream</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundStream.html#!show_ofxEmscriptenSoundStream" title="ofxEmscriptenSoundStream" class="documentation_func">ofxEmscriptenSoundStream()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundStream.html#!show_~ofxEmscriptenSoundStream" title="~ofxEmscriptenSoundStream" class="documentation_func">~ofxEmscriptenSoundStream()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundStream.html#!show_close" title="close" class="documentation_func">close()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundStream.html#!show_getBufferSize" title="getBufferSize" class="documentation_func">getBufferSize()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundStream.html#!show_getDeviceID" title="getDeviceID" class="documentation_func">getDeviceID()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundStream.html#!show_getDeviceList" title="getDeviceList" class="documentation_func">getDeviceList()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundStream.html#!show_getNumInputChannels" title="getNumInputChannels" class="documentation_func">getNumInputChannels()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundStream.html#!show_getNumOutputChannels" title="getNumOutputChannels" class="documentation_func">getNumOutputChannels()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundStream.html#!show_getSampleRate" title="getSampleRate" class="documentation_func">getSampleRate()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundStream.html#!show_getTickCount" title="getTickCount" class="documentation_func">getTickCount()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundStream.html#!show_setDeviceID" title="setDeviceID" class="documentation_func">setDeviceID()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundStream.html#!show_setInput" title="setInput" class="documentation_func">setInput()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundStream.html#!show_setOutput" title="setOutput" class="documentation_func">setOutput()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundStream.html#!show_setup" title="setup" class="documentation_func">setup()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundStream.html#!show_start" title="start" class="documentation_func">start()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenSoundStream.html#!show_stop" title="stop" class="documentation_func">stop()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenURLFileLoader.html" class="documentation_class_link"><strong>ofxEmscriptenURLFileLoader</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenURLFileLoader.html#!show_ofxEmscriptenURLFileLoader" title="ofxEmscriptenURLFileLoader" class="documentation_func">ofxEmscriptenURLFileLoader()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenURLFileLoader.html#!show_~ofxEmscriptenURLFileLoader" title="~ofxEmscriptenURLFileLoader" class="documentation_func">~ofxEmscriptenURLFileLoader()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenURLFileLoader.html#!show_clear" title="clear" class="documentation_func">clear()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenURLFileLoader.html#!show_get" title="get" class="documentation_func">get()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenURLFileLoader.html#!show_getAsync" title="getAsync" class="documentation_func">getAsync()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenURLFileLoader.html#!show_handleRequest" title="handleRequest" class="documentation_func">handleRequest()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenURLFileLoader.html#!show_remove" title="remove" class="documentation_func">remove()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenURLFileLoader.html#!show_saveAsync" title="saveAsync" class="documentation_func">saveAsync()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenURLFileLoader.html#!show_saveTo" title="saveTo" class="documentation_func">saveTo()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenURLFileLoader.html#!show_stop" title="stop" class="documentation_func">stop()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoGrabber.html" class="documentation_class_link"><strong>ofxEmscriptenVideoGrabber</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoGrabber.html#!show_ofxEmscriptenVideoGrabber" title="ofxEmscriptenVideoGrabber" class="documentation_func">ofxEmscriptenVideoGrabber()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoGrabber.html#!show_~ofxEmscriptenVideoGrabber" title="~ofxEmscriptenVideoGrabber" class="documentation_func">~ofxEmscriptenVideoGrabber()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoGrabber.html#!show_close" title="close" class="documentation_func">close()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoGrabber.html#!show_getHeight" title="getHeight" class="documentation_func">getHeight()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoGrabber.html#!show_getPixelFormat" title="getPixelFormat" class="documentation_func">getPixelFormat()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoGrabber.html#!show_getPixels" title="getPixels" class="documentation_func">getPixels()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoGrabber.html#!show_getTexture" title="getTexture" class="documentation_func">getTexture()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoGrabber.html#!show_getWidth" title="getWidth" class="documentation_func">getWidth()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoGrabber.html#!show_isFrameNew" title="isFrameNew" class="documentation_func">isFrameNew()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoGrabber.html#!show_isInitialized" title="isInitialized" class="documentation_func">isInitialized()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoGrabber.html#!show_listDevices" title="listDevices" class="documentation_func">listDevices()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoGrabber.html#!show_setDesiredFrameRate" title="setDesiredFrameRate" class="documentation_func">setDesiredFrameRate()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoGrabber.html#!show_setDeviceID" title="setDeviceID" class="documentation_func">setDeviceID()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoGrabber.html#!show_setPixelFormat" title="setPixelFormat" class="documentation_func">setPixelFormat()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoGrabber.html#!show_setUsePixels" title="setUsePixels" class="documentation_func">setUsePixels()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoGrabber.html#!show_setup" title="setup" class="documentation_func">setup()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoGrabber.html#!show_update" title="update" class="documentation_func">update()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoGrabber.html#!show_videoSettings" title="videoSettings" class="documentation_func">videoSettings()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html" class="documentation_class_link"><strong>ofxEmscriptenVideoPlayer</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_ofxEmscriptenVideoPlayer" title="ofxEmscriptenVideoPlayer" class="documentation_func">ofxEmscriptenVideoPlayer()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_~ofxEmscriptenVideoPlayer" title="~ofxEmscriptenVideoPlayer" class="documentation_func">~ofxEmscriptenVideoPlayer()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_close" title="close" class="documentation_func">close()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_firstFrame" title="firstFrame" class="documentation_func">firstFrame()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_getCurrentFrame" title="getCurrentFrame" class="documentation_func">getCurrentFrame()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_getDuration" title="getDuration" class="documentation_func">getDuration()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_getHeight" title="getHeight" class="documentation_func">getHeight()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_getIsMovieDone" title="getIsMovieDone" class="documentation_func">getIsMovieDone()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_getLoopState" title="getLoopState" class="documentation_func">getLoopState()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_getPixelFormat" title="getPixelFormat" class="documentation_func">getPixelFormat()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_getPixels" title="getPixels" class="documentation_func">getPixels()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_getPosition" title="getPosition" class="documentation_func">getPosition()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_getSpeed" title="getSpeed" class="documentation_func">getSpeed()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_getTexture" title="getTexture" class="documentation_func">getTexture()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_getTotalNumFrames" title="getTotalNumFrames" class="documentation_func">getTotalNumFrames()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_getWidth" title="getWidth" class="documentation_func">getWidth()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_isFrameNew" title="isFrameNew" class="documentation_func">isFrameNew()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_isLoaded" title="isLoaded" class="documentation_func">isLoaded()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_isPaused" title="isPaused" class="documentation_func">isPaused()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_isPlaying" title="isPlaying" class="documentation_func">isPlaying()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_load" title="load" class="documentation_func">load()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_nextFrame" title="nextFrame" class="documentation_func">nextFrame()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_play" title="play" class="documentation_func">play()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_previousFrame" title="previousFrame" class="documentation_func">previousFrame()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_setFrame" title="setFrame" class="documentation_func">setFrame()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_setLoopState" title="setLoopState" class="documentation_func">setLoopState()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_setPaused" title="setPaused" class="documentation_func">setPaused()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_setPixelFormat" title="setPixelFormat" class="documentation_func">setPixelFormat()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_setPosition" title="setPosition" class="documentation_func">setPosition()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_setSpeed" title="setSpeed" class="documentation_func">setSpeed()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_setUsePixels" title="setUsePixels" class="documentation_func">setUsePixels()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_setVolume" title="setVolume" class="documentation_func">setVolume()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_stop" title="stop" class="documentation_func">stop()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/ofxEmscripten/ofxEmscriptenVideoPlayer.html#!show_update" title="update" class="documentation_func">update()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+    </div>
+    
+</div>
+
+		</div><!-- End Page Wide -->   
+      </div><!-- End Body Wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:34:26 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+eb73abcb6141243ae29291b42ec447024f00a570
+">
+
+eb73abcb6141243ae29291b42ec447024f00a570
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,3133 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr - of3dGraphics</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+    <script src="http://icq4ever.iptime.org//js/jquery.columnizer.min.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation.js"></script>
+  </head>
+  <body>
+    <div id="content">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">
+          <div class="page-wide">
+          
+              <div id="docstitle"><h1>of3dGraphics</h1></div>
+              <div id="editdocs">
+                    <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/3d/of3dGraphics.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
+                     <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/3d/of3dGraphics_functions.markdown" class="nohover"><img title="edit functions on GitHub" src="/images/editfunctions.png?a=5"/></a>
+              </div>
+              
+          </div>
+          
+          
+        <div class="page-wide">
+		    <div class="submenucol-left">
+		     <!-- list of methods -->
+		     <p class="top_list_header">class methods</p>
+             <ul class="functionslist">
+                 
+                         <li class="noDoc">
+                         <a href="#show_of3dGraphics" class="of3dGraphics" data-lookup="of3dGraphics">of3dGraphics()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_drawArrow" class="drawArrow" data-lookup="drawArrow">drawArrow()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_drawAxis" class="drawAxis" data-lookup="drawAxis">drawAxis()</a></li>
+                     
+                         <li>
+                         <a href="#show_drawBox" class="drawBox" data-lookup="drawBox">drawBox()</a></li>
+                     
+                     
+                     
+                     
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_drawCone" class="drawCone" data-lookup="drawCone">drawCone()</a></li>
+                     
+                     
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_drawCylinder" class="drawCylinder" data-lookup="drawCylinder">drawCylinder()</a></li>
+                     
+                     
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_drawGrid" class="drawGrid" data-lookup="drawGrid">drawGrid()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_drawGridPlane" class="drawGridPlane" data-lookup="drawGridPlane">drawGridPlane()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_drawIcoSphere" class="drawIcoSphere" data-lookup="drawIcoSphere">drawIcoSphere()</a></li>
+                     
+                     
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_drawPlane" class="drawPlane" data-lookup="drawPlane">drawPlane()</a></li>
+                     
+                     
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_drawRotationAxes" class="drawRotationAxes" data-lookup="drawRotationAxes">drawRotationAxes()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_drawSphere" class="drawSphere" data-lookup="drawSphere">drawSphere()</a></li>
+                     
+                     
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_getBoxResolution" class="getBoxResolution" data-lookup="getBoxResolution">getBoxResolution()</a></li>
+                     
+                         <li>
+                         <a href="#show_getConeResolution" class="getConeResolution" data-lookup="getConeResolution">getConeResolution()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getCylinderResolution" class="getCylinderResolution" data-lookup="getCylinderResolution">getCylinderResolution()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getIcoSphereResolution" class="getIcoSphereResolution" data-lookup="getIcoSphereResolution">getIcoSphereResolution()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getPlaneResolution" class="getPlaneResolution" data-lookup="getPlaneResolution">getPlaneResolution()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getSphereResolution" class="getSphereResolution" data-lookup="getSphereResolution">getSphereResolution()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_setBoxResolution" class="setBoxResolution" data-lookup="setBoxResolution">setBoxResolution()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_setConeResolution" class="setConeResolution" data-lookup="setConeResolution">setConeResolution()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setCylinderResolution" class="setCylinderResolution" data-lookup="setCylinderResolution">setCylinderResolution()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setIcoSphereResolution" class="setIcoSphereResolution" data-lookup="setIcoSphereResolution">setIcoSphereResolution()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setPlaneResolution" class="setPlaneResolution" data-lookup="setPlaneResolution">setPlaneResolution()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setSphereResolution" class="setSphereResolution" data-lookup="setSphereResolution">setSphereResolution()</a></li>
+                     
+             </ul>
+            
+             
+             
+             <!-- list of variables -->              
+            
+             
+            
+             <!-- list of functions -->              
+            <p class="top_list_header">global functions</p>
+                <ul class="functionslist">
+                     
+                            <li>
+                            <a href="#show_ofDrawBox" class="ofDrawBox" data-lookup="ofDrawBox">ofDrawBox()</a></li>
+                         
+                         
+                         
+                         
+                         
+                         
+                            <li>
+                            <a href="#show_ofDrawCone" class="ofDrawCone" data-lookup="ofDrawCone">ofDrawCone()</a></li>
+                         
+                         
+                         
+                         
+                            <li>
+                            <a href="#show_ofDrawCylinder" class="ofDrawCylinder" data-lookup="ofDrawCylinder">ofDrawCylinder()</a></li>
+                         
+                         
+                         
+                         
+                            <li>
+                            <a href="#show_ofDrawIcoSphere" class="ofDrawIcoSphere" data-lookup="ofDrawIcoSphere">ofDrawIcoSphere()</a></li>
+                         
+                         
+                         
+                         
+                            <li>
+                            <a href="#show_ofDrawPlane" class="ofDrawPlane" data-lookup="ofDrawPlane">ofDrawPlane()</a></li>
+                         
+                         
+                         
+                         
+                            <li>
+                            <a href="#show_ofDrawSphere" class="ofDrawSphere" data-lookup="ofDrawSphere">ofDrawSphere()</a></li>
+                         
+                         
+                         
+                         
+                            <li>
+                            <a href="#show_ofGetBoxResolution" class="ofGetBoxResolution" data-lookup="ofGetBoxResolution">ofGetBoxResolution()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofGetConeResolution" class="ofGetConeResolution" data-lookup="ofGetConeResolution">ofGetConeResolution()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofGetCylinderResolution" class="ofGetCylinderResolution" data-lookup="ofGetCylinderResolution">ofGetCylinderResolution()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofGetIcoSphereResolution" class="ofGetIcoSphereResolution" data-lookup="ofGetIcoSphereResolution">ofGetIcoSphereResolution()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofGetPlaneResolution" class="ofGetPlaneResolution" data-lookup="ofGetPlaneResolution">ofGetPlaneResolution()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofGetSphereResolution" class="ofGetSphereResolution" data-lookup="ofGetSphereResolution">ofGetSphereResolution()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofSetBoxResolution" class="ofSetBoxResolution" data-lookup="ofSetBoxResolution">ofSetBoxResolution()</a></li>
+                         
+                         
+                            <li>
+                            <a href="#show_ofSetConeResolution" class="ofSetConeResolution" data-lookup="ofSetConeResolution">ofSetConeResolution()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofSetCylinderResolution" class="ofSetCylinderResolution" data-lookup="ofSetCylinderResolution">ofSetCylinderResolution()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofSetIcoSphereResolution" class="ofSetIcoSphereResolution" data-lookup="ofSetIcoSphereResolution">ofSetIcoSphereResolution()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofSetPlaneResolution" class="ofSetPlaneResolution" data-lookup="ofSetPlaneResolution">ofSetPlaneResolution()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofSetSphereResolution" class="ofSetSphereResolution" data-lookup="ofSetSphereResolution">ofSetSphereResolution()</a></li>
+                         
+                 </ul>
+		    </div>
+	    <div class="submenucol-right">
+            <div class="documentation_detail class_documentation">
+              
+  
+
+
+              
+              
+  
+
+           </div>
+                  
+            <!-- methods detail -->
+              <!--h2><a name="methods"></a>of3dGraphics methods</h2-->
+                        
+<div class="documentation_detail of3dGraphics" data-lookup="of3dGraphics" data-item-type="method">
+  	 
+	<h1><a name="show_of3dGraphics">of3dGraphics(...)</a></h1>
+	<h2>
+  <p>of3dGraphics::of3dGraphics(ofBaseRenderer *renderer)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawArrow" data-lookup="drawArrow" data-item-type="method">
+  	 
+	<h1><a name="show_drawArrow">drawArrow(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::drawArrow(const ofVec3f &amp;start, const ofVec3f &amp;end, float headSize)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawAxis" data-lookup="drawAxis" data-item-type="method">
+  	 
+	<h1><a name="show_drawAxis">drawAxis(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::drawAxis(float size)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawBox" data-lookup="drawBox" data-item-type="method">
+  	 
+	<h1><a name="show_drawBox">drawBox(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::drawBox(const ofPoint &amp;position, float size)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Draws a cube with the specified size, starting from the specified position.</p>
+<p>A cube is drawn starting from a 3D reference position, with the specified size.
+The cube is drawn with the current color, e.g. set with ofSetColor().
+The cube is drawn filled by default; change this with ofFill();</p>
+<p>Parameters:
+position an ofPoint which contains the (x,y,z) coordinates for the cube's reference corner.
+size The size of the cube.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawBox" data-lookup="drawBox" data-item-type="method">
+  	 
+	<h1><a name="show_drawBox">drawBox(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::drawBox(const ofPoint &amp;position, float width, float height, float depth)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Draws a rectangular box with the specified dimensions, starting from the specified position.</p>
+<p>A box is a rectangular solid: an extruded rectangle.
+It is drawn starting from a 3D reference coordinate.
+It has a width (in x), a height (in y), and a depth (in z).
+The box is drawn with the current color, e.g. set with ofSetColor().
+The box is drawn filled by default; change this with ofFill();</p>
+<p>Parameters:
+position an ofPoint which contains the (x,y,z) coordinates for the box's reference corner.
+width The width of the box.
+height The height of the box.
+depth The depth of the box.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawBox" data-lookup="drawBox" data-item-type="method">
+  	 
+	<h1><a name="show_drawBox">drawBox(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::drawBox(float size)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Draws a cube with the specified size, starting from the origin.</p>
+<p>The cube is drawn with the current color, e.g. set with ofSetColor().
+The cube is drawn filled by default; change this with ofFill();</p>
+<p>Parameters:
+size The size of the cube.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawBox" data-lookup="drawBox" data-item-type="method">
+  	 
+	<h1><a name="show_drawBox">drawBox(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::drawBox(float width, float height, float depth)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Draws a rectangular box with the specified dimensions, starting from the origin.</p>
+<p>A box is a rectangular solid: an extruded rectangle.
+It is drawn starting from the origin of the current reference frame.
+It has a width (in x), a height (in y), and a depth (in z).
+The box is drawn with the current color, e.g. set with ofSetColor().
+The box is drawn filled by default; change this with ofFill();</p>
+<p>Parameters:
+width The width of the box.
+height The height of the box.
+depth The depth of the box.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawBox" data-lookup="drawBox" data-item-type="method">
+  	 
+	<h1><a name="show_drawBox">drawBox(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::drawBox(float x, float y, float z, float size)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Draws a cube with the specified size, starting from the specified coordinates.</p>
+<p>A cube is a rectangular solid bounded by six square faces of equal size.
+It is also known as a regular hexahedron, a square parallelepiped, an equilateral cuboid
+and a right rhombohedron. It is a regular square prism in three orientations.</p>
+<p>It is drawn starting from a 3D reference coordinate, with the specified size.
+The cube is drawn with the current color, e.g. set with ofSetColor().
+The cube is drawn filled by default; change this with ofFill();</p>
+<p>Parameters:
+x The x-coordinate of the cube's origin.
+y The y-coordinate of the cube's origin.
+z The z-coordinate of the cube's origin.
+size The size of the cube.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawBox" data-lookup="drawBox" data-item-type="method">
+  	 
+	<h1><a name="show_drawBox">drawBox(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::drawBox(float x, float y, float z, float width, float height, float depth)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Draws a rectangular box with the specified dimensions, starting from the specified coordinates.</p>
+<p>A box is a rectangular solid: an extruded rectangle.
+It is drawn starting from a 3D reference coordinate.
+It has a width (in x), a height (in y), and a depth (in z).
+The box is drawn with the current color, e.g. set with ofSetColor().
+The box is drawn filled by default; change this with ofFill();</p>
+<p>Parameters:
+x The x-coordinate of the box's origin.
+y The y-coordinate of the box's origin.
+z The z-coordinate of the box's origin.
+width The width of the box.
+height The height of the box.
+depth The depth of the box.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawCone" data-lookup="drawCone" data-item-type="method">
+  	 
+	<h1><a name="show_drawCone">drawCone(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::drawCone(const ofPoint &amp;position, float radius, float height)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawCone" data-lookup="drawCone" data-item-type="method">
+  	 
+	<h1><a name="show_drawCone">drawCone(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::drawCone(float radius, float height)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawCone" data-lookup="drawCone" data-item-type="method">
+  	 
+	<h1><a name="show_drawCone">drawCone(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::drawCone(float x, float y, float radius, float height)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawCone" data-lookup="drawCone" data-item-type="method">
+  	 
+	<h1><a name="show_drawCone">drawCone(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::drawCone(float x, float y, float z, float radius, float height)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawCylinder" data-lookup="drawCylinder" data-item-type="method">
+  	 
+	<h1><a name="show_drawCylinder">drawCylinder(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::drawCylinder(const ofPoint &amp;position, float radius, float height)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawCylinder" data-lookup="drawCylinder" data-item-type="method">
+  	 
+	<h1><a name="show_drawCylinder">drawCylinder(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::drawCylinder(float radius, float height)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawCylinder" data-lookup="drawCylinder" data-item-type="method">
+  	 
+	<h1><a name="show_drawCylinder">drawCylinder(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::drawCylinder(float x, float y, float radius, float height)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawCylinder" data-lookup="drawCylinder" data-item-type="method">
+  	 
+	<h1><a name="show_drawCylinder">drawCylinder(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::drawCylinder(float x, float y, float z, float radius, float height)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawGrid" data-lookup="drawGrid" data-item-type="method">
+  	 
+	<h1><a name="show_drawGrid">drawGrid(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::drawGrid(float stepSize, size_t numberOfSteps, bool labels, bool x, bool y, bool z)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawGridPlane" data-lookup="drawGridPlane" data-item-type="method">
+  	 
+	<h1><a name="show_drawGridPlane">drawGridPlane(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::drawGridPlane(float stepSize, size_t numberOfSteps, bool labels)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawIcoSphere" data-lookup="drawIcoSphere" data-item-type="method">
+  	 
+	<h1><a name="show_drawIcoSphere">drawIcoSphere(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::drawIcoSphere(const ofPoint &amp;position, float radius)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawIcoSphere" data-lookup="drawIcoSphere" data-item-type="method">
+  	 
+	<h1><a name="show_drawIcoSphere">drawIcoSphere(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::drawIcoSphere(float radius)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawIcoSphere" data-lookup="drawIcoSphere" data-item-type="method">
+  	 
+	<h1><a name="show_drawIcoSphere">drawIcoSphere(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::drawIcoSphere(float x, float y, float radius)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawIcoSphere" data-lookup="drawIcoSphere" data-item-type="method">
+  	 
+	<h1><a name="show_drawIcoSphere">drawIcoSphere(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::drawIcoSphere(float x, float y, float z, float radius)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawPlane" data-lookup="drawPlane" data-item-type="method">
+  	 
+	<h1><a name="show_drawPlane">drawPlane(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::drawPlane(float width, float height)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawPlane" data-lookup="drawPlane" data-item-type="method">
+  	 
+	<h1><a name="show_drawPlane">drawPlane(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::drawPlane(float x, float y, float width, float height)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawPlane" data-lookup="drawPlane" data-item-type="method">
+  	 
+	<h1><a name="show_drawPlane">drawPlane(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::drawPlane(float x, float y, float z, float width, float height)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawPlane" data-lookup="drawPlane" data-item-type="method">
+  	 
+	<h1><a name="show_drawPlane">drawPlane(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::drawPlane(ofPoint &amp;position, float width, float height)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawRotationAxes" data-lookup="drawRotationAxes" data-item-type="method">
+  	 
+	<h1><a name="show_drawRotationAxes">drawRotationAxes(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::drawRotationAxes(float radius, float stripWidth, int circleRes)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawSphere" data-lookup="drawSphere" data-item-type="method">
+  	 
+	<h1><a name="show_drawSphere">drawSphere(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::drawSphere(const ofPoint &amp;position, float radius)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawSphere" data-lookup="drawSphere" data-item-type="method">
+  	 
+	<h1><a name="show_drawSphere">drawSphere(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::drawSphere(float radius)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawSphere" data-lookup="drawSphere" data-item-type="method">
+  	 
+	<h1><a name="show_drawSphere">drawSphere(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::drawSphere(float x, float y, float radius)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawSphere" data-lookup="drawSphere" data-item-type="method">
+  	 
+	<h1><a name="show_drawSphere">drawSphere(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::drawSphere(float x, float y, float z, float radius)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getBoxResolution" data-lookup="getBoxResolution" data-item-type="method">
+  	 
+	<h1><a name="show_getBoxResolution">getBoxResolution()</a></h1>
+	<h2>
+  <p>ofVec3f of3dGraphics::getBoxResolution()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getConeResolution" data-lookup="getConeResolution" data-item-type="method">
+  	 
+	<h1><a name="show_getConeResolution">getConeResolution()</a></h1>
+	<h2>
+  <p>ofVec3f of3dGraphics::getConeResolution()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Retrieve a data structure describing the resolution with which cones are polygonized.</p>
+<p>Allows you to fetch the resolution with which cones are polygonized.
+Returns an ofVec3f containing the following data:
+Encoded as "x": radiusSegments, the number of facets (subdivisions) around the cone's circular footprint.
+Encoded as "y": heightSegments, the number of subdivisions from the cone's top to bottom.
+Encoded as "z": capSegments, the number of annular (ring-shaped) subdivisions of the cone's endcap.</p>
+<p>Returns: An ofVec3f containing (radiusSegments, heightSegments, capSegments) for cone polygonization.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getCylinderResolution" data-lookup="getCylinderResolution" data-item-type="method">
+  	 
+	<h1><a name="show_getCylinderResolution">getCylinderResolution()</a></h1>
+	<h2>
+  <p>ofVec3f of3dGraphics::getCylinderResolution()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getIcoSphereResolution" data-lookup="getIcoSphereResolution" data-item-type="method">
+  	 
+	<h1><a name="show_getIcoSphereResolution">getIcoSphereResolution()</a></h1>
+	<h2>
+  <p>int of3dGraphics::getIcoSphereResolution()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getPlaneResolution" data-lookup="getPlaneResolution" data-item-type="method">
+  	 
+	<h1><a name="show_getPlaneResolution">getPlaneResolution()</a></h1>
+	<h2>
+  <p>ofVec2f of3dGraphics::getPlaneResolution()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getSphereResolution" data-lookup="getSphereResolution" data-item-type="method">
+  	 
+	<h1><a name="show_getSphereResolution">getSphereResolution()</a></h1>
+	<h2>
+  <p>int of3dGraphics::getSphereResolution()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setBoxResolution" data-lookup="setBoxResolution" data-item-type="method">
+  	 
+	<h1><a name="show_setBoxResolution">setBoxResolution(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::setBoxResolution(int res)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setBoxResolution" data-lookup="setBoxResolution" data-item-type="method">
+  	 
+	<h1><a name="show_setBoxResolution">setBoxResolution(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::setBoxResolution(int resWidth, int resHeight, int resDepth)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setConeResolution" data-lookup="setConeResolution" data-item-type="method">
+  	 
+	<h1><a name="show_setConeResolution">setConeResolution(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::setConeResolution(int radiusSegments, int heightSegments, int capSegments=2)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Set the resolution of a polygonized cone.</p>
+<p>Allows you to set the polygonization resolution of any cones you subsequently draw with ofDrawCone().</p>
+<p>Parameters:
+radiusSegments The number of facets (subdivisions) around the cone's circular footprint.
+heightSegments The number of subdivisions from the cone's top to bottom.
+capSegments The number of annular (ring-shaped) subdivisions of the cone's endcap.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setCylinderResolution" data-lookup="setCylinderResolution" data-item-type="method">
+  	 
+	<h1><a name="show_setCylinderResolution">setCylinderResolution(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::setCylinderResolution(int radiusSegments, int heightSegments, int capSegments=2)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setIcoSphereResolution" data-lookup="setIcoSphereResolution" data-item-type="method">
+  	 
+	<h1><a name="show_setIcoSphereResolution">setIcoSphereResolution(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::setIcoSphereResolution(int res)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setPlaneResolution" data-lookup="setPlaneResolution" data-item-type="method">
+  	 
+	<h1><a name="show_setPlaneResolution">setPlaneResolution(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::setPlaneResolution(int columns, int rows)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setSphereResolution" data-lookup="setSphereResolution" data-item-type="method">
+  	 
+	<h1><a name="show_setSphereResolution">setSphereResolution(...)</a></h1>
+	<h2>
+  <p>void of3dGraphics::setSphereResolution(int res)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+
+            <!-- vars detail -->
+
+            <!-- functions detail -->
+              <!--h2><a name="functions"></a>of3dGraphics functions</h2-->
+                        
+<div class="documentation_detail ofDrawBox" data-lookup="ofDrawBox" data-item-type="function">
+  	 
+	<h1><a name="show_ofDrawBox">ofDrawBox(...)</a></h1>
+	<h2>
+  <p>void ofDrawBox(float x, float y, float z, float width, float height, float depth)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Draws a rectangular box with the specified dimensions, starting from the specified coordinates. 
+A box is a rectangular solid: an extruded rectangle. It is drawn starting from a 3D reference coordinate. It has a width (in x), a height (in y), and a depth (in z). The box is drawn with the current color, e.g. set with ofSetColor(). The box is drawn filled by default; change this with ofFill();</p>
+<pre><code class="cpp">void ofApp::draw(){
+
+//  Draw a red cuboid slightly off the center of the canvas so to see the 3d shape.
+
+ofSetColor(255, 0, 0);
+ofFill();
+ofDrawBox(ofGetWidth() * .5, ofGetHeight() * .7, 0, 200, 100, 200);
+
+//NOTE: to better see the 3D shape you need to create a light spot...
+//check `ofLight' documentation
+
+}
+
+</code></pre>
+
+
+                <div class="inlined_docs">
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Draws a rectangular box with the specified dimensions, starting from the specified coordinates.</p>
+<p>A box is a rectangular solid: an extruded rectangle.
+It is drawn starting from a 3D reference coordinate.
+It has a width (in x), a height (in y), and a depth (in z).
+The box is drawn with the current color, e.g. set with ofSetColor().
+The box is drawn filled by default; change this with ofFill();</p>
+<p>Parameters:
+x The x-coordinate of the box's origin.
+y The y-coordinate of the box's origin.
+z The z-coordinate of the box's origin.
+width The width of the box.
+height The height of the box.
+depth The depth of the box.</p>
+
+            
+                </div>
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofDrawBox" data-lookup="ofDrawBox" data-item-type="function">
+  	 
+	<h1><a name="show_ofDrawBox">ofDrawBox(...)</a></h1>
+	<h2>
+  <p>void ofDrawBox(float x, float y, float z, float size)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Draws a cube with the specified size, starting from the specified coordinates. </p>
+<p>A cube is a rectangular solid bounded by six square faces of equal size. It is also known as a regular hexahedron, a square parallelepiped, an equilateral cuboid and a right rhombohedron. It is a regular square prism in three orientations.</p>
+<p>It is drawn starting from a 3D reference coordinate, with the specified size. The cube is drawn with the current color, e.g. set with ofSetColor(). The cube is drawn filled by default; change this with ofFill();</p>
+<pre><code class="cpp">void ofApp::draw(){
+
+//  Draw a blue cube slightly off the center of the canvas so to see the 3d shape.
+//(note that you cannot draw a rectangular cuboid with this function ... only a cube)
+ofSetColor(0, 0, 255);
+ofFill();
+ofDrawBox(ofGetWidth() * .5, ofGetHeight() * .7, 0, 200);
+
+//NOTE: to better see the 3D shape you need to create a light spot...
+//check `ofLight' documentation
+
+}
+
+</code></pre>
+
+
+                <div class="inlined_docs">
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Draws a cube with the specified size, starting from the specified coordinates.</p>
+<p>A cube is a rectangular solid bounded by six square faces of equal size.
+It is also known as a regular hexahedron, a square parallelepiped, an equilateral cuboid
+and a right rhombohedron. It is a regular square prism in three orientations.</p>
+<p>It is drawn starting from a 3D reference coordinate, with the specified size.
+The cube is drawn with the current color, e.g. set with ofSetColor().
+The cube is drawn filled by default; change this with ofFill();</p>
+<p>Parameters:
+x The x-coordinate of the cube's origin.
+y The y-coordinate of the cube's origin.
+z The z-coordinate of the cube's origin.
+size The size of the cube.</p>
+
+            
+                </div>
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofDrawBox" data-lookup="ofDrawBox" data-item-type="function">
+  	 
+	<h1><a name="show_ofDrawBox">ofDrawBox(...)</a></h1>
+	<h2>
+  <p>void ofDrawBox(const ofPoint &amp;position, float width, float height, float depth)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Draws a rectangular box with the specified dimensions, starting from the specified position. </p>
+<p>A box is a rectangular solid: an extruded rectangle. It is drawn starting from a 3D reference coordinate. It has a width (in x), a height (in y), and a depth (in z). The box is drawn with the current color, e.g. set with ofSetColor(). The box is drawn filled by default; change this with ofFill();</p>
+<pre><code class="cpp">void ofApp::draw(){
+
+//  Draw a green rectangular cuboid slightly off the center of the canvas so to see the 3d shape.
+ofSetColor(0, 255, 0);
+ofFill();
+ofDrawBox(ofPoint(ofGetWidth() * .5, ofGetHeight() * .7, 0), 100, 200,300);
+
+//NOTE: to better see the 3D shape you need to create a light spot...
+//check `ofLight' documentation
+
+}
+</code></pre>
+
+
+                <div class="inlined_docs">
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Draws a rectangular box with the specified dimensions, starting from the specified position.</p>
+<p>A box is a rectangular solid: an extruded rectangle.
+It is drawn starting from a 3D reference coordinate.
+It has a width (in x), a height (in y), and a depth (in z).
+The box is drawn with the current color, e.g. set with ofSetColor().
+The box is drawn filled by default; change this with ofFill();</p>
+<p>Parameters:
+position an ofPoint which contains the (x,y,z) coordinates for the box's reference corner.
+width The width of the box.
+height The height of the box.
+depth The depth of the box.</p>
+
+            
+                </div>
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofDrawBox" data-lookup="ofDrawBox" data-item-type="function">
+  	 
+	<h1><a name="show_ofDrawBox">ofDrawBox(...)</a></h1>
+	<h2>
+  <p>void ofDrawBox(const ofPoint &amp;position, float size)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Draws a cube with the specified size, starting from the specified position. </p>
+<p>A cube is drawn starting from a 3D reference position, with the specified size. The box is drawn with the current color, e.g. set with ofSetColor(). The box is drawn filled by default; change this with ofFill();</p>
+<pre><code class="cpp">void ofApp::draw(){
+
+//  Draw a yellow cube slightly off the center of the canvas so to see the 3d shape.
+//(note that you cannot draw a rectangular cuboid with this function ... only a cube)
+ofSetColor(255, 0, 0);
+ofFill();
+ofDrawBox(ofPoint(ofGetWidth() * .5, ofGetHeight() * .5, 0), 200);
+
+//NOTE: to better see the 3D shape you need to create a light spot...
+//check `ofLight' documentation
+
+}
+
+</code></pre>
+
+
+                <div class="inlined_docs">
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Draws a cube with the specified size, starting from the specified position.</p>
+<p>A cube is drawn starting from a 3D reference position, with the specified size.
+The cube is drawn with the current color, e.g. set with ofSetColor().
+The cube is drawn filled by default; change this with ofFill();</p>
+<p>Parameters:
+position an ofPoint which contains the (x,y,z) coordinates for the cube's reference corner.
+size The size of the cube.</p>
+
+            
+                </div>
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofDrawBox" data-lookup="ofDrawBox" data-item-type="function">
+  	 
+	<h1><a name="show_ofDrawBox">ofDrawBox(...)</a></h1>
+	<h2>
+  <p>void ofDrawBox(float size)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Draws a cube with the specified size, starting from the origin. The box is drawn with the current color, e.g. set with ofSetColor(). The box is drawn filled by default; change this with ofFill();</p>
+<pre><code class="cpp">void ofApp::draw(){
+
+//  Draw a red cube
+//(note that you cannot draw a rectangular cuboid with this function ... only a cube)
+ofSetColor(255, 0, 0);
+ofFill();
+ofDrawBox(500);
+
+//NOTE: to better see the 3D shape you need to create a light spot...
+//check `ofLight' documentation
+
+}
+
+</code></pre>
+
+
+                <div class="inlined_docs">
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Draws a cube with the specified size, starting from the origin.</p>
+<p>The cube is drawn with the current color, e.g. set with ofSetColor().
+The cube is drawn filled by default; change this with ofFill();</p>
+<p>Parameters:
+size The size of the cube.</p>
+
+            
+                </div>
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofDrawBox" data-lookup="ofDrawBox" data-item-type="function">
+  	 
+	<h1><a name="show_ofDrawBox">ofDrawBox(...)</a></h1>
+	<h2>
+  <p>void ofDrawBox(float width, float height, float depth)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Draws a rectangular box with the specified dimensions, starting from the origin. </p>
+<p>A box is a rectangular solid: an extruded rectangle. It is drawn starting from the origin of the current reference frame. It has a width (in x), a height (in y), and a depth (in z). The box is drawn with the current color, e.g. set with ofSetColor(). The box is drawn filled by default; change this with ofFill();</p>
+<pre><code class="cpp">void ofApp::draw(){
+
+//  Draw a red cuboid
+ofSetColor(255, 0, 0);
+ofFill();
+ofDrawBox(500, 400, 300);
+
+//NOTE: to better see the 3D shape you need to create a light spot...
+//check `ofLight' documentation
+
+}
+
+</code></pre>
+
+
+                <div class="inlined_docs">
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Draws a rectangular box with the specified dimensions, starting from the origin.</p>
+<p>A box is a rectangular solid: an extruded rectangle.
+It is drawn starting from the origin of the current reference frame.
+It has a width (in x), a height (in y), and a depth (in z).
+The box is drawn with the current color, e.g. set with ofSetColor().
+The box is drawn filled by default; change this with ofFill();</p>
+<p>Parameters:
+width The width of the box.
+height The height of the box.
+depth The depth of the box.</p>
+
+            
+                </div>
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofDrawCone" data-lookup="ofDrawCone" data-item-type="function">
+  	 
+	<h1><a name="show_ofDrawCone">ofDrawCone(...)</a></h1>
+	<h2>
+  <p>void ofDrawCone(float x, float y, float z, float radius, float height)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Draws a cone with specified radius and height starting from the specified position (x, y and z coordinates). The cone is drawn with the current color, e.g. set with ofSetColor(). The cone is drawn filled by default; change this with ofFill();</p>
+<pre><code class="cpp">void ofApp::draw(){
+
+//  Draw a red cone at the center of the canvas.
+ofSetColor(255, 0, 0);
+ofFill();
+ofDrawCone(ofGetWidth() * .5, ofGetHeight()* .5, 0, 200, 300);
+
+//NOTE: to better see the 3D shape you need to create a light spot...
+//check `ofLight' documentation
+
+}
+
+</code></pre>
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofDrawCone" data-lookup="ofDrawCone" data-item-type="function">
+  	 
+	<h1><a name="show_ofDrawCone">ofDrawCone(...)</a></h1>
+	<h2>
+  <p>void ofDrawCone(float x, float y, float radius, float height)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Draws a cone with specified radius and height starting from the specified position (x and y coordinates). The cone is drawn with the current color, e.g. set with ofSetColor(). The cone is drawn filled by default; change this with ofFill();</p>
+<pre><code class="cpp">void ofApp::draw(){
+
+//  Draw a red cone at the center of the canvas.
+ofSetColor(255, 0, 0);
+ofFill();
+ofDrawCone(ofGetWidth() * .5, ofGetHeight()* .5, 200, 300);
+
+//NOTE: to better see the 3D shape you need to create a light spot...
+//check `ofLight' documentation
+
+}
+
+</code></pre>
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofDrawCone" data-lookup="ofDrawCone" data-item-type="function">
+  	 
+	<h1><a name="show_ofDrawCone">ofDrawCone(...)</a></h1>
+	<h2>
+  <p>void ofDrawCone(const ofPoint &amp;position, float radius, float height)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Draws a cone with specified radius and height starting from the specified position ( ofPoint(x,y,z) or ofPoint(x,y) ). The cone is drawn with the current color, e.g. set with ofSetColor(). The cone is drawn filled by default; change this with ofFill();</p>
+<pre><code class="cpp">void ofApp::draw(){
+
+//  Draw a red cone at the center of the canvas.
+ofSetColor(255, 0, 0);
+ofFill();
+ofDrawCone(ofPoint(ofGetWidth() * .5, ofGetHeight()* .5), 200, 300);
+
+//NOTE: to better see the 3D shape you need to create a light spot...
+//check `ofLight' documentation
+
+}
+
+</code></pre>
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofDrawCone" data-lookup="ofDrawCone" data-item-type="function">
+  	 
+	<h1><a name="show_ofDrawCone">ofDrawCone(...)</a></h1>
+	<h2>
+  <p>void ofDrawCone(float radius, float height)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Draws a cone with specified radius and height starting from the origin. The cone is drawn with the current color, e.g. set with ofSetColor(). The cone is drawn filled by default; change this with ofFill();</p>
+<pre><code class="cpp">void ofApp::draw(){
+
+//  Draw a red cone
+ofSetColor(255, 0, 0);
+ofFill();
+ofDrawCone(200, 300);
+
+//NOTE: to better see the 3D shape you need to create a light spot...
+//check `ofLight' documentation
+
+}
+
+</code></pre>
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofDrawCylinder" data-lookup="ofDrawCylinder" data-item-type="function">
+  	 
+	<h1><a name="show_ofDrawCylinder">ofDrawCylinder(...)</a></h1>
+	<h2>
+  <p>void ofDrawCylinder(float x, float y, float radius, float height)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Draws a cylinder with specified radius and height starting from the specified position (x and y coordinates). The cylinder is drawn with the current color, e.g. set with ofSetColor(). The cylinder is drawn filled by default; change this with ofFill();</p>
+<pre><code class="cpp">void ofApp::draw(){
+
+//  Draw a red cylinder at the center of the canvas.
+ofSetColor(255, 0, 0);
+ofFill();
+ofDrawCylinder(ofGetWidth() * .5, ofGetHeight()* .5, 50, 200);
+
+//NOTE: to better see the 3D shape you need to create a light spot...
+//check `ofLight' documentation
+
+}
+
+</code></pre>
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofDrawCylinder" data-lookup="ofDrawCylinder" data-item-type="function">
+  	 
+	<h1><a name="show_ofDrawCylinder">ofDrawCylinder(...)</a></h1>
+	<h2>
+  <p>void ofDrawCylinder(float x, float y, float z, float radius, float height)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Draws a cylinder with specified radius and height starting from the specified position (x, y and z coordinates). The cylinder is drawn with the current color, e.g. set with ofSetColor(). The cylinder is drawn filled by default; change this with ofFill();</p>
+<pre><code class="cpp">void ofApp::draw(){
+
+//  Draw a red cylinder at the center of the canvas.
+ofSetColor(255, 0, 0);
+ofFill();
+ofDrawCylinder(ofGetWidth() * .5, ofGetHeight()* .5, 100, 50, 200);
+
+//NOTE: to better see the 3D shape you need to create a light spot...
+//check `ofLight' documentation
+
+}
+
+</code></pre>
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofDrawCylinder" data-lookup="ofDrawCylinder" data-item-type="function">
+  	 
+	<h1><a name="show_ofDrawCylinder">ofDrawCylinder(...)</a></h1>
+	<h2>
+  <p>void ofDrawCylinder(const ofPoint &amp;position, float radius, float height)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Draws a cylinder with specified radius and height starting from the specified position ( ofPoint(x,y,z) or ofPoint(x,y,) ). The cylinder is drawn with the current color, e.g. set with ofSetColor(). The cylinder is drawn filled by default; change this with ofFill();</p>
+<pre><code class="cpp">void ofApp::draw(){
+
+//  Draw a green cylinder at the center of the canvas.
+ofSetColor(0, 255, 0);
+ofFill();
+ofDrawCylinder(ofPoint(ofGetWidth() * .5, ofGetHeight()* .5), 50, 200);
+
+//NOTE: to better see the 3D shape you need to create a light spot...
+//check `ofLight' documentation
+
+}
+
+</code></pre>
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofDrawCylinder" data-lookup="ofDrawCylinder" data-item-type="function">
+  	 
+	<h1><a name="show_ofDrawCylinder">ofDrawCylinder(...)</a></h1>
+	<h2>
+  <p>void ofDrawCylinder(float radius, float height)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Draws a cylinder with specified radius and height starting from the origin. The cylinder is drawn with the current color, e.g. set with ofSetColor(). The cylinder is drawn filled by default; change this with ofFill();</p>
+<pre><code class="cpp">void ofApp::draw(){
+
+//  Draw a red cylinder
+ofSetColor(255, 0, 0);
+ofFill();
+ofDrawCylinder(50, 300);
+
+//NOTE: to better see the 3D shape you need to create a light spot...
+//check `ofLight' documentation
+
+}
+
+</code></pre>
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofDrawIcoSphere" data-lookup="ofDrawIcoSphere" data-item-type="function">
+  	 
+	<h1><a name="show_ofDrawIcoSphere">ofDrawIcoSphere(...)</a></h1>
+	<h2>
+  <p>void ofDrawIcoSphere(float x, float y, float z, float radius)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Draws an icosphere (i.e. a sphere based on faces as opposed to UV map) with specified radius starting from specified position (x,y and z coordinates). The icosphere is drawn with the current color, e.g. set with ofSetColor(). The icosphere is drawn filled by default; change this with ofFill();</p>
+<pre><code class="cpp">void ofApp::draw(){
+
+//  Draw a blue icosphere at the center of the canvas.
+ofSetColor(0, 0, 255);
+ofFill();
+ofDrawIcoSphere(ofGetWidth() * .5, ofGetHeight()* .5, 0, 100);
+
+//NOTE: to better see the 3D shape you need to create a light spot...
+//check `ofLight' documentation
+
+}
+
+</code></pre>
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofDrawIcoSphere" data-lookup="ofDrawIcoSphere" data-item-type="function">
+  	 
+	<h1><a name="show_ofDrawIcoSphere">ofDrawIcoSphere(...)</a></h1>
+	<h2>
+  <p>void ofDrawIcoSphere(float x, float y, float radius)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Draws an icosphere (i.e. a sphere based on faces as opposed to UV map) with specified radius starting from specified position (x and y coordinates). The icosphere is drawn with the current color, e.g. set with ofSetColor(). The icosphere is drawn filled by default; change this with ofFill(); </p>
+<pre><code class="cpp">void ofApp::draw(){
+
+//  Draw a blue icosphere at the center of the canvas.
+ofSetColor(0, 0, 255);
+ofFill();
+ofDrawIcoSphere(ofGetWidth() * .5, ofGetHeight()* .5, 100);
+
+//NOTE: to better see the 3D shape you need to create a light spot...
+//check `ofLight' documentation
+
+}
+
+</code></pre>
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofDrawIcoSphere" data-lookup="ofDrawIcoSphere" data-item-type="function">
+  	 
+	<h1><a name="show_ofDrawIcoSphere">ofDrawIcoSphere(...)</a></h1>
+	<h2>
+  <p>void ofDrawIcoSphere(const ofPoint &amp;position, float radius)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Draws an icosphere (i.e. a sphere based on faces as opposed to UV map) with specified radius starting from specified position ( ofPoint(x,y,z) or ofPoint(x,y) ). The icosphere is drawn with the current color, e.g. set with ofSetColor(). The icosphere is drawn filled by default; change this with ofFill();</p>
+<pre><code class="cpp">void ofApp::draw(){
+
+//  Draw a blue icosphere at the center of the canvas.
+ofSetColor(0, 0, 255);
+ofFill();
+ofDrawIcoSphere(ofPoint(ofGetWidth() * .5, ofGetHeight()* .5), 100);
+
+//NOTE: to better see the 3D shape you need to create a light spot...
+//check `ofLight' documentation
+
+}
+
+</code></pre>
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofDrawIcoSphere" data-lookup="ofDrawIcoSphere" data-item-type="function">
+  	 
+	<h1><a name="show_ofDrawIcoSphere">ofDrawIcoSphere(...)</a></h1>
+	<h2>
+  <p>void ofDrawIcoSphere(float radius)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Draws an icosphere (i.e. a sphere based on faces as opposed to UV map) starting from the origin. The icosphere is drawn with the current color, e.g. set with ofSetColor(). The icosphere is drawn filled by default; change this with ofFill();</p>
+<pre><code class="cpp">void ofApp::draw(){
+
+//  Draw a blue icosphere 
+ofSetColor(0, 0, 255);
+ofFill();
+ofDrawIcoSphere(100);
+
+//NOTE: to better see the 3D shape you need to create a light spot...
+//check `ofLight' documentation
+
+}
+
+</code></pre>
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofDrawPlane" data-lookup="ofDrawPlane" data-item-type="function">
+  	 
+	<h1><a name="show_ofDrawPlane">ofDrawPlane(...)</a></h1>
+	<h2>
+  <p>void ofDrawPlane(float x, float y, float width, float height)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Draws a plane with specified width and height starting from the specified position (x and y coordinates). The plane is drawn with the current color, e.g. set with ofSetColor(). The plane is drawn filled by default; change this with ofFill(); </p>
+<pre><code class="cpp">void ofApp::draw(){
+
+//  Draw a green plane at the center of the canvas.
+ofSetColor(0, 255, 0);
+ofFill();
+ofDrawPlane(ofGetWidth() * .5, ofGetHeight()* .5, 100, 200);
+
+}
+
+</code></pre>
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofDrawPlane" data-lookup="ofDrawPlane" data-item-type="function">
+  	 
+	<h1><a name="show_ofDrawPlane">ofDrawPlane(...)</a></h1>
+	<h2>
+  <p>void ofDrawPlane(float x, float y, float z, float width, float height)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Draws a plane with specified width and height starting from the specified position (x, y and z coordinates). The plane is drawn with the current color, e.g. set with ofSetColor(). The plane is drawn filled by default; change this with ofFill();</p>
+<pre><code class="cpp">void ofApp::draw(){
+
+//  Draw a green plane at the center of the canvas.
+ofSetColor(0, 255, 0);
+ofFill();
+ofDrawPlane(ofGetWidth() * .5, ofGetHeight()* .5, 0, 100, 200);
+
+}
+
+</code></pre>
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofDrawPlane" data-lookup="ofDrawPlane" data-item-type="function">
+  	 
+	<h1><a name="show_ofDrawPlane">ofDrawPlane(...)</a></h1>
+	<h2>
+  <p>void ofDrawPlane(ofPoint &amp;position, float width, float height)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Draws a plane with specified width and height starting from the specified position ( ofPoint(x,y,z) or ofPoint(x,y) ). The plane is drawn with the current color, e.g. set with ofSetColor(). The plane is drawn filled by default; change this with ofFill(); </p>
+<pre><code class="cpp">void ofApp::draw(){
+
+//  Draw a green plane at the center of the canvas. 
+ofSetColor(0, 255, 0);
+ofFill();
+ofDrawPlane(ofPoint(ofGetWidth() * .5, ofGetHeight()* .5), 100, 200);
+
+}
+
+</code></pre>
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofDrawPlane" data-lookup="ofDrawPlane" data-item-type="function">
+  	 
+	<h1><a name="show_ofDrawPlane">ofDrawPlane(...)</a></h1>
+	<h2>
+  <p>void ofDrawPlane(float width, float height)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Draws a plane with specified width and height starting from the origin. The plane is drawn with the current color, e.g. set with ofSetColor(). The plane is drawn filled by default; change this with ofFill(); </p>
+<pre><code class="cpp">void ofApp::draw(){
+
+//  Draw a green plane  
+ofSetColor(0, 255, 0);
+ofFill();
+ofDrawPlane(100, 200);
+
+}
+
+</code></pre>
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofDrawSphere" data-lookup="ofDrawSphere" data-item-type="function">
+  	 
+	<h1><a name="show_ofDrawSphere">ofDrawSphere(...)</a></h1>
+	<h2>
+  <p>void ofDrawSphere(float x, float y, float radius)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Draws a UV sphere with specified radius starting from the specified position (x and y coordinates).The sphere is drawn with the current color, e.g. set with ofSetColor(). The sphere is drawn filled by default; change this with ofFill();</p>
+<pre><code class="cpp">void ofApp::draw(){
+
+//  Draw a green sphere at the center of the canvas.
+ofSetColor(0, 255, 0);
+ofFill();
+ofDrawSphere(ofGetWidth() * .5, ofGetHeight()* .5, 100);
+
+//NOTE: to better see the 3D shape you need to create a light spot...
+//check `ofLight' documentation
+
+}
+
+</code></pre>
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofDrawSphere" data-lookup="ofDrawSphere" data-item-type="function">
+  	 
+	<h1><a name="show_ofDrawSphere">ofDrawSphere(...)</a></h1>
+	<h2>
+  <p>void ofDrawSphere(float x, float y, float z, float radius)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Draws a UV sphere with specified radius starting from the specified position (x, y and z coordinates). The sphere is drawn with the current color, e.g. set with ofSetColor(). The sphere is drawn filled by default; change this with ofFill();</p>
+<pre><code class="cpp">void ofApp::draw(){
+
+//  Draw a green sphere at the center of the canvas.
+ofSetColor(0, 255, 0);
+ofFill();
+ofDrawSphere(ofGetWidth() * .5, ofGetHeight()* .5, 0, 100);
+
+//NOTE: to better see the 3D shape you need to create a light spot...
+//check `ofLight' documentation
+
+}
+
+</code></pre>
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofDrawSphere" data-lookup="ofDrawSphere" data-item-type="function">
+  	 
+	<h1><a name="show_ofDrawSphere">ofDrawSphere(...)</a></h1>
+	<h2>
+  <p>void ofDrawSphere(const ofPoint &amp;position, float radius)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Draws a UV sphere with specified radius starting from the specified position (ofPoint(x, y, z) or ofPoint(x,y) ). The sphere is drawn with the current color, e.g. set with ofSetColor(). The sphere is drawn filled by default; change this with ofFill(); </p>
+<pre><code class="cpp">void ofApp::draw(){
+
+//  Draw a green sphere at the center of the canvas.
+ofSetColor(0, 255, 0);
+ofFill();
+ofDrawSphere(ofPoint(ofGetWidth() * .5, ofGetHeight()* .5), 100);
+
+//NOTE: to better see the 3D shape you need to create a light spot...
+//check `ofLight' documentation
+
+}
+
+</code></pre>
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofDrawSphere" data-lookup="ofDrawSphere" data-item-type="function">
+  	 
+	<h1><a name="show_ofDrawSphere">ofDrawSphere(...)</a></h1>
+	<h2>
+  <p>void ofDrawSphere(float radius)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Draws a UV sphere with specified radius starting from the origin. The sphere is drawn with the current color, e.g. set with ofSetColor(). The sphere is drawn filled by default; change this with ofFill();</p>
+<pre><code class="cpp">void ofApp::draw(){
+
+//  Draw a green sphere
+ofSetColor(0, 255, 0);
+ofFill();
+ofDrawSphere(100);
+
+//NOTE: to better see the 3D shape you need to create a light spot...
+//check `ofLight' documentation
+
+}
+
+</code></pre>
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofGetBoxResolution" data-lookup="ofGetBoxResolution" data-item-type="function">
+  	 
+	<h1><a name="show_ofGetBoxResolution">ofGetBoxResolution()</a></h1>
+	<h2>
+  <p>ofVec3f ofGetBoxResolution()</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Gets the resolution of the ofDrawBox object you created. Resolution is given for width, height and depth. Only 0 and 1 values make sense signifying ‘see/not see’ faces.</p>
+<pre><code class="cpp">void ofApp::draw(){
+
+//  Draw a red cuboid
+ofSetColor(255, 0, 0);
+ofFill();
+ofDrawBox(400, 350, 10, 200, 100, 200);
+
+string boxres = ofToString(ofGetBoxResolution());
+ofDrawBitmapString(&quot;Box Resolution: &quot; + boxres, 30, 30);
+
+}
+
+</code></pre>
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofGetConeResolution" data-lookup="ofGetConeResolution" data-item-type="function">
+  	 
+	<h1><a name="show_ofGetConeResolution">ofGetConeResolution()</a></h1>
+	<h2>
+  <p>ofVec3f ofGetConeResolution()</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Allows you to fetch the resolution with which cones are polygonized.
+Returns an ofVec3f containing the following data: 
+Encoded as "x": radiusSegments, the number of facets (subdivisions) around the cone's circular footprint. 
+Encoded as "y": heightSegments, the number of subdivisions from the cone's top to bottom. 
+Encoded as "z": capSegments, the number of annular (ring-shaped) subdivisions of the cone's endcap. </p>
+<p>In short, it returns an ofVec3f containing (radiusSegments, heightSegments, capSegments) for cone polygonization. </p>
+<pre><code class="cpp">void ofApp::draw(){
+//  Draw a red cone
+ofSetColor(255, 0, 0);
+ofFill();
+ofDrawCone(ofGetWidth() * .5, ofGetHeight()* .5, 200, 300);
+
+string coneres = ofToString(ofGetConeResolution());
+ofDrawBitmapString(&quot;Cone Resolution: &quot; + coneres, 30, 30);
+
+//NOTE: to better see the 3D shape you need to create a light spot...
+//check `ofLight' documentation
+
+}
+
+</code></pre>
+
+
+                <div class="inlined_docs">
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Retrieve a data structure describing the resolution with which cones are polygonized.</p>
+<p>Allows you to fetch the resolution with which cones are polygonized.
+Returns an ofVec3f containing the following data:
+Encoded as "x": radiusSegments, the number of facets (subdivisions) around the cone's circular footprint.
+Encoded as "y": heightSegments, the number of subdivisions from the cone's top to bottom.
+Encoded as "z": capSegments, the number of annular (ring-shaped) subdivisions of the cone's endcap.</p>
+<p>Returns: An ofVec3f containing (radiusSegments, heightSegments, capSegments) for cone polygonization.</p>
+
+            
+                </div>
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofGetCylinderResolution" data-lookup="ofGetCylinderResolution" data-item-type="function">
+  	 
+	<h1><a name="show_ofGetCylinderResolution">ofGetCylinderResolution()</a></h1>
+	<h2>
+  <p>ofVec3f ofGetCylinderResolution()</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Allows you to fetch the resolution with which cylinder are polygonized.
+Returns an ofVec3f containing the following data: 
+Encoded as "x": radiusSegments, the number of facets (subdivisions) around the cylinder’s circular footprint. 
+Encoded as "y": heightSegments, the number of subdivisions from the cylinder’s top to bottom. 
+Encoded as "z": capSegments, the number of annular (ring-shaped) subdivisions of the cylinder’s endcap. </p>
+<p>In short, it returns an ofVec3f containing (radiusSegments, heightSegments, capSegments) for cone polygonization. </p>
+<pre><code class="cpp">void ofApp::draw(){
+
+//  Draw a green cylinder
+ofSetColor(0, 255, 0);
+ofFill();
+ofDrawCylinder(ofPoint(ofGetWidth() * .5, ofGetHeight()* .5), 50, 200);
+
+string cylres = ofToString(ofGetCylinderResolution());
+ofDrawBitmapString(&quot;Cylinder Resolution: &quot; + cylres, 30, 30);
+
+//NOTE: to better see the 3D shape you need to create a light spot...
+//check `ofLight' documentation
+
+}
+
+</code></pre>
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofGetIcoSphereResolution" data-lookup="ofGetIcoSphereResolution" data-item-type="function">
+  	 
+	<h1><a name="show_ofGetIcoSphereResolution">ofGetIcoSphereResolution()</a></h1>
+	<h2>
+  <p>int ofGetIcoSphereResolution()</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Allows you to fetch the resolution with which IcoSphere is drawn (i.e. number of faces). Default value is 2.</p>
+<pre><code class="cpp">void ofApp::draw(){
+
+//  Draw a green icosphere
+ofSetColor(0, 255, 0);
+ofFill();
+ofDrawIcoSphere(ofPoint(ofGetWidth() * .5, ofGetHeight() * .5),  200);
+
+string icores = ofToString(ofGetIcoSphereResolution());
+ofDrawBitmapString(&quot;Icosphere Resolution: &quot; + icores, 30, 30);
+
+//NOTE: to better see the 3D shape you need to create a light spot...
+//check `ofLight' documentation
+
+}
+
+</code></pre>
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofGetPlaneResolution" data-lookup="ofGetPlaneResolution" data-item-type="function">
+  	 
+	<h1><a name="show_ofGetPlaneResolution">ofGetPlaneResolution()</a></h1>
+	<h2>
+  <p>ofVec2f ofGetPlaneResolution()</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Allows you to fetch the resolution with which Plane is drawn. Returns columns across x axis and rows across y axis to draw the plane. Default is (6,4)</p>
+<pre><code class="cpp">void ofApp::draw(){
+
+//  Draw a green plane (no fill)
+ofSetColor(0, 255, 0);
+ofNoFill();
+ofDrawPlane(ofGetWidth() * .5, ofGetHeight() * .5,  400, 200);
+
+string planeres = ofToString(ofGetPlaneResolution());
+ofDrawBitmapString(&quot;Plane Resolution: &quot; + planeres, 30, 30);
+
+}
+
+</code></pre>
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofGetSphereResolution" data-lookup="ofGetSphereResolution" data-item-type="function">
+  	 
+	<h1><a name="show_ofGetSphereResolution">ofGetSphereResolution()</a></h1>
+	<h2>
+  <p>int ofGetSphereResolution()</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Allows you to fetch the resolution with which a UV sphere is drawn. Default is 20.</p>
+<pre><code class="cpp">void ofApp::draw(){
+
+//  Draw a green UV sphere (no fill)
+ofSetColor(0, 255, 0);
+ofNoFill();
+ofDrawSphere(ofGetWidth() * .5, ofGetHeight() * .5,  200);
+
+string sphereres = ofToString(ofGetSphereResolution());
+ofDrawBitmapString(&quot;Sphere Resolution: &quot; + sphereres, 30, 30);
+
+}
+
+</code></pre>
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSetBoxResolution" data-lookup="ofSetBoxResolution" data-item-type="function">
+  	 
+	<h1><a name="show_ofSetBoxResolution">ofSetBoxResolution(...)</a></h1>
+	<h2>
+  <p>void ofSetBoxResolution(int res)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Sets the resolution of the box. Only values of 0 and 1 seem legitimate and produce visible effect only when ‘ofFill’ is used.</p>
+<pre><code class="h">
+int res;
+
+</code></pre>
+
+<pre><code class="cpp">
+void ofApp::setup(){
+    res = 1;
+}
+
+//--------------------------------------------------------------
+void ofApp::draw(){
+
+    ofSetColor(0, 255, 0);
+    ofFill();
+    ofSetBoxResolution(res);
+    ofDrawBox(ofGetWidth() * .5, ofGetHeight() * .5, 0, 100, 200, 300);
+
+    string boxres = ofToString(ofGetBoxResolution());
+    ofDrawBitmapString(&quot;Box Resolution: &quot; + boxres, 30, 30);
+
+    //NOTE: to better see the 3D shape you need to create a light spot...
+    //check `ofLight' documentation
+
+}
+
+//--------------------------------------------------------------
+void ofApp::keyPressed(int key){
+    switch (key) {
+        case 'q':
+            res--;
+            break;
+        case 'w':
+            res++;
+            break;
+
+        default:
+            break;
+    }
+
+}
+
+</code></pre>
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSetBoxResolution" data-lookup="ofSetBoxResolution" data-item-type="function">
+  	 
+	<h1><a name="show_ofSetBoxResolution">ofSetBoxResolution(...)</a></h1>
+	<h2>
+  <p>void ofSetBoxResolution(int resWidth, int resHeight, int resDepth)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Sets the resolution of the box. Only values of 0 and 1 seem legitimate and produce visible effect only when ‘ofFill’ is used.
+However, in this case you can switch faces on/off.</p>
+<pre><code class="h">
+int resw, resh, resd;
+
+</code></pre>
+
+<pre><code class="cpp">
+void ofApp::setup(){
+    resw = 1;
+    resh = 1;
+    resd = 1;
+}
+
+//--------------------------------------------------------------
+void ofApp::update(){
+
+}
+
+//--------------------------------------------------------------
+void ofApp::draw(){
+    ofSetColor(0, 255, 0);
+    ofFill();
+
+    ofSetBoxResolution(resw, resh, resd);
+    ofDrawBox(ofGetWidth() * .5, ofGetHeight() * .5, 0, 100, 200, 300);
+
+    string boxres = ofToString(ofGetBoxResolution());
+    ofDrawBitmapString(&quot;Box Resolution: &quot; + boxres, 30, 30);
+
+    //NOTE: to better see the 3D shape you need to create a light spot...
+    //check `ofLight' documentation
+
+}
+
+//--------------------------------------------------------------
+void ofApp::keyPressed(int key){
+    switch (key) {
+        case 'q':
+            resw--;
+            break;
+        case 'w':
+            resw++;
+            break;
+        case 'a':
+            resh--;
+            break;
+        case 's':
+            resh++;
+            break;
+        case 'z':
+            resd--;
+            break;
+        case 'x':
+            resd++;
+            break;
+
+        default:
+            break;
+    }
+
+}
+
+</code></pre>
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSetConeResolution" data-lookup="ofSetConeResolution" data-item-type="function">
+  	 
+	<h1><a name="show_ofSetConeResolution">ofSetConeResolution(...)</a></h1>
+	<h2>
+  <p>void ofSetConeResolution(int radiusSegments, int heightSegments, int capSegments=2)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Set the resolution of a polygonized cone. Allows you to set the polygonization resolution of any cones you subsequently draw with ofDrawCone(). </p>
+<p>radiusSegments: The number of facets (subdivisions) around the cone's circular footprint. </p>
+<p>heightSegments: The number of subdivisions from the cone's top to bottom. </p>
+<p>capSegments The number of annular (ring-shaped) subdivisions of the cone's endcap </p>
+<pre><code class="h">
+int resr, resh, resc;
+
+</code></pre>
+
+<pre><code class="cpp">
+void ofApp::setup(){
+    resr = 9;
+    resh = 3;
+    resc = 2;
+}
+
+//--------------------------------------------------------------
+void ofApp::update(){
+
+}
+
+//--------------------------------------------------------------
+void ofApp::draw(){
+    ofSetColor(0, 255, 0);
+    ofFill();
+    ofSetConeResolution(resr, resh, resc);
+    ofDrawCone(ofGetWidth() * .5, ofGetHeight() * .5, 0, 100, 200);
+
+    string coneres = ofToString(ofGetConeResolution());
+    ofDrawBitmapString(&quot;Cone Resolution: &quot; + coneres, 30, 30);
+
+    //NOTE: to better see the 3D shape you need to create a light spot...
+    //check `ofLight' documentation
+
+}
+
+//--------------------------------------------------------------
+void ofApp::keyPressed(int key){
+    switch (key) {
+        case 'q':
+            resr--;
+            break;
+        case 'w':
+            resr++;
+            break;
+        case 'a':
+            resh--;
+            break;
+        case 's':
+            resh++;
+            break;
+        case 'z':
+            resc--;
+            break;
+        case 'x':
+            resc++;
+            break;
+
+        default:
+            break;
+    }
+
+}
+
+</code></pre>
+
+
+                <div class="inlined_docs">
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Set the resolution of a polygonized cone.</p>
+<p>Allows you to set the polygonization resolution of any cones you subsequently draw with ofDrawCone().</p>
+<p>Parameters:
+radiusSegments The number of facets (subdivisions) around the cone's circular footprint.
+heightSegments The number of subdivisions from the cone's top to bottom.
+capSegments The number of annular (ring-shaped) subdivisions of the cone's endcap.</p>
+
+            
+                </div>
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSetCylinderResolution" data-lookup="ofSetCylinderResolution" data-item-type="function">
+  	 
+	<h1><a name="show_ofSetCylinderResolution">ofSetCylinderResolution(...)</a></h1>
+	<h2>
+  <p>void ofSetCylinderResolution(int radiusSegments, int heightSegments, int capSegments=2)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Set the resolution of a polygonized cylinder. Allows you to set the polygonization resolution of any cylinder you subsequently draw with ofDrawCone(). </p>
+<p>radiusSegments: The number of facets (subdivisions) around the cylinder’s circular footprint. </p>
+<p>heightSegments: The number of subdivisions from the cylinder’s top to bottom. </p>
+<p>capSegments The number of annular (ring-shaped) subdivisions of the cylinder’s endcap</p>
+<pre><code class="h">
+int resr, resh, resc;
+
+</code></pre>
+
+<pre><code class="cpp">
+void ofApp::setup(){
+    resr = 8;
+    resh = 2;
+    resc = 1;
+}
+
+//--------------------------------------------------------------
+void ofApp::update(){
+
+}
+
+//--------------------------------------------------------------
+void ofApp::draw(){
+
+    ofSetColor(0, 255, 0);
+    ofFill();  
+    ofSetCylinderResolution(resr, resh, resc);
+    ofDrawCylinder(ofGetWidth() * .5, ofGetHeight() * .5, 0, 100, 300);
+
+    string coneres = ofToString(ofGetCylinderResolution());
+    ofDrawBitmapString(&quot;Cone Resolution: &quot; + coneres, 30, 30);
+
+    //NOTE: to better see the 3D shape you need to create a light spot...
+    //check `ofLight' documentation
+
+}
+
+//--------------------------------------------------------------
+void ofApp::keyPressed(int key){
+    switch (key) {
+        case 'q':
+            resr--;
+            break;
+        case 'w':
+            resr++;
+            break;
+        case 'a':
+            resh--;
+            break;
+        case 's':
+            resh++;
+            break;
+        case 'z':
+            resc--;
+            break;
+        case 'x':
+            resc++;
+            break;
+
+        default:
+            break;
+    }
+
+}
+
+</code></pre>
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSetIcoSphereResolution" data-lookup="ofSetIcoSphereResolution" data-item-type="function">
+  	 
+	<h1><a name="show_ofSetIcoSphereResolution">ofSetIcoSphereResolution(...)</a></h1>
+	<h2>
+  <p>void ofSetIcoSphereResolution(int res)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Sets the resolution with which IcoSphere is drawn (i.e. number of faces). Default value is 2.</p>
+<pre><code class="h">
+int res;
+
+</code></pre>
+
+<pre><code class="cpp">
+void ofApp::setup(){
+    res = 1;
+}
+
+//--------------------------------------------------------------
+void ofApp::draw(){
+
+    ofSetColor(0, 255, 0);
+    ofFill();
+    ofSetIcoSphereResolution(res);
+    ofDrawIcoSphere(ofGetWidth() * .5, ofGetHeight() * .5, 100);
+
+    string icores = ofToString(ofGetIcoSphereResolution());
+    ofDrawBitmapString(&quot;IcoSphere Resolution: &quot; + icores, 30, 30);
+
+    //NOTE: to better see the 3D shape you need to create a light spot...
+    //check `ofLight' documentation
+
+}
+
+//--------------------------------------------------------------
+void ofApp::keyPressed(int key){
+    switch (key) {
+        case 'q':
+            res--;
+            break;
+        case 'w':
+            res++;
+            break;
+
+        default:
+            break;
+    }
+
+}
+
+</code></pre>
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSetPlaneResolution" data-lookup="ofSetPlaneResolution" data-item-type="function">
+  	 
+	<h1><a name="show_ofSetPlaneResolution">ofSetPlaneResolution(...)</a></h1>
+	<h2>
+  <p>void ofSetPlaneResolution(int columns, int rows)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Sets the resolution with which Plane is drawn. Sets columns across x axis and rows across y axis to draw the plane. Default is (6,4)</p>
+<pre><code class="h">
+int resx, resy;
+
+</code></pre>
+
+<pre><code class="cpp">
+void ofApp::setup(){
+    resx = 3;
+    resy = 2;
+}
+
+//--------------------------------------------------------------
+void ofApp::draw(){
+
+    ofSetColor(0, 255, 0);
+    ofFill();
+    ofSetPlaneResolution(resx, resy);
+    ofDrawPlane(ofGetWidth() * .5, ofGetHeight() * .5, 100, 200);
+
+    string planeres = ofToString(ofGetPlaneResolution());
+    ofDrawBitmapString(&quot;Plane Resolution: &quot; + planeres, 30, 30);
+
+    //NOTE: to better see the 3D shape you need to create a light spot...
+    //check `ofLight' documentation
+
+}
+
+//--------------------------------------------------------------
+void ofApp::keyPressed(int key){
+    switch (key) {
+        case 'q':
+            resx--;
+            break;
+        case 'w':
+            resx++;
+            break;
+        case 'a':
+            resy--;
+            break;
+        case 's':
+            resy++;
+            break;
+
+        default:
+            break;
+    }
+
+}
+
+</code></pre>
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSetSphereResolution" data-lookup="ofSetSphereResolution" data-item-type="function">
+  	 
+	<h1><a name="show_ofSetSphereResolution">ofSetSphereResolution(...)</a></h1>
+	<h2>
+  <p>void ofSetSphereResolution(int res)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Sets the resolution with which a UV sphere is drawn. Default is 20. </p>
+<pre><code class="h">
+int res;
+
+</code></pre>
+
+<pre><code class="cpp">
+void ofApp::setup(){
+    res = 5;
+}
+
+//--------------------------------------------------------------
+void ofApp::draw(){
+
+    ofSetColor(0, 255, 0);
+    ofFill();
+    ofSetSphereResolution(res);
+    ofDrawSphere(ofGetWidth() * .5, ofGetHeight() * .5, 100);
+
+    string sphereres = ofToString(ofGetSphereResolution());
+    ofDrawBitmapString(&quot;Sphere Resolution: &quot; + sphereres, 30, 30);
+
+    //NOTE: to better see the 3D shape you need to create a light spot...
+    //check `ofLight' documentation
+
+}
+
+//--------------------------------------------------------------
+void ofApp::keyPressed(int key){
+    switch (key) {
+        case 'q':
+            res--;
+            break;
+        case 'w':
+            res++;
+            break;
+
+        default:
+            break;
+    }
+
+}
+
+</code></pre>
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+            <hr/>
+                
+            <!--diqus comments for class/functions module description-->
+            <div id="comments_header">
+            <h2>comments</h2>
+            <p>You can add comments with usage examples or other information for each class, method or variable, for adding documentation to an empty section or reporting errors is better to send a fix or open an issue through <a href="https://github.com/openframeworks/ofSite">github</a>.</p>
+            <p>When posting code enclose it in:</p>
+            <pre><code class="html">&lt;pre&gt;&lt;code class=&quot;cpp&quot;&gt;&nbsp;&lt;/code&gt;&lt;/pre&gt;</code></pre>
+            <br/>
+            </div>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+
+            // DISQUS
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+
+            var disqus_shortname = 'openframeworks'; // required: replace example with your forum shortname
+            //var disqus_developer = 1;
+
+            location_elements = window.location.pathname.split("/");
+            module_name = location_elements[location_elements.length-1].split(".")[0];
+            section_name = location.hash.split("_")[1];
+            console.log(module_name + " " + section_name);
+            if(section_name!=undefined && section_name!=''){
+            var disqus_identifier = window.location.pathname + "#!show_" + section_name;  
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "#!show_" + section_name;
+            var discus_title = document.title + " - " + section_name;
+            }else{
+            var disqus_identifier = window.location.pathname;
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            var discus_title = document.title;
+            }
+
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */   
+            (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		
+        </div><!-- End Submenu right -->
+      </div><!-- End page wide -->
+      </div><!-- End body wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:33:44 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+4d738d6979d8e7992359cde47632192d1fbef472
+">
+
+4d738d6979d8e7992359cde47632192d1fbef472
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+

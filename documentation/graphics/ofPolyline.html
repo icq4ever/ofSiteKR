@@ -1,0 +1,2356 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr - ofPolyline</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+    <script src="http://icq4ever.iptime.org//js/jquery.columnizer.min.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation.js"></script>
+  </head>
+  <body>
+    <div id="content">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">
+          <div class="page-wide">
+          
+              <div id="docstitle"><h1>ofPolyline</h1></div>
+              <div id="editdocs">
+                    <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/graphics/ofPolyline.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
+              </div>
+              
+          </div>
+          
+          
+        <div class="page-wide">
+		    <div class="submenucol-left">
+		     <!-- list of methods -->
+		     <p class="top_list_header">class methods</p>
+             <ul class="functionslist">
+                 
+                         <li>
+                         <a href="#show_ofPolyline" class="ofPolyline" data-lookup="ofPolyline">ofPolyline()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_addVertex" class="addVertex" data-lookup="addVertex">addVertex()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_addVertices" class="addVertices" data-lookup="addVertices">addVertices()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_arc" class="arc" data-lookup="arc">arc()</a></li>
+                     
+                     
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_arcNegative" class="arcNegative" data-lookup="arcNegative">arcNegative()</a></li>
+                     
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_begin" class="begin" data-lookup="begin">begin()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_bezierTo" class="bezierTo" data-lookup="bezierTo">bezierTo()</a></li>
+                     
+                     
+                     
+                     
+                         <li>
+                         <a href="#show_clear" class="clear" data-lookup="clear">clear()</a></li>
+                     
+                         <li>
+                         <a href="#show_close" class="close" data-lookup="close">close()</a></li>
+                     
+                         <li>
+                         <a href="#show_curveTo" class="curveTo" data-lookup="curveTo">curveTo()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_draw" class="draw" data-lookup="draw">draw()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_end" class="end" data-lookup="end">end()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_flagHasChanged" class="flagHasChanged" data-lookup="flagHasChanged">flagHasChanged()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_fromRectangle" class="fromRectangle" data-lookup="fromRectangle">fromRectangle()</a></li>
+                     
+                         <li>
+                         <a href="#show_getAngleAtIndex" class="getAngleAtIndex" data-lookup="getAngleAtIndex">getAngleAtIndex()</a></li>
+                     
+                         <li>
+                         <a href="#show_getAngleAtIndexInterpolated" class="getAngleAtIndexInterpolated" data-lookup="getAngleAtIndexInterpolated">getAngleAtIndexInterpolated()</a></li>
+                     
+                         <li>
+                         <a href="#show_getArea" class="getArea" data-lookup="getArea">getArea()</a></li>
+                     
+                         <li>
+                         <a href="#show_getBoundingBox" class="getBoundingBox" data-lookup="getBoundingBox">getBoundingBox()</a></li>
+                     
+                         <li>
+                         <a href="#show_getCentroid2D" class="getCentroid2D" data-lookup="getCentroid2D">getCentroid2D()</a></li>
+                     
+                         <li>
+                         <a href="#show_getClosestPoint" class="getClosestPoint" data-lookup="getClosestPoint">getClosestPoint()</a></li>
+                     
+                         <li>
+                         <a href="#show_getIndexAtLength" class="getIndexAtLength" data-lookup="getIndexAtLength">getIndexAtLength()</a></li>
+                     
+                         <li>
+                         <a href="#show_getIndexAtPercent" class="getIndexAtPercent" data-lookup="getIndexAtPercent">getIndexAtPercent()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_getLengthAtIndex" class="getLengthAtIndex" data-lookup="getLengthAtIndex">getLengthAtIndex()</a></li>
+                     
+                         <li>
+                         <a href="#show_getLengthAtIndexInterpolated" class="getLengthAtIndexInterpolated" data-lookup="getLengthAtIndexInterpolated">getLengthAtIndexInterpolated()</a></li>
+                     
+                         <li>
+                         <a href="#show_getNormalAtIndex" class="getNormalAtIndex" data-lookup="getNormalAtIndex">getNormalAtIndex()</a></li>
+                     
+                         <li>
+                         <a href="#show_getNormalAtIndexInterpolated" class="getNormalAtIndexInterpolated" data-lookup="getNormalAtIndexInterpolated">getNormalAtIndexInterpolated()</a></li>
+                     
+                         <li>
+                         <a href="#show_getPerimeter" class="getPerimeter" data-lookup="getPerimeter">getPerimeter()</a></li>
+                     
+                         <li>
+                         <a href="#show_getPointAtIndexInterpolated" class="getPointAtIndexInterpolated" data-lookup="getPointAtIndexInterpolated">getPointAtIndexInterpolated()</a></li>
+                     
+                         <li>
+                         <a href="#show_getPointAtLength" class="getPointAtLength" data-lookup="getPointAtLength">getPointAtLength()</a></li>
+                     
+                         <li>
+                         <a href="#show_getPointAtPercent" class="getPointAtPercent" data-lookup="getPointAtPercent">getPointAtPercent()</a></li>
+                     
+                         <li>
+                         <a href="#show_getResampledByCount" class="getResampledByCount" data-lookup="getResampledByCount">getResampledByCount()</a></li>
+                     
+                         <li>
+                         <a href="#show_getResampledBySpacing" class="getResampledBySpacing" data-lookup="getResampledBySpacing">getResampledBySpacing()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getRightVector" class="getRightVector" data-lookup="getRightVector">getRightVector()</a></li>
+                     
+                         <li>
+                         <a href="#show_getRotationAtIndex" class="getRotationAtIndex" data-lookup="getRotationAtIndex">getRotationAtIndex()</a></li>
+                     
+                         <li>
+                         <a href="#show_getRotationAtIndexInterpolated" class="getRotationAtIndexInterpolated" data-lookup="getRotationAtIndexInterpolated">getRotationAtIndexInterpolated()</a></li>
+                     
+                         <li>
+                         <a href="#show_getSmoothed" class="getSmoothed" data-lookup="getSmoothed">getSmoothed()</a></li>
+                     
+                         <li>
+                         <a href="#show_getTangentAtIndex" class="getTangentAtIndex" data-lookup="getTangentAtIndex">getTangentAtIndex()</a></li>
+                     
+                         <li>
+                         <a href="#show_getTangentAtIndexInterpolated" class="getTangentAtIndexInterpolated" data-lookup="getTangentAtIndexInterpolated">getTangentAtIndexInterpolated()</a></li>
+                     
+                         <li>
+                         <a href="#show_getVertices" class="getVertices" data-lookup="getVertices">getVertices()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_getWrappedIndex" class="getWrappedIndex" data-lookup="getWrappedIndex">getWrappedIndex()</a></li>
+                     
+                         <li>
+                         <a href="#show_hasChanged" class="hasChanged" data-lookup="hasChanged">hasChanged()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_insertVertex" class="insertVertex" data-lookup="insertVertex">insertVertex()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_inside" class="inside" data-lookup="inside">inside()</a></li>
+                     
+                     
+                     
+                     
+                         <li>
+                         <a href="#show_isClosed" class="isClosed" data-lookup="isClosed">isClosed()</a></li>
+                     
+                         <li>
+                         <a href="#show_lineTo" class="lineTo" data-lookup="lineTo">lineTo()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_operator[]" class="operator[]" data-lookup="operator[]">operator[]()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_quadBezierTo" class="quadBezierTo" data-lookup="quadBezierTo">quadBezierTo()</a></li>
+                     
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_rbegin" class="rbegin" data-lookup="rbegin">rbegin()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_rend" class="rend" data-lookup="rend">rend()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_resize" class="resize" data-lookup="resize">resize()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_setClosed" class="setClosed" data-lookup="setClosed">setClosed()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setRightVector" class="setRightVector" data-lookup="setRightVector">setRightVector()</a></li>
+                     
+                         <li>
+                         <a href="#show_simplify" class="simplify" data-lookup="simplify">simplify()</a></li>
+                     
+                         <li>
+                         <a href="#show_size" class="size" data-lookup="size">size()</a></li>
+                     
+                     
+                     
+             </ul>
+            
+             
+             
+             <!-- list of variables -->              
+            
+             
+            
+             <!-- list of functions -->              
+		    </div>
+	    <div class="submenucol-right">
+            <div class="documentation_detail class_documentation">
+              
+  <p>ofPolyLine allows you to combine multiple points into a single vector data object that can be drawn to the screen, manipulated point by point, and combined with other <a href="../graphics/ofPolyline.html" class="docs_class" >ofPolyline</a> instances. It is less complex than the <a href="ofPath.html">ofPath</a> and generally represents a single line or vector shape rather than multiple lines or shapes.</p>
+<p>You can add points to an <a href="../graphics/ofPolyline.html" class="docs_class" >ofPolyline</a> by adding vertices:</p>
+<pre><code class="cpp">float i = 0;
+while (i &lt; TWO_PI) { // make a heart
+    float r = (2-2*sin(i) + sin(i)*sqrt(abs(cos(i))) / (sin(i)+1.4)) * -80;
+    float x = ofGetWidth()/2 + cos(i) * r;
+    float y = ofGetHeight()/2 + sin(i) * r;
+    line.addVertex(&lt;a href=&quot;../math/ofVec2f.html&quot; class=&quot;docs_class&quot; &gt;ofVec2f&lt;/a&gt;(x,y));
+    i+=0.005*HALF_PI*0.5;
+}
+line.close(); // close the shape
+</code></pre>
+
+<p>or you can draw lines or curves:</p>
+<pre><code class="cpp">float angle = 0;
+while (angle &lt; TWO_PI ) {
+    b.curveTo(100*cos(angle), 0, 100*sin(angle));
+    b.curveTo(300*cos(angle), 300, 300*sin(angle));
+    angle += TWO_PI / 30;
+}
+</code></pre>
+
+<p><a href="../graphics/ofPolyline.html" class="docs_class" >ofPolyline</a> also includes methods to get the closest point, determine whether a point is inside shape, and resample shapes. Along with the <a href="../graphics/ofPath.html" class="docs_class" >ofPath</a> class, it's the best way to draw and manipulate 2D and 3D vector graphics that you'll need to update and manipulate frequently.</p>
+<p>If you use the lineTo or curveTo or bezierTo functions, you move the drawing point, so that drawing a line to 100,100 means a line from 0,0 to 100, 100. The next line would be a line from 100,100 to wherever you go next. Storing this position means that you can easily create continuous drawings without difficulty.</p>
+
+
+              
+              
+  
+
+           </div>
+                  
+            <!-- methods detail -->
+              <!--h2><a name="methods"></a>ofPolyline methods</h2-->
+                        
+<div class="documentation_detail ofPolyline" data-lookup="ofPolyline" data-item-type="method">
+  	 
+	<h1><a name="show_ofPolyline">ofPolyline()</a></h1>
+	<h2>
+  <p>ofPolyline::ofPolyline()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Creates an ofPolyline.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofPolyline" data-lookup="ofPolyline" data-item-type="method">
+  	 
+	<h1><a name="show_ofPolyline">ofPolyline(...)</a></h1>
+	<h2>
+  <p>ofPolyline::ofPolyline(const vector&lt; ofPoint &gt; &amp;verts)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Creates an ofPolyline from a vector of ofVec2f or ofPoint objects.</p>
+<pre><code class="cpp">vector&lt;ofPoint&gt; pts;
+    float j = 0;
+    while(j &lt; TWO_PI+0.1) {
+        pts.push_back( ofPoint(cos(j) * 100, sin(j) * 100));
+        j+=0.1;
+    }
+    ofPolyline cp(pts);
+</code></pre>
+
+<p>There is an easier way to draw circles though, using the arc() method.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Creates an ofPolyline from a vector of ofVec2f or ofPoint objects.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail addVertex" data-lookup="addVertex" data-item-type="method">
+  	 
+	<h1><a name="show_addVertex">addVertex(...)</a></h1>
+	<h2>
+  <p>void ofPolyline::addVertex(const ofPoint &amp;p)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Adds a point using an ofPoint at the end of the ofPolyline.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail addVertex" data-lookup="addVertex" data-item-type="method">
+  	 
+	<h1><a name="show_addVertex">addVertex(...)</a></h1>
+	<h2>
+  <p>void ofPolyline::addVertex(float x, float y, float z)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Adds a point using floats instead of an ofPoint at the end of the ofPolyline.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail addVertices" data-lookup="addVertices" data-item-type="method">
+  	 
+	<h1><a name="show_addVertices">addVertices(...)</a></h1>
+	<h2>
+  <p>void ofPolyline::addVertices(const ofPoint *verts, int numverts)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Adds multiple points at the end of the ofPolyline using a pointer to an array of ofPoint objects.</p>
+<pre><code class="cpp">ofPoint* verts = new ofPoint[5];
+// make a pentagon
+float size = 80.f;
+float X1 = 0.125*sqrt(10 + 2*sqrt(5)) * size;
+float X2 = 0.125*sqrt(10 - 2*sqrt(5)) * size;
+float Y1 = 0.125*(sqrt(5) - 1) * size;
+float Y2 = 0.125*(sqrt(5) + 1) * size;
+verts[0] = ofPoint(0, -0.5 * size);
+verts[1] = ofPoint(-X1, -Y1);
+verts[2] = ofPoint(-X2, Y2);
+verts[3] = ofPoint(X2, Y2);
+verts[4] = ofPoint(X1, -Y1);
+ofPolyline p;
+p.addVertices(verts, 5);
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Adds multiple points at the end of the ofPolyline using a pointer to
+an array of ofPoint objects.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail addVertices" data-lookup="addVertices" data-item-type="method">
+  	 
+	<h1><a name="show_addVertices">addVertices(...)</a></h1>
+	<h2>
+  <p>void ofPolyline::addVertices(const vector&lt; ofPoint &gt; &amp;verts)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Adds multiple points at the end of the ofPolyline using a vector of ofPoint objects, which can be declared like so:</p>
+<pre><code class="cpp">vector&lt;ofPoint&gt; verts;
+// make a pentagon
+float size = 80.f;
+float X1 = 0.125*sqrt(10 + 2*sqrt(5)) * size;
+float X2 = 0.125*sqrt(10 - 2*sqrt(5)) * size;
+float Y1 = 0.125*(sqrt(5) - 1) * size;
+float Y2 = 0.125*(sqrt(5) + 1) * size;
+verts.push_back(ofPoint(0, -0.5 * size));
+verts.push_back(ofPoint(-X1, -Y1));
+verts.push_back(ofPoint(-X2, Y2));
+verts.push_back(ofPoint(X2, Y2));
+verts.push_back(ofPoint(X1, -Y1));
+ofPolyline p;
+p.addVertices(verts);
+</code></pre>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail arc" data-lookup="arc" data-item-type="method">
+  	 
+	<h1><a name="show_arc">arc(...)</a></h1>
+	<h2>
+  <p>void ofPolyline::arc(const ofPoint &amp;center, float radiusX, float radiusY, float angleBegin, float angleEnd, bool clockwise, int circleResolution=20)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Draws an arc around the ofPoint <code>center</code> with the width of <code>radiusX</code> and the height of <code>radiusY</code>.
+The <code>angleBegin</code> and <code>angleEnd</code> indicate the start and end angles of the arc in degrees measured clockwise from the x-axis.
+The <code>clockwise</code> boolean sets the drawing direction.  Passing 'false' to it will draw the arc counter-clockwise.</p>
+<p>Optionally, you can specify <code>circleResolution</code>, which is the number of line segments a circle would be drawn with.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail arc" data-lookup="arc" data-item-type="method">
+  	 
+	<h1><a name="show_arc">arc(...)</a></h1>
+	<h2>
+  <p>void ofPolyline::arc(const ofPoint &amp;center, float radiusX, float radiusY, float angleBegin, float angleEnd, int circleResolution=20)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Draws an arc around the ofPoint <code>center</code> with the width of <code>radiusX</code> and the height of <code>radiusY</code>. 
+The <code>angleBegin</code> and <code>angleEnd</code> indicate the start and end angles of the arc in degrees measured clockwise from the x-axis.</p>
+<p>Optionally, you can specify <code>circleResolution</code>, which is the number of line segments a circle would be drawn with.
+A partial arc will be drawn with the same resolution: if circleResolution == 20, a half-circle will be drawn with 10 segments.</p>
+<p>If there are already vertices in the ofPolyline the arc will extend them;
+a line will be created from the endmost point on the ofPolyline to the beginning point of the arc.</p>
+<p>Example:</p>
+<pre><code class="cpp">ofPolyline polyline1, polyline2;
+
+// draw an circle with a diameter of 100 in blue
+ofPoint point1(150,120);
+polyline1.arc(point1,100,100,0,360);
+ofSetColor(ofColor::blue);
+polyline1.draw();
+
+// draw an line, then an semi-circle in red
+polyline2.lineTo(300, 50);
+ofPoint point2(450,120);
+polyline2.arc(point2,100,100,0,180);
+ofSetColor(ofColor::red);
+polyline2.draw();
+</code></pre>
+
+<p><img alt="Arc Example" src="ofpolyline_arc.png" /></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail arc" data-lookup="arc" data-item-type="method">
+  	 
+	<h1><a name="show_arc">arc(...)</a></h1>
+	<h2>
+  <p>void ofPolyline::arc(float x, float y, float radiusX, float radiusY, float angleBegin, float angleEnd, int circleResolution=20)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Draws an arc around the coordinates (<code>x</code>,<code>y</code>) with the width of <code>radiusX</code> and the height of <code>radiusY</code>.
+The <code>angleBegin</code> and <code>angleEnd</code> indicate the start and end angles of the arc in degrees measured clockwise from the x-axis.</p>
+<p>Optionally, you can specify <code>circleResolution</code>, which is the number of line segments a circle would be drawn with.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail arc" data-lookup="arc" data-item-type="method">
+  	 
+	<h1><a name="show_arc">arc(...)</a></h1>
+	<h2>
+  <p>void ofPolyline::arc(float x, float y, float z, float radiusX, float radiusY, float angleBegin, float angleEnd, int circleResolution=20)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Draws an arc around the coordinates (<code>x</code>,<code>y</code>,<code>z</code>) with the width of <code>radiusX</code> and the height of <code>radiusY</code>.
+The <code>angleBegin</code> and <code>angleEnd</code> indicate the start and end angles of the arc in degrees measured clockwise from the x-axis.</p>
+<p>Optionally, you can specify <code>circleResolution</code>, which is the number of line segments a circle would be drawn with.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail arcNegative" data-lookup="arcNegative" data-item-type="method">
+  	 
+	<h1><a name="show_arcNegative">arcNegative(...)</a></h1>
+	<h2>
+  <p>void ofPolyline::arcNegative(const ofPoint &amp;center, float radiusX, float radiusY, float angleBegin, float angleEnd, int circleResolution=20)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail arcNegative" data-lookup="arcNegative" data-item-type="method">
+  	 
+	<h1><a name="show_arcNegative">arcNegative(...)</a></h1>
+	<h2>
+  <p>void ofPolyline::arcNegative(float x, float y, float radiusX, float radiusY, float angleBegin, float angleEnd, int circleResolution=20)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail arcNegative" data-lookup="arcNegative" data-item-type="method">
+  	 
+	<h1><a name="show_arcNegative">arcNegative(...)</a></h1>
+	<h2>
+  <p>void ofPolyline::arcNegative(float x, float y, float z, float radiusX, float radiusY, float angleBegin, float angleEnd, int circleResolution=20)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail begin" data-lookup="begin" data-item-type="method">
+  	 
+	<h1><a name="show_begin">begin()</a></h1>
+	<h2>
+  <p>vector&lt; ofPoint &gt;::iterator ofPolyline::begin()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail begin" data-lookup="begin" data-item-type="method">
+  	 
+	<h1><a name="show_begin">begin()</a></h1>
+	<h2>
+  <p>vector&lt; ofPoint &gt;::const_iterator ofPolyline::begin()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail bezierTo" data-lookup="bezierTo" data-item-type="method">
+  	 
+	<h1><a name="show_bezierTo">bezierTo(...)</a></h1>
+	<h2>
+  <p>void ofPolyline::bezierTo(const ofPoint &amp;cp1, const ofPoint &amp;cp2, const ofPoint &amp;to, int curveResolution=20)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Creates a cubic bezier line from the current drawing point with the 2 control points indicated by ofPoint cp1 and cp2, that ends at ofPoint to. For instance, the following:</p>
+<pre><code class="cpp">line.addVertex(ofPoint(200, 400));
+line.bezierTo(100, 100, 800, 100, 700, 400);
+</code></pre>
+
+<p>Creates this:
+<img alt="polyline bezier" src="bezier.png" />
+The control points are shown in yellow.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail bezierTo" data-lookup="bezierTo" data-item-type="method">
+  	 
+	<h1><a name="show_bezierTo">bezierTo(...)</a></h1>
+	<h2>
+  <p>void ofPolyline::bezierTo(float cx1, float cy1, float cx2, float cy2, float x, float y, int curveResolution=20)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Creates a cubic bezier line from the current drawing point with the 2 control points indicated by the coordinates cx1, cy1 and cx2, cy2, that ends at the coordinates x, y.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail bezierTo" data-lookup="bezierTo" data-item-type="method">
+  	 
+	<h1><a name="show_bezierTo">bezierTo(...)</a></h1>
+	<h2>
+  <p>void ofPolyline::bezierTo(float cx1, float cy1, float cz1, float cx2, float cy2, float cz2, float x, float y, float z, int curveResolution=20)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Creates a cubic bezier line in 3D space from the current drawing point with the 2 control points indicated by the coordinates cx1, cy1, cz1 and cx2, cy2, cz2, that ends at the coordinates x, y, z.</p>
+<pre><code class="cpp">float cx = ofGetWidth()/2;
+float cy = 200;
+float step = TWO_PI / 60;
+for (float i = 0.0; i &lt; TWO_PI; i+=step) {
+
+    if(i == 0.0) {
+        line.addVertex(cx + (400*cos(i)), cy+400, 400 * sin(i));
+    } else {
+        line.bezierTo( cx - (200*cos(i)), cy-100, 400 * sin(i), 
+                       cx + (200*cos(i)), cy+600, 400 * sin(i), 
+                       cx + (400*cos(i)), cy+400, 400 * sin(i));
+    }
+}
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Adds a cubic bezier line in 3D space from the current drawing point
+with the 2 control points indicated by the coordinates cx1, cy1, cz1
+and cx2, cy2, cz2, that ends at the coordinates x, y, z.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail clear" data-lookup="clear" data-item-type="method">
+  	 
+	<h1><a name="show_clear">clear()</a></h1>
+	<h2>
+  <p>void ofPolyline::clear()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Removes all the points from the ofPolyline.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail close" data-lookup="close" data-item-type="method">
+  	 
+	<h1><a name="show_close">close()</a></h1>
+	<h2>
+  <p>void ofPolyline::close()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Closes the ofPolyline, meaning that all the vertices will be linked and can be "walked".</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail curveTo" data-lookup="curveTo" data-item-type="method">
+  	 
+	<h1><a name="show_curveTo">curveTo(...)</a></h1>
+	<h2>
+  <p>void ofPolyline::curveTo(const ofPoint &amp;to, int curveResolution=20)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Draws a curve to an ofPoint object passed in:</p>
+<pre><code class="cpp">float angle = 0;
+while (angle &lt; TWO_PI ) {
+    b.curveTo( ofPoint(100*cos(angle), 100*sin(angle)));
+    b.curveTo( ofPoint(300*cos(angle), 300*sin(angle)));
+    angle += TWO_PI / 30;
+}
+</code></pre>
+
+<p>You need at least 4 points to be able to draw with curveTo, here's an explanation of why this happens:</p>
+<p>If we have an empty <code>ofPolyline</code> <code>p</code>, and we do:</p>
+<pre><code>p.lineTo(v0); 
+p.lineTo(v1); 
+p.lineTo(v2); 
+p.lineTo(v3);
+</code></pre>
+<p>We end up with a line that starts at <code>v0</code>, heads to <code>v1</code>, then heads to <code>v2</code> and finally ends at <code>v3</code>.  But if we had instead done:</p>
+<pre><code>p.curveTo(v0); 
+p.curveTo(v1); 
+p.curveTo(v2); 
+p.curveTo(v3);
+</code></pre>
+<p>We end up with a curve that goes from <code>v1</code> to <code>v2</code>.  That might seem initially puzzling...</p>
+<p>So, we have to dive under the hood.  The <code>curveTo(...)</code> method makes Catmull-Rom splines <a href="http://en.wikipedia.org/wiki/Centripetal_Catmull%E2%80%93Rom_spline">wiki</a>.  The relevant bit to understand is that this type of spline is defined by four points:</p>
+<p><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Catmull-Rom_Spline.png/220px-Catmull-Rom_Spline.png" /></p>
+<p>P1 and P2 are the endpoints of our curve, while P0 and P3 are the control that define the shape of the curve.</p>
+<p>When using <code>curveTo(...)</code> with <code>ofPolyline</code>, there's an internal vector that stores P0, P1, P2 and P3.  When our <code>ofPolyline</code> is empty then the internal vector is also empty.  When we call:</p>
+<pre><code>p.curveTo(v0); // Internal vector is [v0], so only P0 is defined 
+p.curveTo(v1); // Internal vector is [v0, v1], so only P0 and P1 are defined
+p.curveTo(v2); // Internal vector is [v0, v1, v2], so only P0, P1 and P2 are defined
+p.curveTo(v3); // Internal vector is [v0, v1, v2, v3], so all points are defined
+</code></pre>
+<p>Only once all of those points (P0 through P4) have been defined, then a spline has been fully defined and vertices can finally be added to our <code>ofPolyline</code>.  When <code>curveTo(v3)</code> is called above, then the curve between P1 (<code>v1</code>) and P2 (<code>v2</code>) is sampled (at a resolution defined by the optional parameter <code>curveResolution</code>).  That sampling slides along the curve and adds vertices to your <code>ofPolyline</code>.<br />
+</p>
+<p>The curve doesn't start at <code>v0</code> and end at <code>v3</code> because those points are acting as the control points (i.e. the points connected by dotted lines in the image above).</p>
+<p>And now that we have P0 through P4 defined, when we call <code>curveTo(...)</code> next:</p>
+<pre><code>curveTo(v4); // Internal vector becomes [v1, v2, v3, v4]
+</code></pre>
+<p>The oldest point, <code>v0</code>, was bumped and everything shifted down.  The sampling occurs again, but this time it is between <code>v2</code> and <code>v3</code>.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Adds a curve to an ofPoint object passed in</p>
+<pre><code class="cpp">float angle = 0;
+while (angle &lt; TWO_PI ) {
+    b.curveTo( ofPoint(100*cos(angle), 100*sin(angle)));
+    b.curveTo( ofPoint(300*cos(angle), 300*sin(angle)));
+    angle += TWO_PI / 30;
+}
+</code></pre>
+
+<p>\note You need at least 4 points to be able to use curveTo()</p>
+<p>See also: <a href="http://en.wikipedia.org/wiki/Centripetal_Catmull%E2%80%93Rom_spline">Catmull-Rom splines wiki</a></p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail curveTo" data-lookup="curveTo" data-item-type="method">
+  	 
+	<h1><a name="show_curveTo">curveTo(...)</a></h1>
+	<h2>
+  <p>void ofPolyline::curveTo(float x, float y, float z, int curveResolution=20)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Draws a curve to the x,y,z points passed in with the optional resolution.</p>
+<pre><code class="cpp">float angle = 0;
+while (angle &lt; TWO_PI ) {
+    polyline.curveTo(100*cos(angle), 0, 100*sin(angle));
+    polyline.curveTo(300*cos(angle), 300, 300*sin(angle));
+    angle += TWO_PI / 30;
+}
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Adds a curve to the x,y,z points passed in with the optional
+resolution.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw()</a></h1>
+	<h2>
+  <p>void ofPolyline::draw()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Draw the line using the current renderer.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail end" data-lookup="end" data-item-type="method">
+  	 
+	<h1><a name="show_end">end()</a></h1>
+	<h2>
+  <p>vector&lt; ofPoint &gt;::iterator ofPolyline::end()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail end" data-lookup="end" data-item-type="method">
+  	 
+	<h1><a name="show_end">end()</a></h1>
+	<h2>
+  <p>vector&lt; ofPoint &gt;::const_iterator ofPolyline::end()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail flagHasChanged" data-lookup="flagHasChanged" data-item-type="method">
+  	 
+	<h1><a name="show_flagHasChanged">flagHasChanged()</a></h1>
+	<h2>
+  <p>void ofPolyline::flagHasChanged()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail fromRectangle" data-lookup="fromRectangle" data-item-type="method">
+  	 
+	<h1><a name="show_fromRectangle">fromRectangle(...)</a></h1>
+	<h2>
+  <p>ofPolyline ofPolyline::fromRectangle(const ofRectangle &amp;rect)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getAngleAtIndex" data-lookup="getAngleAtIndex" data-item-type="method">
+  	 
+	<h1><a name="show_getAngleAtIndex">getAngleAtIndex(...)</a></h1>
+	<h2>
+  <p>float ofPolyline::getAngleAtIndex(int index)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get angle (degrees) of the path at index</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getAngleAtIndexInterpolated" data-lookup="getAngleAtIndexInterpolated" data-item-type="method">
+  	 
+	<h1><a name="show_getAngleAtIndexInterpolated">getAngleAtIndexInterpolated(...)</a></h1>
+	<h2>
+  <p>float ofPolyline::getAngleAtIndexInterpolated(float findex)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get angle (degrees) at interpolated index (interpolated between
+neighboring indices)</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getArea" data-lookup="getArea" data-item-type="method">
+  	 
+	<h1><a name="show_getArea">getArea()</a></h1>
+	<h2>
+  <p>float ofPolyline::getArea()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Gets the precise area bounded by the line.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getBoundingBox" data-lookup="getBoundingBox" data-item-type="method">
+  	 
+	<h1><a name="show_getBoundingBox">getBoundingBox()</a></h1>
+	<h2>
+  <p>ofRectangle ofPolyline::getBoundingBox()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the bounding box of the shape, taking into account all the points to determine the extents of the polyline.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getCentroid2D" data-lookup="getCentroid2D" data-item-type="method">
+  	 
+	<h1><a name="show_getCentroid2D">getCentroid2D()</a></h1>
+	<h2>
+  <p>ofPoint ofPolyline::getCentroid2D()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Get the center of the area bounded by the line.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getClosestPoint" data-lookup="getClosestPoint" data-item-type="method">
+  	 
+	<h1><a name="show_getClosestPoint">getClosestPoint(...)</a></h1>
+	<h2>
+  <p>ofPoint ofPolyline::getClosestPoint(const ofPoint &amp;target, unsigned int *nearestIndex)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This returns the point on the line closest to the target. You can also optionally pass a pointer to/address of an unsigned int to get the index of the closest vertex.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getIndexAtLength" data-lookup="getIndexAtLength" data-item-type="method">
+  	 
+	<h1><a name="show_getIndexAtLength">getIndexAtLength(...)</a></h1>
+	<h2>
+  <p>float ofPolyline::getIndexAtLength(float f)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get (interpolated) index at given length along the path</p>
+<p>Includes info on percentage along segment, e.g. <code>ret=5.75</code> =&gt;
+75% along the path between 5th and 6th points</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getIndexAtPercent" data-lookup="getIndexAtPercent" data-item-type="method">
+  	 
+	<h1><a name="show_getIndexAtPercent">getIndexAtPercent(...)</a></h1>
+	<h2>
+  <p>float ofPolyline::getIndexAtPercent(float f)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get (interpolated) index at given percentage along the path</p>
+<p>Includes info on percentage along segment, e.g. <code>ret=5.75</code>
+=&gt; 75% along the path between 5th and 6th points</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getLengthAtIndex" data-lookup="getLengthAtIndex" data-item-type="method">
+  	 
+	<h1><a name="show_getLengthAtIndex">getLengthAtIndex(...)</a></h1>
+	<h2>
+  <p>float ofPolyline::getLengthAtIndex(int index)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get length along path at index</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getLengthAtIndexInterpolated" data-lookup="getLengthAtIndexInterpolated" data-item-type="method">
+  	 
+	<h1><a name="show_getLengthAtIndexInterpolated">getLengthAtIndexInterpolated(...)</a></h1>
+	<h2>
+  <p>float ofPolyline::getLengthAtIndexInterpolated(float findex)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get length along path at interpolated index (e.g. <code>f=5.75</code> =&gt; 75% along
+the path between 5th and 6th points)</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getNormalAtIndex" data-lookup="getNormalAtIndex" data-item-type="method">
+  	 
+	<h1><a name="show_getNormalAtIndex">getNormalAtIndex(...)</a></h1>
+	<h2>
+  <p>ofVec3f ofPolyline::getNormalAtIndex(int index)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get normal vector at index</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getNormalAtIndexInterpolated" data-lookup="getNormalAtIndexInterpolated" data-item-type="method">
+  	 
+	<h1><a name="show_getNormalAtIndexInterpolated">getNormalAtIndexInterpolated(...)</a></h1>
+	<h2>
+  <p>ofVec3f ofPolyline::getNormalAtIndexInterpolated(float findex)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get normal vector at interpolated index
+(interpolated between neighboring indices)</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getPerimeter" data-lookup="getPerimeter" data-item-type="method">
+  	 
+	<h1><a name="show_getPerimeter">getPerimeter()</a></h1>
+	<h2>
+  <p>float ofPolyline::getPerimeter()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the size of the perimeter of the polyline, good for determining length of the line, rather than just the bounding box shape.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getPointAtIndexInterpolated" data-lookup="getPointAtIndexInterpolated" data-item-type="method">
+  	 
+	<h1><a name="show_getPointAtIndexInterpolated">getPointAtIndexInterpolated(...)</a></h1>
+	<h2>
+  <p>ofPoint ofPolyline::getPointAtIndexInterpolated(float findex)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get point along the path at interpolated index (e.g. <code>f=5.75</code> =&gt;
+75% along the path between 5th and 6th points)</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getPointAtLength" data-lookup="getPointAtLength" data-item-type="method">
+  	 
+	<h1><a name="show_getPointAtLength">getPointAtLength(...)</a></h1>
+	<h2>
+  <p>ofPoint ofPolyline::getPointAtLength(float f)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get point long the path at a given length (e.g. <code>f=150</code> =&gt; 150
+units along the path)</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getPointAtPercent" data-lookup="getPointAtPercent" data-item-type="method">
+  	 
+	<h1><a name="show_getPointAtPercent">getPointAtPercent(...)</a></h1>
+	<h2>
+  <p>ofPoint ofPolyline::getPointAtPercent(float f)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get point along the path at a given percentage (e.g. <code>f=0.25</code>
+=&gt; 25% along the path)</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getResampledByCount" data-lookup="getResampledByCount" data-item-type="method">
+  	 
+	<h1><a name="show_getResampledByCount">getResampledByCount(...)</a></h1>
+	<h2>
+  <p>ofPolyline ofPolyline::getResampledByCount(int count)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This resamples the line based on the spacing passed in. The lower the count passed in, the more points will be eliminated. This doesn't add new points to the line though.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getResampledBySpacing" data-lookup="getResampledBySpacing" data-item-type="method">
+  	 
+	<h1><a name="show_getResampledBySpacing">getResampledBySpacing(...)</a></h1>
+	<h2>
+  <p>ofPolyline ofPolyline::getResampledBySpacing(float spacing)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This resamples the line based on the spacing passed in. The larger the spacing, the more points will be eliminated.</p>
+<pre><code class="cpp">line.draw();
+ofTranslate(400, 0);
+line.getResampledBySpacing(100).draw();
+</code></pre>
+
+<p><img alt="polyline resample" src="resample.png" /></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getRightVector" data-lookup="getRightVector" data-item-type="method">
+  	 
+	<h1><a name="show_getRightVector">getRightVector()</a></h1>
+	<h2>
+  <p>ofVec3f ofPolyline::getRightVector()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getRotationAtIndex" data-lookup="getRotationAtIndex" data-item-type="method">
+  	 
+	<h1><a name="show_getRotationAtIndex">getRotationAtIndex(...)</a></h1>
+	<h2>
+  <p>ofVec3f ofPolyline::getRotationAtIndex(int index)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get rotation vector at index (magnitude is sin of angle)</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getRotationAtIndexInterpolated" data-lookup="getRotationAtIndexInterpolated" data-item-type="method">
+  	 
+	<h1><a name="show_getRotationAtIndexInterpolated">getRotationAtIndexInterpolated(...)</a></h1>
+	<h2>
+  <p>ofVec3f ofPolyline::getRotationAtIndexInterpolated(float findex)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get rotation vector at interpolated index
+(interpolated between neighboring indices) (magnitude is sin of angle)</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getSmoothed" data-lookup="getSmoothed" data-item-type="method">
+  	 
+	<h1><a name="show_getSmoothed">getSmoothed(...)</a></h1>
+	<h2>
+  <p>ofPolyline ofPolyline::getSmoothed(int smoothingSize, float smoothingShape)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This returns a smoothed version of the ofPolyline. <code>smoothingSize</code> is the size of the smoothing window. So if <code>smoothingSize</code> is 2, then 2 points from the left, 1 in the center, and 2 on the right (5 total) will be used for smoothing each point. <code>smoothingShape</code> describes whether to use a triangular window (0) or box window (1) or something in between (for example, .5).</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getTangentAtIndex" data-lookup="getTangentAtIndex" data-item-type="method">
+  	 
+	<h1><a name="show_getTangentAtIndex">getTangentAtIndex(...)</a></h1>
+	<h2>
+  <p>ofVec3f ofPolyline::getTangentAtIndex(int index)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get tangent vector at index</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getTangentAtIndexInterpolated" data-lookup="getTangentAtIndexInterpolated" data-item-type="method">
+  	 
+	<h1><a name="show_getTangentAtIndexInterpolated">getTangentAtIndexInterpolated(...)</a></h1>
+	<h2>
+  <p>ofVec3f ofPolyline::getTangentAtIndexInterpolated(float findex)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get tangent vector at interpolated index
+(interpolated between neighboring indices)</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getVertices" data-lookup="getVertices" data-item-type="method">
+  	 
+	<h1><a name="show_getVertices">getVertices()</a></h1>
+	<h2>
+  <p>vector&lt; ofPoint &gt; &amp; ofPolyline::getVertices()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Gets a vector of vertices that the line contains</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getVertices" data-lookup="getVertices" data-item-type="method">
+  	 
+	<h1><a name="show_getVertices">getVertices()</a></h1>
+	<h2>
+  <p>const vector&lt; ofPoint &gt; &amp; ofPolyline::getVertices()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the vector of vertices that the line contains, vector<ofPoint> &amp;.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getWrappedIndex" data-lookup="getWrappedIndex" data-item-type="method">
+  	 
+	<h1><a name="show_getWrappedIndex">getWrappedIndex(...)</a></h1>
+	<h2>
+  <p>int ofPolyline::getWrappedIndex(int index)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get wrapped index depending on whether poly is closed or not</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail hasChanged" data-lookup="hasChanged" data-item-type="method">
+  	 
+	<h1><a name="show_hasChanged">hasChanged()</a></h1>
+	<h2>
+  <p>bool ofPolyline::hasChanged()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns whether the vertices within the line have changed.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail insertVertex" data-lookup="insertVertex" data-item-type="method">
+  	 
+	<h1><a name="show_insertVertex">insertVertex(...)</a></h1>
+	<h2>
+  <p>void ofPolyline::insertVertex(const ofPoint &amp;p, int index)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail insertVertex" data-lookup="insertVertex" data-item-type="method">
+  	 
+	<h1><a name="show_insertVertex">insertVertex(...)</a></h1>
+	<h2>
+  <p>void ofPolyline::insertVertex(float x, float y, float z, int index)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail inside" data-lookup="inside" data-item-type="method">
+  	 
+	<h1><a name="show_inside">inside(...)</a></h1>
+	<h2>
+  <p>bool ofPolyline::inside(const ofPoint &amp;p)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Tests whether the ofPoint is within a closed ofPolyline.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail inside" data-lookup="inside" data-item-type="method">
+  	 
+	<h1><a name="show_inside">inside(...)</a></h1>
+	<h2>
+  <p>bool ofPolyline::inside(const ofPoint &amp;p, const ofPolyline &amp;polyline)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Test whether the ofPoint is within anothe polyline, passed in as ofPolyline&amp;</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Tests whether the ofPoint is within a closed ofPolyline.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail inside" data-lookup="inside" data-item-type="method">
+  	 
+	<h1><a name="show_inside">inside(...)</a></h1>
+	<h2>
+  <p>bool ofPolyline::inside(float x, float y)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Tests whether the x,y coordinates are within a closed ofPolyline.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail inside" data-lookup="inside" data-item-type="method">
+  	 
+	<h1><a name="show_inside">inside(...)</a></h1>
+	<h2>
+  <p>bool ofPolyline::inside(float x, float y, const ofPolyline &amp;polyline)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Test whether the x,y point is within anothe polyline, passed in as ofPolyline&amp;</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Tests whether the x,y coordinates are within a closed ofPolyline.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail isClosed" data-lookup="isClosed" data-item-type="method">
+  	 
+	<h1><a name="show_isClosed">isClosed()</a></h1>
+	<h2>
+  <p>bool ofPolyline::isClosed()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Whether the shape is closed or not. Certain operations, like getSmoothed() can only be performed on closed shapes.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail lineTo" data-lookup="lineTo" data-item-type="method">
+  	 
+	<h1><a name="show_lineTo">lineTo(...)</a></h1>
+	<h2>
+  <p>void ofPolyline::lineTo(const ofPoint &amp;to)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Add a line from the last point added, or from 0,0 if no point is set, to the point indicated by the ofPoint passesd in.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail lineTo" data-lookup="lineTo" data-item-type="method">
+  	 
+	<h1><a name="show_lineTo">lineTo(...)</a></h1>
+	<h2>
+  <p>void ofPolyline::lineTo(float x, float y, float z)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Add a line from the last point added, or from 0,0 if no point is set, to the point indicated by the floats x,y,z passesd in.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator[]" data-lookup="operator[]" data-item-type="method">
+  	 
+	<h1><a name="show_operator[]">operator[](...)</a></h1>
+	<h2>
+  <p>const ofPoint &amp; ofPolyline::operator<a href="int index"></a></p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Allows you to access the points of the ofPolyline just like you would
+in an array, so to make the points of a line follow the mouse
+movement, you could do:</p>
+<pre><code class="cpp">line[0].set(mouseX, mouseY);
+int i = 1;
+while ( i&lt;bounds.size()) {
+    float angle = atan2(line[i-1].y - line[i].y, line[i-1].x - line[i].x);
+    bounds[i].set(bounds[i-1].x - cos(angle) * 20, bounds[i-1].y - sin(angle) * 20);
+    i++;
+}
+</code></pre>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator[]" data-lookup="operator[]" data-item-type="method">
+  	 
+	<h1><a name="show_operator[]">operator[](...)</a></h1>
+	<h2>
+  <p>ofPoint &amp; ofPolyline::operator<a href="int index"></a></p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>The [] operator allows you to access the points of the ofPolyline just like you would in an array, so to make the points of a line follow the mouse movement, you could do:</p>
+<pre><code class="cpp">line[0].set(mouseX, mouseY);
+int i = 1;
+while ( i&lt;bounds.size()) {
+
+    float angle = atan2(line[i-1].y - line[i].y, line[i-1].x - line[i].x);  
+    bounds[i].set(bounds[i-1].x - cos(angle) * 20, bounds[i-1].y - sin(angle) * 20);
+
+    i++;
+}
+</code></pre>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail quadBezierTo" data-lookup="quadBezierTo" data-item-type="method">
+  	 
+	<h1><a name="show_quadBezierTo">quadBezierTo(...)</a></h1>
+	<h2>
+  <p>void ofPolyline::quadBezierTo(const ofPoint &amp;p1, const ofPoint &amp;p2, const ofPoint &amp;p3, int curveResolution=20)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Creates a quadratic bezier line in 2D space from the current drawing point with the beginning indicated by the point p1, the control point at p2, and that ends at the point p3.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail quadBezierTo" data-lookup="quadBezierTo" data-item-type="method">
+  	 
+	<h1><a name="show_quadBezierTo">quadBezierTo(...)</a></h1>
+	<h2>
+  <p>void ofPolyline::quadBezierTo(float cx1, float cy1, float cx2, float cy2, float x, float y, int curveResolution=20)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Creates a quadratic bezier line in 3D space from the current drawing point with the beginning indicated by the coordinates cx1, cy1, the control point at cx2, cy2, and that ends at the coordinates x, y.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail quadBezierTo" data-lookup="quadBezierTo" data-item-type="method">
+  	 
+	<h1><a name="show_quadBezierTo">quadBezierTo(...)</a></h1>
+	<h2>
+  <p>void ofPolyline::quadBezierTo(float cx1, float cy1, float cz1, float cx2, float cy2, float cz2, float x, float y, float z, int curveResolution=20)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Creates a quadratic bezier line in 3D space from the current drawing point with the beginning indicated by the coordinates cx1, cy1, cz1, the control point at cx2, cy2, cz2, and that ends at the coordinates x, y, z.
+<img alt="polyline curves" src="curves.png" /></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail rbegin" data-lookup="rbegin" data-item-type="method">
+  	 
+	<h1><a name="show_rbegin">rbegin()</a></h1>
+	<h2>
+  <p>vector&lt; ofPoint &gt;::reverse_iterator ofPolyline::rbegin()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail rbegin" data-lookup="rbegin" data-item-type="method">
+  	 
+	<h1><a name="show_rbegin">rbegin()</a></h1>
+	<h2>
+  <p>vector&lt; ofPoint &gt;::const_reverse_iterator ofPolyline::rbegin()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail rend" data-lookup="rend" data-item-type="method">
+  	 
+	<h1><a name="show_rend">rend()</a></h1>
+	<h2>
+  <p>vector&lt; ofPoint &gt;::reverse_iterator ofPolyline::rend()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail rend" data-lookup="rend" data-item-type="method">
+  	 
+	<h1><a name="show_rend">rend()</a></h1>
+	<h2>
+  <p>vector&lt; ofPoint &gt;::const_reverse_iterator ofPolyline::rend()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail resize" data-lookup="resize" data-item-type="method">
+  	 
+	<h1><a name="show_resize">resize(...)</a></h1>
+	<h2>
+  <p>void ofPolyline::resize(size_t size)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Resize the number of points in the ofPolyline to the value passed in.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setClosed" data-lookup="setClosed" data-item-type="method">
+  	 
+	<h1><a name="show_setClosed">setClosed(...)</a></h1>
+	<h2>
+  <p>void ofPolyline::setClosed(bool tf)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Closes the ofPolyline, meaning that all the vertices will be linked and can be "walked".</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setRightVector" data-lookup="setRightVector" data-item-type="method">
+  	 
+	<h1><a name="show_setRightVector">setRightVector(...)</a></h1>
+	<h2>
+  <p>void ofPolyline::setRightVector(ofVec3f v)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail simplify" data-lookup="simplify" data-item-type="method">
+  	 
+	<h1><a name="show_simplify">simplify(...)</a></h1>
+	<h2>
+  <p>void ofPolyline::simplify(float tolerance=0.3f)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Simplifies the polyline, removing un-necessary vertices. The tolerance determines how dis-similar points need to be to stay in the line. Higher tolerance means more points removed, lower tolerance means less points removed.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail size" data-lookup="size" data-item-type="method">
+  	 
+	<h1><a name="show_size">size()</a></h1>
+	<h2>
+  <p>size_t ofPolyline::size()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>The number of points in the ofPolyline.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+
+            <!-- vars detail -->
+
+            <!-- functions detail -->
+            <hr/>
+                
+            <!--diqus comments for class/functions module description-->
+            <div id="comments_header">
+            <h2>comments</h2>
+            <p>You can add comments with usage examples or other information for each class, method or variable, for adding documentation to an empty section or reporting errors is better to send a fix or open an issue through <a href="https://github.com/openframeworks/ofSite">github</a>.</p>
+            <p>When posting code enclose it in:</p>
+            <pre><code class="html">&lt;pre&gt;&lt;code class=&quot;cpp&quot;&gt;&nbsp;&lt;/code&gt;&lt;/pre&gt;</code></pre>
+            <br/>
+            </div>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+
+            // DISQUS
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+
+            var disqus_shortname = 'openframeworks'; // required: replace example with your forum shortname
+            //var disqus_developer = 1;
+
+            location_elements = window.location.pathname.split("/");
+            module_name = location_elements[location_elements.length-1].split(".")[0];
+            section_name = location.hash.split("_")[1];
+            console.log(module_name + " " + section_name);
+            if(section_name!=undefined && section_name!=''){
+            var disqus_identifier = window.location.pathname + "#!show_" + section_name;  
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "#!show_" + section_name;
+            var discus_title = document.title + " - " + section_name;
+            }else{
+            var disqus_identifier = window.location.pathname;
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            var discus_title = document.title;
+            }
+
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */   
+            (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		
+        </div><!-- End Submenu right -->
+      </div><!-- End page wide -->
+      </div><!-- End body wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:34:11 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+eb73abcb6141243ae29291b42ec447024f00a570
+">
+
+eb73abcb6141243ae29291b42ec447024f00a570
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+

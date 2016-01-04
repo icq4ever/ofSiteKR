@@ -1,0 +1,290 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+  </head>
+  <body>
+    <div id="content" class="tutorial">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">	
+	    <div class="page-wide">        
+	        <!--h1>튜토리얼</h1-->
+            <h3>이 섹션에서는 openFrameworks에서의 특정한 작업에 관한 튜토리얼을 담고 있습니다.
+튜토리얼 제작에 참여하고 싶으시다면, <a href="http://github.com/openframeworks/ofSite" target="blank">github의 ofSite 저장소</a>를 fork하셔서 여러분의 튜토리얼을 markdown이나 asciidoc 포맷으로 작성해 _tutorials 폴더에 넣어주십시오.<br/>
+한국어 ofSite 저장소는 <a href="https://github.com/icq4ever/ofSiteKR" target="blank">이곳</a>에 있습니다. 번역을 도우실 분들이나 한국어 튜토리얼을 제작하여 공유하고 싶으시다면 마찬가지로 <a href="https://github.com/icq4ever/ofSiteKR" target="blank">ofSiteKR 저장소</a>를 fork하여 참여해 주십시오.
+            </h3>
+        </div><!-- End Page Wide -->  
+		    
+                <div class="page-wide sectiontitle">  
+                        <h2>introduction</h2>
+                    </div><!-- End Page Wide -->
+                <div class="page-wide">  
+                    <ul class="articles">
+                         <li><a href="/tutorials/introduction/000_introduction.html">ofTutorials - Introduction</a></br>
+                             <p>이 챕터에서는 openFrameworks를 소개하고 여러분이 첫 프로젝트를 시작할 수 있도록 준비하는 과정을 소개합니다.</p>
+                         </li>
+                         <li><a href="/tutorials/introduction/001_chapter1.html">ofTutorials - Chapter 1 - Getting Started</a></br>
+                             <p>이 챕터에서는 프로젝트를 생성 및 실행윈도우 크기를 지정, 기본 도형을 그리는 등의 오픈프레임웍스를 처음 시작하는 기초적인 단계들을 다룹니다. 하지만 먼저...</p>
+                         </li>
+                         <li><a href="/tutorials/introduction/002_projectGenerator.html">projectGenerator로 새 프로젝트를 생성하세요</a></br>
+                             <p>오픈프레임웍스 0072 부터 새로운 프로젝트 생성기가 추가되었습니다</p>
+                         </li>
+                    </ul>
+                </div><!-- End Page Wide -->
+                <div class="page-wide sectiontitle">  
+                        <h2>first steps</h2>
+                    </div><!-- End Page Wide -->
+                <div class="page-wide">  
+                    <ul class="articles">
+                         <li><a href="/tutorials/first steps/001_My_first_particle_system.html">파티클 시스템을 만들어보는 첫 단계</a></br>
+                             <p>첫 단계로 파티클 시스템을 만들어보는것보다 재미난게 있을까요 ?</p>
+                         </li>
+                         <li><a href="/tutorials/first steps/002_openFrameworks_for_processing_users.html">Processing 사용자들을 위한 openFrameworks</a></br>
+                             <p>프로세싱 사용자를 위한 오픈프레임웍스 개요</p>
+                         </li>
+                         <li><a href="/tutorials/first steps/003_ooops_object_oriented_programming.html">웁쓰! = 객체지향프로그래밍 + 클래스</a></br>
+                             <p>이 튜토리얼은 오픈프레임웍스에서의 객체지향 프로그래밍에 관한 간단한 소개와 자신만의 클래스를 작성하는 가이드를 담고 있습니다.</p>
+                         </li>
+                         <li><a href="/tutorials/first steps/004_presentations.html">openFrameworks 007 Presentations</a></br>
+                             <p>This collection of keynotes documents the majority of the openFrameworks core, and was prepared for a FreakDay meeting in Antwerp.</p>
+                         </li>
+                    </ul>
+                </div><!-- End Page Wide -->
+                <div class="page-wide sectiontitle">  
+                        <h2>maths</h2>
+                    </div><!-- End Page Wide -->
+                <div class="page-wide">  
+                    <ul class="articles">
+                         <li><a href="/tutorials/maths/001_vector_maths.html">벡터 수학</a></br>
+                             <p>벡터 수학의 기초 개념</p>
+                         </li>
+                    </ul>
+                </div><!-- End Page Wide -->
+                <div class="page-wide sectiontitle">  
+                        <h2>graphics</h2>
+                    </div><!-- End Page Wide -->
+                <div class="page-wide">  
+                    <ul class="articles">
+                         <li><a href="/tutorials/graphics/generativemesh.html">메시 생성하기</a></br>
+                             <p>이미지로부터 메시 생성하기 기초편</p>
+                         </li>
+                         <li><a href="/tutorials/graphics/opengl.html">OpenGL의 기초</a></br>
+                             <p>OF를 위한 OpenGL 소개</p>
+                         </li>
+                         <li><a href="/tutorials/graphics/shaders.html">Introducing Shaders</a></br>
+                             <p>Basics of ofShader and GLSL</p>
+                         </li>
+                    </ul>
+                </div><!-- End Page Wide -->
+                <div class="page-wide sectiontitle">  
+                        <h2>videos</h2>
+                    </div><!-- End Page Wide -->
+                <div class="page-wide">  
+                    <ul class="articles">
+                         <li><a href="/tutorials/videos/videotutorials.html">openFrameworks video tutorial</a></br>
+                             <p>A list of short videos tutorials</p>
+                         </li>
+                    </ul>
+                </div><!-- End Page Wide -->
+                <div class="page-wide sectiontitle">  
+                        <h2>developers</h2>
+                    </div><!-- End Page Wide -->
+                <div class="page-wide">  
+                    <ul class="articles">
+                         <li><a href="/tutorials/developers/001_how_openFrameworks_works.html">How openFrameworks works</a></br>
+                             <p>Brief description about common patterns used in the OF code</p>
+                         </li>
+                         <li><a href="/tutorials/developers/002_git_and_openFrameworks.html">Basic introduction to git and OF</a></br>
+                             <p>A short introduction to git in connection with openFrameworks</p>
+                         </li>
+                         <li><a href="/tutorials/developers/003_contributing_to_the_documentation.html">Contributing to the Documentation</a></br>
+                             <p>How to modify the documentation and build the openFrameworks website</p>
+                         </li>
+                    </ul>
+                </div><!-- End Page Wide -->
+                <div class="page-wide sectiontitle">  
+                        <h2>c++ concepts</h2>
+                    </div><!-- End Page Wide -->
+                <div class="page-wide">  
+                    <ul class="articles">
+                         <li><a href="/tutorials/c++ concepts/001_stl_vectors_basic.html">stl::vector basics</a></br>
+                             <p>Overview of the basic use of vectors</p>
+                         </li>
+                         <li><a href="/tutorials/c++ concepts/002_stl_map.html">Having fun with Maps, specifically std::map</a></br>
+                             <p>Overview of the non-vector containers in std::</p>
+                         </li>
+                    </ul>
+                </div><!-- End Page Wide -->
+          
+
+
+        <div id="wishlist" class="page-wide sectiontitle">
+          <h2>튜토리얼 제작이 필요한 분야 리스트</h2>
+        </div>
+        <div class="page-wide">
+          <p>아래는 제작되기를 강력하게 기대하는 튜토리얼 입니다. 튜토리얼 제작에 참여하고 싶으시다면, <a href="http://github.com/openframeworks/ofSite">github의 ofSite 저장소</a>를 fork하셔서 여러분의 튜토리얼을 markdown이나 asciidoc 포맷으로 작성해 _tutorials 폴더에 넣어주십시오.
+          한국어 ofSite 저장소는 <a href="https://github.com/icq4ever/ofSiteKR" target="blank">이곳</a>에 있습니다. 번역을 도우실 분들이나 한국어 튜토리얼을 제작하여 공유하고 싶으시다면 마찬가지로 <a href="https://github.com/icq4ever/ofSiteKR" target="blank">ofSiteKR 저장소</a>를 fork하여 참여해 주십시오.</p>
+          <ul>
+            <li>그래픽의 기초 - 어떻게 그릴것인가</li>
+            <li>ofPixels, ofTexture, ofImage</li>
+            <li>gl - 시작하기, ofFbo, ofVbo</li>
+            <li>카메라 다루기 - ofEasyCam 기초, ofCamera</li>
+            <li>std::map</li>
+          </ul>
+        </div>
+
+      </div><!-- End Body Wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:33:31 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+4d738d6979d8e7992359cde47632192d1fbef472
+">
+
+4d738d6979d8e7992359cde47632192d1fbef472
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+
+
+

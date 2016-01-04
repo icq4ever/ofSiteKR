@@ -1,0 +1,2593 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr - ofImage</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+    <script src="http://icq4ever.iptime.org//js/jquery.columnizer.min.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation.js"></script>
+  </head>
+  <body>
+    <div id="content">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">
+          <div class="page-wide">
+          
+              <div id="docstitle"><h1>ofImage</h1></div>
+              <div id="editdocs">
+                    <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/graphics/ofImage.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
+                     <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/graphics/ofImage_functions.markdown" class="nohover"><img title="edit functions on GitHub" src="/images/editfunctions.png?a=5"/></a>
+              </div>
+              
+          </div>
+          
+          
+        <div class="page-wide">
+		    <div class="submenucol-left">
+		     <!-- list of methods -->
+		     <p class="top_list_header">class methods</p>
+             <ul class="functionslist">
+                 
+                         <li>
+                         <a href="#show_ofImage_" class="ofImage_" data-lookup="ofImage_">ofImage_()</a></li>
+                     
+                     
+                     
+                     
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_~ofImage_" class="~ofImage_" data-lookup="~ofImage_">~ofImage_()</a></li>
+                     
+                         <li>
+                         <a href="#show_allocate" class="allocate" data-lookup="allocate">allocate()</a></li>
+                     
+                         <li>
+                         <a href="#show_bind" class="bind" data-lookup="bind">bind()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_clear" class="clear" data-lookup="clear">clear()</a></li>
+                     
+                         <li>
+                         <a href="#show_clone" class="clone" data-lookup="clone">clone()</a></li>
+                     
+                         <li>
+                         <a href="#show_crop" class="crop" data-lookup="crop">crop()</a></li>
+                     
+                         <li>
+                         <a href="#show_cropFrom" class="cropFrom" data-lookup="cropFrom">cropFrom()</a></li>
+                     
+                         <li>
+                         <a href="#show_draw" class="draw" data-lookup="draw">draw()</a></li>
+                     
+                     
+                     
+                     
+                         <li>
+                         <a href="#show_drawSubsection" class="drawSubsection" data-lookup="drawSubsection">drawSubsection()</a></li>
+                     
+                     
+                     
+                     
+                         <li>
+                         <a href="#show_getColor" class="getColor" data-lookup="getColor">getColor()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_getHeight" class="getHeight" data-lookup="getHeight">getHeight()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getImageType" class="getImageType" data-lookup="getImageType">getImageType()</a></li>
+                     
+                         <li>
+                         <a href="#show_getPixels" class="getPixels" data-lookup="getPixels">getPixels()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_getTexture" class="getTexture" data-lookup="getTexture">getTexture()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_getWidth" class="getWidth" data-lookup="getWidth">getWidth()</a></li>
+                     
+                         <li>
+                         <a href="#show_grabScreen" class="grabScreen" data-lookup="grabScreen">grabScreen()</a></li>
+                     
+                         <li>
+                         <a href="#show_isAllocated" class="isAllocated" data-lookup="isAllocated">isAllocated()</a></li>
+                     
+                         <li>
+                         <a href="#show_isUsingTexture" class="isUsingTexture" data-lookup="isUsingTexture">isUsingTexture()</a></li>
+                     
+                         <li>
+                         <a href="#show_load" class="load" data-lookup="load">load()</a></li>
+                     
+                     
+                     
+                         <li>
+                         <a href="#show_mirror" class="mirror" data-lookup="mirror">mirror()</a></li>
+                     
+                         <li>
+                         <a href="#show_operator=" class="operator=" data-lookup="operator=">operator=()</a></li>
+                     
+                     
+                     
+                         <li>
+                         <a href="#show_resetAnchor" class="resetAnchor" data-lookup="resetAnchor">resetAnchor()</a></li>
+                     
+                         <li>
+                         <a href="#show_resize" class="resize" data-lookup="resize">resize()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_rotate90" class="rotate90" data-lookup="rotate90">rotate90()</a></li>
+                     
+                         <li>
+                         <a href="#show_save" class="save" data-lookup="save">save()</a></li>
+                     
+                     
+                     
+                         <li>
+                         <a href="#show_setAnchorPercent" class="setAnchorPercent" data-lookup="setAnchorPercent">setAnchorPercent()</a></li>
+                     
+                         <li>
+                         <a href="#show_setAnchorPoint" class="setAnchorPoint" data-lookup="setAnchorPoint">setAnchorPoint()</a></li>
+                     
+                         <li>
+                         <a href="#show_setColor" class="setColor" data-lookup="setColor">setColor()</a></li>
+                     
+                     
+                     
+                         <li>
+                         <a href="#show_setCompression" class="setCompression" data-lookup="setCompression">setCompression()</a></li>
+                     
+                         <li>
+                         <a href="#show_setFromPixels" class="setFromPixels" data-lookup="setFromPixels">setFromPixels()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_setImageType" class="setImageType" data-lookup="setImageType">setImageType()</a></li>
+                     
+                         <li>
+                         <a href="#show_setUseTexture" class="setUseTexture" data-lookup="setUseTexture">setUseTexture()</a></li>
+                     
+                         <li>
+                         <a href="#show_unbind" class="unbind" data-lookup="unbind">unbind()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_update" class="update" data-lookup="update">update()</a></li>
+                     
+             </ul>
+            
+             
+             
+             <!-- list of variables -->              
+                <p class="top_list_header">variables</p>
+                <ul class="functionslist">
+                            <li>
+                            <a href="#show_bpp" class="bpp" data-lookup="bpp">int bpp</a> </li>
+                            <li>
+                            <a href="#show_height" class="height" data-lookup="height">int height</a> </li>
+                            <li>
+                            <a href="#show_type" class="type" data-lookup="type">int type</a> </li>
+                            <li>
+                            <a href="#show_width" class="width" data-lookup="width">int width</a> </li>
+                 </ul>
+            
+             
+            
+             <!-- list of functions -->              
+            <p class="top_list_header">global functions</p>
+                <ul class="functionslist">
+                     
+                         
+                            <li>
+                            <a href="#show_ofLoadImage" class="ofLoadImage" data-lookup="ofLoadImage">ofLoadImage()</a></li>
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                            <li>
+                            <a href="#show_ofSaveImage" class="ofSaveImage" data-lookup="ofSaveImage">ofSaveImage()</a></li>
+                         
+                         
+                         
+                         
+                         
+                         
+                 </ul>
+		    </div>
+	    <div class="submenucol-right">
+            <div class="documentation_detail class_documentation">
+              
+  <p>The <a href="../graphics/ofImage.html" class="docs_class" >ofImage</a> is a useful object for loading, saving and drawing images in openFrameworks. <a href="../graphics/ofImage.html" class="docs_class" >ofImage</a> is a convenient class that lets you both draw images to the screen and manipulate their pixel data. The <a href="../graphics/ofImage.html" class="docs_class" >ofImage</a> allows you to load an image from disk, manipulate the pixels, and create an OpenGL texture that you can display and manipulate on the graphics card. Loading a file into the <a href="../graphics/ofImage.html" class="docs_class" >ofImage</a> allocates an <a href="../graphics/ofPixels.html" class="docs_class" >ofPixels</a> object and creates the <a href="../gl/ofTexture.html" class="docs_class" >ofTexture</a> to display the pixels.</p>
+<p><a href="../graphics/ofImage.html" class="docs_class" >ofImage</a> uses a library called "freeImage" under the hood.</p>
+
+
+                    <div class="inlined_docs">
+                        <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+                        
+  <p>A class representing an image using memory and gpu based pixels.
+\tparam PixelType The data type used to represent a single pixel value.</p>
+
+                    </div>   
+              
+              
+  
+
+           </div>
+                  
+            <!-- methods detail -->
+              <!--h2><a name="methods"></a>ofImage methods</h2-->
+                        
+<div class="documentation_detail ofImage_" data-lookup="ofImage_" data-item-type="method">
+  	 
+	<h1><a name="show_ofImage_">ofImage_()</a></h1>
+	<h2>
+  <p>ofImage_::ofImage_()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This creates an ofImage but doesn't allocate any memory for it, so you can't use the image immediately after creating it.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>\name Image Construction
+{</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofImage_" data-lookup="ofImage_" data-item-type="method">
+  	 
+	<h1><a name="show_ofImage_">ofImage_(...)</a></h1>
+	<h2>
+  <p>ofImage_::ofImage_(const ofFile &amp;file)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This creates an ofImage from an ofFile instance.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofImage_" data-lookup="ofImage_" data-item-type="method">
+  	 
+	<h1><a name="show_ofImage_">ofImage_(...)</a></h1>
+	<h2>
+  <p>ofImage_::ofImage_(const ofImage_&lt; PixelType &gt; &amp;mom)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>The copy constructor. Pass in another image and it copies it. This allows you to create an ofImage from another ofImage instance, copying all the pixels and the texture data while creating a new textureID.</p>
+<pre><code class="cpp">image1.loadImage(&quot;face.jpg&quot;);
+ofImage image2(image1);
+</code></pre>
+
+<p>image1 and image2 are now identical.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofImage_" data-lookup="ofImage_" data-item-type="method">
+  	 
+	<h1><a name="show_ofImage_">ofImage_(...)</a></h1>
+	<h2>
+  <p>ofImage_::ofImage_(const ofImage_&lt; SrcType &gt; &amp;mom)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This allows you to create an ofImage from another ofImage instance, copying all the pixels and the texture data while creating a new textureID.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofImage_" data-lookup="ofImage_" data-item-type="method">
+  	 
+	<h1><a name="show_ofImage_">ofImage_(...)</a></h1>
+	<h2>
+  <p>ofImage_::ofImage_(const ofPixels_&lt; PixelType &gt; &amp;pix)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This creates an ofImage from an ofPixels object, allocating space for the pixels, and copying the pixels into the texture that the ofImage instance contains.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofImage_" data-lookup="ofImage_" data-item-type="method">
+  	 
+	<h1><a name="show_ofImage_">ofImage_(...)</a></h1>
+	<h2>
+  <p>ofImage_::ofImage_(const string &amp;filename)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This creates an ofImage from a file which can be a local string or a URL, allocating space for the pixels, and copying the pixels into the texture that the ofImage instance contains.</p>
+<pre><code class="cpp">ofImage img(&quot;http://www.openframeworks.cc/wp-content/themes/ofw/images/ofw-logo.gif&quot;);
+</code></pre>
+
+<p>or</p>
+<pre><code class="cpp">ofImage img(&quot;anImage.png&quot;); // assumes this is in bin/data
+</code></pre>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ~ofImage_" data-lookup="~ofImage_" data-item-type="method">
+  	 
+	<h1><a name="show_~ofImage_">~ofImage_()</a></h1>
+	<h2>
+  <p>ofImage_::~ofImage_()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail allocate" data-lookup="allocate" data-item-type="method">
+  	 
+	<h1><a name="show_allocate">allocate(...)</a></h1>
+	<h2>
+  <p>void ofImage_::allocate(int w, int h, ofImageType type)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This allocates space in the ofImage, both the ofPixels and the ofTexture that the ofImage contains.</p>
+<pre><code class="cpp">img.allocate(640, 480, OF_IMAGE_COLOR);
+int i = 0;
+while ( i &lt; img.getPixels().size() ) {
+    img.getPixels()[i] = abs(sin( float(i) / 18.f)) * 255.f; // make some op-art
+    i++;
+}
+img.reloadTexture();
+</code></pre>
+
+<p>It allocates an image of width (w) and height (h). The type can be of three types: OF_IMAGE_GRAYSCALE, OF_IMAGE_COLOR, OF_IMAGE_COLOR_ALPHA. You don't need to call this before loading an image, but for when you want to allocate space ahead of when you are going to use the image.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>This allocates space in the ofImage, both the ofPixels and the
+ofTexture that the ofImage contains.</p>
+<p>You don't need to call this before loading an image, but for when you
+want to allocate. space ahead of when you are going to use the image.</p>
+<p>The types of images can be <code>OF_IMAGE_COLOR</code>, <code>OF_IMAGE_COLOR_ALPHA</code>
+or <code>OF_IMAGE_GRAYSCALE</code>.</p>
+<p>You need to call update() to update the texture after updating
+the pixels manually.</p>
+<p>Parameters:
+w Width of image to allocate.
+h Height of image to allocate.
+type The ofImageType.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail bind" data-lookup="bind" data-item-type="method">
+  	 
+	<h1><a name="show_bind">bind(...)</a></h1>
+	<h2>
+  <p>void ofImage_::bind(int textureLocation=0)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This binds the ofTexture instance that the ofImage contains so that it can be used for advanced drawing</p>
+<pre><code class="cpp">void ofApp::setup() {
+    img.allocate(256, 256, OF_IMAGE_COLOR);
+    int i = 0;
+    while ( i &lt; img.getPixels().size() ) {
+        img.getPixels()[i] = abs(sin( float(i) / 18.f )) * 255.f;
+        i++;
+    }
+    img.reloadTexture();
+
+    mesh.setMode(OF_PRIMITIVE_TRIANGLE_STRIP);
+
+    mesh.addVertex(ofVec2f(10, 10));
+    mesh.addVertex(ofVec2f(410, 10));
+    mesh.addVertex(ofVec2f(410, 410));
+    mesh.addVertex(ofVec2f(10, 410));
+    mesh.addVertex(ofVec2f(10, 10));
+
+    mesh.addTexCoord(ofVec2f(0, 0));
+    mesh.addTexCoord(ofVec2f(256, 0));
+    mesh.addTexCoord(ofVec2f(256, 256));
+    mesh.addTexCoord(ofVec2f(0, 256));
+    mesh.addTexCoord(ofVec2f(0, 0));
+}
+void ofApp::draw(){
+
+    ofBackground(255, 255, 255); // background white
+
+    img.bind();
+    mesh.draw();
+    img.unbind();
+}
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Binds the oftexture instance that the ofImage contains so that
+it can be used for advanced drawing.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail clear" data-lookup="clear" data-item-type="method">
+  	 
+	<h1><a name="show_clear">clear()</a></h1>
+	<h2>
+  <p>void ofImage_::clear()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This clears the texture and pixels contained within the ofImage.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail clone" data-lookup="clone" data-item-type="method">
+  	 
+	<h1><a name="show_clone">clone(...)</a></h1>
+	<h2>
+  <p>void ofImage_::clone(const ofImage_&lt; SrcType &gt; &amp;mom)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This allows you to create an ofImage from another ofImage instance, copying all the pixels and the texture data while creating a new textureID.</p>
+<pre><code class="cpp">ofImage second;
+second.clone(first);
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Create an ofImage from another ofImage instance.</p>
+<p>This allows you to create an ofImage from another ofImage instance,
+copying all the pixels and the texture data while creating a new textureID.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail crop" data-lookup="crop" data-item-type="method">
+  	 
+	<h1><a name="show_crop">crop(...)</a></h1>
+	<h2>
+  <p>void ofImage_::crop(int x, int y, int w, int h)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This crops the image to the w,h passed in from the x,y position.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>This crops the image to the w,h passed in from the x,y position.</p>
+<p>This does an in place crop and <strong>allocates memory</strong>.</p>
+<p>Parameters:
+x x position of upper-left corner of region to crop.
+y y position of upper-left corner of region to crop.
+w Width of region to crop.
+h Height of region to crop.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail cropFrom" data-lookup="cropFrom" data-item-type="method">
+  	 
+	<h1><a name="show_cropFrom">cropFrom(...)</a></h1>
+	<h2>
+  <p>void ofImage_::cropFrom(ofImage_&lt; PixelType &gt; &amp;otherImage, int x, int y, int w, int h)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This crops another image into the image the cropFrom is being called on to the w,h passed in from the x,y position. The w,h are measured from the x,y, so passing 100, 100, 300, 300 will grab a 300x300 pixel block of data starting from 100, 100.</p>
+<pre><code class="cpp">ofImage img1, img2;
+img1.loadImage(&quot;anImage.png&quot;);
+img2.cropFrom(img1, 100, 100, 300, 300);
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Replaces region in caller image specified by w,h,x,y with pixels from otherImage.</p>
+<p>The w,h are measured from the x,y, so passing 100, 100, 300, 300 will grab
+a 300x300 pixel block of data starting from 100, 100.</p>
+<p>Parameters:
+otherImage Image to crop from.
+x x position of upper-left corner of region to crop.
+y y position of upper-left corner of region to crop.
+w Width of region to crop.
+h Height of region to crop.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofImage_::draw(float x, float y)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Draws the ofImage into the x,y location using the default height and width of the image.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Draw the image at it's normal size.</p>
+<p>Parameters:
+x Draw position on the x axis.
+y Draw position on the y axis.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofImage_::draw(float x, float y, float w, float h)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Draws the ofImage into the x,y location and with the width and height, with any attendant scaling that may occur from fitting the ofImage into the width and height.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Draw the image at a given size.</p>
+<p>Parameters:
+x Draw position on the x axis.
+y Draw position on the y axis.
+w Draw width.
+h Draw height.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofImage_::draw(float x, float y, float z)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Draws the ofImage into the x,y,z location with the default height and width. You should ensure that you turn on depth sorting using glEnable(GL_DEPTH) before trying to draw multiple objects into z-space.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Draw the texture at it's normal size with depth.</p>
+<p>Parameters:
+x Draw position on the x axis.
+y Draw position on the y axis.
+z Draw position on the z axis.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofImage_::draw(float x, float y, float z, float w, float h)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Draws the ofImage into the x,y,z location and with the width and height, with any attendant scaling that may occur from fitting the ofImage into the width and height. You should ensure that you turn on depth sorting using glEnable(GL_DEPTH) before trying to draw multiple objects into z-space.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Draw the image at a given size with depth.</p>
+<p>Parameters:
+x Draw position on the x axis.
+y Draw position on the y axis.
+z Draw position on the z axis.
+w Draw width.
+h Draw height.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawSubsection" data-lookup="drawSubsection" data-item-type="method">
+  	 
+	<h1><a name="show_drawSubsection">drawSubsection(...)</a></h1>
+	<h2>
+  <p>void ofImage_::drawSubsection(float x, float y, float w, float h, float sx, float sy)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Draws a subsection of the image (functions like a clipping mask) without altering any pixel data. (x,y) are the position to draw the cropped image at, (w,h) is the size of the subsection to draw and the size to crop (these can be different using the function below with sw,sh) and (sx,sy) are the source pixel positions in the image to begin cropping from.</p>
+<pre><code class="cpp">// crop the image from the mouse position to 100x100 pixels and draw it at 0,0
+img.drawSubsection(0, 0, 100, 100, mouseX, mouseY);
+</code></pre>
+
+<p>An example showing how to use drawSubsection can be found in of_release &gt; examples &gt; graphics &gt; imageSubsectionExample</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Draws a subsection of the image.</p>
+<p>This functions like a clipping mask. Does not altering any pixel
+data.</p>
+<p>Parameters:
+x X position to draw cropped image at.
+y Y position to draw cropped image at.
+w Width of subsection to draw.
+h Height of subsection to draw.
+sx X position in image to begin cropping from.
+sy Y position in image to begin cropping from.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawSubsection" data-lookup="drawSubsection" data-item-type="method">
+  	 
+	<h1><a name="show_drawSubsection">drawSubsection(...)</a></h1>
+	<h2>
+  <p>void ofImage_::drawSubsection(float x, float y, float w, float h, float sx, float sy, float sw, float sh)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>(sw,sh) indicate the source width and height of the cropped area and the (w,h) indicate the size to draw the cropped area at.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Draws a subsection of the image.</p>
+<p>This functions like a clipping mask. Does not altering any pixel
+data.</p>
+<p>Parameters:
+x X position to draw cropped image at.
+y Y position to draw cropped image at.
+w Width of subsection to draw.
+h Height of subsection to draw.
+sx X position in image to begin cropping from.
+sy Y position in image to begin cropping from.
+sw Source width of cropped area.
+sh Source height of cropped area.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawSubsection" data-lookup="drawSubsection" data-item-type="method">
+  	 
+	<h1><a name="show_drawSubsection">drawSubsection(...)</a></h1>
+	<h2>
+  <p>void ofImage_::drawSubsection(float x, float y, float z, float w, float h, float sx, float sy)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Draws a subsection of the image.</p>
+<p>This functions like a clipping mask. Does not altering any pixel
+data.</p>
+<p>Parameters:
+x X position to draw cropped image at.
+y Y position to draw cropped image at.
+z Z position to draw cropped image at.
+w Width of subsection to draw.
+h Height of subsection to draw.
+sx X position in image to begin cropping from.
+sy Y position in image to begin cropping from.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawSubsection" data-lookup="drawSubsection" data-item-type="method">
+  	 
+	<h1><a name="show_drawSubsection">drawSubsection(...)</a></h1>
+	<h2>
+  <p>void ofImage_::drawSubsection(float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Draws a subsection of the image.</p>
+<p>This functions like a clipping mask. Does not altering any pixel
+data.</p>
+<p>Parameters:
+x X position to draw cropped image at.
+y Y position to draw cropped image at.
+z Z position to draw cropped image at.
+w Width of subsection to draw.
+h Height of subsection to draw.
+sx X position in image to begin cropping from.
+sy Y position in image to begin cropping from.
+sw Source width of cropped area.
+sh Source height of cropped area.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getColor" data-lookup="getColor" data-item-type="method">
+  	 
+	<h1><a name="show_getColor">getColor(...)</a></h1>
+	<h2>
+  <p>ofColor_&lt; PixelType &gt; ofImage_::getColor(int index)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>This returns the ofColor representing the pixels at the index
+passed in.</p>
+<p>Parameters:
+index index into pixel data</p>
+<p>Returns: The ofColor representing the pixels at the index position passed in.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getColor" data-lookup="getColor" data-item-type="method">
+  	 
+	<h1><a name="show_getColor">getColor(...)</a></h1>
+	<h2>
+  <p>ofColor_&lt; PixelType &gt; ofImage_::getColor(int x, int y)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This returns the ofColor representing the pixels at the x and y position passed in.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>This returns the ofColor representing the pixels at the x and y
+position passed in.</p>
+<p>Parameters:
+x x position of pixel
+y y position of pixel</p>
+<p>Returns: The ofColor representing the pixels at the x and y position passed in.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getHeight" data-lookup="getHeight" data-item-type="method">
+  	 
+	<h1><a name="show_getHeight">getHeight()</a></h1>
+	<h2>
+  <p>float ofImage_::getHeight()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the height of the image in pixels.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get height of image as a float.</p>
+<p>Returns: Height of image as float.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getImageType" data-lookup="getImageType" data-item-type="method">
+  	 
+	<h1><a name="show_getImageType">getImageType()</a></h1>
+	<h2>
+  <p>ofImageType ofImage_::getImageType()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getPixels" data-lookup="getPixels" data-item-type="method">
+  	 
+	<h1><a name="show_getPixels">getPixels()</a></h1>
+	<h2>
+  <p>ofPixels_&lt; PixelType &gt; &amp; ofImage_::getPixels()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This returns a raw pointer to the pixel data.</p>
+<p>This function will give you access to a continuous block of pixels. you can grab the data and do what you like with it. If you have a grayscale image, you will have (width<em>height) number of pixels. Color images will have (width</em>height<em>3) number of pixels (interlaced R,G,B), and coloralpha images will have (width</em>height*4) number of pixels (interlaced R,G,B,A).</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getPixels" data-lookup="getPixels" data-item-type="method">
+  	 
+	<h1><a name="show_getPixels">getPixels()</a></h1>
+	<h2>
+  <p>const ofPixels_&lt; PixelType &gt; &amp; ofImage_::getPixels()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getTexture" data-lookup="getTexture" data-item-type="method">
+  	 
+	<h1><a name="show_getTexture">getTexture()</a></h1>
+	<h2>
+  <p>ofTexture &amp; ofImage_::getTexture()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Returns a reference to the texture that the ofImage contains.</p>
+<p>You can use this to directly manipulate the texture itself, but keep in
+mind that if you manipulate the texture directly, there is no simple way
+to copy the data from the texture back to the pixels and keep the ofImage in sync.</p>
+<p>Returns: A reference to the texture that the ofImage contains.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getTexture" data-lookup="getTexture" data-item-type="method">
+  	 
+	<h1><a name="show_getTexture">getTexture()</a></h1>
+	<h2>
+  <p>const ofTexture &amp; ofImage_::getTexture()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getWidth" data-lookup="getWidth" data-item-type="method">
+  	 
+	<h1><a name="show_getWidth">getWidth()</a></h1>
+	<h2>
+  <p>float ofImage_::getWidth()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the width of the image in pixels.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get width of image as a float.</p>
+<p>Returns: Width of image as float.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail grabScreen" data-lookup="grabScreen" data-item-type="method">
+  	 
+	<h1><a name="show_grabScreen">grabScreen(...)</a></h1>
+	<h2>
+  <p>void ofImage_::grabScreen(int x, int y, int w, int h)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Grabs pixels from the opengl window specified by the region (x, y, w, h) and turns them into an image. It resizes or allocates the ofImage if it's necessary.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Grabs pixels from the opengl window specified by the region
+(x, y, w, h) and turns them into an image.</p>
+<p>It resizes or allocates the ofImage if it's necessary.</p>
+<p>Warning: Uses glReadPixels() which can be slow.</p>
+<p>Parameters:
+x x position of upper-left corner of region.
+y y position of upper-left corner of region.
+w Width of region.
+h Height of region.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail isAllocated" data-lookup="isAllocated" data-item-type="method">
+  	 
+	<h1><a name="show_isAllocated">isAllocated()</a></h1>
+	<h2>
+  <p>bool ofImage_::isAllocated()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns whether the image has been allocated either by a call to allocate or by loading pixel data into the image.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Whether the image has been allocated either by a call to
+allocate or by loading pixel data into the image.</p>
+<p>Returns: true if the image has been allocated.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail isUsingTexture" data-lookup="isUsingTexture" data-item-type="method">
+  	 
+	<h1><a name="show_isUsingTexture">isUsingTexture()</a></h1>
+	<h2>
+  <p>bool ofImage_::isUsingTexture()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns whether the ofImage has a texture or not. If not, nothing will be drawn to the screen if the draw() method is called.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Returns whether the ofImage has a texture or not.</p>
+<p>If the ofImage doesn't have a texture, nothing will be drawn to the screen.</p>
+<p>Returns: true if the ofImage is using a texture.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail load" data-lookup="load" data-item-type="method">
+  	 
+	<h1><a name="show_load">load(...)</a></h1>
+	<h2>
+  <p>bool ofImage_::load(const ofBuffer &amp;buffer)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Loads an image from an ofBuffer instance created by, for
+instance, ofFile::readToBuffer().</p>
+<p>This actually loads the image data into an ofPixels object and then
+into the texture.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail load" data-lookup="load" data-item-type="method">
+  	 
+	<h1><a name="show_load">load(...)</a></h1>
+	<h2>
+  <p>bool ofImage_::load(const ofFile &amp;file)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Loads an image from an ofFile instance created by, for
+instance, ofDirectory::getFiles().</p>
+<p>This actually loads the image data into an ofPixels object and then
+into the texture.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail load" data-lookup="load" data-item-type="method">
+  	 
+	<h1><a name="show_load">load(...)</a></h1>
+	<h2>
+  <p>bool ofImage_::load(const string &amp;fileName)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Loads an image given by fileName.</p>
+<p>Parameters:
+fileName Program looks for image given by fileName, relative to
+the data folder.</p>
+<p>Returns: true if image loaded correctly.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail mirror" data-lookup="mirror" data-item-type="method">
+  	 
+	<h1><a name="show_mirror">mirror(...)</a></h1>
+	<h2>
+  <p>void ofImage_::mirror(bool vertical, bool horizontal)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This reflects the pixels of the image across the vertical and/or horizontal axis.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>This reflects the pixels of the image across the vertical and/or horizontal axis.</p>
+<p>Parameters:
+vertical Set to true to reflect image across vertical axis.
+horizontal Set to true to reflect image across horizontal axis.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator=" data-lookup="operator=" data-item-type="method">
+  	 
+	<h1><a name="show_operator=">operator=(...)</a></h1>
+	<h2>
+  <p>ofImage_&lt; PixelType &gt; &amp; ofImage_::operator=(const ofImage_&lt; PixelType &gt; &amp;mom)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This allows you to create an ofImage from another ofImage instance, copying all the pixels and the texture data while creating a new textureID.</p>
+<p>Makes the current ofImage a copy of another ofImage. Same as clone().</p>
+<pre><code class="cpp">
+image2.loadImage(&quot;face.jpg&quot;);
+image1 = image2;
+</code></pre>
+
+<p>image1 and image2 are now identical.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator=" data-lookup="operator=" data-item-type="method">
+  	 
+	<h1><a name="show_operator=">operator=(...)</a></h1>
+	<h2>
+  <p>ofImage_&lt; PixelType &gt; &amp; ofImage_::operator=(const ofImage_&lt; SrcType &gt; &amp;mom)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This allows you to create an ofImage from another ofImage instance, copying all the pixels and the texture data while creating a new textureID.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>}</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator=" data-lookup="operator=" data-item-type="method">
+  	 
+	<h1><a name="show_operator=">operator=(...)</a></h1>
+	<h2>
+  <p>ofImage_&lt; PixelType &gt; &amp; ofImage_::operator=(ofPixels_&lt; PixelType &gt; &amp;pixels)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Allows you to set an image to pixels. This resizes the image to the size of the ofPixels and reallocates all the of the data within the image.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>}
+\name Operators
+{</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail resetAnchor" data-lookup="resetAnchor" data-item-type="method">
+  	 
+	<h1><a name="show_resetAnchor">resetAnchor()</a></h1>
+	<h2>
+  <p>void ofImage_::resetAnchor()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This removes any anchor positioning, meaning that the ofImage will be draw with the upper left hand corner at the point passed into draw().</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Removes anchor positioning.</p>
+<p>Resets the anchor to (0, 0) so the image will be drawn from its
+upper left hand corner.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail resize" data-lookup="resize" data-item-type="method">
+  	 
+	<h1><a name="show_resize">resize(...)</a></h1>
+	<h2>
+  <p>void ofImage_::resize(int newWidth, int newHeight)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Resizes the image to a new size (w, h); Can be used to scale up or down an image.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Resizes the image to a new size (w, h); Can be used to scale up
+or down an image.</p>
+<p>Parameters:
+newWidth New width of image.
+newHeight New height of image.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail rotate90" data-lookup="rotate90" data-item-type="method">
+  	 
+	<h1><a name="show_rotate90">rotate90(...)</a></h1>
+	<h2>
+  <p>void ofImage_::rotate90(int rotation)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Rotates the image by a multiple of 90 degrees, for instance, if you pass in 2, then the image will be rotated 180 degrees.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Rotates the image by a multiple of 90 degrees.</p>
+<p>Parameters:
+rotation Amount to rotate in multiples of 90. For instance, if you pass
+in 2, then the image will be rotated 180 degrees.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail save" data-lookup="save" data-item-type="method">
+  	 
+	<h1><a name="show_save">save(...)</a></h1>
+	<h2>
+  <p>void ofImage_::save(const ofFile &amp;file, ofImageQualityType compressionLevel=OF_IMAGE_QUALITY_BEST)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>This saves the image to the ofFile passed with the image quality specified by compressionLevel.</p>
+<p>Parameters:
+file ofFile to save image to.
+compressionLevel The different compression levels are: <code>OF_IMAGE_QUALITY_BEST</code>, <code>OF_IMAGE_QUALITY_HIGH</code>,
+<code>OF_IMAGE_QUALITY_MEDIUM</code>, <code>OF_IMAGE_QUALITY_LOW</code>, <code>OF_IMAGE_QUALITY_WORST</code></p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail save" data-lookup="save" data-item-type="method">
+  	 
+	<h1><a name="show_save">save(...)</a></h1>
+	<h2>
+  <p>void ofImage_::save(ofBuffer &amp;buffer, ofImageQualityType compressionLevel=OF_IMAGE_QUALITY_BEST)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>This saves the image to the ofBuffer passed with the image
+quality specified by compressionLevel.</p>
+<p>Parameters:
+buffer ofBuffer to save image to.
+compressionLevel The ofImageQualityType.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail save" data-lookup="save" data-item-type="method">
+  	 
+	<h1><a name="show_save">save(...)</a></h1>
+	<h2>
+  <p>void ofImage_::save(string fileName, ofImageQualityType compressionLevel=OF_IMAGE_QUALITY_BEST)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Saves the image to the file path in fileName with the image
+quality specified by compressionLevel.</p>
+<p>Parameters:
+fileName Saves image to this path, relative to the data folder.
+compressionLevel The ofImageQualityType.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setAnchorPercent" data-lookup="setAnchorPercent" data-item-type="method">
+  	 
+	<h1><a name="show_setAnchorPercent">setAnchorPercent(...)</a></h1>
+	<h2>
+  <p>void ofImage_::setAnchorPercent(float xPct, float yPct)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Changes the drawing position specified by draw() from the normal top-left corner of the image to a position specified by xPct and yPct in relation to the dimensions of the image. This can be useful for aligning and centering images as well as rotating an image around its center.</p>
+<p>Note: range of xPct and yPct is 0.0 to 1.0. For xPct, 1.0 represents the width of the image. For yPct, 1.0 represents the height of the image. These values are not capped.</p>
+<p>For example to draw an image so that its center is at 100, 100:</p>
+<pre><code class="cpp">myImage.setAnchorPercent(0.5, 0.5);
+myImage.draw(100, 100);
+</code></pre>
+
+<p>To rotate an image around its center at 100, 100:</p>
+<pre><code class="cpp">ofPushMatrix();
+  ofTranslate(100, 100, 0);
+  ofRotate(45);
+  myImage.setAnchorPercent(0.5, 0.5);
+  myImage.draw(0, 0);
+ofPopMatrix();
+</code></pre>
+
+<p>To align the right side of an image with the right edge of the window:</p>
+<pre><code class="cpp">myImage.setAnchorPercent(1.0, 0.0);
+myImage.draw(ofGetWidth(), 0);
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Change the drawing anchor from top-left corner to a position
+specified by xPct and yPct.</p>
+<p>Changes the drawing position specified by draw() from the normal top-
+left corner of the image to a position specified by xPct and yPct in
+relation to the dimensions of the image. This can be useful  for
+aligning and centering images as well as rotating an image around its
+center. Note: range of  xPct and yPct is 0.0 to 1.0. For xPct, 1.0
+represents the width of the image. For yPct, 1.0 represents  the
+height of the image. These values are not capped.</p>
+<p>Parameters:
+xPct X position of the new anchor, specified as a percent of the width of the image.
+yPct Y position of the new anchor, specified as a percent of the height of the image.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setAnchorPoint" data-lookup="setAnchorPoint" data-item-type="method">
+  	 
+	<h1><a name="show_setAnchorPoint">setAnchorPoint(...)</a></h1>
+	<h2>
+  <p>void ofImage_::setAnchorPoint(float x, float y)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Changes the drawing position specified by draw() from the normal top-left corner of the image to a position specified by x and y, measured in pixels. This can be useful for aligning and centering images as well as rotating an image around its center.</p>
+<p>Note: see also setAnchorPercent() if you want to specify the anchor as a percentage of the image size.</p>
+<p>For example to draw an image so that its center is at 100, 100:</p>
+<pre><code class="cpp">myImage.setAnchorPoint(myImage.getWidth()/2, myImage.getHeight()/2);
+myImage.draw(100, 100);
+</code></pre>
+
+<p>To rotate an image around its center at 100, 100:</p>
+<pre><code class="cpp">ofPushMatrix();
+  ofTranslate(100, 100, 0);
+  ofRotate(45);
+  myImage.setAnchorPoint(myImage.getWidth()/2, myImage.getHeight()/2);
+  myImage.draw(0, 0);
+ofPopMatrix();
+</code></pre>
+
+<p>To align the right side of an image with the right edge of the window:</p>
+<pre><code class="cpp">myImage.setAnchorPoint(myImage.getWidth(), 0.0);
+myImage.draw(ofGetWidth(), 0);
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Changes drawing position from top-left corner to position specified by x,y.</p>
+<p>Changes the drawing position specified by draw() from the normal top-
+left corner of the image to a  position specified by x and y, measured
+in pixels. This can be useful for aligning and centering  images as
+well as rotating an image around its center.</p>
+<p>Parameters:
+x X position of the new anchor.
+y Y position of the new anchor.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setColor" data-lookup="setColor" data-item-type="method">
+  	 
+	<h1><a name="show_setColor">setColor(...)</a></h1>
+	<h2>
+  <p>void ofImage_::setColor(const ofColor_&lt; PixelType &gt; &amp;color)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Sets all pixels to a color.</p>
+<p>Parameters:
+color Color to set pixel to.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setColor" data-lookup="setColor" data-item-type="method">
+  	 
+	<h1><a name="show_setColor">setColor(...)</a></h1>
+	<h2>
+  <p>void ofImage_::setColor(int index, const ofColor_&lt; PixelType &gt; &amp;color)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Sets the pixel at the given pixel buffer index</p>
+<p>Parameters:
+index Index of pixel to set.
+color Color to set pixel to.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setColor" data-lookup="setColor" data-item-type="method">
+  	 
+	<h1><a name="show_setColor">setColor(...)</a></h1>
+	<h2>
+  <p>void ofImage_::setColor(int x, int y, const ofColor_&lt; PixelType &gt; &amp;color)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This sets the pixel at the x,y position passed in. The ofColor type needs to match the ofImage type, i.e. ofFloatImage requires that you use ofFloatPixels.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Sets the pixel at the x,y position passed in.</p>
+<p>The ofColor type needs to match the ofImage type, i.e. ofFloatImage
+requires that you use ofFloatPixels.</p>
+<p>Parameters:
+x x position of pixel.
+y y position of pixel.
+color Color to set pixel to.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setCompression" data-lookup="setCompression" data-item-type="method">
+  	 
+	<h1><a name="show_setCompression">setCompression(...)</a></h1>
+	<h2>
+  <p>void ofImage_::setCompression(ofTexCompression compression)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This sets the compression level used when creating mipmaps for the ofTexture contained by the ofImage. This is quite different than the ofImageQualityType image quality parameter used in saveImage(). The different texture compression levels are:
+    OF_COMPRESS_NONE,
+    OF_COMPRESS_SRGB,
+    OF_COMPRESS_ARB</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>This sets the compression level used when creating mipmaps for
+the ofTexture contained by the ofImage.</p>
+<p>Parameters:
+compression The ofTexCompression to set.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setFromPixels" data-lookup="setFromPixels" data-item-type="method">
+  	 
+	<h1><a name="show_setFromPixels">setFromPixels(...)</a></h1>
+	<h2>
+  <p>void ofImage_::setFromPixels(const PixelType *pixels, int w, int h, ofImageType type, bool bOrderIsRGB=true)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Set the pixels of the image from an array of values, for an ofFloatImage these need to be floats, for an ofImage these need to be unsigned chars. The w and h values are important so that the correct dimensions are set in the image. This assumes that you're setting the pixels from 0,0 or the upper left hand corner of the image.
+The bOrderIsRGB flag allows you pass in pixel data that is BGR by setting bOrderIsRGB=false.</p>
+<p>Copies in the pixel data from  the 'pixels' array. Specify the corresponding width and height of the image you are passing in with 'w' and 'h'. The image type can be OF_IMAGE_GRAYSCALE, OF_IMAGE_COLOR, or OF_IMAGE_COLOR_ALPHA.</p>
+<p>Note: that your array has to be at least as big as [ width * height * bytes per pixel ].</p>
+<p>If you have a grayscale image, you will have (width<em>height) number of pixels. Color images will have (width</em>height<em>3) number of pixels (interlaced R,G,B), and coloralpha images will have (width</em>height*4) number of pixels (interlaced R,G,B,A).</p>
+<p>Note: You do not need to call allocate() before calling setFromPixels() as setFromPixels() re-allocates itself if needed.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Sets the pixels of the image from an array of values.</p>
+<p>Set the pixels of the image from an array of values, for an
+ofFloatImage these need to be floats, for an ofImage  these need to be
+unsigned chars. The w and h values are important so that the correct
+dimensions are set in the  image. This assumes that you're setting the
+pixels from 0,0 or the upper left hand corner of the image. The
+bOrderIsRGB flag allows you pass in pixel data that is BGR by setting
+bOrderIsRGB=false.</p>
+<p>Parameters:
+pixels Array of pixel values.
+w Width of image being passed in.
+h Height of image being passed in.
+type The image type can be OF_IMAGE_GRAYSCALE, OF_IMAGE_COLOR, or OF_IMAGE_COLOR_ALPHA.
+bOrderIsRGB Pass in pixel data that is BGR by setting bOrderIsRGB=false.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setFromPixels" data-lookup="setFromPixels" data-item-type="method">
+  	 
+	<h1><a name="show_setFromPixels">setFromPixels(...)</a></h1>
+	<h2>
+  <p>void ofImage_::setFromPixels(const ofPixels_&lt; PixelType &gt; &amp;pixels)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Set the pixels of the image from an ofPixels instance, for an ofFloatImage these need to be ofFloatPixels, for an ofImage these need to be unsigned chars. The w and h values are important so that the correct dimensions are set in the image. This assumes that you're setting the pixels from 0,0 or the upper left hand corner of the image.
+The bOrderIsRGB flag allows you pass in pixel data that is BGR by setting bOrderIsRGB=false.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Set the pixels of the image from an ofPixels instance.</p>
+<p>Set the pixels of the image from an ofPixels instance, for an
+ofFloatImage these need to be ofFloatPixels, for an ofImage these need
+to be unsigned chars.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setImageType" data-lookup="setImageType" data-item-type="method">
+  	 
+	<h1><a name="show_setImageType">setImageType(...)</a></h1>
+	<h2>
+  <p>void ofImage_::setImageType(ofImageType type)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Set the type of image to one of the following: OF_IMAGE_GRAYSCALE, OF_IMAGE_COLOR, OF_IMAGE_COLOR_ALPHA. This does cause the image to be reallocated and the texture to be updated, so it can be an expensive operation if done frequently. Converting down, for example from color to grayscale, loses information and is a destructive change.</p>
+<p>For example, you can load in a color image, and convert it to grayscale:</p>
+<pre><code class="cpp">myImage.loadImage(&quot;somethingColor.jpg&quot;);
+myImage.setImageType(OF_IMAGE_GRAYSCALE);   // now I am grayscale;
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Set type of image to one of the following: OF_IMAGE_GRAYSCALE,
+OF_IMAGE_COLOR, OF_IMAGE_COLOR_ALPHA</p>
+<p>This does cause the image to be reallocated and the texture to be
+updated, so it can be an expensive operation  if done frequently.
+Converting down, for example from color to grayscale, loses
+information and is a destructive change.</p>
+<p>Parameters:
+type The type of image, one of the following:
+<code>OF_IMAGE_GRAYSCALE</code>, <code>OF_IMAGE_COLOR</code>, <code>OF_IMAGE_COLOR_ALPHA</code></p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setUseTexture" data-lookup="setUseTexture" data-item-type="method">
+  	 
+	<h1><a name="show_setUseTexture">setUseTexture(...)</a></h1>
+	<h2>
+  <p>void ofImage_::setUseTexture(bool bUse)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>If you set the ofImage to not use a texture it will contain the pixels of the image but cannot be drawn to the screen without copying its data into an ofTexture instance.</p>
+<p>This turns on or off the allocation and use of a texture. any time you change the image (loading, resizing, converting the type), ofImage will upload data to an opengl texture. It may not be necessary, though, and it could be that you need to save memory on the graphics card, or that you don't need to draw this image on the screen. You can call this even before you load an image in to OF:</p>
+<pre><code class="cpp">myImage.setUseTexture(false);
+myImage.loadImage(&quot;blah.gif&quot;);
+</code></pre>
+
+<p>Since in the majority of cases, ofImages will be loaded in and drawn onscreen, the default is set to use a texture.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Turns on or off the allocation and use of a texture.</p>
+<p>Parameters:
+bUse Allocate and use a texture or not.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail unbind" data-lookup="unbind" data-item-type="method">
+  	 
+	<h1><a name="show_unbind">unbind(...)</a></h1>
+	<h2>
+  <p>void ofImage_::unbind(int textureLocation=0)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This unbinds the ofTexture instance that the ofImage contains. Call this after you call bind().</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail update" data-lookup="update" data-item-type="method">
+  	 
+	<h1><a name="show_update">update()</a></h1>
+	<h2>
+  <p>void ofImage_::update()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This method should be called after you update the pixels of the image and want to ensure that the changes to the pixels are reflected in the ofTexture of the image. Many of the ofImage methods call this after they change the pixels, but if you directly manipulate the pixels of the ofImage, then you should make sure to call update() before trying to draw the texture of the image to the screen.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+
+            <!-- vars detail -->
+              <!--h2><a name="variables"></a>ofImage variables</h2!-->
+                        
+<div class="documentation_detail  bpp" data-lookup="bpp" data-item-type="var">
+	<h1>int <a name="show_bpp">bpp</a></h1>
+	<h2>
+  <p>int ofImage_::bpp</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  <p>Bytes per pixels of the image. This will be 3 for OF_IMAGE_COLOR with unsigned char pixels and 12 for an OF_COLOR_IMAGE with float pixels.</p>
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  height" data-lookup="height" data-item-type="var">
+	<h1>int <a name="show_height">height</a></h1>
+	<h2>
+  <p>int ofImage_::height</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  <p>Height of the image in pixels.</p>
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  type" data-lookup="type" data-item-type="var">
+	<h1>int <a name="show_type">type</a></h1>
+	<h2>
+  <p>int ofImage_::type</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  <p>Returns the type of image, OF_IMAGE_COLOR, OF_IMAGE_COLOR_ALPHA, or OF_IMAGE_GRAYSCALE</p>
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  width" data-lookup="width" data-item-type="var">
+	<h1>int <a name="show_width">width</a></h1>
+	<h2>
+  <p>int ofImage_::width</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  <p>Width of the image in pixels.</p>
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+
+            <!-- functions detail -->
+              <!--h2><a name="functions"></a>ofImage functions</h2-->
+                        
+<div class="documentation_detail ofLoadImage" data-lookup="ofLoadImage" data-item-type="function">
+  	 
+	<h1><a name="show_ofLoadImage">ofLoadImage(...)</a></h1>
+	<h2>
+  <p>bool ofLoadImage(ofPixels &amp;pix, string path)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>\todo Needs documentation.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofLoadImage" data-lookup="ofLoadImage" data-item-type="function">
+  	 
+	<h1><a name="show_ofLoadImage">ofLoadImage(...)</a></h1>
+	<h2>
+  <p>bool ofLoadImage(ofPixels &amp;pix, const ofBuffer &amp;buffer)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofLoadImage" data-lookup="ofLoadImage" data-item-type="function">
+  	 
+	<h1><a name="show_ofLoadImage">ofLoadImage(...)</a></h1>
+	<h2>
+  <p>bool ofLoadImage(ofTexture &amp;tex, string path)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>\todo Needs documentation.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofLoadImage" data-lookup="ofLoadImage" data-item-type="function">
+  	 
+	<h1><a name="show_ofLoadImage">ofLoadImage(...)</a></h1>
+	<h2>
+  <p>bool ofLoadImage(ofTexture &amp;tex, const ofBuffer &amp;buffer)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofLoadImage" data-lookup="ofLoadImage" data-item-type="function">
+  	 
+	<h1><a name="show_ofLoadImage">ofLoadImage(...)</a></h1>
+	<h2>
+  <p>bool ofLoadImage(ofFloatPixels &amp;pix, string path)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>\todo Needs documentation.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofLoadImage" data-lookup="ofLoadImage" data-item-type="function">
+  	 
+	<h1><a name="show_ofLoadImage">ofLoadImage(...)</a></h1>
+	<h2>
+  <p>bool ofLoadImage(ofFloatPixels &amp;pix, const ofBuffer &amp;buffer)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofLoadImage" data-lookup="ofLoadImage" data-item-type="function">
+  	 
+	<h1><a name="show_ofLoadImage">ofLoadImage(...)</a></h1>
+	<h2>
+  <p>bool ofLoadImage(ofShortPixels &amp;pix, string path)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>\todo Needs documentation.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofLoadImage" data-lookup="ofLoadImage" data-item-type="function">
+  	 
+	<h1><a name="show_ofLoadImage">ofLoadImage(...)</a></h1>
+	<h2>
+  <p>bool ofLoadImage(ofShortPixels &amp;pix, const ofBuffer &amp;buffer)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSaveImage" data-lookup="ofSaveImage" data-item-type="function">
+  	 
+	<h1><a name="show_ofSaveImage">ofSaveImage(...)</a></h1>
+	<h2>
+  <p>void ofSaveImage(ofPixels &amp;pix, string path, ofImageQualityType qualityLevel=OF_IMAGE_QUALITY_BEST)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>\todo Needs documentation.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSaveImage" data-lookup="ofSaveImage" data-item-type="function">
+  	 
+	<h1><a name="show_ofSaveImage">ofSaveImage(...)</a></h1>
+	<h2>
+  <p>void ofSaveImage(ofPixels &amp;pix, ofBuffer &amp;buffer, ofImageFormat format=OF_IMAGE_FORMAT_PNG, ofImageQualityType qualityLevel=OF_IMAGE_QUALITY_BEST)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSaveImage" data-lookup="ofSaveImage" data-item-type="function">
+  	 
+	<h1><a name="show_ofSaveImage">ofSaveImage(...)</a></h1>
+	<h2>
+  <p>void ofSaveImage(ofFloatPixels &amp;pix, string path, ofImageQualityType qualityLevel=OF_IMAGE_QUALITY_BEST)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>\todo Needs documentation.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSaveImage" data-lookup="ofSaveImage" data-item-type="function">
+  	 
+	<h1><a name="show_ofSaveImage">ofSaveImage(...)</a></h1>
+	<h2>
+  <p>void ofSaveImage(ofFloatPixels &amp;pix, ofBuffer &amp;buffer, ofImageFormat format=OF_IMAGE_FORMAT_PNG, ofImageQualityType qualityLevel=OF_IMAGE_QUALITY_BEST)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSaveImage" data-lookup="ofSaveImage" data-item-type="function">
+  	 
+	<h1><a name="show_ofSaveImage">ofSaveImage(...)</a></h1>
+	<h2>
+  <p>void ofSaveImage(ofShortPixels &amp;pix, string path, ofImageQualityType qualityLevel=OF_IMAGE_QUALITY_BEST)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>\todo Needs documentation.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSaveImage" data-lookup="ofSaveImage" data-item-type="function">
+  	 
+	<h1><a name="show_ofSaveImage">ofSaveImage(...)</a></h1>
+	<h2>
+  <p>void ofSaveImage(ofShortPixels &amp;pix, ofBuffer &amp;buffer, ofImageFormat format=OF_IMAGE_FORMAT_PNG, ofImageQualityType qualityLevel=OF_IMAGE_QUALITY_BEST)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+            <hr/>
+                
+            <!--diqus comments for class/functions module description-->
+            <div id="comments_header">
+            <h2>comments</h2>
+            <p>You can add comments with usage examples or other information for each class, method or variable, for adding documentation to an empty section or reporting errors is better to send a fix or open an issue through <a href="https://github.com/openframeworks/ofSite">github</a>.</p>
+            <p>When posting code enclose it in:</p>
+            <pre><code class="html">&lt;pre&gt;&lt;code class=&quot;cpp&quot;&gt;&nbsp;&lt;/code&gt;&lt;/pre&gt;</code></pre>
+            <br/>
+            </div>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+
+            // DISQUS
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+
+            var disqus_shortname = 'openframeworks'; // required: replace example with your forum shortname
+            //var disqus_developer = 1;
+
+            location_elements = window.location.pathname.split("/");
+            module_name = location_elements[location_elements.length-1].split(".")[0];
+            section_name = location.hash.split("_")[1];
+            console.log(module_name + " " + section_name);
+            if(section_name!=undefined && section_name!=''){
+            var disqus_identifier = window.location.pathname + "#!show_" + section_name;  
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "#!show_" + section_name;
+            var discus_title = document.title + " - " + section_name;
+            }else{
+            var disqus_identifier = window.location.pathname;
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            var discus_title = document.title;
+            }
+
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */   
+            (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		
+        </div><!-- End Submenu right -->
+      </div><!-- End page wide -->
+      </div><!-- End body wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:34:13 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+eb73abcb6141243ae29291b42ec447024f00a570
+">
+
+eb73abcb6141243ae29291b42ec447024f00a570
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+

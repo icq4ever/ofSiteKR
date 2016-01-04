@@ -1,0 +1,366 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+  </head>
+  <body>
+    <div id="content">
+      
+  
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">
+      		<div class="page-left-wide">
+                
+  <h1 id="pandaboard">Pandaboard</h1>
+<h2 id="ubuntu-installation">Ubuntu installation</h2>
+<p>This guide is written following this guides</p>
+<p><a href="http://omappedia.org/wiki/Ubuntu_Pre-built_Binaries_Guide">http://omappedia.org/wiki/Ubuntu_Pre-built_Binaries_Guide</a></p>
+<p><a href="https://groups.google.com/d/topic/pandaboard/7DLabw7amBg/discussion">https://groups.google.com/d/topic/pandaboard/7DLabw7amBg/discussion</a></p>
+<p><a href="https://groups.google.com/forum/?fromgroups=#!topic/pandaboard/vKunvhMNV8k">https://groups.google.com/forum/?fromgroups=#!topic/pandaboard/vKunvhMNV8k</a></p>
+<p>If you have problems installing Ubuntu on your Pandaboard refer to those guides</p>
+<h2 id="required">Required:</h2>
+<ul>
+<li>PandaboardES,</li>
+<li>sd-card more than 4GB,</li>
+<li>internal or external card reader (USB 3.0 pref.).</li>
+<li>internet connection (LAN or wifi)</li>
+</ul>
+<p>You need to install hard-float version of Ubuntu: version 12.04. This because OF is configured for hard float for better performance.</p>
+<p>You must download the zipped .img desktop from <a href="http://cdimage.ubuntu.com/releases/12.04/release/ubuntu-12.04-preinstalled-desktop-armhf+omap4.img.gz">here</a></p>
+<h2 id="installing-ubuntu-on-the-sdcard">Installing Ubuntu on the SDCard:</h2>
+<h3 id="linux">Linux</h3>
+<ul>
+<li>Place the SD card at your host computer.</li>
+<li>Make sure the SD card is not mounted (just umount it if needed)</li>
+<li>
+<p>Identify the correct raw device name (like /dev/sde - not /dev/sde1). To know what the name of your (sd-card) launch in a terminal:</p>
+<pre><code>disks --enumerate
+</code></pre>
+<p>or use the utility disk application from the Desktop. Pay attention any wrongs could be dangerous here!</p>
+</li>
+<li>
+<p>Run the following command from a terminal:
+(replacing  sde with the right values )</p>
+<pre><code>zcat ./ubuntu-12.04-preinstalled-desktop-armhf+omap4.img.gz | sudo dd bs=4M of=/dev/sde ; sudo sync
+</code></pre>
+</li>
+<li>
+<p>Some people have reported issues with this method. If this doesn't work, try the following commands:</p>
+<pre><code>gunzip ubuntu-12.04-preinstalled-desktop-armhf+omap4.img.gz
+sudo dd bs=4M if=ubuntu-12.04-preinstalled-desktop-armhf+omap4.img of=/dev/sde
+sudo sync
+</code></pre>
+</li>
+</ul>
+<h3 id="mac-osx">Mac OSX</h3>
+<ul>
+<li>
+<p>locate the SD Card (look for /dev/diskN):</p>
+<p>diskutil list</p>
+</li>
+<li>
+<p>Unmount the disk where "N" is the number of the disk taken from the above command:</p>
+<p>diskutil unmountDisk /dev/diskN</p>
+</li>
+<li>
+<p>Use the following code to write the image to diskN:</p>
+<pre><code>dd bs=4m if=ubuntu-12.04-preinstalled-desktop-armhf+omap4.img of=/dev/diskN
+</code></pre>
+</li>
+</ul>
+<h3 id="ms-windows">MS Windows</h3>
+<ul>
+<li>Download the image and extract it using WinZip or some other archive utility. Then use Win32ImageWriter to write the unzipped img file to your flash device.</li>
+<li>Follow the instruction on the help reference to burn the mage in the sdcard.</li>
+<li>You can download Win32ImageWriter from <a href="https://launchpad.net/win32-image-writer">here</a>.</li>
+</ul>
+<h2 id="installing-ubuntu-from-the-sdcard">Installing Ubuntu from the sdcard</h2>
+<p>After copying ubuntu on the sdcard from your computer, eject your sd-card, insert it  in your pandaboard, plug a keyboard and a mouse, plug a monitor on you hdmi. As you plug the voltage Ubuntu will start the booting process and loading the kernel. After that it will autoresize and create automatically the partition on your disk. In a few seconds you will see a window in your screen asking for the installation language . The configuration setup is started! follow all the instructions this part is super friendly. At the end it will ask to reboot. Do it and follow the next steps.</p>
+<h2 id="install-omap4-addons">Install OMAP4 addons</h2>
+<p>Once the Pandaboard finished booting, follow those instruction to configure it.</p>
+<ul>
+<li>
+<p>Add TI OMAP release PPA</p>
+<pre><code>sudo su add-apt-repository ppa:tiomap-dev/release
+</code></pre>
+</li>
+<li>
+<p>Perform the upgrade</p>
+<pre><code>apt-get update
+
+apt-get dist-upgrade
+
+apt-get install ubuntu-omap4-extras
+</code></pre>
+</li>
+<li>
+<p>You can re-run a dist-upgrade for safety at the end, then reboot.</p>
+</li>
+</ul>
+<h2 id="post-installation-important-information">Post Installation Important Information</h2>
+<ul>
+<li>
+<p>After the installation/update, it is advised to log as default user and to execute:</p>
+<ul>
+<li>
+<p>On Panda 4430:</p>
+<pre><code>/usr/bin/alsaucm -c Panda set _verb HiFi
+</code></pre>
+</li>
+<li>
+<p>On PandaES 4460:</p>
+<pre><code>/usr/bin/alsaucm -c PandaES set _verb HiFi
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>Install new bootloaders: You need to force installation of new bootloaders (if any) through command:</p>
+<pre><code>sudo /usr/sbin/flash-kernel --update-bootloader
+</code></pre>
+</li>
+<li>
+<p>Change Ubuntu desktop: it is advised to use Ubuntu 2D instead of Ubuntu (3D) default UI. (Nevertheless, main compiz issues have been fixed)</p>
+</li>
+<li>
+<p>Check dkms installation: in some cases, you might need to re-install dkms packages: after reboot,  check if omapdrm_pvr module is loaded, you can run in a console:</p>
+<pre><code>lsmod
+</code></pre>
+</li>
+<li>
+<p>if it's not there execute following command before to reboot:</p>
+<pre><code>sudo apt-get install --reinstall pvr-omap4-dkms
+</code></pre>
+</li>
+<li>
+<p>Change the boot args: you must modify the boot/boot.script as suggested in the Pandaboard google group:</p>
+<ul>
+<li>
+<p>Open terminal and go to boot directory</p>
+<pre><code>cd /boot
+sudo nano boot.script
+</code></pre>
+</li>
+<li>
+<p>Please replace:</p>
+<pre><code>"vram=40M mem=456M@0x80000000 mem=512M@0xA0000000"     (or any vram or split mem settings)
+</code></pre>
+</li>
+<li>
+<p>with</p>
+<pre><code>"mem=1G@0x80000000"
+</code></pre>
+</li>
+<li>
+<p>We advise following bootargs:</p>
+<pre><code>ro elevator=noop console=ttyO2,115200n8 mem=1G@0x80000000 root=&lt;UUID or LABEL root&gt; fixrtc splash
+</code></pre>
+</li>
+<li>
+<p>(even if you are not using minicom, it is wise to add the "console" as well: if you install minicom in the future, you won't need to remodify the boot args).</p>
+</li>
+<li>
+<p>Save it and then run the following command to apply the changes:</p>
+<pre><code>flash-kernel
+</code></pre>
+</li>
+<li>
+<p>(this generate the new boot.scr and copy it to boot partition)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="install-openframeworks">Install openFrameworks</h2>
+<ul>
+<li>Download openFrameworks for armv7 if you haven't done it before, uncompress it somewhere in your sdcard, usually in your home folder, documents or desktop</li>
+<li>Run the install_dependencies.sh and install_codecs.sh scripts in scripts/linux/ubuntu </li>
+<li>
+<p>Compile and run any of the examples, for example:</p>
+<pre><code>cd $(OF_ROOT)/examples/graphics/polygonExample
+make
+make run
+</code></pre>
+</li>
+<li>
+<p>The first time you compile a example it'll take a while to compile since it needs to compile all of openFrameworks. Next times it'll just need to compile you example code and it'll be much faster.</p>
+</li>
+<li>You can edit your source files using gedit, the default text editor on linux which has great syntax highliting.</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>.. 
+A good idea is to check from time to time the Pandaboard Google group to keep yourself updated about new versions of TI OMAP.
+<a href="https://groups.google.com/forum/?fromgroups#!forum/pandaboard">https://groups.google.com/forum/?fromgroups#!forum/pandaboard</a></p>
+<h3 id="repository-fetch-error">Repository fetch error:</h3>
+<p>If you got an error after apt-get update: cannot fetch some repository ("armhf" packages). 
+You first need to add the PPA repository before running "apt-get update".</p>
+<h3 id="mouse-cursor-flashing">Mouse cursor flashing:</h3>
+<p>Mouse cursor flash is consequence of HWcursor, you can fix that by disabling HWcursor in xorg.conf file, edit file /usr/share/X11/xorg.conf.d/99-omap.conf and add the bold line:</p>
+<pre><code>    Section "Device"
+        Identifier  "Video Device"
+        Driver      "omap"
+        Option      "Debug"     "false"
+        Option      "HWcursor"      "false"
+    EndSection
+</code></pre>
+<h3 id="screen-flickering">Screen flickering</h3>
+<p>After reboot, the screen flicker in black when moving the mouse at on the desktop elements.
+Then logout and in front of the user name, click on the ubuntu symbol. Then select "Ubuntu 2D".</p>
+<h2 id="optionals">Optionals</h2>
+<p>Install Xubuntu
+Using a lightweight desktop environment like Xfce will speed up the pandaboard.
+Xubuntu is also a derivative of Ubuntu but with Xfce as the desktop environment and some other applications.</p>
+<p>Install Xubuntu on top of Ubuntu:</p>
+<pre><code>    sudo apt-get update
+    sudo apt-get install xubuntu-desktop
+</code></pre>
+
+            </div>
+      </div>
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:34:26 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+eb73abcb6141243ae29291b42ec447024f00a570
+">
+
+eb73abcb6141243ae29291b42ec447024f00a570
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+

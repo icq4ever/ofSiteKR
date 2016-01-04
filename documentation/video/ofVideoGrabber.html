@@ -1,0 +1,1061 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr - ofVideoGrabber</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+    <script src="http://icq4ever.iptime.org//js/jquery.columnizer.min.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation.js"></script>
+  </head>
+  <body>
+    <div id="content">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">
+          <div class="page-wide">
+          
+              <div id="docstitle"><h1>ofVideoGrabber</h1></div>
+              <div id="editdocs">
+                    <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/video/ofVideoGrabber.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
+              </div>
+              
+          </div>
+          
+          
+        <div class="page-wide">
+		    <div class="submenucol-left">
+		     <!-- list of methods -->
+		     <p class="top_list_header">class methods</p>
+             <ul class="functionslist">
+                 
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_bind" class="bind" data-lookup="bind">bind()</a></li>
+                     
+                         <li>
+                         <a href="#show_close" class="close" data-lookup="close">close()</a></li>
+                     
+                         <li>
+                         <a href="#show_draw" class="draw" data-lookup="draw">draw()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_getGrabber" class="getGrabber" data-lookup="getGrabber">getGrabber()</a></li>
+                     
+                     
+                     
+                     
+                         <li>
+                         <a href="#show_getHeight" class="getHeight" data-lookup="getHeight">getHeight()</a></li>
+                     
+                         <li>
+                         <a href="#show_getPixelFormat" class="getPixelFormat" data-lookup="getPixelFormat">getPixelFormat()</a></li>
+                     
+                         <li>
+                         <a href="#show_getPixels" class="getPixels" data-lookup="getPixels">getPixels()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_getTexture" class="getTexture" data-lookup="getTexture">getTexture()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_getTexturePlanes" class="getTexturePlanes" data-lookup="getTexturePlanes">getTexturePlanes()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_getWidth" class="getWidth" data-lookup="getWidth">getWidth()</a></li>
+                     
+                         <li>
+                         <a href="#show_initGrabber" class="initGrabber" data-lookup="initGrabber">initGrabber()</a></li>
+                     
+                         <li>
+                         <a href="#show_isFrameNew" class="isFrameNew" data-lookup="isFrameNew">isFrameNew()</a></li>
+                     
+                         <li>
+                         <a href="#show_isInitialized" class="isInitialized" data-lookup="isInitialized">isInitialized()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_isUsingTexture" class="isUsingTexture" data-lookup="isUsingTexture">isUsingTexture()</a></li>
+                     
+                         <li>
+                         <a href="#show_listDevices" class="listDevices" data-lookup="listDevices">listDevices()</a></li>
+                     
+                     
+                     
+                         <li>
+                         <a href="#show_setAnchorPoint" class="setAnchorPoint" data-lookup="setAnchorPoint">setAnchorPoint()</a></li>
+                     
+                         <li>
+                         <a href="#show_setDesiredFrameRate" class="setDesiredFrameRate" data-lookup="setDesiredFrameRate">setDesiredFrameRate()</a></li>
+                     
+                         <li>
+                         <a href="#show_setDeviceID" class="setDeviceID" data-lookup="setDeviceID">setDeviceID()</a></li>
+                     
+                         <li>
+                         <a href="#show_setGrabber" class="setGrabber" data-lookup="setGrabber">setGrabber()</a></li>
+                     
+                         <li>
+                         <a href="#show_setPixelFormat" class="setPixelFormat" data-lookup="setPixelFormat">setPixelFormat()</a></li>
+                     
+                         <li>
+                         <a href="#show_setUseTexture" class="setUseTexture" data-lookup="setUseTexture">setUseTexture()</a></li>
+                     
+                         <li>
+                         <a href="#show_setVerbose" class="setVerbose" data-lookup="setVerbose">setVerbose()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setup" class="setup" data-lookup="setup">setup()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_unbind" class="unbind" data-lookup="unbind">unbind()</a></li>
+                     
+                         <li>
+                         <a href="#show_update" class="update" data-lookup="update">update()</a></li>
+                     
+                         <li>
+                         <a href="#show_videoSettings" class="videoSettings" data-lookup="videoSettings">videoSettings()</a></li>
+                     
+             </ul>
+            
+             
+             
+             <!-- list of variables -->              
+            
+             
+            
+             <!-- list of functions -->              
+		    </div>
+	    <div class="submenucol-right">
+            <div class="documentation_detail class_documentation">
+                    <h2><strong><em>Extends</em></strong></h2>
+                    <p>This class extends others, you can call their methods on an instance of ofVideoGrabber too:</p>
+                    <ul>
+                        <li><a href="../types/ofBaseVideoGrabber.html" class="docs_class" >ofBaseVideoGrabber</a> </li>
+                        <li><a href="../types/ofBaseVideoDraws.html" class="docs_class" >ofBaseVideoDraws</a> </li>
+                    </ul>
+              
+  <p>The <a href="../video/ofVideoGrabber.html" class="docs_class" >ofVideoGrabber</a> class wraps QuickTime's sequence grabbing component to provide low level access to live cameras. On Microsoft Windows it now uses the DirectShow based videoInput library which offers mainy performance advantages over QuickTime and does not require QuickTime or WinVDig to be installed. A #define in ofConstants.h allows you to choose whether to use QuickTime or DirectShow (default) for Microsoft Windows.
+In Linux it uses by default unicap, although you can change to V4L through a #define in ofConstants in case some V4L devices don't work properly with unicap.</p>
+
+
+              
+              
+  
+
+           </div>
+                  
+            <!-- methods detail -->
+              <!--h2><a name="methods"></a>ofVideoGrabber methods</h2-->
+                        
+<div class="documentation_detail bind" data-lookup="bind" data-item-type="method">
+  	 
+	<h1><a name="show_bind">bind()</a></h1>
+	<h2>
+  <p>void ofVideoGrabber::bind()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail close" data-lookup="close" data-item-type="method">
+  	 
+	<h1><a name="show_close">close()</a></h1>
+	<h2>
+  <p>void ofVideoGrabber::close()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Closes the sequence grabber and de-allocates any allocated resources. Call this only when you want to stop the video grabber finally. See also initGrabber()</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofVideoGrabber::draw(float x, float y)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Draws the internal texture of the movie grabber class at the position (x,y) with the internal width and height of the movie grabber. It uses the native size of the grabber, so if you initialize the grabber at 320 x 240, it will draw a rectangle at x,y with a width and height of 320 x 240. Please note, ofSetRectMode() can have an effect on if the x,y is the top left corner or center point.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofVideoGrabber::draw(float x, float y, float w, float h)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Draws the internal texture of the movie grabber class at the position (x,y) with the given width (w) and height (h). As the video grabber operates, it grabs pixel data and uploads it to it's internal texture (ie, on the GPU), unless you call setUseTexture(false), which disables the texture uploading. This draws that internal texture on screen.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getGrabber" data-lookup="getGrabber" data-item-type="method">
+  	 
+	<h1><a name="show_getGrabber">getGrabber()</a></h1>
+	<h2>
+  <p>shared_ptr&lt; ofBaseVideoGrabber &gt; ofVideoGrabber::getGrabber()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>getGrabber returns a pointer (ofPtr) to the internally running video grabber. Since the ofVideoGrabber object has different potential systems for grabbing (QuickTime, QTKit, DirectShow), this ptr gives you access to the underlying video grabber that's running inside of ofVideoGrabber. Note: use this only if you need low level access to an internal grabbing object, such as to call a specific function.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getGrabber" data-lookup="getGrabber" data-item-type="method">
+  	 
+	<h1><a name="show_getGrabber">getGrabber()</a></h1>
+	<h2>
+  <p>const shared_ptr&lt; ofBaseVideoGrabber &gt; ofVideoGrabber::getGrabber()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getGrabber" data-lookup="getGrabber" data-item-type="method">
+  	 
+	<h1><a name="show_getGrabber">getGrabber()</a></h1>
+	<h2>
+  <p>shared_ptr&lt; GrabberType &gt; ofVideoGrabber::getGrabber()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getGrabber" data-lookup="getGrabber" data-item-type="method">
+  	 
+	<h1><a name="show_getGrabber">getGrabber()</a></h1>
+	<h2>
+  <p>const shared_ptr&lt; GrabberType &gt; ofVideoGrabber::getGrabber()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getHeight" data-lookup="getHeight" data-item-type="method">
+  	 
+	<h1><a name="show_getHeight">getHeight()</a></h1>
+	<h2>
+  <p>float ofVideoGrabber::getHeight()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the height of the video grabber object. If you initialize the object at 320x240, it will return 240;</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getPixelFormat" data-lookup="getPixelFormat" data-item-type="method">
+  	 
+	<h1><a name="show_getPixelFormat">getPixelFormat()</a></h1>
+	<h2>
+  <p>ofPixelFormat ofVideoGrabber::getPixelFormat()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the height of the video grabber object. If you initialize the object at 320x240, it will return 240;</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getPixels" data-lookup="getPixels" data-item-type="method">
+  	 
+	<h1><a name="show_getPixels">getPixels()</a></h1>
+	<h2>
+  <p>ofPixels &amp; ofVideoGrabber::getPixels()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the pointer to the array of pixels that represents the current frame of live video. the data is stored interleaved as RGB, and in an array which is the size: width<em>height</em>3. This function returns a pointer to an unsigned char array -- it's up to the user to deal with this memory correctly. Functions like getWidth() and getHeight() can help.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getPixels" data-lookup="getPixels" data-item-type="method">
+  	 
+	<h1><a name="show_getPixels">getPixels()</a></h1>
+	<h2>
+  <p>const ofPixels &amp; ofVideoGrabber::getPixels()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getTexture" data-lookup="getTexture" data-item-type="method">
+  	 
+	<h1><a name="show_getTexture">getTexture()</a></h1>
+	<h2>
+  <p>ofTexture &amp; ofVideoGrabber::getTexture()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getTexture" data-lookup="getTexture" data-item-type="method">
+  	 
+	<h1><a name="show_getTexture">getTexture()</a></h1>
+	<h2>
+  <p>const ofTexture &amp; ofVideoGrabber::getTexture()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getTexturePlanes" data-lookup="getTexturePlanes" data-item-type="method">
+  	 
+	<h1><a name="show_getTexturePlanes">getTexturePlanes()</a></h1>
+	<h2>
+  <p>vector&lt; ofTexture &gt; &amp; ofVideoGrabber::getTexturePlanes()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getTexturePlanes" data-lookup="getTexturePlanes" data-item-type="method">
+  	 
+	<h1><a name="show_getTexturePlanes">getTexturePlanes()</a></h1>
+	<h2>
+  <p>const vector&lt; ofTexture &gt; &amp; ofVideoGrabber::getTexturePlanes()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getWidth" data-lookup="getWidth" data-item-type="method">
+  	 
+	<h1><a name="show_getWidth">getWidth()</a></h1>
+	<h2>
+  <p>float ofVideoGrabber::getWidth()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the width of the video grabber object. If you initialize the object at 320x240, it will return 320.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail initGrabber" data-lookup="initGrabber" data-item-type="method">
+  	 
+	<h1><a name="show_initGrabber">initGrabber(...)</a></h1>
+	<h2>
+  <p>bool ofVideoGrabber::initGrabber(int w, int h)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Initializes either the default capture device or the capture device specified by setDeviceID. Attempts to setup capture at the width and height specified. If the capture dimensions are not available it will setup capture for the next closest dimensions available. It is good to check what the actual size is before you start processing the pixels.</p>
+<pre><code class="cpp">
+myGrabber.setVerbose(true);
+myGrabber.setDeviceID(1);
+myGrabber.initGrabber(320,240);
+int grabW = myGrabber.width;
+int grabH = myGrabber.height;
+printf(&quot;asked for 320 by 240 - actual size is %i by %i 
+&quot;, grabW, grabH);
+</code></pre>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail isFrameNew" data-lookup="isFrameNew" data-item-type="method">
+  	 
+	<h1><a name="show_isFrameNew">isFrameNew()</a></h1>
+	<h2>
+  <p>bool ofVideoGrabber::isFrameNew()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This function can be called after calling ofImage::update() (or alternatively, ofImage::ofIdleGrabber()) to figure out if a frame is new, ie. if there is a new pixel data.  This is typically because your main frame rate might not be in sync with the video grabber, and you can skip processing on frames where there is no new data.  <br />
+</p>
+<pre><code class="cpp">
+void testApp::update(){
+
+    grabber.update();  // call this once per update
+    if (grabber.isFrameNew()){
+        ; // do computer vision / process the pixels
+    }
+
+}
+
+</code></pre>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail isInitialized" data-lookup="isInitialized" data-item-type="method">
+  	 
+	<h1><a name="show_isInitialized">isInitialized()</a></h1>
+	<h2>
+  <p>bool ofVideoGrabber::isInitialized()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns a boolean if the video grabber is properly initialized.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail isUsingTexture" data-lookup="isUsingTexture" data-item-type="method">
+  	 
+	<h1><a name="show_isUsingTexture">isUsingTexture()</a></h1>
+	<h2>
+  <p>bool ofVideoGrabber::isUsingTexture()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail listDevices" data-lookup="listDevices" data-item-type="method">
+  	 
+	<h1><a name="show_listDevices">listDevices()</a></h1>
+	<h2>
+  <p>vector&lt; ofVideoDevice &gt; ofVideoGrabber::listDevices()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Prints to the console a list of available capture devices with the device ID of each device. The device ID can then be used with setDeviceID() to specify a specific device to capture from.  This is especially useful if you have multiple devices, or want to see what kind of cameras openframeworks sees.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setAnchorPoint" data-lookup="setAnchorPoint" data-item-type="method">
+  	 
+	<h1><a name="show_setAnchorPoint">setAnchorPoint(...)</a></h1>
+	<h2>
+  <p>void ofVideoGrabber::setAnchorPoint(float x, float y)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Adjusts ofVideoGrabbers anchor for more drawing control. See ofImage::setAnchorPoint(x,y) for info.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setDesiredFrameRate" data-lookup="setDesiredFrameRate" data-item-type="method">
+  	 
+	<h1><a name="show_setDesiredFrameRate">setDesiredFrameRate(...)</a></h1>
+	<h2>
+  <p>void ofVideoGrabber::setDesiredFrameRate(int framerate)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Set's the desired frame rate of the grabber. This should be called before initGrabber(), which will try to initialize at the desired frame rate. Not all frame rates will be supported, but this at least gives you some abilitity to try grab at different rates.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setDeviceID" data-lookup="setDeviceID" data-item-type="method">
+  	 
+	<h1><a name="show_setDeviceID">setDeviceID(...)</a></h1>
+	<h2>
+  <p>void ofVideoGrabber::setDeviceID(int _deviceID)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Choose to capture from a specific capture device specified by _deviceID. Use listDevices() to see a list of available capture devices and their device IDs. This should be called before initGrabber(), which will use this info to choose the device you want.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setGrabber" data-lookup="setGrabber" data-item-type="method">
+  	 
+	<h1><a name="show_setGrabber">setGrabber(...)</a></h1>
+	<h2>
+  <p>void ofVideoGrabber::setGrabber(shared_ptr&lt; ofBaseVideoGrabber &gt; newGrabber)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This function, similar to getGrabber, allows for low level access to the internal grabber object. This is useful if you want to adjust the internal grabber that ofVideoGrabber is using.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setPixelFormat" data-lookup="setPixelFormat" data-item-type="method">
+  	 
+	<h1><a name="show_setPixelFormat">setPixelFormat(...)</a></h1>
+	<h2>
+  <p>bool ofVideoGrabber::setPixelFormat(ofPixelFormat pixelFormat)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Some video grabbers allow you to adjust the pixel format, which might help for optimization. At the moment, this seems to only apply to the Linux video grabber (GST). For all other grabbers, the only format accepted is OF_PIXELS_RGB.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setUseTexture" data-lookup="setUseTexture" data-item-type="method">
+  	 
+	<h1><a name="show_setUseTexture">setUseTexture(...)</a></h1>
+	<h2>
+  <p>void ofVideoGrabber::setUseTexture(bool bUse)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Set the usage of texture inside this object. Typically, you will want to draw the movie grabber on screen, and so it will be necessary to use a texture, but there may be cases where it helps to not use a texture in order to save memory or for better performance. To disable the internal use of the texture, you can initialize the sequence grabber like this:</p>
+<pre><code class="cpp">
+myGrabber.setUseTexture(false);
+myGrabber.initGrabber(320,240);
+</code></pre>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setVerbose" data-lookup="setVerbose" data-item-type="method">
+  	 
+	<h1><a name="show_setVerbose">setVerbose(...)</a></h1>
+	<h2>
+  <p>void ofVideoGrabber::setVerbose(bool bTalkToMe)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Sets the verbosity - this can be useful for debugging the video grabber interface. you can set the verbosity and then try initGrabber();</p>
+<p>From 0.06 this method has no effect. Use ofSetLogLevel(OF_LOG_VERBOSE) to enable verbose messages.</p>
+<pre><code class="cpp">
+myGrabber.setVerbose(true);
+myGrabber.initGrabber(320,240);
+</code></pre>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setup" data-lookup="setup" data-item-type="method">
+  	 
+	<h1><a name="show_setup">setup(...)</a></h1>
+	<h2>
+  <p>bool ofVideoGrabber::setup(int w, int h)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setup" data-lookup="setup" data-item-type="method">
+  	 
+	<h1><a name="show_setup">setup(...)</a></h1>
+	<h2>
+  <p>bool ofVideoGrabber::setup(int w, int h, bool bTexture)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail unbind" data-lookup="unbind" data-item-type="method">
+  	 
+	<h1><a name="show_unbind">unbind()</a></h1>
+	<h2>
+  <p>void ofVideoGrabber::unbind()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail update" data-lookup="update" data-item-type="method">
+  	 
+	<h1><a name="show_update">update()</a></h1>
+	<h2>
+  <p>void ofVideoGrabber::update()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Calls grabframe function.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail videoSettings" data-lookup="videoSettings" data-item-type="method">
+  	 
+	<h1><a name="show_videoSettings">videoSettings()</a></h1>
+	<h2>
+  <p>void ofVideoGrabber::videoSettings()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Loads the video settings on screen. If your OpenGL application is full screen, this window might appear underneath the main window the first time you call this. Note: in QTKit grabbers (10.7+), this video settings panel is not available.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+
+            <!-- vars detail -->
+
+            <!-- functions detail -->
+            <hr/>
+                
+            <!--diqus comments for class/functions module description-->
+            <div id="comments_header">
+            <h2>comments</h2>
+            <p>You can add comments with usage examples or other information for each class, method or variable, for adding documentation to an empty section or reporting errors is better to send a fix or open an issue through <a href="https://github.com/openframeworks/ofSite">github</a>.</p>
+            <p>When posting code enclose it in:</p>
+            <pre><code class="html">&lt;pre&gt;&lt;code class=&quot;cpp&quot;&gt;&nbsp;&lt;/code&gt;&lt;/pre&gt;</code></pre>
+            <br/>
+            </div>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+
+            // DISQUS
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+
+            var disqus_shortname = 'openframeworks'; // required: replace example with your forum shortname
+            //var disqus_developer = 1;
+
+            location_elements = window.location.pathname.split("/");
+            module_name = location_elements[location_elements.length-1].split(".")[0];
+            section_name = location.hash.split("_")[1];
+            console.log(module_name + " " + section_name);
+            if(section_name!=undefined && section_name!=''){
+            var disqus_identifier = window.location.pathname + "#!show_" + section_name;  
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "#!show_" + section_name;
+            var discus_title = document.title + " - " + section_name;
+            }else{
+            var disqus_identifier = window.location.pathname;
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            var discus_title = document.title;
+            }
+
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */   
+            (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		
+        </div><!-- End Submenu right -->
+      </div><!-- End page wide -->
+      </div><!-- End body wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:34:15 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+eb73abcb6141243ae29291b42ec447024f00a570
+">
+
+eb73abcb6141243ae29291b42ec447024f00a570
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+

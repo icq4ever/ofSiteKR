@@ -1,0 +1,458 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+    <script src="http://icq4ever.iptime.org//js/jquery.columnizer.min.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-71930909-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
+  <body>
+    <div id="content">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">	
+	    <div class="page-wide-tutorial">
+            <!--ul class="submenu">
+                <li><a href="/documentation">레퍼런스</a></li>
+                <li><a href="/tutorials">튜토리얼</a></li>
+            </ul-->
+    	    <h1>Contributing to the Documentation</h1>
+    	    <span class="article_meta">2013/10/21 7:40:00&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="http://workergnome.com">David Newbury</a></span><br/>
+    	    <div class="article">
+    	    
+  <p>The openFrameworks documentation is a community effort, and we'd love for people to contribute missing documentation, fix typos, add examples, and generally make it a better representation of the community.   If you're interested in helping or if you're frustrated by something, there are two ways to contribute by modifying the documentation.   There's the Easy Way, and the Hard Way.</p>
+<p>First, a bit about the structure and formatting of the documentation.</p>
+<h2 id="documentation-structure-and-formatting">Documentation Structure and Formatting</h2>
+<p>The documentation of the OF site is contained in a set of <a href="http://daringfireball.net/projects/markdown/syntax">.markdown</a> files on the <a href="https://github.com/openframeworks/ofSite/">openFrameworks ofSite Github</a>.  The documentation for each class is contained in a single .markdown file containing all the methods and variables of that class named after the class.  They're contained in a directory structure that mirrors both the documentation website and the openFrameworks class structure.</p>
+<p>For instance, if you're looking for the <code>ofMesh</code> documentation, it would be at:</p>
+<pre><code>_documentation/3d/ofMesh.markdown
+</code></pre>
+<p>For reasons lost to the mists of time, the functions of the class are in their own file:</p>
+<pre><code>_documentation/3d/ofMesh_functions.markdown
+</code></pre>
+<p>The documentation files are formatted in a modified version of the <a href="http://daringfireball.net/projects/markdown/syntax">markdown syntax</a> with the following structure:</p>
+<pre><code># class ofClass
+
+## Description
+
+&lt;description of the class goes here&gt;
+
+## Methods
+
+methods of the class
+
+_description: _
+
+&lt;Description &amp; documentation goes here&gt;
+
+## Variables
+
+variables of the class
+
+_description: _
+
+&lt;Description &amp; documentation goes here&gt;
+
+</code></pre>
+
+<p>When editing, only add documentation in the spaces after <code>##Description</code> or <code>_description: _</code>:  All of the other lines are auto-generated and used in the build scripts that construct the site.<br />
+</p>
+<p>Links are added using normal markdown format:</p>
+<pre><code>[Link Title](http://google.com "alt text")
+</code></pre>
+<p>Images are added using normal markdown format:</p>
+<pre><code>![Image Title](filename.png "alt text")
+</code></pre>
+<p>The largest formatting exception from standard markdown is the code block syntax. Rather than using the standard indentation method,  code blocks are marked with four tildes followed by curly braces with ".cpp" inside.   A block is also ended with four tildes.</p>
+<p>For example:</p>
+<pre><code>~~~~{.cpp}
+
+// Get the area of that rectangle
+float areaValue = myRect.getArea();
+
+// areaValue will be 20000.0.
+~~~~
+</code></pre>
+<p>Everything between the tildes will be formatted and highlighted as C++ code.</p>
+<h4 id="things-not-to-do">Things Not to Do:</h4>
+<p><strong>DON'T</strong> add headers to your description, using the <code>### I'm A Header</code> syntax: headers are used to separate individual functions during the build process, and you'll break the site. </p>
+<p><strong>DON'T</strong> add new functions or variables to the documents: they will be autogenerated every time openFrameworks releases a new version.<br />
+</p>
+<p><strong>DON'T</strong> modify fields that are marked with <em>field: value</em>: they are flags used in building the site.</p>
+<hr />
+<h2 id="how-to-modify-the-openframeworks-documentation-the-easy-way">How to Modify the openFrameworks documentation, The Easy Way:</h2>
+<p>Much like the <a href="https://github.com/openframeworks/openFrameworks">openFrameworks</a> project, the <a href="http://www.openframeworks.cc/">openFrameworks Website</a> is on <a href="https://github.com/openframeworks/ofSite">Github</a>.  Github is a website, and it's also a massive online code repository built around the distributed version control system <a href="http://git-scm.com">git</a>.  Github is extremely open-source friendly and is a where an increasingly large amount of the world's open-source software is kept, modified, and updated.</p>
+<p>Anybody can submit <a href="https://help.github.com/articles/using-pull-requests">pull requests</a> through Github to update the website.   If you're interested in changing something but aren't really sure how git works, Github has made it really easy to modify text files directly from their website.  All you need is a Github account, which is free for open-source projects, and for people working with open-source.<br />
+</p>
+<p>Getting an account is easy—just go to <a href="https://github.com">github.com</a> and sign up!</p>
+<h3 id="making-changes-to-the-openframeworks-documentation-on-github">Making Changes to the openFrameworks Documentation on Github</h3>
+<h4 id="step-1-find-the-class">Step 1:  Find the Class</h4>
+<p>Within the <a href="http://www.openframeworks.cc/documentation/"> openFrameworks documentation</a>, at the top of every class's page, there are two buttons on the top of the page for "Edit Class" and/or "Edit Functions":</p>
+<p><img alt="" src="003_images/editclass.png" /></p>
+<p>If you click either of these buttons, you'll be taken to a page on github with a text area containing the entire documentation for that class or set of functions.  It will look something like this:</p>
+<p><img alt="" src="003_images/editscreen.png" /></p>
+<h4 id="step-2-edit-the-documentation">Step 2:  Edit the Documentation</h4>
+<p>Within that block of text, you'll find the method, variable, or function that you're interested in editing.  Directly edit the text.  When you've made your changes, you can propose the edit using the box below the text:</p>
+<p><img alt="" src="003_images/edit_save.png" /></p>
+<p>Write a summary and an optional brief description of the changes you made, and click the "Propose File Change" button.</p>
+<h4 id="step-3-review-your-change">Step 3:  Review your Change</h4>
+<p>You'll end up on the following page, which will let you review your changes:</p>
+<p><img alt="" src="003_images/review.png" /></p>
+<p>Below that will be a list of all of the lines of text that you've changed.   It's a good practice to go through the changes and make sure that you didn't accidentally delete something and that your changes are what you thought they were.  If you'd like to write a message to the person who will be reviewing your changes, you can do that, too.</p>
+<p>When you're comfortable with your changes, press the "Send Pull Request" button.  This will submit a pull request for review.  It will end up in the list of pull requests on the site, to be approved by an administrator and pushed to the site.   This usually happens pretty quickly, but this is a volunteer team, and sometimes it takes a couple days.  Be patient—Github will send you an email when your change is merged into the site.</p>
+<p>Congrats!  You've just modified the openFrameworks documentation, contributed to the community, and made some future person's life better. Wasn't that easy?</p>
+<hr />
+<h2 id="how-to-modify-the-openframeworks-documentation-the-hard-way">How to Modify the openFrameworks documentation, The Hard Way:</h2>
+<p>Directly editing the documentation on Github is a great way to make improvements, but it does have its limits.  It's not easy to add images to the documentation and its not easy to see how your work will look when it is on the actual site.  In order to do those things, you'll need a copy of the ofSite that runs locally on your computer.</p>
+<p>If you know what you're doing, skip to the bottom of the section for the TL;DR version of the instructions.</p>
+<h2 id="step-1-install-requirements">Step 1:  Install Requirements</h2>
+<p>Installing the requirements for the site requires different steps on different operating systems.  Currently we have instructions for OS X and Linux.</p>
+<h3 id="installing-requirements-on-os-x">Installing Requirements on OS X</h3>
+<h3 id="step-11-install-python">Step 1.1:  Install Python</h3>
+<p><a href="http://www.python.org/">Python</a> is a programming language used to build and compile the ofSite website.  Most OS X machines have a copy of python, but you'll need to check if yours is one of them.The easiest way to check is to open a terminal window and type:</p>
+<pre><code>python --version
+</code></pre>
+<p>If you <strong>DO</strong> have python installed, you should see <code>Python 2.7.5</code>.  The number might be different, but any number greater than 2.7 is fine.  Congrats!  You're well on your way.  Skip to <strong>Step 1.4</strong>.</p>
+<p>If you <strong>DON'T</strong> have python installed, you should see <code>python: command not found</code>.  Follow the next couple steps.</p>
+<h4 id="step-12-install-homebrew">Step 1.2:  Install Homebrew.</h4>
+<p><a href="http://brew.sh">Homebrew</a> is a package manager for OSX.   It allows you to simply install applications onto OSX from the command line.</p>
+<p>Again, to determine if you have brew, type into your terminal:</p>
+<pre><code>brew -v
+</code></pre>
+<p>If you <strong>DO</strong> have Homebrew installed, you should see <code>Homebrew 0.9.4</code>.  The number might be different, but any number greater than 0.9 is fine.   Go onto <strong>Step 1.3</strong>.<br />
+</p>
+<p>If you <strong>DON'T</strong> have homebrew installed, you should see <code>brew: command not found</code>. You can install it using a script found at the <a href="http://brew.sh">homebrew website</a>.  Near the bottom of the page, there will be installation instructions: it will be a script that looks something like:</p>
+<pre><code>ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+</code></pre>
+<p>Copy that script and paste in into your terminal.  It will ask for your password, lots of text will scroll, and it will install.  It might ask you to run</p>
+<pre><code>brew doctor
+</code></pre>
+<p>at the end, which is a good idea, and will give you instructions on what to do next that are specific to your computer.</p>
+<h4 id="step-13-actually-install-python">Step 1.3:  Actually Install Python</h4>
+<p>Type into your terminal:</p>
+<pre><code>brew install python
+</code></pre>
+<p>This should install python.  You're well on your way.</p>
+<h3 id="step-14-install-blogofile">Step 1.4:  Install blogofile</h3>
+<p>Now you'll need to actually install the <a href="http://www.blogofile.com/">blogofile</a> software, which is the blogging framework the openFrameworks website is built with.  The easiest way to do this is with the <a href="http://peak.telecommunity.com/DevCenter/EasyInstall">easy_install</a> software, which comes as part of Python, to install blogofile onto your local machine.<br />
+</p>
+<p>Copy and paste the the following two lines into your terminal:</p>
+<pre><code>sudo easy_install lxml 
+sudo easy_install blogofile
+</code></pre>
+<p>This may prompt you for your password—or it may not, depending on how recently you've used <code>sudo</code>. </p>
+<h3 id="step-15-install-git">Step 1.5: Install Git</h3>
+<p><a href="http://git-scm.com/">Git</a> is a distributed version control system used by openFrameworks and most of the open source world.  It's an essential tool for working with code, and a deep topic well worth learning.</p>
+<p>Almost all OS X machines have a copy of Git at this point: you can make sure by typing into your terminal:</p>
+<pre><code>git --version
+</code></pre>
+<p>if you <strong>DO</strong> have git, you should see something like:  <code>git version 1.7.12.4 (Apple Git-37)</code>. Skip to <strong>Step 2</strong>!<br />
+</p>
+<p>If you <strong>DON'T</strong> have git, you should see <code>git: command not found</code>.  You'll need to install git, which you can get from the <a href="http://git-scm.com/download">Git website</a>.<br />
+</p>
+<h3 id="installing-requirements-on-linux">Installing Requirements on Linux</h3>
+<h3 id="step-11-install-blogofile">Step 1.1: Install blogofile</h3>
+<p>Blogofile is the tool we use to generate the openFramworks site, to install it under linux you'll need a python tool called pip, most probably you'll have it already installed in the system, but in case it's not you can install it with:</p>
+<pre><code>sudo apt-get install python-pip
+</code></pre>
+<p>The site also needs a python module for parsing xml called lxml. You can install it with:</p>
+<pre><code>sudo apt-get install python-lxml
+</code></pre>
+<p>Now you can install blogofile doing:</p>
+<pre><code>sudo pip install blogofile
+</code></pre>
+<h3 id="step-12-install-git">Step 1.2: Install git</h3>
+<p>In case you don't have git already installed you can install it with:</p>
+<pre><code>sudo apt-get install git
+</code></pre>
+<h3 id="step-2-get-your-own-copy-of-ofsite">Step 2:  Get your own copy of ofSite</h3>
+<p>Much like openFrameworks itself, <a href="https://github.com/openframeworks/ofSite">ofSite's repository</a>  is hosted on Github.  Github is a massive online code repository built around git, and is a where an increasingly large amount of the open-source software is kept, modified, and updated.</p>
+<p>You'll need a Github account.   If you don't have one, they're free for open source work, and you can get one by going to <a href="https://github.com">Github</a>.  You'll see a signup form there. </p>
+<p>Once you have an account, you'll want to fork the master ofSite repository.  Forking means taking the existing codebase and making a personal copy of the code, but one that's still linked back into the original codebase.</p>
+<p>You'll do this by going to <a href="https://github.com/openframeworks/ofSite">https://github.com/openframeworks/ofSite</a>.  In the top left corner, you'll see a button marked <strong>fork</strong> that looks like:</p>
+<p><img alt="" src="003_images/fork.png" /></p>
+<p>Clicking it will create a your own repository—the only difference is that it will be at https://github.com/<YOUR_USERNAME>/ofSite.</p>
+<p>This is your personal playground—you can make changes here, test them, and when you're satisfied, you can submit them back to the main ofSite repository and have them merged by an admin into the live site.</p>
+<h3 id="step-3-clone-the-site-to-your-local-machine">Step 3:  Clone the site to your local machine</h3>
+<p>On the left side of your ofSite repository, there's a text box marked <strong>clone URL</strong> that looks like:</p>
+<p><img alt="" src="003_images/clone.png" /></p>
+<p>If you push the little clipboard button, it will copy your URL into your clipboard.  You can also just copy it the old-fashioned way.<br />
+</p>
+<p>Open your terminal and navigate to a directory where you'll want to store the code.  Within that directory, type:</p>
+<pre><code>git clone &lt;&lt;paste the url here&gt;&gt;.
+</code></pre>
+<p>For example, cloning my copy of the repository would look like:</p>
+<pre><code> # EXAMPLE:
+ git clone git@github.com:workergnome/ofSite.git
+</code></pre>
+<p>This will download your copy of the repository into that directory.  You're almost there!</p>
+<h3 id="step-4-build-and-run-the-site">Step 4:  Build and Run the Site</h3>
+<p>The final step is to actually compile and serve the site.  You'll go into the directory of your the repository and run the build command:</p>
+<pre><code>cd ofSite
+blogofile build
+</code></pre>
+<p>This will take a few minutes to build the site.  When it's complete, you'll type: </p>
+<pre><code>blogofile serve
+</code></pre>
+<p>Which will start a web server running on your local machine with your copy of the site running at <a href="http://localhost:8080">http://localhost:8080</a>.<br />
+</p>
+<p>When you're done with the server, you can type <code>&lt;control-c&gt;</code> into the terminal window to quit.</p>
+<h3 id="step-5-make-changes">Step 5:  Make Changes!</h3>
+<p>Congrats!  You now have a working version of the site running on your local machine.<br />
+</p>
+<p>The current best practices for Github are to make your changes within a 'feature' branch of the repository, not the master branch repository.  This will create yet another branch of the repository, this time on your local machine.  Choose a <code>&lt;feature_name&gt;</code> that describes loosely the changes that you want to make.</p>
+<p>In a second terminal window, navigate to the repository directory and type:</p>
+<pre><code>git branch &lt;feature_name&gt;
+git checkout &lt;feature_name&gt;
+</code></pre>
+<p>For example, if you were interested in updating the docs for the colors, you could type:</p>
+<pre><code>#EXAMPLE
+git branch colors
+git checkout colors
+</code></pre>
+<p>Remember this branch name—you'll need it again in the future.   If you forget, you can always get a list of your branches by typing</p>
+<pre><code>git branch
+</code></pre>
+<p>The first time that you do this, it will prompt you for your github account username and password.</p>
+<p>Which will give you a list of all your branches, with an asterisk next to the currently-checked out branch.</p>
+<p>You can modify the site by making changes to the files in the <code>_documentation</code> directory, and then, in the terminal window that's running blogofile, you can terminate the web server by pressing <code>&lt;control-c&gt;</code>, and typing:</p>
+<pre><code>blogofile build
+blogofile serve
+</code></pre>
+<p>When that's completed rebuilding the site, reloading the webpage will show your changes!</p>
+<p>For formatting and syntax of the documentation, see the <strong>Documentation Structure and Formatting</strong> section above.</p>
+<h3 id="step-6-pushing-your-changes-back-to-your-github-respository">Step 6:  Pushing Your Changes Back to your Github Respository</h3>
+<p>Now that you've made your improvements to the documentation, you'll add and commit your code back into the git repository.</p>
+<p>First, you'll add your code back into git.</p>
+<pre><code>git add .
+</code></pre>
+<p>Then you'll commit your code, with a note describing the modifications you've made, known as a 'commit message'.  This should be as detailed as necessary, and can be multiple lines.   Typically, if it's something that can be described in one sentence, do so, otherwise use the first sentence as a descriptive title and add additional information in subsequent paragraphs.</p>
+<pre><code>git commit -m "&lt;A note describing what things you've changed&gt;"
+</code></pre>
+<p>Then you'll push your code back up to the server.  You'll need to remember the branch name you created back in <strong>Step 5</strong>.</p>
+<pre><code>git push origin &lt;feature_name&gt;
+</code></pre>
+<p>For example,</p>
+<pre><code>#EXAMPLE
+git add .
+git commit -m "Updated the docs on RGBA to HLSA conversions"
+git push origin colors
+</code></pre>
+<p>For more information on forking, pushing, and git, check our the <a href="https://help.github.com/articles/fork-a-repo">Fork a Repo</a> article on Github.</p>
+<h3 id="step-7-submit-a-pull-request">Step 7:  Submit a Pull Request</h3>
+<p>Go back to the Github page for your personal copy of the ofSite repository.   There, you'll see a banner that looks like:</p>
+<p><img alt="" src="003_images/pull.png" /></p>
+<p>If you click the "Compare &amp; pull request" button, you'll be taken to a page where you can add a message to the ofSite admins describing your changes, and a pull request will be filed on the main site for approval and merging with the main code base.</p>
+<p>For more information on pull requests, see the <a href="https://help.github.com/articles/using-pull-requests">Using Pull Requests</a> article on Github.</p>
+<p>At this point, you can check back out the master branch, using</p>
+<pre><code>git checkout master
+</code></pre>
+<p>And continue to make changes.  Remember:</p>
+<ol>
+<li>branch the repo</li>
+<li>change the code</li>
+<li>add to the repo</li>
+<li>commit to the repo</li>
+<li>push to github</li>
+<li>request pull on github</li>
+</ol>
+<p>If, after the admin reviews your changes, they ask you to make changes to your pull request, you can always check that branch back out and use <strong>Step 6</strong> and <strong>Step 7</strong> to modify and push new changes.  If you push changes on that branch, they'll automatically be appended to your pull request.</p>
+<p>Congratulations!   You've built, modified, tested, and submitted to an open-source project!</p>
+<h3 id="tldr-instructions-for-osx">TL;DR instructions for OSX:</h3>
+<ul>
+<li>Install Python</li>
+<li><code>easy_install lxml</code></li>
+<li><code>easy_install blogofile</code></li>
+<li>fork and clone <a href="https://github.com/openframeworks/ofSite">https://github.com/openframeworks/ofSite</a></li>
+<li>From the repo directory:  <code>blogofile build &amp;&amp; blogofile serve</code></li>
+<li>Go to <a href="http:\localhost:8080">http:\localhost:8080</a></li>
+<li>create a feature branch</li>
+<li>modify code</li>
+<li>From the repo directory:  <code>blogofile build &amp;&amp; blogofile serve</code> to verify changes</li>
+<li>push branch</li>
+<li>submit pull request</li>
+</ul>
+<h3 id="tldr-instructions-for-linux">TL;DR instructions for Linux:</h3>
+<ul>
+<li><code>sudo apt-get install python-pip</code></li>
+<li><code>sudo apt-get install python-lxml</code></li>
+<li><code>sudo pip install blogofile</code></li>
+<li>fork and clone <a href="https://github.com/openframeworks/ofSite">https://github.com/openframeworks/ofSite</a></li>
+<li>From the repo directory:  <code>blogofile build &amp;&amp; blogofile serve</code></li>
+<li>Go to <a href="http:\localhost:8080">http:\localhost:8080</a></li>
+<li>create a feature branch</li>
+<li>modify code</li>
+<li>From the repo directory:  <code>blogofile build &amp;&amp; blogofile serve</code> to verify changes</li>
+<li>push branch</li>
+<li>submit pull request</li>
+</ul>
+<hr />
+<p><small>Written by <a href="https://twitter.com/workergnome">David Newbury</a> with help from <a href="https://twitter.com/bernardoschorr">Bernardo Schorr</a> and <a href="https://twitter.com/digitalcoleman">Chris Coleman</a>.</small><br />
+<small>The initial version was written at the <a href="http://studioforcreativeinquiry.org/events/creative-coding-on-the-raspberry-pi-with-openframeworks">openFrameworks/RaspberryPI workshop</a> at the <a href="http://studioforcreativeinquiry.org">Frank-Ratchye STUDIO for Creative Inquiry</a>, October 11-13, 2013.</small></p>
+
+    		</div>
+            
+        </div><!-- End Page Wide -->      
+      </div><!-- End Body Wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:33:31 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+4d738d6979d8e7992359cde47632192d1fbef472
+">
+
+4d738d6979d8e7992359cde47632192d1fbef472
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+
+
+

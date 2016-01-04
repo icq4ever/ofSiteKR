@@ -1,0 +1,1209 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr - ofCamera</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+    <script src="http://icq4ever.iptime.org//js/jquery.columnizer.min.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation.js"></script>
+  </head>
+  <body>
+    <div id="content">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">
+          <div class="page-wide">
+          
+              <div id="docstitle"><h1>ofCamera</h1></div>
+              <div id="editdocs">
+                    <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/3d/ofCamera.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
+              </div>
+              
+          </div>
+          
+          
+        <div class="page-wide">
+		    <div class="submenucol-left">
+		     <!-- list of methods -->
+		     <p class="top_list_header">class methods</p>
+             <ul class="functionslist">
+                 
+                         <li>
+                         <a href="#show_ofCamera" class="ofCamera" data-lookup="ofCamera">ofCamera()</a></li>
+                     
+                         <li>
+                         <a href="#show_~ofCamera" class="~ofCamera" data-lookup="~ofCamera">~ofCamera()</a></li>
+                     
+                         <li>
+                         <a href="#show_begin" class="begin" data-lookup="begin">begin()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_cameraToWorld" class="cameraToWorld" data-lookup="cameraToWorld">cameraToWorld()</a></li>
+                     
+                         <li>
+                         <a href="#show_disableOrtho" class="disableOrtho" data-lookup="disableOrtho">disableOrtho()</a></li>
+                     
+                         <li>
+                         <a href="#show_enableOrtho" class="enableOrtho" data-lookup="enableOrtho">enableOrtho()</a></li>
+                     
+                         <li>
+                         <a href="#show_end" class="end" data-lookup="end">end()</a></li>
+                     
+                         <li>
+                         <a href="#show_getAspectRatio" class="getAspectRatio" data-lookup="getAspectRatio">getAspectRatio()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getFarClip" class="getFarClip" data-lookup="getFarClip">getFarClip()</a></li>
+                     
+                         <li>
+                         <a href="#show_getForceAspectRatio" class="getForceAspectRatio" data-lookup="getForceAspectRatio">getForceAspectRatio()</a></li>
+                     
+                         <li>
+                         <a href="#show_getFov" class="getFov" data-lookup="getFov">getFov()</a></li>
+                     
+                         <li>
+                         <a href="#show_getImagePlaneDistance" class="getImagePlaneDistance" data-lookup="getImagePlaneDistance">getImagePlaneDistance()</a></li>
+                     
+                         <li>
+                         <a href="#show_getLensOffset" class="getLensOffset" data-lookup="getLensOffset">getLensOffset()</a></li>
+                     
+                         <li>
+                         <a href="#show_getModelViewMatrix" class="getModelViewMatrix" data-lookup="getModelViewMatrix">getModelViewMatrix()</a></li>
+                     
+                         <li>
+                         <a href="#show_getModelViewProjectionMatrix" class="getModelViewProjectionMatrix" data-lookup="getModelViewProjectionMatrix">getModelViewProjectionMatrix()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getNearClip" class="getNearClip" data-lookup="getNearClip">getNearClip()</a></li>
+                     
+                         <li>
+                         <a href="#show_getOrtho" class="getOrtho" data-lookup="getOrtho">getOrtho()</a></li>
+                     
+                         <li>
+                         <a href="#show_getProjectionMatrix" class="getProjectionMatrix" data-lookup="getProjectionMatrix">getProjectionMatrix()</a></li>
+                     
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_isVFlipped" class="isVFlipped" data-lookup="isVFlipped">isVFlipped()</a></li>
+                     
+                         <li>
+                         <a href="#show_screenToWorld" class="screenToWorld" data-lookup="screenToWorld">screenToWorld()</a></li>
+                     
+                         <li>
+                         <a href="#show_setAspectRatio" class="setAspectRatio" data-lookup="setAspectRatio">setAspectRatio()</a></li>
+                     
+                         <li>
+                         <a href="#show_setFarClip" class="setFarClip" data-lookup="setFarClip">setFarClip()</a></li>
+                     
+                         <li>
+                         <a href="#show_setForceAspectRatio" class="setForceAspectRatio" data-lookup="setForceAspectRatio">setForceAspectRatio()</a></li>
+                     
+                         <li>
+                         <a href="#show_setFov" class="setFov" data-lookup="setFov">setFov()</a></li>
+                     
+                         <li>
+                         <a href="#show_setLensOffset" class="setLensOffset" data-lookup="setLensOffset">setLensOffset()</a></li>
+                     
+                         <li>
+                         <a href="#show_setNearClip" class="setNearClip" data-lookup="setNearClip">setNearClip()</a></li>
+                     
+                         <li>
+                         <a href="#show_setRenderer" class="setRenderer" data-lookup="setRenderer">setRenderer()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setVFlip" class="setVFlip" data-lookup="setVFlip">setVFlip()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setupOffAxisViewPortal" class="setupOffAxisViewPortal" data-lookup="setupOffAxisViewPortal">setupOffAxisViewPortal()</a></li>
+                     
+                         <li>
+                         <a href="#show_setupPerspective" class="setupPerspective" data-lookup="setupPerspective">setupPerspective()</a></li>
+                     
+                         <li>
+                         <a href="#show_worldToCamera" class="worldToCamera" data-lookup="worldToCamera">worldToCamera()</a></li>
+                     
+                         <li>
+                         <a href="#show_worldToScreen" class="worldToScreen" data-lookup="worldToScreen">worldToScreen()</a></li>
+                     
+             </ul>
+            
+             
+             
+             <!-- list of variables -->              
+            
+             
+            
+             <!-- list of functions -->              
+		    </div>
+	    <div class="submenucol-right">
+            <div class="documentation_detail class_documentation">
+                    <h2><strong><em>Extends</em></strong></h2>
+                    <p>This class extends others, you can call their methods on an instance of ofCamera too:</p>
+                    <ul>
+                        <li><a href="../3d/ofNode.html" class="docs_class" >ofNode</a> </li>
+                    </ul>
+              
+  <p><a href="../3d/ofCamera.html" class="docs_class" >ofCamera</a> provides a camera onto a 3D scene. Some of the different properties of the camera are shown in the picture below:
+<img alt="FOV" src="fov.png" />
+The far and near clip planes are the boundaries of what's visible in the camera. If you need more information on these, check http://www.falloutsoftware.com/tutorials/gl/gl0.htm</p>
+
+
+                    <div class="inlined_docs">
+                        <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+                        
+  <p>A basic camera object for interacting with objects in 3D space.</p>
+<p>By: Memo Akten, MSA Visuals Ltd. 2011</p>
+
+                    </div>   
+              
+              
+  
+
+           </div>
+                  
+            <!-- methods detail -->
+              <!--h2><a name="methods"></a>ofCamera methods</h2-->
+                        
+<div class="documentation_detail ofCamera" data-lookup="ofCamera" data-item-type="method">
+  	 
+	<h1><a name="show_ofCamera">ofCamera()</a></h1>
+	<h2>
+  <p>ofCamera::ofCamera()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Construct a default camera.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ~ofCamera" data-lookup="~ofCamera" data-item-type="method">
+  	 
+	<h1><a name="show_~ofCamera">~ofCamera()</a></h1>
+	<h2>
+  <p>ofCamera::~ofCamera()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Destroy the camera.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail begin" data-lookup="begin" data-item-type="method">
+  	 
+	<h1><a name="show_begin">begin(...)</a></h1>
+	<h2>
+  <p>void ofCamera::begin(ofRectangle viewport)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>set the matrices that the camera will use.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Begins rendering with the camera.</p>
+<pre><code class="cpp">void draw() {
+    // Begin rendering from the camera's perspective.
+    camera.begin();
+
+    ofLine(0, 0, ofGetWidth(), ofGetHeight());
+    // Additional rendering ...
+
+    // End rendering form the camera's perspective.
+    camera.end();
+}
+</code></pre>
+
+<p>Parameters:
+viewport The camera's rendering viewport.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail cameraToWorld" data-lookup="cameraToWorld" data-item-type="method">
+  	 
+	<h1><a name="show_cameraToWorld">cameraToWorld(...)</a></h1>
+	<h2>
+  <p>ofVec3f ofCamera::cameraToWorld(ofVec3f CameraXYZ, ofRectangle viewport)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>When you have a position in camera coordinates you can get what it would be in world coordinates, transforming it using the ofCamera.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>\todo cameraToWorld()</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail disableOrtho" data-lookup="disableOrtho" data-item-type="method">
+  	 
+	<h1><a name="show_disableOrtho">disableOrtho()</a></h1>
+	<h2>
+  <p>void ofCamera::disableOrtho()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Calling disableOrtho() turns off the orthographic mode.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail enableOrtho" data-lookup="enableOrtho" data-item-type="method">
+  	 
+	<h1><a name="show_enableOrtho">enableOrtho()</a></h1>
+	<h2>
+  <p>void ofCamera::enableOrtho()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Orthographic, or parallel, projections consist of those that involve no perspective correction. There is no adjustment for distance from the camera made in these projections, meaning objects on the screen will appear the same size no matter how close or far away they are. Calling enableOrtho() sets the ofCamera to orthographic mode.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail end" data-lookup="end" data-item-type="method">
+  	 
+	<h1><a name="show_end">end()</a></h1>
+	<h2>
+  <p>void ofCamera::end()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>set the matrices</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Ends rendering with the camera.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getAspectRatio" data-lookup="getAspectRatio" data-item-type="method">
+  	 
+	<h1><a name="show_getAspectRatio">getAspectRatio()</a></h1>
+	<h2>
+  <p>float ofCamera::getAspectRatio()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get the aspect ratio of this camera's viewport.</p>
+<p>Returns the aspect ratio of this camera's viewport. Usually this will be
+the ratio of the width to height of your display. Intended for
+perspective cameras.</p>
+<p>Returns: The aspect ratio of this camera's viewport.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getFarClip" data-lookup="getFarClip" data-item-type="method">
+  	 
+	<h1><a name="show_getFarClip">getFarClip()</a></h1>
+	<h2>
+  <p>float ofCamera::getFarClip()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getForceAspectRatio" data-lookup="getForceAspectRatio" data-item-type="method">
+  	 
+	<h1><a name="show_getForceAspectRatio">getForceAspectRatio()</a></h1>
+	<h2>
+  <p>bool ofCamera::getForceAspectRatio()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get the boolean state which indicates whether the aspect ratio of this camera is forced to a non-default setting.</p>
+<p>Returns: A boolean: whether or not this camera's aspect ratio is set to a non-default value.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getFov" data-lookup="getFov" data-item-type="method">
+  	 
+	<h1><a name="show_getFov">getFov()</a></h1>
+	<h2>
+  <p>float ofCamera::getFov()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get the camera's field of view, in degrees.</p>
+<p>Get the camera's vertical field of view, in degrees.  This is only
+meaningful for perspective cameras.</p>
+<p>Returns: The camera's field of view, in degrees.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getImagePlaneDistance" data-lookup="getImagePlaneDistance" data-item-type="method">
+  	 
+	<h1><a name="show_getImagePlaneDistance">getImagePlaneDistance(...)</a></h1>
+	<h2>
+  <p>float ofCamera::getImagePlaneDistance(ofRectangle viewport)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This allows you to get the image plane distance from any viewport passed in. By default this is the current viewport, but it can be whatever you find useful.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getLensOffset" data-lookup="getLensOffset" data-item-type="method">
+  	 
+	<h1><a name="show_getLensOffset">getLensOffset()</a></h1>
+	<h2>
+  <p>ofVec2f ofCamera::getLensOffset()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get the "lens offset" applied to this camera, encoded as an ofVec2f.</p>
+<p>Ordinarily, the camera is pointed straight down the center of its view
+frustum.  However, it is possible to orient the camera towards a
+location offset from the center of its frustum.  This is called an
+"asymetric frustum" and is used (for example) in stereo views.  It is
+acheived by applying an offset to the center of projection.  This
+function returns the offset that has been applied, as an ofVec2f.  For
+more information see http://www.orthostereo.com/geometryopengl.html.</p>
+<p>Returns: The "lens offset" applied to this camera, encoded in an ofVec2f.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getModelViewMatrix" data-lookup="getModelViewMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_getModelViewMatrix">getModelViewMatrix()</a></h1>
+	<h2>
+  <p>ofMatrix4x4 ofCamera::getModelViewMatrix()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Access to the projection matrix.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Access the model view matrix.</p>
+<p>Returns: the current 4x4 model view matrix.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getModelViewProjectionMatrix" data-lookup="getModelViewProjectionMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_getModelViewProjectionMatrix">getModelViewProjectionMatrix(...)</a></h1>
+	<h2>
+  <p>ofMatrix4x4 ofCamera::getModelViewProjectionMatrix(ofRectangle viewport)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Access to the projection ModelViewProjectionMatrix.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>\todo getModelViewProjectionMatrix()</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getNearClip" data-lookup="getNearClip" data-item-type="method">
+  	 
+	<h1><a name="show_getNearClip">getNearClip()</a></h1>
+	<h2>
+  <p>float ofCamera::getNearClip()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getOrtho" data-lookup="getOrtho" data-item-type="method">
+  	 
+	<h1><a name="show_getOrtho">getOrtho()</a></h1>
+	<h2>
+  <p>bool ofCamera::getOrtho()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Get whether the camera is in orthographic mode.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getProjectionMatrix" data-lookup="getProjectionMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_getProjectionMatrix">getProjectionMatrix(...)</a></h1>
+	<h2>
+  <p>ofMatrix4x4 ofCamera::getProjectionMatrix(ofRectangle viewport)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Access to the projection matrix.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Access the projection matrix.</p>
+<p>Returns: the current 4x4 projection matrix.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail isVFlipped" data-lookup="isVFlipped" data-item-type="method">
+  	 
+	<h1><a name="show_isVFlipped">isVFlipped()</a></h1>
+	<h2>
+  <p>bool ofCamera::isVFlipped()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail screenToWorld" data-lookup="screenToWorld" data-item-type="method">
+  	 
+	<h1><a name="show_screenToWorld">screenToWorld(...)</a></h1>
+	<h2>
+  <p>ofVec3f ofCamera::screenToWorld(ofVec3f ScreenXYZ, ofRectangle viewport)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>When you have a position in screen coordinates you can get what it would be in world coordinates, transforming it using the ofCamera.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Obtain the coordinates, in the 3D world, of a 2D point presumed to be on your screen.</p>
+<p>Takes a pixel location on your screen, encoded in an ofVec3f,
+and returns (also as an ofVec3f) the 3D world coordinates of that point.
+You'll also need to specify a Z value when providing your screen point.
+This Z value is interpreted as a distance into or away from the screen.</p>
+<p>Parameters:
+ScreenXYZ A point on your screen, whose 3D world coordinates you wish to know.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setAspectRatio" data-lookup="setAspectRatio" data-item-type="method">
+  	 
+	<h1><a name="show_setAspectRatio">setAspectRatio(...)</a></h1>
+	<h2>
+  <p>void ofCamera::setAspectRatio(float aspectRatio)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Set the recommended aspect ratio for a perspective camera.</p>
+<p>Sets the aspect ratio of the camera to the desired float, and forces the
+use of aspect ratio calculations.  Currently only used with perspective
+cameras. The default value (and the value used with orthographic
+cameras) is the ratio of the viewport's width to the viewport's height.</p>
+<p>Parameters:
+aspectRatio The desired aspect ratio, e.g. 1.3333, 1.6, etc.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setFarClip" data-lookup="setFarClip" data-item-type="method">
+  	 
+	<h1><a name="show_setFarClip">setFarClip(...)</a></h1>
+	<h2>
+  <p>void ofCamera::setFarClip(float f)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Sets the far clip plane</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setForceAspectRatio" data-lookup="setForceAspectRatio" data-item-type="method">
+  	 
+	<h1><a name="show_setForceAspectRatio">setForceAspectRatio(...)</a></h1>
+	<h2>
+  <p>void ofCamera::setForceAspectRatio(bool forceAspectRatio)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Set whether or not the aspect ratio of this camera is forced to a non-default setting.</p>
+<p>The camera's aspect ratio, by default, is the aspect ratio of your
+viewport.  If you have set a non-default value (with
+ofCamera::setAspectRatio()), you can toggle whether or not this value is
+applied.</p>
+<p>Parameters:
+forceAspectRatio Whether or not this camera should use an aspect ratio you have set yourself.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setFov" data-lookup="setFov" data-item-type="method">
+  	 
+	<h1><a name="show_setFov">setFov(...)</a></h1>
+	<h2>
+  <p>void ofCamera::setFov(float f)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Here you can set the field of view of the camera.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Set the field of view for a perspective camera.</p>
+<p>This sets the vertical field of view for the camera, in degrees.
+This only operates with perspective cameras, and will have no effect
+with cameras in orthographic mode.</p>
+<p>Parameters:
+f The desired field of view for the camera, in degrees.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setLensOffset" data-lookup="setLensOffset" data-item-type="method">
+  	 
+	<h1><a name="show_setLensOffset">setLensOffset(...)</a></h1>
+	<h2>
+  <p>void ofCamera::setLensOffset(const ofVec2f &amp;lensOffset)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Set the "lens offset" applied to this camera.</p>
+<p>Ordinarily, the camera is pointed straight down the center of its view
+frustum. However, it is possible to orient the camera towards a location
+offset from the center of its frustum. This is called an "assymetric
+frustum" and is used (for example) in stereo views.  It is acheived by
+applying an offset to the center of projection.  This function sets this
+offset from an ofVec2f argument.  For more information see
+<a href="http://www.orthostereo.com/geometryopengl.html">http://www.orthostereo.com/geometryopengl.html</a>.</p>
+<p>Parameters:
+lensOffset The "lens offset" to apply to this camera, encoded in
+    an ofVec2f.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setNearClip" data-lookup="setNearClip" data-item-type="method">
+  	 
+	<h1><a name="show_setNearClip">setNearClip(...)</a></h1>
+	<h2>
+  <p>void ofCamera::setNearClip(float f)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This sets the near clip plane.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setRenderer" data-lookup="setRenderer" data-item-type="method">
+  	 
+	<h1><a name="show_setRenderer">setRenderer(...)</a></h1>
+	<h2>
+  <p>void ofCamera::setRenderer(shared_ptr&lt; ofBaseRenderer &gt; renderer)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>}
+\name Renderer
+ {</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setVFlip" data-lookup="setVFlip" data-item-type="method">
+  	 
+	<h1><a name="show_setVFlip">setVFlip(...)</a></h1>
+	<h2>
+  <p>void ofCamera::setVFlip(bool vflip)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setupOffAxisViewPortal" data-lookup="setupOffAxisViewPortal" data-item-type="method">
+  	 
+	<h1><a name="show_setupOffAxisViewPortal">setupOffAxisViewPortal(...)</a></h1>
+	<h2>
+  <p>void ofCamera::setupOffAxisViewPortal(const ofVec3f &amp;topLeft, const ofVec3f &amp;bottomLeft, const ofVec3f &amp;bottomRight)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setupPerspective" data-lookup="setupPerspective" data-item-type="method">
+  	 
+	<h1><a name="show_setupPerspective">setupPerspective(...)</a></h1>
+	<h2>
+  <p>void ofCamera::setupPerspective(bool vFlip=true, float fov, float nearDist, float farDist, const ofVec2f &amp;lensOffset)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>}
+\name OpenGL Setup
+{</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail worldToCamera" data-lookup="worldToCamera" data-item-type="method">
+  	 
+	<h1><a name="show_worldToCamera">worldToCamera(...)</a></h1>
+	<h2>
+  <p>ofVec3f ofCamera::worldToCamera(ofVec3f WorldXYZ, ofRectangle viewport)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>When you have a position in world coordinates you can get what it would be in camera coordinates, transforming it using the ofCamera.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>\todo worldToCamera()</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail worldToScreen" data-lookup="worldToScreen" data-item-type="method">
+  	 
+	<h1><a name="show_worldToScreen">worldToScreen(...)</a></h1>
+	<h2>
+  <p>ofVec3f ofCamera::worldToScreen(ofVec3f WorldXYZ, ofRectangle viewport)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>When you have a position in world coordinates you can get what it would be in screen coordinates, transforming it using the ofCamera.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Obtain the screen coordinates of a point in the 3D world.</p>
+<p>Takes an (X,Y,Z) point in your 3D world, encoded as an ofVec3f,
+and returns the location (also as an ofVec3f) where this point would
+appear on your (two-dimensional) display. The screen position's "Z
+coordinate" is set to be the same as your camera's.</p>
+<p>Parameters:
+WorldXYZ A 3D point in the world, whose screen coordinates you wish to know.
+viewport (Optional) A viewport. The default is ofGetCurrentViewport().</p>
+<p>Returns: An ofVec3f containing the screen coordinates of your 3D point of interest.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+
+            <!-- vars detail -->
+
+            <!-- functions detail -->
+            <hr/>
+                
+            <!--diqus comments for class/functions module description-->
+            <div id="comments_header">
+            <h2>comments</h2>
+            <p>You can add comments with usage examples or other information for each class, method or variable, for adding documentation to an empty section or reporting errors is better to send a fix or open an issue through <a href="https://github.com/openframeworks/ofSite">github</a>.</p>
+            <p>When posting code enclose it in:</p>
+            <pre><code class="html">&lt;pre&gt;&lt;code class=&quot;cpp&quot;&gt;&nbsp;&lt;/code&gt;&lt;/pre&gt;</code></pre>
+            <br/>
+            </div>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+
+            // DISQUS
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+
+            var disqus_shortname = 'openframeworks'; // required: replace example with your forum shortname
+            //var disqus_developer = 1;
+
+            location_elements = window.location.pathname.split("/");
+            module_name = location_elements[location_elements.length-1].split(".")[0];
+            section_name = location.hash.split("_")[1];
+            console.log(module_name + " " + section_name);
+            if(section_name!=undefined && section_name!=''){
+            var disqus_identifier = window.location.pathname + "#!show_" + section_name;  
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "#!show_" + section_name;
+            var discus_title = document.title + " - " + section_name;
+            }else{
+            var disqus_identifier = window.location.pathname;
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            var discus_title = document.title;
+            }
+
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */   
+            (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		
+        </div><!-- End Submenu right -->
+      </div><!-- End page wide -->
+      </div><!-- End body wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:33:44 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+4d738d6979d8e7992359cde47632192d1fbef472
+">
+
+4d738d6979d8e7992359cde47632192d1fbef472
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+

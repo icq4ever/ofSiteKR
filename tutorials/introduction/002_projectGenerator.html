@@ -1,0 +1,243 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+    <script src="http://icq4ever.iptime.org//js/jquery.columnizer.min.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-71930909-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
+  <body>
+    <div id="content">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">	
+	    <div class="page-wide-tutorial">
+            <!--ul class="submenu">
+                <li><a href="/documentation">레퍼런스</a></li>
+                <li><a href="/tutorials">튜토리얼</a></li>
+            </ul-->
+    	    <h1>projectGenerator로 새 프로젝트를 생성하세요</h1>
+    	    <span class="article_meta">2012/10/20 17:00:00&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="http://jesusgollonet.com">Jesus Gollonet</a></span><br/>
+    	    <div class="article">
+    	    
+  <h2 id="1">1. 이것은 무엇입니까?</h2>
+<p>openframeworks 0072부터, addon을 포함하여 오픈프레임워크 프로젝트를 생성하는 projectGenerator라는 새로운 툴이 포함됩니다. 이전 버젼에서는, 새로운 oF프로젝트를 만들기 위해선 이미 존재하는 example app과 addon들을 수동으로 복제해야 했습니다. projectGenerator를 사용하면 훨씬 빠르고 에러를 줄일 수 있습니다.</p>
+<p>사실, 이 프로그램 역시 openFrameworks로 만들어졌습니다.</p>
+<h2 id="2">2. 사용법</h2>
+<p>프로젝트 생성은 엄청 쉽습니다.
+projectGenerator가 포함된 폴더는 oF의 최상 폴더에 위치해 있습니다.</p>
+<p><img alt="Image: where is the projectGenerator" src="pg_images/pg-00.png" /></p>
+<p>더블클릭하여 실행해주십시오.</p>
+<p><img alt="Image: projectGenerator GUI" src="pg_images/pg-01.png" /></p>
+<p>새 앱을 생성할 때 설정 가능한 옵션도 있습니다.</p>
+<h3 id="1-name">1. Name:</h3>
+<p>프로젝트의 이름을 지정해주세요.</p>
+<h3 id="2-path">2. Path</h3>
+<p>projectGenerator를 실행하면, 여기엔 배포판이 위치한 폴더의 절대 경로를 보여줄 것입니다. 대부분 아래와 같을것입니다.</p>
+<pre><code>/Users/username/wherever/you/have/openFrameworks/apps/myApps
+</code></pre>
+<p>훌륭한 기본 옵션입니다. 물론 프로젝트를 다른 어떤한 곳에 위치하더라도 상관이 없고, 그렇게 하더라도 당연히 잘 동작합니다. 하지만 오픈프레임웍스 구조상, 경로를 'OF폴더/app'내부에 만들기를 권장합니다. 그렇게 함으로써, OF가 새로 배포되거나, 당신의 프로젝트가 다른 경로로 이동된되거나, 혹은 하부 폴더가 이름이 바뀌더라도 생성된 경로가 깨지지 않습니다.</p>
+<p>추천하는 폴더 구조는 아래와 같습니다.</p>
+<pre><code>/.../apps/myApps/
+    /myApp1
+    /myApp2
+    ...
+/.../apps/myBigInstallation
+    /myProject1
+    /myProject2
+    ...
+/.../apps/myAddonsTests/
+    /ofxGifEncoderTests
+    /ofxFlashTests
+    ...
+</code></pre>
+<h3 id="3-platform">3. Platform</h3>
+<p>여기엔 여러분이 원하는 빌드하고싶은 플랫폼(운영체제)이 나타납니다. 이부분은 다양한 운영체제 각각의 배포판마다 다르게 나타납니다.
+에를 들어 맥킨토시 상의 OSX와 iOS 배포판의 경우, projectGenerator들을 실행하면 그에 상응하는 플랫폼이 보여집니다.</p>
+<h3 id="4-addons">4. Addons</h3>
+<p>만약 당신이 추가할 addon을 알고 있다면, addon 선택창을 열어서 선택 한 후 다시 돌아가주시면 됩니다.
+<img alt="Image: projectGenerator - selecting addons" src="pg_images/pg-02.png" /></p>
+<h4 id="notes-on-addons">Notes on addons</h4>
+<ul>
+<li>openFrameworks에 내장된 기본 addon뿐만 아니라, '/addon'폴더에 위치한 모든 addon들이 여기에 보여집니다.</li>
+<li>모든 addon들 (특히 기본 코어 addon이 아닌)이 이러한 방법들로 추가될 수 있는것은 아닙니다. projectGenerator는 초기에 만들어졌으므로, 아직 테스트 되지 않은 addon들이 많습니다.</li>
+<li>혹시, 프로젝트를 생성할 때 어떤 addon을 써야할지 모르더라도 괜찮습니다. 프로젝트를 생성 한 이후에도 수동으로 addons을 추가할 수 있습니다.</li>
+<li><a href="http://wiki.openframeworks.cc/index.php?title=Main_Page">openframeworks wiki</a>에 각 플랫폼 별로 addon을 추가하는 방법에 관한 가이드가 있습니다. 어쩌면, 최신버전과 다를수도 있겠지만, 만약 문제에 부딫히면, 주저하지 마시고 <a href="http://forum.openframeworks.cc/index.php">forum</a>에 물어보시기 바랍니다.</li>
+<li>addon들은 <a href="http://ofxaddons.com">ofxaddons.com</a>에서 확인하실 수 있습니다.</li>
+</ul>
+<h3 id="5">5. 끝났습니다!</h3>
+<p>마지막으로 'generate' 버튼을 누르면, 프로젝트파일이 생성됩니다. 추가한 addons에 따라 시간이 좀 걸릴수도 있습니다. 생성이 완료되면 하단의 상태영역에 메시지가 표시될 것입니다.</p>
+<p>선택한 경로를 확인해보면, 생성된 프로젝트가 기다리고 있을것입니다. 코딩을 시작하세요.</p>
+<h2 id="3">3. 추가 주의사항:</h2>
+<ul>
+<li><a href="https://github.com/ofZach/projectGeneratorSimple/tree/master/bin">readme</a>를 읽어 보십시오. 약간의 고급정보 및 개발자들을 위한 좀 더 유연한 정보들이 있습니다.</li>
+<li>위에 보여지는 스크린샷들은 맥킨토시에서의 화면입니다만, 진행과정은 모든 운영체제에서 동일합니다. 다시한번 말씀드리지만, 질문이 있으시다면  <a href="http://forum.openframeworks.cc/index.php">forum</a>에 문의해주시기 바랍니다.</li>
+<li>스크린샷이 낮은 화질인점은 죄송합니다. 곧 수정하겠습니다 : )</li>
+</ul>
+
+    		</div>
+            
+        </div><!-- End Page Wide -->      
+      </div><!-- End Body Wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:33:30 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+4d738d6979d8e7992359cde47632192d1fbef472
+">
+
+4d738d6979d8e7992359cde47632192d1fbef472
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+
+
+

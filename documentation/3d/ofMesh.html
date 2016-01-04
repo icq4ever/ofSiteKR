@@ -1,0 +1,3070 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr - ofMesh</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+    <script src="http://icq4ever.iptime.org//js/jquery.columnizer.min.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation.js"></script>
+  </head>
+  <body>
+    <div id="content">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">
+          <div class="page-wide">
+          
+              <div id="docstitle"><h1>ofMesh</h1></div>
+              <div id="editdocs">
+                    <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/3d/ofMesh.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
+              </div>
+              
+          </div>
+          
+          
+        <div class="page-wide">
+		    <div class="submenucol-left">
+		     <!-- list of methods -->
+		     <p class="top_list_header">class methods</p>
+             <ul class="functionslist">
+                 
+                         <li>
+                         <a href="#show_ofMesh" class="ofMesh" data-lookup="ofMesh">ofMesh()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_addColor" class="addColor" data-lookup="addColor">addColor()</a></li>
+                     
+                         <li>
+                         <a href="#show_addColors" class="addColors" data-lookup="addColors">addColors()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_addIndex" class="addIndex" data-lookup="addIndex">addIndex()</a></li>
+                     
+                         <li>
+                         <a href="#show_addIndices" class="addIndices" data-lookup="addIndices">addIndices()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_addNormal" class="addNormal" data-lookup="addNormal">addNormal()</a></li>
+                     
+                         <li>
+                         <a href="#show_addNormals" class="addNormals" data-lookup="addNormals">addNormals()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_addTexCoord" class="addTexCoord" data-lookup="addTexCoord">addTexCoord()</a></li>
+                     
+                         <li>
+                         <a href="#show_addTexCoords" class="addTexCoords" data-lookup="addTexCoords">addTexCoords()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_addTriangle" class="addTriangle" data-lookup="addTriangle">addTriangle()</a></li>
+                     
+                         <li>
+                         <a href="#show_addVertex" class="addVertex" data-lookup="addVertex">addVertex()</a></li>
+                     
+                         <li>
+                         <a href="#show_addVertices" class="addVertices" data-lookup="addVertices">addVertices()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_append" class="append" data-lookup="append">append()</a></li>
+                     
+                         <li>
+                         <a href="#show_axis" class="axis" data-lookup="axis">axis()</a></li>
+                     
+                         <li>
+                         <a href="#show_box" class="box" data-lookup="box">box()</a></li>
+                     
+                         <li>
+                         <a href="#show_clear" class="clear" data-lookup="clear">clear()</a></li>
+                     
+                         <li>
+                         <a href="#show_clearColors" class="clearColors" data-lookup="clearColors">clearColors()</a></li>
+                     
+                         <li>
+                         <a href="#show_clearIndices" class="clearIndices" data-lookup="clearIndices">clearIndices()</a></li>
+                     
+                         <li>
+                         <a href="#show_clearNormals" class="clearNormals" data-lookup="clearNormals">clearNormals()</a></li>
+                     
+                         <li>
+                         <a href="#show_clearTexCoords" class="clearTexCoords" data-lookup="clearTexCoords">clearTexCoords()</a></li>
+                     
+                         <li>
+                         <a href="#show_clearVertices" class="clearVertices" data-lookup="clearVertices">clearVertices()</a></li>
+                     
+                         <li>
+                         <a href="#show_cone" class="cone" data-lookup="cone">cone()</a></li>
+                     
+                         <li>
+                         <a href="#show_cylinder" class="cylinder" data-lookup="cylinder">cylinder()</a></li>
+                     
+                         <li>
+                         <a href="#show_disableColors" class="disableColors" data-lookup="disableColors">disableColors()</a></li>
+                     
+                         <li>
+                         <a href="#show_disableIndices" class="disableIndices" data-lookup="disableIndices">disableIndices()</a></li>
+                     
+                         <li>
+                         <a href="#show_disableNormals" class="disableNormals" data-lookup="disableNormals">disableNormals()</a></li>
+                     
+                         <li>
+                         <a href="#show_disableTextures" class="disableTextures" data-lookup="disableTextures">disableTextures()</a></li>
+                     
+                         <li>
+                         <a href="#show_draw" class="draw" data-lookup="draw">draw()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_drawFaces" class="drawFaces" data-lookup="drawFaces">drawFaces()</a></li>
+                     
+                         <li>
+                         <a href="#show_drawVertices" class="drawVertices" data-lookup="drawVertices">drawVertices()</a></li>
+                     
+                         <li>
+                         <a href="#show_drawWireframe" class="drawWireframe" data-lookup="drawWireframe">drawWireframe()</a></li>
+                     
+                         <li>
+                         <a href="#show_enableColors" class="enableColors" data-lookup="enableColors">enableColors()</a></li>
+                     
+                         <li>
+                         <a href="#show_enableIndices" class="enableIndices" data-lookup="enableIndices">enableIndices()</a></li>
+                     
+                         <li>
+                         <a href="#show_enableNormals" class="enableNormals" data-lookup="enableNormals">enableNormals()</a></li>
+                     
+                         <li>
+                         <a href="#show_enableTextures" class="enableTextures" data-lookup="enableTextures">enableTextures()</a></li>
+                     
+                         <li>
+                         <a href="#show_getCentroid" class="getCentroid" data-lookup="getCentroid">getCentroid()</a></li>
+                     
+                         <li>
+                         <a href="#show_getColor" class="getColor" data-lookup="getColor">getColor()</a></li>
+                     
+                         <li>
+                         <a href="#show_getColors" class="getColors" data-lookup="getColors">getColors()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_getColorsPointer" class="getColorsPointer" data-lookup="getColorsPointer">getColorsPointer()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_getFace" class="getFace" data-lookup="getFace">getFace()</a></li>
+                     
+                         <li>
+                         <a href="#show_getFaceNormals" class="getFaceNormals" data-lookup="getFaceNormals">getFaceNormals()</a></li>
+                     
+                         <li>
+                         <a href="#show_getIndex" class="getIndex" data-lookup="getIndex">getIndex()</a></li>
+                     
+                         <li>
+                         <a href="#show_getIndexPointer" class="getIndexPointer" data-lookup="getIndexPointer">getIndexPointer()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_getIndices" class="getIndices" data-lookup="getIndices">getIndices()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_getMeshForIndices" class="getMeshForIndices" data-lookup="getMeshForIndices">getMeshForIndices()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_getMode" class="getMode" data-lookup="getMode">getMode()</a></li>
+                     
+                         <li>
+                         <a href="#show_getNormal" class="getNormal" data-lookup="getNormal">getNormal()</a></li>
+                     
+                         <li>
+                         <a href="#show_getNormals" class="getNormals" data-lookup="getNormals">getNormals()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_getNormalsPointer" class="getNormalsPointer" data-lookup="getNormalsPointer">getNormalsPointer()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_getNumColors" class="getNumColors" data-lookup="getNumColors">getNumColors()</a></li>
+                     
+                         <li>
+                         <a href="#show_getNumIndices" class="getNumIndices" data-lookup="getNumIndices">getNumIndices()</a></li>
+                     
+                         <li>
+                         <a href="#show_getNumNormals" class="getNumNormals" data-lookup="getNumNormals">getNumNormals()</a></li>
+                     
+                         <li>
+                         <a href="#show_getNumTexCoords" class="getNumTexCoords" data-lookup="getNumTexCoords">getNumTexCoords()</a></li>
+                     
+                         <li>
+                         <a href="#show_getNumVertices" class="getNumVertices" data-lookup="getNumVertices">getNumVertices()</a></li>
+                     
+                         <li>
+                         <a href="#show_getTexCoord" class="getTexCoord" data-lookup="getTexCoord">getTexCoord()</a></li>
+                     
+                         <li>
+                         <a href="#show_getTexCoords" class="getTexCoords" data-lookup="getTexCoords">getTexCoords()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_getTexCoordsPointer" class="getTexCoordsPointer" data-lookup="getTexCoordsPointer">getTexCoordsPointer()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_getUniqueFaces" class="getUniqueFaces" data-lookup="getUniqueFaces">getUniqueFaces()</a></li>
+                     
+                         <li>
+                         <a href="#show_getVertex" class="getVertex" data-lookup="getVertex">getVertex()</a></li>
+                     
+                         <li>
+                         <a href="#show_getVertices" class="getVertices" data-lookup="getVertices">getVertices()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_getVerticesPointer" class="getVerticesPointer" data-lookup="getVerticesPointer">getVerticesPointer()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_hasColors" class="hasColors" data-lookup="hasColors">hasColors()</a></li>
+                     
+                         <li>
+                         <a href="#show_hasIndices" class="hasIndices" data-lookup="hasIndices">hasIndices()</a></li>
+                     
+                         <li>
+                         <a href="#show_hasNormals" class="hasNormals" data-lookup="hasNormals">hasNormals()</a></li>
+                     
+                         <li>
+                         <a href="#show_hasTexCoords" class="hasTexCoords" data-lookup="hasTexCoords">hasTexCoords()</a></li>
+                     
+                         <li>
+                         <a href="#show_hasVertices" class="hasVertices" data-lookup="hasVertices">hasVertices()</a></li>
+                     
+                         <li>
+                         <a href="#show_haveColorsChanged" class="haveColorsChanged" data-lookup="haveColorsChanged">haveColorsChanged()</a></li>
+                     
+                         <li>
+                         <a href="#show_haveIndicesChanged" class="haveIndicesChanged" data-lookup="haveIndicesChanged">haveIndicesChanged()</a></li>
+                     
+                         <li>
+                         <a href="#show_haveNormalsChanged" class="haveNormalsChanged" data-lookup="haveNormalsChanged">haveNormalsChanged()</a></li>
+                     
+                         <li>
+                         <a href="#show_haveTexCoordsChanged" class="haveTexCoordsChanged" data-lookup="haveTexCoordsChanged">haveTexCoordsChanged()</a></li>
+                     
+                         <li>
+                         <a href="#show_haveVertsChanged" class="haveVertsChanged" data-lookup="haveVertsChanged">haveVertsChanged()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_icosahedron" class="icosahedron" data-lookup="icosahedron">icosahedron()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_icosphere" class="icosphere" data-lookup="icosphere">icosphere()</a></li>
+                     
+                         <li>
+                         <a href="#show_load" class="load" data-lookup="load">load()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_mergeDuplicateVertices" class="mergeDuplicateVertices" data-lookup="mergeDuplicateVertices">mergeDuplicateVertices()</a></li>
+                     
+                         <li>
+                         <a href="#show_plane" class="plane" data-lookup="plane">plane()</a></li>
+                     
+                         <li>
+                         <a href="#show_removeColor" class="removeColor" data-lookup="removeColor">removeColor()</a></li>
+                     
+                         <li>
+                         <a href="#show_removeIndex" class="removeIndex" data-lookup="removeIndex">removeIndex()</a></li>
+                     
+                         <li>
+                         <a href="#show_removeNormal" class="removeNormal" data-lookup="removeNormal">removeNormal()</a></li>
+                     
+                         <li>
+                         <a href="#show_removeTexCoord" class="removeTexCoord" data-lookup="removeTexCoord">removeTexCoord()</a></li>
+                     
+                         <li>
+                         <a href="#show_removeVertex" class="removeVertex" data-lookup="removeVertex">removeVertex()</a></li>
+                     
+                         <li>
+                         <a href="#show_save" class="save" data-lookup="save">save()</a></li>
+                     
+                         <li>
+                         <a href="#show_setColor" class="setColor" data-lookup="setColor">setColor()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setColorForIndices" class="setColorForIndices" data-lookup="setColorForIndices">setColorForIndices()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setFromTriangles" class="setFromTriangles" data-lookup="setFromTriangles">setFromTriangles()</a></li>
+                     
+                         <li>
+                         <a href="#show_setIndex" class="setIndex" data-lookup="setIndex">setIndex()</a></li>
+                     
+                         <li>
+                         <a href="#show_setMode" class="setMode" data-lookup="setMode">setMode()</a></li>
+                     
+                         <li>
+                         <a href="#show_setNormal" class="setNormal" data-lookup="setNormal">setNormal()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setTexCoord" class="setTexCoord" data-lookup="setTexCoord">setTexCoord()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setVertex" class="setVertex" data-lookup="setVertex">setVertex()</a></li>
+                     
+                         <li>
+                         <a href="#show_setupIndicesAuto" class="setupIndicesAuto" data-lookup="setupIndicesAuto">setupIndicesAuto()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_smoothNormals" class="smoothNormals" data-lookup="smoothNormals">smoothNormals()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_sphere" class="sphere" data-lookup="sphere">sphere()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_usingColors" class="usingColors" data-lookup="usingColors">usingColors()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_usingIndices" class="usingIndices" data-lookup="usingIndices">usingIndices()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_usingNormals" class="usingNormals" data-lookup="usingNormals">usingNormals()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_usingTextures" class="usingTextures" data-lookup="usingTextures">usingTextures()</a></li>
+                     
+             </ul>
+            
+             
+             
+             <!-- list of variables -->              
+            
+             
+            
+             <!-- list of functions -->              
+		    </div>
+	    <div class="submenucol-right">
+            <div class="documentation_detail class_documentation">
+              
+  <p>An <a href="../3d/ofMesh.html" class="docs_class" >ofMesh</a> represents a set of vertices in 3D spaces, and normals at those points, colors at those points, and texture coordinates at those points. Each of these different properties is stored in a vector.
+Vertices are passed to your graphics card and your graphics card fill in the spaces in between them in a processing usually called the rendering pipeline. The rendering pipeline goes more or less like this:</p>
+<ol>
+<li>
+<p>Say how you're going to connect all the points.</p>
+</li>
+<li>
+<p>Make some points.</p>
+</li>
+<li>
+<p>Say that you're done making points.</p>
+</li>
+</ol>
+<p>You may be thinking: I'll just make eight vertices and voila: a cube. Not so quick. There's a hitch and that hitch is that the OpenGL renderer has different ways of connecting the vertices that you pass to it and none are as efficient as to only need eight vertices to create a cube.</p>
+<p>You've probably seen a version of the following image somewhere before.
+<img alt="PRIMATIVES" src="primitives_new-640x269.gif" />
+Generally you have to create your points to fit the drawing mode that you've selected because of whats called winding. A vertex gets connected to another vertex in the order that the mode does its winding and this means that you might need multiple vertices in a given location to create the shape you want. The cube, for example, requires eighteen vertices, not the eight that you would expect. If you note the order of vertices in the GL chart above you'll see that all of them use their vertices slightly differently (in particular you should make note of the GL_TRIANGLE_STRIP example). Drawing a shape requires that you keep track of which drawing mode is being used and which order your vertices are declared in.</p>
+<p>If you're thinking: it would be nice if there were an abstraction layer for this you're thinking right. Enter the mesh, which is really just an abstraction of the vertex and drawing mode that we started with but which has the added bonus of managing the draw order for you. That may seem insignificant at first, but it provides some real benefits when working with complex geometry.</p>
+<p>A very typical usage is something like the following:</p>
+<pre><code class="cpp">&lt;a href=&quot;../3d/ofMesh.html&quot; class=&quot;docs_class&quot; &gt;ofMesh&lt;/a&gt; mesh;
+for (int y = 0; y &lt; height; y++){
+    for (int x = 0; x&lt;width; x++){
+        mesh.addVertex(&lt;a href=&quot;../types/ofPoint.html&quot; class=&quot;docs_class&quot; &gt;ofPoint&lt;/a&gt;(x,y,0)); // make a new vertex
+        mesh.addColor(ofFloatColor(0,0,0));  // add a color at that vertex
+    }
+}
+
+// now it's important to make sure that each vertex is correctly connected with the
+// other vertices around it. This is done using indices, which you can set up like so:
+for (int y = 0; y&lt;height-1; y++){
+    for (int x=0; x&lt;width-1; x++){
+        mesh.addIndex(x+y*width);               // 0
+        mesh.addIndex((x+1)+y*width);           // 1
+        mesh.addIndex(x+(y+1)*width);           // 10
+
+        mesh.addIndex((x+1)+y*width);           // 1
+        mesh.addIndex((x+1)+(y+1)*width);       // 11
+        mesh.addIndex(x+(y+1)*width);           // 10
+    }
+}
+</code></pre>
+
+
+              
+              
+  
+
+           </div>
+                  
+            <!-- methods detail -->
+              <!--h2><a name="methods"></a>ofMesh methods</h2-->
+                        
+<div class="documentation_detail ofMesh" data-lookup="ofMesh" data-item-type="method">
+  	 
+	<h1><a name="show_ofMesh">ofMesh()</a></h1>
+	<h2>
+  <p>ofMesh::ofMesh()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This creates the mesh, using OF_PRIMITIVE_TRIANGLES and without any initial vertices.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofMesh" data-lookup="ofMesh" data-item-type="method">
+  	 
+	<h1><a name="show_ofMesh">ofMesh(...)</a></h1>
+	<h2>
+  <p>ofMesh::ofMesh(ofPrimitiveMode mode, const vector&lt; ofVec3f &gt; &amp;verts)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This allows to you to use one of the other ofPrimitiveModes: OF_PRIMITIVE_TRIANGLES, OF_PRIMITIVE_TRIANGLE_STRIP, OF_PRIMITIVE_TRIANGLE_FAN, OF_PRIMITIVE_LINES, OF_PRIMITIVE_LINE_STRIP, OF_PRIMITIVE_LINE_LOOP, OF_PRIMITIVE_POINTS. See <a href="../gl/ofGLUtils.htm">ofGLUtils</a> for more information on these types.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail addColor" data-lookup="addColor" data-item-type="method">
+  	 
+	<h1><a name="show_addColor">addColor(...)</a></h1>
+	<h2>
+  <p>void ofMesh::addColor(const ofFloatColor &amp;c)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This adds a color to the mesh, the color will be associated with the vertex in the same position.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail addColors" data-lookup="addColors" data-item-type="method">
+  	 
+	<h1><a name="show_addColors">addColors(...)</a></h1>
+	<h2>
+  <p>void ofMesh::addColors(const ofFloatColor *cols, size_t amt)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This adds a pointer of colors to the ofMesh instance with the amount passed as the second parameter.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail addColors" data-lookup="addColors" data-item-type="method">
+  	 
+	<h1><a name="show_addColors">addColors(...)</a></h1>
+	<h2>
+  <p>void ofMesh::addColors(const vector&lt; ofFloatColor &gt; &amp;cols)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This adds colors using a reference to a vector of ofColors. For each color in the vector, this will put the colors at the corresponding vertex.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail addIndex" data-lookup="addIndex" data-item-type="method">
+  	 
+	<h1><a name="show_addIndex">addIndex(...)</a></h1>
+	<h2>
+  <p>void ofMesh::addIndex(ofIndexType i)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Add an index to the index vector. Each index represents the order of connection for  vertices. This determines the way that the vertices are connected according to the polygon type set in the primitiveMode. It important to note that a particular vertex might be used for several faces and so would be referenced several times in the index vector.</p>
+<pre><code class="cpp">    ofMesh mesh;
+    mesh.setMode(OF_PRIMITIVE_TRIANGLES);
+    mesh.addVertex(ofPoint(0,-200,0));
+    mesh.addVertex(ofPoint(200, 0, 0 ));
+    mesh.addVertex(ofPoint(-200, 0, 0 ));
+    mesh.addVertex(ofPoint(0, 200, 0 ));
+    mesh.addIndex(0); //connect the first vertex we made, v0
+    mesh.addIndex(1); //to v1
+    mesh.addIndex(2); //to v2 to complete the face
+    mesh.addIndex(1); //now start a new face beginning with v1
+    mesh.addIndex(2); //that is connected to v2
+    mesh.addIndex(3); //and we complete the face with v3
+</code></pre>
+
+<p>Will give you this shape:
+<img alt="image of basic use of indices" src="index.jpg" /></p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Will give you this shape:
+<img alt="image of basic use of indices" src="3d/index.jpg" /></p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail addIndices" data-lookup="addIndices" data-item-type="method">
+  	 
+	<h1><a name="show_addIndices">addIndices(...)</a></h1>
+	<h2>
+  <p>void ofMesh::addIndices(const ofIndexType *inds, size_t amt)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This adds indices to the ofMesh by pointing to an array of indices. The "amt" defines the length of the array.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail addIndices" data-lookup="addIndices" data-item-type="method">
+  	 
+	<h1><a name="show_addIndices">addIndices(...)</a></h1>
+	<h2>
+  <p>void ofMesh::addIndices(const vector&lt; ofIndexType &gt; &amp;inds)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This adds a vector of indices.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail addNormal" data-lookup="addNormal" data-item-type="method">
+  	 
+	<h1><a name="show_addNormal">addNormal(...)</a></h1>
+	<h2>
+  <p>void ofMesh::addNormal(const ofVec3f &amp;n)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Add a normal to the mesh as a 3D vector, typically perpendicular to the plane of the face. A normal is a vector that defines how a surface responds to lighting, i.e. how it is lit. The amount of light reflected by a surface is proportional to the angle between the light's direction and the normal. The smaller the angle the brighter the surface will look. See the normalsExample for advice on computing the normals.
+addNormal adds the 3D vector to the end of the list, so you need to make sure you add normals at the same index of the matching face.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail addNormals" data-lookup="addNormals" data-item-type="method">
+  	 
+	<h1><a name="show_addNormals">addNormals(...)</a></h1>
+	<h2>
+  <p>void ofMesh::addNormals(const ofVec3f *norms, size_t amt)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Add an array of normals to the mesh. Because you are using a pointer to the array you also have to define the length of the array as an int (amt). The normals are added at the end of the current normals list.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail addNormals" data-lookup="addNormals" data-item-type="method">
+  	 
+	<h1><a name="show_addNormals">addNormals(...)</a></h1>
+	<h2>
+  <p>void ofMesh::addNormals(const vector&lt; ofVec3f &gt; &amp;norms)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Add a vector of normals to a mesh, allowing you to push out many normals at once rather than adding one at a time. The vector of normals is added after the end of the current normals list.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail addTexCoord" data-lookup="addTexCoord" data-item-type="method">
+  	 
+	<h1><a name="show_addTexCoord">addTexCoord(...)</a></h1>
+	<h2>
+  <p>void ofMesh::addTexCoord(const ofVec2f &amp;t)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Add a Vec2f representing the texture coordinate. Because OF uses ARB textures these are in pixels rather than 0-1 normalized coordinates.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail addTexCoords" data-lookup="addTexCoords" data-item-type="method">
+  	 
+	<h1><a name="show_addTexCoords">addTexCoords(...)</a></h1>
+	<h2>
+  <p>void ofMesh::addTexCoords(const ofVec2f *tCoords, size_t amt)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Add an array of texture coordinates to the mesh. Because you are using a pointer to the array you also have to define the length of the array as an int (amt). The texture coordinates are added at the end of the current texture coordinates list.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail addTexCoords" data-lookup="addTexCoords" data-item-type="method">
+  	 
+	<h1><a name="show_addTexCoords">addTexCoords(...)</a></h1>
+	<h2>
+  <p>void ofMesh::addTexCoords(const vector&lt; ofVec2f &gt; &amp;tCoords)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Add a vector of texture coordinates to a mesh, allowing you to push out many at once rather than adding one at a time. The vector of texture coordinates is added after the end of the current texture coordinates list.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail addTriangle" data-lookup="addTriangle" data-item-type="method">
+  	 
+	<h1><a name="show_addTriangle">addTriangle(...)</a></h1>
+	<h2>
+  <p>void ofMesh::addTriangle(ofIndexType index1, ofIndexType index2, ofIndexType index3)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Adding a triangle means using three of the vertices that have already been added to create a triangle. This is an easy way to create triangles in the mesh. The indices refer to the index of the vertex in the vector of vertices.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail addVertex" data-lookup="addVertex" data-item-type="method">
+  	 
+	<h1><a name="show_addVertex">addVertex(...)</a></h1>
+	<h2>
+  <p>void ofMesh::addVertex(const ofVec3f &amp;v)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Add a new vertex at the end of the current list of vertices. It is important to remember that the order the vertices are added to the list determines how they link they form the polygons and strips (assuming you do not change their indeces). See the ofMesh class description for details.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail addVertices" data-lookup="addVertices" data-item-type="method">
+  	 
+	<h1><a name="show_addVertices">addVertices(...)</a></h1>
+	<h2>
+  <p>void ofMesh::addVertices(const ofVec3f *verts, size_t amt)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Add an array of vertices to the mesh. Because you are using a pointer to the array you also have to define the length of the array as an int (amt). The vertices are added at the end of the current vertices list.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail addVertices" data-lookup="addVertices" data-item-type="method">
+  	 
+	<h1><a name="show_addVertices">addVertices(...)</a></h1>
+	<h2>
+  <p>void ofMesh::addVertices(const vector&lt; ofVec3f &gt; &amp;verts)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Add a vector of vertices to a mesh, allowing you to push out many at once rather than adding one at a time. The vector of vertices is added after the end of the current vertices list.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail append" data-lookup="append" data-item-type="method">
+  	 
+	<h1><a name="show_append">append(...)</a></h1>
+	<h2>
+  <p>void ofMesh::append(const ofMesh &amp;mesh)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Add the vertices, normals, texture coordinates and indices of one mesh onto another mesh. Everything from the referenced mesh is simply added at the end of the current mesh's lists.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail axis" data-lookup="axis" data-item-type="method">
+  	 
+	<h1><a name="show_axis">axis(...)</a></h1>
+	<h2>
+  <p>ofMesh ofMesh::axis(float size)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Returns: an ofMesh representing an XYZ coordinate system.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail box" data-lookup="box" data-item-type="method">
+  	 
+	<h1><a name="show_box">box(...)</a></h1>
+	<h2>
+  <p>ofMesh ofMesh::box(float width, float height, float depth, int resX=2, int resY=2, int resZ=2)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>A helper method that returns a box made of triangles. The resolution settings for the width and height are optional (they are both set at a default of 2 triangles per side).</p>
+<pre><code class="cpp">ofMesh mesh;
+mesh = ofMesh::box(200.0, 200.0, 200.0);
+</code></pre>
+
+<p><img alt="image of a simple box" src="box.jpg" /></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail clear" data-lookup="clear" data-item-type="method">
+  	 
+	<h1><a name="show_clear">clear()</a></h1>
+	<h2>
+  <p>void ofMesh::clear()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This removes all the vertices, colors, and indices from the mesh.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail clearColors" data-lookup="clearColors" data-item-type="method">
+  	 
+	<h1><a name="show_clearColors">clearColors()</a></h1>
+	<h2>
+  <p>void ofMesh::clearColors()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Clear all the colors.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail clearIndices" data-lookup="clearIndices" data-item-type="method">
+  	 
+	<h1><a name="show_clearIndices">clearIndices()</a></h1>
+	<h2>
+  <p>void ofMesh::clearIndices()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Remove all the indices of the mesh. This means that your mesh will be a point cloud.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail clearNormals" data-lookup="clearNormals" data-item-type="method">
+  	 
+	<h1><a name="show_clearNormals">clearNormals()</a></h1>
+	<h2>
+  <p>void ofMesh::clearNormals()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Remove all the normals.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail clearTexCoords" data-lookup="clearTexCoords" data-item-type="method">
+  	 
+	<h1><a name="show_clearTexCoords">clearTexCoords()</a></h1>
+	<h2>
+  <p>void ofMesh::clearTexCoords()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Clear all the texture coordinates.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail clearVertices" data-lookup="clearVertices" data-item-type="method">
+  	 
+	<h1><a name="show_clearVertices">clearVertices()</a></h1>
+	<h2>
+  <p>void ofMesh::clearVertices()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Removes all the vertices.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail cone" data-lookup="cone" data-item-type="method">
+  	 
+	<h1><a name="show_cone">cone(...)</a></h1>
+	<h2>
+  <p>ofMesh ofMesh::cone(float radius, float height, int radiusSegments=12, int heightSegments=6, int capSegments=2, ofPrimitiveMode mode=OF_PRIMITIVE_TRIANGLE_STRIP)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>A helper method that returns a cone made of triangles. The resolution settings for the radius, height, and cap are optional (they are set at a default of 12 segments around the radius, 6 segments in the height, and 2 on the cap). The only valid modes are the default OF_PRIMITIVE_TRIANGLE_STRIP and OF_PRIMITIVE_TRIANGLES.</p>
+<pre><code class="cpp">ofMesh mesh;
+mesh = ofMesh::cone(100.0, 200.0);
+</code></pre>
+
+<p><img alt="image of a simple cone" src="cone.jpg" /></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail cylinder" data-lookup="cylinder" data-item-type="method">
+  	 
+	<h1><a name="show_cylinder">cylinder(...)</a></h1>
+	<h2>
+  <p>ofMesh ofMesh::cylinder(float radius, float height, int radiusSegments=12, int heightSegments=6, int numCapSegments=2, bool bCapped=true, ofPrimitiveMode mode=OF_PRIMITIVE_TRIANGLE_STRIP)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>A helper method that returns a cylinder made of triangles. The resolution settings for the radius, height, and cap are optional (they are set at a default of 12 segments around the radius, 6 segments in the height, and 2 on the cap). You have the option to cap the cylinder or not. The only valid modes are the default OF_PRIMITIVE_TRIANGLE_STRIP and OF_PRIMITIVE_TRIANGLES.</p>
+<pre><code class="cpp">ofMesh mesh;
+mesh = ofMesh::cylinder(100.0, 200.0);
+</code></pre>
+
+<p><img alt="image of a simple cylinder" src="cylinder.jpg" /></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail disableColors" data-lookup="disableColors" data-item-type="method">
+  	 
+	<h1><a name="show_disableColors">disableColors()</a></h1>
+	<h2>
+  <p>void ofMesh::disableColors()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Disable mesh colors. Use enableColors() to turn colors back on.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail disableIndices" data-lookup="disableIndices" data-item-type="method">
+  	 
+	<h1><a name="show_disableIndices">disableIndices()</a></h1>
+	<h2>
+  <p>void ofMesh::disableIndices()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Disable mesh indices. Use enableIndices() to turn indices back on.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail disableNormals" data-lookup="disableNormals" data-item-type="method">
+  	 
+	<h1><a name="show_disableNormals">disableNormals()</a></h1>
+	<h2>
+  <p>void ofMesh::disableNormals()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Disable mesh normals. Use enableNormals() to turn normals back on.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail disableTextures" data-lookup="disableTextures" data-item-type="method">
+  	 
+	<h1><a name="show_disableTextures">disableTextures()</a></h1>
+	<h2>
+  <p>void ofMesh::disableTextures()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Disable mesh textures. Use enableTextures() to turn textures back on.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw()</a></h1>
+	<h2>
+  <p>void ofMesh::draw()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This draws the mesh using its primitive type, meaning that if you set them up to be triangles, this will draw the triangles.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofMesh::draw(ofPolyRenderMode renderType)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This draws the mesh using a defined renderType, overriding the renderType defined with setMode().</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawFaces" data-lookup="drawFaces" data-item-type="method">
+  	 
+	<h1><a name="show_drawFaces">drawFaces()</a></h1>
+	<h2>
+  <p>void ofMesh::drawFaces()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This draws the mesh as faces, meaning that you'll have a collection of faces.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawVertices" data-lookup="drawVertices" data-item-type="method">
+  	 
+	<h1><a name="show_drawVertices">drawVertices()</a></h1>
+	<h2>
+  <p>void ofMesh::drawVertices()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This allows you draw just the vertices, meaning that you'll have a point cloud.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawWireframe" data-lookup="drawWireframe" data-item-type="method">
+  	 
+	<h1><a name="show_drawWireframe">drawWireframe()</a></h1>
+	<h2>
+  <p>void ofMesh::drawWireframe()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This draws the mesh as GL_LINES, meaning that you'll have a wireframe.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail enableColors" data-lookup="enableColors" data-item-type="method">
+  	 
+	<h1><a name="show_enableColors">enableColors()</a></h1>
+	<h2>
+  <p>void ofMesh::enableColors()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Enable mesh colors. Use disableColors() to turn colors off. Colors are enabled by default when they are added to the mesh.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail enableIndices" data-lookup="enableIndices" data-item-type="method">
+  	 
+	<h1><a name="show_enableIndices">enableIndices()</a></h1>
+	<h2>
+  <p>void ofMesh::enableIndices()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Enable mesh indices. Use disableIndices() to turn indices off. Indices are enabled by default when they are added to the mesh.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail enableNormals" data-lookup="enableNormals" data-item-type="method">
+  	 
+	<h1><a name="show_enableNormals">enableNormals()</a></h1>
+	<h2>
+  <p>void ofMesh::enableNormals()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Enable mesh normals. Use disableNormals() to turn normals off. Normals are enabled by default when they are added to the mesh.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail enableTextures" data-lookup="enableTextures" data-item-type="method">
+  	 
+	<h1><a name="show_enableTextures">enableTextures()</a></h1>
+	<h2>
+  <p>void ofMesh::enableTextures()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Enable mesh textures. Use disableTextures() to turn textures off. Textures are enabled by default when they are added to the mesh.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getCentroid" data-lookup="getCentroid" data-item-type="method">
+  	 
+	<h1><a name="show_getCentroid">getCentroid()</a></h1>
+	<h2>
+  <p>ofVec3f ofMesh::getCentroid()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns a ofVec3f defining the centroid of all the vetices in the mesh.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getColor" data-lookup="getColor" data-item-type="method">
+  	 
+	<h1><a name="show_getColor">getColor(...)</a></h1>
+	<h2>
+  <p>ofFloatColor ofMesh::getColor(ofIndexType i)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the color at the index in the colors vector.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get the color at the index in the colors vector.</p>
+<p>Returns: the color at the index in the colors vector.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getColors" data-lookup="getColors" data-item-type="method">
+  	 
+	<h1><a name="show_getColors">getColors()</a></h1>
+	<h2>
+  <p>vector&lt; ofFloatColor &gt; &amp; ofMesh::getColors()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the vector that contains all of the colors of the mesh, if it has any. Use this if you plan to change the colors as part of this call as it will force a reset of the cache.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Use this if you plan to change the colors as part of this call as it will force a reset of the cache.</p>
+<p>Returns: the vector that contains all of the colors of the mesh, if it has any.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getColors" data-lookup="getColors" data-item-type="method">
+  	 
+	<h1><a name="show_getColors">getColors()</a></h1>
+	<h2>
+  <p>const vector&lt; ofFloatColor &gt; &amp; ofMesh::getColors()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the vector that contains all of the colors of the mesh, if it has any. (read only)</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getColorsPointer" data-lookup="getColorsPointer" data-item-type="method">
+  	 
+	<h1><a name="show_getColorsPointer">getColorsPointer()</a></h1>
+	<h2>
+  <p>ofFloatColor * ofMesh::getColorsPointer()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns a pointer that contains all of the colors of the mesh, if it has any. Use this if you plan to change the colors as part of this call as it will force a reset of the cache.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Use this if you plan to change the colors as part of this call as it will force a reset of the cache.</p>
+<p>Returns: a pointer that contains all of the colors of the mesh, if it has any.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getColorsPointer" data-lookup="getColorsPointer" data-item-type="method">
+  	 
+	<h1><a name="show_getColorsPointer">getColorsPointer()</a></h1>
+	<h2>
+  <p>const ofFloatColor * ofMesh::getColorsPointer()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns a pointer that contains all of the colors of the mesh, if it has any. (read only)</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getFace" data-lookup="getFace" data-item-type="method">
+  	 
+	<h1><a name="show_getFace">getFace(...)</a></h1>
+	<h2>
+  <p>ofMeshFace ofMesh::getFace(ofIndexType faceId)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the vector that contains all of the faces of the mesh. This isn't currently implemented.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getFaceNormals" data-lookup="getFaceNormals" data-item-type="method">
+  	 
+	<h1><a name="show_getFaceNormals">getFaceNormals(...)</a></h1>
+	<h2>
+  <p>vector&lt; ofVec3f &gt; ofMesh::getFaceNormals(bool perVetex=false)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns a vector containing the calculated normals of each face in the mesh. As a default it only calculates the normal for the face as a whole but by setting (perVertex = true) it will return the same normal value for each of the three vertices making up a face.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get normals for each face
+As a default it only calculates the normal for the face as a whole but
+by setting (perVertex = true) it will return the same normal value for
+each of the three vertices making up a face.</p>
+<p>Returns: a vector containing the calculated normals of each face in the mesh.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getIndex" data-lookup="getIndex" data-item-type="method">
+  	 
+	<h1><a name="show_getIndex">getIndex(...)</a></h1>
+	<h2>
+  <p>ofIndexType ofMesh::getIndex(ofIndexType i)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the index from the index vector. Each index represents the index of the vertex in the vertices vector. This determines the way that the vertices are connected into the polgoynon type set in the primitiveMode.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getIndexPointer" data-lookup="getIndexPointer" data-item-type="method">
+  	 
+	<h1><a name="show_getIndexPointer">getIndexPointer()</a></h1>
+	<h2>
+  <p>ofIndexType * ofMesh::getIndexPointer()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns a pointer to the indices that the mesh contains.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getIndexPointer" data-lookup="getIndexPointer" data-item-type="method">
+  	 
+	<h1><a name="show_getIndexPointer">getIndexPointer()</a></h1>
+	<h2>
+  <p>const ofIndexType * ofMesh::getIndexPointer()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns a pointer to the indices that the mesh contains.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getIndices" data-lookup="getIndices" data-item-type="method">
+  	 
+	<h1><a name="show_getIndices">getIndices()</a></h1>
+	<h2>
+  <p>vector&lt; ofIndexType &gt; &amp; ofMesh::getIndices()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the vector that contains all of the indices of the mesh, if it has any. Use this if you plan to change the indices as part of this call as it will force a reset of the cache.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Use this if you plan to change the indices as part of this call as it
+will force a reset of the cache.</p>
+<p>Returns: the vector that contains all of the indices of the mesh, if it has any.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getIndices" data-lookup="getIndices" data-item-type="method">
+  	 
+	<h1><a name="show_getIndices">getIndices()</a></h1>
+	<h2>
+  <p>const vector&lt; ofIndexType &gt; &amp; ofMesh::getIndices()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the vector that contains all of the indices of the mesh, if it has any. (read only)</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getMeshForIndices" data-lookup="getMeshForIndices" data-item-type="method">
+  	 
+	<h1><a name="show_getMeshForIndices">getMeshForIndices(...)</a></h1>
+	<h2>
+  <p>ofMesh ofMesh::getMeshForIndices(ofIndexType startIndex, ofIndexType endIndex)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns a mesh made up of a range of indices from startIndex to the endIndex. The new mesh includes the mesh mode, colors, textures, and normals of the original mesh (assuming any were added).</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>The new mesh includes the mesh mode, colors, textures, and normals of the original mesh (assuming any were added).</p>
+<p>Returns: a mesh made up of a range of indices from startIndex to the endIndex.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getMeshForIndices" data-lookup="getMeshForIndices" data-item-type="method">
+  	 
+	<h1><a name="show_getMeshForIndices">getMeshForIndices(...)</a></h1>
+	<h2>
+  <p>ofMesh ofMesh::getMeshForIndices(ofIndexType startIndex, ofIndexType endIndex, ofIndexType startVertIndex, ofIndexType endVertIndex)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getMode" data-lookup="getMode" data-item-type="method">
+  	 
+	<h1><a name="show_getMode">getMode()</a></h1>
+	<h2>
+  <p>ofPrimitiveMode ofMesh::getMode()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the primitive mode that the mesh is using.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getNormal" data-lookup="getNormal" data-item-type="method">
+  	 
+	<h1><a name="show_getNormal">getNormal(...)</a></h1>
+	<h2>
+  <p>ofVec3f ofMesh::getNormal(ofIndexType i)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the normal at the index in the normals vector.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getNormals" data-lookup="getNormals" data-item-type="method">
+  	 
+	<h1><a name="show_getNormals">getNormals()</a></h1>
+	<h2>
+  <p>vector&lt; ofVec3f &gt; &amp; ofMesh::getNormals()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the vector that contains all of the normals of the mesh, if it has any. Use this if you plan to change the normals as part of this call as it will force a reset of the cache.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Use this if you plan to change the normals as part of this call as it
+will force a reset of the cache.</p>
+<p>Returns: the vector that contains all of the normals of the mesh,
+if it has any.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getNormals" data-lookup="getNormals" data-item-type="method">
+  	 
+	<h1><a name="show_getNormals">getNormals()</a></h1>
+	<h2>
+  <p>const vector&lt; ofVec3f &gt; &amp; ofMesh::getNormals()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the vector that contains all of the normals of the mesh, if it has any. (read only)</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getNormalsPointer" data-lookup="getNormalsPointer" data-item-type="method">
+  	 
+	<h1><a name="show_getNormalsPointer">getNormalsPointer()</a></h1>
+	<h2>
+  <p>ofVec3f * ofMesh::getNormalsPointer()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns a pointer to the normals that the mesh contains.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getNormalsPointer" data-lookup="getNormalsPointer" data-item-type="method">
+  	 
+	<h1><a name="show_getNormalsPointer">getNormalsPointer()</a></h1>
+	<h2>
+  <p>const ofVec3f * ofMesh::getNormalsPointer()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns a pointer to the normals that the mesh contains.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getNumColors" data-lookup="getNumColors" data-item-type="method">
+  	 
+	<h1><a name="show_getNumColors">getNumColors()</a></h1>
+	<h2>
+  <p>size_t ofMesh::getNumColors()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the size of the colors vector for the mesh. This will tell you how many colors are contained in the mesh.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getNumIndices" data-lookup="getNumIndices" data-item-type="method">
+  	 
+	<h1><a name="show_getNumIndices">getNumIndices()</a></h1>
+	<h2>
+  <p>size_t ofMesh::getNumIndices()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the size of the indices vector for the mesh. This will tell you how many indices are contained in the mesh.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>This will tell you how many indices are contained in the mesh.</p>
+<p>Returns: the size of the indices vector for the mesh.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getNumNormals" data-lookup="getNumNormals" data-item-type="method">
+  	 
+	<h1><a name="show_getNumNormals">getNumNormals()</a></h1>
+	<h2>
+  <p>size_t ofMesh::getNumNormals()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the size of the normals vector for the mesh. This will tell you how many normals are contained in the mesh.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>This will tell you how many normals are contained in the mesh.</p>
+<p>Returns: the size of the normals vector for the mesh.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getNumTexCoords" data-lookup="getNumTexCoords" data-item-type="method">
+  	 
+	<h1><a name="show_getNumTexCoords">getNumTexCoords()</a></h1>
+	<h2>
+  <p>size_t ofMesh::getNumTexCoords()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the size of the texture coordinates vector for the mesh. This will tell you how many texture coordinates are contained in the mesh.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>This will tell you how many texture coordinates are contained in the mesh.</p>
+<p>Returns: the size of the texture coordinates vector for the mesh.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getNumVertices" data-lookup="getNumVertices" data-item-type="method">
+  	 
+	<h1><a name="show_getNumVertices">getNumVertices()</a></h1>
+	<h2>
+  <p>size_t ofMesh::getNumVertices()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the size of the vertices vector for the mesh. This will tell you how many vertices are contained in the mesh.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getTexCoord" data-lookup="getTexCoord" data-item-type="method">
+  	 
+	<h1><a name="show_getTexCoord">getTexCoord(...)</a></h1>
+	<h2>
+  <p>ofVec2f ofMesh::getTexCoord(ofIndexType i)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the Vec2f representing the texture coordinate. Because OF uses ARB textures these are in pixels rather than 0-1 normalized coordinates.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getTexCoords" data-lookup="getTexCoords" data-item-type="method">
+  	 
+	<h1><a name="show_getTexCoords">getTexCoords()</a></h1>
+	<h2>
+  <p>vector&lt; ofVec2f &gt; &amp; ofMesh::getTexCoords()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns a vector of Vec2f representing the texture coordinates for the whole mesh. Because OF uses ARB textures these are in pixels rather than 0-1 normalized coordinates. Use this if you plan to change the texture coordinates as part of this call as it will force a reset of the cache.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getTexCoords" data-lookup="getTexCoords" data-item-type="method">
+  	 
+	<h1><a name="show_getTexCoords">getTexCoords()</a></h1>
+	<h2>
+  <p>const vector&lt; ofVec2f &gt; &amp; ofMesh::getTexCoords()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns a vector of Vec2f representing the texture coordinates for the whole mesh. Because OF uses ARB textures these are in pixels rather than 0-1 normalized coordinates. (read only)</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Because OF uses ARB textures these are in pixels rather than 0-1 normalized coordinates.</p>
+<p>Returns: a vector of Vec2f representing the texture coordinates for the whole mesh. (read only)</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getTexCoordsPointer" data-lookup="getTexCoordsPointer" data-item-type="method">
+  	 
+	<h1><a name="show_getTexCoordsPointer">getTexCoordsPointer()</a></h1>
+	<h2>
+  <p>ofVec2f * ofMesh::getTexCoordsPointer()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns a pointer to the texture coords that the mesh contains.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getTexCoordsPointer" data-lookup="getTexCoordsPointer" data-item-type="method">
+  	 
+	<h1><a name="show_getTexCoordsPointer">getTexCoordsPointer()</a></h1>
+	<h2>
+  <p>const ofVec2f * ofMesh::getTexCoordsPointer()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Get a pointer to the ofVec2f texture coordinates that the mesh contains.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getUniqueFaces" data-lookup="getUniqueFaces" data-item-type="method">
+  	 
+	<h1><a name="show_getUniqueFaces">getUniqueFaces()</a></h1>
+	<h2>
+  <p>const vector&lt; ofMeshFace &gt; &amp; ofMesh::getUniqueFaces()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the mesh as a vector of unique ofMeshFaces.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Returns: the mesh as a vector of unique ofMeshFaces
+a list of triangles that do not share vertices or indices</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getVertex" data-lookup="getVertex" data-item-type="method">
+  	 
+	<h1><a name="show_getVertex">getVertex(...)</a></h1>
+	<h2>
+  <p>ofVec3f ofMesh::getVertex(ofIndexType i)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the vertex at the index.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getVertices" data-lookup="getVertices" data-item-type="method">
+  	 
+	<h1><a name="show_getVertices">getVertices()</a></h1>
+	<h2>
+  <p>vector&lt; ofVec3f &gt; &amp; ofMesh::getVertices()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the vector that contains all of the vertices of the mesh.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getVertices" data-lookup="getVertices" data-item-type="method">
+  	 
+	<h1><a name="show_getVertices">getVertices()</a></h1>
+	<h2>
+  <p>const vector&lt; ofVec3f &gt; &amp; ofMesh::getVertices()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the vector that contains all of the vertices of the mesh.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getVerticesPointer" data-lookup="getVerticesPointer" data-item-type="method">
+  	 
+	<h1><a name="show_getVerticesPointer">getVerticesPointer()</a></h1>
+	<h2>
+  <p>ofVec3f * ofMesh::getVerticesPointer()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns a pointer to the vertices that the mesh contains.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getVerticesPointer" data-lookup="getVerticesPointer" data-item-type="method">
+  	 
+	<h1><a name="show_getVerticesPointer">getVerticesPointer()</a></h1>
+	<h2>
+  <p>const ofVec3f * ofMesh::getVerticesPointer()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns a pointer to the vertices that the mesh contains.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail hasColors" data-lookup="hasColors" data-item-type="method">
+  	 
+	<h1><a name="show_hasColors">hasColors()</a></h1>
+	<h2>
+  <p>bool ofMesh::hasColors()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Whether the mesh has any colors.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail hasIndices" data-lookup="hasIndices" data-item-type="method">
+  	 
+	<h1><a name="show_hasIndices">hasIndices()</a></h1>
+	<h2>
+  <p>bool ofMesh::hasIndices()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Whether the mesh has any indices assigned to it.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail hasNormals" data-lookup="hasNormals" data-item-type="method">
+  	 
+	<h1><a name="show_hasNormals">hasNormals()</a></h1>
+	<h2>
+  <p>bool ofMesh::hasNormals()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Whether the mesh has any normals.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail hasTexCoords" data-lookup="hasTexCoords" data-item-type="method">
+  	 
+	<h1><a name="show_hasTexCoords">hasTexCoords()</a></h1>
+	<h2>
+  <p>bool ofMesh::hasTexCoords()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Whether the mesh has any textures assigned to it.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail hasVertices" data-lookup="hasVertices" data-item-type="method">
+  	 
+	<h1><a name="show_hasVertices">hasVertices()</a></h1>
+	<h2>
+  <p>bool ofMesh::hasVertices()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Whether the mesh has any vertices.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail haveColorsChanged" data-lookup="haveColorsChanged" data-item-type="method">
+  	 
+	<h1><a name="show_haveColorsChanged">haveColorsChanged()</a></h1>
+	<h2>
+  <p>bool ofMesh::haveColorsChanged()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>If the colors of the mesh have changed, been added or removed.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail haveIndicesChanged" data-lookup="haveIndicesChanged" data-item-type="method">
+  	 
+	<h1><a name="show_haveIndicesChanged">haveIndicesChanged()</a></h1>
+	<h2>
+  <p>bool ofMesh::haveIndicesChanged()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>If the indices of the mesh have changed, been added or removed.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail haveNormalsChanged" data-lookup="haveNormalsChanged" data-item-type="method">
+  	 
+	<h1><a name="show_haveNormalsChanged">haveNormalsChanged()</a></h1>
+	<h2>
+  <p>bool ofMesh::haveNormalsChanged()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>If the normals of the mesh have changed, been added or removed.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail haveTexCoordsChanged" data-lookup="haveTexCoordsChanged" data-item-type="method">
+  	 
+	<h1><a name="show_haveTexCoordsChanged">haveTexCoordsChanged()</a></h1>
+	<h2>
+  <p>bool ofMesh::haveTexCoordsChanged()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>If the texture coords of the mesh have changed, been added or removed.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail haveVertsChanged" data-lookup="haveVertsChanged" data-item-type="method">
+  	 
+	<h1><a name="show_haveVertsChanged">haveVertsChanged()</a></h1>
+	<h2>
+  <p>bool ofMesh::haveVertsChanged()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>If the vertices of the mesh have changed, been added or removed.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail icosahedron" data-lookup="icosahedron" data-item-type="method">
+  	 
+	<h1><a name="show_icosahedron">icosahedron(...)</a></h1>
+	<h2>
+  <p>ofMesh ofMesh::icosahedron(float radius)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail icosphere" data-lookup="icosphere" data-item-type="method">
+  	 
+	<h1><a name="show_icosphere">icosphere(...)</a></h1>
+	<h2>
+  <p>ofMesh ofMesh::icosphere(float radius, size_t iterations)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail load" data-lookup="load" data-item-type="method">
+  	 
+	<h1><a name="show_load">load(...)</a></h1>
+	<h2>
+  <p>void ofMesh::load(string path)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Loads a mesh from a file located at the provided path into the mesh.
+This will replace any existing data within the mesh.</p>
+<p>It expects that the file will be in the <a href="http://en.wikipedia.org/wiki/PLY_(file_format)">PLY Format</a>.
+It will only load meshes saved in the PLY ASCII format; the binary format is not supported.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail mergeDuplicateVertices" data-lookup="mergeDuplicateVertices" data-item-type="method">
+  	 
+	<h1><a name="show_mergeDuplicateVertices">mergeDuplicateVertices()</a></h1>
+	<h2>
+  <p>void ofMesh::mergeDuplicateVertices()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail plane" data-lookup="plane" data-item-type="method">
+  	 
+	<h1><a name="show_plane">plane(...)</a></h1>
+	<h2>
+  <p>ofMesh ofMesh::plane(float width, float height, int columns=2, int rows=2, ofPrimitiveMode mode=OF_PRIMITIVE_TRIANGLE_STRIP)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>}
+\name Primitive constructor helper methods
+{</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail removeColor" data-lookup="removeColor" data-item-type="method">
+  	 
+	<h1><a name="show_removeColor">removeColor(...)</a></h1>
+	<h2>
+  <p>void ofMesh::removeColor(ofIndexType index)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Remove a color at the index in the colors vector.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail removeIndex" data-lookup="removeIndex" data-item-type="method">
+  	 
+	<h1><a name="show_removeIndex">removeIndex(...)</a></h1>
+	<h2>
+  <p>void ofMesh::removeIndex(ofIndexType index)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Removes an index.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail removeNormal" data-lookup="removeNormal" data-item-type="method">
+  	 
+	<h1><a name="show_removeNormal">removeNormal(...)</a></h1>
+	<h2>
+  <p>void ofMesh::removeNormal(ofIndexType index)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Remove a normal.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail removeTexCoord" data-lookup="removeTexCoord" data-item-type="method">
+  	 
+	<h1><a name="show_removeTexCoord">removeTexCoord(...)</a></h1>
+	<h2>
+  <p>void ofMesh::removeTexCoord(ofIndexType index)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Remove a Vec2f representing the texture coordinate.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail removeVertex" data-lookup="removeVertex" data-item-type="method">
+  	 
+	<h1><a name="show_removeVertex">removeVertex(...)</a></h1>
+	<h2>
+  <p>void ofMesh::removeVertex(ofIndexType index)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Removes the vertex at the index in the vector.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail save" data-lookup="save" data-item-type="method">
+  	 
+	<h1><a name="show_save">save(...)</a></h1>
+	<h2>
+  <p>void ofMesh::save(string path, bool useBinary=false)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Saves the mesh at the passed path in the <a href="http://en.wikipedia.org/wiki/PLY_(file_format)">PLY Format</a>.</p>
+<p>There are two format options for PLY: a binary format and an ASCII format.
+By default, it will save using the ASCII format.
+Passing <code>true</code> into the <code>useBinary</code> parameter will save it in the binary format.</p>
+<p>If you're planning on reloading the mesh into ofMesh, ofMesh currently only supports loading the ASCII format.</p>
+<p>For more information, see the <a href="http://paulbourke.net/dataformats/ply/">PLY format specification</a>.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setColor" data-lookup="setColor" data-item-type="method">
+  	 
+	<h1><a name="show_setColor">setColor(...)</a></h1>
+	<h2>
+  <p>void ofMesh::setColor(ofIndexType index, const ofFloatColor &amp;c)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Set the color at the index in the colors vector.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setColorForIndices" data-lookup="setColorForIndices" data-item-type="method">
+  	 
+	<h1><a name="show_setColorForIndices">setColorForIndices(...)</a></h1>
+	<h2>
+  <p>void ofMesh::setColorForIndices(ofIndexType startIndex, ofIndexType endIndex, ofColor color)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setFromTriangles" data-lookup="setFromTriangles" data-item-type="method">
+  	 
+	<h1><a name="show_setFromTriangles">setFromTriangles(...)</a></h1>
+	<h2>
+  <p>void ofMesh::setFromTriangles(const vector&lt; ofMeshFace &gt; &amp;tris, bool bUseFaceNormal=false)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setIndex" data-lookup="setIndex" data-item-type="method">
+  	 
+	<h1><a name="show_setIndex">setIndex(...)</a></h1>
+	<h2>
+  <p>void ofMesh::setIndex(ofIndexType index, ofIndexType val)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This sets the index at i.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setMode" data-lookup="setMode" data-item-type="method">
+  	 
+	<h1><a name="show_setMode">setMode(...)</a></h1>
+	<h2>
+  <p>void ofMesh::setMode(ofPrimitiveMode mode)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Allows you to set the ofPrimitiveMode. The available modes are OF_PRIMITIVE_TRIANGLES, OF_PRIMITIVE_TRIANGLE_STRIP, OF_PRIMITIVE_TRIANGLE_FAN, OF_PRIMITIVE_LINES, OF_PRIMITIVE_LINE_STRIP, OF_PRIMITIVE_LINE_LOOP, OF_PRIMITIVE_POINTS</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setNormal" data-lookup="setNormal" data-item-type="method">
+  	 
+	<h1><a name="show_setNormal">setNormal(...)</a></h1>
+	<h2>
+  <p>void ofMesh::setNormal(ofIndexType index, const ofVec3f &amp;n)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>\todo Documentation.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setTexCoord" data-lookup="setTexCoord" data-item-type="method">
+  	 
+	<h1><a name="show_setTexCoord">setTexCoord(...)</a></h1>
+	<h2>
+  <p>void ofMesh::setTexCoord(ofIndexType index, const ofVec2f &amp;t)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setVertex" data-lookup="setVertex" data-item-type="method">
+  	 
+	<h1><a name="show_setVertex">setVertex(...)</a></h1>
+	<h2>
+  <p>void ofMesh::setVertex(ofIndexType index, const ofVec3f &amp;v)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setupIndicesAuto" data-lookup="setupIndicesAuto" data-item-type="method">
+  	 
+	<h1><a name="show_setupIndicesAuto">setupIndicesAuto()</a></h1>
+	<h2>
+  <p>void ofMesh::setupIndicesAuto()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Allow you to set up the indices automatically when you add a vertex.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail smoothNormals" data-lookup="smoothNormals" data-item-type="method">
+  	 
+	<h1><a name="show_smoothNormals">smoothNormals(...)</a></h1>
+	<h2>
+  <p>void ofMesh::smoothNormals(float angle)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail sphere" data-lookup="sphere" data-item-type="method">
+  	 
+	<h1><a name="show_sphere">sphere(...)</a></h1>
+	<h2>
+  <p>ofMesh ofMesh::sphere(float radius, int res=12, ofPrimitiveMode mode=OF_PRIMITIVE_TRIANGLE_STRIP)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail usingColors" data-lookup="usingColors" data-item-type="method">
+  	 
+	<h1><a name="show_usingColors">usingColors()</a></h1>
+	<h2>
+  <p>bool ofMesh::usingColors()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail usingIndices" data-lookup="usingIndices" data-item-type="method">
+  	 
+	<h1><a name="show_usingIndices">usingIndices()</a></h1>
+	<h2>
+  <p>bool ofMesh::usingIndices()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail usingNormals" data-lookup="usingNormals" data-item-type="method">
+  	 
+	<h1><a name="show_usingNormals">usingNormals()</a></h1>
+	<h2>
+  <p>bool ofMesh::usingNormals()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail usingTextures" data-lookup="usingTextures" data-item-type="method">
+  	 
+	<h1><a name="show_usingTextures">usingTextures()</a></h1>
+	<h2>
+  <p>bool ofMesh::usingTextures()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+
+            <!-- vars detail -->
+
+            <!-- functions detail -->
+            <hr/>
+                
+            <!--diqus comments for class/functions module description-->
+            <div id="comments_header">
+            <h2>comments</h2>
+            <p>You can add comments with usage examples or other information for each class, method or variable, for adding documentation to an empty section or reporting errors is better to send a fix or open an issue through <a href="https://github.com/openframeworks/ofSite">github</a>.</p>
+            <p>When posting code enclose it in:</p>
+            <pre><code class="html">&lt;pre&gt;&lt;code class=&quot;cpp&quot;&gt;&nbsp;&lt;/code&gt;&lt;/pre&gt;</code></pre>
+            <br/>
+            </div>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+
+            // DISQUS
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+
+            var disqus_shortname = 'openframeworks'; // required: replace example with your forum shortname
+            //var disqus_developer = 1;
+
+            location_elements = window.location.pathname.split("/");
+            module_name = location_elements[location_elements.length-1].split(".")[0];
+            section_name = location.hash.split("_")[1];
+            console.log(module_name + " " + section_name);
+            if(section_name!=undefined && section_name!=''){
+            var disqus_identifier = window.location.pathname + "#!show_" + section_name;  
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "#!show_" + section_name;
+            var discus_title = document.title + " - " + section_name;
+            }else{
+            var disqus_identifier = window.location.pathname;
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            var discus_title = document.title;
+            }
+
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */   
+            (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		
+        </div><!-- End Submenu right -->
+      </div><!-- End page wide -->
+      </div><!-- End body wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:33:45 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+4d738d6979d8e7992359cde47632192d1fbef472
+">
+
+4d738d6979d8e7992359cde47632192d1fbef472
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+

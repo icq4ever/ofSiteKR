@@ -1,0 +1,1441 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr - ofAppGLFWWindow</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+    <script src="http://icq4ever.iptime.org//js/jquery.columnizer.min.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation.js"></script>
+  </head>
+  <body>
+    <div id="content">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">
+          <div class="page-wide">
+          
+              <div id="docstitle"><h1>ofAppGLFWWindow</h1></div>
+              <div id="editdocs">
+                    <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/application/ofAppGLFWWindow.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
+              </div>
+              
+          </div>
+          
+          
+        <div class="page-wide">
+		    <div class="submenucol-left">
+		     <!-- list of methods -->
+		     <p class="top_list_header">class methods</p>
+             <ul class="functionslist">
+                 
+                         <li class="noDoc">
+                         <a href="#show_ofAppGLFWWindow" class="ofAppGLFWWindow" data-lookup="ofAppGLFWWindow">ofAppGLFWWindow()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_~ofAppGLFWWindow" class="~ofAppGLFWWindow" data-lookup="~ofAppGLFWWindow">~ofAppGLFWWindow()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_allowsMultiWindow" class="allowsMultiWindow" data-lookup="allowsMultiWindow">allowsMultiWindow()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_close" class="close" data-lookup="close">close()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_disableSetupScreen" class="disableSetupScreen" data-lookup="disableSetupScreen">disableSetupScreen()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_doesLoop" class="doesLoop" data-lookup="doesLoop">doesLoop()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_draw" class="draw" data-lookup="draw">draw()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_enableSetupScreen" class="enableSetupScreen" data-lookup="enableSetupScreen">enableSetupScreen()</a></li>
+                     
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_events" class="events" data-lookup="events">events()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_getClipboardString" class="getClipboardString" data-lookup="getClipboardString">getClipboardString()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_getGLFWWindow" class="getGLFWWindow" data-lookup="getGLFWWindow">getGLFWWindow()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getGLXContext" class="getGLXContext" data-lookup="getGLXContext">getGLXContext()</a></li>
+                     
+                         <li>
+                         <a href="#show_getHeight" class="getHeight" data-lookup="getHeight">getHeight()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getOrientation" class="getOrientation" data-lookup="getOrientation">getOrientation()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getPixelScreenCoordScale" class="getPixelScreenCoordScale" data-lookup="getPixelScreenCoordScale">getPixelScreenCoordScale()</a></li>
+                     
+                         <li>
+                         <a href="#show_getScreenSize" class="getScreenSize" data-lookup="getScreenSize">getScreenSize()</a></li>
+                     
+                         <li>
+                         <a href="#show_getWidth" class="getWidth" data-lookup="getWidth">getWidth()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getWindowContext" class="getWindowContext" data-lookup="getWindowContext">getWindowContext()</a></li>
+                     
+                         <li>
+                         <a href="#show_getWindowMode" class="getWindowMode" data-lookup="getWindowMode">getWindowMode()</a></li>
+                     
+                         <li>
+                         <a href="#show_getWindowPosition" class="getWindowPosition" data-lookup="getWindowPosition">getWindowPosition()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getWindowShouldClose" class="getWindowShouldClose" data-lookup="getWindowShouldClose">getWindowShouldClose()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getWindowSize" class="getWindowSize" data-lookup="getWindowSize">getWindowSize()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getX11Display" class="getX11Display" data-lookup="getX11Display">getX11Display()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getX11Window" class="getX11Window" data-lookup="getX11Window">getX11Window()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_hideCursor" class="hideCursor" data-lookup="hideCursor">hideCursor()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_iconify" class="iconify" data-lookup="iconify">iconify()</a></li>
+                     
+                         <li>
+                         <a href="#show_isWindowActive" class="isWindowActive" data-lookup="isWindowActive">isWindowActive()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_isWindowIconified" class="isWindowIconified" data-lookup="isWindowIconified">isWindowIconified()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_isWindowResizeable" class="isWindowResizeable" data-lookup="isWindowResizeable">isWindowResizeable()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_listMonitors" class="listMonitors" data-lookup="listMonitors">listMonitors()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_listVideoModes" class="listVideoModes" data-lookup="listVideoModes">listVideoModes()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_loop" class="loop" data-lookup="loop">loop()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_makeCurrent" class="makeCurrent" data-lookup="makeCurrent">makeCurrent()</a></li>
+                     
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_needsPolling" class="needsPolling" data-lookup="needsPolling">needsPolling()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_operator=" class="operator=" data-lookup="operator=">operator=()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_pollEvents" class="pollEvents" data-lookup="pollEvents">pollEvents()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_renderer" class="renderer" data-lookup="renderer">renderer()</a></li>
+                     
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_setClipboardString" class="setClipboardString" data-lookup="setClipboardString">setClipboardString()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_setFullscreen" class="setFullscreen" data-lookup="setFullscreen">setFullscreen()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setOrientation" class="setOrientation" data-lookup="setOrientation">setOrientation()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setVerticalSync" class="setVerticalSync" data-lookup="setVerticalSync">setVerticalSync()</a></li>
+                     
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_setWindowPosition" class="setWindowPosition" data-lookup="setWindowPosition">setWindowPosition()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setWindowShape" class="setWindowShape" data-lookup="setWindowShape">setWindowShape()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setWindowShouldClose" class="setWindowShouldClose" data-lookup="setWindowShouldClose">setWindowShouldClose()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setWindowTitle" class="setWindowTitle" data-lookup="setWindowTitle">setWindowTitle()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setup" class="setup" data-lookup="setup">setup()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_showCursor" class="showCursor" data-lookup="showCursor">showCursor()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_toggleFullscreen" class="toggleFullscreen" data-lookup="toggleFullscreen">toggleFullscreen()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_update" class="update" data-lookup="update">update()</a></li>
+                     
+             </ul>
+            
+             
+             
+             <!-- list of variables -->              
+            
+             
+            
+             <!-- list of functions -->              
+		    </div>
+	    <div class="submenucol-right">
+            <div class="documentation_detail class_documentation">
+                    <h2><strong><em>Extends</em></strong></h2>
+                    <p>This class extends others, you can call their methods on an instance of ofAppGLFWWindow too:</p>
+                    <ul>
+                        <li><a href="../application/ofAppBaseGLWindow.html" class="docs_class" >ofAppBaseGLWindow</a> </li>
+                    </ul>
+              
+  <p>This is the base class for the <a href="https://github.com/glfw">GLFW</a> renderer that you can optionally use with openFrameworks. We've moved away from GLUT and towards GLFW for our windowing system. You probably won't deal with this a great deal (hopefully).</p>
+
+
+              
+              
+  
+
+           </div>
+                  
+            <!-- methods detail -->
+              <!--h2><a name="methods"></a>ofAppGLFWWindow methods</h2-->
+                        
+<div class="documentation_detail ofAppGLFWWindow" data-lookup="ofAppGLFWWindow" data-item-type="method">
+  	 
+	<h1><a name="show_ofAppGLFWWindow">ofAppGLFWWindow()</a></h1>
+	<h2>
+  <p>ofAppGLFWWindow::ofAppGLFWWindow()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofAppGLFWWindow" data-lookup="ofAppGLFWWindow" data-item-type="method">
+  	 
+	<h1><a name="show_ofAppGLFWWindow">ofAppGLFWWindow(...)</a></h1>
+	<h2>
+  <p>ofAppGLFWWindow::ofAppGLFWWindow(const ofAppGLFWWindow &amp;w)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ~ofAppGLFWWindow" data-lookup="~ofAppGLFWWindow" data-item-type="method">
+  	 
+	<h1><a name="show_~ofAppGLFWWindow">~ofAppGLFWWindow()</a></h1>
+	<h2>
+  <p>ofAppGLFWWindow::~ofAppGLFWWindow()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail allowsMultiWindow" data-lookup="allowsMultiWindow" data-item-type="method">
+  	 
+	<h1><a name="show_allowsMultiWindow">allowsMultiWindow()</a></h1>
+	<h2>
+  <p>bool ofAppGLFWWindow::allowsMultiWindow()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail close" data-lookup="close" data-item-type="method">
+  	 
+	<h1><a name="show_close">close()</a></h1>
+	<h2>
+  <p>void ofAppGLFWWindow::close()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail disableSetupScreen" data-lookup="disableSetupScreen" data-item-type="method">
+  	 
+	<h1><a name="show_disableSetupScreen">disableSetupScreen()</a></h1>
+	<h2>
+  <p>void ofAppGLFWWindow::disableSetupScreen()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail doesLoop" data-lookup="doesLoop" data-item-type="method">
+  	 
+	<h1><a name="show_doesLoop">doesLoop()</a></h1>
+	<h2>
+  <p>bool ofAppGLFWWindow::doesLoop()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw()</a></h1>
+	<h2>
+  <p>void ofAppGLFWWindow::draw()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail enableSetupScreen" data-lookup="enableSetupScreen" data-item-type="method">
+  	 
+	<h1><a name="show_enableSetupScreen">enableSetupScreen()</a></h1>
+	<h2>
+  <p>void ofAppGLFWWindow::enableSetupScreen()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail events" data-lookup="events" data-item-type="method">
+  	 
+	<h1><a name="show_events">events()</a></h1>
+	<h2>
+  <p>ofCoreEvents &amp; ofAppGLFWWindow::events()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getClipboardString" data-lookup="getClipboardString" data-item-type="method">
+  	 
+	<h1><a name="show_getClipboardString">getClipboardString()</a></h1>
+	<h2>
+  <p>string ofAppGLFWWindow::getClipboardString()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getGLFWWindow" data-lookup="getGLFWWindow" data-item-type="method">
+  	 
+	<h1><a name="show_getGLFWWindow">getGLFWWindow()</a></h1>
+	<h2>
+  <p>GLFWwindow * ofAppGLFWWindow::getGLFWWindow()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getGLXContext" data-lookup="getGLXContext" data-item-type="method">
+  	 
+	<h1><a name="show_getGLXContext">getGLXContext()</a></h1>
+	<h2>
+  <p>GLXContext ofAppGLFWWindow::getGLXContext()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getHeight" data-lookup="getHeight" data-item-type="method">
+  	 
+	<h1><a name="show_getHeight">getHeight()</a></h1>
+	<h2>
+  <p>int ofAppGLFWWindow::getHeight()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Gets the height of the current window and is mirrored in the ofGetScreenHeight() method.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getOrientation" data-lookup="getOrientation" data-item-type="method">
+  	 
+	<h1><a name="show_getOrientation">getOrientation()</a></h1>
+	<h2>
+  <p>ofOrientation ofAppGLFWWindow::getOrientation()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getPixelScreenCoordScale" data-lookup="getPixelScreenCoordScale" data-item-type="method">
+  	 
+	<h1><a name="show_getPixelScreenCoordScale">getPixelScreenCoordScale()</a></h1>
+	<h2>
+  <p>int ofAppGLFWWindow::getPixelScreenCoordScale()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getScreenSize" data-lookup="getScreenSize" data-item-type="method">
+  	 
+	<h1><a name="show_getScreenSize">getScreenSize()</a></h1>
+	<h2>
+  <p>ofVec3f ofAppGLFWWindow::getScreenSize()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Gets the height of the current window and is mirrored in the ofGetWindowSize() method.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getWidth" data-lookup="getWidth" data-item-type="method">
+  	 
+	<h1><a name="show_getWidth">getWidth()</a></h1>
+	<h2>
+  <p>int ofAppGLFWWindow::getWidth()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Gets the height of the current window and is mirrored in the ofGetScreenWidth() method.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getWindowContext" data-lookup="getWindowContext" data-item-type="method">
+  	 
+	<h1><a name="show_getWindowContext">getWindowContext()</a></h1>
+	<h2>
+  <p>void * ofAppGLFWWindow::getWindowContext()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getWindowMode" data-lookup="getWindowMode" data-item-type="method">
+  	 
+	<h1><a name="show_getWindowMode">getWindowMode()</a></h1>
+	<h2>
+  <p>ofWindowMode ofAppGLFWWindow::getWindowMode()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns one of the following: OF_FULLSCREEN or OF_WINDOW.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getWindowPosition" data-lookup="getWindowPosition" data-item-type="method">
+  	 
+	<h1><a name="show_getWindowPosition">getWindowPosition()</a></h1>
+	<h2>
+  <p>ofVec3f ofAppGLFWWindow::getWindowPosition()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This returns the location of the window relative to the deivce that it's being displayed on.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getWindowShouldClose" data-lookup="getWindowShouldClose" data-item-type="method">
+  	 
+	<h1><a name="show_getWindowShouldClose">getWindowShouldClose()</a></h1>
+	<h2>
+  <p>bool ofAppGLFWWindow::getWindowShouldClose()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getWindowSize" data-lookup="getWindowSize" data-item-type="method">
+  	 
+	<h1><a name="show_getWindowSize">getWindowSize()</a></h1>
+	<h2>
+  <p>ofVec3f ofAppGLFWWindow::getWindowSize()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getX11Display" data-lookup="getX11Display" data-item-type="method">
+  	 
+	<h1><a name="show_getX11Display">getX11Display()</a></h1>
+	<h2>
+  <p>Display * ofAppGLFWWindow::getX11Display()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getX11Window" data-lookup="getX11Window" data-item-type="method">
+  	 
+	<h1><a name="show_getX11Window">getX11Window()</a></h1>
+	<h2>
+  <p>Window ofAppGLFWWindow::getX11Window()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail hideCursor" data-lookup="hideCursor" data-item-type="method">
+  	 
+	<h1><a name="show_hideCursor">hideCursor()</a></h1>
+	<h2>
+  <p>void ofAppGLFWWindow::hideCursor()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail iconify" data-lookup="iconify" data-item-type="method">
+  	 
+	<h1><a name="show_iconify">iconify(...)</a></h1>
+	<h2>
+  <p>void ofAppGLFWWindow::iconify(bool bIconify)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail isWindowActive" data-lookup="isWindowActive" data-item-type="method">
+  	 
+	<h1><a name="show_isWindowActive">isWindowActive()</a></h1>
+	<h2>
+  <p>bool ofAppGLFWWindow::isWindowActive()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Hardcoded to return true right now.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail isWindowIconified" data-lookup="isWindowIconified" data-item-type="method">
+  	 
+	<h1><a name="show_isWindowIconified">isWindowIconified()</a></h1>
+	<h2>
+  <p>bool ofAppGLFWWindow::isWindowIconified()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail isWindowResizeable" data-lookup="isWindowResizeable" data-item-type="method">
+  	 
+	<h1><a name="show_isWindowResizeable">isWindowResizeable()</a></h1>
+	<h2>
+  <p>bool ofAppGLFWWindow::isWindowResizeable()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail listMonitors" data-lookup="listMonitors" data-item-type="method">
+  	 
+	<h1><a name="show_listMonitors">listMonitors()</a></h1>
+	<h2>
+  <p>void ofAppGLFWWindow::listMonitors()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail listVideoModes" data-lookup="listVideoModes" data-item-type="method">
+  	 
+	<h1><a name="show_listVideoModes">listVideoModes()</a></h1>
+	<h2>
+  <p>void ofAppGLFWWindow::listVideoModes()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail loop" data-lookup="loop" data-item-type="method">
+  	 
+	<h1><a name="show_loop">loop()</a></h1>
+	<h2>
+  <p>void ofAppGLFWWindow::loop()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail makeCurrent" data-lookup="makeCurrent" data-item-type="method">
+  	 
+	<h1><a name="show_makeCurrent">makeCurrent()</a></h1>
+	<h2>
+  <p>void ofAppGLFWWindow::makeCurrent()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail needsPolling" data-lookup="needsPolling" data-item-type="method">
+  	 
+	<h1><a name="show_needsPolling">needsPolling()</a></h1>
+	<h2>
+  <p>bool ofAppGLFWWindow::needsPolling()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator=" data-lookup="operator=" data-item-type="method">
+  	 
+	<h1><a name="show_operator=">operator=(...)</a></h1>
+	<h2>
+  <p>ofAppGLFWWindow &amp; ofAppGLFWWindow::operator=(const ofAppGLFWWindow &amp;w)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail pollEvents" data-lookup="pollEvents" data-item-type="method">
+  	 
+	<h1><a name="show_pollEvents">pollEvents()</a></h1>
+	<h2>
+  <p>void ofAppGLFWWindow::pollEvents()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail renderer" data-lookup="renderer" data-item-type="method">
+  	 
+	<h1><a name="show_renderer">renderer()</a></h1>
+	<h2>
+  <p>shared_ptr&lt; ofBaseRenderer &gt; &amp; ofAppGLFWWindow::renderer()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setClipboardString" data-lookup="setClipboardString" data-item-type="method">
+  	 
+	<h1><a name="show_setClipboardString">setClipboardString(...)</a></h1>
+	<h2>
+  <p>void ofAppGLFWWindow::setClipboardString(const string &amp;text)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setFullscreen" data-lookup="setFullscreen" data-item-type="method">
+  	 
+	<h1><a name="show_setFullscreen">setFullscreen(...)</a></h1>
+	<h2>
+  <p>void ofAppGLFWWindow::setFullscreen(bool fullscreen)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setOrientation" data-lookup="setOrientation" data-item-type="method">
+  	 
+	<h1><a name="show_setOrientation">setOrientation(...)</a></h1>
+	<h2>
+  <p>void ofAppGLFWWindow::setOrientation(ofOrientation orientation)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setVerticalSync" data-lookup="setVerticalSync" data-item-type="method">
+  	 
+	<h1><a name="show_setVerticalSync">setVerticalSync(...)</a></h1>
+	<h2>
+  <p>void ofAppGLFWWindow::setVerticalSync(bool bSync)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setWindowPosition" data-lookup="setWindowPosition" data-item-type="method">
+  	 
+	<h1><a name="show_setWindowPosition">setWindowPosition(...)</a></h1>
+	<h2>
+  <p>void ofAppGLFWWindow::setWindowPosition(int x, int y)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setWindowShape" data-lookup="setWindowShape" data-item-type="method">
+  	 
+	<h1><a name="show_setWindowShape">setWindowShape(...)</a></h1>
+	<h2>
+  <p>void ofAppGLFWWindow::setWindowShape(int w, int h)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setWindowShouldClose" data-lookup="setWindowShouldClose" data-item-type="method">
+  	 
+	<h1><a name="show_setWindowShouldClose">setWindowShouldClose()</a></h1>
+	<h2>
+  <p>void ofAppGLFWWindow::setWindowShouldClose()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setWindowTitle" data-lookup="setWindowTitle" data-item-type="method">
+  	 
+	<h1><a name="show_setWindowTitle">setWindowTitle(...)</a></h1>
+	<h2>
+  <p>void ofAppGLFWWindow::setWindowTitle(string title)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setup" data-lookup="setup" data-item-type="method">
+  	 
+	<h1><a name="show_setup">setup(...)</a></h1>
+	<h2>
+  <p>void ofAppGLFWWindow::setup(const ofGLFWWindowSettings &amp;settings)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setup" data-lookup="setup" data-item-type="method">
+  	 
+	<h1><a name="show_setup">setup(...)</a></h1>
+	<h2>
+  <p>void ofAppGLFWWindow::setup(const ofGLWindowSettings &amp;settings)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail showCursor" data-lookup="showCursor" data-item-type="method">
+  	 
+	<h1><a name="show_showCursor">showCursor()</a></h1>
+	<h2>
+  <p>void ofAppGLFWWindow::showCursor()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail toggleFullscreen" data-lookup="toggleFullscreen" data-item-type="method">
+  	 
+	<h1><a name="show_toggleFullscreen">toggleFullscreen()</a></h1>
+	<h2>
+  <p>void ofAppGLFWWindow::toggleFullscreen()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail update" data-lookup="update" data-item-type="method">
+  	 
+	<h1><a name="show_update">update()</a></h1>
+	<h2>
+  <p>void ofAppGLFWWindow::update()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+
+            <!-- vars detail -->
+
+            <!-- functions detail -->
+            <hr/>
+                
+            <!--diqus comments for class/functions module description-->
+            <div id="comments_header">
+            <h2>comments</h2>
+            <p>You can add comments with usage examples or other information for each class, method or variable, for adding documentation to an empty section or reporting errors is better to send a fix or open an issue through <a href="https://github.com/openframeworks/ofSite">github</a>.</p>
+            <p>When posting code enclose it in:</p>
+            <pre><code class="html">&lt;pre&gt;&lt;code class=&quot;cpp&quot;&gt;&nbsp;&lt;/code&gt;&lt;/pre&gt;</code></pre>
+            <br/>
+            </div>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+
+            // DISQUS
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+
+            var disqus_shortname = 'openframeworks'; // required: replace example with your forum shortname
+            //var disqus_developer = 1;
+
+            location_elements = window.location.pathname.split("/");
+            module_name = location_elements[location_elements.length-1].split(".")[0];
+            section_name = location.hash.split("_")[1];
+            console.log(module_name + " " + section_name);
+            if(section_name!=undefined && section_name!=''){
+            var disqus_identifier = window.location.pathname + "#!show_" + section_name;  
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "#!show_" + section_name;
+            var discus_title = document.title + " - " + section_name;
+            }else{
+            var disqus_identifier = window.location.pathname;
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            var discus_title = document.title;
+            }
+
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */   
+            (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		
+        </div><!-- End Submenu right -->
+      </div><!-- End page wide -->
+      </div><!-- End body wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:34:20 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+eb73abcb6141243ae29291b42ec447024f00a570
+">
+
+eb73abcb6141243ae29291b42ec447024f00a570
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+

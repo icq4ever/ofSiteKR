@@ -1,0 +1,896 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr - ofEasyCam</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+    <script src="http://icq4ever.iptime.org//js/jquery.columnizer.min.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation.js"></script>
+  </head>
+  <body>
+    <div id="content">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">
+          <div class="page-wide">
+          
+              <div id="docstitle"><h1>ofEasyCam</h1></div>
+              <div id="editdocs">
+                    <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/3d/ofEasyCam.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
+              </div>
+              
+          </div>
+          
+          
+        <div class="page-wide">
+		    <div class="submenucol-left">
+		     <!-- list of methods -->
+		     <p class="top_list_header">class methods</p>
+             <ul class="functionslist">
+                 
+                         <li>
+                         <a href="#show_ofEasyCam" class="ofEasyCam" data-lookup="ofEasyCam">ofEasyCam()</a></li>
+                     
+                         <li>
+                         <a href="#show_~ofEasyCam" class="~ofEasyCam" data-lookup="~ofEasyCam">~ofEasyCam()</a></li>
+                     
+                         <li>
+                         <a href="#show_begin" class="begin" data-lookup="begin">begin()</a></li>
+                     
+                         <li>
+                         <a href="#show_disableMouseInput" class="disableMouseInput" data-lookup="disableMouseInput">disableMouseInput()</a></li>
+                     
+                         <li>
+                         <a href="#show_disableMouseMiddleButton" class="disableMouseMiddleButton" data-lookup="disableMouseMiddleButton">disableMouseMiddleButton()</a></li>
+                     
+                         <li>
+                         <a href="#show_enableMouseInput" class="enableMouseInput" data-lookup="enableMouseInput">enableMouseInput()</a></li>
+                     
+                         <li>
+                         <a href="#show_enableMouseMiddleButton" class="enableMouseMiddleButton" data-lookup="enableMouseMiddleButton">enableMouseMiddleButton()</a></li>
+                     
+                         <li>
+                         <a href="#show_getDistance" class="getDistance" data-lookup="getDistance">getDistance()</a></li>
+                     
+                         <li>
+                         <a href="#show_getDrag" class="getDrag" data-lookup="getDrag">getDrag()</a></li>
+                     
+                         <li>
+                         <a href="#show_getMouseInputEnabled" class="getMouseInputEnabled" data-lookup="getMouseInputEnabled">getMouseInputEnabled()</a></li>
+                     
+                         <li>
+                         <a href="#show_getMouseMiddleButtonEnabled" class="getMouseMiddleButtonEnabled" data-lookup="getMouseMiddleButtonEnabled">getMouseMiddleButtonEnabled()</a></li>
+                     
+                         <li>
+                         <a href="#show_getTarget" class="getTarget" data-lookup="getTarget">getTarget()</a></li>
+                     
+                         <li>
+                         <a href="#show_getTranslationKey" class="getTranslationKey" data-lookup="getTranslationKey">getTranslationKey()</a></li>
+                     
+                     
+                     
+                     
+                     
+                         <li>
+                         <a href="#show_reset" class="reset" data-lookup="reset">reset()</a></li>
+                     
+                         <li>
+                         <a href="#show_setAutoDistance" class="setAutoDistance" data-lookup="setAutoDistance">setAutoDistance()</a></li>
+                     
+                         <li>
+                         <a href="#show_setDistance" class="setDistance" data-lookup="setDistance">setDistance()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_setDrag" class="setDrag" data-lookup="setDrag">setDrag()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setEvents" class="setEvents" data-lookup="setEvents">setEvents()</a></li>
+                     
+                         <li>
+                         <a href="#show_setTarget" class="setTarget" data-lookup="setTarget">setTarget()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_setTranslationKey" class="setTranslationKey" data-lookup="setTranslationKey">setTranslationKey()</a></li>
+                     
+                     
+                     
+                     
+                     
+             </ul>
+            
+             
+             
+             <!-- list of variables -->              
+            
+             
+            
+             <!-- list of functions -->              
+		    </div>
+	    <div class="submenucol-right">
+            <div class="documentation_detail class_documentation">
+                    <h2><strong><em>Extends</em></strong></h2>
+                    <p>This class extends others, you can call their methods on an instance of ofEasyCam too:</p>
+                    <ul>
+                        <li><a href="../3d/ofCamera.html" class="docs_class" >ofCamera</a> </li>
+                    </ul>
+              
+  <p><a href="../3d/ofCamera.html" class="docs_class" >ofCamera</a> objects useful for viewing 3D scenes. <a href="../3d/ofEasyCam.html" class="docs_class" >ofEasyCam</a> gives you a very simple to use interactive camera to view your scene. It's based more or less on PeasyCam from Processing.</p>
+<p>It has a few default controls built into it:</p>
+<ul>
+<li>Left click drag = orbit the target</li>
+<li>Right click drag = dolly in and out</li>
+<li>Double click = reset camera position</li>
+</ul>
+
+
+                    <div class="inlined_docs">
+                        <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+                        
+  <p>A super simple camera for interacting with objects in 3D space.</p>
+
+                    </div>   
+              
+              
+  
+
+           </div>
+                  
+            <!-- methods detail -->
+              <!--h2><a name="methods"></a>ofEasyCam methods</h2-->
+                        
+<div class="documentation_detail ofEasyCam" data-lookup="ofEasyCam" data-item-type="method">
+  	 
+	<h1><a name="show_ofEasyCam">ofEasyCam()</a></h1>
+	<h2>
+  <p>ofEasyCam::ofEasyCam()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Create a default camera.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ~ofEasyCam" data-lookup="~ofEasyCam" data-item-type="method">
+  	 
+	<h1><a name="show_~ofEasyCam">~ofEasyCam()</a></h1>
+	<h2>
+  <p>ofEasyCam::~ofEasyCam()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Destroy the camera.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail begin" data-lookup="begin" data-item-type="method">
+  	 
+	<h1><a name="show_begin">begin(...)</a></h1>
+	<h2>
+  <p>void ofEasyCam::begin(ofRectangle viewport)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Begin using the camera, e.g.:</p>
+<p>c++
+myCamera.begin();</p>
+<p>ofDrawGrid();
+//draw rest of scene</p>
+<p>myCamera.end();</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>}
+\name Rendering
+{</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail disableMouseInput" data-lookup="disableMouseInput" data-item-type="method">
+  	 
+	<h1><a name="show_disableMouseInput">disableMouseInput()</a></h1>
+	<h2>
+  <p>void ofEasyCam::disableMouseInput()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Disable mouse camera control.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail disableMouseMiddleButton" data-lookup="disableMouseMiddleButton" data-item-type="method">
+  	 
+	<h1><a name="show_disableMouseMiddleButton">disableMouseMiddleButton()</a></h1>
+	<h2>
+  <p>void ofEasyCam::disableMouseMiddleButton()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Disable the mouse's middle button for camera control.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail enableMouseInput" data-lookup="enableMouseInput" data-item-type="method">
+  	 
+	<h1><a name="show_enableMouseInput">enableMouseInput()</a></h1>
+	<h2>
+  <p>void ofEasyCam::enableMouseInput()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Enable mouse camera control.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail enableMouseMiddleButton" data-lookup="enableMouseMiddleButton" data-item-type="method">
+  	 
+	<h1><a name="show_enableMouseMiddleButton">enableMouseMiddleButton()</a></h1>
+	<h2>
+  <p>void ofEasyCam::enableMouseMiddleButton()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Enable the mouse's middle button for camera control.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getDistance" data-lookup="getDistance" data-item-type="method">
+  	 
+	<h1><a name="show_getDistance">getDistance()</a></h1>
+	<h2>
+  <p>float ofEasyCam::getDistance()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get the distance to the target.</p>
+<p>Returns: the distance to the target.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getDrag" data-lookup="getDrag" data-item-type="method">
+  	 
+	<h1><a name="show_getDrag">getDrag()</a></h1>
+	<h2>
+  <p>float ofEasyCam::getDrag()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get the camera's drag coefficient.</p>
+<p>Returns: the camera's drag coefficient.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getMouseInputEnabled" data-lookup="getMouseInputEnabled" data-item-type="method">
+  	 
+	<h1><a name="show_getMouseInputEnabled">getMouseInputEnabled()</a></h1>
+	<h2>
+  <p>bool ofEasyCam::getMouseInputEnabled()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Determine if mouse camera control is enabled.
+\todo Rename to isMouseInputEnabled().</p>
+<p>Returns: true iff mouse camera control is enabled.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getMouseMiddleButtonEnabled" data-lookup="getMouseMiddleButtonEnabled" data-item-type="method">
+  	 
+	<h1><a name="show_getMouseMiddleButtonEnabled">getMouseMiddleButtonEnabled()</a></h1>
+	<h2>
+  <p>bool ofEasyCam::getMouseMiddleButtonEnabled()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Determine if the middle mouse button is enabled.
+\todo Rename to isMouseMiddleButtonEnabled().</p>
+<p>Returns: true iff the mouse's middle button is enabled.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getTarget" data-lookup="getTarget" data-item-type="method">
+  	 
+	<h1><a name="show_getTarget">getTarget()</a></h1>
+	<h2>
+  <p>ofNode &amp; ofEasyCam::getTarget()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get the camera's target node reference.</p>
+<p>Returns: a reference the the camera's target node.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getTranslationKey" data-lookup="getTranslationKey" data-item-type="method">
+  	 
+	<h1><a name="show_getTranslationKey">getTranslationKey()</a></h1>
+	<h2>
+  <p>char ofEasyCam::getTranslationKey()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get the current translation key code.</p>
+<p>Returns: the current translation key code.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail reset" data-lookup="reset" data-item-type="method">
+  	 
+	<h1><a name="show_reset">reset()</a></h1>
+	<h2>
+  <p>void ofEasyCam::reset()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Reset the camera position and orientation.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setAutoDistance" data-lookup="setAutoDistance" data-item-type="method">
+  	 
+	<h1><a name="show_setAutoDistance">setAutoDistance(...)</a></h1>
+	<h2>
+  <p>void ofEasyCam::setAutoDistance(bool bAutoDistance)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Enable or disable camera autodistance.</p>
+<p>Allow the camera to attempt to set the distance based on the camera's
+current viewpoirt.</p>
+<p>Parameters:
+bAutoDistance true to enable auto distance.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setDistance" data-lookup="setDistance" data-item-type="method">
+  	 
+	<h1><a name="show_setDistance">setDistance(...)</a></h1>
+	<h2>
+  <p>void ofEasyCam::setDistance(float distance)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Set the camera's distance to the target.</p>
+<p>Parameters:
+distance The distance to the target.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setDrag" data-lookup="setDrag" data-item-type="method">
+  	 
+	<h1><a name="show_setDrag">setDrag(...)</a></h1>
+	<h2>
+  <p>void ofEasyCam::setDrag(float drag)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Set the camera's drag coefficient.</p>
+<p>Drag is affects how quickly the camera starts up and slows down when
+a user interacts with its position using a pointer.</p>
+<p>Parameters:
+drag The normalized coefficient value between 0 and 1.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setEvents" data-lookup="setEvents" data-item-type="method">
+  	 
+	<h1><a name="show_setEvents">setEvents(...)</a></h1>
+	<h2>
+  <p>void ofEasyCam::setEvents(ofCoreEvents &amp;events)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setTarget" data-lookup="setTarget" data-item-type="method">
+  	 
+	<h1><a name="show_setTarget">setTarget(...)</a></h1>
+	<h2>
+  <p>void ofEasyCam::setTarget(const ofVec3f &amp;target)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Set the camera's target.</p>
+<p>Parameters:
+target The position of the target.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setTarget" data-lookup="setTarget" data-item-type="method">
+  	 
+	<h1><a name="show_setTarget">setTarget(...)</a></h1>
+	<h2>
+  <p>void ofEasyCam::setTarget(ofNode &amp;target)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Set the camera's target.</p>
+<p>Parameters:
+target The position of the target.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setTranslationKey" data-lookup="setTranslationKey" data-item-type="method">
+  	 
+	<h1><a name="show_setTranslationKey">setTranslationKey(...)</a></h1>
+	<h2>
+  <p>void ofEasyCam::setTranslationKey(char key)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Set the key used to switch between camera rotation and translation.</p>
+<p>Translation will only happen when the translation key is pressed.</p>
+<p>Parameters:
+key The key code for the translation key.
+\todo char is not the right data type for this. Should be int.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+
+            <!-- vars detail -->
+
+            <!-- functions detail -->
+            <hr/>
+                
+            <!--diqus comments for class/functions module description-->
+            <div id="comments_header">
+            <h2>comments</h2>
+            <p>You can add comments with usage examples or other information for each class, method or variable, for adding documentation to an empty section or reporting errors is better to send a fix or open an issue through <a href="https://github.com/openframeworks/ofSite">github</a>.</p>
+            <p>When posting code enclose it in:</p>
+            <pre><code class="html">&lt;pre&gt;&lt;code class=&quot;cpp&quot;&gt;&nbsp;&lt;/code&gt;&lt;/pre&gt;</code></pre>
+            <br/>
+            </div>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+
+            // DISQUS
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+
+            var disqus_shortname = 'openframeworks'; // required: replace example with your forum shortname
+            //var disqus_developer = 1;
+
+            location_elements = window.location.pathname.split("/");
+            module_name = location_elements[location_elements.length-1].split(".")[0];
+            section_name = location.hash.split("_")[1];
+            console.log(module_name + " " + section_name);
+            if(section_name!=undefined && section_name!=''){
+            var disqus_identifier = window.location.pathname + "#!show_" + section_name;  
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "#!show_" + section_name;
+            var discus_title = document.title + " - " + section_name;
+            }else{
+            var disqus_identifier = window.location.pathname;
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            var discus_title = document.title;
+            }
+
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */   
+            (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		
+        </div><!-- End Submenu right -->
+      </div><!-- End page wide -->
+      </div><!-- End body wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:33:44 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+4d738d6979d8e7992359cde47632192d1fbef472
+">
+
+4d738d6979d8e7992359cde47632192d1fbef472
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+

@@ -1,0 +1,2202 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr - ofPixels</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+    <script src="http://icq4ever.iptime.org//js/jquery.columnizer.min.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation.js"></script>
+  </head>
+  <body>
+    <div id="content">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">
+          <div class="page-wide">
+          
+              <div id="docstitle"><h1>ofPixels</h1></div>
+              <div id="editdocs">
+                    <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/graphics/ofPixels.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
+              </div>
+              
+          </div>
+          
+          
+        <div class="page-wide">
+		    <div class="submenucol-left">
+		     <!-- list of methods -->
+		     <p class="top_list_header">class methods</p>
+             <ul class="functionslist">
+                 
+                         <li>
+                         <a href="#show_ofPixels_" class="ofPixels_" data-lookup="ofPixels_">ofPixels_()</a></li>
+                     
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_~ofPixels_" class="~ofPixels_" data-lookup="~ofPixels_">~ofPixels_()</a></li>
+                     
+                         <li>
+                         <a href="#show_allocate" class="allocate" data-lookup="allocate">allocate()</a></li>
+                     
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_begin" class="begin" data-lookup="begin">begin()</a></li>
+                     
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_blendInto" class="blendInto" data-lookup="blendInto">blendInto()</a></li>
+                     
+                         <li>
+                         <a href="#show_clear" class="clear" data-lookup="clear">clear()</a></li>
+                     
+                     
+                     
+                         <li>
+                         <a href="#show_crop" class="crop" data-lookup="crop">crop()</a></li>
+                     
+                         <li>
+                         <a href="#show_cropTo" class="cropTo" data-lookup="cropTo">cropTo()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_end" class="end" data-lookup="end">end()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_getBitsPerChannel" class="getBitsPerChannel" data-lookup="getBitsPerChannel">getBitsPerChannel()</a></li>
+                     
+                         <li>
+                         <a href="#show_getBitsPerPixel" class="getBitsPerPixel" data-lookup="getBitsPerPixel">getBitsPerPixel()</a></li>
+                     
+                         <li>
+                         <a href="#show_getBytesPerChannel" class="getBytesPerChannel" data-lookup="getBytesPerChannel">getBytesPerChannel()</a></li>
+                     
+                         <li>
+                         <a href="#show_getBytesPerPixel" class="getBytesPerPixel" data-lookup="getBytesPerPixel">getBytesPerPixel()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getBytesStride" class="getBytesStride" data-lookup="getBytesStride">getBytesStride()</a></li>
+                     
+                         <li>
+                         <a href="#show_getChannel" class="getChannel" data-lookup="getChannel">getChannel()</a></li>
+                     
+                         <li>
+                         <a href="#show_getColor" class="getColor" data-lookup="getColor">getColor()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_getConstLine" class="getConstLine" data-lookup="getConstLine">getConstLine()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getConstLines" class="getConstLines" data-lookup="getConstLines">getConstLines()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_getConstPixelsIter" class="getConstPixelsIter" data-lookup="getConstPixelsIter">getConstPixelsIter()</a></li>
+                     
+                         <li>
+                         <a href="#show_getData" class="getData" data-lookup="getData">getData()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_getHeight" class="getHeight" data-lookup="getHeight">getHeight()</a></li>
+                     
+                         <li>
+                         <a href="#show_getImageType" class="getImageType" data-lookup="getImageType">getImageType()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getLine" class="getLine" data-lookup="getLine">getLine()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getLines" class="getLines" data-lookup="getLines">getLines()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_getNumChannels" class="getNumChannels" data-lookup="getNumChannels">getNumChannels()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getNumPlanes" class="getNumPlanes" data-lookup="getNumPlanes">getNumPlanes()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getPixelFormat" class="getPixelFormat" data-lookup="getPixelFormat">getPixelFormat()</a></li>
+                     
+                         <li>
+                         <a href="#show_getPixelIndex" class="getPixelIndex" data-lookup="getPixelIndex">getPixelIndex()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getPixelsIter" class="getPixelsIter" data-lookup="getPixelsIter">getPixelsIter()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getPlane" class="getPlane" data-lookup="getPlane">getPlane()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getTotalBytes" class="getTotalBytes" data-lookup="getTotalBytes">getTotalBytes()</a></li>
+                     
+                         <li>
+                         <a href="#show_getWidth" class="getWidth" data-lookup="getWidth">getWidth()</a></li>
+                     
+                         <li>
+                         <a href="#show_isAllocated" class="isAllocated" data-lookup="isAllocated">isAllocated()</a></li>
+                     
+                         <li>
+                         <a href="#show_mirror" class="mirror" data-lookup="mirror">mirror()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_mirrorTo" class="mirrorTo" data-lookup="mirrorTo">mirrorTo()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_operator=" class="operator=" data-lookup="operator=">operator=()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_operator[]" class="operator[]" data-lookup="operator[]">operator[]()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_pasteInto" class="pasteInto" data-lookup="pasteInto">pasteInto()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_rbegin" class="rbegin" data-lookup="rbegin">rbegin()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_rend" class="rend" data-lookup="rend">rend()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_resize" class="resize" data-lookup="resize">resize()</a></li>
+                     
+                         <li>
+                         <a href="#show_resizeTo" class="resizeTo" data-lookup="resizeTo">resizeTo()</a></li>
+                     
+                         <li>
+                         <a href="#show_rotate90" class="rotate90" data-lookup="rotate90">rotate90()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_rotate90To" class="rotate90To" data-lookup="rotate90To">rotate90To()</a></li>
+                     
+                         <li>
+                         <a href="#show_set" class="set" data-lookup="set">set()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_setChannel" class="setChannel" data-lookup="setChannel">setChannel()</a></li>
+                     
+                         <li>
+                         <a href="#show_setColor" class="setColor" data-lookup="setColor">setColor()</a></li>
+                     
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_setFromAlignedPixels" class="setFromAlignedPixels" data-lookup="setFromAlignedPixels">setFromAlignedPixels()</a></li>
+                     
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_setFromExternalPixels" class="setFromExternalPixels" data-lookup="setFromExternalPixels">setFromExternalPixels()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_setFromPixels" class="setFromPixels" data-lookup="setFromPixels">setFromPixels()</a></li>
+                     
+                     
+                     
+                         <li>
+                         <a href="#show_setImageType" class="setImageType" data-lookup="setImageType">setImageType()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setNumChannels" class="setNumChannels" data-lookup="setNumChannels">setNumChannels()</a></li>
+                     
+                         <li>
+                         <a href="#show_size" class="size" data-lookup="size">size()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_swap" class="swap" data-lookup="swap">swap()</a></li>
+                     
+                         <li>
+                         <a href="#show_swapRgb" class="swapRgb" data-lookup="swapRgb">swapRgb()</a></li>
+                     
+             </ul>
+            
+             
+             
+             <!-- list of variables -->              
+            
+             
+            
+             <!-- list of functions -->              
+		    </div>
+	    <div class="submenucol-right">
+            <div class="documentation_detail class_documentation">
+              
+  <p><a href="../graphics/ofPixels.html" class="docs_class" >ofPixels</a> is an object for working with blocks of pixels, those pixels can be copied from an image that you've loaded, something that you've drawn using ofGraphics, or a <a href="../video/ofVideoGrabber.html" class="docs_class" >ofVideoGrabber</a> instance. You can create an image from pixels, using on <a href="../graphics/ofPixels.html" class="docs_class" >ofPixels</a> object like so:</p>
+<pre><code class="cpp">&lt;a href=&quot;../graphics/ofPixels.html&quot; class=&quot;docs_class&quot; &gt;ofPixels&lt;/a&gt; p;
+ofLoadImage(p, &quot;pathToImage.jpg&quot;);
+</code></pre>
+
+<p><a href="../graphics/ofPixels.html" class="docs_class" >ofPixels</a> represents pixels data on the CPU as opposed to an <a href="../gl/ofTexture.html" class="docs_class" >ofTexture</a> which represents pixel data on the GPU. They can easily be made inter-operational though:</p>
+<pre><code class="cpp">&lt;a href=&quot;../gl/ofTexture.html&quot; class=&quot;docs_class&quot; &gt;ofTexture&lt;/a&gt; tex;
+// do some stuff with t
+&lt;a href=&quot;../graphics/ofPixels.html&quot; class=&quot;docs_class&quot; &gt;ofPixels&lt;/a&gt; pix;
+tex.readToPixels(pix); // now all the pixels from tex are in pix
+</code></pre>
+
+<p>You can access the pixels in an <a href="../graphics/ofPixels.html" class="docs_class" >ofPixels</a> object with the [] operator.</p>
+<pre><code class="cpp">&lt;a href=&quot;../graphics/ofPixels.html&quot; class=&quot;docs_class&quot; &gt;ofPixels&lt;/a&gt; pix;
+// put some stuff in the pixels
+int i = 0;
+while( i &lt; pix.size()) {
+    char c = pix[i];
+    i++;
+}
+</code></pre>
+
+<p>You can think of the <a href="../graphics/ofPixels.html" class="docs_class" >ofPixels</a> as the CPU side representation of pixel data that can be sent to the GPU as an <a href="../gl/ofTexture.html" class="docs_class" >ofTexture</a> object. To draw pixels, you need to put them into an <a href="../gl/ofTexture.html" class="docs_class" >ofTexture</a> and to manipulate an ofTextures pixel data you need an <a href="../graphics/ofPixels.html" class="docs_class" >ofPixels</a> object.</p>
+
+
+                    <div class="inlined_docs">
+                        <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+                        
+  <p>A class representing a collection of pixels.</p>
+
+                    </div>   
+              
+              
+  
+
+           </div>
+                  
+            <!-- methods detail -->
+              <!--h2><a name="methods"></a>ofPixels methods</h2-->
+                        
+<div class="documentation_detail ofPixels_" data-lookup="ofPixels_" data-item-type="method">
+  	 
+	<h1><a name="show_ofPixels_">ofPixels_()</a></h1>
+	<h2>
+  <p>ofPixels_::ofPixels_()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>\name Construction And Allocation
+{</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofPixels_" data-lookup="ofPixels_" data-item-type="method">
+  	 
+	<h1><a name="show_ofPixels_">ofPixels_(...)</a></h1>
+	<h2>
+  <p>ofPixels_::ofPixels_(const ofPixels_&lt; PixelType &gt; &amp;mom)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofPixels_" data-lookup="ofPixels_" data-item-type="method">
+  	 
+	<h1><a name="show_ofPixels_">ofPixels_(...)</a></h1>
+	<h2>
+  <p>ofPixels_::ofPixels_(const ofPixels_&lt; SrcType &gt; &amp;mom)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ~ofPixels_" data-lookup="~ofPixels_" data-item-type="method">
+  	 
+	<h1><a name="show_~ofPixels_">~ofPixels_()</a></h1>
+	<h2>
+  <p>ofPixels_::~ofPixels_()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail allocate" data-lookup="allocate" data-item-type="method">
+  	 
+	<h1><a name="show_allocate">allocate(...)</a></h1>
+	<h2>
+  <p>void ofPixels_::allocate(int w, int h, int channels)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Allocates space for pixel data of the given width (w), height (h) and number of channels (channels). If an ofImageType or ofPixelFormat is passed in, it will allocate based on the required number of channels.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Allocates space for pixel data</p>
+<p>Parameters:
+w Width of pixel array
+h Height of pixel array
+channels Number of channels per pixel</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail allocate" data-lookup="allocate" data-item-type="method">
+  	 
+	<h1><a name="show_allocate">allocate(...)</a></h1>
+	<h2>
+  <p>void ofPixels_::allocate(int w, int h, ofImageType imageType)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>ofImageType:</p>
+<pre><code>OF_IMAGE_GRAYSCALE
+
+OF_IMAGE_COLOR
+
+OF_IMAGE_COLOR_ALPHA
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Allocates space for pixel data</p>
+<p>The imageType can be one of the following:</p>
+<pre><code>OF_IMAGE_GRAYSCALE
+OF_IMAGE_COLOR
+OF_IMAGE_COLOR_ALPHA
+</code></pre>
+<p>Parameters:
+w Width of pixel array
+h Height of pixel array
+imageType ofImageType defining number of channels per pixel</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail allocate" data-lookup="allocate" data-item-type="method">
+  	 
+	<h1><a name="show_allocate">allocate(...)</a></h1>
+	<h2>
+  <p>void ofPixels_::allocate(int w, int h, ofPixelFormat pixelFormat)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>ofPixelFormat:</p>
+<pre><code>OF_PIXELS_RGB
+
+OF_PIXELS_RGBA
+
+OF_PIXELS_BGRA
+
+OF_PIXELS_MONO
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Allocates space for pixel data</p>
+<p>The pixelFormat can be one of the following:</p>
+<pre><code>OF_PIXELS_RGB
+OF_PIXELS_RGBA
+OF_PIXELS_BGRA
+OF_PIXELS_MONO
+</code></pre>
+<p>Parameters:
+w Width of pixel array
+h Height of pixel array
+pixelFormat ofPixelFormat defining number of channels per pixel</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail begin" data-lookup="begin" data-item-type="method">
+  	 
+	<h1><a name="show_begin">begin()</a></h1>
+	<h2>
+  <p>iterator ofPixels_::begin()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail begin" data-lookup="begin" data-item-type="method">
+  	 
+	<h1><a name="show_begin">begin()</a></h1>
+	<h2>
+  <p>const_iterator ofPixels_::begin()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail blendInto" data-lookup="blendInto" data-item-type="method">
+  	 
+	<h1><a name="show_blendInto">blendInto(...)</a></h1>
+	<h2>
+  <p>bool ofPixels_::blendInto(ofPixels_&lt; PixelType &gt; &amp;dst, int x, int y)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail clear" data-lookup="clear" data-item-type="method">
+  	 
+	<h1><a name="show_clear">clear()</a></h1>
+	<h2>
+  <p>void ofPixels_::clear()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This clears all the data from the ofPixels objects. After calling this you'll need to allocate the ofPixels object again to use it.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail crop" data-lookup="crop" data-item-type="method">
+  	 
+	<h1><a name="show_crop">crop(...)</a></h1>
+	<h2>
+  <p>void ofPixels_::crop(int x, int y, int width, int height)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This crops the pixels to a new width and height. As a word of caution this reallocates memory and can be a bit expensive if done a lot.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail cropTo" data-lookup="cropTo" data-item-type="method">
+  	 
+	<h1><a name="show_cropTo">cropTo(...)</a></h1>
+	<h2>
+  <p>void ofPixels_::cropTo(ofPixels_&lt; PixelType &gt; &amp;toPix, int x, int y, int width, int height)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This crops the pixels into the ofPixels reference passed in by toPix. at the x and y and with the new width and height. As a word of caution this reallocates memory and can be a bit expensive if done a lot.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail end" data-lookup="end" data-item-type="method">
+  	 
+	<h1><a name="show_end">end()</a></h1>
+	<h2>
+  <p>iterator ofPixels_::end()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail end" data-lookup="end" data-item-type="method">
+  	 
+	<h1><a name="show_end">end()</a></h1>
+	<h2>
+  <p>const_iterator ofPixels_::end()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getBitsPerChannel" data-lookup="getBitsPerChannel" data-item-type="method">
+  	 
+	<h1><a name="show_getBitsPerChannel">getBitsPerChannel()</a></h1>
+	<h2>
+  <p>int ofPixels_::getBitsPerChannel()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This is how large each channel of a pixels is, ofPixels objects that store pixel data as unsigned char are smaller than  ofPixels objects that store pixel data as floats.
+This returns bit, not bytes, so you'll probably see ofPixels<float> as 32 and ofPixels<unsigned char> as 8.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getBitsPerPixel" data-lookup="getBitsPerPixel" data-item-type="method">
+  	 
+	<h1><a name="show_getBitsPerPixel">getBitsPerPixel()</a></h1>
+	<h2>
+  <p>int ofPixels_::getBitsPerPixel()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>If you have RGB pixel data, this will return 3, if you have RGBA, you'll have 4, if you have grayscale, this will return 1.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getBytesPerChannel" data-lookup="getBytesPerChannel" data-item-type="method">
+  	 
+	<h1><a name="show_getBytesPerChannel">getBytesPerChannel()</a></h1>
+	<h2>
+  <p>int ofPixels_::getBytesPerChannel()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This is how large each channel of a pixels is, ofPixels objects that store pixel data as unsigned char are smaller than  ofPixels objects that store pixel data as floats.
+This returns bytes, not bits, so you'll probably see ofPixels<float> as 4 and ofPixels<unsigned char> as 1.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getBytesPerPixel" data-lookup="getBytesPerPixel" data-item-type="method">
+  	 
+	<h1><a name="show_getBytesPerPixel">getBytesPerPixel()</a></h1>
+	<h2>
+  <p>int ofPixels_::getBytesPerPixel()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the number of the pixels.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get the number of bytes per pixel</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getBytesStride" data-lookup="getBytesStride" data-item-type="method">
+  	 
+	<h1><a name="show_getBytesStride">getBytesStride()</a></h1>
+	<h2>
+  <p>int ofPixels_::getBytesStride()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getChannel" data-lookup="getChannel" data-item-type="method">
+  	 
+	<h1><a name="show_getChannel">getChannel(...)</a></h1>
+	<h2>
+  <p>ofPixels_&lt; PixelType &gt; ofPixels_::getChannel(int channel)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This returns a single channel, for instance, the Red pixel values, from the ofPixels object, this gives you a grayscale representation of that one channel.</p>
+<pre><code class="cpp">    ofPixels rpix = pix.getChannel(0);
+    ofPixels gpix = pix.getChannel(1);
+    ofPixels bpix = pix.getChannel(2);
+</code></pre>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getColor" data-lookup="getColor" data-item-type="method">
+  	 
+	<h1><a name="show_getColor">getColor(...)</a></h1>
+	<h2>
+  <p>ofColor_&lt; PixelType &gt; ofPixels_::getColor(int index)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get the color at a specific index</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getColor" data-lookup="getColor" data-item-type="method">
+  	 
+	<h1><a name="show_getColor">getColor(...)</a></h1>
+	<h2>
+  <p>ofColor_&lt; PixelType &gt; ofPixels_::getColor(int x, int y)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This method returns the ofColor that the pixels contains at an x, y pair:</p>
+<pre><code class="cpp">ofColor c = pix.getColor(mouseX, mouseY);
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get the color at a x,y position</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getConstLine" data-lookup="getConstLine" data-item-type="method">
+  	 
+	<h1><a name="show_getConstLine">getConstLine(...)</a></h1>
+	<h2>
+  <p>ofPixels_::ConstLine ofPixels_::getConstLine(int line)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getConstLines" data-lookup="getConstLines" data-item-type="method">
+  	 
+	<h1><a name="show_getConstLines">getConstLines()</a></h1>
+	<h2>
+  <p>ofPixels_::ConstLines ofPixels_::getConstLines()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getConstLines" data-lookup="getConstLines" data-item-type="method">
+  	 
+	<h1><a name="show_getConstLines">getConstLines(...)</a></h1>
+	<h2>
+  <p>ofPixels_::ConstLines ofPixels_::getConstLines(int first, int numLines)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getConstPixelsIter" data-lookup="getConstPixelsIter" data-item-type="method">
+  	 
+	<h1><a name="show_getConstPixelsIter">getConstPixelsIter()</a></h1>
+	<h2>
+  <p>ofPixels_::ConstPixels ofPixels_::getConstPixelsIter()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getData" data-lookup="getData" data-item-type="method">
+  	 
+	<h1><a name="show_getData">getData()</a></h1>
+	<h2>
+  <p>PixelType * ofPixels_::getData()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Retrieves pixel data from the ofPixel object.</p>
+<p>Returns: A raw pointer to the pixel data.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getData" data-lookup="getData" data-item-type="method">
+  	 
+	<h1><a name="show_getData">getData()</a></h1>
+	<h2>
+  <p>const PixelType * ofPixels_::getData()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getHeight" data-lookup="getHeight" data-item-type="method">
+  	 
+	<h1><a name="show_getHeight">getHeight()</a></h1>
+	<h2>
+  <p>int ofPixels_::getHeight()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the height of the pixels.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getImageType" data-lookup="getImageType" data-item-type="method">
+  	 
+	<h1><a name="show_getImageType">getImageType()</a></h1>
+	<h2>
+  <p>ofImageType ofPixels_::getImageType()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns what image type the ofPixels object is.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get the type of the image</p>
+<p>Returns: One of the following types: <code>OF_IMAGE_GRAYSCALE</code>,
+<code>OF_IMAGE_COLOR</code>, <code>OF_IMAGE_COLOR_ALPHA</code></p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getLine" data-lookup="getLine" data-item-type="method">
+  	 
+	<h1><a name="show_getLine">getLine(...)</a></h1>
+	<h2>
+  <p>ofPixels_::Line ofPixels_::getLine(int line)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getLines" data-lookup="getLines" data-item-type="method">
+  	 
+	<h1><a name="show_getLines">getLines()</a></h1>
+	<h2>
+  <p>ofPixels_::Lines ofPixels_::getLines()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getLines" data-lookup="getLines" data-item-type="method">
+  	 
+	<h1><a name="show_getLines">getLines(...)</a></h1>
+	<h2>
+  <p>ofPixels_::Lines ofPixels_::getLines(int first, int numLines)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getNumChannels" data-lookup="getNumChannels" data-item-type="method">
+  	 
+	<h1><a name="show_getNumChannels">getNumChannels()</a></h1>
+	<h2>
+  <p>int ofPixels_::getNumChannels()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This returns the number of channels that the ofPixels object contains. RGB is 3 channels, RGBA is 4, and grayscale is 1.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getNumPlanes" data-lookup="getNumPlanes" data-item-type="method">
+  	 
+	<h1><a name="show_getNumPlanes">getNumPlanes()</a></h1>
+	<h2>
+  <p>int ofPixels_::getNumPlanes()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getPixelFormat" data-lookup="getPixelFormat" data-item-type="method">
+  	 
+	<h1><a name="show_getPixelFormat">getPixelFormat()</a></h1>
+	<h2>
+  <p>ofPixelFormat ofPixels_::getPixelFormat()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getPixelIndex" data-lookup="getPixelIndex" data-item-type="method">
+  	 
+	<h1><a name="show_getPixelIndex">getPixelIndex(...)</a></h1>
+	<h2>
+  <p>int ofPixels_::getPixelIndex(int x, int y)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This method tells you want pixel index an x, y pair would be at in the index, for instance:</p>
+<pre><code class="cpp">ofColor yellow = ofColor::yellow;
+int ind = pix.getPixelIndex(mouseX, mouseY);
+pix.setPixel(ind, yellow);
+</code></pre>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getPixelsIter" data-lookup="getPixelsIter" data-item-type="method">
+  	 
+	<h1><a name="show_getPixelsIter">getPixelsIter()</a></h1>
+	<h2>
+  <p>ofPixels_::Pixels ofPixels_::getPixelsIter()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getPlane" data-lookup="getPlane" data-item-type="method">
+  	 
+	<h1><a name="show_getPlane">getPlane(...)</a></h1>
+	<h2>
+  <p>ofPixels_&lt; PixelType &gt; ofPixels_::getPlane(int plane)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getTotalBytes" data-lookup="getTotalBytes" data-item-type="method">
+  	 
+	<h1><a name="show_getTotalBytes">getTotalBytes()</a></h1>
+	<h2>
+  <p>int ofPixels_::getTotalBytes()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getWidth" data-lookup="getWidth" data-item-type="method">
+  	 
+	<h1><a name="show_getWidth">getWidth()</a></h1>
+	<h2>
+  <p>int ofPixels_::getWidth()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the width of the pixels.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail isAllocated" data-lookup="isAllocated" data-item-type="method">
+  	 
+	<h1><a name="show_isAllocated">isAllocated()</a></h1>
+	<h2>
+  <p>bool ofPixels_::isAllocated()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns whether memory has been allocated for an ofPixels object or not. Many operations like copying pixels, etc, automatically allocate the memory needed, but it's sometimes good to check.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail mirror" data-lookup="mirror" data-item-type="method">
+  	 
+	<h1><a name="show_mirror">mirror(...)</a></h1>
+	<h2>
+  <p>void ofPixels_::mirror(bool vertically, bool horizontal)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This reflects the pixels across the vertical and/or horizontal axis.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Mirror the pixels across the vertical and/or horizontal axis.</p>
+<p>Parameters:
+vertically Set to true to mirror vertically
+horizontal Set to true to mirror horizontal</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail mirrorTo" data-lookup="mirrorTo" data-item-type="method">
+  	 
+	<h1><a name="show_mirrorTo">mirrorTo(...)</a></h1>
+	<h2>
+  <p>void ofPixels_::mirrorTo(ofPixels_&lt; PixelType &gt; &amp;dst, bool vertically, bool horizontal)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator=" data-lookup="operator=" data-item-type="method">
+  	 
+	<h1><a name="show_operator=">operator=(...)</a></h1>
+	<h2>
+  <p>ofPixels_&lt; PixelType &gt; &amp; ofPixels_::operator=(const ofPixels_&lt; PixelType &gt; &amp;mom)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator=" data-lookup="operator=" data-item-type="method">
+  	 
+	<h1><a name="show_operator=">operator=(...)</a></h1>
+	<h2>
+  <p>ofPixels_&lt; PixelType &gt; &amp; ofPixels_::operator=(const ofPixels_&lt; SrcType &gt; &amp;mom)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator[]" data-lookup="operator[]" data-item-type="method">
+  	 
+	<h1><a name="show_operator[]">operator[](...)</a></h1>
+	<h2>
+  <p>const PixelType &amp; ofPixels_::operator<a href="int pos"></a></p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Provides access to each channel of each pixel. If you have RGB pixel
+data, then you'll have 3 values for each pixel, if you have RGBA,
+you'll have 4</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator[]" data-lookup="operator[]" data-item-type="method">
+  	 
+	<h1><a name="show_operator[]">operator[](...)</a></h1>
+	<h2>
+  <p>PixelType &amp; ofPixels_::operator<a href="int pos"></a></p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Provides access to each channel of each pixel. If you have RGB pixel data, then you'll have 3 values for each pixel, if you have RGBA, you'll have 4.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail pasteInto" data-lookup="pasteInto" data-item-type="method">
+  	 
+	<h1><a name="show_pasteInto">pasteInto(...)</a></h1>
+	<h2>
+  <p>bool ofPixels_::pasteInto(ofPixels_&lt; PixelType &gt; &amp;dst, int x, int y)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This pastes the ofPixels object into another ofPixels object at the specified index, copying data from the ofPixels that the method is being called on to the ofPixels object at &amp;dst. If the data being copied doesn't fit into the dst then the image is cropped.</p>
+<pre><code class="cpp">ofLoadImage(footballPixels, &quot;two.jpg&quot;);
+ofLoadImage(fujiPixels, &quot;one.jpg&quot;);
+fujiTex.loadData(footballPixels);
+footballTex.loadData(fujiPixels);
+footballPixels.pasteInto(fujiPixels, 150, 100); // now fujiPixels is altered
+mixtureTex.loadData(fujiPixels);
+</code></pre>
+
+<p>Drawing the three textures here you can see the ball cropped into the mountain:
+<img alt="crop_demo" src="ofPixels_crop.png" /></p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Paste the ofPixels object into another ofPixels object at the
+specified index, copying data from the ofPixels that the method is
+being called on to the ofPixels object at <code>&amp;dst</code>. If the data being
+copied doesn't fit into the destination then the image is cropped.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail rbegin" data-lookup="rbegin" data-item-type="method">
+  	 
+	<h1><a name="show_rbegin">rbegin()</a></h1>
+	<h2>
+  <p>reverse_iterator ofPixels_::rbegin()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail rbegin" data-lookup="rbegin" data-item-type="method">
+  	 
+	<h1><a name="show_rbegin">rbegin()</a></h1>
+	<h2>
+  <p>const_reverse_iterator ofPixels_::rbegin()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail rend" data-lookup="rend" data-item-type="method">
+  	 
+	<h1><a name="show_rend">rend()</a></h1>
+	<h2>
+  <p>reverse_iterator ofPixels_::rend()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail rend" data-lookup="rend" data-item-type="method">
+  	 
+	<h1><a name="show_rend">rend()</a></h1>
+	<h2>
+  <p>const_reverse_iterator ofPixels_::rend()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail resize" data-lookup="resize" data-item-type="method">
+  	 
+	<h1><a name="show_resize">resize(...)</a></h1>
+	<h2>
+  <p>bool ofPixels_::resize(int dstWidth, int dstHeight, ofInterpolationMethod interpMethod=OF_INTERPOLATE_NEAREST_NEIGHBOR)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This resizes the ofPixels instance to the dstHeight and dstWidth. The options for the interpolation methods are as follows:
+OF_INTERPOLATE_NEAREST_NEIGHBOR =1
+OF_INTERPOLATE_BILINEAR         =2
+OF_INTERPOLATE_BICUBIC          =3</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail resizeTo" data-lookup="resizeTo" data-item-type="method">
+  	 
+	<h1><a name="show_resizeTo">resizeTo(...)</a></h1>
+	<h2>
+  <p>bool ofPixels_::resizeTo(ofPixels_&lt; PixelType &gt; &amp;dst, ofInterpolationMethod interpMethod=OF_INTERPOLATE_NEAREST_NEIGHBOR)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This resizes the ofPixels instance to the size of the ofPixels object passed in dst. The options for the interpolation methods are as follows:
+OF_INTERPOLATE_NEAREST_NEIGHBOR =1
+OF_INTERPOLATE_BILINEAR         =2
+OF_INTERPOLATE_BICUBIC          =3</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail rotate90" data-lookup="rotate90" data-item-type="method">
+  	 
+	<h1><a name="show_rotate90">rotate90(...)</a></h1>
+	<h2>
+  <p>void ofPixels_::rotate90(int nClockwiseRotations)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>crop to a new width and height, this reallocates memory.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail rotate90To" data-lookup="rotate90To" data-item-type="method">
+  	 
+	<h1><a name="show_rotate90To">rotate90To(...)</a></h1>
+	<h2>
+  <p>void ofPixels_::rotate90To(ofPixels_&lt; PixelType &gt; &amp;dst, int nClockwiseRotations)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail set" data-lookup="set" data-item-type="method">
+  	 
+	<h1><a name="show_set">set(...)</a></h1>
+	<h2>
+  <p>void ofPixels_::set(PixelType val)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>}
+\name Set Pixel Data
+{</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail set" data-lookup="set" data-item-type="method">
+  	 
+	<h1><a name="show_set">set(...)</a></h1>
+	<h2>
+  <p>void ofPixels_::set(int channel, PixelType val)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setChannel" data-lookup="setChannel" data-item-type="method">
+  	 
+	<h1><a name="show_setChannel">setChannel(...)</a></h1>
+	<h2>
+  <p>void ofPixels_::setChannel(int channel, const ofPixels_&lt; PixelType &gt; channelPixels)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This sets all the pixel data for a single channel, for instance, the Red pixel values, from an ofPixels object assumed to be a grayscale representation of the data that should go into that one channel.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setColor" data-lookup="setColor" data-item-type="method">
+  	 
+	<h1><a name="show_setColor">setColor(...)</a></h1>
+	<h2>
+  <p>void ofPixels_::setColor(const ofColor_&lt; PixelType &gt; &amp;color)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Set the color of all pixels</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setColor" data-lookup="setColor" data-item-type="method">
+  	 
+	<h1><a name="show_setColor">setColor(...)</a></h1>
+	<h2>
+  <p>void ofPixels_::setColor(int index, const ofColor_&lt; PixelType &gt; &amp;color)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Set the color of the pixel at a specific index</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setColor" data-lookup="setColor" data-item-type="method">
+  	 
+	<h1><a name="show_setColor">setColor(...)</a></h1>
+	<h2>
+  <p>void ofPixels_::setColor(int x, int y, const ofColor_&lt; PixelType &gt; &amp;color)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Sets the color of the pixel at the x,y location.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setFromAlignedPixels" data-lookup="setFromAlignedPixels" data-item-type="method">
+  	 
+	<h1><a name="show_setFromAlignedPixels">setFromAlignedPixels(...)</a></h1>
+	<h2>
+  <p>void ofPixels_::setFromAlignedPixels(const PixelType *newPixels, int width, int height, int channels, int stride)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setFromAlignedPixels" data-lookup="setFromAlignedPixels" data-item-type="method">
+  	 
+	<h1><a name="show_setFromAlignedPixels">setFromAlignedPixels(...)</a></h1>
+	<h2>
+  <p>void ofPixels_::setFromAlignedPixels(const PixelType *newPixels, int width, int height, ofPixelFormat pixelFormat, int stride)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setFromAlignedPixels" data-lookup="setFromAlignedPixels" data-item-type="method">
+  	 
+	<h1><a name="show_setFromAlignedPixels">setFromAlignedPixels(...)</a></h1>
+	<h2>
+  <p>void ofPixels_::setFromAlignedPixels(const PixelType *newPixels, int width, int height, ofPixelFormat pixelFormat, vector&lt; int &gt; strides)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>used to copy i420 pixels from gstreamer when (width % 4) != 0</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setFromExternalPixels" data-lookup="setFromExternalPixels" data-item-type="method">
+  	 
+	<h1><a name="show_setFromExternalPixels">setFromExternalPixels(...)</a></h1>
+	<h2>
+  <p>void ofPixels_::setFromExternalPixels(PixelType *newPixels, int w, int h, int channels)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setFromExternalPixels" data-lookup="setFromExternalPixels" data-item-type="method">
+  	 
+	<h1><a name="show_setFromExternalPixels">setFromExternalPixels(...)</a></h1>
+	<h2>
+  <p>void ofPixels_::setFromExternalPixels(PixelType *newPixels, int w, int h, ofPixelFormat pixelFormat)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setFromPixels" data-lookup="setFromPixels" data-item-type="method">
+  	 
+	<h1><a name="show_setFromPixels">setFromPixels(...)</a></h1>
+	<h2>
+  <p>void ofPixels_::setFromPixels(const PixelType *newPixels, int w, int h, int channels)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setFromPixels" data-lookup="setFromPixels" data-item-type="method">
+  	 
+	<h1><a name="show_setFromPixels">setFromPixels(...)</a></h1>
+	<h2>
+  <p>void ofPixels_::setFromPixels(const PixelType *newPixels, int w, int h, ofImageType type)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setFromPixels" data-lookup="setFromPixels" data-item-type="method">
+  	 
+	<h1><a name="show_setFromPixels">setFromPixels(...)</a></h1>
+	<h2>
+  <p>void ofPixels_::setFromPixels(const PixelType *newPixels, int w, int h, ofPixelFormat pixelFormat)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setImageType" data-lookup="setImageType" data-item-type="method">
+  	 
+	<h1><a name="show_setImageType">setImageType(...)</a></h1>
+	<h2>
+  <p>void ofPixels_::setImageType(ofImageType imageType)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Changes the image type for the ofPixels object</p>
+<p>Parameters:
+imageType Can be one of the following: OF_IMAGE_GRAYSCALE, OF_IMAGE_COLOR, OF_IMAGE_COLOR_ALPHA</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setNumChannels" data-lookup="setNumChannels" data-item-type="method">
+  	 
+	<h1><a name="show_setNumChannels">setNumChannels(...)</a></h1>
+	<h2>
+  <p>void ofPixels_::setNumChannels(int numChannels)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail size" data-lookup="size" data-item-type="method">
+  	 
+	<h1><a name="show_size">size()</a></h1>
+	<h2>
+  <p>int ofPixels_::size()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This gives you the number of values that the ofPixels object contains, so an RGB data 400x400 would be 480,000, whereas RGBA data of the same dimensions would be 640,000.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail swap" data-lookup="swap" data-item-type="method">
+  	 
+	<h1><a name="show_swap">swap(...)</a></h1>
+	<h2>
+  <p>void ofPixels_::swap(ofPixels_&lt; PixelType &gt; &amp;pix)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail swapRgb" data-lookup="swapRgb" data-item-type="method">
+  	 
+	<h1><a name="show_swapRgb">swapRgb()</a></h1>
+	<h2>
+  <p>void ofPixels_::swapRgb()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>As implemented right now, this method swaps the R and B channels of an image, leaving the G and A channels as is.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Swaps the R and B channels of an
+image, leaving the G and A channels as is.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+
+            <!-- vars detail -->
+
+            <!-- functions detail -->
+            <hr/>
+                
+            <!--diqus comments for class/functions module description-->
+            <div id="comments_header">
+            <h2>comments</h2>
+            <p>You can add comments with usage examples or other information for each class, method or variable, for adding documentation to an empty section or reporting errors is better to send a fix or open an issue through <a href="https://github.com/openframeworks/ofSite">github</a>.</p>
+            <p>When posting code enclose it in:</p>
+            <pre><code class="html">&lt;pre&gt;&lt;code class=&quot;cpp&quot;&gt;&nbsp;&lt;/code&gt;&lt;/pre&gt;</code></pre>
+            <br/>
+            </div>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+
+            // DISQUS
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+
+            var disqus_shortname = 'openframeworks'; // required: replace example with your forum shortname
+            //var disqus_developer = 1;
+
+            location_elements = window.location.pathname.split("/");
+            module_name = location_elements[location_elements.length-1].split(".")[0];
+            section_name = location.hash.split("_")[1];
+            console.log(module_name + " " + section_name);
+            if(section_name!=undefined && section_name!=''){
+            var disqus_identifier = window.location.pathname + "#!show_" + section_name;  
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "#!show_" + section_name;
+            var discus_title = document.title + " - " + section_name;
+            }else{
+            var disqus_identifier = window.location.pathname;
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            var discus_title = document.title;
+            }
+
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */   
+            (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		
+        </div><!-- End Submenu right -->
+      </div><!-- End page wide -->
+      </div><!-- End body wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:34:11 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+eb73abcb6141243ae29291b42ec447024f00a570
+">
+
+eb73abcb6141243ae29291b42ec447024f00a570
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+

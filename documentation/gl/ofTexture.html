@@ -1,0 +1,2689 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr - ofTexture</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+    <script src="http://icq4ever.iptime.org//js/jquery.columnizer.min.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation.js"></script>
+  </head>
+  <body>
+    <div id="content">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">
+          <div class="page-wide">
+          
+              <div id="docstitle"><h1>ofTexture</h1></div>
+              <div id="editdocs">
+                    <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/gl/ofTexture.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
+                     <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/gl/ofTexture_functions.markdown" class="nohover"><img title="edit functions on GitHub" src="/images/editfunctions.png?a=5"/></a>
+              </div>
+              
+          </div>
+          
+          
+        <div class="page-wide">
+		    <div class="submenucol-left">
+		     <!-- list of methods -->
+		     <p class="top_list_header">class methods</p>
+             <ul class="functionslist">
+                 
+                     
+                     
+                     
+                         <li>
+                         <a href="#show_allocate" class="allocate" data-lookup="allocate">allocate()</a></li>
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                         <li>
+                         <a href="#show_allocateAsBufferTexture" class="allocateAsBufferTexture" data-lookup="allocateAsBufferTexture">allocateAsBufferTexture()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_bindAsImage" class="bindAsImage" data-lookup="bindAsImage">bindAsImage()</a></li>
+                     
+                         <li>
+                         <a href="#show_clear" class="clear" data-lookup="clear">clear()</a></li>
+                     
+                         <li>
+                         <a href="#show_copyTo" class="copyTo" data-lookup="copyTo">copyTo()</a></li>
+                     
+                         <li>
+                         <a href="#show_disableAlphaMask" class="disableAlphaMask" data-lookup="disableAlphaMask">disableAlphaMask()</a></li>
+                     
+                         <li>
+                         <a href="#show_disableMipmap" class="disableMipmap" data-lookup="disableMipmap">disableMipmap()</a></li>
+                     
+                         <li>
+                         <a href="#show_disableTextureMatrix" class="disableTextureMatrix" data-lookup="disableTextureMatrix">disableTextureMatrix()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_draw" class="draw" data-lookup="draw">draw()</a></li>
+                     
+                     
+                     
+                     
+                     
+                         <li>
+                         <a href="#show_drawSubsection" class="drawSubsection" data-lookup="drawSubsection">drawSubsection()</a></li>
+                     
+                     
+                     
+                     
+                         <li>
+                         <a href="#show_enableMipmap" class="enableMipmap" data-lookup="enableMipmap">enableMipmap()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_generateMipmap" class="generateMipmap" data-lookup="generateMipmap">generateMipmap()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getAlphaMask" class="getAlphaMask" data-lookup="getAlphaMask">getAlphaMask()</a></li>
+                     
+                         <li>
+                         <a href="#show_getCoordFromPercent" class="getCoordFromPercent" data-lookup="getCoordFromPercent">getCoordFromPercent()</a></li>
+                     
+                         <li>
+                         <a href="#show_getCoordFromPoint" class="getCoordFromPoint" data-lookup="getCoordFromPoint">getCoordFromPoint()</a></li>
+                     
+                         <li>
+                         <a href="#show_getHeight" class="getHeight" data-lookup="getHeight">getHeight()</a></li>
+                     
+                         <li>
+                         <a href="#show_getMeshForSubsection" class="getMeshForSubsection" data-lookup="getMeshForSubsection">getMeshForSubsection()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getQuad" class="getQuad" data-lookup="getQuad">getQuad()</a></li>
+                     
+                         <li>
+                         <a href="#show_getTextureData" class="getTextureData" data-lookup="getTextureData">getTextureData()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_getTextureMatrix" class="getTextureMatrix" data-lookup="getTextureMatrix">getTextureMatrix()</a></li>
+                     
+                         <li>
+                         <a href="#show_getWidth" class="getWidth" data-lookup="getWidth">getWidth()</a></li>
+                     
+                         <li>
+                         <a href="#show_isAllocated" class="isAllocated" data-lookup="isAllocated">isAllocated()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_isUsingTextureMatrix" class="isUsingTextureMatrix" data-lookup="isUsingTextureMatrix">isUsingTextureMatrix()</a></li>
+                     
+                         <li>
+                         <a href="#show_loadData" class="loadData" data-lookup="loadData">loadData()</a></li>
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                         <li>
+                         <a href="#show_loadScreenData" class="loadScreenData" data-lookup="loadScreenData">loadScreenData()</a></li>
+                     
+                         <li>
+                         <a href="#show_operator=" class="operator=" data-lookup="operator=">operator=()</a></li>
+                     
+                         <li>
+                         <a href="#show_readToPixels" class="readToPixels" data-lookup="readToPixels">readToPixels()</a></li>
+                     
+                     
+                     
+                     
+                         <li>
+                         <a href="#show_setAlphaMask" class="setAlphaMask" data-lookup="setAlphaMask">setAlphaMask()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_setAnchorPoint" class="setAnchorPoint" data-lookup="setAnchorPoint">setAnchorPoint()</a></li>
+                     
+                         <li>
+                         <a href="#show_setCompression" class="setCompression" data-lookup="setCompression">setCompression()</a></li>
+                     
+                         <li>
+                         <a href="#show_setRGToRGBASwizzles" class="setRGToRGBASwizzles" data-lookup="setRGToRGBASwizzles">setRGToRGBASwizzles()</a></li>
+                     
+                         <li>
+                         <a href="#show_setSwizzle" class="setSwizzle" data-lookup="setSwizzle">setSwizzle()</a></li>
+                     
+                         <li>
+                         <a href="#show_setTextureMatrix" class="setTextureMatrix" data-lookup="setTextureMatrix">setTextureMatrix()</a></li>
+                     
+                         <li>
+                         <a href="#show_setTextureMinMagFilter" class="setTextureMinMagFilter" data-lookup="setTextureMinMagFilter">setTextureMinMagFilter()</a></li>
+                     
+                         <li>
+                         <a href="#show_setTextureWrap" class="setTextureWrap" data-lookup="setTextureWrap">setTextureWrap()</a></li>
+                     
+                         <li>
+                         <a href="#show_setUseExternalTextureID" class="setUseExternalTextureID" data-lookup="setUseExternalTextureID">setUseExternalTextureID()</a></li>
+                     
+                     
+             </ul>
+            
+             
+             
+             <!-- list of variables -->              
+            
+             
+            
+             <!-- list of functions -->              
+            <p class="top_list_header">global functions</p>
+                <ul class="functionslist">
+                     
+                            <li>
+                            <a href="#show_ofDisableArbTex" class="ofDisableArbTex" data-lookup="ofDisableArbTex">ofDisableArbTex()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofDisableNormalizedTexCoords" class="ofDisableNormalizedTexCoords" data-lookup="ofDisableNormalizedTexCoords">ofDisableNormalizedTexCoords()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofDisableTextureEdgeHack" class="ofDisableTextureEdgeHack" data-lookup="ofDisableTextureEdgeHack">ofDisableTextureEdgeHack()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofEnableArbTex" class="ofEnableArbTex" data-lookup="ofEnableArbTex">ofEnableArbTex()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofEnableNormalizedTexCoords" class="ofEnableNormalizedTexCoords" data-lookup="ofEnableNormalizedTexCoords">ofEnableNormalizedTexCoords()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofEnableTextureEdgeHack" class="ofEnableTextureEdgeHack" data-lookup="ofEnableTextureEdgeHack">ofEnableTextureEdgeHack()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofGetUsingArbTex" class="ofGetUsingArbTex" data-lookup="ofGetUsingArbTex">ofGetUsingArbTex()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofGetUsingNormalizedTexCoords" class="ofGetUsingNormalizedTexCoords" data-lookup="ofGetUsingNormalizedTexCoords">ofGetUsingNormalizedTexCoords()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofIsTextureEdgeHackEnabled" class="ofIsTextureEdgeHackEnabled" data-lookup="ofIsTextureEdgeHackEnabled">ofIsTextureEdgeHackEnabled()</a></li>
+                         
+                 </ul>
+		    </div>
+	    <div class="submenucol-right">
+            <div class="documentation_detail class_documentation">
+                    <h2><strong><em>Extends</em></strong></h2>
+                    <p>This class extends others, you can call their methods on an instance of ofTexture too:</p>
+                    <ul>
+                        <li><a href="../types/ofBaseDraws.html" class="docs_class" >ofBaseDraws</a> </li>
+                    </ul>
+              
+  <p><a href="../gl/ofTexture.html" class="docs_class" >ofTexture</a> is used to create textures that live on your graphics card from bitmap data that can then be used to fill other drawn objects, like a bitmap fill on a rectangle. When you draw an ofImage, you're actually just drawing a rectangle of points and then using an <a href="../gl/ofTexture.html" class="docs_class" >ofTexture</a> to fill the space between those points. At it's core, <a href="../gl/ofTexture.html" class="docs_class" >ofTexture</a> is a wrapper for OpenGL textures. It allows use of non-power of 2 textures in opengl, and to upload and draw graphical data.</p>
+
+
+                    <div class="inlined_docs">
+                        <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+                        
+  <p>A wrapper class for an OpenGL texture.</p>
+
+                    </div>   
+              
+              
+  
+
+           </div>
+                  
+            <!-- methods detail -->
+              <!--h2><a name="methods"></a>ofTexture methods</h2-->
+                        
+<div class="documentation_detail ofTexture" data-lookup="ofTexture" data-item-type="method">
+  	 
+	<h1><a name="show_ofTexture">ofTexture(...)</a></h1>
+	<h2>
+  <p>ofTexture::ofTexture(const ofTexture &amp;mom)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Construct an ofTexture from an existing ofTexture.</p>
+<p>Parameters:
+mom The ofTexture to copy. Reuses internal GL texture ID.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail allocate" data-lookup="allocate" data-item-type="method">
+  	 
+	<h1><a name="show_allocate">allocate(...)</a></h1>
+	<h2>
+  <p>void ofTexture::allocate(const ofFloatPixels &amp;pix)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Allocate texture using an ofFloatPixels instance.</p>
+<p>Same as void allocate(const ofPixels&amp; pix), except using ofFloatPixels.</p>
+<p>See also: allocate(const ofPixels&amp; pix)</p>
+<p>Parameters:
+pix Reference to ofFloatPixels instance.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail allocate" data-lookup="allocate" data-item-type="method">
+  	 
+	<h1><a name="show_allocate">allocate(...)</a></h1>
+	<h2>
+  <p>void ofTexture::allocate(const ofFloatPixels &amp;pix, bool bUseARBExtension)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Allocate texture using an ofShortPixels instance and type.</p>
+<p>Same as void void allocate(const ofPixels&amp; pix), except using ofShortPixels.</p>
+<p>See also: allocate(const ofFloatPixels&amp; pix)</p>
+<p>Parameters:
+pix Reference to ofFloatPixels instance.
+bUseARBExtension Set to true to use rectangular textures.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail allocate" data-lookup="allocate" data-item-type="method">
+  	 
+	<h1><a name="show_allocate">allocate(...)</a></h1>
+	<h2>
+  <p>void ofTexture::allocate(const ofPixels &amp;pix)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Allocate texture using an ofPixels instance.</p>
+<p>Pixel type and OpenGL format are determined from pixel settings.</p>
+<p>Parameters:
+pix Reference to ofPixels instance.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail allocate" data-lookup="allocate" data-item-type="method">
+  	 
+	<h1><a name="show_allocate">allocate(...)</a></h1>
+	<h2>
+  <p>void ofTexture::allocate(const ofPixels &amp;pix, bool bUseARBExtension)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Allocate texture using an ofPixels instance and type.</p>
+<p>This lets you overide the default OF texture type in case you need a
+square GL_TEXTURE_2D texture.</p>
+<p>Warning: ARB textures are not available in OpenGL ES.</p>
+<p>See also: ofEnableArbTex()</p>
+<p>See also: allocate(const ofPixels&amp; pix)</p>
+<p>Parameters:
+pix Reference to ofPixels instance.
+bUseARBExtension Set to true to use rectangular textures.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail allocate" data-lookup="allocate" data-item-type="method">
+  	 
+	<h1><a name="show_allocate">allocate(...)</a></h1>
+	<h2>
+  <p>void ofTexture::allocate(const ofShortPixels &amp;pix)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Allocate texture using an ofShortPixels instance.</p>
+<p>Same as void allocate(const ofPixels&amp; pix), except using ofShortPixels.</p>
+<p>See also: allocate(const ofPixels&amp; pix)</p>
+<p>Parameters:
+pix Reference to ofShortPixels instance.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail allocate" data-lookup="allocate" data-item-type="method">
+  	 
+	<h1><a name="show_allocate">allocate(...)</a></h1>
+	<h2>
+  <p>void ofTexture::allocate(const ofShortPixels &amp;pix, bool bUseARBExtension)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Allocate texture using an ofShortPixels instance and type.</p>
+<p>Same as void void allocate(const ofPixels&amp; pix), except using ofShortPixels.</p>
+<p>See also: allocate(const ofShortPixels&amp; pix)</p>
+<p>Parameters:
+pix Reference to ofShortPixels instance.
+bUseARBExtension Set to true to use rectangular textures.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail allocate" data-lookup="allocate" data-item-type="method">
+  	 
+	<h1><a name="show_allocate">allocate(...)</a></h1>
+	<h2>
+  <p>void ofTexture::allocate(const ofTextureData &amp;textureData)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Allocate the texture using the given settings.</p>
+<p>This is useful if you need manual control over loading a number of
+textures with the same settings. Make sure to set the texture data
+parameters first.</p>
+<p>Parameters:
+textureData The settings to use when allocating the ofTexture.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail allocate" data-lookup="allocate" data-item-type="method">
+  	 
+	<h1><a name="show_allocate">allocate(...)</a></h1>
+	<h2>
+  <p>void ofTexture::allocate(const ofTextureData &amp;textureData, int glFormat, int pixelType)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Allocate the texture using the given settings and custom format.</p>
+<p>Parameters:
+textureData The settings to use when allocating the ofTexture.
+glFormat GL texture format: GL_RGBA, GL_LUMINANCE, etc.
+pixelType GL pixel type: GL_UNSIGNED_BYTE, GL_FLOAT, etc.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail allocate" data-lookup="allocate" data-item-type="method">
+  	 
+	<h1><a name="show_allocate">allocate(...)</a></h1>
+	<h2>
+  <p>void ofTexture::allocate(int w, int h, int glInternalFormat)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This is the call to allocate opengl texture. The width (w) and height (h) do not necessarily need to be powers of 2, but they do need to be large enough to contain the data you will upload to the texture.  The internal data type describes how opengl will store this texture internally. For example, if you want a grayscale texture, you can use "GL_LUMINANCE". You can uplaod what ever type of data you want (using loadData()) but internally, opengl will store the information as grayscale. Other types include: GL_RGB, GL_RGBA.
+You need to allocate the texture before drawing it or loading data into it.
+uses the currently set OF texture type - default ARB texture</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Allocate texture of a given size and format.</p>
+<p>The width (w) and height (h) do not necessarily need to be powers of 2,
+but they do need to be large enough to contain the data you will upload
+to the texture.</p>
+<p>The internal data type <code>glFormat</code> describes how OpenGL will store this
+texture internally. For example, if you want a grayscale texture, you
+can use <code>GL_LUMINANCE</code>. You can upload what ever type of data you want
+(using <code>loadData()</code>) but internally, opengl will store the information
+as grayscale. Other types include: <code>GL_RGB</code>, <code>GL_RGBA</code>.</p>
+<p>This method applies the currently set OF texture type and defaults to
+ARB rectangular textures if they are supported. (They are not supported
+on OpenGL ES).</p>
+<p>Parameters:
+w Desired width in pixels.
+h Desired height in pixels.
+glInternalFormat OpenGL internal data format: <code>GL_RGBA</code>, <code>GL_LUMINANCE</code>, etc.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail allocate" data-lookup="allocate" data-item-type="method">
+  	 
+	<h1><a name="show_allocate">allocate(...)</a></h1>
+	<h2>
+  <p>void ofTexture::allocate(int w, int h, int glInternalFormat, bool bUseARBExtension)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See previous allocate for knowing the behaviour of this function. The parameter bUseARBEExtension allow the user to enable the ARBE extension for this texture.
+You need to allocate the texture before drawing it or loading data into it, lets you overide the default OF texture type</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Allocate texture of a given size and format. Specify texture type.</p>
+<p>This allows to enable the ARBE extension for this texture.
+This will overide the default OF texture type, in case you need a
+square texture (<code>GL_TEXTURE_2D</code>).</p>
+<p>Warning: ARB textures are not available in OpenGL ES.</p>
+<p>See also: ofEnableArbTex()</p>
+<p>See also: allocate(int w, int h, int glInternalFormat)</p>
+<p>Parameters:
+w Desired width in pixels.
+h Desired height in pixels.
+glInternalFormat The internal openGL format.
+bUseARBExtension Set to true to use rectangular textures.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail allocate" data-lookup="allocate" data-item-type="method">
+  	 
+	<h1><a name="show_allocate">allocate(...)</a></h1>
+	<h2>
+  <p>void ofTexture::allocate(int w, int h, int glInternalFormat, bool bUseARBExtension, int glFormat, int pixelType)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Allocate texture of a given size, format, &amp; type.</p>
+<p>See also: allocate(int w, int h, int glInternalFormat)</p>
+<p>Parameters:
+w Desired width in pixels.
+h Desired height in pixels.
+glInternalFormat OpenGL data format: <code>GL_RGBA</code>, <code>GL_LUMINANCE</code>, etc.
+bUseARBExtension Set to true to use rectangular textures.
+glFormat The OpenGL format.
+pixelType OpenGL pixel type: <code>GL_UNSIGNED_BYTE</code>, <code>GL_FLOAT</code>, etc.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail allocate" data-lookup="allocate" data-item-type="method">
+  	 
+	<h1><a name="show_allocate">allocate(...)</a></h1>
+	<h2>
+  <p>void ofTexture::allocate(int w, int h, int glInternalFormat, int glFormat, int pixelType)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Allocate texture of a given size and format.</p>
+<p>See also: allocate(int w, int h, int glInternalFormat)</p>
+<p>Parameters:
+w Desired width in pixels.
+h Desired height in pixels.
+glInternalFormat The internal openGL format.
+glFormat The openGL format.
+pixelType GL pixel type: GL_UNSIGNED_BYTE, GL_FLOAT, etc.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail allocateAsBufferTexture" data-lookup="allocateAsBufferTexture" data-item-type="method">
+  	 
+	<h1><a name="show_allocateAsBufferTexture">allocateAsBufferTexture(...)</a></h1>
+	<h2>
+  <p>void ofTexture::allocateAsBufferTexture(const ofBufferObject &amp;buffer, int glInternalFormat)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Allocate texture as a Buffer Texture.</p>
+<p>Uses a GPU buffer as data for the texture instead of pixels in RAM
+Allows to use texture buffer objects (TBO) which make it easier to send big
+amounts of data to a shader as a uniform.</p>
+<p>Buffer textures are 1D textures, and may only be sampled using texelFetch
+in GLSL.</p>
+<p>See textureBufferInstanceExample and https://www.opengl.org/wiki/Buffer_Texture</p>
+<p>See also: allocate(const ofBufferObject &amp; buffer, int glInternalFormat)</p>
+<p>Parameters:
+buffer Reference to ofBufferObject instance.
+glInternalFormat Internal pixel format of the data.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail bindAsImage" data-lookup="bindAsImage" data-item-type="method">
+  	 
+	<h1><a name="show_bindAsImage">bindAsImage(...)</a></h1>
+	<h2>
+  <p>void ofTexture::bindAsImage(GLuint unit, GLenum access, GLint level=0, GLboolean layered, GLint layer=0)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Calls glBindImageTexture on the texture</p>
+<p>Binds the texture as an read or write image, only available since OpenGL 4.2</p>
+<p>Warning: This is not available in OpenGLES</p>
+<p>See also: http://www.opengl.org/wiki/GLAPI/glBindImageTexture</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail clear" data-lookup="clear" data-item-type="method">
+  	 
+	<h1><a name="show_clear">clear()</a></h1>
+	<h2>
+  <p>void ofTexture::clear()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>clears / frees the texture memory, if something was already allocated. useful if you need to control the memory on the graphics card.
+Clears all the data from the texture</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Clears the texture.</p>
+<p>Clears / frees the texture memory, if something was already allocated.
+Useful if you need to control the memory on the graphics card.</p>
+<p>The internal GL texture ID is only released if this is the last texture
+using it.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail copyTo" data-lookup="copyTo" data-item-type="method">
+  	 
+	<h1><a name="show_copyTo">copyTo(...)</a></h1>
+	<h2>
+  <p>void ofTexture::copyTo(ofBufferObject &amp;buffer)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Copy the texture to an ofBufferObject.</p>
+<p>Parameters:
+buffer the target buffer to copy to.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail disableAlphaMask" data-lookup="disableAlphaMask" data-item-type="method">
+  	 
+	<h1><a name="show_disableAlphaMask">disableAlphaMask()</a></h1>
+	<h2>
+  <p>void ofTexture::disableAlphaMask()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Disable the alpha mask.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail disableMipmap" data-lookup="disableMipmap" data-item-type="method">
+  	 
+	<h1><a name="show_disableMipmap">disableMipmap()</a></h1>
+	<h2>
+  <p>void ofTexture::disableMipmap()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Sets flag disallowing texture to auto-generate mipmap.</p>
+<p>By default, this will set your minFilter to GL_LINEAR_MIPMAP_LINEAR.
+If you want to change your minFilter later use setTextureMinMagFilter()</p>
+<pre><code>If you want to generate a mipmap later, or at a specific
+</code></pre>
+<p>point in your code, use ofTexture::generateMipmap() instead.</p>
+<p>See also: generateMipmap()</p>
+<p>See also: enableMipmap()</p>
+<p>See also: setTextureMinMagFilter()</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail disableTextureMatrix" data-lookup="disableTextureMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_disableTextureMatrix">disableTextureMatrix()</a></h1>
+	<h2>
+  <p>void ofTexture::disableTextureMatrix()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Disable the texture matrix.
+Disable the texture matrix.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofTexture::draw(const ofPoint &amp;p1, const ofPoint &amp;p2, const ofPoint &amp;p3, const ofPoint &amp;p4)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Draws the texture at 4 points passed in as if you created 4 glVertices.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Draws the texture at 4 points passed in as if you created 4 glVertices.</p>
+<p>Parameters:
+p1 Upper left position on the x axis.
+p2 Upper left position on the y axis.
+p3 Lower right position on the x axis.
+p4 Lower right position on the y axis.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofTexture::draw(float x, float y)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Draws the texture at a given point (x,y), using the textures true width and height.
+Draws the texture at the point passed in.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofTexture::draw(float x, float y, float w, float h)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>draws the texture at a given point (x,y), with a given width (w) and height (h).
+Draws the texture at the x, y and w, h.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofTexture::draw(float x, float y, float z)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Draws the texture at the point passed in in 3D space.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofTexture::draw(float x, float y, float z, float w, float h)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Draws the texture at the x, y, z in 3D space with the width and height at w,h.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Draw the texture at a given size witdh and depth.</p>
+<p>Parameters:
+x Draw position on the x axis.
+y Draw position on the y axis.
+z Draw position on the z axis.
+w Draw width.
+h Draw height.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawSubsection" data-lookup="drawSubsection" data-item-type="method">
+  	 
+	<h1><a name="show_drawSubsection">drawSubsection(...)</a></h1>
+	<h2>
+  <p>void ofTexture::drawSubsection(float x, float y, float w, float h, float sx, float sy)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Draw a subsection of the texture.</p>
+<p>Like ofDrawRectangle() depend on the current <code>OF_RECT_MODE</code>:</p>
+<ul>
+<li><code>OF_RECT_MODE_CORNER</code>: drawn with the upper left corner = (x,y)</li>
+<li><code>OF_RECT_MODE_CENTER</code>: drawn centered on (x,y)</li>
+</ul>
+<p>See also: ofSetRectMode()</p>
+<p>Parameters:
+x Draw position on the x axis.
+y Draw position on the y axis.
+w Draw width.
+h Draw height.
+sx Subsection x axis offset within the texture.
+sy Subsection y axis offset within the texture.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawSubsection" data-lookup="drawSubsection" data-item-type="method">
+  	 
+	<h1><a name="show_drawSubsection">drawSubsection(...)</a></h1>
+	<h2>
+  <p>void ofTexture::drawSubsection(float x, float y, float w, float h, float sx, float sy, float sw, float sh)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Draw a subsection of the texture with an offset.</p>
+<p>See also: drawSubsection(float x, float y, float w, float h, float sx, float sy)</p>
+<p>Parameters:
+x Draw position on the x axis.
+y Draw position on the y axis.
+w Draw width.
+h Draw height.
+sx Subsection x axis offset within the texture.
+sy Subsection y axis offset within the texture.
+sw Subsection width within the texture.
+sh Subsection height within the texture.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawSubsection" data-lookup="drawSubsection" data-item-type="method">
+  	 
+	<h1><a name="show_drawSubsection">drawSubsection(...)</a></h1>
+	<h2>
+  <p>void ofTexture::drawSubsection(float x, float y, float z, float w, float h, float sx, float sy)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Draw a subsection of the texture with depth.</p>
+<p>See also: drawSubsection(float x, float y, float w, float h, float sx, float sy)</p>
+<p>Parameters:
+x Draw position on the x axis.
+y Draw position on the y axis.
+z Draw position on the z axis.
+w Draw width.
+h Draw height.
+sx Subsection x axis offset within the texture.
+sy Subsection y axis offset within the texture.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawSubsection" data-lookup="drawSubsection" data-item-type="method">
+  	 
+	<h1><a name="show_drawSubsection">drawSubsection(...)</a></h1>
+	<h2>
+  <p>void ofTexture::drawSubsection(float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Draw a subsection of the texture with an offset and depth.</p>
+<p>See also: drawSubsection(float x, float y, float w, float h, float sx, float sy)</p>
+<p>Parameters:
+x Draw position on the x axis.
+y Draw position on the y axis.
+z Draw position on the z axis.
+w Draw width.
+h Draw height.
+sx Subsection x axis offset within the texture.
+sy Subsection y axis offset within the texture.
+sw Subsection width within the texture.
+sh Subsection height within the texture.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail enableMipmap" data-lookup="enableMipmap" data-item-type="method">
+  	 
+	<h1><a name="show_enableMipmap">enableMipmap()</a></h1>
+	<h2>
+  <p>void ofTexture::enableMipmap()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Sets flag allowing texture to auto-generate a mipmap.</p>
+<p>By default, this will set your minFilter to GL_LINEAR_MIPMAP_LINEAR.
+If you want to change your minFilter later use setTextureMinMagFilter()</p>
+<pre><code>If you want to generate a mipmap later, or at a specific
+</code></pre>
+<p>point in your code, use generateMipmap() instead.</p>
+<p>See also: generateMipmap()</p>
+<p>See also: disableMipmap()</p>
+<p>See also: setTextureMinMagFilter()</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail generateMipmap" data-lookup="generateMipmap" data-item-type="method">
+  	 
+	<h1><a name="show_generateMipmap">generateMipmap()</a></h1>
+	<h2>
+  <p>void ofTexture::generateMipmap()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Generate mipmap for the current texture.</p>
+<p>Warning: Only GL_TEXTURE_RECTANGLE - which is the default openFrameworks
+texture target - does <em>not</em> support mipmaps, so make sure to call
+ofDisableArbTex() before loading texture
+data for a texture you want to generate mipmaps for.</p>
+<p>See also: ofEnableArbTex()</p>
+<p>See also: ofDisableArbTex()</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getAlphaMask" data-lookup="getAlphaMask" data-item-type="method">
+  	 
+	<h1><a name="show_getAlphaMask">getAlphaMask()</a></h1>
+	<h2>
+  <p>const ofTexture * ofTexture::getAlphaMask()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getCoordFromPercent" data-lookup="getCoordFromPercent" data-item-type="method">
+  	 
+	<h1><a name="show_getCoordFromPercent">getCoordFromPercent(...)</a></h1>
+	<h2>
+  <p>ofPoint ofTexture::getCoordFromPercent(float xPts, float yPts)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Helper to convert display coordinate to texture coordinate.</p>
+<p>Parameters:
+xPts Horizontal position in a normalized percentage (0 - 1).
+yPts Vertical position in a normalized percentage (0 - 1).</p>
+<p>Returns: Texture coordinate or ofPoint::zero() if texture is not allocated.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getCoordFromPoint" data-lookup="getCoordFromPoint" data-item-type="method">
+  	 
+	<h1><a name="show_getCoordFromPoint">getCoordFromPoint(...)</a></h1>
+	<h2>
+  <p>ofPoint ofTexture::getCoordFromPoint(float xPos, float yPos)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>these are helpers to allow you to get points for the texture ala "glTexCoordf" but are texture type independent. use them for immediate or non immediate mode</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Helper to convert display coordinate to texture coordinate.</p>
+<p>Parameters:
+xPos Horizontal position in pixels.
+yPos Vertical position in pixels.</p>
+<p>Returns: Texture coordinate or ofPoint::zero() if texture is not allocated.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getHeight" data-lookup="getHeight" data-item-type="method">
+  	 
+	<h1><a name="show_getHeight">getHeight()</a></h1>
+	<h2>
+  <p>float ofTexture::getHeight()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the height of the texture. This will be in pixels unless you've set your application to use normalized coordinates.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Display height of texture.</p>
+<p>Return value is pixel size (default) or normalized (0 - 1) if ofEnableNormalizedTextures() is set to true.</p>
+<p>See also: ofEnabledNormalizedTextures()</p>
+<p>Returns: Display height of texture in pixels.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getMeshForSubsection" data-lookup="getMeshForSubsection" data-item-type="method">
+  	 
+	<h1><a name="show_getMeshForSubsection">getMeshForSubsection(...)</a></h1>
+	<h2>
+  <p>ofMesh ofTexture::getMeshForSubsection(float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh, bool vflipped, ofRectMode rectMode)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get a mesh that has the texture coordinates set.</p>
+<p>See also: drawSubsection(float x, float y, float w, float h, float sx, float sy)</p>
+<p>Parameters:
+x Draw position on the x axis.
+y Draw position on the y axis.
+z Draw position on the z axis.
+w Draw width.
+h Draw height.
+sx Subsection x axis offset within the texture.
+sy Subsection y axis offset within the texture.
+sw Subsection width within the texture.
+sh Subsection height within the texture.
+vflipped Takes into account the flipped state in OF.
+rectMode rectMode Taking x,y as the center or the top left corner.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getQuad" data-lookup="getQuad" data-item-type="method">
+  	 
+	<h1><a name="show_getQuad">getQuad(...)</a></h1>
+	<h2>
+  <p>ofMesh ofTexture::getQuad(const ofPoint &amp;p1, const ofPoint &amp;p2, const ofPoint &amp;p3, const ofPoint &amp;p4)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getTextureData" data-lookup="getTextureData" data-item-type="method">
+  	 
+	<h1><a name="show_getTextureData">getTextureData()</a></h1>
+	<h2>
+  <p>ofTextureData &amp; ofTexture::getTextureData()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Internal texture data access.</p>
+<p>This returns the internal texture data for this texture, for instance,
+its textureID, type of texture, whether it's been allocated and other
+data about the state of the texture.</p>
+<p>Returns: a reference to the internal texture data struct.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getTextureMatrix" data-lookup="getTextureMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_getTextureMatrix">getTextureMatrix()</a></h1>
+	<h2>
+  <p>const ofMatrix4x4 &amp; ofTexture::getTextureMatrix()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getWidth" data-lookup="getWidth" data-item-type="method">
+  	 
+	<h1><a name="show_getWidth">getWidth()</a></h1>
+	<h2>
+  <p>float ofTexture::getWidth()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the width of the texture. This will be in pixels unless you've set your application to use normalized coordinates.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Display width of texture.</p>
+<p>Return value is pixel size (default) or normalized (0 - 1) if ofEnableNormalizedTextures() is set to true.</p>
+<p>See also: ofEnabledNormalizedTextures()</p>
+<p>Returns: Display width of texture in pixels.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail isAllocated" data-lookup="isAllocated" data-item-type="method">
+  	 
+	<h1><a name="show_isAllocated">isAllocated()</a></h1>
+	<h2>
+  <p>bool ofTexture::isAllocated()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Get whether the texture has been allocated.
+ofTextureData getTextureData() ###
+// reference to the actual textureData inside the smart pointer
+// for backwards compatibility
+ofTextureData texData ###
+float getHeight() ###
+float getWidth() ###</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Determine whether the texture has been allocated.</p>
+<p>This lets you check if a texture is safe to draw.  The texture can both
+be allocated by using <code>allocate()</code> or loading it with data <code>loadData()</code>.</p>
+<p>Returns: true if the texture has been allocated.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail isUsingTextureMatrix" data-lookup="isUsingTextureMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_isUsingTextureMatrix">isUsingTextureMatrix()</a></h1>
+	<h2>
+  <p>bool ofTexture::isUsingTextureMatrix()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail loadData" data-lookup="loadData" data-item-type="method">
+  	 
+	<h1><a name="show_loadData">loadData(...)</a></h1>
+	<h2>
+  <p>void ofTexture::loadData(const float *data, int w, int h, int glFormat)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Load float pixel data.</p>
+<p>See also: loadData(const unsigned char* const data, int w, int h, int glFormat)</p>
+<p>Parameters:
+data Pointer to byte pixel data. Must not be nullptr.
+w Pixel data width.
+h Pixel data height.
+glFormat GL pixel type: GL_RGBA, GL_LUMINANCE, etc.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail loadData" data-lookup="loadData" data-item-type="method">
+  	 
+	<h1><a name="show_loadData">loadData(...)</a></h1>
+	<h2>
+  <p>void ofTexture::loadData(const ofBufferObject &amp;buffer, int glFormat, int glType)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Load pixels from an ofBufferObject</p>
+<p>This is different to allocate(ofBufferObject,internal). That
+creates a texture which data lives in GL buffer while this
+copies the data from the buffer to the texture.</p>
+<p>This is usually used to upload data to be shown asynchronously
+by using a buffer object binded as a PBO</p>
+<p>Parameters:
+buffer The buffer to load.
+glFormat GL pixel type: GL_RGBA, GL_LUMINANCE, etc.
+glType the GL type to load.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail loadData" data-lookup="loadData" data-item-type="method">
+  	 
+	<h1><a name="show_loadData">loadData(...)</a></h1>
+	<h2>
+  <p>void ofTexture::loadData(const ofFloatPixels &amp;pix)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Load pixels from an ofFloatPixels instance.</p>
+<p>Same as loadData(ofPixels &amp;) but for ofFloatPixels.</p>
+<p>See also: loadData(const ofPixels &amp; pix)</p>
+<p>Parameters:
+pix Reference to ofFloatPixels instance.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail loadData" data-lookup="loadData" data-item-type="method">
+  	 
+	<h1><a name="show_loadData">loadData(...)</a></h1>
+	<h2>
+  <p>void ofTexture::loadData(const ofFloatPixels &amp;pix, int glFormat)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Load pixels from an ofFloatPixels instance and specify the format.</p>
+<p>See also: loadData(const ofPixels &amp; pix, int glFormat)</p>
+<p>Parameters:
+pix Reference to ofFloatPixels instance.
+glFormat GL pixel type: GL_RGBA, GL_LUMINANCE, etc.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail loadData" data-lookup="loadData" data-item-type="method">
+  	 
+	<h1><a name="show_loadData">loadData(...)</a></h1>
+	<h2>
+  <p>void ofTexture::loadData(const ofPixels &amp;pix)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Load pixels from an ofPixels instance.</p>
+<p>Parameters:
+pix Reference to ofPixels instance.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail loadData" data-lookup="loadData" data-item-type="method">
+  	 
+	<h1><a name="show_loadData">loadData(...)</a></h1>
+	<h2>
+  <p>void ofTexture::loadData(const ofPixels &amp;pix, int glFormat)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Load pixels from an ofPixels instance and specify the format.</p>
+<p>glFormat can be different to the internal format of the texture on each
+load, ie. we can upload GL_BGRA pixels into a GL_RGBA texture, but the
+number of channels need to match according to the OpenGL standard.</p>
+<p>Parameters:
+pix Reference to ofPixels instance.
+glFormat GL pixel type: GL_RGBA, GL_LUMINANCE, etc.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail loadData" data-lookup="loadData" data-item-type="method">
+  	 
+	<h1><a name="show_loadData">loadData(...)</a></h1>
+	<h2>
+  <p>void ofTexture::loadData(const ofShortPixels &amp;pix)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Load pixels from an ofShortPixels instance.</p>
+<p>Same as loadData(ofPixels &amp;) but for ofShortPixels.</p>
+<p>See also: loadData(const ofPixels &amp; pix)</p>
+<p>Parameters:
+pix Reference to ofShortPixels instance.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail loadData" data-lookup="loadData" data-item-type="method">
+  	 
+	<h1><a name="show_loadData">loadData(...)</a></h1>
+	<h2>
+  <p>void ofTexture::loadData(const ofShortPixels &amp;pix, int glFormat)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Load pixels from an ofShortPixels instance &amp; specify the format.</p>
+<p>See also: loadData(const ofPixels &amp; pix, int glFormat)</p>
+<p>Parameters:
+pix Reference to ofShortPixels instance.
+glFormat GL pixel type: GL_RGBA, GL_LUMINANCE, etc.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail loadData" data-lookup="loadData" data-item-type="method">
+  	 
+	<h1><a name="show_loadData">loadData(...)</a></h1>
+	<h2>
+  <p>void ofTexture::loadData(const unsigned char *const data, int w, int h, int glFormat)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Load byte pixel data.</p>
+<p>glFormat can be different to the internal format of the texture on each
+load, i.e. we can upload GL_BGRA pixels into a GL_RGBA texture but the
+number of channels need to match according to the OpenGL standard.</p>
+<p>Parameters:
+data Pointer to byte pixel data. Must not be nullptr.
+w Pixel data width.
+h Pixel data height.
+glFormat GL pixel type: GL_RGBA, GL_LUMINANCE, etc.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail loadData" data-lookup="loadData" data-item-type="method">
+  	 
+	<h1><a name="show_loadData">loadData(...)</a></h1>
+	<h2>
+  <p>void ofTexture::loadData(const unsigned short *data, int w, int h, int glFormat)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Load short (2 byte) pixel data.</p>
+<p>See also: loadData(const unsigned char* const data, int w, int h, int glFormat)</p>
+<p>Parameters:
+data Pointer to byte pixel data. Must not be nullptr.
+w Pixel data width.
+h Pixel data height.
+glFormat GL pixel type: GL_RGBA, GL_LUMINANCE, etc.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail loadScreenData" data-lookup="loadScreenData" data-item-type="method">
+  	 
+	<h1><a name="show_loadScreenData">loadScreenData(...)</a></h1>
+	<h2>
+  <p>void ofTexture::loadScreenData(int x, int y, int w, int h)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Grabs a region of the screen and loads it into the texture. Specifiy the position (x,y) you wish to grab from, with the width (w) and height (h) of the region. Make sure that you have allocated your texture (using allocate()) to be large enough to hold the region of the screen you wish to load.
+Load data from the current screen into this texture. Grabs a region of the screen and loads it into the texture. Specifiy the position (x,y) you wish to grab from, with the width (w) and height (h) of the region. Make sure that you have allocated your texture (using allocate()) to be large enough to hold the region of the screen you wish to load.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Copy an area of the screen into this texture.</p>
+<p>Specifiy the position (x,y) you wish to grab from, with the width (w)
+and height (h) of the region.</p>
+<p>Make sure that you have allocated your texture (using <code>allocate()</code>)
+to be large enough to hold the region of the screen you wish to load.</p>
+<p>See also: http://www.opengl.org/sdk/docs/man4/html/glCopyTexSubImage2D.xhtml</p>
+<p>Parameters:
+x Upper left corner horizontal screen position.
+y Upper left corner vertical screen position.
+w Width of the area to copy in pixels.
+h Height of the area to copy in pixels.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator=" data-lookup="operator=" data-item-type="method">
+  	 
+	<h1><a name="show_operator=">operator=(...)</a></h1>
+	<h2>
+  <p>ofTexture &amp; ofTexture::operator=(const ofTexture &amp;mom)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Copy a given ofTexture into this texture.</p>
+<p>Parameters:
+mom The ofTexture to copy from. Reuses internal GL texture ID.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail readToPixels" data-lookup="readToPixels" data-item-type="method">
+  	 
+	<h1><a name="show_readToPixels">readToPixels(...)</a></h1>
+	<h2>
+  <p>void ofTexture::readToPixels(ofFloatPixels &amp;pixels)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Read current texture data from the GPU into pixels.</p>
+<p>Warning: This is not supported in OpenGL ES and does nothing.</p>
+<p>Parameters:
+pixels Target pixels reference.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail readToPixels" data-lookup="readToPixels" data-item-type="method">
+  	 
+	<h1><a name="show_readToPixels">readToPixels(...)</a></h1>
+	<h2>
+  <p>void ofTexture::readToPixels(ofPixels &amp;pixels)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Read current texture data from the GPU into pixels.</p>
+<p>Warning: This is not supported in OpenGL ES and does nothing.</p>
+<p>Parameters:
+pixels Target ofPixels reference.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail readToPixels" data-lookup="readToPixels" data-item-type="method">
+  	 
+	<h1><a name="show_readToPixels">readToPixels(...)</a></h1>
+	<h2>
+  <p>void ofTexture::readToPixels(ofShortPixels &amp;pixels)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Read current texture data from the GPU into pixels.</p>
+<p>Warning: This is not supported in OpenGL ES and does nothing.</p>
+<p>Parameters:
+pixels Target pixels reference.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setAlphaMask" data-lookup="setAlphaMask" data-item-type="method">
+  	 
+	<h1><a name="show_setAlphaMask">setAlphaMask(...)</a></h1>
+	<h2>
+  <p>void ofTexture::setAlphaMask(ofTexture &amp;mask)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Set another ofTexture to use as an alpha mask.</p>
+<p>Parameters:
+mask The texture to use as alpha mask.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setAnchorPoint" data-lookup="setAnchorPoint" data-item-type="method">
+  	 
+	<h1><a name="show_setAnchorPoint">setAnchorPoint(...)</a></h1>
+	<h2>
+  <p>void ofTexture::setAnchorPoint(float x, float y)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>set the anchor point in pixels</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Set the anchor point the texture is drawn around in pixels.</p>
+<p>This can be useful if you want to rotate an image around a particular
+point.</p>
+<p>Parameters:
+x Horizontal texture position in pixels.
+y Vertical texture position in pixels.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setCompression" data-lookup="setCompression" data-item-type="method">
+  	 
+	<h1><a name="show_setCompression">setCompression(...)</a></h1>
+	<h2>
+  <p>void ofTexture::setCompression(ofTexCompression compression)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Set the texture compression.</p>
+<p>\warning: not yet implemented.</p>
+<p>See also: ofTexCompression</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setRGToRGBASwizzles" data-lookup="setRGToRGBASwizzles" data-item-type="method">
+  	 
+	<h1><a name="show_setRGToRGBASwizzles">setRGToRGBASwizzles(...)</a></h1>
+	<h2>
+  <p>void ofTexture::setRGToRGBASwizzles(bool rToRGBSwizzles)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>\todo Define Swizzle in the documentation.
+Swizzle RGBA to grayscale with alpha in the red channel.</p>
+<p>Use 1 channel GL_R as luminance instead of red channel in OpenGL 3+.</p>
+<p>Warning: This is not supported in OpenGL ES and does nothing.</p>
+<p>See also: https://en.wikipedia.org/wiki/Swizzling_(computer_graphics)</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setSwizzle" data-lookup="setSwizzle" data-item-type="method">
+  	 
+	<h1><a name="show_setSwizzle">setSwizzle(...)</a></h1>
+	<h2>
+  <p>void ofTexture::setSwizzle(GLenum srcSwizzle, GLenum dstChannel)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Swizzle a channel to another</p>
+<p>Example:</p>
+<pre><code>ofTexture tex;
+tex.setSwizzle(GL_TEXTURE_SWIZZLE_R,GL_ALPHA);
+</code></pre>
+
+<p>will make channel 0 appear as alpha in the shader.</p>
+<p>Warning: This is not supported in OpenGL ES and does nothing.</p>
+<p>See also: https://en.wikipedia.org/wiki/Swizzling_(computer_graphics)</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setTextureMatrix" data-lookup="setTextureMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_setTextureMatrix">setTextureMatrix(...)</a></h1>
+	<h2>
+  <p>void ofTexture::setTextureMatrix(const ofMatrix4x4 &amp;m)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Sets a texture matrix to be uploaded whenever the texture is bound.</p>
+<p>Parameters:
+m The 4x4 texture matrix.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setTextureMinMagFilter" data-lookup="setTextureMinMagFilter" data-item-type="method">
+  	 
+	<h1><a name="show_setTextureMinMagFilter">setTextureMinMagFilter(...)</a></h1>
+	<h2>
+  <p>void ofTexture::setTextureMinMagFilter(GLint minFilter, GLint magFilter)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Set how the texture is scaled up and down, when it's being drawn larger or smaller than it's actual size.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Set texture minification/magnification scaling filters.</p>
+<p>Controls how OpenGL will scale this texture.</p>
+<p>See also: http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml</p>
+<p>See also: ofTextureSetMinMagFilters()</p>
+<p>Warning: May be overridden.</p>
+<p>Parameters:
+minFilter minifying filter for scaling a pixel to a smaller area.
+magFilter magnifying filter for scaling a pixel to a larger area.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setTextureWrap" data-lookup="setTextureWrap" data-item-type="method">
+  	 
+	<h1><a name="show_setTextureWrap">setTextureWrap(...)</a></h1>
+	<h2>
+  <p>void ofTexture::setTextureWrap(GLint wrapModeHorizontal, GLint wrapModeVertical)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Sets how the texture wraps around the edges of the vertices that the texture is being drawn to.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Set texture wrapping.</p>
+<p>By default, textures are clamped to their edges with <code>GL_CLAMP_TO_EDGE</code>.
+Setting a repeat mode like <code>GL_REPEAT</code> allows you to create tiled
+backgrounds with small textures.</p>
+<p>See also: ofTextureSetWrap()</p>
+<p>See also: http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml</p>
+<p>Warning: May be overridden.</p>
+<p>Parameters:
+wrapModeHorizontal wrap parameter for texture coordinate s.
+wrapModeVertical wrap parameter for texture coordinate t.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setUseExternalTextureID" data-lookup="setUseExternalTextureID" data-item-type="method">
+  	 
+	<h1><a name="show_setUseExternalTextureID">setUseExternalTextureID(...)</a></h1>
+	<h2>
+  <p>void ofTexture::setUseExternalTextureID(GLuint externTexID)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Set the texture ID.</p>
+<p>Allows you to point the texture id to an externally allocated id
+(perhaps from another texture). It's up to you to set the rest of the
+textData parameters manually.</p>
+<p>Warning: When setting an external texture ID, the user must set the
+remaining ofTextureData parameters manually.</p>
+<p>Parameters:
+externTexID New texture ID.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+
+            <!-- vars detail -->
+
+            <!-- functions detail -->
+              <!--h2><a name="functions"></a>ofTexture functions</h2-->
+                        
+<div class="documentation_detail ofDisableArbTex" data-lookup="ofDisableArbTex" data-item-type="function">
+  	 
+	<h1><a name="show_ofDisableArbTex">ofDisableArbTex()</a></h1>
+	<h2>
+  <p>void ofDisableArbTex()</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Use GL_TEXTURE_2D textures.</p>
+<p>GL_TEXTURE_2D is OpenGL's default way of handling textures and supports a
+wider range of core OpenGL features such as mipmaps.</p>
+<p>See also: ofEnableArbTex()</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofDisableNormalizedTexCoords" data-lookup="ofDisableNormalizedTexCoords" data-item-type="function">
+  	 
+	<h1><a name="show_ofDisableNormalizedTexCoords">ofDisableNormalizedTexCoords()</a></h1>
+	<h2>
+  <p>void ofDisableNormalizedTexCoords()</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Use pixel-based texture coordinates.</p>
+<p>See also: ofEnableNormalizedTexCoords()</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofDisableTextureEdgeHack" data-lookup="ofDisableTextureEdgeHack" data-item-type="function">
+  	 
+	<h1><a name="show_ofDisableTextureEdgeHack">ofDisableTextureEdgeHack()</a></h1>
+	<h2>
+  <p>void ofDisableTextureEdgeHack()</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Disable global texture "edge hack".</p>
+<p>See also: ofEnableTextureEdgeHack()</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofEnableArbTex" data-lookup="ofEnableArbTex" data-item-type="function">
+  	 
+	<h1><a name="show_ofEnableArbTex">ofEnableArbTex()</a></h1>
+	<h2>
+  <p>void ofEnableArbTex()</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>ofEnableArbText enables the use of ARB textures. ARB textures enable the creation of non power of 2 sized textures.</p>
+
+
+                <div class="inlined_docs">
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Use GL_TEXTURE_RECTANGLE textures.</p>
+<p>GL_TEXTURE_RECTANGLE textures are more intuitive since they allow pixel
+based coordinates and are enabled by default.</p>
+<p>GL_TEXTURE_2D textures use normalised texture coordinates (a float value
+between 0 and 1 is used to express texture coordinates along width and
+height).</p>
+<p>GL_TEXTURE_2D textures are more widely supported and allow advanced features
+such as mipmaps and texture compression.</p>
+<p>See also: ofDisableArbTex()</p>
+<p>Warning: GL_TEXTURE_RECTANGLE is not available in OpenGL ES.</p>
+<p>Warning: GL_TEXTURE_RECTANGLE does not support mipmaps.</p>
+
+            
+                </div>
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofEnableNormalizedTexCoords" data-lookup="ofEnableNormalizedTexCoords" data-item-type="function">
+  	 
+	<h1><a name="show_ofEnableNormalizedTexCoords">ofEnableNormalizedTexCoords()</a></h1>
+	<h2>
+  <p>void ofEnableNormalizedTexCoords()</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Use normalized (0 - 1) texture coordinates.</p>
+<p>By default, textures in OF work with pixel-based coordinates based on given
+content dimensions (images size, fbo size, etc). Normalized (0 - 1)
+coordinates are the traditional OpenGL default as they allow working with
+internal texture data without having to worry about specific dimensions of
+the content.</p>
+<p>This overrides individual ofTexture wrap settings.</p>
+<p>See also: http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofEnableTextureEdgeHack" data-lookup="ofEnableTextureEdgeHack" data-item-type="function">
+  	 
+	<h1><a name="show_ofEnableTextureEdgeHack">ofEnableTextureEdgeHack()</a></h1>
+	<h2>
+  <p>void ofEnableTextureEdgeHack()</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Enable the global texture "edge hack" to compensate for edge artifacts.</p>
+<p>Adds a 2 pixel offset to avoid possible edge artifacts (typically a black or
+white border). This <em>very slightly</em> alters the image by scaling.  This is
+enabled by default.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofGetUsingArbTex" data-lookup="ofGetUsingArbTex" data-item-type="function">
+  	 
+	<h1><a name="show_ofGetUsingArbTex">ofGetUsingArbTex()</a></h1>
+	<h2>
+  <p>bool ofGetUsingArbTex()</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Check whether OF is using GL_TEXTURE_RECTANGLE rectangular or GL_TEXTURE_2D textures.</p>
+<p>See also: ofEnableArbTex()</p>
+<p>Returns: true if using GL_TEXTURE_RECTANGLE textures, false if using GL_TEXTURE_2D textures.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofGetUsingNormalizedTexCoords" data-lookup="ofGetUsingNormalizedTexCoords" data-item-type="function">
+  	 
+	<h1><a name="show_ofGetUsingNormalizedTexCoords">ofGetUsingNormalizedTexCoords()</a></h1>
+	<h2>
+  <p>bool ofGetUsingNormalizedTexCoords()</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Check whether OF is using normalized or pixel texture coordinates.</p>
+<p>See also: ofEnableNormalizedTexCoords()</p>
+<p>Returns: true if using normalized (0 - 1) texture coordinates.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofIsTextureEdgeHackEnabled" data-lookup="ofIsTextureEdgeHackEnabled" data-item-type="function">
+  	 
+	<h1><a name="show_ofIsTextureEdgeHackEnabled">ofIsTextureEdgeHackEnabled()</a></h1>
+	<h2>
+  <p>bool ofIsTextureEdgeHackEnabled()</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Check whether OF is using the texture "edge hack".</p>
+<p>See also: ofEnableTextureEdgeHack()</p>
+<p>Returns: true if OF is currently using the texture "edge hack".</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+            <hr/>
+                
+            <!--diqus comments for class/functions module description-->
+            <div id="comments_header">
+            <h2>comments</h2>
+            <p>You can add comments with usage examples or other information for each class, method or variable, for adding documentation to an empty section or reporting errors is better to send a fix or open an issue through <a href="https://github.com/openframeworks/ofSite">github</a>.</p>
+            <p>When posting code enclose it in:</p>
+            <pre><code class="html">&lt;pre&gt;&lt;code class=&quot;cpp&quot;&gt;&nbsp;&lt;/code&gt;&lt;/pre&gt;</code></pre>
+            <br/>
+            </div>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+
+            // DISQUS
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+
+            var disqus_shortname = 'openframeworks'; // required: replace example with your forum shortname
+            //var disqus_developer = 1;
+
+            location_elements = window.location.pathname.split("/");
+            module_name = location_elements[location_elements.length-1].split(".")[0];
+            section_name = location.hash.split("_")[1];
+            console.log(module_name + " " + section_name);
+            if(section_name!=undefined && section_name!=''){
+            var disqus_identifier = window.location.pathname + "#!show_" + section_name;  
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "#!show_" + section_name;
+            var discus_title = document.title + " - " + section_name;
+            }else{
+            var disqus_identifier = window.location.pathname;
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            var discus_title = document.title;
+            }
+
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */   
+            (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		
+        </div><!-- End Submenu right -->
+      </div><!-- End page wide -->
+      </div><!-- End body wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:33:48 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+4d738d6979d8e7992359cde47632192d1fbef472
+">
+
+4d738d6979d8e7992359cde47632192d1fbef472
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+

@@ -1,0 +1,583 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+    <script src="http://icq4ever.iptime.org//js/jquery.columnizer.min.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-71930909-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
+  <body>
+    <div id="content">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">	
+	    <div class="page-wide-tutorial">
+            <!--ul class="submenu">
+                <li><a href="/documentation">레퍼런스</a></li>
+                <li><a href="/tutorials">튜토리얼</a></li>
+            </ul-->
+    	    <h1>stl::vector basics</h1>
+    	    <span class="article_meta">2013/03/07 10:00:00&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="http://csugrue.com">Chris Sugrue</a></span><br/>
+    	    <div class="article">
+    	    
+  <p>A c++ vector is a type of container (like an array) that allows the storage of multiple elements (numbers, strings, objects etc.) in a format that can grow or shrink dynamically. Once a vector is created, new elements can be added, others erased and the entire vector can be sorted or shuffled. This tutorial is an overview of the basics of using vectors and is geared towards openFrameworks programmers that may be new or coming from other platforms and languages. It is not a comprehensive guide to all the functions of c++ vectors (additional resource links are provided below). </p>
+<p>Contents</p>
+<ul>
+<li><a href="#quick review">Quick Review</a></li>
+<li><a href="#declaring">Declaring (creating) a vector</a></li>
+<li><a href="#adding">Adding elements</a></li>
+<li><a href="#accessing">Accessing elements</a></li>
+<li><a href="#erasing">Erasing elements</a></li>
+<li><a href="#iterators">Iterators</a></li>
+<li><a href="#sort">Sorting and shuffling</a></li>
+<li><a href="#vectorsobjects">Vectors of objects</a></li>
+<li><a href="#vectorspointers">Vectors of pointers to objects</a></li>
+<li><a href="#optimizing">Optimizing with reserve and resize</a></li>
+<li><a href="#of">OpenFrameworks example</a></li>
+</ul>
+<p>Additional Resources:</p>
+<p><a href="http://www.cplusplus.com/reference/vector/vector/">C++ Vector Reference</a></p>
+<hr />
+<p><a name="quick review"></a></p>
+<h2 id="quick-review">Quick Review:</h2>
+<pre><code class="cpp">    vector&lt;float&gt; nums;  // create an empty vector of floats     
+</code></pre>
+
+<pre><code class="cpp">    nums.push_back(10.5); // add a float with value 10.5 to the end of vector
+</code></pre>
+
+<pre><code class="cpp">    cout &lt;&lt; nums[0] &lt;&lt; endl; // print out the value of element at position 0
+</code></pre>
+
+<pre><code class="cpp">    nums.erase( nums.begin() ); // erase the first element in the vector
+</code></pre>
+
+<pre><code class="cpp">    cout &lt;&lt; nums.size() &lt;&lt; endl; // print the number of elements in the vector
+
+    vector&lt;float&gt;:: iterator it = nums.begin(); // create an iterator for vector that points to first element
+    cout &lt;&lt; *it &lt;&lt; end; // print out the value of the element pointed to by the iterator
+</code></pre>
+
+<hr />
+<p><a name="declaring"></a></p>
+<h2 id="declaring-a-vector">Declaring a vector</h2>
+<p>vector&#60; <em>type</em> &#62; <em>name</em>;</p>
+<pre><code class="cpp">    vector&lt;float&gt; measures;       
+    vector&lt;string&gt; surnames;
+    vector&lt;Particle&gt; particles;
+</code></pre>
+
+<hr />
+<p><a name="adding"></a></p>
+<h2 id="adding-elements-to-a-vector">Adding elements to a vector</h2>
+<h3 id="push_back">push_back</h3>
+<p><em>push_back</em> adds a new element to the end of the vector. </p>
+<pre><code class="cpp">    vector&lt;string&gt; names; // declare an empty vector
+
+    names.push_back(&quot;jane&quot;); // add an element
+    names.push_back(&quot;joe&quot;); // add another - now has size of 2 with elements: &quot;jane&quot;, &quot;joe&quot;
+</code></pre>
+
+<p><em>push_back</em> is a very common way to add elements and is useful when adding elements one at a time or only a few (adding objects when an event occurs for example).</p>
+<h3 id="resize">resize</h3>
+<p><em>resize</em> allocates memory for the desired number of elements in the vector and adjusts its size accordingly. </p>
+<pre><code class="cpp">    vector&lt;int&gt; nums; // declare the vector
+
+    nums.resize(100); // allocate space for 100 ints in vector
+
+    for(int i = 0; i &lt; nums.size(); i++){
+      nums[i] = i; // set value using index
+    }
+</code></pre>
+
+<p>When adding many elements at the same time, using <em>resize</em> may be faster than <em>push_back</em>. This is because when a new element is added to the end of a vector there might not be enough space in memory at the current location. In this case, the entire vector is moved meaning that it will be copied and new memory allocated in a different location. This can be slow and may occur multiple times when using push_back in a loop. When using <em>resize</em> the move would only need to be performed once.<br />
+</p>
+<p>For more details on this refer to <a href="http://arturocastro.net/blog/2011/10/28/stl::vector/">Arturo Castro's tutorial</a> </p>
+<h3 id="assign">assign</h3>
+<p><em>assign</em> can be used to create a vector of a given size and populate it with uniform values, or to copy part of an existing vector. It reinitializes the vector deleting any previous elements. </p>
+<pre><code class="cpp">    vector&lt;float&gt; vals; // declare the vector
+    vals.assign(100,0.0f); // add 100 floats all with value of 0.0
+
+    vector&lt;Particle&gt; particles;
+    particles.assign(10,Particle());
+
+    vector&lt;Particle&gt; copyParticles;
+    copyParticles.assign( particles.begin(), particles.begin()+5 );
+</code></pre>
+
+<hr />
+<p><a name="accessing"></a></p>
+<h2 id="accessing-elements-of-a-vector">Accessing elements of a vector</h2>
+<h3 id="operator">operator []</h3>
+<p>Elements can be accessed using the [] operator with an index in the same style as c arrays. </p>
+<pre><code class="cpp">    cout &lt;&lt; names[0] &lt;&lt; end; // !if there is no element 0, you have a memory access error
+
+    for( int i = 0; i &lt; names.size(); i++){
+      cout &lt;&lt; names[i] &lt;&lt; endl;
+    }
+</code></pre>
+
+<h3 id="at">at()</h3>
+<p>Vectors have a function <em>at()</em> that will return the value in the same way as the [] operator, however it is slightly slower than []. <em>at()</em> checks if the index is in bounds and if not, throws an exception. This can make it useful for debugging, however for clarity and speed [] is usually preferred.</p>
+<pre><code class="cpp">    cout &lt;&lt; names.at(0) &lt;&lt; endl;
+</code></pre>
+
+<hr />
+<p><a name="erasing"></a></p>
+<h2 id="erasing-elements-of-a-vector">Erasing elements of a vector</h2>
+<h3 id="erase">erase</h3>
+<p>An element can be removed from a vector using <em>erase</em>. This function takes in an iterator to the position in the vector not the index. The function <em>begin()</em> returns an iterator to the first element of the vector and can be added to to pass in subsequent positions. Note that erase does not check if the element exists or not, so be sure when erasing!</p>
+<pre><code class="cpp">    particles.erase( particles.begin() ); // erase first element
+
+    particles.erase( particles.begin() + 3 ); // erase third element
+
+    particles.erase( particles.begin(), particles.begin()+2 ); // remove first 2 elements
+</code></pre>
+
+<h3 id="clear">clear</h3>
+<p><em>clear</em> removes all elements in the vector reducing its size to 0.</p>
+<pre><code class="cpp">    particles.clear();
+</code></pre>
+
+<hr />
+<p><a name="iterators"></a></p>
+<h2 id="iterators">Iterators</h2>
+<p>An iterator is a class of objects designed to help traverse through a sequence of elements (such as a vector). An iterator for a vector points to an individual element in the vector, and can be incremented to point to the next. As some vector functions take int or return iterators, it is useful to understand how they work. </p>
+<p>Declaring an iterator for a vector:</p>
+<p>vector&#60; <em>type</em> &#62;::iterator it; // <em>it</em> is the name of the iterator but could be called anything we want</p>
+<pre><code class="cpp">    vector&lt;float&gt;::iterator it = nums.begin();
+    vector&lt;Particle&gt;::iterator itp = partices.begin();
+</code></pre>
+
+<p><em>begin()</em> returns an iterator to the first element of the vector and <em>end()</em> to one past the last element in the vector.</p>
+<p>To access the value of an element using an iterator, we have to dereference it as if it was a pointer. The iterator is pointing to the element in the array, but we want the value of element it is pointing to instead. </p>
+<pre><code class="cpp">    vector&lt;int&gt;  nums;
+    nums.push_back(10);
+    vector&lt;int&gt;::iterator it = nums.begin();
+    cout &lt;&lt; *it &lt;&lt; endl; // prints out 10
+
+    vector&lt;Particle&gt;::iterator itp = particles.begin(); // get iterator to first element
+    float xpos = (*itp).pos.x; // use dereference * to access the element value or properties
+    particle.erase(itp); // pass the iterator to a vector function such as erase 
+</code></pre>
+
+<p>Looping through the vector using iterators:</p>
+<pre><code class="cpp">    vector&lt;float&gt;::iterator it = nums.begin();  // create an iterator that points to the first element
+
+    // loop through, increasing to next element until the end is reached
+
+    for(; it != nums.end(); ++it){ 
+      cout &lt;&lt; *it &lt;&lt; end; // output value with dereference operator
+    }
+
+    for(vector&lt;Particle&gt;::iterator it = particles.begin(); it != particles.end(); ++it){ 
+      cout &lt;&lt; (*it).pos.x &lt;&lt; end; 
+    }
+</code></pre>
+
+<p>Note that when using iterators we want to test that our iterator ( <em>it</em> in this case) is not equal to <em>end()</em> (it != particles.end()) rather than &gt; test. <em>end()</em> signifies one element beyond the last. This is important because an iterator cannot be incremented beyond <em>end()</em> or bad things can happen.</p>
+<p>In a while loop the structure would be:</p>
+<pre><code class="cpp">    vector&lt;Particle&gt;::iterator it = particles.begin();
+
+    while( it != particles.end() ){
+     cout &lt;&lt; (*it).x &lt;&lt; end; 
+     ++it;
+    }
+</code></pre>
+
+<p>When erasing multiple elements with an iterator, it is important that the iterator gets a return value from the erased element so it does not become invalid.</p>
+<pre><code class="cpp">    vector&lt;float&gt; iterator::it = nums.begin(); // iterator points to first element
+
+    for(; it != num.end();){
+        if( *it &gt; 5.2 ) it = nums.erase(it); // be sure to return the iterator when erasing so it is not invalidated
+        else ++it;
+    }
+</code></pre>
+
+<p>With vectors there is no speed difference between iterators or array-style [] indexes.</p>
+<hr />
+<h3 id="stdremove_if-and-ofremove">std::remove_if and ofRemove</h3>
+<p><em>remove_if</em> checks conditions defined in a boolean function to determine if each element of the vector should be deleted or not. It moves any that return true to the end of the vector and then returns the iterator to the first element that should be removed. It does not remove anything, but can be used together with <em>erase</em> to actually delete the undesired elements. This is useful when all elements in the vector need to be checked to see if they should be deleted or not (for example if a particle has gone off screen or its life timer has reached zero and so on).</p>
+<p>The first step is defining a  function that returns a bool and takes in as a parameter a reference to an element of the type the vector contains.</p>
+<pre><code class="cpp">    bool checkDead( Particle &amp;p ){
+        return p.isDead;
+    }
+</code></pre>
+
+<p>Then call <em>erase</em> with the iterator returned from <em>remove_if</em>:</p>
+<pre><code class="cpp">    vector&lt;Particle&gt;::iterator it = particles.remove_if(particles.begin(),particles.end(),checkDead);
+    particles.erase( it, particles.end() );
+
+    // or all in one line
+    particles.erase( particles.remove_if(particles.begin(),particles.end(),checkDead), particles.end() );
+</code></pre>
+
+<p>OpenFrameworks has a function called <em>ofRemove</em> that performs similarly. Create the function and pass it with the vector to perform both the <em>remove_if</em> and <em>erase</em> at the same time.</p>
+<pre><code class="cpp">    ofRemove(particles,checkDead); //particles is the vector, checkDead is the boolean function
+</code></pre>
+
+<p>Be careful that this format is not used with a vector of pointers to objects (see below).</p>
+<hr />
+<p><a name="sort"></a></p>
+<h2 id="sorting-and-shuffling-a-vector">Sorting and shuffling a vector</h2>
+<p>c++ has a number of &lt; algorithm &gt; functions that work with vectors and iterators ( <em>remove_if</em> is one of these for example). Two very useful functions are <em>sort</em> and <em>random_shuffle</em>. In openFrameworks they are implemented as <em>ofSort</em> and <em>ofRandomize</em>.</p>
+<p><em>sort</em> works similarly to <em>remove_if</em> in that it can take in a vector and a boolean function that determines how the elements are sorted. The boolean function has two parameter that are elements of the type of vector, and returns true or false based on a comparison of the two.</p>
+<pre><code class="cpp">    // compare for a vector of floats, sorting from lowest to highest
+    bool my_compare( float a, float b){
+        return a &lt; b;
+    }
+</code></pre>
+
+<p>The vector range and boolean function can then be passed to <em>sort</em>:</p>
+<pre><code class="cpp">    vector&lt;float&gt;vals;
+    vals.push_back(3.0);
+    vals.push_back(.1);
+    vals.push_back(2.3); // vector now has: 3.0,.1,2.3
+
+    std::sort( vals.begin(), vals.end(), my_compare); // after sorting: .1, 2.3, 3.0
+</code></pre>
+
+<p><em>ofSort</em> with objects:</p>
+<pre><code class="cpp">    bool my_compare( Particle &amp;a, Particle &amp;b){
+        return a.pos.x &lt; b.pos.x;
+    }
+
+    ...
+    vector&lt;Particle&gt; particles;
+    particles.assign(10,Particle());
+
+    ofSort(particles,my_compare); // with ofSort the entire vector is passed in rather than a range
+</code></pre>
+
+<p><em>random_shuffle</em> and <em>ofRandomize</em> simply shuffle the elements of a vector into a random order.</p>
+<pre><code class="cpp">    std::random_shuffle(vals.begin(),vals.end());  // pass in range to be shuffled
+
+    ofRandomize(vals); // pass in just the  vector (all will be shuffled)
+</code></pre>
+
+<p>More information on <a href="http://www.cplusplus.com/reference/algorithm/"> algorithm </a> functions:</p>
+<hr />
+<p><a name="vectorsobjects"></a></p>
+<h2 id="vectors-of-objects">Vectors of objects</h2>
+<p>As indicated in the above examples, it is quite common to create vectors of objects. </p>
+<pre><code class="cpp">    vector&lt;Particle&gt; particles;
+</code></pre>
+
+<p>In many situations this works great and is preferred. However, problems can sometimes arise if the class has member pointers and dynamically allocated memory but not a proper copy constructor. A vector of pointers to objects can be used, although shared pointers are probably best. Shared pointers would also be needed to use polymorphism / base classes.</p>
+<p>More on <a href="http://www.learncpp.com/cpp-tutorial/912-shallow-vs-deep-copying/">vectors and copy constructors</a>.</p>
+<hr />
+<p><a name="vectorspointers"></a></p>
+<h2 id="vectors-of-pointers-to-objects">Vectors of pointers to objects</h2>
+<p>When using a vector of pointers to objects, the syntax is similar:</p>
+<pre><code class="cpp">    vector&lt;Particle *&gt; particlePointers;
+</code></pre>
+
+<p>It is very important to remember that when erasing a pointer to an object in a vector it needs to be deleted as well as erased!! </p>
+<pre><code class="cpp">    // delete and erase a single element with index
+    delete particlePointers[1];
+    particlePointers.erase( particlePointers.begin()+1 );
+
+    // delete and erase with a loop
+    vector&lt;Particle&gt;::iterator it = particlePointers.begin();
+    for(; it != particlePointers.end();){
+        if( (*it)-&gt;isDead ){
+            delete *it;
+            it = particlePointers.erase(it);
+        }else
+            ++it;
+    }
+</code></pre>
+
+<p>Note that this means erase and remove_if demonstrated above will not be sufficient. If pointers are needed, it is worthwhile to consider using shared pointers instead. <a href="http://www.openframeworks.cc/documentation/types/ofPtr.html">See ofPtr</a></p>
+<hr />
+<p><a name="optimizing"></a></p>
+<h2 id="optimization-with-resize-and-reserve">Optimization with resize and reserve</h2>
+<p>See <a href="http://arturocastro.net/blog/2011/10/28/stl::vector/">Arturo Castro's article.</a></p>
+<hr />
+<p><a name="of"></a></p>
+<h2 id="openframeworks-example">OpenFrameworks Example</h2>
+<p>ofApp.h</p>
+<pre><code class="cpp">    #pragma once
+
+    #include &quot;ofMain.h&quot;
+
+    // create the particle class in the header for brevity
+
+    class Particle{
+    public:
+    Particle(){
+            pos.set( 0, 0, 0 );
+            vel.set( ofRandom(-5,5), ofRandom(-4,-8), 0);
+        }
+
+        void update(){
+            pos += vel;
+            vel.y += .1;
+        }
+
+        void draw(){
+            ofEllipse(pos.x,pos.y,10,10);
+        }
+
+        ofPoint pos;
+        ofVec3f vel;
+
+    };
+
+    class ofApp : public ofBaseApp{
+    public:
+        void setup();
+        void update();
+        void draw();
+
+        void keyPressed(int key);
+        void keyReleased(int key);
+        void mouseMoved(int x, int y);
+        void mouseDragged(int x, int y, int button);
+        void mousePressed(int x, int y, int button);
+        void mouseReleased(int x, int y, int button);
+        void windowResized(int w, int h);
+        void dragEvent(ofDragInfo dragInfo);
+        void gotMessage(ofMessage msg);
+
+        // declare the vector of particles
+        vector&lt;Particle&gt; particles;
+    };
+
+</code></pre>
+
+<p>ofApp.cpp</p>
+<pre><code class="cpp">    #include &quot;ofApp.h&quot;
+
+    // write our boolean remove function
+    bool shouldRemove(Particle &amp;p){
+        if(p.pos.y &gt; ofGetHeight() )return true;
+        else return false;
+    }
+
+    void ofApp::setup(){
+        ofSetFrameRate(60);
+    }
+
+    void ofApp::update(){
+        for(int i = 0; i &lt; particles.size(); i++){
+            particles[i].update();
+        }
+
+        ofRemove(particles,shouldRemove);
+    }
+
+    void ofApp::draw(){
+
+        ofTranslate( ofGetWidth()/2, ofGetHeight()/2);
+        for(int i = 0; i &lt; particles.size(); i++){
+            particles[i].draw();
+        }
+    }
+
+    void ofApp::keyPressed(int key){
+        particles.push_back( Particle() );
+    }
+</code></pre>
+
+<p>ofApp.cpp using iterators</p>
+<pre><code class="cpp">    #include &quot;ofApp.h&quot;
+
+    // write our boolean remove function
+    bool shouldRemove(Particle &amp;p){
+        if(p.pos.y &gt; ofGetHeight() )return true;
+        else return false;
+    }
+
+    void ofApp::setup(){
+        ofSetFrameRate(60);
+    }
+
+    void ofApp::update(){
+
+        for(vector&lt;Particle&gt;::iterator it = particles.begin(); it != particles.end(); it++){
+            (*it).update();
+        }
+
+        ofRemove(particles,shouldRemove);
+    }
+
+    void ofApp::draw(){
+
+        ofTranslate( ofGetWidth()/2, ofGetHeight()/2);
+        for(vector&lt;Particle&gt;::iterator it = particles.begin(); it != particles.end(); it++){
+            (*it).draw();
+        }
+    }
+
+    void ofApp::keyPressed(int key){
+        particles.push_back( Particle() );
+    }
+</code></pre>
+
+    		</div>
+            
+        </div><!-- End Page Wide -->      
+      </div><!-- End Body Wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:33:31 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+4d738d6979d8e7992359cde47632192d1fbef472
+">
+
+4d738d6979d8e7992359cde47632192d1fbef472
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+
+
+

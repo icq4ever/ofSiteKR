@@ -1,0 +1,2325 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+    <script src="http://icq4ever.iptime.org//js/jquery.columnizer.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/2.1.08/jquery.masonry.min.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation_index.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43083059-1', 'auto');
+  ga('send', 'pageview');
+
+  </script>
+  </head>
+  <body>
+    <div id="content">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">	
+	    <div class="page-wide-tutorial">
+            <!--ul class="submenu">
+                <li><a href="/documentation">레퍼런스</a></li>
+                <li><a href="/tutorials">튜토리얼</a></li>
+            </ul-->
+    	    <h1>graphics</h1>
+    	    <div class="article">
+    	    
+  <h2 id="2d-graphics-images-and-typography">2D graphics, images and typography</h2>
+<p>This module contains classes and functions that allow to work with 2d graphics, including drawing 2d shapes, using images both drawing them using the graphics card or manipulate their contents in the computer's memory, and typography.</p>
+<p>The most important classes in this module are:</p>
+<ul>
+<li>
+<p><a href="ofImage.html">ofImage</a>: allows to load, save and draw images in lots of different image formats, it holds an <a href="../gl/ofTexture.html">ofTexture</a> which allows to draw the image through the graphics card and an <a href="ofPixels.html">ofPixels</a> which is also part of this module and contains the pixel information of the image allowing also to do basic transformations on them like cropping, resizing, scaling, iterating through the pixel data...</p>
+</li>
+<li>
+<p><a href="ofPolyline.html">ofPolyline</a>: represents a polyline or polygon and allows to do some operations over them. Although it allows to draw the outline of the data it contains, this class is better used to manipulate polylines and it's used by <a href="ofPath.html">ofPath</a> to create complex shapes and draw outlines.</p>
+</li>
+<li>
+<p><a href="ofPath.html">ofPath</a>: represents a complex shape formed by one or more outlines, internally it uses <a href="ofPolyline.html">ofPolyline</a> to represent that data and later decomposes it in <a href="../3d/ofMesh.html">ofMesh</a> if necesary. It can draw both contours and filled shapes and it's the recommended way to draw 2d shapes in openFrameworks.</p>
+</li>
+<li>
+<p><a href="ofTrueType.html">ofTrueType</a>: can load true type fonts in different formats and draw text using the loaded font.</p>
+</li>
+<li>
+<p><a href="ofGraphics.html">ofGraphics</a>: has several utility functions to change the state of the graphics pipeline (like the default color or the blending mode) and allows to draw shapes in immediate mode which can be useful if you want to draw something quickly, for prototipying, instead of using ofPath</p>
+</li>
+</ul>
+<p>The rest of the classes in this module are usually utility classes used by openFrameworks itself to provide the 2d drawing functionality and although they can be useful in some cases in applicaiton code, they are usually not used directly by applications. For example ofBitmapFont is a class that allows openFrameworks to draw a text using a default bitmap font without having to load a TTF file but in order to draw from application code we usually use the <code>ofDrawBitmapString</code> function present in <a href="ofGraphics.html">ofGraphics</a>. Or ofCairoRenderer allows OF to draw to a PDF or SVG among other things but it can be easily used through the corresponding functions in <a href="ofGraphics.html">ofGraphics</a></p>
+
+    		</div>
+        </div><!-- End Page Wide Tutorial --> 
+        <div class="page-wide">
+        	
+<div class="documentation_group">
+	
+
+	<!-- CLASSES -->
+
+    <div class="documentation_index_group">
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/graphics/ofBitmapFont.html" class="documentation_class_link"><strong>ofBitmapFont</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofBitmapFont.html#!show_ofBitmapFont" title="ofBitmapFont" class="documentation_func">ofBitmapFont()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofBitmapFont.html#!show_~ofBitmapFont" title="~ofBitmapFont" class="documentation_func">~ofBitmapFont()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofBitmapFont.html#!show_getBoundingBox" title="getBoundingBox" class="documentation_func">getBoundingBox()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofBitmapFont.html#!show_getMesh" title="getMesh" class="documentation_func">getMesh()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofBitmapFont.html#!show_getTexture" title="getTexture" class="documentation_func">getTexture()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html" class="documentation_class_link"><strong>ofCairoRenderer</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_ofCairoRenderer" title="ofCairoRenderer" class="documentation_func">ofCairoRenderer()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_~ofCairoRenderer" title="~ofCairoRenderer" class="documentation_func">~ofCairoRenderer()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_background" title="background" class="documentation_func">background()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_bind" title="bind" class="documentation_func">bind()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_clear" title="clear" class="documentation_func">clear()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_clearAlpha" title="clearAlpha" class="documentation_func">clearAlpha()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_close" title="close" class="documentation_func">close()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_disableAntiAliasing" title="disableAntiAliasing" class="documentation_func">disableAntiAliasing()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_draw" title="draw" class="documentation_func">draw()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_drawCircle" title="drawCircle" class="documentation_func">drawCircle()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_drawEllipse" title="drawEllipse" class="documentation_func">drawEllipse()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_drawLine" title="drawLine" class="documentation_func">drawLine()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_drawRectangle" title="drawRectangle" class="documentation_func">drawRectangle()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_drawString" title="drawString" class="documentation_func">drawString()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_drawTriangle" title="drawTriangle" class="documentation_func">drawTriangle()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_enableAntiAliasing" title="enableAntiAliasing" class="documentation_func">enableAntiAliasing()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_finishRender" title="finishRender" class="documentation_func">finishRender()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_flush" title="flush" class="documentation_func">flush()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_get3dGraphics" title="get3dGraphics" class="documentation_func">get3dGraphics()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_getBackgroundAuto" title="getBackgroundAuto" class="documentation_func">getBackgroundAuto()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_getBackgroundColor" title="getBackgroundColor" class="documentation_func">getBackgroundColor()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_getCairoContext" title="getCairoContext" class="documentation_func">getCairoContext()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_getCairoSurface" title="getCairoSurface" class="documentation_func">getCairoSurface()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_getContentBuffer" title="getContentBuffer" class="documentation_func">getContentBuffer()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_getCoordHandedness" title="getCoordHandedness" class="documentation_func">getCoordHandedness()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_getCurrentMatrix" title="getCurrentMatrix" class="documentation_func">getCurrentMatrix()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_getCurrentNormalMatrix" title="getCurrentNormalMatrix" class="documentation_func">getCurrentNormalMatrix()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_getCurrentOrientationMatrix" title="getCurrentOrientationMatrix" class="documentation_func">getCurrentOrientationMatrix()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_getCurrentViewMatrix" title="getCurrentViewMatrix" class="documentation_func">getCurrentViewMatrix()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_getCurrentViewport" title="getCurrentViewport" class="documentation_func">getCurrentViewport()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_getFillMode" title="getFillMode" class="documentation_func">getFillMode()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_getImageSurfacePixels" title="getImageSurfacePixels" class="documentation_func">getImageSurfacePixels()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_getNativeViewport" title="getNativeViewport" class="documentation_func">getNativeViewport()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_getPath" title="getPath" class="documentation_func">getPath()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_getRectMode" title="getRectMode" class="documentation_func">getRectMode()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_getStyle" title="getStyle" class="documentation_func">getStyle()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_getType" title="getType" class="documentation_func">getType()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_getViewportHeight" title="getViewportHeight" class="documentation_func">getViewportHeight()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_getViewportWidth" title="getViewportWidth" class="documentation_func">getViewportWidth()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_isVFlipped" title="isVFlipped" class="documentation_func">isVFlipped()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_loadIdentityMatrix" title="loadIdentityMatrix" class="documentation_func">loadIdentityMatrix()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_loadMatrix" title="loadMatrix" class="documentation_func">loadMatrix()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_loadViewMatrix" title="loadViewMatrix" class="documentation_func">loadViewMatrix()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_matrixMode" title="matrixMode" class="documentation_func">matrixMode()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_multMatrix" title="multMatrix" class="documentation_func">multMatrix()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_multViewMatrix" title="multViewMatrix" class="documentation_func">multViewMatrix()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_popMatrix" title="popMatrix" class="documentation_func">popMatrix()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_popStyle" title="popStyle" class="documentation_func">popStyle()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_popView" title="popView" class="documentation_func">popView()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_pushMatrix" title="pushMatrix" class="documentation_func">pushMatrix()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_pushStyle" title="pushStyle" class="documentation_func">pushStyle()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_pushView" title="pushView" class="documentation_func">pushView()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_rotate" title="rotate" class="documentation_func">rotate()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_rotateX" title="rotateX" class="documentation_func">rotateX()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_rotateY" title="rotateY" class="documentation_func">rotateY()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_rotateZ" title="rotateZ" class="documentation_func">rotateZ()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_scale" title="scale" class="documentation_func">scale()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_setBackgroundAuto" title="setBackgroundAuto" class="documentation_func">setBackgroundAuto()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_setBackgroundColor" title="setBackgroundColor" class="documentation_func">setBackgroundColor()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_setBitmapTextMode" title="setBitmapTextMode" class="documentation_func">setBitmapTextMode()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_setBlendMode" title="setBlendMode" class="documentation_func">setBlendMode()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_setCircleResolution" title="setCircleResolution" class="documentation_func">setCircleResolution()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_setColor" title="setColor" class="documentation_func">setColor()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_setCoordHandedness" title="setCoordHandedness" class="documentation_func">setCoordHandedness()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_setCurveResolution" title="setCurveResolution" class="documentation_func">setCurveResolution()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_setDepthTest" title="setDepthTest" class="documentation_func">setDepthTest()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_setFillMode" title="setFillMode" class="documentation_func">setFillMode()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_setHexColor" title="setHexColor" class="documentation_func">setHexColor()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_setLineSmoothing" title="setLineSmoothing" class="documentation_func">setLineSmoothing()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_setLineWidth" title="setLineWidth" class="documentation_func">setLineWidth()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_setOrientation" title="setOrientation" class="documentation_func">setOrientation()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_setPolyMode" title="setPolyMode" class="documentation_func">setPolyMode()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_setRectMode" title="setRectMode" class="documentation_func">setRectMode()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_setStyle" title="setStyle" class="documentation_func">setStyle()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_setup" title="setup" class="documentation_func">setup()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_setupGraphicDefaults" title="setupGraphicDefaults" class="documentation_func">setupGraphicDefaults()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_setupMemoryOnly" title="setupMemoryOnly" class="documentation_func">setupMemoryOnly()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_setupScreen" title="setupScreen" class="documentation_func">setupScreen()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_setupScreenOrtho" title="setupScreenOrtho" class="documentation_func">setupScreenOrtho()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_setupScreenPerspective" title="setupScreenPerspective" class="documentation_func">setupScreenPerspective()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_startRender" title="startRender" class="documentation_func">startRender()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_translate" title="translate" class="documentation_func">translate()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_unbind" title="unbind" class="documentation_func">unbind()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_viewport" title="viewport" class="documentation_func">viewport()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofCairoRenderer.html#!show_TYPE" title="TYPE" class="documentation_func">TYPE</a></li>
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html" class="documentation_class_link"><strong>ofGraphics</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/functions.png" alt="Functions file"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofBackground" title="ofBackground" class="documentation_func">ofBackground()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofBackgroundGradient" title="ofBackgroundGradient" class="documentation_func">ofBackgroundGradient()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofBackgroundHex" title="ofBackgroundHex" class="documentation_func">ofBackgroundHex()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofBeginSaveScreenAsPDF" title="ofBeginSaveScreenAsPDF" class="documentation_func">ofBeginSaveScreenAsPDF()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofBeginSaveScreenAsSVG" title="ofBeginSaveScreenAsSVG" class="documentation_func">ofBeginSaveScreenAsSVG()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofBeginShape" title="ofBeginShape" class="documentation_func">ofBeginShape()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofBezierVertex" title="ofBezierVertex" class="documentation_func">ofBezierVertex()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofClear" title="ofClear" class="documentation_func">ofClear()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofClearAlpha" title="ofClearAlpha" class="documentation_func">ofClearAlpha()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofCurveVertex" title="ofCurveVertex" class="documentation_func">ofCurveVertex()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofCurveVertices" title="ofCurveVertices" class="documentation_func">ofCurveVertices()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofDisableAlphaBlending" title="ofDisableAlphaBlending" class="documentation_func">ofDisableAlphaBlending()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofDisableAntiAliasing" title="ofDisableAntiAliasing" class="documentation_func">ofDisableAntiAliasing()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofDisableBlendMode" title="ofDisableBlendMode" class="documentation_func">ofDisableBlendMode()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofDisableDepthTest" title="ofDisableDepthTest" class="documentation_func">ofDisableDepthTest()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofDisablePointSprites" title="ofDisablePointSprites" class="documentation_func">ofDisablePointSprites()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofDisableSmoothing" title="ofDisableSmoothing" class="documentation_func">ofDisableSmoothing()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofDrawBezier" title="ofDrawBezier" class="documentation_func">ofDrawBezier()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofDrawBitmapString" title="ofDrawBitmapString" class="documentation_func">ofDrawBitmapString()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofDrawBitmapStringHighlight" title="ofDrawBitmapStringHighlight" class="documentation_func">ofDrawBitmapStringHighlight()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofDrawCircle" title="ofDrawCircle" class="documentation_func">ofDrawCircle()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofDrawCurve" title="ofDrawCurve" class="documentation_func">ofDrawCurve()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofDrawEllipse" title="ofDrawEllipse" class="documentation_func">ofDrawEllipse()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofDrawLine" title="ofDrawLine" class="documentation_func">ofDrawLine()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofDrawRectRounded" title="ofDrawRectRounded" class="documentation_func">ofDrawRectRounded()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofDrawRectangle" title="ofDrawRectangle" class="documentation_func">ofDrawRectangle()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofDrawTriangle" title="ofDrawTriangle" class="documentation_func">ofDrawTriangle()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofEnableAlphaBlending" title="ofEnableAlphaBlending" class="documentation_func">ofEnableAlphaBlending()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofEnableAntiAliasing" title="ofEnableAntiAliasing" class="documentation_func">ofEnableAntiAliasing()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofEnableBlendMode" title="ofEnableBlendMode" class="documentation_func">ofEnableBlendMode()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofEnableDepthTest" title="ofEnableDepthTest" class="documentation_func">ofEnableDepthTest()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofEnablePointSprites" title="ofEnablePointSprites" class="documentation_func">ofEnablePointSprites()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofEnableSmoothing" title="ofEnableSmoothing" class="documentation_func">ofEnableSmoothing()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofEndSaveScreenAsPDF" title="ofEndSaveScreenAsPDF" class="documentation_func">ofEndSaveScreenAsPDF()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofEndSaveScreenAsSVG" title="ofEndSaveScreenAsSVG" class="documentation_func">ofEndSaveScreenAsSVG()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofEndShape" title="ofEndShape" class="documentation_func">ofEndShape()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofFill" title="ofFill" class="documentation_func">ofFill()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofGetBackgroundAuto" title="ofGetBackgroundAuto" class="documentation_func">ofGetBackgroundAuto()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofGetBackgroundColor" title="ofGetBackgroundColor" class="documentation_func">ofGetBackgroundColor()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofGetCoordHandedness" title="ofGetCoordHandedness" class="documentation_func">ofGetCoordHandedness()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofGetCurrentMatrix" title="ofGetCurrentMatrix" class="documentation_func">ofGetCurrentMatrix()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofGetCurrentNormalMatrix" title="ofGetCurrentNormalMatrix" class="documentation_func">ofGetCurrentNormalMatrix()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofGetCurrentOrientationMatrix" title="ofGetCurrentOrientationMatrix" class="documentation_func">ofGetCurrentOrientationMatrix()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofGetCurrentViewMatrix" title="ofGetCurrentViewMatrix" class="documentation_func">ofGetCurrentViewMatrix()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofGetCurrentViewport" title="ofGetCurrentViewport" class="documentation_func">ofGetCurrentViewport()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofGetFill" title="ofGetFill" class="documentation_func">ofGetFill()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofGetNativeViewport" title="ofGetNativeViewport" class="documentation_func">ofGetNativeViewport()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofGetRectMode" title="ofGetRectMode" class="documentation_func">ofGetRectMode()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofGetStyle" title="ofGetStyle" class="documentation_func">ofGetStyle()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofGetViewportHeight" title="ofGetViewportHeight" class="documentation_func">ofGetViewportHeight()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofGetViewportWidth" title="ofGetViewportWidth" class="documentation_func">ofGetViewportWidth()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofIsVFlipped" title="ofIsVFlipped" class="documentation_func">ofIsVFlipped()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofLoadIdentityMatrix" title="ofLoadIdentityMatrix" class="documentation_func">ofLoadIdentityMatrix()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofLoadMatrix" title="ofLoadMatrix" class="documentation_func">ofLoadMatrix()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofLoadViewMatrix" title="ofLoadViewMatrix" class="documentation_func">ofLoadViewMatrix()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofMultMatrix" title="ofMultMatrix" class="documentation_func">ofMultMatrix()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofMultViewMatrix" title="ofMultViewMatrix" class="documentation_func">ofMultViewMatrix()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofNextContour" title="ofNextContour" class="documentation_func">ofNextContour()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofNoFill" title="ofNoFill" class="documentation_func">ofNoFill()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofOrientationToDegrees" title="ofOrientationToDegrees" class="documentation_func">ofOrientationToDegrees()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofPopMatrix" title="ofPopMatrix" class="documentation_func">ofPopMatrix()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofPopStyle" title="ofPopStyle" class="documentation_func">ofPopStyle()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofPopView" title="ofPopView" class="documentation_func">ofPopView()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofPushMatrix" title="ofPushMatrix" class="documentation_func">ofPushMatrix()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofPushStyle" title="ofPushStyle" class="documentation_func">ofPushStyle()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofPushView" title="ofPushView" class="documentation_func">ofPushView()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofRotate" title="ofRotate" class="documentation_func">ofRotate()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofRotateX" title="ofRotateX" class="documentation_func">ofRotateX()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofRotateY" title="ofRotateY" class="documentation_func">ofRotateY()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofRotateZ" title="ofRotateZ" class="documentation_func">ofRotateZ()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofScale" title="ofScale" class="documentation_func">ofScale()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofSetBackgroundAuto" title="ofSetBackgroundAuto" class="documentation_func">ofSetBackgroundAuto()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofSetBackgroundColor" title="ofSetBackgroundColor" class="documentation_func">ofSetBackgroundColor()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofSetBackgroundColorHex" title="ofSetBackgroundColorHex" class="documentation_func">ofSetBackgroundColorHex()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofSetCircleResolution" title="ofSetCircleResolution" class="documentation_func">ofSetCircleResolution()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofSetColor" title="ofSetColor" class="documentation_func">ofSetColor()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofSetCoordHandedness" title="ofSetCoordHandedness" class="documentation_func">ofSetCoordHandedness()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofSetCurveResolution" title="ofSetCurveResolution" class="documentation_func">ofSetCurveResolution()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofSetDepthTest" title="ofSetDepthTest" class="documentation_func">ofSetDepthTest()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofSetDrawBitmapMode" title="ofSetDrawBitmapMode" class="documentation_func">ofSetDrawBitmapMode()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofSetHexColor" title="ofSetHexColor" class="documentation_func">ofSetHexColor()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofSetLineWidth" title="ofSetLineWidth" class="documentation_func">ofSetLineWidth()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofSetMatrixMode" title="ofSetMatrixMode" class="documentation_func">ofSetMatrixMode()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofSetPolyMode" title="ofSetPolyMode" class="documentation_func">ofSetPolyMode()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofSetRectMode" title="ofSetRectMode" class="documentation_func">ofSetRectMode()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofSetStyle" title="ofSetStyle" class="documentation_func">ofSetStyle()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofSetupScreen" title="ofSetupScreen" class="documentation_func">ofSetupScreen()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofSetupScreenOrtho" title="ofSetupScreenOrtho" class="documentation_func">ofSetupScreenOrtho()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofSetupScreenPerspective" title="ofSetupScreenPerspective" class="documentation_func">ofSetupScreenPerspective()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofTranslate" title="ofTranslate" class="documentation_func">ofTranslate()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofVertex" title="ofVertex" class="documentation_func">ofVertex()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofVertices" title="ofVertices" class="documentation_func">ofVertices()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofGraphics.html#!show_ofViewport" title="ofViewport" class="documentation_func">ofViewport()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html" class="documentation_class_link"><strong>ofImage</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_ofImage_" title="ofImage_" class="documentation_func">ofImage_()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_~ofImage_" title="~ofImage_" class="documentation_func">~ofImage_()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_allocate" title="allocate" class="documentation_func">allocate()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_bind" title="bind" class="documentation_func">bind()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_clear" title="clear" class="documentation_func">clear()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_clone" title="clone" class="documentation_func">clone()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_crop" title="crop" class="documentation_func">crop()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_cropFrom" title="cropFrom" class="documentation_func">cropFrom()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_draw" title="draw" class="documentation_func">draw()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_drawSubsection" title="drawSubsection" class="documentation_func">drawSubsection()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_getColor" title="getColor" class="documentation_func">getColor()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_getHeight" title="getHeight" class="documentation_func">getHeight()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_getImageType" title="getImageType" class="documentation_func">getImageType()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_getPixels" title="getPixels" class="documentation_func">getPixels()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_getTexture" title="getTexture" class="documentation_func">getTexture()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_getWidth" title="getWidth" class="documentation_func">getWidth()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_grabScreen" title="grabScreen" class="documentation_func">grabScreen()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_isAllocated" title="isAllocated" class="documentation_func">isAllocated()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_isUsingTexture" title="isUsingTexture" class="documentation_func">isUsingTexture()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_load" title="load" class="documentation_func">load()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_mirror" title="mirror" class="documentation_func">mirror()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_operator=" title="operator=" class="documentation_func">operator=()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_resetAnchor" title="resetAnchor" class="documentation_func">resetAnchor()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_resize" title="resize" class="documentation_func">resize()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_rotate90" title="rotate90" class="documentation_func">rotate90()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_save" title="save" class="documentation_func">save()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_setAnchorPercent" title="setAnchorPercent" class="documentation_func">setAnchorPercent()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_setAnchorPoint" title="setAnchorPoint" class="documentation_func">setAnchorPoint()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_setColor" title="setColor" class="documentation_func">setColor()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_setCompression" title="setCompression" class="documentation_func">setCompression()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_setFromPixels" title="setFromPixels" class="documentation_func">setFromPixels()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_setImageType" title="setImageType" class="documentation_func">setImageType()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_setUseTexture" title="setUseTexture" class="documentation_func">setUseTexture()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_unbind" title="unbind" class="documentation_func">unbind()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_update" title="update" class="documentation_func">update()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_ofLoadImage" title="ofLoadImage" class="documentation_func">ofLoadImage()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_ofSaveImage" title="ofSaveImage" class="documentation_func">ofSaveImage()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                            
+                            <li class="variable"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_bpp" title="bpp" class="documentation_func">bpp</a></li>
+                            
+                            <li class="variable"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_height" title="height" class="documentation_func">height</a></li>
+                            
+                            <li class="variable"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_type" title="type" class="documentation_func">type</a></li>
+                            
+                            <li class="variable"><a href="http://icq4ever.iptime.org//documentation/graphics/ofImage.html#!show_width" title="width" class="documentation_func">width</a></li>
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html" class="documentation_class_link"><strong>ofPath</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_ofPath" title="ofPath" class="documentation_func">ofPath()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_append" title="append" class="documentation_func">append()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_arc" title="arc" class="documentation_func">arc()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_arcNegative" title="arcNegative" class="documentation_func">arcNegative()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_bezierTo" title="bezierTo" class="documentation_func">bezierTo()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_circle" title="circle" class="documentation_func">circle()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_clear" title="clear" class="documentation_func">clear()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_close" title="close" class="documentation_func">close()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_curveTo" title="curveTo" class="documentation_func">curveTo()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_draw" title="draw" class="documentation_func">draw()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_ellipse" title="ellipse" class="documentation_func">ellipse()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_getCircleResolution" title="getCircleResolution" class="documentation_func">getCircleResolution()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_getCommands" title="getCommands" class="documentation_func">getCommands()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_getCurveResolution" title="getCurveResolution" class="documentation_func">getCurveResolution()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_getFillColor" title="getFillColor" class="documentation_func">getFillColor()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_getMode" title="getMode" class="documentation_func">getMode()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_getOutline" title="getOutline" class="documentation_func">getOutline()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_getStrokeColor" title="getStrokeColor" class="documentation_func">getStrokeColor()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_getStrokeWidth" title="getStrokeWidth" class="documentation_func">getStrokeWidth()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_getTessellation" title="getTessellation" class="documentation_func">getTessellation()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_getUseShapeColor" title="getUseShapeColor" class="documentation_func">getUseShapeColor()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_getWindingMode" title="getWindingMode" class="documentation_func">getWindingMode()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_hasOutline" title="hasOutline" class="documentation_func">hasOutline()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_isFilled" title="isFilled" class="documentation_func">isFilled()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_lineTo" title="lineTo" class="documentation_func">lineTo()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_moveTo" title="moveTo" class="documentation_func">moveTo()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_newSubPath" title="newSubPath" class="documentation_func">newSubPath()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_quadBezierTo" title="quadBezierTo" class="documentation_func">quadBezierTo()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_rectRounded" title="rectRounded" class="documentation_func">rectRounded()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_rectangle" title="rectangle" class="documentation_func">rectangle()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_rotate" title="rotate" class="documentation_func">rotate()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_scale" title="scale" class="documentation_func">scale()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_setCircleResolution" title="setCircleResolution" class="documentation_func">setCircleResolution()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_setColor" title="setColor" class="documentation_func">setColor()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_setCurveResolution" title="setCurveResolution" class="documentation_func">setCurveResolution()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_setFillColor" title="setFillColor" class="documentation_func">setFillColor()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_setFillHexColor" title="setFillHexColor" class="documentation_func">setFillHexColor()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_setFilled" title="setFilled" class="documentation_func">setFilled()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_setHexColor" title="setHexColor" class="documentation_func">setHexColor()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_setMode" title="setMode" class="documentation_func">setMode()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_setPolyWindingMode" title="setPolyWindingMode" class="documentation_func">setPolyWindingMode()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_setStrokeColor" title="setStrokeColor" class="documentation_func">setStrokeColor()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_setStrokeHexColor" title="setStrokeHexColor" class="documentation_func">setStrokeHexColor()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_setStrokeWidth" title="setStrokeWidth" class="documentation_func">setStrokeWidth()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_setUseShapeColor" title="setUseShapeColor" class="documentation_func">setUseShapeColor()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_simplify" title="simplify" class="documentation_func">simplify()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_tessellate" title="tessellate" class="documentation_func">tessellate()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_translate" title="translate" class="documentation_func">translate()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath.html#!show_triangle" title="triangle" class="documentation_func">triangle()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath::Command.html" class="documentation_class_link"><strong>ofPath::Command</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath::Command.html#!show_Command" title="Command" class="documentation_func">Command()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath::Command.html#!show_angleBegin" title="angleBegin" class="documentation_func">angleBegin</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath::Command.html#!show_angleEnd" title="angleEnd" class="documentation_func">angleEnd</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath::Command.html#!show_cp1" title="cp1" class="documentation_func">cp1</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath::Command.html#!show_cp2" title="cp2" class="documentation_func">cp2</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath::Command.html#!show_radiusX" title="radiusX" class="documentation_func">radiusX</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath::Command.html#!show_radiusY" title="radiusY" class="documentation_func">radiusY</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath::Command.html#!show_to" title="to" class="documentation_func">to</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPath::Command.html#!show_type" title="type" class="documentation_func">type</a></li>
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html" class="documentation_class_link"><strong>ofPixels</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_ofPixels_" title="ofPixels_" class="documentation_func">ofPixels_()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_~ofPixels_" title="~ofPixels_" class="documentation_func">~ofPixels_()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_allocate" title="allocate" class="documentation_func">allocate()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_begin" title="begin" class="documentation_func">begin()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_blendInto" title="blendInto" class="documentation_func">blendInto()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_clear" title="clear" class="documentation_func">clear()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_crop" title="crop" class="documentation_func">crop()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_cropTo" title="cropTo" class="documentation_func">cropTo()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_end" title="end" class="documentation_func">end()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_getBitsPerChannel" title="getBitsPerChannel" class="documentation_func">getBitsPerChannel()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_getBitsPerPixel" title="getBitsPerPixel" class="documentation_func">getBitsPerPixel()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_getBytesPerChannel" title="getBytesPerChannel" class="documentation_func">getBytesPerChannel()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_getBytesPerPixel" title="getBytesPerPixel" class="documentation_func">getBytesPerPixel()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_getBytesStride" title="getBytesStride" class="documentation_func">getBytesStride()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_getChannel" title="getChannel" class="documentation_func">getChannel()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_getColor" title="getColor" class="documentation_func">getColor()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_getConstLine" title="getConstLine" class="documentation_func">getConstLine()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_getConstLines" title="getConstLines" class="documentation_func">getConstLines()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_getConstPixelsIter" title="getConstPixelsIter" class="documentation_func">getConstPixelsIter()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_getData" title="getData" class="documentation_func">getData()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_getHeight" title="getHeight" class="documentation_func">getHeight()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_getImageType" title="getImageType" class="documentation_func">getImageType()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_getLine" title="getLine" class="documentation_func">getLine()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_getLines" title="getLines" class="documentation_func">getLines()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_getNumChannels" title="getNumChannels" class="documentation_func">getNumChannels()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_getNumPlanes" title="getNumPlanes" class="documentation_func">getNumPlanes()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_getPixelFormat" title="getPixelFormat" class="documentation_func">getPixelFormat()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_getPixelIndex" title="getPixelIndex" class="documentation_func">getPixelIndex()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_getPixelsIter" title="getPixelsIter" class="documentation_func">getPixelsIter()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_getPlane" title="getPlane" class="documentation_func">getPlane()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_getTotalBytes" title="getTotalBytes" class="documentation_func">getTotalBytes()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_getWidth" title="getWidth" class="documentation_func">getWidth()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_isAllocated" title="isAllocated" class="documentation_func">isAllocated()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_mirror" title="mirror" class="documentation_func">mirror()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_mirrorTo" title="mirrorTo" class="documentation_func">mirrorTo()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_operator=" title="operator=" class="documentation_func">operator=()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_operator[]" title="operator[]" class="documentation_func">operator[]()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_pasteInto" title="pasteInto" class="documentation_func">pasteInto()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_rbegin" title="rbegin" class="documentation_func">rbegin()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_rend" title="rend" class="documentation_func">rend()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_resize" title="resize" class="documentation_func">resize()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_resizeTo" title="resizeTo" class="documentation_func">resizeTo()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_rotate90" title="rotate90" class="documentation_func">rotate90()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_rotate90To" title="rotate90To" class="documentation_func">rotate90To()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_set" title="set" class="documentation_func">set()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_setChannel" title="setChannel" class="documentation_func">setChannel()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_setColor" title="setColor" class="documentation_func">setColor()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_setFromAlignedPixels" title="setFromAlignedPixels" class="documentation_func">setFromAlignedPixels()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_setFromExternalPixels" title="setFromExternalPixels" class="documentation_func">setFromExternalPixels()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_setFromPixels" title="setFromPixels" class="documentation_func">setFromPixels()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_setImageType" title="setImageType" class="documentation_func">setImageType()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_setNumChannels" title="setNumChannels" class="documentation_func">setNumChannels()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_size" title="size" class="documentation_func">size()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_swap" title="swap" class="documentation_func">swap()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels.html#!show_swapRgb" title="swapRgb" class="documentation_func">swapRgb()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstLine.html" class="documentation_class_link"><strong>ofPixels::ConstLine</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstLine.html#!show_ConstLine" title="ConstLine" class="documentation_func">ConstLine()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstLine.html#!show_begin" title="begin" class="documentation_func">begin()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstLine.html#!show_end" title="end" class="documentation_func">end()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstLine.html#!show_getLineNum" title="getLineNum" class="documentation_func">getLineNum()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstLine.html#!show_getPixel" title="getPixel" class="documentation_func">getPixel()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstLine.html#!show_getPixels" title="getPixels" class="documentation_func">getPixels()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstLine.html#!show_getStride" title="getStride" class="documentation_func">getStride()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstLine.html#!show_operator!=" title="operator!=" class="documentation_func">operator!=()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstLine.html#!show_operator*" title="operator*" class="documentation_func">operator*()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstLine.html#!show_operator+" title="operator+" class="documentation_func">operator+()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstLine.html#!show_operator++" title="operator++" class="documentation_func">operator++()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstLine.html#!show_operator+=" title="operator+=" class="documentation_func">operator+=()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstLine.html#!show_operator->" title="operator->" class="documentation_func">operator->()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstLine.html#!show_operator<" title="operator<" class="documentation_func">operator<()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstLines.html" class="documentation_class_link"><strong>ofPixels::ConstLines</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstLines.html#!show_ConstLines" title="ConstLines" class="documentation_func">ConstLines()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstLines.html#!show_begin" title="begin" class="documentation_func">begin()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstLines.html#!show_end" title="end" class="documentation_func">end()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstPixel.html" class="documentation_class_link"><strong>ofPixels::ConstPixel</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstPixel.html#!show_ConstPixel" title="ConstPixel" class="documentation_func">ConstPixel()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstPixel.html#!show_getColor" title="getColor" class="documentation_func">getColor()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstPixel.html#!show_getComponentsPerPixel" title="getComponentsPerPixel" class="documentation_func">getComponentsPerPixel()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstPixel.html#!show_getPixelFormat" title="getPixelFormat" class="documentation_func">getPixelFormat()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstPixel.html#!show_operator!=" title="operator!=" class="documentation_func">operator!=()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstPixel.html#!show_operator*" title="operator*" class="documentation_func">operator*()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstPixel.html#!show_operator+" title="operator+" class="documentation_func">operator+()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstPixel.html#!show_operator++" title="operator++" class="documentation_func">operator++()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstPixel.html#!show_operator+=" title="operator+=" class="documentation_func">operator+=()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstPixel.html#!show_operator-" title="operator-" class="documentation_func">operator-()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstPixel.html#!show_operator->" title="operator->" class="documentation_func">operator->()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstPixel.html#!show_operator<" title="operator<" class="documentation_func">operator<()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstPixel.html#!show_operator[]" title="operator[]" class="documentation_func">operator[]()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstPixels.html" class="documentation_class_link"><strong>ofPixels::ConstPixels</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstPixels.html#!show_ConstPixels" title="ConstPixels" class="documentation_func">ConstPixels()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstPixels.html#!show_begin" title="begin" class="documentation_func">begin()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::ConstPixels.html#!show_end" title="end" class="documentation_func">end()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Line.html" class="documentation_class_link"><strong>ofPixels::Line</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Line.html#!show_Line" title="Line" class="documentation_func">Line()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Line.html#!show_asPixels" title="asPixels" class="documentation_func">asPixels()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Line.html#!show_begin" title="begin" class="documentation_func">begin()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Line.html#!show_end" title="end" class="documentation_func">end()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Line.html#!show_getLineNum" title="getLineNum" class="documentation_func">getLineNum()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Line.html#!show_getPixel" title="getPixel" class="documentation_func">getPixel()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Line.html#!show_getPixels" title="getPixels" class="documentation_func">getPixels()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Line.html#!show_getStride" title="getStride" class="documentation_func">getStride()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Line.html#!show_operator!=" title="operator!=" class="documentation_func">operator!=()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Line.html#!show_operator*" title="operator*" class="documentation_func">operator*()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Line.html#!show_operator+" title="operator+" class="documentation_func">operator+()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Line.html#!show_operator++" title="operator++" class="documentation_func">operator++()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Line.html#!show_operator+=" title="operator+=" class="documentation_func">operator+=()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Line.html#!show_operator--" title="operator--" class="documentation_func">operator--()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Line.html#!show_operator->" title="operator->" class="documentation_func">operator->()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Line.html#!show_operator<" title="operator<" class="documentation_func">operator<()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Line.html#!show_operator>" title="operator>" class="documentation_func">operator>()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Line.html#!show_operator>=" title="operator>=" class="documentation_func">operator>=()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Lines.html" class="documentation_class_link"><strong>ofPixels::Lines</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Lines.html#!show_Lines" title="Lines" class="documentation_func">Lines()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Lines.html#!show_begin" title="begin" class="documentation_func">begin()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Lines.html#!show_end" title="end" class="documentation_func">end()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Pixel.html" class="documentation_class_link"><strong>ofPixels::Pixel</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Pixel.html#!show_Pixel" title="Pixel" class="documentation_func">Pixel()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Pixel.html#!show_getColor" title="getColor" class="documentation_func">getColor()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Pixel.html#!show_getComponentsPerPixel" title="getComponentsPerPixel" class="documentation_func">getComponentsPerPixel()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Pixel.html#!show_getPixelFormat" title="getPixelFormat" class="documentation_func">getPixelFormat()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Pixel.html#!show_operator!=" title="operator!=" class="documentation_func">operator!=()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Pixel.html#!show_operator*" title="operator*" class="documentation_func">operator*()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Pixel.html#!show_operator+" title="operator+" class="documentation_func">operator+()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Pixel.html#!show_operator++" title="operator++" class="documentation_func">operator++()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Pixel.html#!show_operator+=" title="operator+=" class="documentation_func">operator+=()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Pixel.html#!show_operator-" title="operator-" class="documentation_func">operator-()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Pixel.html#!show_operator--" title="operator--" class="documentation_func">operator--()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Pixel.html#!show_operator->" title="operator->" class="documentation_func">operator->()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Pixel.html#!show_operator<" title="operator<" class="documentation_func">operator<()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Pixel.html#!show_operator=" title="operator=" class="documentation_func">operator=()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Pixel.html#!show_operator[]" title="operator[]" class="documentation_func">operator[]()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Pixels.html" class="documentation_class_link"><strong>ofPixels::Pixels</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Pixels.html#!show_Pixels" title="Pixels" class="documentation_func">Pixels()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Pixels.html#!show_begin" title="begin" class="documentation_func">begin()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPixels::Pixels.html#!show_end" title="end" class="documentation_func">end()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html" class="documentation_class_link"><strong>ofPolyline</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_ofPolyline" title="ofPolyline" class="documentation_func">ofPolyline()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_addVertex" title="addVertex" class="documentation_func">addVertex()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_addVertices" title="addVertices" class="documentation_func">addVertices()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_arc" title="arc" class="documentation_func">arc()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_arcNegative" title="arcNegative" class="documentation_func">arcNegative()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_begin" title="begin" class="documentation_func">begin()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_bezierTo" title="bezierTo" class="documentation_func">bezierTo()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_clear" title="clear" class="documentation_func">clear()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_close" title="close" class="documentation_func">close()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_curveTo" title="curveTo" class="documentation_func">curveTo()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_draw" title="draw" class="documentation_func">draw()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_end" title="end" class="documentation_func">end()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_flagHasChanged" title="flagHasChanged" class="documentation_func">flagHasChanged()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_fromRectangle" title="fromRectangle" class="documentation_func">fromRectangle()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_getAngleAtIndex" title="getAngleAtIndex" class="documentation_func">getAngleAtIndex()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_getAngleAtIndexInterpolated" title="getAngleAtIndexInterpolated" class="documentation_func">getAngleAtIndexInterpolated()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_getArea" title="getArea" class="documentation_func">getArea()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_getBoundingBox" title="getBoundingBox" class="documentation_func">getBoundingBox()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_getCentroid2D" title="getCentroid2D" class="documentation_func">getCentroid2D()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_getClosestPoint" title="getClosestPoint" class="documentation_func">getClosestPoint()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_getIndexAtLength" title="getIndexAtLength" class="documentation_func">getIndexAtLength()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_getIndexAtPercent" title="getIndexAtPercent" class="documentation_func">getIndexAtPercent()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_getLengthAtIndex" title="getLengthAtIndex" class="documentation_func">getLengthAtIndex()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_getLengthAtIndexInterpolated" title="getLengthAtIndexInterpolated" class="documentation_func">getLengthAtIndexInterpolated()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_getNormalAtIndex" title="getNormalAtIndex" class="documentation_func">getNormalAtIndex()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_getNormalAtIndexInterpolated" title="getNormalAtIndexInterpolated" class="documentation_func">getNormalAtIndexInterpolated()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_getPerimeter" title="getPerimeter" class="documentation_func">getPerimeter()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_getPointAtIndexInterpolated" title="getPointAtIndexInterpolated" class="documentation_func">getPointAtIndexInterpolated()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_getPointAtLength" title="getPointAtLength" class="documentation_func">getPointAtLength()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_getPointAtPercent" title="getPointAtPercent" class="documentation_func">getPointAtPercent()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_getResampledByCount" title="getResampledByCount" class="documentation_func">getResampledByCount()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_getResampledBySpacing" title="getResampledBySpacing" class="documentation_func">getResampledBySpacing()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_getRightVector" title="getRightVector" class="documentation_func">getRightVector()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_getRotationAtIndex" title="getRotationAtIndex" class="documentation_func">getRotationAtIndex()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_getRotationAtIndexInterpolated" title="getRotationAtIndexInterpolated" class="documentation_func">getRotationAtIndexInterpolated()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_getSmoothed" title="getSmoothed" class="documentation_func">getSmoothed()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_getTangentAtIndex" title="getTangentAtIndex" class="documentation_func">getTangentAtIndex()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_getTangentAtIndexInterpolated" title="getTangentAtIndexInterpolated" class="documentation_func">getTangentAtIndexInterpolated()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_getVertices" title="getVertices" class="documentation_func">getVertices()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_getWrappedIndex" title="getWrappedIndex" class="documentation_func">getWrappedIndex()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_hasChanged" title="hasChanged" class="documentation_func">hasChanged()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_insertVertex" title="insertVertex" class="documentation_func">insertVertex()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_inside" title="inside" class="documentation_func">inside()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_isClosed" title="isClosed" class="documentation_func">isClosed()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_lineTo" title="lineTo" class="documentation_func">lineTo()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_operator[]" title="operator[]" class="documentation_func">operator[]()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_quadBezierTo" title="quadBezierTo" class="documentation_func">quadBezierTo()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_rbegin" title="rbegin" class="documentation_func">rbegin()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_rend" title="rend" class="documentation_func">rend()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_resize" title="resize" class="documentation_func">resize()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_setClosed" title="setClosed" class="documentation_func">setClosed()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_setRightVector" title="setRightVector" class="documentation_func">setRightVector()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_simplify" title="simplify" class="documentation_func">simplify()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofPolyline.html#!show_size" title="size" class="documentation_func">size()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTTFCharacter.html" class="documentation_class_link"><strong>ofTTFCharacter</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTessellator.html" class="documentation_class_link"><strong>ofTessellator</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTessellator.html#!show_ofTessellator" title="ofTessellator" class="documentation_func">ofTessellator()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTessellator.html#!show_~ofTessellator" title="~ofTessellator" class="documentation_func">~ofTessellator()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTessellator.html#!show_operator=" title="operator=" class="documentation_func">operator=()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTessellator.html#!show_tessellateToMesh" title="tessellateToMesh" class="documentation_func">tessellateToMesh()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTessellator.html#!show_tessellateToPolylines" title="tessellateToPolylines" class="documentation_func">tessellateToPolylines()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTrueTypeFont.html" class="documentation_class_link"><strong>ofTrueTypeFont</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTrueTypeFont.html#!show_drawString" title="drawString" class="documentation_func">drawString()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTrueTypeFont.html#!show_drawStringAsShapes" title="drawStringAsShapes" class="documentation_func">drawStringAsShapes()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTrueTypeFont.html#!show_getAscenderHeight" title="getAscenderHeight" class="documentation_func">getAscenderHeight()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTrueTypeFont.html#!show_getCharacterAsPoints" title="getCharacterAsPoints" class="documentation_func">getCharacterAsPoints()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTrueTypeFont.html#!show_getDescenderHeight" title="getDescenderHeight" class="documentation_func">getDescenderHeight()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTrueTypeFont.html#!show_getFontTexture" title="getFontTexture" class="documentation_func">getFontTexture()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTrueTypeFont.html#!show_getGlyphBBox" title="getGlyphBBox" class="documentation_func">getGlyphBBox()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTrueTypeFont.html#!show_getLetterSpacing" title="getLetterSpacing" class="documentation_func">getLetterSpacing()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTrueTypeFont.html#!show_getLineHeight" title="getLineHeight" class="documentation_func">getLineHeight()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTrueTypeFont.html#!show_getNumCharacters" title="getNumCharacters" class="documentation_func">getNumCharacters()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTrueTypeFont.html#!show_getSize" title="getSize" class="documentation_func">getSize()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTrueTypeFont.html#!show_getSpaceSize" title="getSpaceSize" class="documentation_func">getSpaceSize()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTrueTypeFont.html#!show_getStringAsPoints" title="getStringAsPoints" class="documentation_func">getStringAsPoints()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTrueTypeFont.html#!show_getStringBoundingBox" title="getStringBoundingBox" class="documentation_func">getStringBoundingBox()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTrueTypeFont.html#!show_getStringMesh" title="getStringMesh" class="documentation_func">getStringMesh()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTrueTypeFont.html#!show_hasFullCharacterSet" title="hasFullCharacterSet" class="documentation_func">hasFullCharacterSet()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTrueTypeFont.html#!show_isAntiAliased" title="isAntiAliased" class="documentation_func">isAntiAliased()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTrueTypeFont.html#!show_isLoaded" title="isLoaded" class="documentation_func">isLoaded()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTrueTypeFont.html#!show_load" title="load" class="documentation_func">load()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTrueTypeFont.html#!show_setGlobalDpi" title="setGlobalDpi" class="documentation_func">setGlobalDpi()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTrueTypeFont.html#!show_setLetterSpacing" title="setLetterSpacing" class="documentation_func">setLetterSpacing()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTrueTypeFont.html#!show_setLineHeight" title="setLineHeight" class="documentation_func">setLineHeight()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTrueTypeFont.html#!show_setSpaceSize" title="setSpaceSize" class="documentation_func">setSpaceSize()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTrueTypeFont.html#!show_stringHeight" title="stringHeight" class="documentation_func">stringHeight()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTrueTypeFont.html#!show_stringWidth" title="stringWidth" class="documentation_func">stringWidth()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/graphics/ofTrueTypeFont.html#!show_ofTrueTypeShutdown" title="ofTrueTypeShutdown" class="documentation_func">ofTrueTypeShutdown()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+    </div>
+    
+</div>
+
+		</div><!-- End Page Wide -->   
+      </div><!-- End Body Wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:34:25 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+eb73abcb6141243ae29291b42ec447024f00a570
+">
+
+eb73abcb6141243ae29291b42ec447024f00a570
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+
+
+

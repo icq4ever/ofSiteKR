@@ -1,0 +1,1714 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr - ofSoundBuffer</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+    <script src="http://icq4ever.iptime.org//js/jquery.columnizer.min.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation.js"></script>
+  </head>
+  <body>
+    <div id="content">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">
+          <div class="page-wide">
+          
+              <div id="docstitle"><h1>ofSoundBuffer</h1></div>
+              <div id="editdocs">
+                    <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/sound/ofSoundBuffer.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
+              </div>
+              
+          </div>
+          
+          
+        <div class="page-wide">
+		    <div class="submenucol-left">
+		     <!-- list of methods -->
+		     <p class="top_list_header">class methods</p>
+             <ul class="functionslist">
+                 
+                         <li class="noDoc">
+                         <a href="#show_ofSoundBuffer" class="ofSoundBuffer" data-lookup="ofSoundBuffer">ofSoundBuffer()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_addTo" class="addTo" data-lookup="addTo">addTo()</a></li>
+                     
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_allocate" class="allocate" data-lookup="allocate">allocate()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_append" class="append" data-lookup="append">append()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_clear" class="clear" data-lookup="clear">clear()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_copyFrom" class="copyFrom" data-lookup="copyFrom">copyFrom()</a></li>
+                     
+                     
+                     
+                     
+                         <li>
+                         <a href="#show_copyTo" class="copyTo" data-lookup="copyTo">copyTo()</a></li>
+                     
+                     
+                     
+                         <li>
+                         <a href="#show_fillWithNoise" class="fillWithNoise" data-lookup="fillWithNoise">fillWithNoise()</a></li>
+                     
+                         <li>
+                         <a href="#show_fillWithTone" class="fillWithTone" data-lookup="fillWithTone">fillWithTone()</a></li>
+                     
+                         <li>
+                         <a href="#show_getBuffer" class="getBuffer" data-lookup="getBuffer">getBuffer()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_getChannel" class="getChannel" data-lookup="getChannel">getChannel()</a></li>
+                     
+                         <li>
+                         <a href="#show_getDeviceID" class="getDeviceID" data-lookup="getDeviceID">getDeviceID()</a></li>
+                     
+                         <li>
+                         <a href="#show_getDurationMS" class="getDurationMS" data-lookup="getDurationMS">getDurationMS()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getDurationMicros" class="getDurationMicros" data-lookup="getDurationMicros">getDurationMicros()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getDurationNanos" class="getDurationNanos" data-lookup="getDurationNanos">getDurationNanos()</a></li>
+                     
+                         <li>
+                         <a href="#show_getNumChannels" class="getNumChannels" data-lookup="getNumChannels">getNumChannels()</a></li>
+                     
+                         <li>
+                         <a href="#show_getNumFrames" class="getNumFrames" data-lookup="getNumFrames">getNumFrames()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getRMSAmplitude" class="getRMSAmplitude" data-lookup="getRMSAmplitude">getRMSAmplitude()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getRMSAmplitudeChannel" class="getRMSAmplitudeChannel" data-lookup="getRMSAmplitudeChannel">getRMSAmplitudeChannel()</a></li>
+                     
+                         <li>
+                         <a href="#show_getSample" class="getSample" data-lookup="getSample">getSample()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_getSampleRate" class="getSampleRate" data-lookup="getSampleRate">getSampleRate()</a></li>
+                     
+                         <li>
+                         <a href="#show_getTickCount" class="getTickCount" data-lookup="getTickCount">getTickCount()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_hermiteResampleTo" class="hermiteResampleTo" data-lookup="hermiteResampleTo">hermiteResampleTo()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_linearResampleTo" class="linearResampleTo" data-lookup="linearResampleTo">linearResampleTo()</a></li>
+                     
+                         <li>
+                         <a href="#show_normalize" class="normalize" data-lookup="normalize">normalize()</a></li>
+                     
+                         <li>
+                         <a href="#show_operator*" class="operator*" data-lookup="operator*">operator*()</a></li>
+                     
+                         <li>
+                         <a href="#show_operator*=" class="operator*=" data-lookup="operator*=">operator*=()</a></li>
+                     
+                         <li>
+                         <a href="#show_operator[]" class="operator[]" data-lookup="operator[]">operator[]()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_resample" class="resample" data-lookup="resample">resample()</a></li>
+                     
+                         <li>
+                         <a href="#show_resampleTo" class="resampleTo" data-lookup="resampleTo">resampleTo()</a></li>
+                     
+                         <li>
+                         <a href="#show_resize" class="resize" data-lookup="resize">resize()</a></li>
+                     
+                         <li>
+                         <a href="#show_set" class="set" data-lookup="set">set()</a></li>
+                     
+                         <li>
+                         <a href="#show_setChannel" class="setChannel" data-lookup="setChannel">setChannel()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setDeviceID" class="setDeviceID" data-lookup="setDeviceID">setDeviceID()</a></li>
+                     
+                         <li>
+                         <a href="#show_setNumChannels" class="setNumChannels" data-lookup="setNumChannels">setNumChannels()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setSampleRate" class="setSampleRate" data-lookup="setSampleRate">setSampleRate()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setTickCount" class="setTickCount" data-lookup="setTickCount">setTickCount()</a></li>
+                     
+                         <li>
+                         <a href="#show_size" class="size" data-lookup="size">size()</a></li>
+                     
+                         <li>
+                         <a href="#show_stereoPan" class="stereoPan" data-lookup="stereoPan">stereoPan()</a></li>
+                     
+                         <li>
+                         <a href="#show_swap" class="swap" data-lookup="swap">swap()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_toShortPCM" class="toShortPCM" data-lookup="toShortPCM">toShortPCM()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_trimSilence" class="trimSilence" data-lookup="trimSilence">trimSilence()</a></li>
+                     
+             </ul>
+            
+             
+             
+             <!-- list of variables -->              
+                <p class="top_list_header">variables</p>
+                <ul class="functionslist">
+                            <li class="noDoc">
+                            <a href="#show_defaultAlgorithm" class="defaultAlgorithm" data-lookup="defaultAlgorithm">ofSoundBuffer::InterpolationAlgorithm defaultAlgorithm</a> </li>
+                 </ul>
+            
+             
+            
+             <!-- list of functions -->              
+		    </div>
+	    <div class="submenucol-right">
+            <div class="documentation_detail class_documentation">
+              
+  
+
+
+                        <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+                        
+  <p>/*!</p>
+<p>@brief Buffer for audio samples and associated metadata.</p>
+<p><a href="../sound/ofSoundBuffer.html" class="docs_class" >ofSoundBuffer</a> stores audio as an array of interleaved floating point samples, with a given sample rate for playback.</p>
+<h4 id="how-sound-recording-works">How sound recording works</h4>
+<p>Physically speaking, what we call <em>sound</em> is simply changes in air pressure perceived by a listener. These changes in sound pressure are converted
+by a microphone into changes in voltage that can be recorded, making a <em>sound recording</em>. A sound recording is therefore a recording of changes in air
+pressure at a particular point in space (ie where the microphone was positioned). When it is played back through a speaker, the speaker reproduces the
+same pattern of changes in air pressure as were recorded by the microphone, but this time at a different point in space (ie where the speaker is positioned).</p>
+<p>In digital audio these changes in air pressure are recorded as a set of discrete numbers (<em>samples</em>), each number representing a snapshot of the air pressure
+at a particular point in time. For high quality audio there are typically 44,100 snapshots recorded every second. This is called the <em>sample rate</em> and is
+expressed in <em>Hz</em> (44100Hz) or <em>kHz</em> (44.1kHz).</p>
+<p>Because humans have two ears, rather than one, sound is usually recorded in stereo. The simplest stereo sound recording is two <em>channels</em> of sound
+recorded by two microphones at two different points in space. More channels can also be recorded (eg with 5.1 surround sound systems or Ambisonics).</p>
+<h4 id="frames-channels-and-samples">Frames, channels and samples</h4>
+<p>Data in an <a href="../sound/ofSoundBuffer.html" class="docs_class" >ofSoundBuffer</a> is stored <em>interleaved</em> as an array of floats. Interleaved audio is analogous to how different color channels are stored side by side
+in an <a href="../graphics/ofImage.html" class="docs_class" >ofImage</a> or <a href="../graphics/ofPixels.html" class="docs_class" >ofPixels</a> object.</p>
+<p>The functions and function arguments in <a href="../sound/ofSoundBuffer.html" class="docs_class" >ofSoundBuffer</a> that deal with this interleaved data are based on 3 key terms:</p>
+<p><em>channels</em> refers to the number of channels or individual streams of interleaved audio samples in the buffer. A mono recording has 1 channel, a stereo
+recording has 2 channels.</p>
+<p><em>samples</em> refers to the actual raw data. One <em>sample</em> is a single floating point number between -1 and 1, which represents a snapshot of sound pressure at
+a single moment in time. A 0.1 second long buffer at 44100Hz contains 4410 <em>samples</em> if it has 1 channel, 8820 <em>samples</em> if it has 2 channels, 13230
+<em>samples</em> if it has 3 channels, and so on.</p>
+<p><em>frames</em> refers to the number of multi-channel sets of interleaved sample data there are in the buffer. A 0.1 second long buffer at 44100Hz always has
+4410 <em>frames</em>, regardless of how many channels it has. To get the number of <em>samples</em> in a buffer you multiply the number of <em>channels</em> by the number of <em>frames</em>.</p>
+<p>If I have an <a href="../sound/ofSoundBuffer.html" class="docs_class" >ofSoundBuffer</a> with 8 <em>frames</em> of mono (1 <em>channel</em>) audio, the underlying array contains 8 <em>samples</em> (ie it is 8 floats long),
+and the samples are arranged like this:</p>
+<p>L L L L L L L L</p>
+<p>where <code>L</code> represents a single sample.</p>
+<p>If I have an <a href="../sound/ofSoundBuffer.html" class="docs_class" >ofSoundBuffer</a> with 8 <em>frames</em> of stereo (2 <em>channel</em>) audio, then the underlying array contains 16 <em>samples</em> ((getNumFrames()<em>getNumChannels(),
+ie 8</em>2) arranged in an <em>interleaved</em> pattern:</p>
+<p>L R L R L R L R L R L R L R L R</p>
+<p>where <code>L</code> represents a single sample for the left channel, and <code>R</code> represents a single sample for the right channel. Grouping the frames together for clarity:</p>
+<p>LR LR LR LR LR LR LR LR</p>
+<p>If I have an <a href="../sound/ofSoundBuffer.html" class="docs_class" >ofSoundBuffer</a> with 8 frames of 5.1 surround (6 <em>channel</em>) audio, then the underlying array of floats contains 48 <em>samples</em> (getNumFrames()<em>getNumChannels(),
+ie 8</em>6) and is usually arranged in an <em>interleaved</em> pattern like this:</p>
+<p>L C R Ls Rs Lfe L C R Ls Rs Lfe L C R Ls Rs Lfe L C R Ls Rs Lfe L C R Ls Rs Lfe L C R Ls Rs Lfe L C R Ls Rs Lfe L C R Ls Rs Lfe</p>
+<p>where <code>L</code> represents a single sample for the left channel, <code>C</code> for centre, <code>R</code> for right, <code>Ls</code> for left surround, <code>Rs</code> for right surround and <code>Lfe</code> for the subwoofer.
+Grouping the frames together for clarity:</p>
+<p>LCRLsRsLfe LCRLsRsLfe LCRLsRsLfe LCRLsRsLfe LCRLsRsLfe LCRLsRsLfe LCRLsRsLfe LCRLsRsLfe</p>
+<p>*/</p>
+
+              
+              
+  
+
+           </div>
+                  
+            <!-- methods detail -->
+              <!--h2><a name="methods"></a>ofSoundBuffer methods</h2-->
+                        
+<div class="documentation_detail ofSoundBuffer" data-lookup="ofSoundBuffer" data-item-type="method">
+  	 
+	<h1><a name="show_ofSoundBuffer">ofSoundBuffer()</a></h1>
+	<h2>
+  <p>ofSoundBuffer::ofSoundBuffer()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSoundBuffer" data-lookup="ofSoundBuffer" data-item-type="method">
+  	 
+	<h1><a name="show_ofSoundBuffer">ofSoundBuffer(...)</a></h1>
+	<h2>
+  <p>ofSoundBuffer::ofSoundBuffer(short *shortBuffer, size_t numFrames, size_t numChannels, unsigned int sampleRate)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail addTo" data-lookup="addTo" data-item-type="method">
+  	 
+	<h1><a name="show_addTo">addTo(...)</a></h1>
+	<h2>
+  <p>void ofSoundBuffer::addTo(float *outBuffer, size_t outNumFrames, size_t outNumChannels, size_t fromFrame, bool loop=false)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>as copyTo but mixes source audio with audio in <code>out</code> by adding samples together (+), instead of overwriting</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail addTo" data-lookup="addTo" data-item-type="method">
+  	 
+	<h1><a name="show_addTo">addTo(...)</a></h1>
+	<h2>
+  <p>void ofSoundBuffer::addTo(ofSoundBuffer &amp;outBuffer, size_t fromFrame, bool loop=false)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>as addTo above but reads outNumFrames and outNumChannels from outBuffer</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail addTo" data-lookup="addTo" data-item-type="method">
+  	 
+	<h1><a name="show_addTo">addTo(...)</a></h1>
+	<h2>
+  <p>void ofSoundBuffer::addTo(ofSoundBuffer &amp;outBuffer, size_t outNumFrames, size_t outNumChannels, size_t fromFrame, bool loop=false)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>as copyTo but mixes source audio with audio in <code>outBuffer</code> by adding samples together (+), instead of overwriting.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail allocate" data-lookup="allocate" data-item-type="method">
+  	 
+	<h1><a name="show_allocate">allocate(...)</a></h1>
+	<h2>
+  <p>void ofSoundBuffer::allocate(size_t numSamples, size_t numChannels)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail append" data-lookup="append" data-item-type="method">
+  	 
+	<h1><a name="show_append">append(...)</a></h1>
+	<h2>
+  <p>void ofSoundBuffer::append(ofSoundBuffer &amp;other)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail clear" data-lookup="clear" data-item-type="method">
+  	 
+	<h1><a name="show_clear">clear()</a></h1>
+	<h2>
+  <p>void ofSoundBuffer::clear()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>remove all samples, preserving channel count and sample rate.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail copyFrom" data-lookup="copyFrom" data-item-type="method">
+  	 
+	<h1><a name="show_copyFrom">copyFrom(...)</a></h1>
+	<h2>
+  <p>void ofSoundBuffer::copyFrom(const float *floatBuffer, size_t numFrames, size_t numChannels, unsigned int sampleRate)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail copyFrom" data-lookup="copyFrom" data-item-type="method">
+  	 
+	<h1><a name="show_copyFrom">copyFrom(...)</a></h1>
+	<h2>
+  <p>void ofSoundBuffer::copyFrom(const short *shortBuffer, size_t numFrames, size_t numChannels, unsigned int sampleRate)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>copy length samples from shortBuffer and interpret as interleaved with the given number of channels at the given samplerate</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail copyFrom" data-lookup="copyFrom" data-item-type="method">
+  	 
+	<h1><a name="show_copyFrom">copyFrom(...)</a></h1>
+	<h2>
+  <p>void ofSoundBuffer::copyFrom(const vector&lt; float &gt; &amp;floatBuffer, size_t numChannels, unsigned int sampleRate)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail copyFrom" data-lookup="copyFrom" data-item-type="method">
+  	 
+	<h1><a name="show_copyFrom">copyFrom(...)</a></h1>
+	<h2>
+  <p>void ofSoundBuffer::copyFrom(const vector&lt; short &gt; &amp;shortBuffer, size_t numChannels, unsigned int sampleRate)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail copyTo" data-lookup="copyTo" data-item-type="method">
+  	 
+	<h1><a name="show_copyTo">copyTo(...)</a></h1>
+	<h2>
+  <p>void ofSoundBuffer::copyTo(float *outBuffer, size_t outNumFrames, size_t outNumChannels, size_t fromFrame, bool loop=false)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>copy sample data to out, where out is already allocated to match outNumFrames and outNumChannels (ie outNumFrames*outNumChannels samples).
+fromFrame is a frame offset. if we don't have enough source data, loop with fromFrame=0 until we have filled the out buffer.
+if out has fewer channels than our buffer, just copy the first outNumChannels of our data and skip the rest.
+if out has more channels than our buffer, loop through our channels repeatedly until done.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail copyTo" data-lookup="copyTo" data-item-type="method">
+  	 
+	<h1><a name="show_copyTo">copyTo(...)</a></h1>
+	<h2>
+  <p>void ofSoundBuffer::copyTo(ofSoundBuffer &amp;outBuffer, size_t frameFrame, bool loop=false)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>as copyTo above but reads outNumFrames and outNumChannels from outBuffer</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail copyTo" data-lookup="copyTo" data-item-type="method">
+  	 
+	<h1><a name="show_copyTo">copyTo(...)</a></h1>
+	<h2>
+  <p>void ofSoundBuffer::copyTo(ofSoundBuffer &amp;outBuffer, size_t outNumFrames, size_t outNumChannels, size_t fromFrame, bool loop=false)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>resize outBuffer to outNumFrames with outNumChannels, and then copy outNumFrames of data from us to outBuffer.
+fromFrame is a frame offset. if we don't have enough source data, loop with fromFrame=0 until we have filled outBuffer.
+if outBuffer has fewer channels than our buffer, just copy the first outNumChannels of our data and skip the rest.
+if outBuffer has more channels than our buffer, loop through our channels repeatedly until done.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail fillWithNoise" data-lookup="fillWithNoise" data-item-type="method">
+  	 
+	<h1><a name="show_fillWithNoise">fillWithNoise(...)</a></h1>
+	<h2>
+  <p>void ofSoundBuffer::fillWithNoise(float amplitude=1.0f)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>fills the buffer with random noise between -amplitude and amplitude. useful for debugging.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail fillWithTone" data-lookup="fillWithTone" data-item-type="method">
+  	 
+	<h1><a name="show_fillWithTone">fillWithTone(...)</a></h1>
+	<h2>
+  <p>float ofSoundBuffer::fillWithTone(float pitchHz=440.0f, float phase=0.0f)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>fills the buffer with a sine wave. useful for debugging.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getBuffer" data-lookup="getBuffer" data-item-type="method">
+  	 
+	<h1><a name="show_getBuffer">getBuffer()</a></h1>
+	<h2>
+  <p>vector&lt; float &gt; &amp; ofSoundBuffer::getBuffer()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>return the underlying buffer. careful!</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getBuffer" data-lookup="getBuffer" data-item-type="method">
+  	 
+	<h1><a name="show_getBuffer">getBuffer()</a></h1>
+	<h2>
+  <p>const vector&lt; float &gt; &amp; ofSoundBuffer::getBuffer()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getChannel" data-lookup="getChannel" data-item-type="method">
+  	 
+	<h1><a name="show_getChannel">getChannel(...)</a></h1>
+	<h2>
+  <p>void ofSoundBuffer::getChannel(ofSoundBuffer &amp;outBuffer, size_t sourceChannel)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>copy the requested channel of our data to outBuffer. resize outBuffer to fit.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getDeviceID" data-lookup="getDeviceID" data-item-type="method">
+  	 
+	<h1><a name="show_getDeviceID">getDeviceID()</a></h1>
+	<h2>
+  <p>int ofSoundBuffer::getDeviceID()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>return the ID of the device which generated this buffer</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getDurationMS" data-lookup="getDurationMS" data-item-type="method">
+  	 
+	<h1><a name="show_getDurationMS">getDurationMS()</a></h1>
+	<h2>
+  <p>uint64_t ofSoundBuffer::getDurationMS()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>return the duration of audio in this buffer in milliseconds (==(getNumFrames()/getSampleRate())*1000)</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getDurationMicros" data-lookup="getDurationMicros" data-item-type="method">
+  	 
+	<h1><a name="show_getDurationMicros">getDurationMicros()</a></h1>
+	<h2>
+  <p>uint64_t ofSoundBuffer::getDurationMicros()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getDurationNanos" data-lookup="getDurationNanos" data-item-type="method">
+  	 
+	<h1><a name="show_getDurationNanos">getDurationNanos()</a></h1>
+	<h2>
+  <p>uint64_t ofSoundBuffer::getDurationNanos()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getNumChannels" data-lookup="getNumChannels" data-item-type="method">
+  	 
+	<h1><a name="show_getNumChannels">getNumChannels()</a></h1>
+	<h2>
+  <p>size_t ofSoundBuffer::getNumChannels()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>the number of channels per frame</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getNumFrames" data-lookup="getNumFrames" data-item-type="method">
+  	 
+	<h1><a name="show_getNumFrames">getNumFrames()</a></h1>
+	<h2>
+  <p>size_t ofSoundBuffer::getNumFrames()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>the number of frames, ie the number of sets of (getNumChannels()) samples</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getRMSAmplitude" data-lookup="getRMSAmplitude" data-item-type="method">
+  	 
+	<h1><a name="show_getRMSAmplitude">getRMSAmplitude()</a></h1>
+	<h2>
+  <p>float ofSoundBuffer::getRMSAmplitude()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getRMSAmplitudeChannel" data-lookup="getRMSAmplitudeChannel" data-item-type="method">
+  	 
+	<h1><a name="show_getRMSAmplitudeChannel">getRMSAmplitudeChannel(...)</a></h1>
+	<h2>
+  <p>float ofSoundBuffer::getRMSAmplitudeChannel(size_t channel)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getSample" data-lookup="getSample" data-item-type="method">
+  	 
+	<h1><a name="show_getSample">getSample(...)</a></h1>
+	<h2>
+  <p>float &amp; ofSoundBuffer::getSample(size_t frameIndex, size_t channel)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>access the sample at frameIndex on a soecific channel</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getSample" data-lookup="getSample" data-item-type="method">
+  	 
+	<h1><a name="show_getSample">getSample(...)</a></h1>
+	<h2>
+  <p>const float &amp; ofSoundBuffer::getSample(size_t frameIndex, size_t channel)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getSampleRate" data-lookup="getSampleRate" data-item-type="method">
+  	 
+	<h1><a name="show_getSampleRate">getSampleRate()</a></h1>
+	<h2>
+  <p>unsigned int ofSoundBuffer::getSampleRate()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>sample rate of the audio in this buffer</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getTickCount" data-lookup="getTickCount" data-item-type="method">
+  	 
+	<h1><a name="show_getTickCount">getTickCount()</a></h1>
+	<h2>
+  <p>uint64_t ofSoundBuffer::getTickCount()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>return the tickCount that was assigned by ofSoundStream (if this buffer originated from an ofSoundStream).</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail hermiteResampleTo" data-lookup="hermiteResampleTo" data-item-type="method">
+  	 
+	<h1><a name="show_hermiteResampleTo">hermiteResampleTo(...)</a></h1>
+	<h2>
+  <p>void ofSoundBuffer::hermiteResampleTo(ofSoundBuffer &amp;buffer, size_t fromFrame, size_t numFrames, float speed, bool loop)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail linearResampleTo" data-lookup="linearResampleTo" data-item-type="method">
+  	 
+	<h1><a name="show_linearResampleTo">linearResampleTo(...)</a></h1>
+	<h2>
+  <p>void ofSoundBuffer::linearResampleTo(ofSoundBuffer &amp;buffer, size_t fromFrame, size_t numFrames, float speed, bool loop)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail normalize" data-lookup="normalize" data-item-type="method">
+  	 
+	<h1><a name="show_normalize">normalize(...)</a></h1>
+	<h2>
+  <p>void ofSoundBuffer::normalize(float level)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>amplifies samples so that the maximum amplitude is equal to 'level'</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator*" data-lookup="operator*" data-item-type="method">
+  	 
+	<h1><a name="show_operator*">operator*(...)</a></h1>
+	<h2>
+  <p>ofSoundBuffer ofSoundBuffer::operator*(float value)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>return a new buffer containing the contents of this buffer multiplied by value.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator*=" data-lookup="operator*=" data-item-type="method">
+  	 
+	<h1><a name="show_operator*=">operator*=(...)</a></h1>
+	<h2>
+  <p>ofSoundBuffer &amp; ofSoundBuffer::operator*=(float value)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>multiply everything in this buffer by value, in-place.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator[]" data-lookup="operator[]" data-item-type="method">
+  	 
+	<h1><a name="show_operator[]">operator[](...)</a></h1>
+	<h2>
+  <p>float &amp; ofSoundBuffer::operator<a href="size_t samplePos"></a></p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>access the sample at the given position in the buffer.
+to retrieve the sample for channel channelIndex of frame frameIndex, do the following:
+ofSoundBuffer myBuffer;
+...
+float sample = myBuffer[(frameIndex*myBuffer.getNumChannels()) + channelIndex];</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator[]" data-lookup="operator[]" data-item-type="method">
+  	 
+	<h1><a name="show_operator[]">operator[](...)</a></h1>
+	<h2>
+  <p>const float &amp; ofSoundBuffer::operator<a href="size_t samplePos"></a></p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail resample" data-lookup="resample" data-item-type="method">
+  	 
+	<h1><a name="show_resample">resample(...)</a></h1>
+	<h2>
+  <p>void ofSoundBuffer::resample(float speed, ofSoundBuffer::InterpolationAlgorithm algorithm)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>resample by changing the playback speed, keeping the same sampleRate</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail resampleTo" data-lookup="resampleTo" data-item-type="method">
+  	 
+	<h1><a name="show_resampleTo">resampleTo(...)</a></h1>
+	<h2>
+  <p>void ofSoundBuffer::resampleTo(ofSoundBuffer &amp;outBuffer, size_t fromFrame, size_t numFrames, float speed, bool loop=false, ofSoundBuffer::InterpolationAlgorithm algorithm)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>resample our data to outBuffer at the given target speed, starting at fromFrame and copying numFrames of data. resize outBuffer to fit.
+speed is relative to current speed (ie 1.0f == no change). lower speeds will give a larger outBuffer, higher speeds a smaller outBuffer.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail resize" data-lookup="resize" data-item-type="method">
+  	 
+	<h1><a name="show_resize">resize(...)</a></h1>
+	<h2>
+  <p>void ofSoundBuffer::resize(size_t numSamples, float val)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>resize this buffer to exactly this many samples. it's up to you make sure samples matches the channel count.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail set" data-lookup="set" data-item-type="method">
+  	 
+	<h1><a name="show_set">set(...)</a></h1>
+	<h2>
+  <p>void ofSoundBuffer::set(float value)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>set everything in this buffer to value, preserving size, channel count and sample rate.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setChannel" data-lookup="setChannel" data-item-type="method">
+  	 
+	<h1><a name="show_setChannel">setChannel(...)</a></h1>
+	<h2>
+  <p>void ofSoundBuffer::setChannel(const ofSoundBuffer &amp;inBuffer, size_t channel)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>copy data from inBuffer to the given channel. resize ourselves to match inBuffer's getNumFrames().</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setDeviceID" data-lookup="setDeviceID" data-item-type="method">
+  	 
+	<h1><a name="show_setDeviceID">setDeviceID(...)</a></h1>
+	<h2>
+  <p>void ofSoundBuffer::setDeviceID(int id)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setNumChannels" data-lookup="setNumChannels" data-item-type="method">
+  	 
+	<h1><a name="show_setNumChannels">setNumChannels(...)</a></h1>
+	<h2>
+  <p>void ofSoundBuffer::setNumChannels(int channels)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>set the number of channels. does not change the underlying data, ie causes getNumFrames() to return a different result.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setSampleRate" data-lookup="setSampleRate" data-item-type="method">
+  	 
+	<h1><a name="show_setSampleRate">setSampleRate(...)</a></h1>
+	<h2>
+  <p>void ofSoundBuffer::setSampleRate(unsigned int rate)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setTickCount" data-lookup="setTickCount" data-item-type="method">
+  	 
+	<h1><a name="show_setTickCount">setTickCount(...)</a></h1>
+	<h2>
+  <p>void ofSoundBuffer::setTickCount(uint64_t tick)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail size" data-lookup="size" data-item-type="method">
+  	 
+	<h1><a name="show_size">size()</a></h1>
+	<h2>
+  <p>size_t ofSoundBuffer::size()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>return the total number of samples in this buffer (==getNumFrames()*getNumChannels())</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail stereoPan" data-lookup="stereoPan" data-item-type="method">
+  	 
+	<h1><a name="show_stereoPan">stereoPan(...)</a></h1>
+	<h2>
+  <p>void ofSoundBuffer::stereoPan(float left, float right)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>assuming a 2-channel buffer, apply a stereo pan by multiplying channel 0 by left and channel 1 by right.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail swap" data-lookup="swap" data-item-type="method">
+  	 
+	<h1><a name="show_swap">swap(...)</a></h1>
+	<h2>
+  <p>void ofSoundBuffer::swap(ofSoundBuffer &amp;otherBuffer)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>swap the contents of this buffer with otherBuffer</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail toShortPCM" data-lookup="toShortPCM" data-item-type="method">
+  	 
+	<h1><a name="show_toShortPCM">toShortPCM(...)</a></h1>
+	<h2>
+  <p>void ofSoundBuffer::toShortPCM(short *dst)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail toShortPCM" data-lookup="toShortPCM" data-item-type="method">
+  	 
+	<h1><a name="show_toShortPCM">toShortPCM(...)</a></h1>
+	<h2>
+  <p>void ofSoundBuffer::toShortPCM(vector&lt; short &gt; &amp;dst)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail trimSilence" data-lookup="trimSilence" data-item-type="method">
+  	 
+	<h1><a name="show_trimSilence">trimSilence(...)</a></h1>
+	<h2>
+  <p>bool ofSoundBuffer::trimSilence(float threshold=0.0001f, bool trimStart=true, bool trimEnd=true)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>removes initial / ending silence from the buffer</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+
+            <!-- vars detail -->
+              <!--h2><a name="variables"></a>ofSoundBuffer variables</h2!-->
+                        
+<div class="documentation_detail  defaultAlgorithm" data-lookup="defaultAlgorithm" data-item-type="var">
+	<h1>ofSoundBuffer::InterpolationAlgorithm <a name="show_defaultAlgorithm">defaultAlgorithm</a></h1>
+	<h2>
+  <p>ofSoundBuffer::InterpolationAlgorithm ofSoundBuffer::defaultAlgorithm</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+
+            <!-- functions detail -->
+            <hr/>
+                
+            <!--diqus comments for class/functions module description-->
+            <div id="comments_header">
+            <h2>comments</h2>
+            <p>You can add comments with usage examples or other information for each class, method or variable, for adding documentation to an empty section or reporting errors is better to send a fix or open an issue through <a href="https://github.com/openframeworks/ofSite">github</a>.</p>
+            <p>When posting code enclose it in:</p>
+            <pre><code class="html">&lt;pre&gt;&lt;code class=&quot;cpp&quot;&gt;&nbsp;&lt;/code&gt;&lt;/pre&gt;</code></pre>
+            <br/>
+            </div>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+
+            // DISQUS
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+
+            var disqus_shortname = 'openframeworks'; // required: replace example with your forum shortname
+            //var disqus_developer = 1;
+
+            location_elements = window.location.pathname.split("/");
+            module_name = location_elements[location_elements.length-1].split(".")[0];
+            section_name = location.hash.split("_")[1];
+            console.log(module_name + " " + section_name);
+            if(section_name!=undefined && section_name!=''){
+            var disqus_identifier = window.location.pathname + "#!show_" + section_name;  
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "#!show_" + section_name;
+            var discus_title = document.title + " - " + section_name;
+            }else{
+            var disqus_identifier = window.location.pathname;
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            var discus_title = document.title;
+            }
+
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */   
+            (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		
+        </div><!-- End Submenu right -->
+      </div><!-- End page wide -->
+      </div><!-- End body wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:34:24 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+eb73abcb6141243ae29291b42ec447024f00a570
+">
+
+eb73abcb6141243ae29291b42ec447024f00a570
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+

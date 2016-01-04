@@ -1,0 +1,1385 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+    <script src="http://icq4ever.iptime.org//js/jquery.columnizer.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/2.1.08/jquery.masonry.min.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation_index.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43083059-1', 'auto');
+  ga('send', 'pageview');
+
+  </script>
+  </head>
+  <body>
+    <div id="content">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">	
+	    <div class="page-wide-tutorial">
+            <!--ul class="submenu">
+                <li><a href="/documentation">레퍼런스</a></li>
+                <li><a href="/tutorials">튜토리얼</a></li>
+            </ul-->
+    	    <h1>math</h1>
+    	    <div class="article">
+    	    
+  <h2 id="vector-math-classes-geometry-utils-and-other-mathematical-functions">Vector math classes, geometry utils and other mathematical functions</h2>
+<p>This module contains classes and functions that provide mathematical utilities helpful to work with graphics and other media. </p>
+<p>The classes in this module allow to work with vector math, <a href="ofVec2f.html">ofVec2f</a>, <a href="ofVec3f.html">ofVec3f</a> and <a href="ofVec4f.html">ofVec4f</a> for example represent vectors in 2, 3 and 4 dimensions. <a href="ofMatrix4x4.html">ofMatrix4x4</a> allows to represent scaling, rotations, translations and perspective transformations in an way that allows to transform any point in 3D space just by multiplying it by the matrix, <a href="ofMatrix4x4.html">ofMatrix4x4</a> can be easily uploaded to the graphics card through shaders or the ofLoadMatrix functions in <a href="../graphics/ofGraphics.html">ofGraphics</a>.</p>
+<p><a href="ofMath.html">ofMath</a> contains functions for various mathematical operations like generating a random number with ofRandom, or calculating the intersection of two line segments with ofLineSegmentIntersection.</p>
+
+    		</div>
+        </div><!-- End Page Wide Tutorial --> 
+        <div class="page-wide">
+        	
+<div class="documentation_group">
+	
+
+	<!-- CLASSES -->
+
+    <div class="documentation_index_group">
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html" class="documentation_class_link"><strong>ofMath</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofAngleDifferenceDegrees" title="ofAngleDifferenceDegrees" class="documentation_func">ofAngleDifferenceDegrees()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofAngleDifferenceRadians" title="ofAngleDifferenceRadians" class="documentation_func">ofAngleDifferenceRadians()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofBezierPoint" title="ofBezierPoint" class="documentation_func">ofBezierPoint()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofBezierTangent" title="ofBezierTangent" class="documentation_func">ofBezierTangent()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofClamp" title="ofClamp" class="documentation_func">ofClamp()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofCurvePoint" title="ofCurvePoint" class="documentation_func">ofCurvePoint()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofCurveTangent" title="ofCurveTangent" class="documentation_func">ofCurveTangent()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofDegToRad" title="ofDegToRad" class="documentation_func">ofDegToRad()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofDist" title="ofDist" class="documentation_func">ofDist()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofDistSquared" title="ofDistSquared" class="documentation_func">ofDistSquared()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofInRange" title="ofInRange" class="documentation_func">ofInRange()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofInsidePoly" title="ofInsidePoly" class="documentation_func">ofInsidePoly()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofInterpolateCatmullRom" title="ofInterpolateCatmullRom" class="documentation_func">ofInterpolateCatmullRom()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofInterpolateCosine" title="ofInterpolateCosine" class="documentation_func">ofInterpolateCosine()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofInterpolateCubic" title="ofInterpolateCubic" class="documentation_func">ofInterpolateCubic()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofInterpolateHermite" title="ofInterpolateHermite" class="documentation_func">ofInterpolateHermite()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofLerp" title="ofLerp" class="documentation_func">ofLerp()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofLerpDegrees" title="ofLerpDegrees" class="documentation_func">ofLerpDegrees()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofLerpRadians" title="ofLerpRadians" class="documentation_func">ofLerpRadians()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofLineSegmentIntersection" title="ofLineSegmentIntersection" class="documentation_func">ofLineSegmentIntersection()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofMap" title="ofMap" class="documentation_func">ofMap()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofNextPow2" title="ofNextPow2" class="documentation_func">ofNextPow2()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofNoise" title="ofNoise" class="documentation_func">ofNoise()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofNormalize" title="ofNormalize" class="documentation_func">ofNormalize()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofRadToDeg" title="ofRadToDeg" class="documentation_func">ofRadToDeg()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofRandom" title="ofRandom" class="documentation_func">ofRandom()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofRandomHeight" title="ofRandomHeight" class="documentation_func">ofRandomHeight()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofRandomWidth" title="ofRandomWidth" class="documentation_func">ofRandomWidth()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofRandomf" title="ofRandomf" class="documentation_func">ofRandomf()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofRandomuf" title="ofRandomuf" class="documentation_func">ofRandomuf()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofSeedRandom" title="ofSeedRandom" class="documentation_func">ofSeedRandom()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofSign" title="ofSign" class="documentation_func">ofSign()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofSignedNoise" title="ofSignedNoise" class="documentation_func">ofSignedNoise()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofWrap" title="ofWrap" class="documentation_func">ofWrap()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofWrapDegrees" title="ofWrapDegrees" class="documentation_func">ofWrapDegrees()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofMath.html#!show_ofWrapRadians" title="ofWrapRadians" class="documentation_func">ofWrapRadians()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix3x3.html" class="documentation_class_link"><strong>ofMatrix3x3</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix3x3.html#!show_ofMatrix3x3" title="ofMatrix3x3" class="documentation_func">ofMatrix3x3()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix3x3.html#!show_determinant" title="determinant" class="documentation_func">determinant()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix3x3.html#!show_entrywiseTimes" title="entrywiseTimes" class="documentation_func">entrywiseTimes()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix3x3.html#!show_inverse" title="inverse" class="documentation_func">inverse()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix3x3.html#!show_invert" title="invert" class="documentation_func">invert()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix3x3.html#!show_operator*" title="operator*" class="documentation_func">operator*()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix3x3.html#!show_operator*=" title="operator*=" class="documentation_func">operator*=()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix3x3.html#!show_operator+" title="operator+" class="documentation_func">operator+()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix3x3.html#!show_operator+=" title="operator+=" class="documentation_func">operator+=()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix3x3.html#!show_operator-" title="operator-" class="documentation_func">operator-()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix3x3.html#!show_operator-=" title="operator-=" class="documentation_func">operator-=()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix3x3.html#!show_operator/" title="operator/" class="documentation_func">operator/()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix3x3.html#!show_operator/=" title="operator/=" class="documentation_func">operator/=()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix3x3.html#!show_operator[]" title="operator[]" class="documentation_func">operator[]()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix3x3.html#!show_set" title="set" class="documentation_func">set()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix3x3.html#!show_transpose" title="transpose" class="documentation_func">transpose()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix3x3.html#!show_a" title="a" class="documentation_func">a</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix3x3.html#!show_b" title="b" class="documentation_func">b</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix3x3.html#!show_c" title="c" class="documentation_func">c</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix3x3.html#!show_d" title="d" class="documentation_func">d</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix3x3.html#!show_e" title="e" class="documentation_func">e</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix3x3.html#!show_f" title="f" class="documentation_func">f</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix3x3.html#!show_g" title="g" class="documentation_func">g</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix3x3.html#!show_h" title="h" class="documentation_func">h</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix3x3.html#!show_i" title="i" class="documentation_func">i</a></li>
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html" class="documentation_class_link"><strong>ofMatrix4x4</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_ofMatrix4x4" title="ofMatrix4x4" class="documentation_func">ofMatrix4x4()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_~ofMatrix4x4" title="~ofMatrix4x4" class="documentation_func">~ofMatrix4x4()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_decompose" title="decompose" class="documentation_func">decompose()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_getFrustum" title="getFrustum" class="documentation_func">getFrustum()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_getInverse" title="getInverse" class="documentation_func">getInverse()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_getInverseOf" title="getInverseOf" class="documentation_func">getInverseOf()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_getLookAt" title="getLookAt" class="documentation_func">getLookAt()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_getOrtho" title="getOrtho" class="documentation_func">getOrtho()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_getOrthoNormalOf" title="getOrthoNormalOf" class="documentation_func">getOrthoNormalOf()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_getPerspective" title="getPerspective" class="documentation_func">getPerspective()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_getPtr" title="getPtr" class="documentation_func">getPtr()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_getRotate" title="getRotate" class="documentation_func">getRotate()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_getRowAsVec3f" title="getRowAsVec3f" class="documentation_func">getRowAsVec3f()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_getRowAsVec4f" title="getRowAsVec4f" class="documentation_func">getRowAsVec4f()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_getScale" title="getScale" class="documentation_func">getScale()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_getTranslation" title="getTranslation" class="documentation_func">getTranslation()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_getTransposedOf" title="getTransposedOf" class="documentation_func">getTransposedOf()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_glRotate" title="glRotate" class="documentation_func">glRotate()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_glRotateRad" title="glRotateRad" class="documentation_func">glRotateRad()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_glScale" title="glScale" class="documentation_func">glScale()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_glTranslate" title="glTranslate" class="documentation_func">glTranslate()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_isIdentity" title="isIdentity" class="documentation_func">isIdentity()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_isNaN" title="isNaN" class="documentation_func">isNaN()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_isValid" title="isValid" class="documentation_func">isValid()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_makeFromMultiplicationOf" title="makeFromMultiplicationOf" class="documentation_func">makeFromMultiplicationOf()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_makeFrustumMatrix" title="makeFrustumMatrix" class="documentation_func">makeFrustumMatrix()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_makeIdentityMatrix" title="makeIdentityMatrix" class="documentation_func">makeIdentityMatrix()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_makeInvertOf" title="makeInvertOf" class="documentation_func">makeInvertOf()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_makeLookAtMatrix" title="makeLookAtMatrix" class="documentation_func">makeLookAtMatrix()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_makeLookAtViewMatrix" title="makeLookAtViewMatrix" class="documentation_func">makeLookAtViewMatrix()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_makeOrtho2DMatrix" title="makeOrtho2DMatrix" class="documentation_func">makeOrtho2DMatrix()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_makeOrthoMatrix" title="makeOrthoMatrix" class="documentation_func">makeOrthoMatrix()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_makeOrthoNormalOf" title="makeOrthoNormalOf" class="documentation_func">makeOrthoNormalOf()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_makePerspectiveMatrix" title="makePerspectiveMatrix" class="documentation_func">makePerspectiveMatrix()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_makeRotationMatrix" title="makeRotationMatrix" class="documentation_func">makeRotationMatrix()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_makeScaleMatrix" title="makeScaleMatrix" class="documentation_func">makeScaleMatrix()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_makeTranslationMatrix" title="makeTranslationMatrix" class="documentation_func">makeTranslationMatrix()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_newFrustumMatrix" title="newFrustumMatrix" class="documentation_func">newFrustumMatrix()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_newIdentityMatrix" title="newIdentityMatrix" class="documentation_func">newIdentityMatrix()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_newLookAtMatrix" title="newLookAtMatrix" class="documentation_func">newLookAtMatrix()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_newOrtho2DMatrix" title="newOrtho2DMatrix" class="documentation_func">newOrtho2DMatrix()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_newOrthoMatrix" title="newOrthoMatrix" class="documentation_func">newOrthoMatrix()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_newPerspectiveMatrix" title="newPerspectiveMatrix" class="documentation_func">newPerspectiveMatrix()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_newRotationMatrix" title="newRotationMatrix" class="documentation_func">newRotationMatrix()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_newScaleMatrix" title="newScaleMatrix" class="documentation_func">newScaleMatrix()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_newTranslationMatrix" title="newTranslationMatrix" class="documentation_func">newTranslationMatrix()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_operator()" title="operator()" class="documentation_func">operator()()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_operator*" title="operator*" class="documentation_func">operator*()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_operator*=" title="operator*=" class="documentation_func">operator*=()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_operator=" title="operator=" class="documentation_func">operator=()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_postMult" title="postMult" class="documentation_func">postMult()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_postMultRotate" title="postMultRotate" class="documentation_func">postMultRotate()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_postMultScale" title="postMultScale" class="documentation_func">postMultScale()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_postMultTranslate" title="postMultTranslate" class="documentation_func">postMultTranslate()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_preMult" title="preMult" class="documentation_func">preMult()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_preMultRotate" title="preMultRotate" class="documentation_func">preMultRotate()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_preMultScale" title="preMultScale" class="documentation_func">preMultScale()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_preMultTranslate" title="preMultTranslate" class="documentation_func">preMultTranslate()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_rotate" title="rotate" class="documentation_func">rotate()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_rotateRad" title="rotateRad" class="documentation_func">rotateRad()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_scale" title="scale" class="documentation_func">scale()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_set" title="set" class="documentation_func">set()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_setRotate" title="setRotate" class="documentation_func">setRotate()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_setTranslation" title="setTranslation" class="documentation_func">setTranslation()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_transform3x3" title="transform3x3" class="documentation_func">transform3x3()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_translate" title="translate" class="documentation_func">translate()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_operator*" title="operator*" class="documentation_func">operator*()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_operator<<" title="operator<<" class="documentation_func">operator<<()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show_operator>>" title="operator>>" class="documentation_func">operator>>()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofMatrix4x4.html#!show__mat" title="_mat" class="documentation_func">_mat</a></li>
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html" class="documentation_class_link"><strong>ofQuaternion</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_ofQuaternion" title="ofQuaternion" class="documentation_func">ofQuaternion()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_asVec3" title="asVec3" class="documentation_func">asVec3()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_asVec4" title="asVec4" class="documentation_func">asVec4()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_conj" title="conj" class="documentation_func">conj()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_get" title="get" class="documentation_func">get()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_getEuler" title="getEuler" class="documentation_func">getEuler()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_getRotate" title="getRotate" class="documentation_func">getRotate()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_inverse" title="inverse" class="documentation_func">inverse()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_length" title="length" class="documentation_func">length()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_length2" title="length2" class="documentation_func">length2()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_makeRotate" title="makeRotate" class="documentation_func">makeRotate()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_makeRotate_original" title="makeRotate_original" class="documentation_func">makeRotate_original()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_normalize" title="normalize" class="documentation_func">normalize()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_operator!=" title="operator!=" class="documentation_func">operator!=()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_operator*" title="operator*" class="documentation_func">operator*()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_operator*=" title="operator*=" class="documentation_func">operator*=()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_operator+" title="operator+" class="documentation_func">operator+()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_operator+=" title="operator+=" class="documentation_func">operator+=()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_operator-" title="operator-" class="documentation_func">operator-()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_operator-=" title="operator-=" class="documentation_func">operator-=()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_operator/" title="operator/" class="documentation_func">operator/()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_operator/=" title="operator/=" class="documentation_func">operator/=()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_operator<<" title="operator<<" class="documentation_func">operator<<()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_operator=" title="operator=" class="documentation_func">operator=()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_operator==" title="operator==" class="documentation_func">operator==()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_operator>>" title="operator>>" class="documentation_func">operator>>()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_operator[]" title="operator[]" class="documentation_func">operator[]()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_set" title="set" class="documentation_func">set()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_slerp" title="slerp" class="documentation_func">slerp()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_w" title="w" class="documentation_func">w()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_x" title="x" class="documentation_func">x()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_y" title="y" class="documentation_func">y()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_z" title="z" class="documentation_func">z()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show_zeroRotation" title="zeroRotation" class="documentation_func">zeroRotation()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofQuaternion.html#!show__v" title="_v" class="documentation_func">_v</a></li>
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html" class="documentation_class_link"><strong>ofVec2f</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_ofVec2f" title="ofVec2f" class="documentation_func">ofVec2f()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_align" title="align" class="documentation_func">align()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_alignRad" title="alignRad" class="documentation_func">alignRad()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_angle" title="angle" class="documentation_func">angle()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_angleRad" title="angleRad" class="documentation_func">angleRad()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_average" title="average" class="documentation_func">average()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_distance" title="distance" class="documentation_func">distance()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_dot" title="dot" class="documentation_func">dot()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_getInterpolated" title="getInterpolated" class="documentation_func">getInterpolated()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_getLimited" title="getLimited" class="documentation_func">getLimited()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_getMiddle" title="getMiddle" class="documentation_func">getMiddle()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_getNormalized" title="getNormalized" class="documentation_func">getNormalized()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_getPerpendicular" title="getPerpendicular" class="documentation_func">getPerpendicular()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_getPtr" title="getPtr" class="documentation_func">getPtr()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_getRotated" title="getRotated" class="documentation_func">getRotated()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_getRotatedRad" title="getRotatedRad" class="documentation_func">getRotatedRad()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_getScaled" title="getScaled" class="documentation_func">getScaled()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_interpolate" title="interpolate" class="documentation_func">interpolate()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_isAligned" title="isAligned" class="documentation_func">isAligned()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_isAlignedRad" title="isAlignedRad" class="documentation_func">isAlignedRad()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_length" title="length" class="documentation_func">length()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_limit" title="limit" class="documentation_func">limit()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_map" title="map" class="documentation_func">map()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_match" title="match" class="documentation_func">match()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_middle" title="middle" class="documentation_func">middle()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_normalize" title="normalize" class="documentation_func">normalize()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_one" title="one" class="documentation_func">one()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_operator!=" title="operator!=" class="documentation_func">operator!=()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_operator*" title="operator*" class="documentation_func">operator*()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_operator*=" title="operator*=" class="documentation_func">operator*=()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_operator+" title="operator+" class="documentation_func">operator+()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_operator+=" title="operator+=" class="documentation_func">operator+=()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_operator-" title="operator-" class="documentation_func">operator-()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_operator-=" title="operator-=" class="documentation_func">operator-=()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_operator/" title="operator/" class="documentation_func">operator/()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_operator/=" title="operator/=" class="documentation_func">operator/=()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_operator==" title="operator==" class="documentation_func">operator==()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_operator[]" title="operator[]" class="documentation_func">operator[]()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_perpendicular" title="perpendicular" class="documentation_func">perpendicular()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_rotate" title="rotate" class="documentation_func">rotate()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_rotateRad" title="rotateRad" class="documentation_func">rotateRad()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_scale" title="scale" class="documentation_func">scale()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_set" title="set" class="documentation_func">set()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_squareDistance" title="squareDistance" class="documentation_func">squareDistance()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_zero" title="zero" class="documentation_func">zero()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_operator*" title="operator*" class="documentation_func">operator*()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_operator+" title="operator+" class="documentation_func">operator+()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_operator-" title="operator-" class="documentation_func">operator-()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_operator/" title="operator/" class="documentation_func">operator/()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_operator<<" title="operator<<" class="documentation_func">operator<<()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_operator>>" title="operator>>" class="documentation_func">operator>>()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_DIM" title="DIM" class="documentation_func">DIM</a></li>
+                            
+                            <li class="variable"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_x" title="x" class="documentation_func">x</a></li>
+                            
+                            <li class="variable"><a href="http://icq4ever.iptime.org//documentation/math/ofVec2f.html#!show_y" title="y" class="documentation_func">y</a></li>
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html" class="documentation_class_link"><strong>ofVec3f</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_ofVec3f" title="ofVec3f" class="documentation_func">ofVec3f()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_align" title="align" class="documentation_func">align()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_alignRad" title="alignRad" class="documentation_func">alignRad()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_angle" title="angle" class="documentation_func">angle()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_angleRad" title="angleRad" class="documentation_func">angleRad()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_average" title="average" class="documentation_func">average()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_cross" title="cross" class="documentation_func">cross()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_distance" title="distance" class="documentation_func">distance()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_dot" title="dot" class="documentation_func">dot()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_getCrossed" title="getCrossed" class="documentation_func">getCrossed()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_getInterpolated" title="getInterpolated" class="documentation_func">getInterpolated()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_getLimited" title="getLimited" class="documentation_func">getLimited()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_getMapped" title="getMapped" class="documentation_func">getMapped()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_getMiddle" title="getMiddle" class="documentation_func">getMiddle()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_getNormalized" title="getNormalized" class="documentation_func">getNormalized()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_getPerpendicular" title="getPerpendicular" class="documentation_func">getPerpendicular()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_getPtr" title="getPtr" class="documentation_func">getPtr()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_getRotated" title="getRotated" class="documentation_func">getRotated()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_getRotatedRad" title="getRotatedRad" class="documentation_func">getRotatedRad()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_getScaled" title="getScaled" class="documentation_func">getScaled()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_interpolate" title="interpolate" class="documentation_func">interpolate()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_isAligned" title="isAligned" class="documentation_func">isAligned()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_isAlignedRad" title="isAlignedRad" class="documentation_func">isAlignedRad()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_length" title="length" class="documentation_func">length()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_limit" title="limit" class="documentation_func">limit()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_map" title="map" class="documentation_func">map()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_match" title="match" class="documentation_func">match()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_middle" title="middle" class="documentation_func">middle()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_normalize" title="normalize" class="documentation_func">normalize()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_one" title="one" class="documentation_func">one()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_operator!=" title="operator!=" class="documentation_func">operator!=()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_operator*" title="operator*" class="documentation_func">operator*()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_operator*=" title="operator*=" class="documentation_func">operator*=()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_operator+" title="operator+" class="documentation_func">operator+()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_operator+=" title="operator+=" class="documentation_func">operator+=()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_operator-" title="operator-" class="documentation_func">operator-()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_operator-=" title="operator-=" class="documentation_func">operator-=()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_operator/" title="operator/" class="documentation_func">operator/()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_operator/=" title="operator/=" class="documentation_func">operator/=()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_operator==" title="operator==" class="documentation_func">operator==()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_operator[]" title="operator[]" class="documentation_func">operator[]()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_perpendicular" title="perpendicular" class="documentation_func">perpendicular()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_rotate" title="rotate" class="documentation_func">rotate()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_rotateRad" title="rotateRad" class="documentation_func">rotateRad()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_scale" title="scale" class="documentation_func">scale()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_set" title="set" class="documentation_func">set()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_squareDistance" title="squareDistance" class="documentation_func">squareDistance()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_zero" title="zero" class="documentation_func">zero()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_operator*" title="operator*" class="documentation_func">operator*()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_operator+" title="operator+" class="documentation_func">operator+()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_operator-" title="operator-" class="documentation_func">operator-()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_operator/" title="operator/" class="documentation_func">operator/()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_operator<<" title="operator<<" class="documentation_func">operator<<()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_operator>>" title="operator>>" class="documentation_func">operator>>()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_DIM" title="DIM" class="documentation_func">DIM</a></li>
+                            
+                            <li class="variable"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_x" title="x" class="documentation_func">x</a></li>
+                            
+                            <li class="variable"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_y" title="y" class="documentation_func">y</a></li>
+                            
+                            <li class="variable"><a href="http://icq4ever.iptime.org//documentation/math/ofVec3f.html#!show_z" title="z" class="documentation_func">z</a></li>
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html" class="documentation_class_link"><strong>ofVec4f</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_ofVec4f" title="ofVec4f" class="documentation_func">ofVec4f()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_average" title="average" class="documentation_func">average()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_distance" title="distance" class="documentation_func">distance()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_dot" title="dot" class="documentation_func">dot()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_getInterpolated" title="getInterpolated" class="documentation_func">getInterpolated()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_getLimited" title="getLimited" class="documentation_func">getLimited()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_getMiddle" title="getMiddle" class="documentation_func">getMiddle()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_getNormalized" title="getNormalized" class="documentation_func">getNormalized()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_getPtr" title="getPtr" class="documentation_func">getPtr()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_getScaled" title="getScaled" class="documentation_func">getScaled()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_interpolate" title="interpolate" class="documentation_func">interpolate()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_length" title="length" class="documentation_func">length()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_lengthSquared" title="lengthSquared" class="documentation_func">lengthSquared()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_limit" title="limit" class="documentation_func">limit()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_match" title="match" class="documentation_func">match()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_middle" title="middle" class="documentation_func">middle()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_normalize" title="normalize" class="documentation_func">normalize()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_one" title="one" class="documentation_func">one()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_operator!=" title="operator!=" class="documentation_func">operator!=()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_operator*" title="operator*" class="documentation_func">operator*()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_operator*=" title="operator*=" class="documentation_func">operator*=()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_operator+" title="operator+" class="documentation_func">operator+()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_operator+=" title="operator+=" class="documentation_func">operator+=()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_operator-" title="operator-" class="documentation_func">operator-()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_operator-=" title="operator-=" class="documentation_func">operator-=()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_operator/" title="operator/" class="documentation_func">operator/()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_operator/=" title="operator/=" class="documentation_func">operator/=()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_operator==" title="operator==" class="documentation_func">operator==()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_operator[]" title="operator[]" class="documentation_func">operator[]()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_scale" title="scale" class="documentation_func">scale()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_set" title="set" class="documentation_func">set()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_squareDistance" title="squareDistance" class="documentation_func">squareDistance()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_zero" title="zero" class="documentation_func">zero()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_operator*" title="operator*" class="documentation_func">operator*()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_operator+" title="operator+" class="documentation_func">operator+()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_operator-" title="operator-" class="documentation_func">operator-()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_operator/" title="operator/" class="documentation_func">operator/()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_operator<<" title="operator<<" class="documentation_func">operator<<()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_operator>>" title="operator>>" class="documentation_func">operator>>()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_DIM" title="DIM" class="documentation_func">DIM</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_w" title="w" class="documentation_func">w</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_x" title="x" class="documentation_func">x</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_y" title="y" class="documentation_func">y</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/math/ofVec4f.html#!show_z" title="z" class="documentation_func">z</a></li>
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+    </div>
+    
+</div>
+
+		</div><!-- End Page Wide -->   
+      </div><!-- End Body Wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:34:25 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+eb73abcb6141243ae29291b42ec447024f00a570
+">
+
+eb73abcb6141243ae29291b42ec447024f00a570
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,1163 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr - ofSoundPlayer</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+    <script src="http://icq4ever.iptime.org//js/jquery.columnizer.min.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation.js"></script>
+  </head>
+  <body>
+    <div id="content">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">
+          <div class="page-wide">
+          
+              <div id="docstitle"><h1>ofSoundPlayer</h1></div>
+              <div id="editdocs">
+                    <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/sound/ofSoundPlayer.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
+                     <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/sound/ofSoundPlayer_functions.markdown" class="nohover"><img title="edit functions on GitHub" src="/images/editfunctions.png?a=5"/></a>
+              </div>
+              
+          </div>
+          
+          
+        <div class="page-wide">
+		    <div class="submenucol-left">
+		     <!-- list of methods -->
+		     <p class="top_list_header">class methods</p>
+             <ul class="functionslist">
+                 
+                     
+                         <li>
+                         <a href="#show_getPan" class="getPan" data-lookup="getPan">getPan()</a></li>
+                     
+                         <li>
+                         <a href="#show_getPlayer" class="getPlayer" data-lookup="getPlayer">getPlayer()</a></li>
+                     
+                         <li>
+                         <a href="#show_getPosition" class="getPosition" data-lookup="getPosition">getPosition()</a></li>
+                     
+                         <li>
+                         <a href="#show_getPositionMS" class="getPositionMS" data-lookup="getPositionMS">getPositionMS()</a></li>
+                     
+                         <li>
+                         <a href="#show_getSpeed" class="getSpeed" data-lookup="getSpeed">getSpeed()</a></li>
+                     
+                         <li>
+                         <a href="#show_getVolume" class="getVolume" data-lookup="getVolume">getVolume()</a></li>
+                     
+                         <li>
+                         <a href="#show_isLoaded" class="isLoaded" data-lookup="isLoaded">isLoaded()</a></li>
+                     
+                         <li>
+                         <a href="#show_isPlaying" class="isPlaying" data-lookup="isPlaying">isPlaying()</a></li>
+                     
+                         <li>
+                         <a href="#show_load" class="load" data-lookup="load">load()</a></li>
+                     
+                         <li>
+                         <a href="#show_play" class="play" data-lookup="play">play()</a></li>
+                     
+                         <li>
+                         <a href="#show_setLoop" class="setLoop" data-lookup="setLoop">setLoop()</a></li>
+                     
+                         <li>
+                         <a href="#show_setMultiPlay" class="setMultiPlay" data-lookup="setMultiPlay">setMultiPlay()</a></li>
+                     
+                         <li>
+                         <a href="#show_setPan" class="setPan" data-lookup="setPan">setPan()</a></li>
+                     
+                         <li>
+                         <a href="#show_setPaused" class="setPaused" data-lookup="setPaused">setPaused()</a></li>
+                     
+                         <li>
+                         <a href="#show_setPlayer" class="setPlayer" data-lookup="setPlayer">setPlayer()</a></li>
+                     
+                         <li>
+                         <a href="#show_setPosition" class="setPosition" data-lookup="setPosition">setPosition()</a></li>
+                     
+                         <li>
+                         <a href="#show_setPositionMS" class="setPositionMS" data-lookup="setPositionMS">setPositionMS()</a></li>
+                     
+                         <li>
+                         <a href="#show_setSpeed" class="setSpeed" data-lookup="setSpeed">setSpeed()</a></li>
+                     
+                         <li>
+                         <a href="#show_setVolume" class="setVolume" data-lookup="setVolume">setVolume()</a></li>
+                     
+                         <li>
+                         <a href="#show_stop" class="stop" data-lookup="stop">stop()</a></li>
+                     
+                         <li>
+                         <a href="#show_unload" class="unload" data-lookup="unload">unload()</a></li>
+                     
+             </ul>
+            
+             
+             
+             <!-- list of variables -->              
+            
+             
+            
+             <!-- list of functions -->              
+            <p class="top_list_header">global functions</p>
+                <ul class="functionslist">
+                     
+                            <li>
+                            <a href="#show_ofSoundGetSpectrum" class="ofSoundGetSpectrum" data-lookup="ofSoundGetSpectrum">ofSoundGetSpectrum()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofSoundSetVolume" class="ofSoundSetVolume" data-lookup="ofSoundSetVolume">ofSoundSetVolume()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofSoundShutdown" class="ofSoundShutdown" data-lookup="ofSoundShutdown">ofSoundShutdown()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofSoundStopAll" class="ofSoundStopAll" data-lookup="ofSoundStopAll">ofSoundStopAll()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofSoundUpdate" class="ofSoundUpdate" data-lookup="ofSoundUpdate">ofSoundUpdate()</a></li>
+                         
+                 </ul>
+		    </div>
+	    <div class="submenucol-right">
+            <div class="documentation_detail class_documentation">
+                    <h2><strong><em>Extends</em></strong></h2>
+                    <p>This class extends others, you can call their methods on an instance of ofSoundPlayer too:</p>
+                    <ul>
+                        <li><a href="../types/ofBaseSoundPlayer.html" class="docs_class" >ofBaseSoundPlayer</a> </li>
+                    </ul>
+              
+  <p>The <a href="../sound/ofSoundPlayer.html" class="docs_class" >ofSoundPlayer</a> class wraps one of several underlying audio utility libraries, depending on your OS and your configuration that can be Fmod, Quicktime, or OpenAL. The <a href="../sound/ofSoundPlayer.html" class="docs_class" >ofSoundPlayer</a> is primarily to allow you to load sound files and control and manipulate their playback and properties, if you want more low level access to sound data and to your sound card then you should take a look at the <a href="../sound/ofSoundStream.html" class="docs_class" >ofSoundStream</a> class. </p>
+
+
+                    <div class="inlined_docs">
+                        <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+                        
+  <p>Plays sound files.</p>
+<p><a href="../sound/ofSoundPlayer.html" class="docs_class" >ofSoundPlayer</a> handles simple playback of sound files, with controls for
+volume, pan, speed, seeking and multiplay.  This is a common cross-platform
+sound player interface which is inherited by each of the platform-specific
+sound player implementations.</p>
+
+                    </div>   
+              
+              
+  
+
+           </div>
+                  
+            <!-- methods detail -->
+              <!--h2><a name="methods"></a>ofSoundPlayer methods</h2-->
+                        
+<div class="documentation_detail getPan" data-lookup="getPan" data-item-type="method">
+  	 
+	<h1><a name="show_getPan">getPan()</a></h1>
+	<h2>
+  <p>float ofSoundPlayer::getPan()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the pan position of the sound. -1.0 - 1.0 range.
+0.0 is center pan, -1.0 is full left pan and 1.0 is full right pan. Default is
+0.0</p>
+<p>Example:</p>
+<pre><code class="cpp">
+    ofSoundPlayer mySound;    
+    mySound.load(&quot;beat.mp3&quot;);    
+    mySound.play();    
+    mySound.getPan();//Returns 0.0     
+    mySound.setPan(1.0f);     
+    mySound.getPan();//Returns 1.0
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Gets stereo pan.
+\return stereo pan in the range -1 to 1.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getPlayer" data-lookup="getPlayer" data-item-type="method">
+  	 
+	<h1><a name="show_getPlayer">getPlayer()</a></h1>
+	<h2>
+  <p>shared_ptr&lt; ofBaseSoundPlayer &gt; ofSoundPlayer::getPlayer()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>ofSoundPlayer actually wraps a dynamic instance of a specific sound player for a specific engine, that is, it contains an interface to the sound engine being used to load and playback sounds. This allows you access to the pointer that contains the specific interface.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getPosition" data-lookup="getPosition" data-item-type="method">
+  	 
+	<h1><a name="show_getPosition">getPosition()</a></h1>
+	<h2>
+  <p>float ofSoundPlayer::getPosition()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the current position of the playhead as a float between 0.0 and 1.0. 0.0 is the beginning of the sound file and 1.0 is the end.</p>
+<p>Example:</p>
+<pre><code class="cpp">    ofSoundPlayer mySound;  
+    mySound.load(&quot;beat.mp3&quot;);   
+    mySound.play();   
+    mySound.getPosition(); //Returns the current position as a percent 0.0-1.0
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Gets position of the playhead.
+\return playhead position as a float between 0 and 1.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getPositionMS" data-lookup="getPositionMS" data-item-type="method">
+  	 
+	<h1><a name="show_getPositionMS">getPositionMS()</a></h1>
+	<h2>
+  <p>int ofSoundPlayer::getPositionMS()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This returns the position of the playhead in terms of milliseconds (i.e. 5000 for 5 seconds into the sound).</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Gets position of the playhead.
+\return playhead position in milliseconds.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getSpeed" data-lookup="getSpeed" data-item-type="method">
+  	 
+	<h1><a name="show_getSpeed">getSpeed()</a></h1>
+	<h2>
+  <p>float ofSoundPlayer::getSpeed()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the speed of the sound playback in relation to its normal speed.
+So 2.0 would mean the sound is playing twice as fast. 0.5 would mean half as fast. </p>
+<p>Example:</p>
+<pre><code class="cpp">
+    ofSoundPlayer mySound;    
+    mySound.load(&quot;beat.mp3&quot;);   
+    mySound.getSpeed(); //Returns 1.0   
+    mySound.setSpeed(2.0f);   
+    mySound.getSpeed(); //Returns 2.0f
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Gets playback speed.
+\return playback speed (see ofSoundPlayer::setSpeed()).</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getVolume" data-lookup="getVolume" data-item-type="method">
+  	 
+	<h1><a name="show_getVolume">getVolume()</a></h1>
+	<h2>
+  <p>float ofSoundPlayer::getVolume()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the current volume of the sound player, as set by <code>setVolume()</code>. 0.0 is silent and 1.0 is full volume.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Gets current volume.
+\return current volume in the range 0 to 1.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail isLoaded" data-lookup="isLoaded" data-item-type="method">
+  	 
+	<h1><a name="show_isLoaded">isLoaded()</a></h1>
+	<h2>
+  <p>bool ofSoundPlayer::isLoaded()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns whether or not a sound has been successfully loaded into the sound player. </p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Queries the player to see if its file was loaded successfully.
+\return whether or not the player is ready to begin playback.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail isPlaying" data-lookup="isPlaying" data-item-type="method">
+  	 
+	<h1><a name="show_isPlaying">isPlaying()</a></h1>
+	<h2>
+  <p>bool ofSoundPlayer::isPlaying()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Gets current playback state.
+\return true if the player is currently playing a file.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail load" data-lookup="load" data-item-type="method">
+  	 
+	<h1><a name="show_load">load(...)</a></h1>
+	<h2>
+  <p>bool ofSoundPlayer::load(string fileName, bool stream=false)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Tells the sound player which file to play.</p>
+<p>Codec support varies by platform but wav, aif, and mp3 are safe.</p>
+<p>Parameters:
+fileName Path to the sound file, relative to your app's data folder.
+stream set "true" to enable streaming from disk (for large files).</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail play" data-lookup="play" data-item-type="method">
+  	 
+	<h1><a name="show_play">play()</a></h1>
+	<h2>
+  <p>void ofSoundPlayer::play()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Plays the sound. If setMultiPlay() has been set to true each play() command will spawn a new copy of the sound on a new channel, letting the existing sounds continue until they are finished. If setMultiPlay() is set to false it will restart the playback of the song.</p>
+<p>Examples:</p>
+<p>Normal Playback:</p>
+<pre><code class="cpp">ofSoundPlayer mySound;
+mySound.load(&quot;beat.mp3&quot;);
+mySound.play(); //Plays sound
+mySound.play(); //Restarts and plays sound
+</code></pre>
+
+<p>Multiplay:</p>
+<pre><code class="cpp">ofSoundPlayer mySound;
+mySound.setMultiPlay(true);
+mySound.load(&quot;beat.mp3&quot;);
+mySound.play(); //Plays sound
+mySound.play(); //Adds new copy of sound to channel and plays over currently playing sound
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Starts playback.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setLoop" data-lookup="setLoop" data-item-type="method">
+  	 
+	<h1><a name="show_setLoop">setLoop(...)</a></h1>
+	<h2>
+  <p>void ofSoundPlayer::setLoop(bool loop)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Loops the sound if set to true. Does not loop the sound if set to false. Default is false.</p>
+<p>Example:</p>
+<pre><code class="cpp">ofSoundPlayer mySound;
+mySound.load(&quot;beat.mp3&quot;);
+mySound.setLoop(true); //Sound will loop
+mySound.play();
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Sets whether to loop once the end of the file is reached.</p>
+<p>Parameters:
+loop "true" to loop, default is false.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setMultiPlay" data-lookup="setMultiPlay" data-item-type="method">
+  	 
+	<h1><a name="show_setMultiPlay">setMultiPlay(...)</a></h1>
+	<h2>
+  <p>void ofSoundPlayer::setMultiPlay(bool multiplay)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Allows a sound to be played multiple times at once. When set to true the play() function will start playing the sound on a new channel, letting the old channels continue until they are done playing. When set to false the play() function will stop the channel before playing the sound.</p>
+<p>Example:</p>
+<pre><code class="cpp">ofSoundPlayer mySound;
+mySound.setMultiPlay(true);
+mySound.load(&quot;beat.mp3&quot;);
+mySound.play(); //Plays sound
+mySound.play(); //Adds new copy of sound to channel and plays over currently playing sound
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Enables playing multiple simultaneous copies of the sound.</p>
+<p>Parameters:
+multiplay "true" to enable, default is false.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setPan" data-lookup="setPan" data-item-type="method">
+  	 
+	<h1><a name="show_setPan">setPan(...)</a></h1>
+	<h2>
+  <p>void ofSoundPlayer::setPan(float pan)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Sets the pan position (pct) of the sound. -1.0 - 1.0 range. 0.0 is center pan, -1.0 is full left pan and 1.0 is full right pan. </p>
+<p>Example:</p>
+<pre><code class="cpp">ofSoundPlayer mySound;
+mySound.load(&quot;beat.mp3&quot;);
+mySound.play();
+mySound.setPan(-1.0f); //Pans to the left
+mySound.setPan(1.0f); //Pans to the right
+mySound.setPan(0.0f); //Back to center
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Sets stereo pan.</p>
+<p>Parameters:
+pan range is -1 to 1 (-1 is full left, 1 is full right).</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setPaused" data-lookup="setPaused" data-item-type="method">
+  	 
+	<h1><a name="show_setPaused">setPaused(...)</a></h1>
+	<h2>
+  <p>void ofSoundPlayer::setPaused(bool paused)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Pauses and un-pauses the playback of the sound.</p>
+<p>Example</p>
+<pre><code class="cpp">ofSoundPlayer mySound;
+mySound.load(&quot;beat.mp3&quot;);
+mySound.play();
+mySound.setPaused(true); //Sound is paused
+mySound.setPaused(false); //Sound is unpaused, playback continues
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Enables pause / resume.</p>
+<p>Parameters:
+paused "true" to pause, "false" to resume.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setPlayer" data-lookup="setPlayer" data-item-type="method">
+  	 
+	<h1><a name="show_setPlayer">setPlayer(...)</a></h1>
+	<h2>
+  <p>void ofSoundPlayer::setPlayer(shared_ptr&lt; ofBaseSoundPlayer &gt; newPlayer)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>ofSoundPlayer actually wraps a dynamic instance of a sound player, that is, it contains an interface to the sound engine being used to load and playback sounds. If you want to set the interface that your system uses, you can pass an ofPtr to an ofSoundPlayer into the ofSoundPlayer and have the ofSoundPlayer manipulate that one instead.</p>
+<pre><code class="cpp">ofPtr&lt;ofBaseSoundPlayer&gt; soundPtr(new ofOpenALSoundPlayer());
+player.setPlayer(soundPtr);
+</code></pre>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setPosition" data-lookup="setPosition" data-item-type="method">
+  	 
+	<h1><a name="show_setPosition">setPosition(...)</a></h1>
+	<h2>
+  <p>void ofSoundPlayer::setPosition(float percent)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Sets the playback-head to the position (pct) specified. 0.0 - 1.0 range. 0.0 is the beginning of the sound file and 1.0 is the end.</p>
+<p>Example:</p>
+<pre><code class="cpp">ofSoundPlayer mySound;
+mySound.load(&quot;beat.mp3&quot;);
+mySound.play();
+mySound.setPosition(0.5f); //Moves the playhead to halfway through the sound
+mySound.setPosition(0.0f); //Moves the playhead back to the beginning of the sound
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Sets position of the playhead within the file (aka "seeking").</p>
+<p>Parameters:
+percent range is 0 (beginning of file) to 1 (end of file).</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setPositionMS" data-lookup="setPositionMS" data-item-type="method">
+  	 
+	<h1><a name="show_setPositionMS">setPositionMS(...)</a></h1>
+	<h2>
+  <p>void ofSoundPlayer::setPositionMS(int ms)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This sets the position of the playhead in milliseconds.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Sets position of the playhead within the file (aka "seeking").</p>
+<p>Parameters:
+ms number of milliseconds from the start of the file.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setSpeed" data-lookup="setSpeed" data-item-type="method">
+  	 
+	<h1><a name="show_setSpeed">setSpeed(...)</a></h1>
+	<h2>
+  <p>void ofSoundPlayer::setSpeed(float speed)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Sets the playback speed of the sound. 1.0 is normal speed. 2.0 is double the normal speed etc. </p>
+<p>Example:</p>
+<pre><code class="cpp">ofSoundPlayer mySound;
+mySound.loadSound(&quot;beat.mp3&quot;);
+mySound.play();
+mySound.setSpeed(2.0f); //Chipmunk Voice
+mySound.setSpeed(0.2f); //Isaac Hayes on Muscle Relaxers
+mySound.setSpeed(1.0f); //Normal again
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Sets playback speed.</p>
+<p>Parameters:
+speed set &gt; 1 for faster playback, &lt; 1 for slower playback.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setVolume" data-lookup="setVolume" data-item-type="method">
+  	 
+	<h1><a name="show_setVolume">setVolume(...)</a></h1>
+	<h2>
+  <p>void ofSoundPlayer::setVolume(float vol)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Sets the volume of the sound. 0.0 - 1.0 range. 0.0 is silent and 1.0 is full volume. </p>
+<p>Example:</p>
+<pre><code class="cpp">ofSoundPlayer mySound;
+mySound.load(&quot;beat.mp3&quot;);
+mySound.play();
+mySound.setVolume(0.1f); //Sets volume at 10% of maximum
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Sets playback volume.</p>
+<p>Parameters:
+vol range is 0 to 1.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail stop" data-lookup="stop" data-item-type="method">
+  	 
+	<h1><a name="show_stop">stop()</a></h1>
+	<h2>
+  <p>void ofSoundPlayer::stop()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Stops the sound currently playing. </p>
+<p>Example:</p>
+<pre><code class="cpp">ofSoundPlayer mySound;
+mySound.load(&quot;beat.mp3&quot;);
+mySound.play(); //Begins playback of sound
+mySound.stop(); //Ends playback, stops audio
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Stops playback.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail unload" data-lookup="unload" data-item-type="method">
+  	 
+	<h1><a name="show_unload">unload()</a></h1>
+	<h2>
+  <p>void ofSoundPlayer::unload()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Stops and unloads the current sound.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+
+            <!-- vars detail -->
+
+            <!-- functions detail -->
+              <!--h2><a name="functions"></a>ofSoundPlayer functions</h2-->
+                        
+<div class="documentation_detail ofSoundGetSpectrum" data-lookup="ofSoundGetSpectrum" data-item-type="function">
+  	 
+	<h1><a name="show_ofSoundGetSpectrum">ofSoundGetSpectrum(...)</a></h1>
+	<h2>
+  <p>float * ofSoundGetSpectrum(int nBands)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Gets a frequency spectrum sample, taking all current sound players into account.</p>
+<p>Each band will be represented as a float between 0 and 1.</p>
+<p>Warning: This isn't implemented on mobile &amp; embedded platforms.</p>
+<p>Parameters:
+nBands number of spectrum bands to return, max 512.
+\return pointer to an FFT sample, sample size is equal to the nBands parameter.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSoundSetVolume" data-lookup="ofSoundSetVolume" data-item-type="function">
+  	 
+	<h1><a name="show_ofSoundSetVolume">ofSoundSetVolume(...)</a></h1>
+	<h2>
+  <p>void ofSoundSetVolume(float vol)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Sets the volume of all ofSoundPlayer objects to the volume (vol) specified. 0.0 - 1.0 range. 0.0 is silent and 1.0 is full volume.</p>
+
+
+                <div class="inlined_docs">
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Sets global volume for FMOD-based sound players (windows, osx).</p>
+<p>Parameters:
+vol range is 0 to 1.</p>
+
+            
+                </div>
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSoundShutdown" data-lookup="ofSoundShutdown" data-item-type="function">
+  	 
+	<h1><a name="show_ofSoundShutdown">ofSoundShutdown()</a></h1>
+	<h2>
+  <p>void ofSoundShutdown()</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Cleans up FMOD (windows, osx).</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSoundStopAll" data-lookup="ofSoundStopAll" data-item-type="function">
+  	 
+	<h1><a name="show_ofSoundStopAll">ofSoundStopAll()</a></h1>
+	<h2>
+  <p>void ofSoundStopAll()</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Stops all active sound players on FMOD-based systems (windows, osx).</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSoundUpdate" data-lookup="ofSoundUpdate" data-item-type="function">
+  	 
+	<h1><a name="show_ofSoundUpdate">ofSoundUpdate()</a></h1>
+	<h2>
+  <p>void ofSoundUpdate()</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  <p>Updates sound engine. This should be called every frame.</p>
+
+
+                <div class="inlined_docs">
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Call in your app's update() to update FMOD-based sound players.</p>
+
+            
+                </div>
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+            <hr/>
+                
+            <!--diqus comments for class/functions module description-->
+            <div id="comments_header">
+            <h2>comments</h2>
+            <p>You can add comments with usage examples or other information for each class, method or variable, for adding documentation to an empty section or reporting errors is better to send a fix or open an issue through <a href="https://github.com/openframeworks/ofSite">github</a>.</p>
+            <p>When posting code enclose it in:</p>
+            <pre><code class="html">&lt;pre&gt;&lt;code class=&quot;cpp&quot;&gt;&nbsp;&lt;/code&gt;&lt;/pre&gt;</code></pre>
+            <br/>
+            </div>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+
+            // DISQUS
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+
+            var disqus_shortname = 'openframeworks'; // required: replace example with your forum shortname
+            //var disqus_developer = 1;
+
+            location_elements = window.location.pathname.split("/");
+            module_name = location_elements[location_elements.length-1].split(".")[0];
+            section_name = location.hash.split("_")[1];
+            console.log(module_name + " " + section_name);
+            if(section_name!=undefined && section_name!=''){
+            var disqus_identifier = window.location.pathname + "#!show_" + section_name;  
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "#!show_" + section_name;
+            var discus_title = document.title + " - " + section_name;
+            }else{
+            var disqus_identifier = window.location.pathname;
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            var discus_title = document.title;
+            }
+
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */   
+            (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		
+        </div><!-- End Submenu right -->
+      </div><!-- End page wide -->
+      </div><!-- End body wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:34:23 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+eb73abcb6141243ae29291b42ec447024f00a570
+">
+
+eb73abcb6141243ae29291b42ec447024f00a570
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+

@@ -1,0 +1,3643 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr - ofGLRenderer</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+    <script src="http://icq4ever.iptime.org//js/jquery.columnizer.min.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation.js"></script>
+  </head>
+  <body>
+    <div id="content">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">
+          <div class="page-wide">
+          
+              <div id="docstitle"><h1>ofGLRenderer</h1></div>
+              <div id="editdocs">
+                    <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/gl/ofGLRenderer.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
+              </div>
+              
+          </div>
+          
+          
+        <div class="page-wide">
+		    <div class="submenucol-left">
+		     <!-- list of methods -->
+		     <p class="top_list_header">class methods</p>
+             <ul class="functionslist">
+                 
+                         <li class="noDoc">
+                         <a href="#show_ofGLRenderer" class="ofGLRenderer" data-lookup="ofGLRenderer">ofGLRenderer()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_~ofGLRenderer" class="~ofGLRenderer" data-lookup="~ofGLRenderer">~ofGLRenderer()</a></li>
+                     
+                         <li>
+                         <a href="#show_background" class="background" data-lookup="background">background()</a></li>
+                     
+                     
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_begin" class="begin" data-lookup="begin">begin()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_bind" class="bind" data-lookup="bind">bind()</a></li>
+                     
+                     
+                     
+                     
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_bindForBlitting" class="bindForBlitting" data-lookup="bindForBlitting">bindForBlitting()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_clear" class="clear" data-lookup="clear">clear()</a></li>
+                     
+                     
+                     
+                         <li>
+                         <a href="#show_clearAlpha" class="clearAlpha" data-lookup="clearAlpha">clearAlpha()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_disableAlphaMask" class="disableAlphaMask" data-lookup="disableAlphaMask">disableAlphaMask()</a></li>
+                     
+                         <li>
+                         <a href="#show_disableAntiAliasing" class="disableAntiAliasing" data-lookup="disableAntiAliasing">disableAntiAliasing()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_disableLight" class="disableLight" data-lookup="disableLight">disableLight()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_disableLighting" class="disableLighting" data-lookup="disableLighting">disableLighting()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_disablePointSprites" class="disablePointSprites" data-lookup="disablePointSprites">disablePointSprites()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_disableSeparateSpecularLight" class="disableSeparateSpecularLight" data-lookup="disableSeparateSpecularLight">disableSeparateSpecularLight()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_disableTextureTarget" class="disableTextureTarget" data-lookup="disableTextureTarget">disableTextureTarget()</a></li>
+                     
+                         <li>
+                         <a href="#show_draw" class="draw" data-lookup="draw">draw()</a></li>
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                         <li>
+                         <a href="#show_drawCircle" class="drawCircle" data-lookup="drawCircle">drawCircle()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_drawElements" class="drawElements" data-lookup="drawElements">drawElements()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_drawElementsInstanced" class="drawElementsInstanced" data-lookup="drawElementsInstanced">drawElementsInstanced()</a></li>
+                     
+                         <li>
+                         <a href="#show_drawEllipse" class="drawEllipse" data-lookup="drawEllipse">drawEllipse()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_drawInstanced" class="drawInstanced" data-lookup="drawInstanced">drawInstanced()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_drawLine" class="drawLine" data-lookup="drawLine">drawLine()</a></li>
+                     
+                         <li>
+                         <a href="#show_drawRectangle" class="drawRectangle" data-lookup="drawRectangle">drawRectangle()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_drawString" class="drawString" data-lookup="drawString">drawString()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_drawTriangle" class="drawTriangle" data-lookup="drawTriangle">drawTriangle()</a></li>
+                     
+                         <li>
+                         <a href="#show_enableAntiAliasing" class="enableAntiAliasing" data-lookup="enableAntiAliasing">enableAntiAliasing()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_enableLight" class="enableLight" data-lookup="enableLight">enableLight()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_enableLighting" class="enableLighting" data-lookup="enableLighting">enableLighting()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_enablePointSprites" class="enablePointSprites" data-lookup="enablePointSprites">enablePointSprites()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_enableSeparateSpecularLight" class="enableSeparateSpecularLight" data-lookup="enableSeparateSpecularLight">enableSeparateSpecularLight()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_enableTextureTarget" class="enableTextureTarget" data-lookup="enableTextureTarget">enableTextureTarget()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_end" class="end" data-lookup="end">end()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_finishRender" class="finishRender" data-lookup="finishRender">finishRender()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_get3dGraphics" class="get3dGraphics" data-lookup="get3dGraphics">get3dGraphics()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_getBackgroundAuto" class="getBackgroundAuto" data-lookup="getBackgroundAuto">getBackgroundAuto()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getBackgroundColor" class="getBackgroundColor" data-lookup="getBackgroundColor">getBackgroundColor()</a></li>
+                     
+                         <li>
+                         <a href="#show_getCoordHandedness" class="getCoordHandedness" data-lookup="getCoordHandedness">getCoordHandedness()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getCurrentMatrix" class="getCurrentMatrix" data-lookup="getCurrentMatrix">getCurrentMatrix()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getCurrentNormalMatrix" class="getCurrentNormalMatrix" data-lookup="getCurrentNormalMatrix">getCurrentNormalMatrix()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getCurrentOrientationMatrix" class="getCurrentOrientationMatrix" data-lookup="getCurrentOrientationMatrix">getCurrentOrientationMatrix()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getCurrentViewMatrix" class="getCurrentViewMatrix" data-lookup="getCurrentViewMatrix">getCurrentViewMatrix()</a></li>
+                     
+                         <li>
+                         <a href="#show_getCurrentViewport" class="getCurrentViewport" data-lookup="getCurrentViewport">getCurrentViewport()</a></li>
+                     
+                         <li>
+                         <a href="#show_getFillMode" class="getFillMode" data-lookup="getFillMode">getFillMode()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getGLVersionMajor" class="getGLVersionMajor" data-lookup="getGLVersionMajor">getGLVersionMajor()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getGLVersionMinor" class="getGLVersionMinor" data-lookup="getGLVersionMinor">getGLVersionMinor()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getLightingEnabled" class="getLightingEnabled" data-lookup="getLightingEnabled">getLightingEnabled()</a></li>
+                     
+                         <li>
+                         <a href="#show_getNativeViewport" class="getNativeViewport" data-lookup="getNativeViewport">getNativeViewport()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getPath" class="getPath" data-lookup="getPath">getPath()</a></li>
+                     
+                         <li>
+                         <a href="#show_getRectMode" class="getRectMode" data-lookup="getRectMode">getRectMode()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getStyle" class="getStyle" data-lookup="getStyle">getStyle()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getType" class="getType" data-lookup="getType">getType()</a></li>
+                     
+                         <li>
+                         <a href="#show_getViewportHeight" class="getViewportHeight" data-lookup="getViewportHeight">getViewportHeight()</a></li>
+                     
+                         <li>
+                         <a href="#show_getViewportWidth" class="getViewportWidth" data-lookup="getViewportWidth">getViewportWidth()</a></li>
+                     
+                         <li>
+                         <a href="#show_isVFlipped" class="isVFlipped" data-lookup="isVFlipped">isVFlipped()</a></li>
+                     
+                         <li>
+                         <a href="#show_loadIdentityMatrix" class="loadIdentityMatrix" data-lookup="loadIdentityMatrix">loadIdentityMatrix()</a></li>
+                     
+                         <li>
+                         <a href="#show_loadMatrix" class="loadMatrix" data-lookup="loadMatrix">loadMatrix()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_loadViewMatrix" class="loadViewMatrix" data-lookup="loadViewMatrix">loadViewMatrix()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_matrixMode" class="matrixMode" data-lookup="matrixMode">matrixMode()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_multMatrix" class="multMatrix" data-lookup="multMatrix">multMatrix()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_multViewMatrix" class="multViewMatrix" data-lookup="multViewMatrix">multViewMatrix()</a></li>
+                     
+                         <li>
+                         <a href="#show_popMatrix" class="popMatrix" data-lookup="popMatrix">popMatrix()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_popStyle" class="popStyle" data-lookup="popStyle">popStyle()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_popView" class="popView" data-lookup="popView">popView()</a></li>
+                     
+                         <li>
+                         <a href="#show_pushMatrix" class="pushMatrix" data-lookup="pushMatrix">pushMatrix()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_pushStyle" class="pushStyle" data-lookup="pushStyle">pushStyle()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_pushView" class="pushView" data-lookup="pushView">pushView()</a></li>
+                     
+                         <li>
+                         <a href="#show_rotate" class="rotate" data-lookup="rotate">rotate()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_rotateX" class="rotateX" data-lookup="rotateX">rotateX()</a></li>
+                     
+                         <li>
+                         <a href="#show_rotateY" class="rotateY" data-lookup="rotateY">rotateY()</a></li>
+                     
+                         <li>
+                         <a href="#show_rotateZ" class="rotateZ" data-lookup="rotateZ">rotateZ()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_saveFullViewport" class="saveFullViewport" data-lookup="saveFullViewport">saveFullViewport()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_saveScreen" class="saveScreen" data-lookup="saveScreen">saveScreen()</a></li>
+                     
+                         <li>
+                         <a href="#show_scale" class="scale" data-lookup="scale">scale()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setAlphaMaskTex" class="setAlphaMaskTex" data-lookup="setAlphaMaskTex">setAlphaMaskTex()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setBackgroundAuto" class="setBackgroundAuto" data-lookup="setBackgroundAuto">setBackgroundAuto()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setBackgroundColor" class="setBackgroundColor" data-lookup="setBackgroundColor">setBackgroundColor()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setBitmapTextMode" class="setBitmapTextMode" data-lookup="setBitmapTextMode">setBitmapTextMode()</a></li>
+                     
+                         <li>
+                         <a href="#show_setBlendMode" class="setBlendMode" data-lookup="setBlendMode">setBlendMode()</a></li>
+                     
+                         <li>
+                         <a href="#show_setCircleResolution" class="setCircleResolution" data-lookup="setCircleResolution">setCircleResolution()</a></li>
+                     
+                         <li>
+                         <a href="#show_setColor" class="setColor" data-lookup="setColor">setColor()</a></li>
+                     
+                     
+                     
+                     
+                     
+                         <li>
+                         <a href="#show_setCoordHandedness" class="setCoordHandedness" data-lookup="setCoordHandedness">setCoordHandedness()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setCurveResolution" class="setCurveResolution" data-lookup="setCurveResolution">setCurveResolution()</a></li>
+                     
+                         <li>
+                         <a href="#show_setDepthTest" class="setDepthTest" data-lookup="setDepthTest">setDepthTest()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setFillMode" class="setFillMode" data-lookup="setFillMode">setFillMode()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setGlobalAmbientColor" class="setGlobalAmbientColor" data-lookup="setGlobalAmbientColor">setGlobalAmbientColor()</a></li>
+                     
+                         <li>
+                         <a href="#show_setHexColor" class="setHexColor" data-lookup="setHexColor">setHexColor()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setLightAmbientColor" class="setLightAmbientColor" data-lookup="setLightAmbientColor">setLightAmbientColor()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setLightAttenuation" class="setLightAttenuation" data-lookup="setLightAttenuation">setLightAttenuation()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setLightDiffuseColor" class="setLightDiffuseColor" data-lookup="setLightDiffuseColor">setLightDiffuseColor()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setLightPosition" class="setLightPosition" data-lookup="setLightPosition">setLightPosition()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setLightSpecularColor" class="setLightSpecularColor" data-lookup="setLightSpecularColor">setLightSpecularColor()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setLightSpotConcentration" class="setLightSpotConcentration" data-lookup="setLightSpotConcentration">setLightSpotConcentration()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setLightSpotDirection" class="setLightSpotDirection" data-lookup="setLightSpotDirection">setLightSpotDirection()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setLightSpotlightCutOff" class="setLightSpotlightCutOff" data-lookup="setLightSpotlightCutOff">setLightSpotlightCutOff()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setLineSmoothing" class="setLineSmoothing" data-lookup="setLineSmoothing">setLineSmoothing()</a></li>
+                     
+                         <li>
+                         <a href="#show_setLineWidth" class="setLineWidth" data-lookup="setLineWidth">setLineWidth()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setOrientation" class="setOrientation" data-lookup="setOrientation">setOrientation()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setPolyMode" class="setPolyMode" data-lookup="setPolyMode">setPolyMode()</a></li>
+                     
+                         <li>
+                         <a href="#show_setRectMode" class="setRectMode" data-lookup="setRectMode">setRectMode()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setSmoothLighting" class="setSmoothLighting" data-lookup="setSmoothLighting">setSmoothLighting()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setStyle" class="setStyle" data-lookup="setStyle">setStyle()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setup" class="setup" data-lookup="setup">setup()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setupGraphicDefaults" class="setupGraphicDefaults" data-lookup="setupGraphicDefaults">setupGraphicDefaults()</a></li>
+                     
+                         <li>
+                         <a href="#show_setupScreen" class="setupScreen" data-lookup="setupScreen">setupScreen()</a></li>
+                     
+                         <li>
+                         <a href="#show_setupScreenOrtho" class="setupScreenOrtho" data-lookup="setupScreenOrtho">setupScreenOrtho()</a></li>
+                     
+                         <li>
+                         <a href="#show_setupScreenPerspective" class="setupScreenPerspective" data-lookup="setupScreenPerspective">setupScreenPerspective()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_startRender" class="startRender" data-lookup="startRender">startRender()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_texturesNeedVFlip" class="texturesNeedVFlip" data-lookup="texturesNeedVFlip">texturesNeedVFlip()</a></li>
+                     
+                         <li>
+                         <a href="#show_translate" class="translate" data-lookup="translate">translate()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_unbind" class="unbind" data-lookup="unbind">unbind()</a></li>
+                     
+                     
+                     
+                     
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_viewport" class="viewport" data-lookup="viewport">viewport()</a></li>
+                     
+                     
+             </ul>
+            
+             
+             
+             <!-- list of variables -->              
+                <p class="top_list_header">variables</p>
+                <ul class="functionslist">
+                            <li class="noDoc">
+                            <a href="#show_TYPE" class="TYPE" data-lookup="TYPE">const string TYPE</a> </li>
+                 </ul>
+            
+             
+            
+             <!-- list of functions -->              
+		    </div>
+	    <div class="submenucol-right">
+            <div class="documentation_detail class_documentation">
+                    <h2><strong><em>Extends</em></strong></h2>
+                    <p>This class extends others, you can call their methods on an instance of ofGLRenderer too:</p>
+                    <ul>
+                        <li><a href="../types/ofBaseGLRenderer.html" class="docs_class" >ofBaseGLRenderer</a> </li>
+                    </ul>
+              
+  <p>The <a href="../gl/ofGLRenderer.html" class="docs_class" >ofGLRenderer</a> is a renderer for OF that supports OpenGL 2 and lower. It's the more classic, "direct mode" version of OpenGL that you may be familiar with but that also uses vertex arrays underneath to store all of the vertices that you create for the basic OF drawing operations. This is the default renderer that is created when you create your OF app:</p>
+<pre><code class="cpp">ofSetupOpenGL(1024,768, OF_WINDOW);         // by default this makes a &lt;a href=&quot;../gl/ofGLRenderer.html&quot; class=&quot;docs_class&quot; &gt;ofGLRenderer&lt;/a&gt; 
+// this kicks off the running of my app
+// can be OF_WINDOW or OF_FULLSCREEN
+// pass in width and height too:
+ofRunApp( new testApp());
+
+</code></pre>
+
+<p>This renderer does not work so well with mobile devices (more specifically with GLES) or on ARM6/7 Linux devices (Raspberry Pi, for instance) but it is the classic version that will be supported on all laptops and desktop machines. Most of the calls to this renderer are handled by other functions, so most of this documentation will simply link to the end user functions that you should call, since you probably don't want to call the renderer directly.</p>
+
+
+              
+              
+  
+
+           </div>
+                  
+            <!-- methods detail -->
+              <!--h2><a name="methods"></a>ofGLRenderer methods</h2-->
+                        
+<div class="documentation_detail ofGLRenderer" data-lookup="ofGLRenderer" data-item-type="method">
+  	 
+	<h1><a name="show_ofGLRenderer">ofGLRenderer(...)</a></h1>
+	<h2>
+  <p>ofGLRenderer::ofGLRenderer(const ofAppBaseWindow *window)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ~ofGLRenderer" data-lookup="~ofGLRenderer" data-item-type="method">
+  	 
+	<h1><a name="show_~ofGLRenderer">~ofGLRenderer()</a></h1>
+	<h2>
+  <p>ofGLRenderer::~ofGLRenderer()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail background" data-lookup="background" data-item-type="method">
+  	 
+	<h1><a name="show_background">background(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::background(const ofColor &amp;c)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofBackground">ofBackground</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail background" data-lookup="background" data-item-type="method">
+  	 
+	<h1><a name="show_background">background(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::background(float brightness)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail background" data-lookup="background" data-item-type="method">
+  	 
+	<h1><a name="show_background">background(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::background(int hexColor, float _a=255.0f)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofBackground">ofBackground</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail background" data-lookup="background" data-item-type="method">
+  	 
+	<h1><a name="show_background">background(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::background(int r, int g, int b, int a=255)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofBackground">ofBackground</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail begin" data-lookup="begin" data-item-type="method">
+  	 
+	<h1><a name="show_begin">begin(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::begin(const ofFbo &amp;fbo, bool setupPerspective)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail bind" data-lookup="bind" data-item-type="method">
+  	 
+	<h1><a name="show_bind">bind(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::bind(const ofBaseMaterial &amp;material)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail bind" data-lookup="bind" data-item-type="method">
+  	 
+	<h1><a name="show_bind">bind(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::bind(const ofBaseVideoDraws &amp;video)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail bind" data-lookup="bind" data-item-type="method">
+  	 
+	<h1><a name="show_bind">bind(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::bind(const ofCamera &amp;camera, const ofRectangle &amp;viewport)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail bind" data-lookup="bind" data-item-type="method">
+  	 
+	<h1><a name="show_bind">bind(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::bind(const ofFbo &amp;fbo)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail bind" data-lookup="bind" data-item-type="method">
+  	 
+	<h1><a name="show_bind">bind(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::bind(const ofShader &amp;shader)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail bind" data-lookup="bind" data-item-type="method">
+  	 
+	<h1><a name="show_bind">bind(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::bind(const ofTexture &amp;texture, int location)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail bindForBlitting" data-lookup="bindForBlitting" data-item-type="method">
+  	 
+	<h1><a name="show_bindForBlitting">bindForBlitting(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::bindForBlitting(const ofFbo &amp;fboSrc, ofFbo &amp;fboDst, int attachmentPoint)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail clear" data-lookup="clear" data-item-type="method">
+  	 
+	<h1><a name="show_clear">clear()</a></h1>
+	<h2>
+  <p>void ofGLRenderer::clear()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail clear" data-lookup="clear" data-item-type="method">
+  	 
+	<h1><a name="show_clear">clear(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::clear(float brightness, float a)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofClear">ofClear</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail clear" data-lookup="clear" data-item-type="method">
+  	 
+	<h1><a name="show_clear">clear(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::clear(float r, float g, float b, float a)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofClear">ofClear</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail clearAlpha" data-lookup="clearAlpha" data-item-type="method">
+  	 
+	<h1><a name="show_clearAlpha">clearAlpha()</a></h1>
+	<h2>
+  <p>void ofGLRenderer::clearAlpha()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofClear">ofClear</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail disableAlphaMask" data-lookup="disableAlphaMask" data-item-type="method">
+  	 
+	<h1><a name="show_disableAlphaMask">disableAlphaMask()</a></h1>
+	<h2>
+  <p>void ofGLRenderer::disableAlphaMask()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail disableAntiAliasing" data-lookup="disableAntiAliasing" data-item-type="method">
+  	 
+	<h1><a name="show_disableAntiAliasing">disableAntiAliasing()</a></h1>
+	<h2>
+  <p>void ofGLRenderer::disableAntiAliasing()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofDisableAntiAliasing">ofDisableAntiAliasing</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail disableLight" data-lookup="disableLight" data-item-type="method">
+  	 
+	<h1><a name="show_disableLight">disableLight(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::disableLight(int lightIndex)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail disableLighting" data-lookup="disableLighting" data-item-type="method">
+  	 
+	<h1><a name="show_disableLighting">disableLighting()</a></h1>
+	<h2>
+  <p>void ofGLRenderer::disableLighting()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail disablePointSprites" data-lookup="disablePointSprites" data-item-type="method">
+  	 
+	<h1><a name="show_disablePointSprites">disablePointSprites()</a></h1>
+	<h2>
+  <p>void ofGLRenderer::disablePointSprites()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail disableSeparateSpecularLight" data-lookup="disableSeparateSpecularLight" data-item-type="method">
+  	 
+	<h1><a name="show_disableSeparateSpecularLight">disableSeparateSpecularLight()</a></h1>
+	<h2>
+  <p>void ofGLRenderer::disableSeparateSpecularLight()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail disableTextureTarget" data-lookup="disableTextureTarget" data-item-type="method">
+  	 
+	<h1><a name="show_disableTextureTarget">disableTextureTarget(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::disableTextureTarget(int textureTarget, int textureLocation)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::draw(const of3dPrimitive &amp;model, ofPolyRenderMode renderType)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Draws a of3dPrimitive. Called internally.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::draw(const ofBaseVideoDraws &amp;video, float x, float y, float w, float h)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::draw(const ofFloatImage &amp;image, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Draws an texture.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::draw(const ofImage &amp;image, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Draws an texture.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::draw(const ofMesh &amp;vertexData, ofPolyRenderMode renderType, bool useColors, bool useTextures, bool useNormals)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Draws an ofMesh.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::draw(const ofNode &amp;model)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Draws an texture.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::draw(const ofPath &amp;path)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Handles drawing ofPath. This is called when you call ofPath::draw().</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::draw(const ofPolyline &amp;poly)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Handles drawing ofPolylines. This is called when you call line.draw().</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::draw(const ofShortImage &amp;image, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Draws an ofMesh.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::draw(const ofTexture &amp;image, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::draw(const ofVbo &amp;vbo, GLuint drawMode, int first, int total)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::draw(const ofVboMesh &amp;mesh, ofPolyRenderMode renderType)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawCircle" data-lookup="drawCircle" data-item-type="method">
+  	 
+	<h1><a name="show_drawCircle">drawCircle(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::drawCircle(float x, float y, float z, float radius)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofCircle">ofCircle</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawElements" data-lookup="drawElements" data-item-type="method">
+  	 
+	<h1><a name="show_drawElements">drawElements(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::drawElements(const ofVbo &amp;vbo, GLuint drawMode, int amt, int offsetelements=0)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawElementsInstanced" data-lookup="drawElementsInstanced" data-item-type="method">
+  	 
+	<h1><a name="show_drawElementsInstanced">drawElementsInstanced(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::drawElementsInstanced(const ofVbo &amp;vbo, GLuint drawMode, int amt, int primCount)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawEllipse" data-lookup="drawEllipse" data-item-type="method">
+  	 
+	<h1><a name="show_drawEllipse">drawEllipse(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::drawEllipse(float x, float y, float z, float width, float height)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofEllipse">ofEllipse</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawInstanced" data-lookup="drawInstanced" data-item-type="method">
+  	 
+	<h1><a name="show_drawInstanced">drawInstanced(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::drawInstanced(const ofVbo &amp;vbo, GLuint drawMode, int first, int total, int primCount)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawInstanced" data-lookup="drawInstanced" data-item-type="method">
+  	 
+	<h1><a name="show_drawInstanced">drawInstanced(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::drawInstanced(const ofVboMesh &amp;mesh, ofPolyRenderMode renderType, int primCount)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawLine" data-lookup="drawLine" data-item-type="method">
+  	 
+	<h1><a name="show_drawLine">drawLine(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::drawLine(float x1, float y1, float z1, float x2, float y2, float z2)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofLine">ofLine</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawRectangle" data-lookup="drawRectangle" data-item-type="method">
+  	 
+	<h1><a name="show_drawRectangle">drawRectangle(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::drawRectangle(float x, float y, float z, float w, float h)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofRect">ofRect</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawString" data-lookup="drawString" data-item-type="method">
+  	 
+	<h1><a name="show_drawString">drawString(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::drawString(const ofTrueTypeFont &amp;font, string text, float x, float y)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawString" data-lookup="drawString" data-item-type="method">
+  	 
+	<h1><a name="show_drawString">drawString(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::drawString(string text, float x, float y, float z)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Draws a characters to the screen.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawTriangle" data-lookup="drawTriangle" data-item-type="method">
+  	 
+	<h1><a name="show_drawTriangle">drawTriangle(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::drawTriangle(float x1, float y1, float z1, float x2, float y2, float z2, float x3, float y3, float z3)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Draw a Triangle.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail enableAntiAliasing" data-lookup="enableAntiAliasing" data-item-type="method">
+  	 
+	<h1><a name="show_enableAntiAliasing">enableAntiAliasing()</a></h1>
+	<h2>
+  <p>void ofGLRenderer::enableAntiAliasing()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofEnableAntiAliasing">ofEnableAntiAliasing</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail enableLight" data-lookup="enableLight" data-item-type="method">
+  	 
+	<h1><a name="show_enableLight">enableLight(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::enableLight(int lightIndex)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail enableLighting" data-lookup="enableLighting" data-item-type="method">
+  	 
+	<h1><a name="show_enableLighting">enableLighting()</a></h1>
+	<h2>
+  <p>void ofGLRenderer::enableLighting()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail enablePointSprites" data-lookup="enablePointSprites" data-item-type="method">
+  	 
+	<h1><a name="show_enablePointSprites">enablePointSprites()</a></h1>
+	<h2>
+  <p>void ofGLRenderer::enablePointSprites()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail enableSeparateSpecularLight" data-lookup="enableSeparateSpecularLight" data-item-type="method">
+  	 
+	<h1><a name="show_enableSeparateSpecularLight">enableSeparateSpecularLight()</a></h1>
+	<h2>
+  <p>void ofGLRenderer::enableSeparateSpecularLight()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail enableTextureTarget" data-lookup="enableTextureTarget" data-item-type="method">
+  	 
+	<h1><a name="show_enableTextureTarget">enableTextureTarget(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::enableTextureTarget(const ofTexture &amp;tex, int textureLocation)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail end" data-lookup="end" data-item-type="method">
+  	 
+	<h1><a name="show_end">end(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::end(const ofFbo &amp;fbo)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail finishRender" data-lookup="finishRender" data-item-type="method">
+  	 
+	<h1><a name="show_finishRender">finishRender()</a></h1>
+	<h2>
+  <p>void ofGLRenderer::finishRender()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail get3dGraphics" data-lookup="get3dGraphics" data-item-type="method">
+  	 
+	<h1><a name="show_get3dGraphics">get3dGraphics()</a></h1>
+	<h2>
+  <p>const of3dGraphics &amp; ofGLRenderer::get3dGraphics()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail get3dGraphics" data-lookup="get3dGraphics" data-item-type="method">
+  	 
+	<h1><a name="show_get3dGraphics">get3dGraphics()</a></h1>
+	<h2>
+  <p>of3dGraphics &amp; ofGLRenderer::get3dGraphics()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getBackgroundAuto" data-lookup="getBackgroundAuto" data-item-type="method">
+  	 
+	<h1><a name="show_getBackgroundAuto">getBackgroundAuto()</a></h1>
+	<h2>
+  <p>bool ofGLRenderer::getBackgroundAuto()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getBackgroundColor" data-lookup="getBackgroundColor" data-item-type="method">
+  	 
+	<h1><a name="show_getBackgroundColor">getBackgroundColor()</a></h1>
+	<h2>
+  <p>ofColor ofGLRenderer::getBackgroundColor()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getCoordHandedness" data-lookup="getCoordHandedness" data-item-type="method">
+  	 
+	<h1><a name="show_getCoordHandedness">getCoordHandedness()</a></h1>
+	<h2>
+  <p>ofHandednessType ofGLRenderer::getCoordHandedness()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofGetCoordHandedness">ofGetCoordHandedness</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getCurrentMatrix" data-lookup="getCurrentMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_getCurrentMatrix">getCurrentMatrix(...)</a></h1>
+	<h2>
+  <p>ofMatrix4x4 ofGLRenderer::getCurrentMatrix(ofMatrixMode matrixMode_)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getCurrentNormalMatrix" data-lookup="getCurrentNormalMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_getCurrentNormalMatrix">getCurrentNormalMatrix()</a></h1>
+	<h2>
+  <p>ofMatrix4x4 ofGLRenderer::getCurrentNormalMatrix()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getCurrentOrientationMatrix" data-lookup="getCurrentOrientationMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_getCurrentOrientationMatrix">getCurrentOrientationMatrix()</a></h1>
+	<h2>
+  <p>ofMatrix4x4 ofGLRenderer::getCurrentOrientationMatrix()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getCurrentViewMatrix" data-lookup="getCurrentViewMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_getCurrentViewMatrix">getCurrentViewMatrix()</a></h1>
+	<h2>
+  <p>ofMatrix4x4 ofGLRenderer::getCurrentViewMatrix()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getCurrentViewport" data-lookup="getCurrentViewport" data-item-type="method">
+  	 
+	<h1><a name="show_getCurrentViewport">getCurrentViewport()</a></h1>
+	<h2>
+  <p>ofRectangle ofGLRenderer::getCurrentViewport()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofGetCurrentViewport">ofGetCurrentViewport</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getFillMode" data-lookup="getFillMode" data-item-type="method">
+  	 
+	<h1><a name="show_getFillMode">getFillMode()</a></h1>
+	<h2>
+  <p>ofFillFlag ofGLRenderer::getFillMode()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofGetFill">ofGetFill</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getGLVersionMajor" data-lookup="getGLVersionMajor" data-item-type="method">
+  	 
+	<h1><a name="show_getGLVersionMajor">getGLVersionMajor()</a></h1>
+	<h2>
+  <p>int ofGLRenderer::getGLVersionMajor()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getGLVersionMinor" data-lookup="getGLVersionMinor" data-item-type="method">
+  	 
+	<h1><a name="show_getGLVersionMinor">getGLVersionMinor()</a></h1>
+	<h2>
+  <p>int ofGLRenderer::getGLVersionMinor()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getLightingEnabled" data-lookup="getLightingEnabled" data-item-type="method">
+  	 
+	<h1><a name="show_getLightingEnabled">getLightingEnabled()</a></h1>
+	<h2>
+  <p>bool ofGLRenderer::getLightingEnabled()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getNativeViewport" data-lookup="getNativeViewport" data-item-type="method">
+  	 
+	<h1><a name="show_getNativeViewport">getNativeViewport()</a></h1>
+	<h2>
+  <p>ofRectangle ofGLRenderer::getNativeViewport()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofGetNativeViewport">ofGetNativeViewport</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getPath" data-lookup="getPath" data-item-type="method">
+  	 
+	<h1><a name="show_getPath">getPath()</a></h1>
+	<h2>
+  <p>ofPath &amp; ofGLRenderer::getPath()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getRectMode" data-lookup="getRectMode" data-item-type="method">
+  	 
+	<h1><a name="show_getRectMode">getRectMode()</a></h1>
+	<h2>
+  <p>ofRectMode ofGLRenderer::getRectMode()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofGetRectMode">ofGetRectMode</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getStyle" data-lookup="getStyle" data-item-type="method">
+  	 
+	<h1><a name="show_getStyle">getStyle()</a></h1>
+	<h2>
+  <p>ofStyle ofGLRenderer::getStyle()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getType" data-lookup="getType" data-item-type="method">
+  	 
+	<h1><a name="show_getType">getType()</a></h1>
+	<h2>
+  <p>const string &amp; ofGLRenderer::getType()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getViewportHeight" data-lookup="getViewportHeight" data-item-type="method">
+  	 
+	<h1><a name="show_getViewportHeight">getViewportHeight()</a></h1>
+	<h2>
+  <p>int ofGLRenderer::getViewportHeight()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofGetViewportHeight">ofGetViewportHeight</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getViewportWidth" data-lookup="getViewportWidth" data-item-type="method">
+  	 
+	<h1><a name="show_getViewportWidth">getViewportWidth()</a></h1>
+	<h2>
+  <p>int ofGLRenderer::getViewportWidth()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofGetViewportWidth">ofGetViewportWidth</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail isVFlipped" data-lookup="isVFlipped" data-item-type="method">
+  	 
+	<h1><a name="show_isVFlipped">isVFlipped()</a></h1>
+	<h2>
+  <p>bool ofGLRenderer::isVFlipped()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofIsVFlipped">ofIsVFlipped</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail loadIdentityMatrix" data-lookup="loadIdentityMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_loadIdentityMatrix">loadIdentityMatrix()</a></h1>
+	<h2>
+  <p>void ofGLRenderer::loadIdentityMatrix()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofLoadIdentityMatrix">ofLoadIdentityMatrix</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail loadMatrix" data-lookup="loadMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_loadMatrix">loadMatrix(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::loadMatrix(const float *m)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofLoadMatrix">ofLoadMatrix</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail loadMatrix" data-lookup="loadMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_loadMatrix">loadMatrix(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::loadMatrix(const ofMatrix4x4 &amp;m)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofLoadMatrix">ofLoadMatrix</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail loadViewMatrix" data-lookup="loadViewMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_loadViewMatrix">loadViewMatrix(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::loadViewMatrix(const ofMatrix4x4 &amp;m)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail matrixMode" data-lookup="matrixMode" data-item-type="method">
+  	 
+	<h1><a name="show_matrixMode">matrixMode(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::matrixMode(ofMatrixMode mode)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail multMatrix" data-lookup="multMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_multMatrix">multMatrix(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::multMatrix(const float *m)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail multMatrix" data-lookup="multMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_multMatrix">multMatrix(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::multMatrix(const ofMatrix4x4 &amp;m)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail multViewMatrix" data-lookup="multViewMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_multViewMatrix">multViewMatrix(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::multViewMatrix(const ofMatrix4x4 &amp;m)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail popMatrix" data-lookup="popMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_popMatrix">popMatrix()</a></h1>
+	<h2>
+  <p>void ofGLRenderer::popMatrix()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofPopMatrix">ofPopMatrix</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail popStyle" data-lookup="popStyle" data-item-type="method">
+  	 
+	<h1><a name="show_popStyle">popStyle()</a></h1>
+	<h2>
+  <p>void ofGLRenderer::popStyle()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail popView" data-lookup="popView" data-item-type="method">
+  	 
+	<h1><a name="show_popView">popView()</a></h1>
+	<h2>
+  <p>void ofGLRenderer::popView()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail pushMatrix" data-lookup="pushMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_pushMatrix">pushMatrix()</a></h1>
+	<h2>
+  <p>void ofGLRenderer::pushMatrix()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofPushMatrix">ofPushMatrix</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail pushStyle" data-lookup="pushStyle" data-item-type="method">
+  	 
+	<h1><a name="show_pushStyle">pushStyle()</a></h1>
+	<h2>
+  <p>void ofGLRenderer::pushStyle()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail pushView" data-lookup="pushView" data-item-type="method">
+  	 
+	<h1><a name="show_pushView">pushView()</a></h1>
+	<h2>
+  <p>void ofGLRenderer::pushView()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail rotate" data-lookup="rotate" data-item-type="method">
+  	 
+	<h1><a name="show_rotate">rotate(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::rotate(float degrees)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofRotate">ofRotate</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail rotate" data-lookup="rotate" data-item-type="method">
+  	 
+	<h1><a name="show_rotate">rotate(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::rotate(float degrees, float vecX, float vecY, float vecZ)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofRotate">ofRotate</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail rotateX" data-lookup="rotateX" data-item-type="method">
+  	 
+	<h1><a name="show_rotateX">rotateX(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::rotateX(float degrees)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofRotate">ofRotate</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail rotateY" data-lookup="rotateY" data-item-type="method">
+  	 
+	<h1><a name="show_rotateY">rotateY(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::rotateY(float degrees)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofRotate">ofRotate</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail rotateZ" data-lookup="rotateZ" data-item-type="method">
+  	 
+	<h1><a name="show_rotateZ">rotateZ(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::rotateZ(float degrees)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofRotate">ofRotate</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail saveFullViewport" data-lookup="saveFullViewport" data-item-type="method">
+  	 
+	<h1><a name="show_saveFullViewport">saveFullViewport(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::saveFullViewport(ofPixels &amp;pixels)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail saveScreen" data-lookup="saveScreen" data-item-type="method">
+  	 
+	<h1><a name="show_saveScreen">saveScreen(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::saveScreen(int x, int y, int w, int h, ofPixels &amp;pixels)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail scale" data-lookup="scale" data-item-type="method">
+  	 
+	<h1><a name="show_scale">scale(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::scale(float xAmnt, float yAmnt, float zAmnt)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="../graphics/ofGraphics.html#show_ofScale">ofScale</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setAlphaMaskTex" data-lookup="setAlphaMaskTex" data-item-type="method">
+  	 
+	<h1><a name="show_setAlphaMaskTex">setAlphaMaskTex(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setAlphaMaskTex(const ofTexture &amp;tex)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setBackgroundAuto" data-lookup="setBackgroundAuto" data-item-type="method">
+  	 
+	<h1><a name="show_setBackgroundAuto">setBackgroundAuto(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setBackgroundAuto(bool bManual)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setBackgroundColor" data-lookup="setBackgroundColor" data-item-type="method">
+  	 
+	<h1><a name="show_setBackgroundColor">setBackgroundColor(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setBackgroundColor(const ofColor &amp;c)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setBitmapTextMode" data-lookup="setBitmapTextMode" data-item-type="method">
+  	 
+	<h1><a name="show_setBitmapTextMode">setBitmapTextMode(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setBitmapTextMode(ofDrawBitmapMode mode)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setBlendMode" data-lookup="setBlendMode" data-item-type="method">
+  	 
+	<h1><a name="show_setBlendMode">setBlendMode(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setBlendMode(ofBlendMode blendMode)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofEnableBlendMode">ofEnableBlendMode</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setCircleResolution" data-lookup="setCircleResolution" data-item-type="method">
+  	 
+	<h1><a name="show_setCircleResolution">setCircleResolution(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setCircleResolution(int res)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofSetCircleResolution">ofSetCircleResolution</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setColor" data-lookup="setColor" data-item-type="method">
+  	 
+	<h1><a name="show_setColor">setColor(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setColor(const ofColor &amp;color)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofSetColor">ofSetColor</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setColor" data-lookup="setColor" data-item-type="method">
+  	 
+	<h1><a name="show_setColor">setColor(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setColor(const ofColor &amp;color, int _a)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofSetColor">ofSetColor</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setColor" data-lookup="setColor" data-item-type="method">
+  	 
+	<h1><a name="show_setColor">setColor(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setColor(int gray)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofSetColor">ofSetColor</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setColor" data-lookup="setColor" data-item-type="method">
+  	 
+	<h1><a name="show_setColor">setColor(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setColor(int r, int g, int b)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofSetColor">ofSetColor</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setColor" data-lookup="setColor" data-item-type="method">
+  	 
+	<h1><a name="show_setColor">setColor(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setColor(int r, int g, int b, int a)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofSetColor">ofSetColor</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setCoordHandedness" data-lookup="setCoordHandedness" data-item-type="method">
+  	 
+	<h1><a name="show_setCoordHandedness">setCoordHandedness(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setCoordHandedness(ofHandednessType handedness)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofSetCoordHandedness">ofSetCoordHandedness</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setCurveResolution" data-lookup="setCurveResolution" data-item-type="method">
+  	 
+	<h1><a name="show_setCurveResolution">setCurveResolution(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setCurveResolution(int resolution)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setDepthTest" data-lookup="setDepthTest" data-item-type="method">
+  	 
+	<h1><a name="show_setDepthTest">setDepthTest(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setDepthTest(bool depthTest)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofDisableDepthTest">ofDisableDepthTest</a> and <a href="ofGraphics.html#show_ofEnableDepthTest">ofEnableDepthTest</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setFillMode" data-lookup="setFillMode" data-item-type="method">
+  	 
+	<h1><a name="show_setFillMode">setFillMode(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setFillMode(ofFillFlag fill)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setGlobalAmbientColor" data-lookup="setGlobalAmbientColor" data-item-type="method">
+  	 
+	<h1><a name="show_setGlobalAmbientColor">setGlobalAmbientColor(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setGlobalAmbientColor(const ofColor &amp;c)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setHexColor" data-lookup="setHexColor" data-item-type="method">
+  	 
+	<h1><a name="show_setHexColor">setHexColor(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setHexColor(int hexColor)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofSetColor">ofSetColor</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setLightAmbientColor" data-lookup="setLightAmbientColor" data-item-type="method">
+  	 
+	<h1><a name="show_setLightAmbientColor">setLightAmbientColor(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setLightAmbientColor(int lightIndex, const ofFloatColor &amp;c)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setLightAttenuation" data-lookup="setLightAttenuation" data-item-type="method">
+  	 
+	<h1><a name="show_setLightAttenuation">setLightAttenuation(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setLightAttenuation(int lightIndex, float constant, float linear, float quadratic)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setLightDiffuseColor" data-lookup="setLightDiffuseColor" data-item-type="method">
+  	 
+	<h1><a name="show_setLightDiffuseColor">setLightDiffuseColor(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setLightDiffuseColor(int lightIndex, const ofFloatColor &amp;c)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setLightPosition" data-lookup="setLightPosition" data-item-type="method">
+  	 
+	<h1><a name="show_setLightPosition">setLightPosition(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setLightPosition(int lightIndex, const ofVec4f &amp;position)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setLightSpecularColor" data-lookup="setLightSpecularColor" data-item-type="method">
+  	 
+	<h1><a name="show_setLightSpecularColor">setLightSpecularColor(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setLightSpecularColor(int lightIndex, const ofFloatColor &amp;c)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setLightSpotConcentration" data-lookup="setLightSpotConcentration" data-item-type="method">
+  	 
+	<h1><a name="show_setLightSpotConcentration">setLightSpotConcentration(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setLightSpotConcentration(int lightIndex, float exponent)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setLightSpotDirection" data-lookup="setLightSpotDirection" data-item-type="method">
+  	 
+	<h1><a name="show_setLightSpotDirection">setLightSpotDirection(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setLightSpotDirection(int lightIndex, const ofVec4f &amp;direction)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setLightSpotlightCutOff" data-lookup="setLightSpotlightCutOff" data-item-type="method">
+  	 
+	<h1><a name="show_setLightSpotlightCutOff">setLightSpotlightCutOff(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setLightSpotlightCutOff(int lightIndex, float spotCutOff)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setLineSmoothing" data-lookup="setLineSmoothing" data-item-type="method">
+  	 
+	<h1><a name="show_setLineSmoothing">setLineSmoothing(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setLineSmoothing(bool smooth)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setLineWidth" data-lookup="setLineWidth" data-item-type="method">
+  	 
+	<h1><a name="show_setLineWidth">setLineWidth(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setLineWidth(float lineWidth)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofSetLineWidth">ofSetLineWidth</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setOrientation" data-lookup="setOrientation" data-item-type="method">
+  	 
+	<h1><a name="show_setOrientation">setOrientation(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setOrientation(ofOrientation orientation, bool vFlip)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setPolyMode" data-lookup="setPolyMode" data-item-type="method">
+  	 
+	<h1><a name="show_setPolyMode">setPolyMode(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setPolyMode(ofPolyWindingMode mode)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setRectMode" data-lookup="setRectMode" data-item-type="method">
+  	 
+	<h1><a name="show_setRectMode">setRectMode(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setRectMode(ofRectMode mode)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofSetRectMode">ofSetRectMode</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setSmoothLighting" data-lookup="setSmoothLighting" data-item-type="method">
+  	 
+	<h1><a name="show_setSmoothLighting">setSmoothLighting(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setSmoothLighting(bool b)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setStyle" data-lookup="setStyle" data-item-type="method">
+  	 
+	<h1><a name="show_setStyle">setStyle(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setStyle(const ofStyle &amp;style)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setup" data-lookup="setup" data-item-type="method">
+  	 
+	<h1><a name="show_setup">setup()</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setup()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setupGraphicDefaults" data-lookup="setupGraphicDefaults" data-item-type="method">
+  	 
+	<h1><a name="show_setupGraphicDefaults">setupGraphicDefaults()</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setupGraphicDefaults()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setupScreen" data-lookup="setupScreen" data-item-type="method">
+  	 
+	<h1><a name="show_setupScreen">setupScreen()</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setupScreen()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofSetupScreen">ofSetupScreen</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setupScreenOrtho" data-lookup="setupScreenOrtho" data-item-type="method">
+  	 
+	<h1><a name="show_setupScreenOrtho">setupScreenOrtho(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setupScreenOrtho(float width, float height, float nearDist, float farDist)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofSetupScreenOrtho">ofSetupScreenOrth</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setupScreenPerspective" data-lookup="setupScreenPerspective" data-item-type="method">
+  	 
+	<h1><a name="show_setupScreenPerspective">setupScreenPerspective(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::setupScreenPerspective(float width, float height, float fov, float nearDist, float farDist)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofSetupScreenPerspective">ofSetupScreenPerspective</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail startRender" data-lookup="startRender" data-item-type="method">
+  	 
+	<h1><a name="show_startRender">startRender()</a></h1>
+	<h2>
+  <p>void ofGLRenderer::startRender()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail texturesNeedVFlip" data-lookup="texturesNeedVFlip" data-item-type="method">
+  	 
+	<h1><a name="show_texturesNeedVFlip">texturesNeedVFlip()</a></h1>
+	<h2>
+  <p>bool ofGLRenderer::texturesNeedVFlip()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail translate" data-lookup="translate" data-item-type="method">
+  	 
+	<h1><a name="show_translate">translate(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::translate(const ofPoint &amp;p)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofTranslate">ofTranslate</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail translate" data-lookup="translate" data-item-type="method">
+  	 
+	<h1><a name="show_translate">translate(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::translate(float x, float y, float z)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>See <a href="ofGraphics.html#show_ofTranslate">ofTranslate</a></p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail unbind" data-lookup="unbind" data-item-type="method">
+  	 
+	<h1><a name="show_unbind">unbind(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::unbind(const ofBaseMaterial &amp;material)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail unbind" data-lookup="unbind" data-item-type="method">
+  	 
+	<h1><a name="show_unbind">unbind(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::unbind(const ofBaseVideoDraws &amp;video)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail unbind" data-lookup="unbind" data-item-type="method">
+  	 
+	<h1><a name="show_unbind">unbind(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::unbind(const ofCamera &amp;camera)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail unbind" data-lookup="unbind" data-item-type="method">
+  	 
+	<h1><a name="show_unbind">unbind(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::unbind(const ofFbo &amp;fbo)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail unbind" data-lookup="unbind" data-item-type="method">
+  	 
+	<h1><a name="show_unbind">unbind(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::unbind(const ofShader &amp;shader)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail unbind" data-lookup="unbind" data-item-type="method">
+  	 
+	<h1><a name="show_unbind">unbind(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::unbind(const ofTexture &amp;texture, int location)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail viewport" data-lookup="viewport" data-item-type="method">
+  	 
+	<h1><a name="show_viewport">viewport(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::viewport(float x, float y, float width, float height, bool vflip=true)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail viewport" data-lookup="viewport" data-item-type="method">
+  	 
+	<h1><a name="show_viewport">viewport(...)</a></h1>
+	<h2>
+  <p>void ofGLRenderer::viewport(ofRectangle viewport)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+
+            <!-- vars detail -->
+              <!--h2><a name="variables"></a>ofGLRenderer variables</h2!-->
+                        
+<div class="documentation_detail  TYPE" data-lookup="TYPE" data-item-type="var">
+	<h1>const string <a name="show_TYPE">TYPE</a></h1>
+	<h2>
+  <p>const string ofGLRenderer::TYPE</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+
+            <!-- functions detail -->
+            <hr/>
+                
+            <!--diqus comments for class/functions module description-->
+            <div id="comments_header">
+            <h2>comments</h2>
+            <p>You can add comments with usage examples or other information for each class, method or variable, for adding documentation to an empty section or reporting errors is better to send a fix or open an issue through <a href="https://github.com/openframeworks/ofSite">github</a>.</p>
+            <p>When posting code enclose it in:</p>
+            <pre><code class="html">&lt;pre&gt;&lt;code class=&quot;cpp&quot;&gt;&nbsp;&lt;/code&gt;&lt;/pre&gt;</code></pre>
+            <br/>
+            </div>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+
+            // DISQUS
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+
+            var disqus_shortname = 'openframeworks'; // required: replace example with your forum shortname
+            //var disqus_developer = 1;
+
+            location_elements = window.location.pathname.split("/");
+            module_name = location_elements[location_elements.length-1].split(".")[0];
+            section_name = location.hash.split("_")[1];
+            console.log(module_name + " " + section_name);
+            if(section_name!=undefined && section_name!=''){
+            var disqus_identifier = window.location.pathname + "#!show_" + section_name;  
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "#!show_" + section_name;
+            var discus_title = document.title + " - " + section_name;
+            }else{
+            var disqus_identifier = window.location.pathname;
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            var discus_title = document.title;
+            }
+
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */   
+            (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		
+        </div><!-- End Submenu right -->
+      </div><!-- End page wide -->
+      </div><!-- End body wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:33:46 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+4d738d6979d8e7992359cde47632192d1fbef472
+">
+
+4d738d6979d8e7992359cde47632192d1fbef472
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+

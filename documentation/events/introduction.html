@@ -1,0 +1,925 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+    <script src="http://icq4ever.iptime.org//js/jquery.columnizer.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/2.1.08/jquery.masonry.min.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation_index.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43083059-1', 'auto');
+  ga('send', 'pageview');
+
+  </script>
+  </head>
+  <body>
+    <div id="content">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">	
+	    <div class="page-wide-tutorial">
+            <!--ul class="submenu">
+                <li><a href="/documentation">레퍼런스</a></li>
+                <li><a href="/tutorials">튜토리얼</a></li>
+            </ul-->
+    	    <h1>events</h1>
+    	    <div class="article">
+    	    
+  <h2 id="application-and-custom-events-using-the-observer-pattern">Application and custom events using the observer pattern.</h2>
+<p>The events module in openFrameworks has some classes and functions that allow to work with events. Events allow to receive a notification whenever something happens in another part of the code or in the hardware. </p>
+<p>For example when the mouse is moved you can use the mouseMoved function in your ofApp to do something. If you want to know when the mouse is moved in any other object in your code you can simply call from your ofApp to your object or you can register a method of that object as a listener to the mouseMoved event.</p>
+<pre><code class="cpp">class SomeClass{
+public:
+    void setup(){
+        ofAddListener(ofEvents().mouseMoved, this, &amp;SomeClass::mouseMoved);
+    }
+
+    ~SomeClass(){
+        ofRemoveListener(ofEvents().mouseMoved, this, &amp;SomeClass::mouseMoved);
+    }
+
+    void mouseMoved(ofMouseEventArgs &amp; mouse){
+        // do something when the mouse moves
+    }
+}
+</code></pre>
+
+<p>The syntax is kind of strange, mostly the ofAddListener and ofRemoveListener calls, lets see what it means:</p>
+<p><a href="ofEventUtils.html#ofAddListener">ofAddListener</a>, allows to register a method of an object or a function as a listener to an event, that way whenever that event is notified the method or function will be called.</p>
+<p>The first parameter to ofAddListener is the event to which we want to add a listener, in this case <code>ofEvents().mouseMoved</code></p>
+<p>The second parameter, this, means that we want the notifications to be sent, the method which will be called, to happen in this object. We could have set it to another object but using <code>this</code> is a pretty common pattern.</p>
+<p>The third parameter, <code>&amp;SomeClass::mouseMoved</code> is the method mouseMoved in the class SomeClass and we use an <code>&amp;</code> because we are passing a pointer to that function.</p>
+<p>Another thing that is important is to remove the listener at least before the class is completely destroyed, that's why in the destructor of our class we use <a href="ofEventUtils.html#ofRemoveListener">ofRemoveListener</a> which has the same syntax as <a href="ofEventUtils.html#ofAddListener">ofAddListener</a> to remove the method as a listener to the mouseMoved event. Otherwise OF could try to call our object after it's been destroyed and the application would crash.</p>
+<p>The last thing to notice is the signature, the syntax, of the event or function that will receive the event. By now that method has to receive 1 parameter which is a reference to the type of the event, that's why we use <code>&amp;</code></p>
+<p>You can also create your own events using the <a href="ofEvent.html">ofEvent</a> class. And in case you don't need a thread safe event, if you are going to work from only one thread, you can also use <a href="ofFastEvent">ofFastEvent</a> which has the same syntax but is much faster than the normal <a href="ofEvent.html">ofEvent</a></p>
+<p>Events in OF are an implementation of the <a href="https://en.wikipedia.org/wiki/Observer_pattern">Observer</a> pattern which has it's pros and cons, use it with care but try not to use it unless really needed. The main usage for an event instead of a direct call from one object to another is to provide independence from the caller to the callee so if you don't really need that or plan to need it in the future you can probably use a direct call beter.</p>
+<p>One of the biggest problems of events are that you need to take care of unregistering every listener before it's destroyed, also if you copy an object and it was registered to an event the copy won't be,  so you'll need to implement the copy constructor which is better to avoid since it's more error prone than letting the default copy constructor copy the whole object.</p>
+
+    		</div>
+        </div><!-- End Page Wide Tutorial --> 
+        <div class="page-wide">
+        	
+<div class="documentation_group">
+	
+
+	<!-- CLASSES -->
+
+    <div class="documentation_index_group">
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/events/ofAudioEventArgs.html" class="documentation_class_link"><strong>ofAudioEventArgs</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofAudioEventArgs.html#!show_buffer" title="buffer" class="documentation_func">buffer</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofAudioEventArgs.html#!show_bufferSize" title="bufferSize" class="documentation_func">bufferSize</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofAudioEventArgs.html#!show_nChannels" title="nChannels" class="documentation_func">nChannels</a></li>
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/events/ofBaseEvent.html" class="documentation_class_link"><strong>ofBaseEvent</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/events/ofBaseEvent.html#!show_ofBaseEvent" title="ofBaseEvent" class="documentation_func">ofBaseEvent()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/events/ofBaseEvent.html#!show_disable" title="disable" class="documentation_func">disable()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/events/ofBaseEvent.html#!show_enable" title="enable" class="documentation_func">enable()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/events/ofBaseEvent.html#!show_isEnabled" title="isEnabled" class="documentation_func">isEnabled()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/events/ofBaseEvent.html#!show_operator=" title="operator=" class="documentation_func">operator=()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofBaseEvent.html#!show_size" title="size" class="documentation_func">size()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html" class="documentation_class_link"><strong>ofCoreEvents</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_ofCoreEvents" title="ofCoreEvents" class="documentation_func">ofCoreEvents()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_disable" title="disable" class="documentation_func">disable()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_enable" title="enable" class="documentation_func">enable()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_getFrameNum" title="getFrameNum" class="documentation_func">getFrameNum()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_getFrameRate" title="getFrameRate" class="documentation_func">getFrameRate()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_getKeyPressed" title="getKeyPressed" class="documentation_func">getKeyPressed()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_getLastFrameTime" title="getLastFrameTime" class="documentation_func">getLastFrameTime()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_getMousePressed" title="getMousePressed" class="documentation_func">getMousePressed()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_getMouseX" title="getMouseX" class="documentation_func">getMouseX()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_getMouseY" title="getMouseY" class="documentation_func">getMouseY()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_getPreviousMouseX" title="getPreviousMouseX" class="documentation_func">getPreviousMouseX()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_getPreviousMouseY" title="getPreviousMouseY" class="documentation_func">getPreviousMouseY()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_getTargetFrameRate" title="getTargetFrameRate" class="documentation_func">getTargetFrameRate()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_notifyDragEvent" title="notifyDragEvent" class="documentation_func">notifyDragEvent()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_notifyDraw" title="notifyDraw" class="documentation_func">notifyDraw()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_notifyExit" title="notifyExit" class="documentation_func">notifyExit()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_notifyKeyEvent" title="notifyKeyEvent" class="documentation_func">notifyKeyEvent()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_notifyKeyPressed" title="notifyKeyPressed" class="documentation_func">notifyKeyPressed()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_notifyKeyReleased" title="notifyKeyReleased" class="documentation_func">notifyKeyReleased()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_notifyMouseDragged" title="notifyMouseDragged" class="documentation_func">notifyMouseDragged()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_notifyMouseEntered" title="notifyMouseEntered" class="documentation_func">notifyMouseEntered()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_notifyMouseEvent" title="notifyMouseEvent" class="documentation_func">notifyMouseEvent()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_notifyMouseExited" title="notifyMouseExited" class="documentation_func">notifyMouseExited()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_notifyMouseMoved" title="notifyMouseMoved" class="documentation_func">notifyMouseMoved()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_notifyMousePressed" title="notifyMousePressed" class="documentation_func">notifyMousePressed()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_notifyMouseReleased" title="notifyMouseReleased" class="documentation_func">notifyMouseReleased()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_notifyMouseScrolled" title="notifyMouseScrolled" class="documentation_func">notifyMouseScrolled()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_notifySetup" title="notifySetup" class="documentation_func">notifySetup()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_notifyUpdate" title="notifyUpdate" class="documentation_func">notifyUpdate()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_notifyWindowResized" title="notifyWindowResized" class="documentation_func">notifyWindowResized()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_setFrameRate" title="setFrameRate" class="documentation_func">setFrameRate()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_draw" title="draw" class="documentation_func">draw</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_exit" title="exit" class="documentation_func">exit</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_fileDragEvent" title="fileDragEvent" class="documentation_func">fileDragEvent</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_keyPressed" title="keyPressed" class="documentation_func">keyPressed</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_keyReleased" title="keyReleased" class="documentation_func">keyReleased</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_messageEvent" title="messageEvent" class="documentation_func">messageEvent</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_mouseDragged" title="mouseDragged" class="documentation_func">mouseDragged</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_mouseEntered" title="mouseEntered" class="documentation_func">mouseEntered</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_mouseExited" title="mouseExited" class="documentation_func">mouseExited</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_mouseMoved" title="mouseMoved" class="documentation_func">mouseMoved</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_mousePressed" title="mousePressed" class="documentation_func">mousePressed</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_mouseReleased" title="mouseReleased" class="documentation_func">mouseReleased</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_mouseScrolled" title="mouseScrolled" class="documentation_func">mouseScrolled</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_setup" title="setup" class="documentation_func">setup</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_touchCancelled" title="touchCancelled" class="documentation_func">touchCancelled</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_touchDoubleTap" title="touchDoubleTap" class="documentation_func">touchDoubleTap</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_touchDown" title="touchDown" class="documentation_func">touchDown</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_touchMoved" title="touchMoved" class="documentation_func">touchMoved</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_touchUp" title="touchUp" class="documentation_func">touchUp</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_update" title="update" class="documentation_func">update</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofCoreEvents.html#!show_windowResized" title="windowResized" class="documentation_func">windowResized</a></li>
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/events/ofEntryEventArgs.html" class="documentation_class_link"><strong>ofEntryEventArgs</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofEntryEventArgs.html#!show_state" title="state" class="documentation_func">state</a></li>
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/events/ofEvent.html" class="documentation_class_link"><strong>ofEvent</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofEvent.html#!show_add" title="add" class="documentation_func">add()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofEvent.html#!show_notify" title="notify" class="documentation_func">notify()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofEvent.html#!show_remove" title="remove" class="documentation_func">remove()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/events/ofEventArgs.html" class="documentation_class_link"><strong>ofEventArgs</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/events/ofEventUtils.html" class="documentation_class_link"><strong>ofEventUtils</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/functions.png" alt="Functions file"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/events/ofEventUtils.html#!show_ofAddListener" title="ofAddListener" class="documentation_func">ofAddListener()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/events/ofEventUtils.html#!show_ofNotifyEvent" title="ofNotifyEvent" class="documentation_func">ofNotifyEvent()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/events/ofEventUtils.html#!show_ofRemoveListener" title="ofRemoveListener" class="documentation_func">ofRemoveListener()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/events/ofEvents.html" class="documentation_class_link"><strong>ofEvents</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/functions.png" alt="Functions file"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofEvents.html#!show_ofEvents" title="ofEvents" class="documentation_func">ofEvents()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofEvents.html#!show_ofGetKeyPressed" title="ofGetKeyPressed" class="documentation_func">ofGetKeyPressed()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofEvents.html#!show_ofGetMousePressed" title="ofGetMousePressed" class="documentation_func">ofGetMousePressed()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofEvents.html#!show_ofGetMouseX" title="ofGetMouseX" class="documentation_func">ofGetMouseX()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofEvents.html#!show_ofGetMouseY" title="ofGetMouseY" class="documentation_func">ofGetMouseY()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofEvents.html#!show_ofGetPreviousMouseX" title="ofGetPreviousMouseX" class="documentation_func">ofGetPreviousMouseX()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofEvents.html#!show_ofGetPreviousMouseY" title="ofGetPreviousMouseY" class="documentation_func">ofGetPreviousMouseY()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofEvents.html#!show_ofRegisterDragEvents" title="ofRegisterDragEvents" class="documentation_func">ofRegisterDragEvents()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofEvents.html#!show_ofRegisterGetMessages" title="ofRegisterGetMessages" class="documentation_func">ofRegisterGetMessages()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofEvents.html#!show_ofRegisterKeyEvents" title="ofRegisterKeyEvents" class="documentation_func">ofRegisterKeyEvents()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofEvents.html#!show_ofRegisterMouseEvents" title="ofRegisterMouseEvents" class="documentation_func">ofRegisterMouseEvents()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofEvents.html#!show_ofRegisterTouchEvents" title="ofRegisterTouchEvents" class="documentation_func">ofRegisterTouchEvents()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofEvents.html#!show_ofSendMessage" title="ofSendMessage" class="documentation_func">ofSendMessage()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofEvents.html#!show_ofUnregisterDragEvents" title="ofUnregisterDragEvents" class="documentation_func">ofUnregisterDragEvents()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofEvents.html#!show_ofUnregisterGetMessages" title="ofUnregisterGetMessages" class="documentation_func">ofUnregisterGetMessages()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofEvents.html#!show_ofUnregisterKeyEvents" title="ofUnregisterKeyEvents" class="documentation_func">ofUnregisterKeyEvents()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofEvents.html#!show_ofUnregisterMouseEvents" title="ofUnregisterMouseEvents" class="documentation_func">ofUnregisterMouseEvents()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofEvents.html#!show_ofUnregisterTouchEvents" title="ofUnregisterTouchEvents" class="documentation_func">ofUnregisterTouchEvents()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/events/ofFastEvent.html" class="documentation_class_link"><strong>ofFastEvent</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofFastEvent.html#!show_notify" title="notify" class="documentation_func">notify()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/events/ofKeyEventArgs.html" class="documentation_class_link"><strong>ofKeyEventArgs</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofKeyEventArgs.html#!show_ofKeyEventArgs" title="ofKeyEventArgs" class="documentation_func">ofKeyEventArgs()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofKeyEventArgs.html#!show_codepoint" title="codepoint" class="documentation_func">codepoint</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofKeyEventArgs.html#!show_key" title="key" class="documentation_func">key</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofKeyEventArgs.html#!show_keycode" title="keycode" class="documentation_func">keycode</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofKeyEventArgs.html#!show_scancode" title="scancode" class="documentation_func">scancode</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofKeyEventArgs.html#!show_type" title="type" class="documentation_func">type</a></li>
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/events/ofMessage.html" class="documentation_class_link"><strong>ofMessage</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofMessage.html#!show_ofMessage" title="ofMessage" class="documentation_func">ofMessage()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofMessage.html#!show_message" title="message" class="documentation_func">message</a></li>
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/events/ofMouseEventArgs.html" class="documentation_class_link"><strong>ofMouseEventArgs</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofMouseEventArgs.html#!show_ofMouseEventArgs" title="ofMouseEventArgs" class="documentation_func">ofMouseEventArgs()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofMouseEventArgs.html#!show_button" title="button" class="documentation_func">button</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofMouseEventArgs.html#!show_scrollX" title="scrollX" class="documentation_func">scrollX</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofMouseEventArgs.html#!show_scrollY" title="scrollY" class="documentation_func">scrollY</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofMouseEventArgs.html#!show_type" title="type" class="documentation_func">type</a></li>
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/events/ofResizeEventArgs.html" class="documentation_class_link"><strong>ofResizeEventArgs</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofResizeEventArgs.html#!show_ofResizeEventArgs" title="ofResizeEventArgs" class="documentation_func">ofResizeEventArgs()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofResizeEventArgs.html#!show_height" title="height" class="documentation_func">height</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofResizeEventArgs.html#!show_width" title="width" class="documentation_func">width</a></li>
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/events/ofTouchEventArgs.html" class="documentation_class_link"><strong>ofTouchEventArgs</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofTouchEventArgs.html#!show_ofTouchEventArgs" title="ofTouchEventArgs" class="documentation_func">ofTouchEventArgs()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofTouchEventArgs.html#!show_angle" title="angle" class="documentation_func">angle</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofTouchEventArgs.html#!show_height" title="height" class="documentation_func">height</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofTouchEventArgs.html#!show_id" title="id" class="documentation_func">id</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofTouchEventArgs.html#!show_majoraxis" title="majoraxis" class="documentation_func">majoraxis</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofTouchEventArgs.html#!show_minoraxis" title="minoraxis" class="documentation_func">minoraxis</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofTouchEventArgs.html#!show_numTouches" title="numTouches" class="documentation_func">numTouches</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofTouchEventArgs.html#!show_pressure" title="pressure" class="documentation_func">pressure</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofTouchEventArgs.html#!show_time" title="time" class="documentation_func">time</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofTouchEventArgs.html#!show_type" title="type" class="documentation_func">type</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofTouchEventArgs.html#!show_width" title="width" class="documentation_func">width</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofTouchEventArgs.html#!show_xaccel" title="xaccel" class="documentation_func">xaccel</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofTouchEventArgs.html#!show_xspeed" title="xspeed" class="documentation_func">xspeed</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofTouchEventArgs.html#!show_yaccel" title="yaccel" class="documentation_func">yaccel</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/events/ofTouchEventArgs.html#!show_yspeed" title="yspeed" class="documentation_func">yspeed</a></li>
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+    </div>
+    
+</div>
+
+		</div><!-- End Page Wide -->   
+      </div><!-- End Body Wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:34:25 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+eb73abcb6141243ae29291b42ec447024f00a570
+">
+
+eb73abcb6141243ae29291b42ec447024f00a570
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+
+
+

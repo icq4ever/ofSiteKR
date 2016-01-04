@@ -1,0 +1,1554 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr - ofFbo</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+    <script src="http://icq4ever.iptime.org//js/jquery.columnizer.min.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation.js"></script>
+  </head>
+  <body>
+    <div id="content">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">
+          <div class="page-wide">
+          
+              <div id="docstitle"><h1>ofFbo</h1></div>
+              <div id="editdocs">
+                    <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/gl/ofFbo.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
+              </div>
+              
+          </div>
+          
+          
+        <div class="page-wide">
+		    <div class="submenucol-left">
+		     <!-- list of methods -->
+		     <p class="top_list_header">class methods</p>
+             <ul class="functionslist">
+                 
+                         <li>
+                         <a href="#show_ofFbo" class="ofFbo" data-lookup="ofFbo">ofFbo()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_~ofFbo" class="~ofFbo" data-lookup="~ofFbo">~ofFbo()</a></li>
+                     
+                         <li>
+                         <a href="#show_activateAllDrawBuffers" class="activateAllDrawBuffers" data-lookup="activateAllDrawBuffers">activateAllDrawBuffers()</a></li>
+                     
+                         <li>
+                         <a href="#show_allocate" class="allocate" data-lookup="allocate">allocate()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_attachTexture" class="attachTexture" data-lookup="attachTexture">attachTexture()</a></li>
+                     
+                         <li>
+                         <a href="#show_begin" class="begin" data-lookup="begin">begin()</a></li>
+                     
+                         <li>
+                         <a href="#show_bind" class="bind" data-lookup="bind">bind()</a></li>
+                     
+                         <li>
+                         <a href="#show_checkGLSupport" class="checkGLSupport" data-lookup="checkGLSupport">checkGLSupport()</a></li>
+                     
+                         <li>
+                         <a href="#show_checkStatus" class="checkStatus" data-lookup="checkStatus">checkStatus()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_clear" class="clear" data-lookup="clear">clear()</a></li>
+                     
+                         <li>
+                         <a href="#show_createAndAttachDepthStencilTexture" class="createAndAttachDepthStencilTexture" data-lookup="createAndAttachDepthStencilTexture">createAndAttachDepthStencilTexture()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_createAndAttachRenderbuffer" class="createAndAttachRenderbuffer" data-lookup="createAndAttachRenderbuffer">createAndAttachRenderbuffer()</a></li>
+                     
+                         <li>
+                         <a href="#show_createAndAttachTexture" class="createAndAttachTexture" data-lookup="createAndAttachTexture">createAndAttachTexture()</a></li>
+                     
+                         <li>
+                         <a href="#show_draw" class="draw" data-lookup="draw">draw()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_end" class="end" data-lookup="end">end()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_flagDirty" class="flagDirty" data-lookup="flagDirty">flagDirty()</a></li>
+                     
+                         <li>
+                         <a href="#show_getDefaultTextureIndex" class="getDefaultTextureIndex" data-lookup="getDefaultTextureIndex">getDefaultTextureIndex()</a></li>
+                     
+                         <li>
+                         <a href="#show_getDepthBuffer" class="getDepthBuffer" data-lookup="getDepthBuffer">getDepthBuffer()</a></li>
+                     
+                         <li>
+                         <a href="#show_getDepthTexture" class="getDepthTexture" data-lookup="getDepthTexture">getDepthTexture()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_getHeight" class="getHeight" data-lookup="getHeight">getHeight()</a></li>
+                     
+                         <li>
+                         <a href="#show_getId" class="getId" data-lookup="getId">getId()</a></li>
+                     
+                         <li>
+                         <a href="#show_getIdDrawBuffer" class="getIdDrawBuffer" data-lookup="getIdDrawBuffer">getIdDrawBuffer()</a></li>
+                     
+                         <li>
+                         <a href="#show_getNumTextures" class="getNumTextures" data-lookup="getNumTextures">getNumTextures()</a></li>
+                     
+                         <li>
+                         <a href="#show_getStencilBuffer" class="getStencilBuffer" data-lookup="getStencilBuffer">getStencilBuffer()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getTexture" class="getTexture" data-lookup="getTexture">getTexture()</a></li>
+                     
+                     
+                     
+                     
+                         <li>
+                         <a href="#show_getWidth" class="getWidth" data-lookup="getWidth">getWidth()</a></li>
+                     
+                         <li>
+                         <a href="#show_isAllocated" class="isAllocated" data-lookup="isAllocated">isAllocated()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_isUsingTexture" class="isUsingTexture" data-lookup="isUsingTexture">isUsingTexture()</a></li>
+                     
+                         <li>
+                         <a href="#show_maxColorAttachments" class="maxColorAttachments" data-lookup="maxColorAttachments">maxColorAttachments()</a></li>
+                     
+                         <li>
+                         <a href="#show_maxDrawBuffers" class="maxDrawBuffers" data-lookup="maxDrawBuffers">maxDrawBuffers()</a></li>
+                     
+                         <li>
+                         <a href="#show_maxSamples" class="maxSamples" data-lookup="maxSamples">maxSamples()</a></li>
+                     
+                         <li>
+                         <a href="#show_operator=" class="operator=" data-lookup="operator=">operator=()</a></li>
+                     
+                         <li>
+                         <a href="#show_readToPixels" class="readToPixels" data-lookup="readToPixels">readToPixels()</a></li>
+                     
+                     
+                     
+                     
+                         <li>
+                         <a href="#show_resetAnchor" class="resetAnchor" data-lookup="resetAnchor">resetAnchor()</a></li>
+                     
+                         <li>
+                         <a href="#show_setActiveDrawBuffer" class="setActiveDrawBuffer" data-lookup="setActiveDrawBuffer">setActiveDrawBuffer()</a></li>
+                     
+                         <li>
+                         <a href="#show_setActiveDrawBuffers" class="setActiveDrawBuffers" data-lookup="setActiveDrawBuffers">setActiveDrawBuffers()</a></li>
+                     
+                         <li>
+                         <a href="#show_setAnchorPercent" class="setAnchorPercent" data-lookup="setAnchorPercent">setAnchorPercent()</a></li>
+                     
+                         <li>
+                         <a href="#show_setAnchorPoint" class="setAnchorPoint" data-lookup="setAnchorPoint">setAnchorPoint()</a></li>
+                     
+                         <li>
+                         <a href="#show_setDefaultTextureIndex" class="setDefaultTextureIndex" data-lookup="setDefaultTextureIndex">setDefaultTextureIndex()</a></li>
+                     
+                         <li>
+                         <a href="#show_setUseTexture" class="setUseTexture" data-lookup="setUseTexture">setUseTexture()</a></li>
+                     
+                         <li>
+                         <a href="#show_unbind" class="unbind" data-lookup="unbind">unbind()</a></li>
+                     
+                         <li>
+                         <a href="#show_updateTexture" class="updateTexture" data-lookup="updateTexture">updateTexture()</a></li>
+                     
+             </ul>
+            
+             
+             
+             <!-- list of variables -->              
+            
+             
+            
+             <!-- list of functions -->              
+		    </div>
+	    <div class="submenucol-right">
+            <div class="documentation_detail class_documentation">
+                    <h2><strong><em>Extends</em></strong></h2>
+                    <p>This class extends others, you can call their methods on an instance of ofFbo too:</p>
+                    <ul>
+                        <li><a href="../types/ofBaseDraws.html" class="docs_class" >ofBaseDraws</a> </li>
+                        <li><a href="../types/ofBaseHasTexture.html" class="docs_class" >ofBaseHasTexture</a> </li>
+                    </ul>
+              
+  <p>At it's core the ofFBO is a container for textures and an optional depth buffer. Kind of like, well, an OpenGL framebuffer, which is what you're normally rendering to. One way, conceptually correct but technically a bit loose, is that it's another renderer that you can write to. You can draw textures to it, draw 3D or 2D objects to it, render the view of cameras inside of it, all with one key difference: it's just an object stored on the graphics card that repreesents a rendered drawing pass. You can have multiple of them, draw all kinds of things inside of them, and then get all the textures out of them to play with in a shader or just draw them directly to the screen. They are, for most purposes, little render buffers that you can render to and store without needing to be drawing to the screen.</p>
+<p>To start working with an ofFbo, you have to allocate it, the same way that you would with an ofTexture:</p>
+<pre><code class="cpp">fbo.allocate(400, 400, GL_RGBA); // with alpha, 8 bits red, 8 bits green, 8 bits blue, 8 bits alpha, from 0 to 255 in 256 steps
+</code></pre>
+
+<p>Often the FBO will contain artefacts from the memory that the graphics card has just allocated for it, so it's good to clear it before starting to draw it:</p>
+<pre><code class="cpp">    fbo.begin();
+    ofClear(255,255,255, 0);
+    fbo.end();
+</code></pre>
+
+<p>When you call begin() you're telling the framebuffer to store the rendered results of any drawing calls (or shaders for that matter) in the FBO:</p>
+<pre><code class="cpp">float alpha = ofMap(ofGetMouseX(), 0, ofGetWidth(), 0, 255);
+fbo.begin();
+    ofSetColor(255,255,255, alpha);
+    ofDrawRectangle(0,0,400,400);
+fbo.end();
+</code></pre>
+
+<p>When it's time to draw your FBO, you can simply call draw:</p>
+<pre><code class="cpp">void ofApp::draw()
+{
+    fbo.draw(0,0);
+}
+</code></pre>
+
+<p>If you want to pass the FBO to say, an ofShader, you do:</p>
+<pre><code class="cpp">shader.setUniformTexture(&quot;fboTexture&quot;, fbo.getTextureReference(0), 0);
+</code></pre>
+
+<p>You can also use the <a href="../gl/ofFbo::Settings.html" class="docs_class" >ofFbo::Settings</a> object to create a more customized FBO that allows you to set the internal format of the depth and stencil textures, create multiple textures to render to, and use different texture targets, among other things.</p>
+<p><a href="../gl/ofFbo.html" class="docs_class" >ofFbo</a> can be a little confusing because it wraps two related, but distinct things in OpenGL: Textures and RenderBuffers. The difference conceptually isn't huge, but it's important if you're looking to understand deeply what's going on inside the ofFbo. RenderBuffers are good for rendering to, not drawing, whereas Textures are ok for both but slightly slower. More info on both <a href="http://www.opengl.org/wiki/Renderbuffer_Objects">here</a> and <a href="http://www.opengl.org/wiki/Framebuffer_Object">here</a></p>
+
+
+              
+              
+  
+
+           </div>
+                  
+            <!-- methods detail -->
+              <!--h2><a name="methods"></a>ofFbo methods</h2-->
+                        
+<div class="documentation_detail ofFbo" data-lookup="ofFbo" data-item-type="method">
+  	 
+	<h1><a name="show_ofFbo">ofFbo()</a></h1>
+	<h2>
+  <p>ofFbo::ofFbo()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This is the default constructor for the ofFbo.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofFbo" data-lookup="ofFbo" data-item-type="method">
+  	 
+	<h1><a name="show_ofFbo">ofFbo(...)</a></h1>
+	<h2>
+  <p>ofFbo::ofFbo(const ofFbo &amp;mom)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Copies all data from the mom fbo</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ~ofFbo" data-lookup="~ofFbo" data-item-type="method">
+  	 
+	<h1><a name="show_~ofFbo">~ofFbo()</a></h1>
+	<h2>
+  <p>ofFbo::~ofFbo()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail activateAllDrawBuffers" data-lookup="activateAllDrawBuffers" data-item-type="method">
+  	 
+	<h1><a name="show_activateAllDrawBuffers">activateAllDrawBuffers()</a></h1>
+	<h2>
+  <p>void ofFbo::activateAllDrawBuffers()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This method allows you to render the results of a shading pass to all the textures inside the FBO. It's  handy if you have many textures inside your FBO, for instance, a normals texture, a colored depth texture, a color texture, and you want to have a shader render to all of them at once. It calls glDrawBuffers() internally, which you can learn more about <a href="http://www.opengl.org/sdk/docs/man/xhtml/glDrawBuffers.xml">here</a>.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail allocate" data-lookup="allocate" data-item-type="method">
+  	 
+	<h1><a name="show_allocate">allocate(...)</a></h1>
+	<h2>
+  <p>void ofFbo::allocate(int width, int height, int internalformat, int numSamples=0)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Before you use the fbo you need to allocate it. This sets the width, height, and GL type of the fbo (i.e. whether it has alpha data or not) and the number of samples for MSAA. MSAA is sort of a big topic.
+MSAA is what you typically have in hardware on a modern graphics card. The graphics card renders to a surface that is larger than the final image, but in shading each "cluster" of samples (that will end up in a single pixel on the final screen) the pixel shader is run only once. We save a ton of fill rate, but we still burn memory bandwidth.
+This technique does not anti-alias any effects coming out of the shader, because the shader runs at 1x, so alpha cutouts are jagged. This is the most common way to run a forward-rendering game. MSAA does not work for a deferred renderer because lighting decisions are made after the MSAA is "resolved" (down-sized) to its final image size.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail allocate" data-lookup="allocate" data-item-type="method">
+  	 
+	<h1><a name="show_allocate">allocate(...)</a></h1>
+	<h2>
+  <p>void ofFbo::allocate(ofFbo::Settings settings)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>You can also allocate the ofFbo using a Settings object</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail attachTexture" data-lookup="attachTexture" data-item-type="method">
+  	 
+	<h1><a name="show_attachTexture">attachTexture(...)</a></h1>
+	<h2>
+  <p>void ofFbo::attachTexture(ofTexture &amp;texture, GLenum internalFormat, GLenum attachmentPoint)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail begin" data-lookup="begin" data-item-type="method">
+  	 
+	<h1><a name="show_begin">begin(...)</a></h1>
+	<h2>
+  <p>void ofFbo::begin(bool setupScreen=true)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Any drawing that you do after begin() is drawn into the fbo rather than the screen. This is how you draw things into your ofFbo instance.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Sets up the framebuffer and binds it for rendering.</p>
+<p>Warning:  This is a convenience method, and is considered unsafe
+          in multi-window and/or multi-renderer scenarios.
+          If you use more than one renderer, use each renderer's
+          explicit void ofBaseGLRenderer::begin(const ofFbo &amp; fbo, bool setupPerspective)
+          method instead.</p>
+<p>See also:       void ofBaseGLRenderer::begin(const ofFbo &amp; fbo, bool setupPerspective)</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail bind" data-lookup="bind" data-item-type="method">
+  	 
+	<h1><a name="show_bind">bind()</a></h1>
+	<h2>
+  <p>void ofFbo::bind()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This function is internally called by ofFbo::begin() after setting up the
+viewport to draw things into your ofFbo instance.</p>
+<p>To map the fbo to ofRectangle, ofMesh, or other vertex based drawing, call</p>
+<pre><code class="cpp">fbo.getTextureReference().bind();
+mesh.draw();
+fbo.getTextureReference().unbind();
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Bind OpenGL GL_FRAMEBUFFER target to this ofFbo</p>
+<p>Warning:  If you use this method, you need to manually keep track of the
+          currently bound framebuffer, if you ever want to restore state.
+          * use ofBaseGLRenderer::getCurrentFramebuffer() to query the current
+          framebuffer binding state within the renderer.
+          * Better, use the renderer's explicit method:
+          ofBaseGLRenderer::bind(const ofFbo &amp; fbo) to bind the fbo, to allow
+          the renderer to keep track of any bound fbos.</p>
+<p>See also:       unbind()</p>
+<p>See also:       virtual void ofBaseGLRenderer::bind(const ofFbo &amp; fbo)</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail checkGLSupport" data-lookup="checkGLSupport" data-item-type="method">
+  	 
+	<h1><a name="show_checkGLSupport">checkGLSupport()</a></h1>
+	<h2>
+  <p>bool ofFbo::checkGLSupport()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This allows you quickly check whether your graphics card supports FBO objects.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail checkStatus" data-lookup="checkStatus" data-item-type="method">
+  	 
+	<h1><a name="show_checkStatus">checkStatus()</a></h1>
+	<h2>
+  <p>bool ofFbo::checkStatus()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This checks the status of your FBO object.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail clear" data-lookup="clear" data-item-type="method">
+  	 
+	<h1><a name="show_clear">clear()</a></h1>
+	<h2>
+  <p>void ofFbo::clear()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail createAndAttachDepthStencilTexture" data-lookup="createAndAttachDepthStencilTexture" data-item-type="method">
+  	 
+	<h1><a name="show_createAndAttachDepthStencilTexture">createAndAttachDepthStencilTexture(...)</a></h1>
+	<h2>
+  <p>void ofFbo::createAndAttachDepthStencilTexture(GLenum target, GLint internalformat, GLenum attachment)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>FBOs usually have two textures that are created inside of them: a color texture to hold all of the colors of objects that are rendered and a depth texture that represents all the depth values of objects that are rendered. While there are more esoteric reasons for generating a depth texture, a common one is that depth textures can be used in a vertex or fragment shader to figure out how far away from the camera (and possibly by extension a light) something is.</p>
+<p>These are created with the default ofFbo::Settings, which means that unless you don't want one, you have a depth buffer to play with that you can access with:</p>
+<pre><code class="cpp">fbo.getDepthTexture();
+</code></pre>
+
+<p>The attachment point is the index of the texture that you're going to be referring to within the FBO. By default this should just be GL_DEPTH_STENCIL but if you know what you're doing and don't want a stencil buffer you can use GL_DEPTH_ATTACHMENT or vice versa, GL_STENCIL_ATTACHMENT.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail createAndAttachDepthStencilTexture" data-lookup="createAndAttachDepthStencilTexture" data-item-type="method">
+  	 
+	<h1><a name="show_createAndAttachDepthStencilTexture">createAndAttachDepthStencilTexture(...)</a></h1>
+	<h2>
+  <p>void ofFbo::createAndAttachDepthStencilTexture(GLenum target, GLint internalformat, GLenum attachment, GLenum transferFormat, GLenum transferType)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>FBOs usually have two textures that are created inside of them: a color texture to hold all of the colors of objects that are rendered and a depth texture that represents all the depth values of objects that are rendered. While there are more esoteric reasons for generating a depth texture, a common one is that depth textures can be used in a vertex or fragment shader to figure out how far away from the camera (and possibly by extension a light) something is.</p>
+<p>These are created with the default ofFbo::Settings, which means that unless you don't want one, you have a depth buffer to play with that you can access with:</p>
+<pre><code class="cpp">fbo.getDepthTexture();
+</code></pre>
+
+<p>The attachment point is the index of the texture that you're going to be referring to within the FBO. By default this should just be GL_DEPTH_STENCIL but if you know what you're doing and don't want a stencil buffer you can use GL_DEPTH_ATTACHMENT or vice versa, GL_STENCIL_ATTACHMENT.</p>
+<p>The extra parameters on this method allow you to set the type of depth buffer that you want to create, which is handy if you need particular fidelity for depth, for instance, GL_DEPTH32.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail createAndAttachRenderbuffer" data-lookup="createAndAttachRenderbuffer" data-item-type="method">
+  	 
+	<h1><a name="show_createAndAttachRenderbuffer">createAndAttachRenderbuffer(...)</a></h1>
+	<h2>
+  <p>GLuint ofFbo::createAndAttachRenderbuffer(GLenum internalFormat, GLenum attachmentPoint)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This creates a texture of the specified format and attaches it to the FBO at the index specified. Most of this can be handled for you by using the ofFbo::Settings object. RenderBuffers are slightly different than textures, more info can be found on the <a href="http://www.opengl.org/wiki/Renderbuffer_Objects">OpenGL Wiki</a>.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail createAndAttachTexture" data-lookup="createAndAttachTexture" data-item-type="method">
+  	 
+	<h1><a name="show_createAndAttachTexture">createAndAttachTexture(...)</a></h1>
+	<h2>
+  <p>void ofFbo::createAndAttachTexture(GLenum internalFormat, GLenum attachmentPoint)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This creates a texture of the specified format and attaches it to the FBO at the index specified. Most of this can be handled for you by using the ofFbo::Settings object.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofFbo::draw(float x, float y)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This allows you draw everything that's in your fbo to the screen using its default height and width at the x, y indicated.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofFbo::draw(float x, float y, float width, float height)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This allows you draw everything that's in your fbo to the screen using any height and width. Any stretching is up to you to handle appropriately.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail end" data-lookup="end" data-item-type="method">
+  	 
+	<h1><a name="show_end">end()</a></h1>
+	<h2>
+  <p>void ofFbo::end()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Any drawing that you do after end() is drawn into the fbo rather than the screen. This is how you stop drawing things into your ofFbo instance.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Ends the current framebuffer render context.</p>
+<p>See also:       void begin(bool setupScreen=true) const;</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail flagDirty" data-lookup="flagDirty" data-item-type="method">
+  	 
+	<h1><a name="show_flagDirty">flagDirty()</a></h1>
+	<h2>
+  <p>void ofFbo::flagDirty()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getDefaultTextureIndex" data-lookup="getDefaultTextureIndex" data-item-type="method">
+  	 
+	<h1><a name="show_getDefaultTextureIndex">getDefaultTextureIndex()</a></h1>
+	<h2>
+  <p>int ofFbo::getDefaultTextureIndex()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>If you've set the default texture reference, you can get access to it here.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getDepthBuffer" data-lookup="getDepthBuffer" data-item-type="method">
+  	 
+	<h1><a name="show_getDepthBuffer">getDepthBuffer()</a></h1>
+	<h2>
+  <p>GLuint ofFbo::getDepthBuffer()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This gives you the OpenGL id of the depth RenderBuffer that the fbo contains. The depthBuffer will only be created if you pass a Setting object with depthStencilAsTexture = false.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getDepthTexture" data-lookup="getDepthTexture" data-item-type="method">
+  	 
+	<h1><a name="show_getDepthTexture">getDepthTexture()</a></h1>
+	<h2>
+  <p>ofTexture &amp; ofFbo::getDepthTexture()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This gives you the OpenGL id of the depth Texture that the fbo contains. The depthBuffer will be created by default or if you pass a Setting object with depthStencilAsTexture = true.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getDepthTexture" data-lookup="getDepthTexture" data-item-type="method">
+  	 
+	<h1><a name="show_getDepthTexture">getDepthTexture()</a></h1>
+	<h2>
+  <p>const ofTexture &amp; ofFbo::getDepthTexture()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getHeight" data-lookup="getHeight" data-item-type="method">
+  	 
+	<h1><a name="show_getHeight">getHeight()</a></h1>
+	<h2>
+  <p>float ofFbo::getHeight()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This returns the height of the fbo. This is just like height of a texture: it sets how many pixels wide the allocated memory on the graphics card is.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getId" data-lookup="getId" data-item-type="method">
+  	 
+	<h1><a name="show_getId">getId()</a></h1>
+	<h2>
+  <p>GLuint ofFbo::getId()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>returns id of the underlying GL object for advanced actions</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getIdDrawBuffer" data-lookup="getIdDrawBuffer" data-item-type="method">
+  	 
+	<h1><a name="show_getIdDrawBuffer">getIdDrawBuffer()</a></h1>
+	<h2>
+  <p>GLuint ofFbo::getIdDrawBuffer()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>returns id of Fbo for texture attachments
+which is different when the fbo is using MSAA</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getNumTextures" data-lookup="getNumTextures" data-item-type="method">
+  	 
+	<h1><a name="show_getNumTextures">getNumTextures()</a></h1>
+	<h2>
+  <p>int ofFbo::getNumTextures()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This returns the number of textures that the fbo contains.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getStencilBuffer" data-lookup="getStencilBuffer" data-item-type="method">
+  	 
+	<h1><a name="show_getStencilBuffer">getStencilBuffer()</a></h1>
+	<h2>
+  <p>GLuint ofFbo::getStencilBuffer()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This gives you the OpenGL id of the stencil RenderBuffer that the fbo contains. The depthBuffer will only be created if you pass a Setting object with depthStencilAsTexture = false and settings.useStencil = true.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getTexture" data-lookup="getTexture" data-item-type="method">
+  	 
+	<h1><a name="show_getTexture">getTexture()</a></h1>
+	<h2>
+  <p>ofTexture &amp; ofFbo::getTexture()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getTexture" data-lookup="getTexture" data-item-type="method">
+  	 
+	<h1><a name="show_getTexture">getTexture()</a></h1>
+	<h2>
+  <p>const ofTexture &amp; ofFbo::getTexture()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getTexture" data-lookup="getTexture" data-item-type="method">
+  	 
+	<h1><a name="show_getTexture">getTexture(...)</a></h1>
+	<h2>
+  <p>ofTexture &amp; ofFbo::getTexture(int attachmentPoint)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getTexture" data-lookup="getTexture" data-item-type="method">
+  	 
+	<h1><a name="show_getTexture">getTexture(...)</a></h1>
+	<h2>
+  <p>const ofTexture &amp; ofFbo::getTexture(int attachmentPoint)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getWidth" data-lookup="getWidth" data-item-type="method">
+  	 
+	<h1><a name="show_getWidth">getWidth()</a></h1>
+	<h2>
+  <p>float ofFbo::getWidth()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This returns the width of the fbo that was set when it was allocated. This is just like width of a texture: it sets how many pixels wide the allocated memory on the graphics card is.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail isAllocated" data-lookup="isAllocated" data-item-type="method">
+  	 
+	<h1><a name="show_isAllocated">isAllocated()</a></h1>
+	<h2>
+  <p>bool ofFbo::isAllocated()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns whether your FBO is allocated or not.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail isUsingTexture" data-lookup="isUsingTexture" data-item-type="method">
+  	 
+	<h1><a name="show_isUsingTexture">isUsingTexture()</a></h1>
+	<h2>
+  <p>bool ofFbo::isUsingTexture()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail maxColorAttachments" data-lookup="maxColorAttachments" data-item-type="method">
+  	 
+	<h1><a name="show_maxColorAttachments">maxColorAttachments()</a></h1>
+	<h2>
+  <p>int ofFbo::maxColorAttachments()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This returns the max number of simultaneous max color attachments, i.e. textures that will just be used for color information.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail maxDrawBuffers" data-lookup="maxDrawBuffers" data-item-type="method">
+  	 
+	<h1><a name="show_maxDrawBuffers">maxDrawBuffers()</a></h1>
+	<h2>
+  <p>int ofFbo::maxDrawBuffers()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This returns the max number of simultaneous draw buffers that your graphics card supports, i.e. color buffers that can be drawn to simultaneously. This is usually 4 at present.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail maxSamples" data-lookup="maxSamples" data-item-type="method">
+  	 
+	<h1><a name="show_maxSamples">maxSamples()</a></h1>
+	<h2>
+  <p>int ofFbo::maxSamples()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This is the maximum number of MSAA samples that your graphic card supports.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator=" data-lookup="operator=" data-item-type="method">
+  	 
+	<h1><a name="show_operator=">operator=(...)</a></h1>
+	<h2>
+  <p>ofFbo &amp; ofFbo::operator=(const ofFbo &amp;fbo)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This overloaded operator allows you to set one fbo from another using the = operator. Very convenient.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail readToPixels" data-lookup="readToPixels" data-item-type="method">
+  	 
+	<h1><a name="show_readToPixels">readToPixels(...)</a></h1>
+	<h2>
+  <p>void ofFbo::readToPixels(ofFloatPixels &amp;pixels, int attachmentPoint=0)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This allows you to get the pixels from an ofFbo and store it in an ofShortPixels instance. The attachmentPoint parameter allows you indicate which of the textures attached to the fbo you want to grab. The ofShortPixels instance is useful when you want your image as floating point values.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail readToPixels" data-lookup="readToPixels" data-item-type="method">
+  	 
+	<h1><a name="show_readToPixels">readToPixels(...)</a></h1>
+	<h2>
+  <p>void ofFbo::readToPixels(ofPixels &amp;pixels, int attachmentPoint=0)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This allows you to get the pixels from an ofFbo and store it in an ofPixels instance. The attachmentPoint parameter allows you indicate which of the textures attached to the fbo you want to grab.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail readToPixels" data-lookup="readToPixels" data-item-type="method">
+  	 
+	<h1><a name="show_readToPixels">readToPixels(...)</a></h1>
+	<h2>
+  <p>void ofFbo::readToPixels(ofShortPixels &amp;pixels, int attachmentPoint=0)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This allows you to get the pixels from an ofFbo and store it in an ofShortPixels instance. The attachmentPoint parameter allows you indicate which of the textures attached to the fbo you want to grab. The ofShortPixels instance is useful when you want your image at short ints, or non-floating point values.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail resetAnchor" data-lookup="resetAnchor" data-item-type="method">
+  	 
+	<h1><a name="show_resetAnchor">resetAnchor()</a></h1>
+	<h2>
+  <p>void ofFbo::resetAnchor()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This allows you reset the anchor position.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setActiveDrawBuffer" data-lookup="setActiveDrawBuffer" data-item-type="method">
+  	 
+	<h1><a name="show_setActiveDrawBuffer">setActiveDrawBuffer(...)</a></h1>
+	<h2>
+  <p>void ofFbo::setActiveDrawBuffer(int i)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This sets which texture within your FBO is going contain the results of any drawing method or shading pass, particularly useful if you have multiple color textures, for instance, a normals texture and a color value texture. Doing multiple rendering passes on different objects is called <a href="http://en.wikipedia.org/wiki/Deferred_shading">Deferred Shading</a> and is a tricky but powerful technique.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setActiveDrawBuffers" data-lookup="setActiveDrawBuffers" data-item-type="method">
+  	 
+	<h1><a name="show_setActiveDrawBuffers">setActiveDrawBuffers(...)</a></h1>
+	<h2>
+  <p>void ofFbo::setActiveDrawBuffers(const vector&lt; int &gt; &amp;i)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This sets which texture within your FBO is going contain the results of any drawing method or shading pass, particularly useful if you have multiple color textures, for instance, a normals texture and a color value texture. Doing multiple rendering passes on different objects is called <a href="http://en.wikipedia.org/wiki/Deferred_shading">Deferred Shading</a> and is a tricky but powerful technique.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setAnchorPercent" data-lookup="setAnchorPercent" data-item-type="method">
+  	 
+	<h1><a name="show_setAnchorPercent">setAnchorPercent(...)</a></h1>
+	<h2>
+  <p>void ofFbo::setAnchorPercent(float xPct, float yPct)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>You can set the anchor position that the texture will be drawn at. This means that passing 0.5, 0.5 will draw the ofFbo center at the point you pass in to the draw() method.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setAnchorPoint" data-lookup="setAnchorPoint" data-item-type="method">
+  	 
+	<h1><a name="show_setAnchorPoint">setAnchorPoint(...)</a></h1>
+	<h2>
+  <p>void ofFbo::setAnchorPoint(float x, float y)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This allows you set the anchor position of the texture in the fbo when you draw it.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setDefaultTextureIndex" data-lookup="setDefaultTextureIndex" data-item-type="method">
+  	 
+	<h1><a name="show_setDefaultTextureIndex">setDefaultTextureIndex(...)</a></h1>
+	<h2>
+  <p>void ofFbo::setDefaultTextureIndex(int defaultTexture)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This allows you set the default texture that your fbo will use. If you're using multiple textures, this will return the one that should be draw to, scaled, and positioned.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setUseTexture" data-lookup="setUseTexture" data-item-type="method">
+  	 
+	<h1><a name="show_setUseTexture">setUseTexture(...)</a></h1>
+	<h2>
+  <p>void ofFbo::setUseTexture(bool )</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This method does nothing.</p>
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail unbind" data-lookup="unbind" data-item-type="method">
+  	 
+	<h1><a name="show_unbind">unbind()</a></h1>
+	<h2>
+  <p>void ofFbo::unbind()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>After you bind the fbo and draw with it, call fbo to stop the fbo from being attached to vertices that are created.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Unbinds OpenGL framebuffer target and restores the OpenGL framebuffer
+          render target to whatever this ofFbo stores in previousFramebufferBinding.</p>
+<p>See also:       bind()</p>
+<p>See also:       void setPreviousFramebufferBinding(const GLuint&amp; previousFramebufferBinding_) const</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail updateTexture" data-lookup="updateTexture" data-item-type="method">
+  	 
+	<h1><a name="show_updateTexture">updateTexture(...)</a></h1>
+	<h2>
+  <p>void ofFbo::updateTexture(int attachmentPoint)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Explicityl resolve MSAA render buffers into textures
+\note     if using MSAA, we will have rendered into a colorbuffer, not directly
+          into the texture call this to blit from the colorbuffer into the texture
+          so we can use the results for rendering, or input to a shader etc.
+\note     This will get called implicitly upon getTexture();</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+
+            <!-- vars detail -->
+
+            <!-- functions detail -->
+            <hr/>
+                
+            <!--diqus comments for class/functions module description-->
+            <div id="comments_header">
+            <h2>comments</h2>
+            <p>You can add comments with usage examples or other information for each class, method or variable, for adding documentation to an empty section or reporting errors is better to send a fix or open an issue through <a href="https://github.com/openframeworks/ofSite">github</a>.</p>
+            <p>When posting code enclose it in:</p>
+            <pre><code class="html">&lt;pre&gt;&lt;code class=&quot;cpp&quot;&gt;&nbsp;&lt;/code&gt;&lt;/pre&gt;</code></pre>
+            <br/>
+            </div>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+
+            // DISQUS
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+
+            var disqus_shortname = 'openframeworks'; // required: replace example with your forum shortname
+            //var disqus_developer = 1;
+
+            location_elements = window.location.pathname.split("/");
+            module_name = location_elements[location_elements.length-1].split(".")[0];
+            section_name = location.hash.split("_")[1];
+            console.log(module_name + " " + section_name);
+            if(section_name!=undefined && section_name!=''){
+            var disqus_identifier = window.location.pathname + "#!show_" + section_name;  
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "#!show_" + section_name;
+            var discus_title = document.title + " - " + section_name;
+            }else{
+            var disqus_identifier = window.location.pathname;
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            var discus_title = document.title;
+            }
+
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */   
+            (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		
+        </div><!-- End Submenu right -->
+      </div><!-- End page wide -->
+      </div><!-- End body wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:33:48 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+4d738d6979d8e7992359cde47632192d1fbef472
+">
+
+4d738d6979d8e7992359cde47632192d1fbef472
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+

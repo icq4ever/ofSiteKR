@@ -1,0 +1,776 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+    <script src="http://icq4ever.iptime.org//js/jquery.columnizer.min.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-71930909-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
+  <body>
+    <div id="content">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">	
+	    <div class="page-wide-tutorial">
+            <!--ul class="submenu">
+                <li><a href="/documentation">레퍼런스</a></li>
+                <li><a href="/tutorials">튜토리얼</a></li>
+            </ul-->
+    	    <h1>메시 생성하기</h1>
+    	    <span class="article_meta">2013/11/20 4:00:00&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="">[Michael Hadley](www.mikewesthad.wordpress.com/me)</a></span><br/>
+    	    <div class="article">
+    	    
+  <h2 id="_1">이미지로부터 메시 생성하기 기초편</h2>
+<p>*<em>이 분서는 영문을 한글로 번역한 문서입니다. 최대한 의미가 제대로 전달되도록 노력하였습니다. 어색한 부분은 의역한 부분도 있습니다만.. 오류나 지적사항이 있으시면 메일로 연락주시기 바랍니다. icq4ever@gmail.com</em></p>
+<p>본 튜토리얼은 <em>희망컨데</em> 기본 튜토리얼(오픈프레임웍스 세팅, 변수사용, 루프 생성 등등)은 익숙하면서  3D를 다루고 싶은 분들을 대상으로 합니다. 좀 폼내는 것처럼 보일지 모르겠지만, 이 가이드의 로직과 코드를 통해 아래의 이미지를 이용하여(참고로 이 이미지는 <a href="http://hubblesite.org/gallery/album/star/">허블갤러리</a>에서 가져왔습니다.):</p>
+<p><img alt="Original hubble image" src="003_images/stars_small.png" /> </p>
+<p>아래와 같이 만들것입니다:</p>
+<p><img alt="Generative hubble mesh" src="003_images/mesh_small.png" /></p>
+<p>본 튜토리얼은 네 섹션으로 나뉘어집니다:</p>
+<ol>
+<li><a href="#basics">기초 : ofMesh 다루기</a><ul>
+<li>점</li>
+<li>색</li>
+<li>선</li>
+<li>인덱스</li>
+</ul>
+</li>
+<li><a href="#generative">제너러티브 메쉬 : 이미지를 사용하여 메시 생성하기</a><ul>
+<li>이미지 불러오기 </li>
+<li>픽셀에서 메시 생성하기</li>
+<li>ofEasyCam을 이용하여 메시 둘러보기</li>
+</ul>
+</li>
+<li><a href="#manipulations">조작하기 : 메쉬를 수정하는 효과 추가하기 </a><ul>
+<li>진동 추가하기</li>
+<li>정점에 궤도를 추가하기</li>
+<li>상호작용하는 확대효과 생성</li>
+</ul>
+</li>
+<li><a href="#nextsteps">다음 단계</a></li>
+</ol>
+<p><a name="basics"></a></p>
+<h2 id="ofmesh">기초 : ofMesh다루기</h2>
+<p>mesh는 다양한 방법으로 연결이 가능한 <strong>정점들</strong>(Vertices. Vertex의 복수형으로, 정점:Vertex란 3D 공간의 점을 의미합니다)의 집합입니다. 이러한 정점들은 <strong>그리기 모드(primitive)</strong>를 통해 연결되어 모양을 이룹니다. 이러한 그리기 모드들은 메시를 만들때 조합되는 가장 작은 빌딩 블록들 같은 것이라 할 수 있습니다. 이러한 그리기 모드는 몇가지의 다른 종류가 있습니다:
+<em> 정점들을 연결하지 않고 점만 찍는다.
+</em> 정점의 쌍을 선택하여 그것들끼리 선을 그린다.
+* 세개 혹은 그 이상의 정점들을 연결하여 삼각형, 혹은 사각형(다각형)을 그린다.</p>
+<p>좀 더 확실한 이해를 위해, 아래의 메쉬를 살펴보시기 바랍니다. 주황색 점들이 바로 정점들입니다. 정점들은 회색으로 칠해진 세개의 점을 세트로 하는 '삼각형 그리기모드'로 연결되어 있습니다. 좀더 자세한 정보를 원하신다면, <a href="http://www.openframeworks.kr/tutorials/graphics/opengl.html">오픈지엘 튜토리얼</a>을 살펴보시기 바랍니다.</p>
+<p><img alt="Keenan Crane's public domain cow shown in wireframe" src="003_images/Keenan_Crane_Public_Domain_Cow_Small.png" /> </p>
+<p>자 이제부터터 점과 선을 그리기 모드로 사용하는것에 집중해 보겠습니다. 화면에 뭔가를 그려보도록 하지요. 메쉬를 생성할때는 반드시 아래와 같은 절차를 거쳐 코드를 작성해야합니다:</p>
+<ol>
+<li><a href="http://www.openframeworks.kr/documentation/3d/ofMesh.html">ofMesh</a>변수를 선언합니다. 여기서는 mesh라고 선언하도록 하죠.</li>
+<li>mesh.<a href="http://www.openframeworks.kr/documentation/3d/ofMesh.html#!show_setMode">setMode()</a>함수를 사용하여, 메쉬가 사용할 정점들을 연결할때 사용할 그리기모드를 지정합니다. (점, 선, 기타 등등..) 우리는 그리기 모드로 점을 사용할 것이므로, <strong>OF_PRIMIRIVE_POINTS</strong>라고 지정해주어야 합니다.</li>
+<li>mesh.<a href="http://www.openframeworks.kr/documentation/3d/ofMesh.html#show_addVertex">addVertex()</a>를 사용하여 정점들을 추가해줍니다. 정점은 <a href="http://www.openframeworks.kr/documentation/math/ofVec3f.html">ofVec3f</a>형이므로, 이 클래스를 사용해본적이 없다면, 도큐먼트 페이지의 예제를 참고하시길 바랍니다.</li>
+<li>mesh.<a href="http://www.openframeworks.kr/documentation/3d/ofMesh.html#show_draw">draw()</a>를 사용하여 메쉬를 그립니다.</li>
+</ol>
+<p>자 이제 코드를 직접 작성해보죠!</p>
+<p>메쉬 변수를 헤더파일(.h)에 추가합니다:</p>
+<pre><code class="h">    ofMesh mesh;
+</code></pre>
+
+<p>소스파일(.cpp)파일에서 <em>setup()</em>과 <em>draw()</em> 함수에 아래 코드들을 추가해줍니다.:</p>
+<pre><code class="cpp">void testApp::setup() {
+    mesh.setMode(OF_PRIMITIVE_POINTS);
+
+    ofVec3f top(100.0, 50.0, 0.0);    
+    ofVec3f left(50.0, 150.0, 0.0);    
+    ofVec3f right(150.0, 150.0, 0.0);
+
+    mesh.addVertex(top);
+    mesh.addVertex(left);
+    mesh.addVertex(right);
+}
+void testApp::draw() {
+    ofBackground(0);
+    mesh.draw();
+}
+</code></pre>
+
+<p>컴파일을 하고 실행하면, 검은 바탕위에 삼각형의 형태로 위치한 세 흰 점을 볼 수 있습니다.</p>
+<p><img alt="Triangle Points" src="003_images/TrianglePoints.png" /> </p>
+<p>흰색이 좀 지루한가요? setup을 수정하여 다른 색을 추가해보죠:</p>
+<pre><code class="cpp">void testApp::setup() {
+    mesh.setMode(OF_PRIMITIVE_POINTS);
+    mesh.enableColors();
+
+    ofVec3f top(100.0, 50.0, 0.0);    
+    ofVec3f left(50.0, 150.0, 0.0);    
+    ofVec3f right(150.0, 150.0, 0.0);
+
+    mesh.addVertex(top);
+    mesh.addColor(ofFloatColor(1.0, 0.0, 0.0));
+
+    mesh.addVertex(left);
+    mesh.addColor(ofFloatColor(0.0, 1.0, 0.0));
+
+    mesh.addVertex(right);
+    mesh.addColor(ofFloatColor(1.0, 1.0, 0.0));
+}
+</code></pre>
+
+<p>먼저 mesh.<a href="http://www.openframeworks.kr/documentation/3d/ofMesh.html#show_enableColors">enableColors()</a>를 이용하여 색을 사용할수 있게 합니다. 기본적으로 활성화 되어있긴 하지만, 이 코드를 작성하는것은 좋은 연습이 될것입니다. 그리고 나서 mesh.<a href="http://www.openframeworks.kr/documentation/3d/ofMesh.html#show_addColor">addColor()</a>를 사용하여 색을 추가합니다. 색은 ofFloatColor를 사용하여 지정하는데 이것은 <a href="http://www.openframeworks.kr/documentation/types/ofColor.html">ofColor</a>과 비슷하지만 빨강, 파랑, 녹색, 투명도의 범위가 0.0에서 1.0사이의 float(부동소수점)으로 표현한다는 점에서 차이가 있습니다. (원한다면 ofColor로 사용이 <em>가능</em>합니다만, 반드시 ofFloatColor를 사용해야합니다.) 첫 번째로 추가한 색은 첫번째 정점에, 두번째 추가한 색은 두번째 정점에 적용됩니다.</p>
+<p>점이 좀 지루하죠? 선을 연결해볼 시간입니다. 그리기 모드를 선으로 바꿔야 합니다만, 선 모드에는 세가지 다른 옵션이 있습니다. 각각의 옵션을 setup함수의 첫번째 라인에 아래의 코드를 사용하여 직접 적용해보시기 바랍니다:</p>
+<pre><code class="cpp">    mesh.setMode(OF_PRIMITIVE_LINES);
+    mesh.setMode(OF_PRIMITIVE_LINE_STRIP);
+    mesh.setMode(OF_PRIMITIVE_LINE_LOOP);
+</code></pre>
+
+<p><img alt="Triangle Points" src="003_images/TriangleLineMode.png" /> </p>
+<p>각각의 모드들은 정점으로부터 다른 방식으로 선을 생성합니다:
+<em> <strong>OF_PRIMITIVE_LINE</strong>는 각각의 정점들을 쌍으로 하여 </em>독립적으로<em> 선을 그립니다.  만약 V<sub>1</sub>, V<sub>2</sub>, V<sub>3</sub>, V<sub>4</sub>, ... 와 같은 정점들을 갖고 있다면, V<sub>1</sub>은 V<sub>2</sub>로, V<sub>3</sub>은  V<sub>4</sub>로 연결됩니다.
+</em> <strong>OF_PRIMITIVE_LINE_STRIP</strong>는 각각의 정점들을 쌍으로 하여 <em>연속적으로</em> 선들을 그립니다. V<sub>1</sub>은 V<sub>2</sub>로, V<sub>2</sub>는 V<sub>3</sub>으로 연결되는 식입니다.
+* <strong>OF_PRIMITIVE_LINE_LOOP</strong>는 연속적으로 선들을 그리며, 처음과 끝의 정점까지도 연결해줍니다.</p>
+<p>OF_PRIMITIVE_LINE_LOOP 만이 완벽한 삼각형을 그려냅니다. 만약 OF_PRIMITIVE_LINE을 이용하여 같은 모양을 그려내기 위해서는 아래와 같이 작성하여야 합니다:</p>
+<pre><code class="cpp">    mesh.addVertex(top);
+    mesh.addVertex(left);
+    mesh.addVertex(left);
+    mesh.addVertex(right);
+    mesh.addVertex(right);
+    mesh.addVertex(top);
+</code></pre>
+
+<p>굳이 정점들을 중복하여 그려보고 싶다구요? 그렇다면 이렇게 해보세요:</p>
+<pre><code class="cpp">void testApp::setup() {
+    mesh.setMode(OF_PRIMITIVE_LINES);
+    mesh.enableColors();
+    mesh.enableIndices();
+
+    ofVec3f top(100.0, 50.0, 0.0);    
+    ofVec3f left(50.0, 150.0, 0.0);    
+    ofVec3f right(150.0, 150.0, 0.0);
+
+    mesh.addVertex(top);
+    mesh.addColor(ofFloatColor(1.0, 0.0, 0.0));
+
+    mesh.addVertex(left);
+    mesh.addColor(ofFloatColor(0.0, 1.0, 0.0));
+
+    mesh.addVertex(right);
+    mesh.addColor(ofFloatColor(1.0, 1.0, 0.0));
+
+    mesh.addIndex(0);
+    mesh.addIndex(1);
+    mesh.addIndex(1);
+    mesh.addIndex(2);
+    mesh.addIndex(2);
+    mesh.addIndex(0);
+}
+</code></pre>
+
+<p>indices(index의 복수형. 인덱스들)인덱스들은 추상화된 레이어를 추가합니다. 메쉬에 추가할 각각의 정점은 큰 고전적인 배열의 끝에 고정됩니다. 이 말은 즉 각각의 정점은 자신의 위치를 식별할수 있는 유일한 숫자를 갖는다는 뜻입니다. 0, 1, 2 이런식으로 붙여집니다. 특정 정점을 지정하기 위해서는 그것의 인덱스 넘버를 사용하면 되는것이지요.</p>
+<p>mesh.<a href="http://www.openframeworks.kr/documentation/3d/ofMesh.html#!show_enableIndices">enableIndices()</a>를 호출하면, 오픈프레임웍스는 비어있는 인덱스 배열을 생성합니다. 이후 <a href="http://www.openframeworks.kr/documentation/3d/ofMesh.html#show_addIndex">addIndex()</a>를 호출하면, 배열의 끝에 값을 하나 추가하게 됩니다. 메쉬가 화면상에 그려질때, 오픈프레임웍스는 정점배열이 아닌, 인덱스 배열에 접근하여 루프를 돌며 그리기모드를 어떻게 생성할것인지를 결졍하게 됩니다.</p>
+<p>따라서 OF_PRIMITIVE_LINE모드이고, 인덱스 배열이 (0, 1, 1, 2, 2, 0)이면, 0번째 정점과 1번째 정점이 연결되며, 1번째 정점과 2번째 정점이 연결되고, 2번째 정점과 0번째 정점이 연결됩니다. 고작 삼각형 하나를 그리는데 해줘야 하는 일이 뭐이리 많냐구요? 맞습니다. 하지만 이러한 인덱스의 개념은 상당히 강력하고 유용합니다.</p>
+<p>주의해야 할 점이 하나 더 있습니다. 바로 선의 색입니다. 이것은 그래픽카드에서 벌어지는 일종의 마법과 같은 일입니다. 점 A가 빨간색이고 점 B가 파란색이라고 한 뒤에 A와 B를 선으로 연결해봅시다. 그러면, 그래픽카드는 두 색의 중간값을 자동으로 계산하여 선을 그려냅니다.</p>
+<p>이번 섹션을 전부 읽어본 것에 대한 보상입니다:</p>
+<p><img alt="Line Mode Smile" src="003_images/LineModeFace.png" /> </p>
+<p>네 알아요. 대단한 보상은 아닙니다. 하지만 이것은 OF_PRIMITIVE_LINES를 사용하여 그려낼 수 있습니다. 다른 두 모드로는 그려낼 수 없지요. 별도의 분리된 선들로 그려내야 합니다. 다음 섹션에서 이것의 장점들에 대해 알아볼 것입니다.</p>
+<pre><code class="cpp">    mesh.setMode(OF_PRIMITIVE_LINES);
+    mesh.enableColors();
+    mesh.enableIndices();
+
+    ofVec3f eyeLeftTop(50.0, 25.0, 0.0);
+    ofVec3f eyeLeftBottom(50.0, 50.0, 0.0);
+    ofVec3f eyeRightTop(100.0, 25.0, 0.0);
+    ofVec3f eyeRightBottom(100.0, 50.0, 0.0);
+    ofVec3f mouthLeft(50.0, 75.0, 0.0);
+    ofVec3f mouthMiddle(75.0, 100.0, 0.0);
+    ofVec3f mouthRight(100.0, 75.0, 0.0);
+
+    mesh.addVertex(eyeLeftTop);
+    mesh.addVertex(eyeLeftBottom);
+    mesh.addIndex(0);
+    mesh.addIndex(1);
+    mesh.addColor(ofFloatColor(0.0, 1.0, 1.0));
+    mesh.addColor(ofFloatColor(0.0, 1.0, 1.0));
+
+    mesh.addVertex(eyeRightTop);
+    mesh.addVertex(eyeRightBottom);
+    mesh.addIndex(2);
+    mesh.addIndex(3);
+    mesh.addColor(ofFloatColor(0.0, 1.0, 1.0));
+    mesh.addColor(ofFloatColor(0.0, 1.0, 1.0));
+
+    mesh.addVertex(mouthLeft);
+    mesh.addVertex(mouthMiddle);
+    mesh.addVertex(mouthRight);
+    mesh.addIndex(4);
+    mesh.addIndex(5);
+    mesh.addIndex(5);
+    mesh.addIndex(6);
+    mesh.addColor(ofFloatColor(0.0, 1.0, 0.0));
+    mesh.addColor(ofFloatColor(0.0, 1.0, 0.0));
+    mesh.addColor(ofFloatColor(0.0, 1.0, 0.0));
+</code></pre>
+
+<p><a name="generative"></a></p>
+<h2 id="_2">제너러티브 메쉬 : 이미지를 사용하여 메시 생성하기</h2>
+<p>메쉬! 이제 여러분은 '재너러티브한'메쉬를 그리는 기본적인 방법을 알고 있습니다. 남은 것은 어떠한 <em>데이터</em>에 어떠한 <em>규칙</em>을 사용하여 메쉬를 생성할 것이냐 입니다. 이건 단지 어떠한 <em>데이터</em>에 적용되는 <em>규칙들</em>에서부터 생성되는 메쉬의 타입일 뿐입니다.</p>
+<p>따라서 , 우리는 데이터와 규칙이 필요합니다. 그렇다면 허블망원경에서 '데이터'를 뽑아볼까요?:</p>
+<p><img alt="Original hubble image" src="003_images/stars.png" /> </p>
+<p>HubbleMesh라는 이름으로 <a href="http://www.openframeworks.kr/tutorials/introduction/002_projectGenerator.html">새 오픈프레임웍스 프로젝트</a>를 생성하고, HubbleMesh/bin/data 디렉토리에 위 이미지를 'starts.png'로 저장합시다.</p>
+<p>자 이제 알록달록한 픽셀뭉치를 갖게 되었습니다. 하지만 저 픽셀들에서 메쉬로 변한하기 위해 어떠한 규칙들을 사용해야할까요? 일단 점을 그리는것으로 시작해 선을 그려볼까요? 우리의 이미지에는 엄청난 별들이 있으니, 저 별들이 위치한 곳에 정점을 생성해봅시다. 그리고 나면, 인접한 정점들과 선을 그려 일종의 거미줄을 생성할 수 있을 것입니다.</p>
+<p>자 우선적으로, 이미지를 불러와봅시다. main.cpp파일로 가서 창 크기를 다운받은 이미지의 크기와 동일하도록 수정해봅시다:</p>
+<pre><code class="cpp">    ofSetupOpenGL(800,800,OF_WINDOW);
+</code></pre>
+
+<p>그리고 헤더파일(testApp.h)로 가서 아래 코드를 추가합니다:</p>
+<pre><code class="h">    ofImage image;
+</code></pre>
+
+<p>그리고 마지막으로, 소스파일(testApp.cpp)에 아래와 같이 코드를 추가합니다:</p>
+<pre><code class="cpp">void testApp::setup(){
+    image.loadImage(&quot;stars.png&quot;);
+}
+void testApp::draw(){
+    image.draw(0,0);
+}
+</code></pre>
+
+<p>현재 <a href="http://www.oenframeworks.cc/documentation/graphics/ofImage.html">ofImage</a>만다루는 튜토리얼은 아직 없습니다. 따라서 혹시 이미지를 가지고 어떤것을 더 할 수 있을지 궁금하신 분들은 <a href="http://openframeworks.kr/tutorials/first%20steps/002_openFrameworks_for_processing_users.html">Processing 사용자들을 위한 openFrameworks</a>이나 <a href="http://www.openframeworks.kr/tutorials/first%20steps/004_presentations.html">004 presentation</a>의 튜토리얼을 참고해주시기 바랍니다.</p>
+<p>이제 남은것은 <a href="http://www.openframeworks.kr/documentation/graphics/ofImage.html#!show_loadImage">loadImage()</a>함수를 이용하여 이미지를 불러와, 그것을 <a href="http://www.openframeworks.kr/documentation/graphics/ofImage.html#show_draw">draw(0,0)</a>함수를 이용해 화면의 좌측 상단에 그려는것만 남았습니다.</p>
+<p>훌륭하군요! 이미지가 로드되었습니다. 자 이제, 우리는 정점들을 사용하여 메쉬를 생성해야합니다.  이미지에서 별들의 위치에 정점들을 생성하고 싶다면, 이미지의 픽셀들을 훑어 그중에 '밝은'색들을 찾아서 수행하면 됩니다. 이렇게 하려면, 이미지의 픽셀 컬러 정보들에 접근할 필요가 있습니다. 바로 <a href="http://www.openframeworks.kr/documentation/graphics/ofImage.html#show_getColor">getColor(x, y)</a>함수입니다. 이미지의 픽셀을 따라 루프를 돌며 <a href="http://en.wikipedia.org/wiki/Thresholding_%28image_processing%29">threshold</a>를 적용합니다. 이렇게 하면 다른 픽셀보다 밝은색이 있는 픽셀의 위치에만 정점을 추가할 수 있게 되는것입니다.</p>
+<p>testApp.h에 메쉬를 추가합니다:</p>
+<pre><code class="h">        ofMesh mesh;
+</code></pre>
+
+<p>그리고 아래 코드를 testApp.cpp에 추가합니다:</p>
+<pre><code class="cpp">void testApp::setup(){
+    image.loadImage(&quot;stars.png&quot;);
+
+    mesh.setMode(OF_PRIMITIVE_POINTS);
+
+    float intensityThreshold = 150.0;
+    int w = image.getWidth();
+    int h = image.getHeight();
+    for (int x=0; x&lt;w; ++x) {
+        for (int y=0; y&lt;h; ++y) {
+            ofColor c = image.getColor(x, y);
+            float intensity = c.getLightness();
+            if (intensity &gt;= intensityThreshold) {
+                ofVec3f pos(x, y, 0.0);
+                mesh.addVertex(pos);
+                mesh.addColor(c);
+            }
+        }
+    }
+}
+void testApp::draw(){
+    ofBackground(0,0,255);
+    mesh.draw();
+}
+</code></pre>
+
+<p><img alt="Thresholded Stars Point Mesh" src="003_images/ThresholdedStarsSmall.png" /> </p>
+<p>위 코드에서는, 그리기모드로 점을 사용하여 메쉬를 생성했습니다. 그리고 나서 이미지의 각 픽셀을 반복하면서 (<a href="http://www.openframeworks.kr/documentation/graphics/ofImage.html#show_getWidth">getWidth()</a> 와 <a href="http://www.openframeworks.kr/documentation/graphics/ofImage.html#show_getHeight">getHeight()</a>를 사용하여) <a href="http://www.openframeworks.kr/documentation/types/ofColor.html#!show_getLightness">getLightness()</a>을 사용해 각 픽셀의 밝기를 체크합니다. 만약 밝기가 지정한 threshold를 넘어서면, 정점의 위치를 해당 픽셀의 위치로, 정점의 색을 해당픽셀의 색으로 지정해 생성합니다. 마지막으로 파란색 배경위에 메쉬를 그렸기 때문에 이미지의 어떤 픽셀들이 정점들로 쓰였는지 볼 수 있게 되었습니다. 정점의 갯수를 늘리거나 줄이기 위해서는 threshold값을 수정하면 됩니다.</p>
+<p>이번엔 <a href="http://www.openframeworks.kr/documentation/graphics/ofGraphics.html#!show_ofBackgroundGradient">ofBackgroundGradient</a>를 이용하여 배경색을 좀더 어울리게 바꿔봅시다...</p>
+<pre><code class="cpp">void testApp::draw(){
+    ofColor centerColor = ofColor(85, 78, 68); 
+    ofColor edgeColor(0, 0, 0);
+    ofBackgroundGradient(centerColor, edgeColor, OF_GRADIENT_CIRCULAR);
+    mesh.draw();
+}
+</code></pre>
+
+<p>이제 선만 그리면 됩니다. 선만!</p>
+<p>메쉬에는 많은 정점들을 갖고 있습니다. 원한다면 <a href="http://www.openframeworks.kr/documentation/3d/ofMesh.html#show_getNumVertices">getNumVertices()</a>함수를 이용해서 몇개인지 확인할 수 있습니다:</p>
+<pre><code class="cpp">cout &lt;&lt; mesh.getNumVertices() &lt;&lt; endl;  // 아마 64,000 개 이상일 것입니다.
+</code></pre>
+
+<p>만약에 저 64,000개의 정점들을 인접한 다른 정점들끼리 연결하는것을 루프를 돌면서 수행한다고 하면, 엄청난 시간이 소요될 겁니다. 정점 갯수를 줄여야 하겠죠? 가장 좋은 방법은 처리할 이미지의 크기를 줄이는 것입니다:</p>
+<pre><code class="cpp">    image.loadImage(&quot;stars.png&quot;);
+    image.resize(200, 200);
+</code></pre>
+
+<p>자. 이제 이미지 픽셀들은 실행되는 프로그램의 윈도우 사이즈와 동일하지 않으므로, loop내의 <em>pos</em>변수를 사용해 조절해주어야 합니다:</p>
+<pre><code class="cpp">            if (c.getLightness() &gt; intensityThreshold) {
+                // 이미지를 4배 줄였으므로, 메쉬가 프로그램 윈도우를 꽉 채우게 하려면
+                // 그만큼 픽셀들의 위치를 4배 키워줘야 합니다.
+                ofVec3f pos(4*x, 4*y, 0.0);
+                mesh.addVertex(pos);
+                mesh.addColor(c);
+            }
+</code></pre>
+
+<p>정점들의 갯수가 2000개 정도로 적절하게 줄어들엇습니다. 이제 정점들을 선으로 연결할 시간입니다. 서로 인접한 정점들끼리만 연결할려면, 가능한 정점끼리의 짝을 모두 체크하고 거리를 구한 뒤, 그 거리가 일정한 값보다 작을때만 연결하면 됩니다.</p>
+<pre><code class="cpp">    // 그리기모드를 선으로 변경하는것을 잊지 마세요!
+    mesh.setMode(OF_PRIMITIVE_LINES);
+
+    // ...
+    // 필요한 부분만 보여주기 위해 생략했으므로 
+    // 삭제하지는 마세요!
+
+    // 선을 그려봅시다!
+    float connectionDistance = 30;
+    int numVerts = mesh.getNumVertices();
+    for (int a=0; a&lt;numVerts; ++a) {
+        ofVec3f verta = mesh.getVertex(a);
+        for (int b=a+1; b&lt;numVerts; ++b) {
+            ofVec3f vertb = mesh.getVertex(b);
+            float distance = verta.distance(vertb);
+            if (distance &lt;= connectionDistance) {
+                mesh.addIndex(a);
+                mesh.addIndex(b);
+            }
+        }
+    }
+</code></pre>
+
+<p>결과는 아마 아래 그림과 같을것입니다.(혹시 실행시 여러분의 컴퓨터에서 너무 많은 시간이 걸린다면, <em>intensityThreshold</em>값을 좀 키워보시길 바랍니다. 정점의 갯수를 더 줄여줄 것입니다.):</p>
+<p><img alt="First Line Mesh" src="003_images/StarLinesFirstMeshSmall.png" /> </p>
+<p>코드를 다시한번 더 정리해볼까요?:</p>
+<ol>
+<li>모든 정점들의 쌍을 얻어와야 합니다. 메쉬의 <em>i</em> 번째 정점의 위치를 얻기 위해 <a href="http://www.openframeworks.kr/documentation/3d/ofMesh.html#show_getVertex">getVertex()</a>를 사용합니다. 그리고 나면 쌍을 위한 두개의 정점을 사용할 수 있겠죠? 여기서 왜 두번째 루프가 <em>b=a+1</em>인지 궁금하신 분들도 있을겁니다. 선을 만들때엔 정점들의 순서는 중요하지 않으므로, 정점 자신만 제외하면 되는것입니다.</li>
+<li>자 이제 정점들간의 거리를 구해야 합니다. ofVec3f는 거리계산을 해주는 함수 <a href="http://www.openframeworks.kr/documentation/math/ofVec3f.html#show_distance">distance()</a>를 제공합니다.</li>
+<li>만약 정점들이 <em>connectionDistance</em>에 정의된 값보다 작으면, 두 정점을 선으로 연결하기 위해 선을 추가해주면 됩니다. 선을 추가하기 위해 메쉬의 인덱스 어레이 중 <em>a</em>와 <em>b</em>를 사용하면 됩니다.</li>
+</ol>
+<p>쨔잔! 제너러티브 메쉬입니다. 3D로 보이기 위해 두가지 처리를 더해줘봅시다. 첫번째로 z좌표를 변경하기 위해 색의 채도를 사용할 수 있습니다.</p>
+<pre><code class="cpp">            if (intensity &gt;= intensityThreshold) {
+                float saturation = c.getSaturation();
+                float z = ofMap(saturation, 0, 255, -100, 100);
+                ofVec3f pos(4*x, 4*y, z);
+                mesh.addVertex(pos);
+                mesh.addColor(c);
+            }
+</code></pre>
+
+<p>위 코드는 <a href="http://www.openframeworks.kr/documentation/math/ofMath.html#!show_ofMap">ofMap()</a>함수를 이용하여 채도가 높은 색은 z의 +방향으로, 채도가 낮은 색은 z축의 - 방향으로 변경해줍니다. ofMap함수는 값을 하나의 범위에서(여기서는 0 에서 255) 새로운 값의 범위로(여기서는 -100 에서 100) 변경해줍니다.</p>
+<p>흠.. 코드를 변경했는데 많이 바뀐거 같진 않죠? 자, 이제 마지막으로 추가할 처리가 남아있습니다: 바로 카메라를 추가하는 것입니다.</p>
+<p>아래 코드를 헤더파일에 추가하세요:</p>
+<pre><code class="h">        ofEasyCam easyCam;
+</code></pre>
+
+<p>그리고나서 draw함수를 아래와 같이 수정해보세요:</p>
+<pre><code class="cpp">void testApp::draw(){
+    ofColor centerColor = ofColor(85, 78, 68);
+    ofColor edgeColor(0, 0, 0);
+    ofBackgroundGradient(centerColor, edgeColor, OF_GRADIENT_CIRCULAR);
+
+    easyCam.begin();
+        ofPushMatrix();
+            ofTranslate(-ofGetWidth()/2, -ofGetHeight()/2);
+            mesh.draw();
+        ofPopMatrix();
+    easyCam.end();
+}
+</code></pre>
+
+<p><a href="http://www.openframeworks.kr/documentation/3d/ofEasyCam.html">ofEasyCam</a>은 우리가 생성한 메쉬를 손쉽게 3차원으로 보여주게 해줍니다. <a href="http://www.openframeworks.kr/tutorials/graphics/opengl.html">opengl tutorial</a>의 <a href="http://www.openframeworks.kr/documentation/graphics/ofGraphics.html#!show_ofPushMatrix">ofPushMatrix()</a>, <a href="http://www.openframeworks.kr/documentation/graphics/ofGraphics.html#!show_ofPopMatrix">ofPopMatrix()</a> and <a href="http://www.openframeworks.kr/documentation/graphics/ofGraphics.html#!show_ofTranslate">ofTranslate()</a>를 읽어보시길 바랍니다. 위 코드는 카메라의 시점을 메쉬의 중심에 맞추도록 합니다. 실행된 프로그램의 창에서 왼쪽버튼을 드래그를 하여 회전을 시켜보세요! 우측버튼을 드래그하면 확대할수 있습니다!</p>
+<p><img alt="Line Mesh with Camera" src="003_images/cameraSmall.gif" /> </p>
+<p><a name="manipulations"></a></p>
+<h2 id="_3">조작하기 : 메쉬를 수정하는 효과 추가하기</h2>
+<p>우리는 이제 우리만의 그물 메쉬를 갖고 있습니다. 이제 이 메쉬에 움직임을 줄 몇가지 규칙들을 추가해봅시다.</p>
+<h3 id="_4">진동 추가하기</h3>
+<p>메쉬는 현미경에서 관찰할 수 있는 미생물과 닮았습니다. 그렇다면 이러한 '유기적인' 움직임을 정점들에 추가해보도록 하죠. 여러분의 컴퓨터상에서의 움직임은 아래 gif이미지에서 보이는 것보다 훨씬 빠를겠지만(웹브라우저에서는 gif의 최대 프레임이 정해져있기 떄문입니다), 적어도 어떤 움직임을 추가할지에 대한 힌트는 드릴수 있겠네요: </p>
+<p><img alt="Jitter" src="003_images/jitterSmall.gif" /> </p>
+<p>각각의 프레임에서, 우리는 각각의 정점들을 작은, 랜덤한 값을 주어 움직이게 할겁니다. 이를 위해 <a href="http://www.openframeworks.kr/documentation/math/ofMath.html#show_ofRandom">ofRandom()</a>을 사용하지 않고, Perlin 노이즈를 생성해주는 <a href="http://openframeworks.kr/documentation/math/ofMath.html#!show_ofSignedNoise">ofSignedNoise()</a>를 사용할 것입니다. Daniel Shiffman이 제공하는 온라인 튜토리얼 <a href="http://natureofcode.com/book/introduction/#i6-perlin-noise-a-smoother-approach">1.6 Perlin Noise (A Smoother Approach)</a> 섹션을 참고해주시기 바랍니다.  Perlin 노이즈는 시간경과에 따라 스무스하게 변하는 랜덤값을 제공해줍니다. <a href="http://natureofcode.com/book/imgs/intro/intro_05.png">figure 1.5</a>(연속적인 노이즈)와 <a href="http://natureofcode.com/book/imgs/intro/intro_06.png">figure 1.6</a>(연속적인 랜덤값)를 살펴보면, 일반적인 랜덤값과 perlin n노이즈가 어떤 차이를 보이는지 이해할 수 있을것입니다.</p>
+<p>ofRandom()을 사용하면, 값의 범위를 지정할수 있고, 지정한 범위내에서 무작위한 값을 리턴해줍니다. 이 함수를 여러번 호출하면, (거의, 아주 거의) 매번 새로운 값들을 얻을 수 있습니다. Perlin노이즈는 약간 다릅니다. ofSignedNoise()는 항상 -1.0에서 0.1사이의 값을 리턴하지만, 반드시 항상 함수의 입력값을 전달해주어야 합니다. 그래프 용지에 ofSignedNoise()를 사용해 구불구불한 곡선을 그린다 상상해보세요. 여러분은 좌표값으로 x값을 전달할것이고, 함수는 그에 해당하는 y값을 리턴할것입니다. 만약 ofSignedNoise(3.0)을 여러번 호출하면, 항상 같은 값을 얻을 수 있습니다.</p>
+<p>움직임을 생성하기 위해 Perlin 노이즈를 사용할때는, 일반적으로 현재의 시간을 입력값으로 전달합니다(앞서 설명했던 그래프에서의 x값). 따라서, 정점의 위치를 변경하기 위해서, 우리는 ofSignedNoise에 시간을 전달할 것입니다(<a href="http://www.openframeworks.kr/documentation/utils/ofUtils.html#!show_ofGetElapsedTimef]">ofGetElapsedTimef()</a>함수를 이용해서 말이죠). 이렇게 하면 결과의 값은 시간이 경과할수록 스무스한 값을 얻을수 있습니다. 주의할 점은, 우리는 각각의 정점들이 독립적으로 움직이도록 할것이라는 겁니다. 만약 모든 정점들에 대해 ofSignedNoise에 같은 시간값을 전달해 주게 되면, 모든 정점들이 똑같이 움직이게 될것입니다. 즉 정점 1을 움직였다면, 정점2는 다른 시간을 사용해야 한다는 것이죠.(정점 3, 4 또한 마찬가지입니다.)</p>
+<p>코드로 넘어가봅시다. 헤더파일에 아래 코드를 추가해주세요:</p>
+<pre><code class="h">        vector&lt;ofVec3f&gt; offsets;
+</code></pre>
+
+<p>그리고 setup함수에 아래의 두 줄을 추가해주세요:</p>
+<pre><code class="cpp">    // Add this line:
+    ofSetFrameRate(60);
+
+    // Some lines of code omitted for clarity, you should still
+    // keep them in your local version
+
+    for (int x=0; x&lt;w; ++x) {
+        for (int y=0; y&lt;h; ++y) {
+            ofColor c = image.getColor(x, y);
+            float intensity = c.getLightness();
+            if (intensity &gt;= intensityThreshold) {
+                float saturation = c.getSaturation();
+                float z = ofMap(saturation, 0, 255, -100, 100);
+                ofVec3f pos(4*x, 4*y, z);
+                mesh.addVertex(pos);
+                mesh.addColor(c);
+
+                // 아래를 추가하세요: 
+                // 3개의 랜덤한 값으로 ofVec3f를 생성합니다
+                // 이 값들은 각각의 정점들이 x, y, z축 방향으로 독립적인 움직임을 할수 있게 합니다.
+                offsets.push_back(ofVec3f(ofRandom(0,100000), ofRandom(0,100000), ofRandom(0,100000)));
+            }
+        }
+    }
+</code></pre>
+
+<p>마지막으로, 아래의 코드들을 update함수에 추가해줍니다:</p>
+<pre><code class="cpp">    int numVerts = mesh.getNumVertices();
+    for (int i=0; i&lt;numVerts; ++i) {
+        ofVec3f vert = mesh.getVertex(i);
+
+        float time = ofGetElapsedTimef();
+        float timeScale = 5.0;
+        float displacementScale = 0.75;
+        ofVec3f timeOffsets = offsets[i];
+
+        // Perlin 노이즈가 몇가지 파라미터를 사용하는 일반적인 디자인 패턴입니다.
+        // ofSignedNoise(time*timeScale+timeOffset)*displacementScale
+        //     ofSignedNoise(time) 은 주어진 시간에 따라  노이즈 값을 스무스하게 변경하여 제공해줍니다.
+        //     ofSignedNoise(time*timeScale)는 노이즈를 얼마나 스무스하게 조절할지를 가능케 해줍니다.(timeScale이 작을수록 더 스무스해집니다)
+        //     ofSignedNoise(time+timeOffset) allows us to use the same Perlin noise function to control multiple things and have them look as if they are moving independently
+        //     ofSignedNoise(time)*displacementScale 는 노이즈의 범위를 [-1, 1]에서 원하는 값으로 변경할수 있도록 해줍니다.
+        // 위 파라메터들을 조합하면, 여러분이 원하는 노이즈를 자유자재로 생성할 수 있습니다.
+
+        vert.x += (ofSignedNoise(time*timeScale+timeOffsets.x)) * displacementScale;
+        vert.y += (ofSignedNoise(time*timeScale+timeOffsets.y)) * displacementScale;
+        vert.z += (ofSignedNoise(time*timeScale+timeOffsets.z)) * displacementScale;
+        mesh.setVertex(i, vert);
+    }
+</code></pre>
+
+<p>setup에서, 우리는 두가지를 추가했습니다:</p>
+<ol>
+<li><a href="http://openframeworks.kr/documentation/application/ofAppRunner.html#!show_ofSetFrameRate">ofSetFrameRate(60)</a>을 사용하여, 프로그램이 최대 60프레임으로 동작하게 하였습니다. 없어도 상관없지만, 시간을 사용할때는 상당히 유용합니다.</li>
+<li>offsets이라는 변수를 생성했습니다. 이것은 ofVec3f들의 벡터로써, 랜덤한 값을 갖습니다. 이 값들은 각각의 정점들이 랜덤한 x, y, z방향으로 다른 정점에 대해 독립적으로 움직일 수 있도록 해줍니다.</li>
+</ol>
+<p>그리고 update에서는:</p>
+<ol>
+<li>메쉬를 이용해 정점의 위치를 얻어옵니다. <a href="http://openframeworks.kr/documentation/3d/ofMesh.html#!show_getVertex">getVertex()</a>를 이용했고, 그 값을 vert라는 변수에 저장합니다.</li>
+<li>몇가지의 파라메터와 함께 ofSignedNoise()를 이용해 ver의 x, y, z를 변경했습니다.</li>
+<li>정점의 위치를 <a href="http://openframeworks.kr/documentation/3d/ofMesh.html#show_setVertex">mesh.setVertex()</a>를 사용하여 업데이트 해주었습니다.</li>
+</ol>
+<p>좋아요! 우글거리는 메쉬가 완성되었습니다.</p>
+<h3 id="_5">정점에 궤도를 추가하기</h3>
+<p>다음으로, 우리는 소용돌이치는 움직임을 추가할 수 있습니다. <em>원래</em> 별들이 이렇게 움직이니까 적절한것 같네요.</p>
+<p><img alt="Orbit" src="003_images/orbitSmall.gif" /> </p>
+<p>이러한 궤도를 도는 움직임을 위해 우리는 삼각함수들을 사용할 것입니다. 꼼꼼한 분들이라면, Nature of Code의 <a href="http://natureofcode.com/book/chapter-3-oscillation/">chapter 3</a>을 참고해보시기 바랍니다.</p>
+<p>z축은 잊어버리고 x와 y 축만 생각해봅시다. 원모양의 궤도를 돌게 한다 생각해보면, 사인과 코사인을 사용하기 위해 각을 사용하면 됩니다. <a href="http://ko.wikipedia.org/wiki/%EA%B7%B9%EC%A2%8C%ED%91%9C%EA%B3%84">wiki</a> 페이지의 극좌표를 읽어보세요. 특히 "극좌표와 데카르트 좌표 사이의 변환" 섹션을 살펴보시길 바랍니다.</p>
+<p>만약 하나의 점이 중심에서 얼마나 떨어져있는지 알고 있다면, 우리는 공간상의 거리와 각을 사용하여 점의 위치를 정의할 수 있습니다(극좌표). 우리는 이 거리와 각을 이용하여 x, y값으로 변환할 수 있습니다(데카르트 좌표):</p>
+<pre><code class="cpp">    x = distance * cos(angle)
+    y = distance * sin(angle)
+</code></pre>
+
+<p>만약, 저 점이 원 안에서 회전한다면, 시간이 경과함에 따라 각을 증가시키면 됩니다. 수학적인것은 나중에 제쳐두고 말이죠.</p>
+<p>자 우리의 대략적인 목표를 위해 우리가 해야할것은 아래와 같습니다:</p>
+<ol>
+<li>정점들이 회전하는 중심이 될 중심점을 정의합니다.</li>
+<li>정점들이 위치할 초기 극좌표들을 계산합니다.</li>
+<li>각 정점에 대해 시간이 경과할때마다 극좌표의 각을 서서히 증가시킵니다.</li>
+</ol>
+<p>헤더파일에 새 변수들을 추가해봅시다:</p>
+<pre><code class="h">        // 궤도움직임을 온오프 하기위해 사용될 변수들
+        ofMesh meshCopy;
+        bool orbiting;
+        float startOrbitTime;
+
+        // 각 정점들의 극좌표를 저장하기 위해 사용될 변수들
+        vector&lt;float&gt; distances;
+        vector&lt;float&gt; angles;
+        ofVec3f meshCentroid;
+</code></pre>
+
+<p>그리고 setup함수의 끝에 아래의 내용을 추가하세요:</p>
+<pre><code class="cpp">   // 메쉬를 위한 중심점을 계산해주어야 하는데
+   // ofMesh의 getCentroid()는 모든 정점들의 평균위치를 찾아줍니다.
+   // http://en.wikipedia.org/wiki/Centroid
+   meshCentroid = mesh.getCentroid();
+
+   // centroid를 알았으니, 중심점을 기준으로 각 정점의 극좌표를 알아내야 합니다. (거리와 각도)
+   // 이전에 두 점의 거리를 구하는 방법을 알아봤는데, 각은 어떻게 구할까요?
+   // atan2를 소개할 시간이군요. 
+   // atan2(y, x)는 x와 y를 입력해주면 중심점(0, 0)에서의 각을 리턴해줍니다.
+   // 만약 (x1, y1)과 (x2, y2) 두 점의 각을 구하고 싶다면 atan2(y2-y1, x2-x1)을 호출하면 됩니다.
+   for (int i=0; i&lt;numVerts; ++i) {
+        ofVec3f vert = mesh.getVertex(i);
+        float distance = vert.distance(meshCentroid);
+        float angle = atan2(vert.y-meshCentroid.y, vert.x-meshCentroid.x);
+        distances.push_back(distance);
+        angles.push_back(angle);
+    }
+
+    // 아래 변수들은 궤도움직임을 온오프하는데 사용합니다.
+    orbiting = false;
+    startOrbitTime = 0.0;
+    meshCopy = mesh;        // 메쉬를 복사하여 저장해두므로써, 원래 상태를 다시 불러올 수 있습니다.
+</code></pre>
+
+<p>아래 코드를 update함수에 추가합니다:</p>
+<pre><code class="cpp">    if (orbiting) {
+        int numVerts = mesh.getNumVertices();
+        for (int i=0; i&lt;numVerts; ++i) {
+            ofVec3f vert = mesh.getVertex(i);
+            float distance = distances[i];
+            float angle = angles[i];
+            float elapsedTime = ofGetElapsedTimef() - startOrbitTime;
+
+            // 정점들이 중심점에 가까워질수록 움직임이 빨라지도록 합니다.
+            float speed = ofMap(distance, 0, 200, 1, 0.25, true);
+
+            // 정점의 각속도를 얻기 위해, 연재의 시간과 초기 각속도를 사용
+            float rotatedAngle = elapsedTime * speed + angle;
+
+            // 계산된 거리는 메쉬의 centroid에 비율적이라는 것을 잊지 마세요
+            // 따라서 메쉬의 centroid에 x, y를 더해 실제 화면의 좌표로 옮겨주어야 합니다.
+            vert.x = distance * cos(rotatedAngle) + meshCentroid.x;
+            vert.y = distance * sin(rotatedAngle) + meshCentroid.y;
+
+            mesh.setVertex(i, vert);
+        }
+    }
+</code></pre>
+
+<p>아래코드를 keyPressed 함수에 추가합니다:</p>
+<pre><code class="cpp">    if (key == 'o') {
+        orbiting = !orbiting;           // boolean변수를 토글링한다.
+        startOrbitTime = ofGetElapsedTimef();
+        mesh = meshCopy;            // 원래의 메쉬로 복원
+    }
+</code></pre>
+
+<p>자 이제 'o'키를 눌러서 궤도움직임을 온오프할 수 있게 되었습니다.</p>
+<p>프로그래밍 노트 : 변수 <em>meshCopy</em>는 원본 메쉬를 복사해 백업하는데 사용되었습니다. 나중에 필요할 때 불러올 수 있게 하기 위해서이죠. setup함수에서 아래와 같이 사용하였었습니다: </p>
+<pre><code class="cpp">meshCopy = mesh;
+</code></pre>
+
+<p>우리는 <em>mesh</em>변수의 값을 복사하여 저장해둘 목적으로 <em>meshCopy</em>라는 변수를 별도로 생성하였습니다. ofMesh클래스는 deep copy(깊은 복사)라 불리우는 인스턴스를 제공하므로, 혹 <em>mesh</em>의 특정한 정점이 변경되었다 하더라도 <em>meshCopy</em>에서는 아무것도 변경되지 않습니다. 혹시 몰라 주의하시라는 차원에서 말씀드리지만, 모든 오브젝트들이 deep copy(깊은 복사)를 기본적으로 지원하는 것은 아닙니다.</p>
+<h3 id="_6">확대효과</h3>
+<p>The last tweak we will add gives a bit of interactivity to the mesh.  We will add a magnifying glass effect:
+마지막으로 추가할 것은 메쉬에 약간의 상호작용을 추가하는것입니다. 우리는 확대효과를 추가할 것입니다:</p>
+<p><img alt="Magnified" src="003_images/magnifierSmall.gif" /> </p>
+<p>사실 기술적으로 확대효과는 잘못된 명칭입니다. 실제로는 광학분야의 <a href="http://en.wikipedia.org/wiki/Distortion_(optics)">barrel distortion</a>를 바탕으로 합니다. 이것을 그리드에 적용시키면 이렇습니다:</p>
+<p><img alt="Grid" src="003_images/GridSmall.png" /> 
+<img alt="BarrelDistortedGrid" src="003_images/BarrelDistortedGridSmall.png" /> </p>
+<p>우리가 해야 할 것들은:</p>
+<ol>
+<li>마우스가 화면상에서 어디에 위치해있는지 찾는다.</li>
+<li>마우스에서 각각의 정점을 향하는 방향을 찾는다.</li>
+<li>각각의 정점을 마우스에서 그 방향으로 밀어낸다.<ul>
+<li>정점의 위치가 마우스와 가까울수록, 더 멀리 밀어낸다</li>
+<li>정점의 위치가 마우스와 멀어질수록, 조금만 밀어낸다.</li>
+</ul>
+</li>
+</ol>
+<p>이 트윅을 위해서는 몇가지의 벡터함수를 사용해야 합니다. 벡터함수에 대해 잘 모르신 분들은 <a href="http://openframeworks.kr/tutorials/maths/001_vector_maths.html">벡터 튜토리얼</a>를 찹고해주시기 바랍니다. 코드를 작성할 시간입니다!</p>
+<p>헤더에 새로운 변수를 추가합니다:</p>
+<pre><code class="h">        // 궤도 움직임 효과와 마찬가지로, 확대효과를 토글링 하기 위한 변수 추가
+        bool mouseDisplacement;
+</code></pre>
+
+<p>setup함수의 끝에 아래 코드들을 추가하세요</p>
+<pre><code class="cpp">    // 효과를 켜기 전에는 효과를 끈다.
+    mouseDisplacement = false;
+</code></pre>
+
+<p>아래 코드를 update함수의 시작부분에 추가하세요:</p>
+<pre><code class="cpp">    if (mouseDisplacement) {
+        // Get the mouse location - it must be relative to the center of our screen because of the ofTranslate() command in draw()
+        ofVec3f mouse(mouseX, ofGetWidth()-mouseY, 0);
+
+        // Loop through all the vertices in the mesh and move them away from the mouses
+        for (int i=0; i&lt;mesh.getNumVertices(); ++i) {
+            ofVec3f vertex = meshCopy.getVertex(i);
+            float distanceToMouse = mouse.distance(vertex);
+
+            // Scale the displacement based on the distance to the mouse
+            // Small distance to mouse should yield a small displacement
+            float displacement = ofMap(distanceToMouse, 0, 400, 300.0, 0, true);
+
+            // Calculate the direction from the mouse to the current vertex
+            ofVec3f direction = vertex - mouse;
+
+            // Normalize the direction so that it has a length of one
+            // This lets us easily change the length of the vector later
+            direction.normalize();
+
+            // Push the vertex in the direction away from the mouse and push it
+            // a distance equal to the value of the variable displacement
+            ofVec3f displacedVertex = vertex + displacement*direction;
+            mesh.setVertex(i, displacedVertex);
+        }
+    }
+</code></pre>
+
+<p>그리고 마지막으로, 아래코드들을 keyPressed함수의 시작부분에 추가하세요:</p>
+<pre><code class="cpp">    if (key == 'm') {
+        mouseDisplacement = !mouseDisplacement;  // Inverts the boolean
+        mesh = meshCopy;  // Restore the original mesh
+    }
+</code></pre>
+
+<p>튜토리얼을 모두 마치셨군요! (혹 그냥 스크롤을 내려서 왔다면, 반드시 직접 따라해보시기 바랍니다.)</p>
+<p><a name="nextsteps"></a></p>
+<h2 id="_7">다음 순서</h2>
+<p><a href="http://openframeworks.kr/tutorials/graphics/opengl.html">opengl tutorial</a>을 읽어보시고, 다른 그리기모드를 한번 시도하여 놀아보세요.</p>
+<p>다른 데이터들을 사용해보세요. 다른 규칙을 적용해보세요. 뭔가 괴상한것들을 만들어서 포럼에 공유해보세요!</p>
+<p>다른것들을 만들어보고 싶으시다면, 아래 프로젝트들을 한번 참고해보시는것도 좋을것 같습니다:</p>
+<p>Golan Levin used portraits to create a series of lines in <a href="http://www.flong.com/projects/zoo/">Segmentation and Symptom</a>:
+<a href="http://www.flong.com/projects/zoo/"><img alt="GolanSegmentationAndSymptom" src="003_images/GolanSegmentationAndSymptom.jpg" /></a></p>
+<p>Quayola explored Flemish paintings in <a href="http://www.quayola.com/strata4/">Strata #4</a>
+<a href="http://www.quayola.com/strata4/"><img alt="QuayolaStrata4" src="003_images/QuayolaStrata4.png" /></a></p>
+<p>Marcin Ignac created some generative jellyfish creatures in <a href="http://marcinignac.com/projects/cindermedusae/">Cindermedusae</a>:
+<a href="http://marcinignac.com/projects/cindermedusae/"><img alt="IgnacCindermedusae" src="003_images/IgnacCindermedusae.png" /></a></p>
+<p>The Rockwell group used people's movement to change their meshes in <a href="http://lab.rockwellgroup.com/work/venice-biennale.html">Hall of Fragments</a>:
+<a href="http://lab.rockwellgroup.com/work/venice-biennale.html"><img alt="RockwellHallOfFragments" src="003_images/RockwellHallOfFragments.png" /></a></p>
+<p>Onformative played with text in <a href="http://www.onformative.com/work/growing-data/">Growing Data</a>:
+<a href="http://www.onformative.com/work/growing-data/"><img alt="onformativeGrowingData" src="003_images/onformativeGrowingData.png" /></a></p>
+
+    		</div>
+            
+        </div><!-- End Page Wide -->      
+      </div><!-- End Body Wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:33:31 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+4d738d6979d8e7992359cde47632192d1fbef472
+">
+
+4d738d6979d8e7992359cde47632192d1fbef472
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+
+
+

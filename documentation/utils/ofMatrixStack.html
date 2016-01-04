@@ -1,0 +1,1130 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr - ofMatrixStack</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+    <script src="http://icq4ever.iptime.org//js/jquery.columnizer.min.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation.js"></script>
+  </head>
+  <body>
+    <div id="content">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">
+          <div class="page-wide">
+          
+              <div id="docstitle"><h1>ofMatrixStack</h1></div>
+              <div id="editdocs">
+                    <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/utils/ofMatrixStack.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
+              </div>
+              
+          </div>
+          
+          
+        <div class="page-wide">
+		    <div class="submenucol-left">
+		     <!-- list of methods -->
+		     <p class="top_list_header">class methods</p>
+             <ul class="functionslist">
+                 
+                         <li class="noDoc">
+                         <a href="#show_ofMatrixStack" class="ofMatrixStack" data-lookup="ofMatrixStack">ofMatrixStack()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_clearStacks" class="clearStacks" data-lookup="clearStacks">clearStacks()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_customMatrixNeedsFlip" class="customMatrixNeedsFlip" data-lookup="customMatrixNeedsFlip">customMatrixNeedsFlip()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_doesHardwareOrientation" class="doesHardwareOrientation" data-lookup="doesHardwareOrientation">doesHardwareOrientation()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getCurrentMatrix" class="getCurrentMatrix" data-lookup="getCurrentMatrix">getCurrentMatrix()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getCurrentMatrixMode" class="getCurrentMatrixMode" data-lookup="getCurrentMatrixMode">getCurrentMatrixMode()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getCurrentViewport" class="getCurrentViewport" data-lookup="getCurrentViewport">getCurrentViewport()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getFullSurfaceViewport" class="getFullSurfaceViewport" data-lookup="getFullSurfaceViewport">getFullSurfaceViewport()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getHandedness" class="getHandedness" data-lookup="getHandedness">getHandedness()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getModelViewMatrix" class="getModelViewMatrix" data-lookup="getModelViewMatrix">getModelViewMatrix()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getModelViewProjectionMatrix" class="getModelViewProjectionMatrix" data-lookup="getModelViewProjectionMatrix">getModelViewProjectionMatrix()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getNativeViewport" class="getNativeViewport" data-lookup="getNativeViewport">getNativeViewport()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getOrientation" class="getOrientation" data-lookup="getOrientation">getOrientation()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getOrientationMatrix" class="getOrientationMatrix" data-lookup="getOrientationMatrix">getOrientationMatrix()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getOrientationMatrixInverse" class="getOrientationMatrixInverse" data-lookup="getOrientationMatrixInverse">getOrientationMatrixInverse()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getProjectionMatrix" class="getProjectionMatrix" data-lookup="getProjectionMatrix">getProjectionMatrix()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getProjectionMatrixNoOrientation" class="getProjectionMatrixNoOrientation" data-lookup="getProjectionMatrixNoOrientation">getProjectionMatrixNoOrientation()</a></li>
+                     
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_getTextureMatrix" class="getTextureMatrix" data-lookup="getTextureMatrix">getTextureMatrix()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getViewMatrix" class="getViewMatrix" data-lookup="getViewMatrix">getViewMatrix()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_isVFlipped" class="isVFlipped" data-lookup="isVFlipped">isVFlipped()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_loadIdentityMatrix" class="loadIdentityMatrix" data-lookup="loadIdentityMatrix">loadIdentityMatrix()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_loadMatrix" class="loadMatrix" data-lookup="loadMatrix">loadMatrix()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_loadViewMatrix" class="loadViewMatrix" data-lookup="loadViewMatrix">loadViewMatrix()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_matrixMode" class="matrixMode" data-lookup="matrixMode">matrixMode()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_multMatrix" class="multMatrix" data-lookup="multMatrix">multMatrix()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_multViewMatrix" class="multViewMatrix" data-lookup="multViewMatrix">multViewMatrix()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_nativeViewport" class="nativeViewport" data-lookup="nativeViewport">nativeViewport()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_popMatrix" class="popMatrix" data-lookup="popMatrix">popMatrix()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_popView" class="popView" data-lookup="popView">popView()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_pushMatrix" class="pushMatrix" data-lookup="pushMatrix">pushMatrix()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_pushView" class="pushView" data-lookup="pushView">pushView()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_rotate" class="rotate" data-lookup="rotate">rotate()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_scale" class="scale" data-lookup="scale">scale()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setOrientation" class="setOrientation" data-lookup="setOrientation">setOrientation()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setRenderSurface" class="setRenderSurface" data-lookup="setRenderSurface">setRenderSurface()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_translate" class="translate" data-lookup="translate">translate()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_viewport" class="viewport" data-lookup="viewport">viewport()</a></li>
+                     
+             </ul>
+            
+             
+             
+             <!-- list of variables -->              
+            
+             
+            
+             <!-- list of functions -->              
+		    </div>
+	    <div class="submenucol-right">
+            <div class="documentation_detail class_documentation">
+              
+  
+
+
+              
+              
+  
+
+           </div>
+                  
+            <!-- methods detail -->
+              <!--h2><a name="methods"></a>ofMatrixStack methods</h2-->
+                        
+<div class="documentation_detail ofMatrixStack" data-lookup="ofMatrixStack" data-item-type="method">
+  	 
+	<h1><a name="show_ofMatrixStack">ofMatrixStack(...)</a></h1>
+	<h2>
+  <p>ofMatrixStack::ofMatrixStack(const ofAppBaseWindow *window)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail clearStacks" data-lookup="clearStacks" data-item-type="method">
+  	 
+	<h1><a name="show_clearStacks">clearStacks()</a></h1>
+	<h2>
+  <p>void ofMatrixStack::clearStacks()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail customMatrixNeedsFlip" data-lookup="customMatrixNeedsFlip" data-item-type="method">
+  	 
+	<h1><a name="show_customMatrixNeedsFlip">customMatrixNeedsFlip()</a></h1>
+	<h2>
+  <p>bool ofMatrixStack::customMatrixNeedsFlip()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail doesHardwareOrientation" data-lookup="doesHardwareOrientation" data-item-type="method">
+  	 
+	<h1><a name="show_doesHardwareOrientation">doesHardwareOrientation()</a></h1>
+	<h2>
+  <p>bool ofMatrixStack::doesHardwareOrientation()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getCurrentMatrix" data-lookup="getCurrentMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_getCurrentMatrix">getCurrentMatrix()</a></h1>
+	<h2>
+  <p>const ofMatrix4x4 &amp; ofMatrixStack::getCurrentMatrix()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getCurrentMatrixMode" data-lookup="getCurrentMatrixMode" data-item-type="method">
+  	 
+	<h1><a name="show_getCurrentMatrixMode">getCurrentMatrixMode()</a></h1>
+	<h2>
+  <p>ofMatrixMode ofMatrixStack::getCurrentMatrixMode()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getCurrentViewport" data-lookup="getCurrentViewport" data-item-type="method">
+  	 
+	<h1><a name="show_getCurrentViewport">getCurrentViewport()</a></h1>
+	<h2>
+  <p>ofRectangle ofMatrixStack::getCurrentViewport()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getFullSurfaceViewport" data-lookup="getFullSurfaceViewport" data-item-type="method">
+  	 
+	<h1><a name="show_getFullSurfaceViewport">getFullSurfaceViewport()</a></h1>
+	<h2>
+  <p>ofRectangle ofMatrixStack::getFullSurfaceViewport()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getHandedness" data-lookup="getHandedness" data-item-type="method">
+  	 
+	<h1><a name="show_getHandedness">getHandedness()</a></h1>
+	<h2>
+  <p>ofHandednessType ofMatrixStack::getHandedness()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getModelViewMatrix" data-lookup="getModelViewMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_getModelViewMatrix">getModelViewMatrix()</a></h1>
+	<h2>
+  <p>const ofMatrix4x4 &amp; ofMatrixStack::getModelViewMatrix()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getModelViewProjectionMatrix" data-lookup="getModelViewProjectionMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_getModelViewProjectionMatrix">getModelViewProjectionMatrix()</a></h1>
+	<h2>
+  <p>const ofMatrix4x4 &amp; ofMatrixStack::getModelViewProjectionMatrix()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getNativeViewport" data-lookup="getNativeViewport" data-item-type="method">
+  	 
+	<h1><a name="show_getNativeViewport">getNativeViewport()</a></h1>
+	<h2>
+  <p>ofRectangle ofMatrixStack::getNativeViewport()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getOrientation" data-lookup="getOrientation" data-item-type="method">
+  	 
+	<h1><a name="show_getOrientation">getOrientation()</a></h1>
+	<h2>
+  <p>ofOrientation ofMatrixStack::getOrientation()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getOrientationMatrix" data-lookup="getOrientationMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_getOrientationMatrix">getOrientationMatrix()</a></h1>
+	<h2>
+  <p>const ofMatrix4x4 &amp; ofMatrixStack::getOrientationMatrix()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getOrientationMatrixInverse" data-lookup="getOrientationMatrixInverse" data-item-type="method">
+  	 
+	<h1><a name="show_getOrientationMatrixInverse">getOrientationMatrixInverse()</a></h1>
+	<h2>
+  <p>const ofMatrix4x4 &amp; ofMatrixStack::getOrientationMatrixInverse()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getProjectionMatrix" data-lookup="getProjectionMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_getProjectionMatrix">getProjectionMatrix()</a></h1>
+	<h2>
+  <p>const ofMatrix4x4 &amp; ofMatrixStack::getProjectionMatrix()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getProjectionMatrixNoOrientation" data-lookup="getProjectionMatrixNoOrientation" data-item-type="method">
+  	 
+	<h1><a name="show_getProjectionMatrixNoOrientation">getProjectionMatrixNoOrientation()</a></h1>
+	<h2>
+  <p>const ofMatrix4x4 &amp; ofMatrixStack::getProjectionMatrixNoOrientation()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getTextureMatrix" data-lookup="getTextureMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_getTextureMatrix">getTextureMatrix()</a></h1>
+	<h2>
+  <p>const ofMatrix4x4 &amp; ofMatrixStack::getTextureMatrix()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getViewMatrix" data-lookup="getViewMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_getViewMatrix">getViewMatrix()</a></h1>
+	<h2>
+  <p>const ofMatrix4x4 &amp; ofMatrixStack::getViewMatrix()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail isVFlipped" data-lookup="isVFlipped" data-item-type="method">
+  	 
+	<h1><a name="show_isVFlipped">isVFlipped()</a></h1>
+	<h2>
+  <p>bool ofMatrixStack::isVFlipped()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail loadIdentityMatrix" data-lookup="loadIdentityMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_loadIdentityMatrix">loadIdentityMatrix()</a></h1>
+	<h2>
+  <p>void ofMatrixStack::loadIdentityMatrix()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail loadMatrix" data-lookup="loadMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_loadMatrix">loadMatrix(...)</a></h1>
+	<h2>
+  <p>void ofMatrixStack::loadMatrix(const float *m)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail loadViewMatrix" data-lookup="loadViewMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_loadViewMatrix">loadViewMatrix(...)</a></h1>
+	<h2>
+  <p>void ofMatrixStack::loadViewMatrix(const ofMatrix4x4 &amp;matrix)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail matrixMode" data-lookup="matrixMode" data-item-type="method">
+  	 
+	<h1><a name="show_matrixMode">matrixMode(...)</a></h1>
+	<h2>
+  <p>void ofMatrixStack::matrixMode(ofMatrixMode mode)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail multMatrix" data-lookup="multMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_multMatrix">multMatrix(...)</a></h1>
+	<h2>
+  <p>void ofMatrixStack::multMatrix(const float *m)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail multViewMatrix" data-lookup="multViewMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_multViewMatrix">multViewMatrix(...)</a></h1>
+	<h2>
+  <p>void ofMatrixStack::multViewMatrix(const ofMatrix4x4 &amp;matrix)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail nativeViewport" data-lookup="nativeViewport" data-item-type="method">
+  	 
+	<h1><a name="show_nativeViewport">nativeViewport(...)</a></h1>
+	<h2>
+  <p>void ofMatrixStack::nativeViewport(ofRectangle viewport)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail popMatrix" data-lookup="popMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_popMatrix">popMatrix()</a></h1>
+	<h2>
+  <p>void ofMatrixStack::popMatrix()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail popView" data-lookup="popView" data-item-type="method">
+  	 
+	<h1><a name="show_popView">popView()</a></h1>
+	<h2>
+  <p>void ofMatrixStack::popView()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail pushMatrix" data-lookup="pushMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_pushMatrix">pushMatrix()</a></h1>
+	<h2>
+  <p>void ofMatrixStack::pushMatrix()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail pushView" data-lookup="pushView" data-item-type="method">
+  	 
+	<h1><a name="show_pushView">pushView()</a></h1>
+	<h2>
+  <p>void ofMatrixStack::pushView()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail rotate" data-lookup="rotate" data-item-type="method">
+  	 
+	<h1><a name="show_rotate">rotate(...)</a></h1>
+	<h2>
+  <p>void ofMatrixStack::rotate(float degrees, float vecX, float vecY, float vecZ)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail scale" data-lookup="scale" data-item-type="method">
+  	 
+	<h1><a name="show_scale">scale(...)</a></h1>
+	<h2>
+  <p>void ofMatrixStack::scale(float xAmnt, float yAmnt, float zAmnt)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setOrientation" data-lookup="setOrientation" data-item-type="method">
+  	 
+	<h1><a name="show_setOrientation">setOrientation(...)</a></h1>
+	<h2>
+  <p>void ofMatrixStack::setOrientation(ofOrientation orientation, bool vFlip)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setRenderSurface" data-lookup="setRenderSurface" data-item-type="method">
+  	 
+	<h1><a name="show_setRenderSurface">setRenderSurface(...)</a></h1>
+	<h2>
+  <p>void ofMatrixStack::setRenderSurface(const ofAppBaseWindow &amp;window)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setRenderSurface" data-lookup="setRenderSurface" data-item-type="method">
+  	 
+	<h1><a name="show_setRenderSurface">setRenderSurface(...)</a></h1>
+	<h2>
+  <p>void ofMatrixStack::setRenderSurface(const ofFbo &amp;fbo)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail translate" data-lookup="translate" data-item-type="method">
+  	 
+	<h1><a name="show_translate">translate(...)</a></h1>
+	<h2>
+  <p>void ofMatrixStack::translate(float x, float y, float z)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail viewport" data-lookup="viewport" data-item-type="method">
+  	 
+	<h1><a name="show_viewport">viewport(...)</a></h1>
+	<h2>
+  <p>void ofMatrixStack::viewport(float x, float y, float width, float height, bool vflip)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+
+            <!-- vars detail -->
+
+            <!-- functions detail -->
+            <hr/>
+                
+            <!--diqus comments for class/functions module description-->
+            <div id="comments_header">
+            <h2>comments</h2>
+            <p>You can add comments with usage examples or other information for each class, method or variable, for adding documentation to an empty section or reporting errors is better to send a fix or open an issue through <a href="https://github.com/openframeworks/ofSite">github</a>.</p>
+            <p>When posting code enclose it in:</p>
+            <pre><code class="html">&lt;pre&gt;&lt;code class=&quot;cpp&quot;&gt;&nbsp;&lt;/code&gt;&lt;/pre&gt;</code></pre>
+            <br/>
+            </div>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+
+            // DISQUS
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+
+            var disqus_shortname = 'openframeworks'; // required: replace example with your forum shortname
+            //var disqus_developer = 1;
+
+            location_elements = window.location.pathname.split("/");
+            module_name = location_elements[location_elements.length-1].split(".")[0];
+            section_name = location.hash.split("_")[1];
+            console.log(module_name + " " + section_name);
+            if(section_name!=undefined && section_name!=''){
+            var disqus_identifier = window.location.pathname + "#!show_" + section_name;  
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "#!show_" + section_name;
+            var discus_title = document.title + " - " + section_name;
+            }else{
+            var disqus_identifier = window.location.pathname;
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            var discus_title = document.title;
+            }
+
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */   
+            (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		
+        </div><!-- End Submenu right -->
+      </div><!-- End page wide -->
+      </div><!-- End body wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:33:36 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+4d738d6979d8e7992359cde47632192d1fbef472
+">
+
+4d738d6979d8e7992359cde47632192d1fbef472
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+

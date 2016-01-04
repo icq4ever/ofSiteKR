@@ -1,0 +1,564 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+    <script src="http://icq4ever.iptime.org//js/jquery.columnizer.min.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-71930909-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
+  <body>
+    <div id="content">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">	
+	    <div class="page-wide-tutorial">
+            <!--ul class="submenu">
+                <li><a href="/documentation">레퍼런스</a></li>
+                <li><a href="/tutorials">튜토리얼</a></li>
+            </ul-->
+    	    <h1>웁쓰! = 객체지향프로그래밍 + 클래스</h1>
+    	    <span class="article_meta">2008/03/20 20:18:00&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="">Rux</a></span><br/>
+    	    <div class="article">
+    	    
+  <h2 id="contents">Contents</h2>
+<ul>
+<li><a href="#overview" title="Overview">1 Overview</a></li>
+<li><a href="#oop" title="What is OOP">2 What is OOP</a></li>
+<li><a href="#classes" title="How to build your own Classes">3 How to build your own Classes</a></li>
+<li><a href="#objects-part-1" title="Make objects from your own Classes - Part 1">4 make objects from your own Classes</a></li>
+<li><a href="#objects-part-2" title="Make objects from your own Classes - Part 2">5 make objects from your own Classes - part 2</a></li>
+<li><a href="#objects-part-2_1" title="Make objects from your own Classes - Part 2.1">6 make objects from your own Classes - part 2.1</a></li>
+<li><a href="#objects-part-3" title="Make objects from your own Classes - Part 3">7 make objects from your own Classes - part 3</a></li>
+<li><a href="#objects-part-4" title="Make objects from your own Classes - Part 4">8 make objects from your own Classes - part 4</a></li>
+</ul>
+<!-- <h2 id="overview">Overview</h2> -->
+
+<h2 id="overview">개요</h2>
+
+<!-- This tutorial is an quick introduction to Object Oriented Programming in OpenFrameworks and a how-to guide to build and use your own classes. -->
+
+<p>이 튜토리얼은 오픈프레임웍스에서의 객체지향 프로그래밍에 관한 간단한 소개와 자신만의 클래스를 작성하는 가이드를 담고 있습니다.</p>
+<p>사용된 예제들은 Mikkel Koser의 ofBall 클래스를 기반으로 하였습니다. <a href="http://openframeworks.cc/forum/viewtopic.php?t=428" title="http://openframeworks.cc/forum/viewtopic.php?t=428">포럼의 글타래를 읽어보세요</a></p>
+<h2 id="oop">OOP란</h2>
+
+<p>OOP는 Object Oriented Programming의 약자로, 객체와 객체간의 상호작용을 기반으로 하는 프로그래밍 패러다임을 의미합니다.</p>
+<p>몇가지 정의를 살펴보죠:</p>
+<!-- -a Class defines the characteristics of a thing - the object - and its behaviors; it defines not only its properties and attributes but also what it can do. -->
+
+<ul>
+<li>클래스란 무언가(객체)의 성격과 그것의 행위를 정의하는것이다. 이것은 자신의 프로퍼티와 어트리뷰트들 뿐만 아니라, 자신이 할 수 있는 것들또한 정의한다.</li>
+</ul>
+<!-- -an Object is an instance of a class. -->
+
+<ul>
+<li>객체는 클래스의 인스턴스이다.</li>
+</ul>
+<!-- -the Methods are the objects abilities and how we can call them. -->
+
+<ul>
+<li>메소드는 객체의 능력들을 의미하며, 호출하는 방법이기도 하다.</li>
+</ul>
+<p>A recurring analogy is to see a Class as a the cookie cutter and the cookies as the Objects.</p>
+<!-- <h2 id="classes">How to build your own Classes</h2> -->
+
+<h2 id="classes">나만의 클래스 작성하기</h2>
+
+<!-- Classes and objects are similar to the concepts of movie clips and instances in Flash and are also a fundamental part of Java programming. -->
+
+<!-- If you have a background in Java and/or Processing this other tutorial will be useful. [OF\_for\_P5\_users][14] -->
+
+<p>클래스와 객체는 플래시에서의 MovieClip과 인스턴스 관계와 개념이 비슷합니다. 이는 또한 자바 프로그래밍의 핵심이기도 합니다. 만약 여러분이 Java 또는 Processing의 경험이 있으시다면, <a href="http://wiki.openframeworks.cc/index.php?title=OF_for_Processing_users" title="http://wiki.openframeworks.cc/index.php?title=OF_for_Processing_users">프로세싱 사용자를 위한 오픈프레임웍스</a> 튜토리얼이 유용할 것입니다.</p>
+<!-- This is how you declare a Class -\> in the header file (\*.h), otherwise known as the declarations file. In this case, the file name should be ofBall.h -->
+
+<p><a href="003_images/Ex1-ball_h.jpg" title="Image:ex1-ball_h.jpg"><img alt="Image:ex1-ball_h.jpg" src="003_images/Ex1-ball_h.jpg" /></a></p>
+<p>클래스를 선언하려면 -> 헤더파일 (*.h)에 작성하면 됩니다. 헤더파일은 또한 선언 파일이라고 하기도 합니다. 우리의 경우, 파일명은 ofBall.h가 되어야 합니다. <a href="003_images/Ex1-ball_h.jpg" title="Image:ex1-ball_h.jpg"><img alt="Image:ex1-ball_h.jpg" src="003_images/Ex1-ball_h.jpg" /></a></p>
+<pre><code class="cpp">
+    /* 아래 if문을 사용하여 클래스가 선언되지 않았을때만 클래스를 선언하도록 합니다.
+       클래스가 여러번 호출되어 컴파일러를 혼동에 빠지지 않게 할 수 있습니다. */
+
+    #ifndef _OF_BALL // if this class hasn't been defined, the program can define it
+    #define _OF_BALL // by using this if statement you prevent the class to be called more
+    #endif           // than once which would confuse the compiler
+
+    #include &quot;ofMain.h&quot;
+
+    class ofBall {
+
+        public: // 공용 함수,변수를 이곳에 선언합니다.
+
+            // 함수, 혹은 클래스 오브젝트의 함수 
+            void update();  // update 메소드는 매 프레임마다 객체의 프로퍼티를 새로고칠때 사용됩니다.
+            void draw();    // draw 메소드. 객체를 그리는 곳입니다.
+
+            // 변수들 
+            float x;      // 위치
+            float y;
+            float speedY; // 속도와 방향
+            float speedX;
+            int dim;      // 크기
+
+            ofBall(); // 생성자 - 전달된 프로퍼티가 없을 시에 객체를 초기화하는 곳입니다.
+                      // 주로 초기값을 지정할 때 사용합니다. 
+
+        private: // private 함수, 변수들을 선언하는곳입니다. 
+
+    }; // 끝에 세미콜론을 잊지 마세요
+
+    #endif
+</code></pre>
+
+<!-- We have declared the Ball class header filer (the list of ingredients) and now lets get to the cooking part -\> what to do with the ingredients! -->
+
+<!-- Please notice the '\#include' tag, this is a way to tell the compiler which file to include for each implementation file. When the program is compiled these '\#include' tags will be replaced by the original file they're referring to. -->
+
+<p>Ball클래스의 헤더파일을 선언하였으니, 이제 요리를 해볼 시간이군요 -> 바로 선언한 것들로 할 수 있는 것들 말입니다!</p>
+<p>'#include' 태그를 주의깊게 봐주세요. 이것은 컴파일러에게 구현 파일 각각에서 포함시켜야 할 파일을 알려주는 방법입니다. 코드가 컴파일될때 이 '#include' 태그부분은 여기서 지정하고 있는 원래 파일들로 교체되어집니다.</p>
+<p>The 'if statement' (#ifndef) is a way to prevent the repetition of header files which could easily occur. Here's an example of how easily this could happen due to the recursive structure of the program:
+Lets say we're building a Pool game, we'll have the ofApp class, dependent on this there will be the pool table class and also the pool stick class and as both of these will be needed for our balls collision detection function both will refer to the ball class individually. If we didn't use the '#ifndef' 'if' statement the compiler would try to compile the ball class repeatedly and would find some conflicts.</p>
+<p><a href="003_images/Ex-ifndef.jpg" title="Image:ex-ifndef.jpg"><img alt="Image:ex-ifndef.jpg" src="003_images/Ex-ifndef.jpg" /></a></p>
+<!-- Here's how you can write the class \*.cpp file, the implementation file: -->
+
+<p>아래는 *.cpp 파일로 클래스를 작성하는 방법입니다. 구현 파일이라고도 불리웁니다 :</p>
+<pre><code class="cpp">    #include &quot;ofBall.h&quot;
+
+    ofBall::ofBall()
+    {
+        x = ofRandom(0, ofGetWidth());      // give some random positioning
+        y = ofRandom(0, ofGetHeight());
+
+        speedX = ofRandom(-1, 1);           // and random speed and direction
+        speedY = ofRandom(-1, 1);
+
+        dim = 20;
+    }
+
+    void ofBall::update(){
+        if(x &lt; 0 ){
+            x = 0;
+            speedX *= -1;
+        } else if(x &gt; ofGetWidth()){
+            x = ofGetWidth();
+            speedX *= -1;
+        }
+
+        if(y &lt; 0 ){
+            y = 0;
+            speedY *= -1;
+        } else if(y &gt; ofGetHeight()){
+            y = ofGetHeight();
+            speedY *= -1;
+        }
+
+        x+=speedX;
+        y+=speedY;
+    }
+
+    void ofBall::draw(){
+        // values for R, G, B
+        ofSetColor(120,120,120);
+        ofCircle(x, y, dim);
+    }
+</code></pre>
+
+<p><a href="003_images/Ex1-ball_cpp.jpg" title="Image:ex1-ball_cpp.jpg"><img alt="Image:ex1-ball_cpp.jpg" src="003_images/Ex1-ball_cpp.jpg" /></a></p>
+<!-- <h2 id="objects-part-1">make objects from your own Classes</h2> -->
+
+<h2 id="objects-part-1">나만의 클래스로 오브젝트들을 만들기</h2>
+
+<!-- now that we've created a class let's make the real object!
+in your testapp.h (header file) we'll have to add declare a new object and get some free memory for it. this is how we do it:
+ -->
+
+<p>클래스를 생성했으니, 실제 오브젝트를 만들어봅시다!
+아래의 코드로 testapp.h파일(헤더파일)에서, 새 오브젝트 선언을 추가하고, 그것을 위한 메모리를 할당할 것입니다:</p>
+<p><a href="003_images/Ex1-h.jpg" title="Image:ex1-h.jpg"><img alt="Image:ex1-h.jpg" src="003_images/Ex1-h.jpg" /></a></p>
+<pre><code class="cpp">        ofBall myBall;
+</code></pre>
+
+<!-- and finally let's get that ball bouncing on screen! -->
+
+<!-- go to your project testapp.cpp (implementation) file. now that we've created the object we just need to draw it and update its values by calling its methods. -->
+
+<!-- in the update() function add: -->
+
+<p>이제 화면에 공을 튕겨 봅시다!
+프로젝트의 testapp.cpp 파일 (구현파일)로 가서, 우리가 생성한 오브젝트를 그리고, 동시에 메소드를 호출하여 값들을 업데이트 시켜봅시다. 
+update() 함수에 아래와 같이 추가해봅시다:</p>
+<p><a href="003_images/Ex1-cpp.jpg" title="Image:ex1-cpp.jpg"><img alt="Image:ex1-cpp.jpg" src="003_images/Ex1-cpp.jpg" /></a></p>
+<pre><code class="cpp">      myBall.update();  // 오브젝트의 update메소드를 호출한다.
+</code></pre>
+
+<!-- and in the draw() function lets add: -->
+
+<p>그리고 draw()함수에 아래와 같이 추가합니다:</p>
+<pre><code class="cpp">      myBall.draw();  // 오브젝트를 그리기 위해 draw메소드를 호출한다.
+</code></pre>
+
+<!-- compile and run! -->
+
+<!-- by now you must be seeing a bouncing ball on the screen! great! -->
+
+<p>컴파일하고 실행해봅시다!
+통통퇴는 공이 화면에 보이죠?! 만세!</p>
+<p><a href="http://www.essaycollective.org/personal/rx/patcher/of-werx/object-ballclass_example1.zip" title="http://www.essaycollective.org/personal/rx/patcher/of-werx/object-ballclass_example1.zip">소스코드 다운받기</a></p>
+<!-- <h2 id="objects-part-2">make objects from your own Classes - part 2</h2> -->
+
+<h2 id="objects-part-1">나만의 클래스로 오브젝트 만들기 - 파트 2</h2>
+
+<!-- you're probably asking yourself now why did you have so much trouble just to create a bouncing ball. You could have done this (and you've probably done it!) without using classes. In fact one of the advantages of using classes is to be able to create multiple individual objects with the same characteristics.
+So, lets do that now!
+going back to your ofApp.h file we'll just need to create a couple of new objects:
+ -->
+
+<p>아마도 지금쯤 여러분은 '튀는 공만드는데 이렇게 까다롭담ㅠㅠ' 이라고 생각할겁니다. 클래스 없이도 가능합니다(이미 해봤을거에요!). 사실 클래스를 사용하는 장점중 하나는 다양한 개별 오브젝트들을 같은 속성으로 만들수 있다는 점입니다.</p>
+<p>그렇다면 한번 해보죠!</p>
+<p>ofApp.h파일로 돌아가서 몇가지 새 오브젝트들을 만들면 됩니다:</p>
+<pre><code class="cpp">         ofBall myBall1;
+         ofBall myBall2;
+         ofBall myBall3;
+</code></pre>
+
+<p><a href="003_images/Ex2-h.jpg" title="Image:ex2-h.jpg"><img alt="Image:ex2-h.jpg" src="003_images/Ex2-h.jpg" /></a></p>
+<!-- And in the implementation file (\*.cpp) just call the corresponding methods for each of the objects. -->
+
+<p>그리고 구현파일 (*.cpp)에서 각각의 오브젝트에 대응하는 메소드들을 호출해주면 됩니다.</p>
+<!-- in the ofApp's update() function: -->
+
+<p>ofApp의 update()함수에 이렇게 추가합니다:</p>
+<pre><code class="cpp">        myBall1.update();
+        myBall2.update();
+        myBall3.update();
+</code></pre>
+
+<!-- and also in the draw() function: -->
+
+<p>또한 draw()함수에는 이렇게 합니다:</p>
+<pre><code class="cpp">        myBall1.draw();
+        myBall2.draw();
+        myBall3.draw();
+</code></pre>
+
+<p><a href="003_images/Ex2-cpp.jpg" title="Image:ex2-cpp.jpg"><img alt="Image:ex2-cpp.jpg" src="003_images/Ex2-cpp.jpg" /></a></p>
+<p><a href="003_images/Ex2Ball.jpg" title="Image:ex2Ball.jpg"><img alt="Image:ex2Ball.jpg" src="003_images/Ex2Ball.jpg" /></a></p>
+<p><a href="http://www.essaycollective.org/personal/rx/patcher/of-werx/object-ballclass_example2.zip" title="http://www.essaycollective.org/personal/rx/patcher/of-werx/object-ballclass_example2.zip">소스코드 다운받기</a></p>
+<h2 id="objects-part-2_1">나만의 클래스로 오브젝트 만들기 - 파트 2.1</h2>
+
+<!-- We've just created 3 objects but what if we wanted to created 10, 100 or may be 1000's of them?! hardcoding one by one would be a painful and long process that can be easily solved by automating the object creation and function calls. Just by using a couple for loops we'll be making this process way simpler and cleaner. -->
+
+<p>우리는 방븝 3개의 오브젝트를 만들었습니다만, 만약 10, 100개 또는 1000개를 만들고 싶다면 어찌해야 할까요 ?! 하나하나 일일히 코드로 작성하는것은 고통스럽고 정말 지루한 과정이겠지요. 단순히 몇몇 반복문들 사용하므로써 이러한 과정을 보다 단순하고 명확하게 할 수 있습니다.</p>
+<!-- Instead of declaring a list of objects one by one we'll just create an array of objects of type 'ofBall'. We'll also introduce another new element: a constant. Constants are defined after the \#includes as \#define CONSTANT\_NAME value. This is a way of defining a constant value that won't be ever changed in the program: -->
+
+<p>하나하나 오브젝트의 리스트를 선언하지 않고, 'ofBall'타입의 오브젝트의 배열을 생성합니다. 여기서 새로운 요소 : 상수 를 소개해야겠네요. 상수는 #indclude들 뒤에 <code>\#define CONSTANT\ NAME 값</code>의 형태로 선언할 수 잇습니다. 이는 프로그램내에서 절때 바뀌지 않은 상수를 선언하는 방법입니다:</p>
+<pre><code class="cpp">        #define NBALLS 5
+</code></pre>
+
+<!-- we'll now use the CONSTANT value to define the size of our array of objects: -->
+
+<p>이제 오브젝트의 배열의 길이를 이 상수를 이용하여 선언할 수 있습니다:</p>
+<pre><code class="cpp">        ofBall myBall[NBALLS];
+</code></pre>
+
+<p><a href="003_images/Ex21h.jpg" title="Image:ex21h.jpg"><img alt="Image:ex21h.jpg" src="003_images/Ex21h.jpg" /></a></p>
+<!-- back to our implementation file we'll just need to create an array of objects and call their methods through 'for' loops. -->
+
+<p>구현파일로 돌아와, 방금 만든 오브젝트의 배열안에 있는 메소드를 'for'방복문으로 호출합니다.</p>
+<!-- in the update() function: -->
+
+<p>update()함수에 이와같이 작성합니다:</p>
+<pre><code class="cpp">        for(int i=0; i&lt;NBALLS; i++)
+        {
+          myBall[i].update();
+        }
+</code></pre>
+
+<!-- in the draw() function: -->
+
+<p>draw()함수에 이와같이 작성합니다:</p>
+<pre><code class="cpp">        for(int i=0; i&lt;NBALLS; i++)
+        {
+          myBall[i].draw();
+        }
+</code></pre>
+
+<p><a href="003_images/Ex21cpp.jpg" title="Image:ex21cpp.jpg"><img alt="Image:ex21cpp.jpg" src="003_images/Ex21cpp.jpg" /></a></p>
+<p><a href="003_images/Ex21Ball.jpg" title="Image:ex21Ball.jpg"><img alt="Image:ex21Ball.jpg" src="003_images/Ex21Ball.jpg" /></a></p>
+<p><a href="http://www.essaycollective.org/personal/rx/patcher/of-werx/object-ballclass_example2-1.zip" title="http://www.essaycollective.org/personal/rx/patcher/of-werx/object-ballclass_example2-1.zip">source code download here</a></p>
+<h2 id="objects-part-3">make objects from your own Classes - part 3</h2>
+
+<!-- As we've seen each of the objects has a set of properties defined by its variables (position, speed and direction and dimension). -->
+
+<!-- Another advantage of object oriented programming is that the objects created can have different values on each of its properties. -->
+
+<!-- For us to be able to have better control of each object we can have a constructor which defines these characteristics and lets us access them. -->
+
+<!-- In the ofBall definitions file (\*.h) we can change the constructor to include some of the objects properties (lets say position and dimension): -->
+
+<p>보시는 바와 같이, 각 오브젝트들은 변수에 의해 지정된 속성의 세트를 가지고 있습니다(위치, 속도, 방향, 크기).
+객체지향프로그래밍의 또다른 장점은, 오브젝트들이 각각 서로 다른 속성들을 가질수 있다는 점입니다. 
+지금 상황에서 이러한 속성들을 조절하는 보다 나은 방법은 이러한 속성들을 지정하고 접근할 수 있는 생성자를 만드는것입니다. 
+ofBall의 선언파일(*.h)에서, 오브젝트의 일부 속성들(위치, 크기)를 지정할 수 있는 생성자로 바꿔봅시다 :</p>
+<pre><code class="cpp">        ofBall(float x, float y, int dim);
+</code></pre>
+
+<!-- As we've changed the constructor we'll need to update the ofBall implementation (\*.cpp) file to reflect these. -->
+
+<p>앞에서 생성자를 변경했으므로, ofBall의 구현파일(*.cpp)를 수정하여 이러한 변경을 반영해봅시다.</p>
+<pre><code class="cpp">    ofBall::ofBall(float _x, float _y, int _dim)
+    {
+        x = _x;
+        y = _y;
+        dim = _dim;
+
+        speedX = ofRandom(-1, 1);
+        speedY = ofRandom(-1, 1);
+    }
+</code></pre>
+
+<!-- By implementing these changes we'll also need to create space in memory for these objects. We'll do this by creating a pointer (a reference in memory) for each object. -->
+
+<!-- Back to the ofApp.h (definitions) file we'll declare a new object like this: -->
+
+<p>이와같이 구현파일을 변경했으므로, 우리는 이러한 오브젝트들을 위한 메모리영역을 생성할 필요가 있습니다. 각 오브젝트를 위한 포인터(메모리의 레퍼런스)를 생성하여 구현합니다.
+ofApp.h(선언)파일로 돌아가, 새 오브젝트를 아래와 같이 선언합니다:</p>
+<pre><code class="cpp">        ofBall *myBall;
+</code></pre>
+
+<p><a href="003_images/Ex3-h.jpg" title="Image:ex3-h.jpg"><img alt="Image:ex3-h.jpg" src="003_images/Ex3-h.jpg" /></a></p>
+<!-- The star means it will be created in a reserved part of memory just for it. -->
+
+<p>별(*)은 예약된 메모리의 일부에 생성하겠다 라는 의미입니다. </p>
+<!-- Now in the TestApp.cpp file we will need to create the object in the setup and we'll call the objects methods on the draw() and update() functions in a different way than we've been doing before. -->
+
+<p>이제 TestApp.cpp파일에서, setup안예 오브젝트를 생성하고 오브젝트의 메소드를 draw()와 update()함수 안에서 앞에서 했던 방법과 다른 방법으로 호출합니다.</p>
+<p>in the setup() :</p>
+<pre><code class="cpp">                            // x-position,        y-position,           size
+    myBall = new ofBall(ofRandom(300,400), ofRandom(200,300), ofRandom(10,40));
+</code></pre>
+
+<!-- As you see it is now possible to directly control the objects properties on its creation. -->
+
+<!-- and now we'll just need to update and draw it. -->
+
+<p>보시다시피 오브젝트를 생성함과 동시에 오브젝트의 속성에 바로 접근이 가능합니다.
+이제 update와 draw를 호출해야겠죠?</p>
+<pre><code class="cpp">    myBall-&gt;update();
+
+    myBall-&gt;draw();
+</code></pre>
+
+<p><a href="003_images/Ex3-cpp.jpg" title="Image:ex3-cpp.jpg"><img alt="Image:ex3-cpp.jpg" src="003_images/Ex3-cpp.jpg" /></a></p>
+<p><a href="003_images/Ex3Ball.jpg" title="Image:ex3Ball.jpg"><img alt="Image:ex3Ball.jpg" src="003_images/Ex3Ball.jpg" /></a></p>
+<p><a href="http://www.essaycollective.org/personal/rx/patcher/of-werx/object-ballclass_example3.zip" title="http://www.essaycollective.org/personal/rx/patcher/of-werx/object-ballclass_example3.zip">소스코드 다운받기</a></p>
+<h2 id="objects-part-4">나만의 클래스로 오브젝트들을 만들기 - 파트 4</h2>
+
+<!-- we're now at the last part of this how-to tutorial on classes and objects. this part will now demonstrate an automation process to create objects from our previously built class. We'll be creating objects through arrays as we did in part 2.1 with some minor changes: -->
+
+<p>자 이제 클래스와 오브젝트 튜토리얼의 마지막 파트가 되겠습니다. 이 파트에서는 앞서 우리가 설계한 클래스로부터 자동화 프로세스를 통해 오브젝트를 생헝하는 과정을 데모해볼 것입니다. 앞 2.1파트에 약간의 변화를 주어 오브젝트들을 배열을 통해 만들어 보겠습니다:</p>
+<pre><code class="cpp">        ofBall** myBall;   // ofBall타입의 포인터의 배열
+        int nBalls;        // 공의 갯수를 위한 변수
+</code></pre>
+
+<p><a href="003_images/Ex4-h.jpg" title="Image:ex4-h.jpg"><img alt="Image:ex4-h.jpg" src="003_images/Ex4-h.jpg" /></a></p>
+<!-- As we're creating an array of objects, instead of creating one pointer only we'll also have to create an array of pointers. -->
+
+<!-- That's why we have two 'stars' and not one in the declarations(\*.h) file. We have created a pointer to an array of pointers. -->
+
+<!-- Let's see how we'll create and call these objects in the implementation (\*.cpp) file: -->
+
+<p>오브젝트의 배열을 생헝하기 위해, 포인터하나를 생성하는 대신, 포인터의 배열을 만들것입니다.
+선언파일(*.h)에 두개의 '별'을 갖고 있는 이유입니다. 이제 우리는 포인터의 배열의 포인터를 만들었습니다.
+구현파일(*.cpp)에서 어떻게 생성하고 이 오브젝트들을 호출하는지 알아봅시다:</p>
+<pre><code class="cpp">    nBalls = 5; // 만들 오브젝트의 갯수
+
+    myBall = new ofBall*[nBalls]; // 오브젝트의 포인터의 배열
+
+    for (int i = 0; i &lt; nBalls; i++){
+        float x = 20+(100*i); // using the value of the counter variable(i) to differentiate them
+        float y = 20+(100*i);
+        int dim = 10+(i*10);
+
+        myBall[i] = new ofBall(x,y,dim);  // 배열 내의 각 오브젝트를 생성한다
+    }
+</code></pre>
+
+<p>similarly when we want to draw and update the objects we've created we'll need 'for' loops to run through the array.
+생성된 오브젝트들을 draw와 update에서 사용할려면 동일하게 'for'반복문으로 배열에 접근합니다.</p>
+<pre><code class="cpp">      for (int i = 0; i &lt; nBalls; i++){
+          myBall[i]-&gt;update();
+      }
+
+      for (int i = 0; i &lt; nBalls; i++){
+          myBall[i]-&gt;draw();
+      }
+</code></pre>
+
+<p><a href="003_images/Ex4-cpp.jpg" title="Image:ex4-cpp.jpg"><img alt="Image:ex4-cpp.jpg" src="003_images/Ex4-cpp.jpg" /></a></p>
+<p><a href="003_images/Ex4Ball.jpg" title="Image:ex4Ball.jpg"><img alt="Image:ex4Ball.jpg" src="003_images/Ex4Ball.jpg" /></a></p>
+<p><a href="http://www.essaycollective.org/personal/rx/patcher/of-werx/object-ballclass_example4.zip" title="http://www.essaycollective.org/personal/rx/patcher/of-werx/object-ballclass_example4.zip">source code download here</a></p>
+
+    		</div>
+            
+        </div><!-- End Page Wide -->      
+      </div><!-- End Body Wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:33:31 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+4d738d6979d8e7992359cde47632192d1fbef472
+">
+
+4d738d6979d8e7992359cde47632192d1fbef472
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+
+
+

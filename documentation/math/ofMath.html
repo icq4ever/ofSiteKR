@@ -1,0 +1,1969 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr - ofMath</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+    <script src="http://icq4ever.iptime.org//js/jquery.columnizer.min.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation.js"></script>
+  </head>
+  <body>
+    <div id="content">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">
+          <div class="page-wide">
+          
+              <div id="docstitle"><h1>ofMath</h1></div>
+              <div id="editdocs">
+                    <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/math/ofMath.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
+                     <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/math/ofMath_functions.markdown" class="nohover"><img title="edit functions on GitHub" src="/images/editfunctions.png?a=5"/></a>
+              </div>
+              
+          </div>
+          
+          
+        <div class="page-wide">
+		    <div class="submenucol-left">
+		     <!-- list of methods -->
+            
+             
+             
+             <!-- list of variables -->              
+            
+             
+            
+             <!-- list of functions -->              
+            <p class="top_list_header">global functions</p>
+                <ul class="functionslist">
+                     
+                            <li>
+                            <a href="#show_ofAngleDifferenceDegrees" class="ofAngleDifferenceDegrees" data-lookup="ofAngleDifferenceDegrees">ofAngleDifferenceDegrees()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofAngleDifferenceRadians" class="ofAngleDifferenceRadians" data-lookup="ofAngleDifferenceRadians">ofAngleDifferenceRadians()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofBezierPoint" class="ofBezierPoint" data-lookup="ofBezierPoint">ofBezierPoint()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofBezierTangent" class="ofBezierTangent" data-lookup="ofBezierTangent">ofBezierTangent()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofClamp" class="ofClamp" data-lookup="ofClamp">ofClamp()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofCurvePoint" class="ofCurvePoint" data-lookup="ofCurvePoint">ofCurvePoint()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofCurveTangent" class="ofCurveTangent" data-lookup="ofCurveTangent">ofCurveTangent()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofDegToRad" class="ofDegToRad" data-lookup="ofDegToRad">ofDegToRad()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofDist" class="ofDist" data-lookup="ofDist">ofDist()</a></li>
+                         
+                         
+                            <li>
+                            <a href="#show_ofDistSquared" class="ofDistSquared" data-lookup="ofDistSquared">ofDistSquared()</a></li>
+                         
+                         
+                            <li>
+                            <a href="#show_ofInRange" class="ofInRange" data-lookup="ofInRange">ofInRange()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofInsidePoly" class="ofInsidePoly" data-lookup="ofInsidePoly">ofInsidePoly()</a></li>
+                         
+                         
+                            <li class="noDoc">
+                            <a href="#show_ofInterpolateCatmullRom" class="ofInterpolateCatmullRom" data-lookup="ofInterpolateCatmullRom">ofInterpolateCatmullRom()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofInterpolateCosine" class="ofInterpolateCosine" data-lookup="ofInterpolateCosine">ofInterpolateCosine()</a></li>
+                         
+                            <li class="noDoc">
+                            <a href="#show_ofInterpolateCubic" class="ofInterpolateCubic" data-lookup="ofInterpolateCubic">ofInterpolateCubic()</a></li>
+                         
+                            <li class="noDoc">
+                            <a href="#show_ofInterpolateHermite" class="ofInterpolateHermite" data-lookup="ofInterpolateHermite">ofInterpolateHermite()</a></li>
+                         
+                         
+                            <li>
+                            <a href="#show_ofLerp" class="ofLerp" data-lookup="ofLerp">ofLerp()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofLerpDegrees" class="ofLerpDegrees" data-lookup="ofLerpDegrees">ofLerpDegrees()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofLerpRadians" class="ofLerpRadians" data-lookup="ofLerpRadians">ofLerpRadians()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofLineSegmentIntersection" class="ofLineSegmentIntersection" data-lookup="ofLineSegmentIntersection">ofLineSegmentIntersection()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofMap" class="ofMap" data-lookup="ofMap">ofMap()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofNextPow2" class="ofNextPow2" data-lookup="ofNextPow2">ofNextPow2()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofNoise" class="ofNoise" data-lookup="ofNoise">ofNoise()</a></li>
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                            <li>
+                            <a href="#show_ofNormalize" class="ofNormalize" data-lookup="ofNormalize">ofNormalize()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofRadToDeg" class="ofRadToDeg" data-lookup="ofRadToDeg">ofRadToDeg()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofRandom" class="ofRandom" data-lookup="ofRandom">ofRandom()</a></li>
+                         
+                         
+                            <li>
+                            <a href="#show_ofRandomHeight" class="ofRandomHeight" data-lookup="ofRandomHeight">ofRandomHeight()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofRandomWidth" class="ofRandomWidth" data-lookup="ofRandomWidth">ofRandomWidth()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofRandomf" class="ofRandomf" data-lookup="ofRandomf">ofRandomf()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofRandomuf" class="ofRandomuf" data-lookup="ofRandomuf">ofRandomuf()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofSeedRandom" class="ofSeedRandom" data-lookup="ofSeedRandom">ofSeedRandom()</a></li>
+                         
+                         
+                            <li>
+                            <a href="#show_ofSign" class="ofSign" data-lookup="ofSign">ofSign()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofSignedNoise" class="ofSignedNoise" data-lookup="ofSignedNoise">ofSignedNoise()</a></li>
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                            <li>
+                            <a href="#show_ofWrap" class="ofWrap" data-lookup="ofWrap">ofWrap()</a></li>
+                         
+                            <li class="noDoc">
+                            <a href="#show_ofWrapDegrees" class="ofWrapDegrees" data-lookup="ofWrapDegrees">ofWrapDegrees()</a></li>
+                         
+                            <li class="noDoc">
+                            <a href="#show_ofWrapRadians" class="ofWrapRadians" data-lookup="ofWrapRadians">ofWrapRadians()</a></li>
+                         
+                 </ul>
+		    </div>
+	    <div class="submenucol-right">
+            <div class="documentation_detail class_documentation">
+              
+  
+
+
+              
+              
+  
+
+           </div>
+                  
+            <!-- methods detail -->
+
+            <!-- vars detail -->
+
+            <!-- functions detail -->
+              <!--h2><a name="functions"></a>ofMath functions</h2-->
+                        
+<div class="documentation_detail ofAngleDifferenceDegrees" data-lookup="ofAngleDifferenceDegrees" data-item-type="function">
+  	 
+	<h1><a name="show_ofAngleDifferenceDegrees">ofAngleDifferenceDegrees(...)</a></h1>
+	<h2>
+  <p>float ofAngleDifferenceDegrees(float currentAngle, float targetAngle)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Calculates the difference between two angles in degrees.</p>
+<p>This will calculate the actual difference, taking into account multiple
+revolutions. For example:</p>
+<pre><code class="cpp">        ofAngleDifferenceDegrees(0, 90); // Returns 90.
+        ofAngleDifferenceDegrees(0, 450); // Also returns 90.
+</code></pre>
+
+<p>Parameters:
+currentAngle The current angle in degrees.
+targetAngle the angle to be compared to in degrees.</p>
+<p>Returns: The difference between two angles in degrees.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofAngleDifferenceRadians" data-lookup="ofAngleDifferenceRadians" data-item-type="function">
+  	 
+	<h1><a name="show_ofAngleDifferenceRadians">ofAngleDifferenceRadians(...)</a></h1>
+	<h2>
+  <p>float ofAngleDifferenceRadians(float currentAngle, float targetAngle)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Calculates the difference between two angles in radians.</p>
+<p>This will calculate the actual difference, taking into account multiple
+revolutions. For example:</p>
+<pre><code class="cpp">        ofAngleDifferenceRadians(0, PI); // Returns -PI.
+        ofAngleDifferenceRadians(0, 3*PI); // Also returns -PI.
+</code></pre>
+
+<p>Parameters:
+currentAngle The current angle in radians.
+targetAngle the angle to be compared to in radians.</p>
+<p>Returns: The difference between two angles in radians.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofBezierPoint" data-lookup="ofBezierPoint" data-item-type="function">
+  	 
+	<h1><a name="show_ofBezierPoint">ofBezierPoint(...)</a></h1>
+	<h2>
+  <p>ofPoint ofBezierPoint(const ofPoint &amp;a, const ofPoint &amp;b, const ofPoint &amp;c, const ofPoint &amp;d, float t)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Given the four points that determine a bezier curve, return an interpolated point on the curve.</p>
+<p>Parameters:
+a The beginning point of the curve.
+b The first control point.
+c The second control point.
+d The end point of the curve.
+t an offset along the curve, normalized between 0 and 1.</p>
+<p>Returns: A ofPoint on the curve.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofBezierTangent" data-lookup="ofBezierTangent" data-item-type="function">
+  	 
+	<h1><a name="show_ofBezierTangent">ofBezierTangent(...)</a></h1>
+	<h2>
+  <p>ofPoint ofBezierTangent(const ofPoint &amp;a, const ofPoint &amp;b, const ofPoint &amp;c, const ofPoint &amp;d, float t)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Given the four points that determine a bezier curve and an offset along the curve, return an tangent vector to a point on the curve.
+Currently this is not a normalized point, and will need to be normalized.</p>
+<p>Parameters:
+a The beginning point of the curve.
+b The first control point.
+c The second control point.
+d The end point of the curve.
+t an offset along the curve, normalized between 0 and 1.</p>
+<p>Returns: A ofPoint on the curve.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofClamp" data-lookup="ofClamp" data-item-type="function">
+  	 
+	<h1><a name="show_ofClamp">ofClamp(...)</a></h1>
+	<h2>
+  <p>float ofClamp(float value, float min, float max)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Clamp a value between min and max.</p>
+<p>Restricts a value to be within a specified range defined by values min and
+max. If the value is min &lt;= value &lt;= max, returns value.  If the value is
+greater than max, return max; if the value is less than min, return min.
+Otherwise, return the value unchanged.</p>
+<pre><code class="cpp">        float val = 10;
+        float newVal = 0;
+        newval = ofClamp(val, 30, 40); // newval = 30
+        newval = ofClamp(val, 0, 5);   // newval = 5
+        newval = ofClamp(val, 0, 20);  // newval = 10
+</code></pre>
+
+<p>Parameters:
+value The number to be clamped.
+min The lower bound of the range.
+max The upper bound of the range.</p>
+<p>Returns: a floating point number in the range [min, max].</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofCurvePoint" data-lookup="ofCurvePoint" data-item-type="function">
+  	 
+	<h1><a name="show_ofCurvePoint">ofCurvePoint(...)</a></h1>
+	<h2>
+  <p>ofPoint ofCurvePoint(const ofPoint &amp;a, const ofPoint &amp;b, const ofPoint &amp;c, const ofPoint &amp;d, float t)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Given the four points that determine a Catmull Rom curve, return an interpolated point on the curve.</p>
+<p>Parameters:
+a The first control point.
+b The beginning point of the curve.
+c The end point of the curve.
+d The second control point.
+t an offset along the curve, normalized between 0 and 1.</p>
+<p>Returns: A ofPoint on the curve.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofCurveTangent" data-lookup="ofCurveTangent" data-item-type="function">
+  	 
+	<h1><a name="show_ofCurveTangent">ofCurveTangent(...)</a></h1>
+	<h2>
+  <p>ofPoint ofCurveTangent(const ofPoint &amp;a, const ofPoint &amp;b, const ofPoint &amp;c, const ofPoint &amp;d, float t)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Return a tangent point for an offset along a Catmull Rom curve.</p>
+<p>Parameters:
+a The first control point.
+b The beginning point of the curve.
+c The end point of the curve.
+d The second control point.
+t an offset along the curve, normalized between 0 and 1.</p>
+<p>Returns: A ofPoint on the curve.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofDegToRad" data-lookup="ofDegToRad" data-item-type="function">
+  	 
+	<h1><a name="show_ofDegToRad">ofDegToRad(...)</a></h1>
+	<h2>
+  <p>float ofDegToRad(float degrees)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Convert degrees to radians.</p>
+<p>Example:</p>
+<pre><code class="cpp">        float result = ofDegToRad(90); // The result will be PI/2.
+</code></pre>
+
+<p>Parameters:
+degrees An angle in degrees.</p>
+<p>Returns: the angle in radians.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofDist" data-lookup="ofDist" data-item-type="function">
+  	 
+	<h1><a name="show_ofDist">ofDist(...)</a></h1>
+	<h2>
+  <p>float ofDist(float x1, float y1, float z1, float x2, float y2, float z2)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Calculates the 3D distance between two points.</p>
+<p>Uses the <a href="http://en.wikipedia.org/wiki/Pythagorean_theorem">Pythagorean theorem</a>.</p>
+<p>Parameters:
+x1 X position of first point.
+y1 Y position of first point.
+z1 Z position of first point.
+x2 X position of second point.
+y2 Y position of second point.
+z2 Z position of second point.</p>
+<p>Returns: float Distance between points.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofDist" data-lookup="ofDist" data-item-type="function">
+  	 
+	<h1><a name="show_ofDist">ofDist(...)</a></h1>
+	<h2>
+  <p>float ofDist(float x1, float y1, float x2, float y2)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Calculates the 2D distance between two points.</p>
+<p>Uses the <a href="http://en.wikipedia.org/wiki/Pythagorean_theorem">Pythagorean theorem</a>.</p>
+<p>Parameters:
+x1 X position of first point.
+y1 Y position of first point.
+x2 X position of second point.
+y2 Y position of second point.</p>
+<p>Returns: float Distance between points.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofDistSquared" data-lookup="ofDistSquared" data-item-type="function">
+  	 
+	<h1><a name="show_ofDistSquared">ofDistSquared(...)</a></h1>
+	<h2>
+  <p>float ofDistSquared(float x1, float y1, float z1, float x2, float y2, float z2)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Calculates the squared 3D distance between two points.</p>
+<p>Same as ofDist() but doesn't take the square root sqrt() of the result,
+which is a faster operation if you need to calculate and compare multiple
+distances.</p>
+<p>Parameters:
+x1 X position of first point.
+y1 Y position of first point.
+z1 Z position of first point.
+x2 X position of second point.
+y2 Y position of second point.
+z2 Z position of second point.</p>
+<p>Returns: distance-squared between two points.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofDistSquared" data-lookup="ofDistSquared" data-item-type="function">
+  	 
+	<h1><a name="show_ofDistSquared">ofDistSquared(...)</a></h1>
+	<h2>
+  <p>float ofDistSquared(float x1, float y1, float x2, float y2)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Calculates the squared 2D distance between two points.</p>
+<p>Same as ofDist() but doesn't take the square root sqrt() of the result,
+which is a faster operation if you need to calculate and compare multiple
+distances.</p>
+<p>Parameters:
+x1 X position of first point.
+y1 Y position of first point.
+x2 X position of second point.
+y2 Y position of second point.</p>
+<p>Returns: distance-squared between two points.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofInRange" data-lookup="ofInRange" data-item-type="function">
+  	 
+	<h1><a name="show_ofInRange">ofInRange(...)</a></h1>
+	<h2>
+  <p>bool ofInRange(float t, float min, float max)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Determine if a number is inside of a given range.</p>
+<p>Parameters:
+t The value to test.
+min The lower bound of the range.
+max The upper bound of the range.</p>
+<p>Returns: true if the number t is the range of [min, max].</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofInsidePoly" data-lookup="ofInsidePoly" data-item-type="function">
+  	 
+	<h1><a name="show_ofInsidePoly">ofInsidePoly(...)</a></h1>
+	<h2>
+  <p>bool ofInsidePoly(float x, float y, const vector&lt; ofPoint &gt; &amp;poly)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Determine if an (x,y) coordinate is within the polygon defined by a vector of ofPoints.</p>
+<p>Parameters:
+x The x dimension of the coordinate.
+y The y dimension of the coordinate.
+poly a vector of ofPoints defining a polygon.</p>
+<p>Returns: True if the point defined by the coordinates is enclosed, false otherwise.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofInsidePoly" data-lookup="ofInsidePoly" data-item-type="function">
+  	 
+	<h1><a name="show_ofInsidePoly">ofInsidePoly(...)</a></h1>
+	<h2>
+  <p>bool ofInsidePoly(const ofPoint &amp;p, const vector&lt; ofPoint &gt; &amp;poly)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Determine if an ofPoint is within the polygon defined by a vector of ofPoints.</p>
+<p>Parameters:
+p A point to check.
+poly A vector of ofPoints defining a polygon.</p>
+<p>Returns: True if the ofPoint is enclosed, false otherwise.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofInterpolateCatmullRom" data-lookup="ofInterpolateCatmullRom" data-item-type="function">
+  	 
+	<h1><a name="show_ofInterpolateCatmullRom">ofInterpolateCatmullRom(...)</a></h1>
+	<h2>
+  <p>Type ofInterpolateCatmullRom(const Type &amp;y0, const Type &amp;y1, const Type &amp;y2, const Type &amp;y3, float pct)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofInterpolateCosine" data-lookup="ofInterpolateCosine" data-item-type="function">
+  	 
+	<h1><a name="show_ofInterpolateCosine">ofInterpolateCosine(...)</a></h1>
+	<h2>
+  <p>Type ofInterpolateCosine(const Type &amp;y1, const Type &amp;y2, float pct)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>}</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofInterpolateCubic" data-lookup="ofInterpolateCubic" data-item-type="function">
+  	 
+	<h1><a name="show_ofInterpolateCubic">ofInterpolateCubic(...)</a></h1>
+	<h2>
+  <p>Type ofInterpolateCubic(const Type &amp;y0, const Type &amp;y1, const Type &amp;y2, const Type &amp;y3, float pct)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofInterpolateHermite" data-lookup="ofInterpolateHermite" data-item-type="function">
+  	 
+	<h1><a name="show_ofInterpolateHermite">ofInterpolateHermite(...)</a></h1>
+	<h2>
+  <p>Type ofInterpolateHermite(const Type &amp;y0, const Type &amp;y1, const Type &amp;y2, const Type &amp;y3, float pct)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofInterpolateHermite" data-lookup="ofInterpolateHermite" data-item-type="function">
+  	 
+	<h1><a name="show_ofInterpolateHermite">ofInterpolateHermite(...)</a></h1>
+	<h2>
+  <p>Type ofInterpolateHermite(const Type &amp;y0, const Type &amp;y1, const Type &amp;y2, const Type &amp;y3, float pct, float tension, float bias)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofLerp" data-lookup="ofLerp" data-item-type="function">
+  	 
+	<h1><a name="show_ofLerp">ofLerp(...)</a></h1>
+	<h2>
+  <p>float ofLerp(float start, float stop, float amt)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Linearly interpolate a value within a range.</p>
+<p>Calculates a number between two numbers [start, stop] at a specific increment
+(amt).  If we want the new number to be between start and stop numbers, amt
+needs to be a number between 0 and 1, inclusive.  ofLerp() does not clamp
+the values.</p>
+<pre><code class="cpp">        float init = 1;
+        float end = 2;
+        float increment = 0.2;
+        float result = ofLerp(init, end, increment); // result = 1.2
+        // Values outside 0...1 work as well.
+        increment = 2;
+        result = ofLerp(init, end, increment); // result = 3
+</code></pre>
+
+<p>See also: float ofClamp(float value, float min, float max)</p>
+<p>Parameters:
+start The lower bound of the range.
+stop The upper bound of the range.
+amt The normalized [0, 1] value within the range to return.</p>
+<p>Returns: A float between start and stop.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofLerpDegrees" data-lookup="ofLerpDegrees" data-item-type="function">
+  	 
+	<h1><a name="show_ofLerpDegrees">ofLerpDegrees(...)</a></h1>
+	<h2>
+  <p>float ofLerpDegrees(float currentAngle, float targetAngle, float pct)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Linearly interpolate a value between two angles in degrees.</p>
+<p>Calculates a number between two numbers [start, stop) at a specific
+increment (amt). This does constrain the result into a single rotation,
+but does not clamp the values</p>
+<p>Parameters:
+currentAngle The lower bound of the range in degrees.
+targetAngle The upper bound of the range in degrees.
+pct An amount between [0.0, 1.0] within the range to return.</p>
+<p>Returns: An angle in degrees between currentAngle and targetAngle.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofLerpRadians" data-lookup="ofLerpRadians" data-item-type="function">
+  	 
+	<h1><a name="show_ofLerpRadians">ofLerpRadians(...)</a></h1>
+	<h2>
+  <p>float ofLerpRadians(float currentAngle, float targetAngle, float pct)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Linearly interpolate a value between two angles in radians.</p>
+<p>Calculates a number between two numbers (start, stop) at a specific
+increment (amt).  This does constrain the result into a single rotation, but
+does not clamp the values</p>
+<p>Parameters:
+currentAngle The lower bound of the range in radians.
+targetAngle The upper bound of the range in radians.
+pct An amount between [0.0, 1.0] within the range to return.</p>
+<p>Returns: An angle in radians between currentAngle and targetAngle.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofLineSegmentIntersection" data-lookup="ofLineSegmentIntersection" data-item-type="function">
+  	 
+	<h1><a name="show_ofLineSegmentIntersection">ofLineSegmentIntersection(...)</a></h1>
+	<h2>
+  <p>bool ofLineSegmentIntersection(const ofPoint &amp;line1Start, const ofPoint &amp;line1End, const ofPoint &amp;line2Start, const ofPoint &amp;line2End, ofPoint &amp;intersection)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Determine the intersection between two lines.</p>
+<p>Parameters:
+line1Start Starting point for first line.
+line1End End point for first line.
+line2Start Starting point for second line.
+line2End End point for second line.
+intersection ofPoint reference in which to store the computed intersection point.</p>
+<p>Returns: True if the lines intersect.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofMap" data-lookup="ofMap" data-item-type="function">
+  	 
+	<h1><a name="show_ofMap">ofMap(...)</a></h1>
+	<h2>
+  <p>float ofMap(float value, float inputMin, float inputMax, float outputMin, float outputMax, bool clamp=false)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Given a value and an input range, map the value to an output range.</p>
+<p>ofMap linearly maps the given value to a new value given an input and output
+range.  Thus if value is 50% of the way between inputMin and inputMax, the
+output value will be 50% of the way between outpuMin and outputMax. For
+an input value <em>outside</em> of the intputMin and inputMax range, negative
+percentages and percentages greater than 100% will be used.  For example, if
+the input value is 150 and the input range is 0 - 100 and the output range
+0 - 1000, the output value will be 1500 or 150% of the total range.  The
+user can avoid mapping outside of the input range by clamping the output
+value.  Clamping is disabled by default and ensures that the output value
+always stays in the range [outputMin, outputMax).</p>
+<p>Example:</p>
+<pre><code class="cpp">        float x = 5;
+        float newx = 0;
+        // 0 &lt;= x &lt; 10
+        newx = ofMap(x, 0, 10, 21, 22); // newx = 21.5 a value [21, 22).
+</code></pre>
+
+<p>Parameters:
+value The number to be mapped.
+inputMin The lower bound of the input range.
+inputMax The upper bound of the input range.
+outputMin The lower bound of the output range.
+outputMax The upper bound of the output range.
+clamp True if the value should be clamped to [outputMin, outputMax).
+\note If the absolute difference between inputMin and inputMax is less than
+          FLT_EPSILON, outputMin will be returned to prevent divide by zero
+          errors.</p>
+<p>Returns: a mapped floating point number.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofNextPow2" data-lookup="ofNextPow2" data-item-type="function">
+  	 
+	<h1><a name="show_ofNextPow2">ofNextPow2(...)</a></h1>
+	<h2>
+  <p>int ofNextPow2(int a)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Calculates the next larger power of 2.</p>
+<p>If the input is already a power of 2, it will return itself.</p>
+<p>Example:</p>
+<pre><code class="cpp">ofNextPow2(50); // returns 64
+ofNextPow2(64); // returns 64
+ofNextPow2(401); // returns 512
+</code></pre>
+
+<p>Parameters:
+a The starting point for finding the next power of 2.</p>
+<p>Returns: value^2.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofNoise" data-lookup="ofNoise" data-item-type="function">
+  	 
+	<h1><a name="show_ofNoise">ofNoise(...)</a></h1>
+	<h2>
+  <p>float ofNoise(float x)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Calculates a one dimensional Perlin noise value between 0.0...1.0.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofNoise" data-lookup="ofNoise" data-item-type="function">
+  	 
+	<h1><a name="show_ofNoise">ofNoise(...)</a></h1>
+	<h2>
+  <p>float ofNoise(float x, float y)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Calculates a two dimensional Perlin noise value between 0.0...1.0.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofNoise" data-lookup="ofNoise" data-item-type="function">
+  	 
+	<h1><a name="show_ofNoise">ofNoise(...)</a></h1>
+	<h2>
+  <p>float ofNoise(float x, float y, float z)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Calculates a three dimensional Perlin noise value between 0.0...1.0.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofNoise" data-lookup="ofNoise" data-item-type="function">
+  	 
+	<h1><a name="show_ofNoise">ofNoise(...)</a></h1>
+	<h2>
+  <p>float ofNoise(float x, float y, float z, float w)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Calculates a four dimensional Perlin noise value between 0.0...1.0.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofNoise" data-lookup="ofNoise" data-item-type="function">
+  	 
+	<h1><a name="show_ofNoise">ofNoise(...)</a></h1>
+	<h2>
+  <p>float ofNoise(const ofVec2f &amp;p)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Calculates a two dimensional Perlin noise value between 0.0...1.0.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofNoise" data-lookup="ofNoise" data-item-type="function">
+  	 
+	<h1><a name="show_ofNoise">ofNoise(...)</a></h1>
+	<h2>
+  <p>float ofNoise(const ofVec3f &amp;p)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Calculates a three dimensional Perlin noise value between 0.0...1.0.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofNoise" data-lookup="ofNoise" data-item-type="function">
+  	 
+	<h1><a name="show_ofNoise">ofNoise(...)</a></h1>
+	<h2>
+  <p>float ofNoise(const ofVec4f &amp;p)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Calculates a four dimensional Perlin noise value between 0.0...1.0.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofNormalize" data-lookup="ofNormalize" data-item-type="function">
+  	 
+	<h1><a name="show_ofNormalize">ofNormalize(...)</a></h1>
+	<h2>
+  <p>float ofNormalize(float value, float min, float max)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Given a value and an input range, map the value to be within 0 and 1.</p>
+<p>Often, you'll need to work with percentages or other methods that expect a
+value between 0 and 1.  This function will take a minimum and maximum and
+then finds where within that range a value sits.  If the value is outside
+the range, it will be mapped to 0 or 1.</p>
+<p>Parameters:
+value The number to be normalized.
+min The lower bound of the range.
+max The upper bound of the range.</p>
+<p>Returns: A float between 0 and 1.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofRadToDeg" data-lookup="ofRadToDeg" data-item-type="function">
+  	 
+	<h1><a name="show_ofRadToDeg">ofRadToDeg(...)</a></h1>
+	<h2>
+  <p>float ofRadToDeg(float radians)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Convert radians to degrees.</p>
+<p>Example:</p>
+<pre><code class="cpp">        float result = ofRadToDeg(PI/2); // The result will be 90.
+</code></pre>
+
+<p>Parameters:
+radians An angle in radians.</p>
+<p>Returns: the angle in degrees.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofRandom" data-lookup="ofRandom" data-item-type="function">
+  	 
+	<h1><a name="show_ofRandom">ofRandom(...)</a></h1>
+	<h2>
+  <p>float ofRandom(float val0, float val1)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Get a random number between two values.</p>
+<p>A random number in the range [min, max) will be returned.</p>
+<p>Example:
+    ~~~~~{.cpp}
+// Return a random floating point number between -30 and 20.
+float randomNumber = ofRandom(-30, 20);
+~~~~~</p>
+<p>Warning: ofRandom wraps <code>rand()</code> which is not reentrant or thread safe.</p>
+<p>Parameters:
+val0 the minimum value of the random number.
+val1 The maximum value of the random number.</p>
+<p>Returns: A random floating point number between val0 and val1.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofRandom" data-lookup="ofRandom" data-item-type="function">
+  	 
+	<h1><a name="show_ofRandom">ofRandom(...)</a></h1>
+	<h2>
+  <p>float ofRandom(float max)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Get a random floating point number between 0 and max.</p>
+<p>A random number in the range [0, max) will be returned.</p>
+<p>Example:
+    ~~~~~{.cpp}
+// Return a random floating point number between 0 and 20.
+float randomNumber = ofRandom(20);
+~~~~~</p>
+<p>Warning: ofRandom wraps C++'s <code>rand()</code> which is not reentrant or thread safe.</p>
+<p>Parameters:
+max The maximum value of the random number.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofRandomHeight" data-lookup="ofRandomHeight" data-item-type="function">
+  	 
+	<h1><a name="show_ofRandomHeight">ofRandomHeight()</a></h1>
+	<h2>
+  <p>float ofRandomHeight()</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Get a random floating point number between 0 and the screen height.</p>
+<p>A random number in the range [0, ofGetHeight()) will be returned.</p>
+<p>Warning: ofRandom wraps <code>rand()</code> which is not reentrant or thread safe.</p>
+<p>Returns: a random number between 0 and ofGetHeight().</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofRandomWidth" data-lookup="ofRandomWidth" data-item-type="function">
+  	 
+	<h1><a name="show_ofRandomWidth">ofRandomWidth()</a></h1>
+	<h2>
+  <p>float ofRandomWidth()</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Get a random floating point number between 0 and the screen width.</p>
+<p>A random number in the range [0, ofGetWidth()) will be returned.</p>
+<p>Warning: ofRandom wraps <code>rand()</code> which is not reentrant or thread safe.</p>
+<p>Returns: a random number between 0 and ofGetWidth().</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofRandomf" data-lookup="ofRandomf" data-item-type="function">
+  	 
+	<h1><a name="show_ofRandomf">ofRandomf()</a></h1>
+	<h2>
+  <p>float ofRandomf()</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Get a random floating point number.</p>
+<p>Warning: ofRandom wraps <code>rand()</code> which is not reentrant or thread safe.</p>
+<p>Returns: A random floating point number between -1 and 1.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofRandomuf" data-lookup="ofRandomuf" data-item-type="function">
+  	 
+	<h1><a name="show_ofRandomuf">ofRandomuf()</a></h1>
+	<h2>
+  <p>float ofRandomuf()</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Get a random unsigned floating point number.</p>
+<p>Warning: ofRandom wraps <code>rand()</code> which is not reentrant or thread safe.</p>
+<p>Returns: A random floating point number between 0 and 1.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSeedRandom" data-lookup="ofSeedRandom" data-item-type="function">
+  	 
+	<h1><a name="show_ofSeedRandom">ofSeedRandom()</a></h1>
+	<h2>
+  <p>void ofSeedRandom()</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Seed the seeds the random number generator with a unique value.</p>
+<p>This seeds the random number generator with an acceptably random value,
+generated from clock time and the PID.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSeedRandom" data-lookup="ofSeedRandom" data-item-type="function">
+  	 
+	<h1><a name="show_ofSeedRandom">ofSeedRandom(...)</a></h1>
+	<h2>
+  <p>void ofSeedRandom(int val)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Seed the random number generator.</p>
+<p>If the user would like to repeat the same random sequence, a known random
+seed can be used to initialize the random number generator during app
+setup.  This can be useful for debugging and testing.</p>
+<p>Parameters:
+val The value with which to seed the generator.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSign" data-lookup="ofSign" data-item-type="function">
+  	 
+	<h1><a name="show_ofSign">ofSign(...)</a></h1>
+	<h2>
+  <p>int ofSign(float n)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Returns the sign of a number.</p>
+<p>Returns: int -1 if n is negative, 1 if n is positive, and 0 is n == 0;</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSignedNoise" data-lookup="ofSignedNoise" data-item-type="function">
+  	 
+	<h1><a name="show_ofSignedNoise">ofSignedNoise(...)</a></h1>
+	<h2>
+  <p>float ofSignedNoise(float x)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Calculates a one dimensional Perlin noise value between -1.0...1.0.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSignedNoise" data-lookup="ofSignedNoise" data-item-type="function">
+  	 
+	<h1><a name="show_ofSignedNoise">ofSignedNoise(...)</a></h1>
+	<h2>
+  <p>float ofSignedNoise(float x, float y)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Calculates a two dimensional Perlin noise value between -1.0...1.0.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSignedNoise" data-lookup="ofSignedNoise" data-item-type="function">
+  	 
+	<h1><a name="show_ofSignedNoise">ofSignedNoise(...)</a></h1>
+	<h2>
+  <p>float ofSignedNoise(float x, float y, float z)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Calculates a three dimensional Perlin noise value between -1.0...1.0.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSignedNoise" data-lookup="ofSignedNoise" data-item-type="function">
+  	 
+	<h1><a name="show_ofSignedNoise">ofSignedNoise(...)</a></h1>
+	<h2>
+  <p>float ofSignedNoise(float x, float y, float z, float w)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Calculates a four dimensional Perlin noise value between -1.0...1.0.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSignedNoise" data-lookup="ofSignedNoise" data-item-type="function">
+  	 
+	<h1><a name="show_ofSignedNoise">ofSignedNoise(...)</a></h1>
+	<h2>
+  <p>float ofSignedNoise(const ofVec2f &amp;p)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Calculates a two dimensional Perlin noise value between -1.0...1.0.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSignedNoise" data-lookup="ofSignedNoise" data-item-type="function">
+  	 
+	<h1><a name="show_ofSignedNoise">ofSignedNoise(...)</a></h1>
+	<h2>
+  <p>float ofSignedNoise(const ofVec3f &amp;p)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Calculates a three dimensional Perlin noise value between -1.0...1.0.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSignedNoise" data-lookup="ofSignedNoise" data-item-type="function">
+  	 
+	<h1><a name="show_ofSignedNoise">ofSignedNoise(...)</a></h1>
+	<h2>
+  <p>float ofSignedNoise(const ofVec4f &amp;p)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Calculates a four dimensional Perlin noise value between -1.0...1.0.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofWrap" data-lookup="ofWrap" data-item-type="function">
+  	 
+	<h1><a name="show_ofWrap">ofWrap(...)</a></h1>
+	<h2>
+  <p>float ofWrap(float value, float from, float to)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Find a value within a given range, wrapping the value if it overflows.</p>
+<p>If a value is between from and to, return that value.
+If a value is NOT within that range, wrap it.</p>
+<p>Example:</p>
+<pre><code class="cpp">        ofWrap(5, 0, 10); // Returns 5.
+        ofWrap(15, 0, 10); // Also returns 5.
+        ofWrap(-5, 0, 10); // Also returns 5.
+</code></pre>
+
+<p>Parameters:
+value The value to map.
+from The lower bound of the range.</p>
+<p>Returns: to The upper bound of the range.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofWrapDegrees" data-lookup="ofWrapDegrees" data-item-type="function">
+  	 
+	<h1><a name="show_ofWrapDegrees">ofWrapDegrees(...)</a></h1>
+	<h2>
+  <p>float ofWrapDegrees(float angle, float from, float to)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofWrapRadians" data-lookup="ofWrapRadians" data-item-type="function">
+  	 
+	<h1><a name="show_ofWrapRadians">ofWrapRadians(...)</a></h1>
+	<h2>
+  <p>float ofWrapRadians(float angle, float from, float to)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+            <hr/>
+                
+            <!--diqus comments for class/functions module description-->
+            <div id="comments_header">
+            <h2>comments</h2>
+            <p>You can add comments with usage examples or other information for each class, method or variable, for adding documentation to an empty section or reporting errors is better to send a fix or open an issue through <a href="https://github.com/openframeworks/ofSite">github</a>.</p>
+            <p>When posting code enclose it in:</p>
+            <pre><code class="html">&lt;pre&gt;&lt;code class=&quot;cpp&quot;&gt;&nbsp;&lt;/code&gt;&lt;/pre&gt;</code></pre>
+            <br/>
+            </div>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+
+            // DISQUS
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+
+            var disqus_shortname = 'openframeworks'; // required: replace example with your forum shortname
+            //var disqus_developer = 1;
+
+            location_elements = window.location.pathname.split("/");
+            module_name = location_elements[location_elements.length-1].split(".")[0];
+            section_name = location.hash.split("_")[1];
+            console.log(module_name + " " + section_name);
+            if(section_name!=undefined && section_name!=''){
+            var disqus_identifier = window.location.pathname + "#!show_" + section_name;  
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "#!show_" + section_name;
+            var discus_title = document.title + " - " + section_name;
+            }else{
+            var disqus_identifier = window.location.pathname;
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            var discus_title = document.title;
+            }
+
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */   
+            (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		
+        </div><!-- End Submenu right -->
+      </div><!-- End page wide -->
+      </div><!-- End body wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:33:38 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+4d738d6979d8e7992359cde47632192d1fbef472
+">
+
+4d738d6979d8e7992359cde47632192d1fbef472
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+

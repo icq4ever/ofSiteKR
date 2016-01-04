@@ -1,0 +1,1708 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr - ofxAssimpModelLoader</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+    <script src="http://icq4ever.iptime.org//js/jquery.columnizer.min.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation.js"></script>
+  </head>
+  <body>
+    <div id="content">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">
+          <div class="page-wide">
+          
+              <div id="docstitle"><h1>ofxAssimpModelLoader</h1></div>
+              <div id="editdocs">
+                    <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/addons/ofxAssimpModelLoader/ofxAssimpModelLoader.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
+              </div>
+              
+          </div>
+          
+          
+        <div class="page-wide">
+		    <div class="submenucol-left">
+		     <!-- list of methods -->
+		     <p class="top_list_header">class methods</p>
+             <ul class="functionslist">
+                 
+                         <li class="noDoc">
+                         <a href="#show_ofxAssimpModelLoader" class="ofxAssimpModelLoader" data-lookup="ofxAssimpModelLoader">ofxAssimpModelLoader()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_~ofxAssimpModelLoader" class="~ofxAssimpModelLoader" data-lookup="~ofxAssimpModelLoader">~ofxAssimpModelLoader()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_calculateDimensions" class="calculateDimensions" data-lookup="calculateDimensions">calculateDimensions()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_clear" class="clear" data-lookup="clear">clear()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_createEmptyModel" class="createEmptyModel" data-lookup="createEmptyModel">createEmptyModel()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_createLightsFromAiModel" class="createLightsFromAiModel" data-lookup="createLightsFromAiModel">createLightsFromAiModel()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_disableColors" class="disableColors" data-lookup="disableColors">disableColors()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_disableMaterials" class="disableMaterials" data-lookup="disableMaterials">disableMaterials()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_disableNormals" class="disableNormals" data-lookup="disableNormals">disableNormals()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_disableTextures" class="disableTextures" data-lookup="disableTextures">disableTextures()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_draw" class="draw" data-lookup="draw">draw()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_drawFaces" class="drawFaces" data-lookup="drawFaces">drawFaces()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_drawVertices" class="drawVertices" data-lookup="drawVertices">drawVertices()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_drawWireframe" class="drawWireframe" data-lookup="drawWireframe">drawWireframe()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_enableColors" class="enableColors" data-lookup="enableColors">enableColors()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_enableMaterials" class="enableMaterials" data-lookup="enableMaterials">enableMaterials()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_enableNormals" class="enableNormals" data-lookup="enableNormals">enableNormals()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_enableTextures" class="enableTextures" data-lookup="enableTextures">enableTextures()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getAnimation" class="getAnimation" data-lookup="getAnimation">getAnimation()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getAnimationCount" class="getAnimationCount" data-lookup="getAnimationCount">getAnimationCount()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getAssimpScene" class="getAssimpScene" data-lookup="getAssimpScene">getAssimpScene()</a></li>
+                     
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_getCurrentAnimatedMesh" class="getCurrentAnimatedMesh" data-lookup="getCurrentAnimatedMesh">getCurrentAnimatedMesh()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_getMaterialForMesh" class="getMaterialForMesh" data-lookup="getMaterialForMesh">getMaterialForMesh()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_getMesh" class="getMesh" data-lookup="getMesh">getMesh()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_getMeshCount" class="getMeshCount" data-lookup="getMeshCount">getMeshCount()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getMeshHelper" class="getMeshHelper" data-lookup="getMeshHelper">getMeshHelper()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getMeshNames" class="getMeshNames" data-lookup="getMeshNames">getMeshNames()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getModelMatrix" class="getModelMatrix" data-lookup="getModelMatrix">getModelMatrix()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getNormalizedScale" class="getNormalizedScale" data-lookup="getNormalizedScale">getNormalizedScale()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getNumMeshes" class="getNumMeshes" data-lookup="getNumMeshes">getNumMeshes()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getNumRotations" class="getNumRotations" data-lookup="getNumRotations">getNumRotations()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getPosition" class="getPosition" data-lookup="getPosition">getPosition()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getRotationAngle" class="getRotationAngle" data-lookup="getRotationAngle">getRotationAngle()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getRotationAxis" class="getRotationAxis" data-lookup="getRotationAxis">getRotationAxis()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getScale" class="getScale" data-lookup="getScale">getScale()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getSceneCenter" class="getSceneCenter" data-lookup="getSceneCenter">getSceneCenter()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getSceneMax" class="getSceneMax" data-lookup="getSceneMax">getSceneMax()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getSceneMin" class="getSceneMin" data-lookup="getSceneMin">getSceneMin()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getTextureForMesh" class="getTextureForMesh" data-lookup="getTextureForMesh">getTextureForMesh()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_hasAnimations" class="hasAnimations" data-lookup="hasAnimations">hasAnimations()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_hasMeshes" class="hasMeshes" data-lookup="hasMeshes">hasMeshes()</a></li>
+                     
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_loadModel" class="loadModel" data-lookup="loadModel">loadModel()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_optimizeScene" class="optimizeScene" data-lookup="optimizeScene">optimizeScene()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_playAllAnimations" class="playAllAnimations" data-lookup="playAllAnimations">playAllAnimations()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_resetAllAnimations" class="resetAllAnimations" data-lookup="resetAllAnimations">resetAllAnimations()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setLoopStateForAllAnimations" class="setLoopStateForAllAnimations" data-lookup="setLoopStateForAllAnimations">setLoopStateForAllAnimations()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setNormalizationFactor" class="setNormalizationFactor" data-lookup="setNormalizationFactor">setNormalizationFactor()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setPausedForAllAnimations" class="setPausedForAllAnimations" data-lookup="setPausedForAllAnimations">setPausedForAllAnimations()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setPosition" class="setPosition" data-lookup="setPosition">setPosition()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setPositionForAllAnimations" class="setPositionForAllAnimations" data-lookup="setPositionForAllAnimations">setPositionForAllAnimations()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setRotation" class="setRotation" data-lookup="setRotation">setRotation()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setScale" class="setScale" data-lookup="setScale">setScale()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setScaleNormalization" class="setScaleNormalization" data-lookup="setScaleNormalization">setScaleNormalization()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_stopAllAnimations" class="stopAllAnimations" data-lookup="stopAllAnimations">stopAllAnimations()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_update" class="update" data-lookup="update">update()</a></li>
+                     
+                     
+                     
+                     
+                     
+                     
+             </ul>
+            
+             
+             
+             <!-- list of variables -->              
+            
+             
+            
+             <!-- list of functions -->              
+		    </div>
+	    <div class="submenucol-right">
+            <div class="documentation_detail class_documentation">
+              
+  <p>ofAssimpModelLoader addon permits loading to memory and processing 3D models in a convenient and unified format. This addon is mostly a wrapper of the "Open Asset Import Library" (assimp), in its version 2.0  (<a href="http://assimp.sourceforge.net/">http://assimp.sourceforge.net/</a>).</p>
+<p>For an example see <code>openFrameworks/examples/addons/assimpExample</code>.</p>
+<p>At least, these model formats are supported:</p>
+<ul>
+<li>3DS</li>
+<li>ASE</li>
+<li>DXF</li>
+<li>HMP</li>
+<li>MD2</li>
+<li>MD3</li>
+<li>MD5</li>
+<li>MDC</li>
+<li>MDL</li>
+<li>NFF</li>
+<li>PLY</li>
+<li>STL</li>
+<li>X</li>
+<li>LWO</li>
+<li>OBJ</li>
+<li>SMD</li>
+<li>Collada</li>
+<li>LWO</li>
+<li>Ogre XML</li>
+<li>partly LWS </li>
+</ul>
+<p>In order to load a file to memory, you just need to declare a new variable of type ofAssimpModelLoader and use the function loadModel():</p>
+<pre><code class="cpp">&lt;a href=&quot;../ofxAssimpModelLoader/ofxAssimpModelLoader.html&quot; class=&quot;docs_class&quot; &gt;ofxAssimpModelLoader&lt;/a&gt; model;
+model.loadModel(&quot;file_name.3DS&quot;);
+</code></pre>
+
+<p>You could draw it using:</p>
+<pre><code class="cpp">void ofApp::draw(){
+   ofBackground(50, 50, 50, 0);
+   ofSetColor(255, 255, 255, 255);
+
+   model.drawFaces();
+}
+</code></pre>
+
+<p>But probably you would not see the entire model. In the next snippet it appears centered:</p>
+<pre><code class="cpp">void ofApp::draw(){
+   ofBackground(50, 50, 50, 0);
+   ofSetColor(255, 255, 255, 255);
+
+   model.setPosition(ofGetWidth()/2, (float)ofGetHeight() * 0.75 , 0);
+   model.drawFaces();
+}
+</code></pre>
+
+<p>There are other two ways to represent the model, by its points or by the wiring between the points. In the next snippet the three ways are represented:</p>
+<pre><code class="cpp">void ofApp::draw(){
+   ofBackground(50, 50, 50, 0);
+   ofSetColor(255, 255, 255, 255);
+
+   model.setPosition(ofGetWidth()*2/6, (float)ofGetHeight() * 0.75 , 0);
+   model.draw(OF_MESH_FILL); //same as model.drawFaces();
+   model.setPosition(ofGetWidth()*3/6, (float)ofGetHeight() * 0.75 , 0);
+   model.draw(OF_MESH_POINTS); // same as model.drawVertices();
+   model.setPosition(ofGetWidth()*4/6, (float)ofGetHeight() * 0.75 , 0);
+   model.draw(OF_MESH_WIREFRAME); // same as model.drawWireframe();
+}
+</code></pre>
+
+<p>We can use model.setScale() to change the size and setRotation() to rotate the model. The next snippet, for instance, draws the model half it's size and if it was looking at you, now is showing it's back:</p>
+<pre><code class="cpp">model.setRotation(0,90,0,1,0);
+model.setScale(0.5, 0.5, 0.5);
+model.setPosition(ofGetWidth()*2/6, (float)ofGetHeight() * 0.75 , 0);
+model.drawFaces();
+</code></pre>
+
+<p>You can accumulate setRotation() functions for rotating different degrees in different axis if you increment the value of the first variable:</p>
+<pre><code class="cpp">model.setRotation(0, actualXRotation, 1, 0, 0);
+model.setRotation(1, actualYRotation, 0, 1, 0);
+model.setRotation(2, actualZRotation, 0, 0, 1);
+</code></pre>
+
+
+              
+              
+  
+
+           </div>
+                  
+            <!-- methods detail -->
+              <!--h2><a name="methods"></a>ofxAssimpModelLoader methods</h2-->
+                        
+<div class="documentation_detail ofxAssimpModelLoader" data-lookup="ofxAssimpModelLoader" data-item-type="method">
+  	 
+	<h1><a name="show_ofxAssimpModelLoader">ofxAssimpModelLoader()</a></h1>
+	<h2>
+  <p>ofxAssimpModelLoader::ofxAssimpModelLoader()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ~ofxAssimpModelLoader" data-lookup="~ofxAssimpModelLoader" data-item-type="method">
+  	 
+	<h1><a name="show_~ofxAssimpModelLoader">~ofxAssimpModelLoader()</a></h1>
+	<h2>
+  <p>ofxAssimpModelLoader::~ofxAssimpModelLoader()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail calculateDimensions" data-lookup="calculateDimensions" data-item-type="method">
+  	 
+	<h1><a name="show_calculateDimensions">calculateDimensions()</a></h1>
+	<h2>
+  <p>void ofxAssimpModelLoader::calculateDimensions()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail clear" data-lookup="clear" data-item-type="method">
+  	 
+	<h1><a name="show_clear">clear()</a></h1>
+	<h2>
+  <p>void ofxAssimpModelLoader::clear()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail createEmptyModel" data-lookup="createEmptyModel" data-item-type="method">
+  	 
+	<h1><a name="show_createEmptyModel">createEmptyModel()</a></h1>
+	<h2>
+  <p>void ofxAssimpModelLoader::createEmptyModel()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail createLightsFromAiModel" data-lookup="createLightsFromAiModel" data-item-type="method">
+  	 
+	<h1><a name="show_createLightsFromAiModel">createLightsFromAiModel()</a></h1>
+	<h2>
+  <p>void ofxAssimpModelLoader::createLightsFromAiModel()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail disableColors" data-lookup="disableColors" data-item-type="method">
+  	 
+	<h1><a name="show_disableColors">disableColors()</a></h1>
+	<h2>
+  <p>void ofxAssimpModelLoader::disableColors()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail disableMaterials" data-lookup="disableMaterials" data-item-type="method">
+  	 
+	<h1><a name="show_disableMaterials">disableMaterials()</a></h1>
+	<h2>
+  <p>void ofxAssimpModelLoader::disableMaterials()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail disableNormals" data-lookup="disableNormals" data-item-type="method">
+  	 
+	<h1><a name="show_disableNormals">disableNormals()</a></h1>
+	<h2>
+  <p>void ofxAssimpModelLoader::disableNormals()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail disableTextures" data-lookup="disableTextures" data-item-type="method">
+  	 
+	<h1><a name="show_disableTextures">disableTextures()</a></h1>
+	<h2>
+  <p>void ofxAssimpModelLoader::disableTextures()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofxAssimpModelLoader::draw(ofPolyRenderMode renderType)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawFaces" data-lookup="drawFaces" data-item-type="method">
+  	 
+	<h1><a name="show_drawFaces">drawFaces()</a></h1>
+	<h2>
+  <p>void ofxAssimpModelLoader::drawFaces()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawVertices" data-lookup="drawVertices" data-item-type="method">
+  	 
+	<h1><a name="show_drawVertices">drawVertices()</a></h1>
+	<h2>
+  <p>void ofxAssimpModelLoader::drawVertices()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawWireframe" data-lookup="drawWireframe" data-item-type="method">
+  	 
+	<h1><a name="show_drawWireframe">drawWireframe()</a></h1>
+	<h2>
+  <p>void ofxAssimpModelLoader::drawWireframe()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail enableColors" data-lookup="enableColors" data-item-type="method">
+  	 
+	<h1><a name="show_enableColors">enableColors()</a></h1>
+	<h2>
+  <p>void ofxAssimpModelLoader::enableColors()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail enableMaterials" data-lookup="enableMaterials" data-item-type="method">
+  	 
+	<h1><a name="show_enableMaterials">enableMaterials()</a></h1>
+	<h2>
+  <p>void ofxAssimpModelLoader::enableMaterials()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail enableNormals" data-lookup="enableNormals" data-item-type="method">
+  	 
+	<h1><a name="show_enableNormals">enableNormals()</a></h1>
+	<h2>
+  <p>void ofxAssimpModelLoader::enableNormals()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail enableTextures" data-lookup="enableTextures" data-item-type="method">
+  	 
+	<h1><a name="show_enableTextures">enableTextures()</a></h1>
+	<h2>
+  <p>void ofxAssimpModelLoader::enableTextures()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getAnimation" data-lookup="getAnimation" data-item-type="method">
+  	 
+	<h1><a name="show_getAnimation">getAnimation(...)</a></h1>
+	<h2>
+  <p>ofxAssimpAnimation &amp; ofxAssimpModelLoader::getAnimation(int animationIndex)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getAnimationCount" data-lookup="getAnimationCount" data-item-type="method">
+  	 
+	<h1><a name="show_getAnimationCount">getAnimationCount()</a></h1>
+	<h2>
+  <p>unsigned int ofxAssimpModelLoader::getAnimationCount()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getAssimpScene" data-lookup="getAssimpScene" data-item-type="method">
+  	 
+	<h1><a name="show_getAssimpScene">getAssimpScene()</a></h1>
+	<h2>
+  <p>const aiScene * ofxAssimpModelLoader::getAssimpScene()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getCurrentAnimatedMesh" data-lookup="getCurrentAnimatedMesh" data-item-type="method">
+  	 
+	<h1><a name="show_getCurrentAnimatedMesh">getCurrentAnimatedMesh(...)</a></h1>
+	<h2>
+  <p>ofMesh ofxAssimpModelLoader::getCurrentAnimatedMesh(int num)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getCurrentAnimatedMesh" data-lookup="getCurrentAnimatedMesh" data-item-type="method">
+  	 
+	<h1><a name="show_getCurrentAnimatedMesh">getCurrentAnimatedMesh(...)</a></h1>
+	<h2>
+  <p>ofMesh ofxAssimpModelLoader::getCurrentAnimatedMesh(string name)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getMaterialForMesh" data-lookup="getMaterialForMesh" data-item-type="method">
+  	 
+	<h1><a name="show_getMaterialForMesh">getMaterialForMesh(...)</a></h1>
+	<h2>
+  <p>ofMaterial ofxAssimpModelLoader::getMaterialForMesh(int num)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getMaterialForMesh" data-lookup="getMaterialForMesh" data-item-type="method">
+  	 
+	<h1><a name="show_getMaterialForMesh">getMaterialForMesh(...)</a></h1>
+	<h2>
+  <p>ofMaterial ofxAssimpModelLoader::getMaterialForMesh(string name)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getMesh" data-lookup="getMesh" data-item-type="method">
+  	 
+	<h1><a name="show_getMesh">getMesh(...)</a></h1>
+	<h2>
+  <p>ofMesh ofxAssimpModelLoader::getMesh(int num)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getMesh" data-lookup="getMesh" data-item-type="method">
+  	 
+	<h1><a name="show_getMesh">getMesh(...)</a></h1>
+	<h2>
+  <p>ofMesh ofxAssimpModelLoader::getMesh(string name)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getMeshCount" data-lookup="getMeshCount" data-item-type="method">
+  	 
+	<h1><a name="show_getMeshCount">getMeshCount()</a></h1>
+	<h2>
+  <p>unsigned int ofxAssimpModelLoader::getMeshCount()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getMeshHelper" data-lookup="getMeshHelper" data-item-type="method">
+  	 
+	<h1><a name="show_getMeshHelper">getMeshHelper(...)</a></h1>
+	<h2>
+  <p>ofxAssimpMeshHelper &amp; ofxAssimpModelLoader::getMeshHelper(int meshIndex)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getMeshNames" data-lookup="getMeshNames" data-item-type="method">
+  	 
+	<h1><a name="show_getMeshNames">getMeshNames()</a></h1>
+	<h2>
+  <p>vector&lt; string &gt; ofxAssimpModelLoader::getMeshNames()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getModelMatrix" data-lookup="getModelMatrix" data-item-type="method">
+  	 
+	<h1><a name="show_getModelMatrix">getModelMatrix()</a></h1>
+	<h2>
+  <p>ofMatrix4x4 ofxAssimpModelLoader::getModelMatrix()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getNormalizedScale" data-lookup="getNormalizedScale" data-item-type="method">
+  	 
+	<h1><a name="show_getNormalizedScale">getNormalizedScale()</a></h1>
+	<h2>
+  <p>float ofxAssimpModelLoader::getNormalizedScale()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getNumMeshes" data-lookup="getNumMeshes" data-item-type="method">
+  	 
+	<h1><a name="show_getNumMeshes">getNumMeshes()</a></h1>
+	<h2>
+  <p>int ofxAssimpModelLoader::getNumMeshes()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getNumRotations" data-lookup="getNumRotations" data-item-type="method">
+  	 
+	<h1><a name="show_getNumRotations">getNumRotations()</a></h1>
+	<h2>
+  <p>int ofxAssimpModelLoader::getNumRotations()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getPosition" data-lookup="getPosition" data-item-type="method">
+  	 
+	<h1><a name="show_getPosition">getPosition()</a></h1>
+	<h2>
+  <p>ofPoint ofxAssimpModelLoader::getPosition()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getRotationAngle" data-lookup="getRotationAngle" data-item-type="method">
+  	 
+	<h1><a name="show_getRotationAngle">getRotationAngle(...)</a></h1>
+	<h2>
+  <p>float ofxAssimpModelLoader::getRotationAngle(int which)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getRotationAxis" data-lookup="getRotationAxis" data-item-type="method">
+  	 
+	<h1><a name="show_getRotationAxis">getRotationAxis(...)</a></h1>
+	<h2>
+  <p>ofPoint ofxAssimpModelLoader::getRotationAxis(int which)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getScale" data-lookup="getScale" data-item-type="method">
+  	 
+	<h1><a name="show_getScale">getScale()</a></h1>
+	<h2>
+  <p>ofPoint ofxAssimpModelLoader::getScale()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getSceneCenter" data-lookup="getSceneCenter" data-item-type="method">
+  	 
+	<h1><a name="show_getSceneCenter">getSceneCenter()</a></h1>
+	<h2>
+  <p>ofPoint ofxAssimpModelLoader::getSceneCenter()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getSceneMax" data-lookup="getSceneMax" data-item-type="method">
+  	 
+	<h1><a name="show_getSceneMax">getSceneMax(...)</a></h1>
+	<h2>
+  <p>ofPoint ofxAssimpModelLoader::getSceneMax(bool bScaled=false)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getSceneMin" data-lookup="getSceneMin" data-item-type="method">
+  	 
+	<h1><a name="show_getSceneMin">getSceneMin(...)</a></h1>
+	<h2>
+  <p>ofPoint ofxAssimpModelLoader::getSceneMin(bool bScaled=false)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getTextureForMesh" data-lookup="getTextureForMesh" data-item-type="method">
+  	 
+	<h1><a name="show_getTextureForMesh">getTextureForMesh(...)</a></h1>
+	<h2>
+  <p>ofTexture ofxAssimpModelLoader::getTextureForMesh(int num)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getTextureForMesh" data-lookup="getTextureForMesh" data-item-type="method">
+  	 
+	<h1><a name="show_getTextureForMesh">getTextureForMesh(...)</a></h1>
+	<h2>
+  <p>ofTexture ofxAssimpModelLoader::getTextureForMesh(string name)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail hasAnimations" data-lookup="hasAnimations" data-item-type="method">
+  	 
+	<h1><a name="show_hasAnimations">hasAnimations()</a></h1>
+	<h2>
+  <p>bool ofxAssimpModelLoader::hasAnimations()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail hasMeshes" data-lookup="hasMeshes" data-item-type="method">
+  	 
+	<h1><a name="show_hasMeshes">hasMeshes()</a></h1>
+	<h2>
+  <p>bool ofxAssimpModelLoader::hasMeshes()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail loadModel" data-lookup="loadModel" data-item-type="method">
+  	 
+	<h1><a name="show_loadModel">loadModel(...)</a></h1>
+	<h2>
+  <p>bool ofxAssimpModelLoader::loadModel(ofBuffer &amp;buffer, bool optimize=false, const char *extension)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail loadModel" data-lookup="loadModel" data-item-type="method">
+  	 
+	<h1><a name="show_loadModel">loadModel(...)</a></h1>
+	<h2>
+  <p>bool ofxAssimpModelLoader::loadModel(string modelName, bool optimize=false)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail optimizeScene" data-lookup="optimizeScene" data-item-type="method">
+  	 
+	<h1><a name="show_optimizeScene">optimizeScene()</a></h1>
+	<h2>
+  <p>void ofxAssimpModelLoader::optimizeScene()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail playAllAnimations" data-lookup="playAllAnimations" data-item-type="method">
+  	 
+	<h1><a name="show_playAllAnimations">playAllAnimations()</a></h1>
+	<h2>
+  <p>void ofxAssimpModelLoader::playAllAnimations()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail resetAllAnimations" data-lookup="resetAllAnimations" data-item-type="method">
+  	 
+	<h1><a name="show_resetAllAnimations">resetAllAnimations()</a></h1>
+	<h2>
+  <p>void ofxAssimpModelLoader::resetAllAnimations()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setLoopStateForAllAnimations" data-lookup="setLoopStateForAllAnimations" data-item-type="method">
+  	 
+	<h1><a name="show_setLoopStateForAllAnimations">setLoopStateForAllAnimations(...)</a></h1>
+	<h2>
+  <p>void ofxAssimpModelLoader::setLoopStateForAllAnimations(ofLoopType state)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setNormalizationFactor" data-lookup="setNormalizationFactor" data-item-type="method">
+  	 
+	<h1><a name="show_setNormalizationFactor">setNormalizationFactor(...)</a></h1>
+	<h2>
+  <p>void ofxAssimpModelLoader::setNormalizationFactor(float factor)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setPausedForAllAnimations" data-lookup="setPausedForAllAnimations" data-item-type="method">
+  	 
+	<h1><a name="show_setPausedForAllAnimations">setPausedForAllAnimations(...)</a></h1>
+	<h2>
+  <p>void ofxAssimpModelLoader::setPausedForAllAnimations(bool pause)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setPosition" data-lookup="setPosition" data-item-type="method">
+  	 
+	<h1><a name="show_setPosition">setPosition(...)</a></h1>
+	<h2>
+  <p>void ofxAssimpModelLoader::setPosition(float x, float y, float z)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setPositionForAllAnimations" data-lookup="setPositionForAllAnimations" data-item-type="method">
+  	 
+	<h1><a name="show_setPositionForAllAnimations">setPositionForAllAnimations(...)</a></h1>
+	<h2>
+  <p>void ofxAssimpModelLoader::setPositionForAllAnimations(float position)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setRotation" data-lookup="setRotation" data-item-type="method">
+  	 
+	<h1><a name="show_setRotation">setRotation(...)</a></h1>
+	<h2>
+  <p>void ofxAssimpModelLoader::setRotation(int which, float angle, float rot_x, float rot_y, float r_z)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setScale" data-lookup="setScale" data-item-type="method">
+  	 
+	<h1><a name="show_setScale">setScale(...)</a></h1>
+	<h2>
+  <p>void ofxAssimpModelLoader::setScale(float x, float y, float z)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setScaleNormalization" data-lookup="setScaleNormalization" data-item-type="method">
+  	 
+	<h1><a name="show_setScaleNormalization">setScaleNormalization(...)</a></h1>
+	<h2>
+  <p>void ofxAssimpModelLoader::setScaleNormalization(bool normalize)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail stopAllAnimations" data-lookup="stopAllAnimations" data-item-type="method">
+  	 
+	<h1><a name="show_stopAllAnimations">stopAllAnimations()</a></h1>
+	<h2>
+  <p>void ofxAssimpModelLoader::stopAllAnimations()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail update" data-lookup="update" data-item-type="method">
+  	 
+	<h1><a name="show_update">update()</a></h1>
+	<h2>
+  <p>void ofxAssimpModelLoader::update()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+
+            <!-- vars detail -->
+
+            <!-- functions detail -->
+            <hr/>
+                
+            <!--diqus comments for class/functions module description-->
+            <div id="comments_header">
+            <h2>comments</h2>
+            <p>You can add comments with usage examples or other information for each class, method or variable, for adding documentation to an empty section or reporting errors is better to send a fix or open an issue through <a href="https://github.com/openframeworks/ofSite">github</a>.</p>
+            <p>When posting code enclose it in:</p>
+            <pre><code class="html">&lt;pre&gt;&lt;code class=&quot;cpp&quot;&gt;&nbsp;&lt;/code&gt;&lt;/pre&gt;</code></pre>
+            <br/>
+            </div>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+
+            // DISQUS
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+
+            var disqus_shortname = 'openframeworks'; // required: replace example with your forum shortname
+            //var disqus_developer = 1;
+
+            location_elements = window.location.pathname.split("/");
+            module_name = location_elements[location_elements.length-1].split(".")[0];
+            section_name = location.hash.split("_")[1];
+            console.log(module_name + " " + section_name);
+            if(section_name!=undefined && section_name!=''){
+            var disqus_identifier = window.location.pathname + "#!show_" + section_name;  
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "#!show_" + section_name;
+            var discus_title = document.title + " - " + section_name;
+            }else{
+            var disqus_identifier = window.location.pathname;
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            var discus_title = document.title;
+            }
+
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */   
+            (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		
+        </div><!-- End Submenu right -->
+      </div><!-- End page wide -->
+      </div><!-- End body wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:33:50 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+4d738d6979d8e7992359cde47632192d1fbef472
+">
+
+4d738d6979d8e7992359cde47632192d1fbef472
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+

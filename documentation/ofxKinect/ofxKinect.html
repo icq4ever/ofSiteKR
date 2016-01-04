@@ -1,0 +1,2113 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr - ofxKinect</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+    <script src="http://icq4ever.iptime.org//js/jquery.columnizer.min.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation.js"></script>
+  </head>
+  <body>
+    <div id="content">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">
+          <div class="page-wide">
+          
+              <div id="docstitle"><h1>ofxKinect</h1></div>
+              <div id="editdocs">
+                    <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/addons/ofxKinect/ofxKinect.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
+              </div>
+              
+          </div>
+          
+          
+        <div class="page-wide">
+		    <div class="submenucol-left">
+		     <!-- list of methods -->
+		     <p class="top_list_header">class methods</p>
+             <ul class="functionslist">
+                 
+                         <li class="noDoc">
+                         <a href="#show_ofxKinect" class="ofxKinect" data-lookup="ofxKinect">ofxKinect()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_~ofxKinect" class="~ofxKinect" data-lookup="~ofxKinect">~ofxKinect()</a></li>
+                     
+                         <li>
+                         <a href="#show_clear" class="clear" data-lookup="clear">clear()</a></li>
+                     
+                         <li>
+                         <a href="#show_close" class="close" data-lookup="close">close()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_draw" class="draw" data-lookup="draw">draw()</a></li>
+                     
+                     
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_drawDepth" class="drawDepth" data-lookup="drawDepth">drawDepth()</a></li>
+                     
+                     
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_enableDepthNearValueWhite" class="enableDepthNearValueWhite" data-lookup="enableDepthNearValueWhite">enableDepthNearValueWhite()</a></li>
+                     
+                         <li>
+                         <a href="#show_getAccelPitch" class="getAccelPitch" data-lookup="getAccelPitch">getAccelPitch()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getAccelRoll" class="getAccelRoll" data-lookup="getAccelRoll">getAccelRoll()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getColorAt" class="getColorAt" data-lookup="getColorAt">getColorAt()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_getCurrentCameraTiltAngle" class="getCurrentCameraTiltAngle" data-lookup="getCurrentCameraTiltAngle">getCurrentCameraTiltAngle()</a></li>
+                     
+                         <li>
+                         <a href="#show_getDepthPixels" class="getDepthPixels" data-lookup="getDepthPixels">getDepthPixels()</a></li>
+                     
+                         <li>
+                         <a href="#show_getDepthPixelsRef" class="getDepthPixelsRef" data-lookup="getDepthPixelsRef">getDepthPixelsRef()</a></li>
+                     
+                         <li>
+                         <a href="#show_getDepthTextureReference" class="getDepthTextureReference" data-lookup="getDepthTextureReference">getDepthTextureReference()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getDeviceId" class="getDeviceId" data-lookup="getDeviceId">getDeviceId()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getDistanceAt" class="getDistanceAt" data-lookup="getDistanceAt">getDistanceAt()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_getDistancePixels" class="getDistancePixels" data-lookup="getDistancePixels">getDistancePixels()</a></li>
+                     
+                         <li>
+                         <a href="#show_getDistancePixelsRef" class="getDistancePixelsRef" data-lookup="getDistancePixelsRef">getDistancePixelsRef()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getFarClipping" class="getFarClipping" data-lookup="getFarClipping">getFarClipping()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getHeight" class="getHeight" data-lookup="getHeight">getHeight()</a></li>
+                     
+                         <li>
+                         <a href="#show_getMksAccel" class="getMksAccel" data-lookup="getMksAccel">getMksAccel()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getNearClipping" class="getNearClipping" data-lookup="getNearClipping">getNearClipping()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getPixels" class="getPixels" data-lookup="getPixels">getPixels()</a></li>
+                     
+                         <li>
+                         <a href="#show_getPixelsRef" class="getPixelsRef" data-lookup="getPixelsRef">getPixelsRef()</a></li>
+                     
+                         <li>
+                         <a href="#show_getRawAccel" class="getRawAccel" data-lookup="getRawAccel">getRawAccel()</a></li>
+                     
+                         <li>
+                         <a href="#show_getRawDepthPixels" class="getRawDepthPixels" data-lookup="getRawDepthPixels">getRawDepthPixels()</a></li>
+                     
+                         <li>
+                         <a href="#show_getRawDepthPixelsRef" class="getRawDepthPixelsRef" data-lookup="getRawDepthPixelsRef">getRawDepthPixelsRef()</a></li>
+                     
+                         <li>
+                         <a href="#show_getSensorCameraDistance" class="getSensorCameraDistance" data-lookup="getSensorCameraDistance">getSensorCameraDistance()</a></li>
+                     
+                         <li>
+                         <a href="#show_getSensorEmitterDistance" class="getSensorEmitterDistance" data-lookup="getSensorEmitterDistance">getSensorEmitterDistance()</a></li>
+                     
+                         <li>
+                         <a href="#show_getSerial" class="getSerial" data-lookup="getSerial">getSerial()</a></li>
+                     
+                         <li>
+                         <a href="#show_getTargetCameraTiltAngle" class="getTargetCameraTiltAngle" data-lookup="getTargetCameraTiltAngle">getTargetCameraTiltAngle()</a></li>
+                     
+                         <li>
+                         <a href="#show_getTextureReference" class="getTextureReference" data-lookup="getTextureReference">getTextureReference()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getWidth" class="getWidth" data-lookup="getWidth">getWidth()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getWorldCoordinateAt" class="getWorldCoordinateAt" data-lookup="getWorldCoordinateAt">getWorldCoordinateAt()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_getZeroPlaneDistance" class="getZeroPlaneDistance" data-lookup="getZeroPlaneDistance">getZeroPlaneDistance()</a></li>
+                     
+                         <li>
+                         <a href="#show_getZeroPlanePixelSize" class="getZeroPlanePixelSize" data-lookup="getZeroPlanePixelSize">getZeroPlanePixelSize()</a></li>
+                     
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_hasAccelControl" class="hasAccelControl" data-lookup="hasAccelControl">hasAccelControl()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_hasCamTiltControl" class="hasCamTiltControl" data-lookup="hasCamTiltControl">hasCamTiltControl()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_hasLedControl" class="hasLedControl" data-lookup="hasLedControl">hasLedControl()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_init" class="init" data-lookup="init">init()</a></li>
+                     
+                         <li>
+                         <a href="#show_isConnected" class="isConnected" data-lookup="isConnected">isConnected()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_isDepthNearValueWhite" class="isDepthNearValueWhite" data-lookup="isDepthNearValueWhite">isDepthNearValueWhite()</a></li>
+                     
+                         <li>
+                         <a href="#show_isDeviceConnected" class="isDeviceConnected" data-lookup="isDeviceConnected">isDeviceConnected()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_isFrameNew" class="isFrameNew" data-lookup="isFrameNew">isFrameNew()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_isFrameNewDepth" class="isFrameNewDepth" data-lookup="isFrameNewDepth">isFrameNewDepth()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_isFrameNewVideo" class="isFrameNewVideo" data-lookup="isFrameNewVideo">isFrameNewVideo()</a></li>
+                     
+                         <li>
+                         <a href="#show_listDevices" class="listDevices" data-lookup="listDevices">listDevices()</a></li>
+                     
+                         <li>
+                         <a href="#show_nextAvailableId" class="nextAvailableId" data-lookup="nextAvailableId">nextAvailableId()</a></li>
+                     
+                         <li>
+                         <a href="#show_nextAvailableSerial" class="nextAvailableSerial" data-lookup="nextAvailableSerial">nextAvailableSerial()</a></li>
+                     
+                         <li>
+                         <a href="#show_numAvailableDevices" class="numAvailableDevices" data-lookup="numAvailableDevices">numAvailableDevices()</a></li>
+                     
+                         <li>
+                         <a href="#show_numConnectedDevices" class="numConnectedDevices" data-lookup="numConnectedDevices">numConnectedDevices()</a></li>
+                     
+                         <li>
+                         <a href="#show_numTotalDevices" class="numTotalDevices" data-lookup="numTotalDevices">numTotalDevices()</a></li>
+                     
+                         <li>
+                         <a href="#show_open" class="open" data-lookup="open">open()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_setCameraTiltAngle" class="setCameraTiltAngle" data-lookup="setCameraTiltAngle">setCameraTiltAngle()</a></li>
+                     
+                         <li>
+                         <a href="#show_setDepthClipping" class="setDepthClipping" data-lookup="setDepthClipping">setDepthClipping()</a></li>
+                     
+                         <li>
+                         <a href="#show_setLed" class="setLed" data-lookup="setLed">setLed()</a></li>
+                     
+                         <li>
+                         <a href="#show_setRegistration" class="setRegistration" data-lookup="setRegistration">setRegistration()</a></li>
+                     
+                         <li>
+                         <a href="#show_setUseTexture" class="setUseTexture" data-lookup="setUseTexture">setUseTexture()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_update" class="update" data-lookup="update">update()</a></li>
+                     
+                     
+                     
+             </ul>
+            
+             
+             
+             <!-- list of variables -->              
+                <p class="top_list_header">variables</p>
+                <ul class="functionslist">
+                            <li class="noDoc">
+                            <a href="#show_height" class="height" data-lookup="height">const int  height</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_width" class="width" data-lookup="width">const int  width</a> </li>
+                 </ul>
+            
+             
+            
+             <!-- list of functions -->              
+		    </div>
+	    <div class="submenucol-right">
+            <div class="documentation_detail class_documentation">
+              
+  
+
+
+                        <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+                        
+  <p>wrapper for a freenect kinect device</p>
+<p>references:<a href="http://openkinect.org/wiki/Main_Page">http://openkinect.org/wiki/Main_Page</a><a href="https://github.com/OpenKinect/libfreenect/blob/master/include/libfreenect.h">https://github.com/OpenKinect/libfreenect/blob/master/include/libfreenect.h</a> </p>
+
+              
+              
+  
+
+           </div>
+                  
+            <!-- methods detail -->
+              <!--h2><a name="methods"></a>ofxKinect methods</h2-->
+                        
+<div class="documentation_detail ofxKinect" data-lookup="ofxKinect" data-item-type="method">
+  	 
+	<h1><a name="show_ofxKinect">ofxKinect()</a></h1>
+	<h2>
+  <p>ofxKinect::ofxKinect()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ~ofxKinect" data-lookup="~ofxKinect" data-item-type="method">
+  	 
+	<h1><a name="show_~ofxKinect">~ofxKinect()</a></h1>
+	<h2>
+  <p>ofxKinect::~ofxKinect()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail clear" data-lookup="clear" data-item-type="method">
+  	 
+	<h1><a name="show_clear">clear()</a></h1>
+	<h2>
+  <p>void ofxKinect::clear()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>clear resources, do not call this while ofxKinect is running! </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail close" data-lookup="close" data-item-type="method">
+  	 
+	<h1><a name="show_close">close()</a></h1>
+	<h2>
+  <p>void ofxKinect::close()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>close the connection and stop grabbing images </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofxKinect::draw(const ofPoint &amp;point)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofxKinect::draw(const ofRectangle &amp;rect)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofxKinect::draw(float x, float y)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofxKinect::draw(float x, float y, float w, float h)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>draw the video texture </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawDepth" data-lookup="drawDepth" data-item-type="method">
+  	 
+	<h1><a name="show_drawDepth">drawDepth(...)</a></h1>
+	<h2>
+  <p>void ofxKinect::drawDepth(const ofPoint &amp;point)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawDepth" data-lookup="drawDepth" data-item-type="method">
+  	 
+	<h1><a name="show_drawDepth">drawDepth(...)</a></h1>
+	<h2>
+  <p>void ofxKinect::drawDepth(const ofRectangle &amp;rect)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawDepth" data-lookup="drawDepth" data-item-type="method">
+  	 
+	<h1><a name="show_drawDepth">drawDepth(...)</a></h1>
+	<h2>
+  <p>void ofxKinect::drawDepth(float x, float y)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawDepth" data-lookup="drawDepth" data-item-type="method">
+  	 
+	<h1><a name="show_drawDepth">drawDepth(...)</a></h1>
+	<h2>
+  <p>void ofxKinect::drawDepth(float x, float y, float w, float h)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>draw the grayscale depth texture </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail enableDepthNearValueWhite" data-lookup="enableDepthNearValueWhite" data-item-type="method">
+  	 
+	<h1><a name="show_enableDepthNearValueWhite">enableDepthNearValueWhite(...)</a></h1>
+	<h2>
+  <p>void ofxKinect::enableDepthNearValueWhite(bool bEnabled=true)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getAccelPitch" data-lookup="getAccelPitch" data-item-type="method">
+  	 
+	<h1><a name="show_getAccelPitch">getAccelPitch()</a></h1>
+	<h2>
+  <p>float ofxKinect::getAccelPitch()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>get the current pitch (x axis) &amp; roll (z axis) of the kinect in degrees</p>
+<p>useful to correct the 3d scene based on the camera inclination </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getAccelRoll" data-lookup="getAccelRoll" data-item-type="method">
+  	 
+	<h1><a name="show_getAccelRoll">getAccelRoll()</a></h1>
+	<h2>
+  <p>float ofxKinect::getAccelRoll()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getColorAt" data-lookup="getColorAt" data-item-type="method">
+  	 
+	<h1><a name="show_getColorAt">getColorAt(...)</a></h1>
+	<h2>
+  <p>ofColor ofxKinect::getColorAt(const ofPoint &amp;p)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getColorAt" data-lookup="getColorAt" data-item-type="method">
+  	 
+	<h1><a name="show_getColorAt">getColorAt(...)</a></h1>
+	<h2>
+  <p>ofColor ofxKinect::getColorAt(int x, int y)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getCurrentCameraTiltAngle" data-lookup="getCurrentCameraTiltAngle" data-item-type="method">
+  	 
+	<h1><a name="show_getCurrentCameraTiltAngle">getCurrentCameraTiltAngle()</a></h1>
+	<h2>
+  <p>float ofxKinect::getCurrentCameraTiltAngle()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>get the current angle </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getDepthPixels" data-lookup="getDepthPixels" data-item-type="method">
+  	 
+	<h1><a name="show_getDepthPixels">getDepthPixels()</a></h1>
+	<h2>
+  <p>unsigned char * ofxKinect::getDepthPixels()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>get the pixels of the most recent depth frame </p>
+<p>grayscale values </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getDepthPixelsRef" data-lookup="getDepthPixelsRef" data-item-type="method">
+  	 
+	<h1><a name="show_getDepthPixelsRef">getDepthPixelsRef()</a></h1>
+	<h2>
+  <p>ofPixels &amp; ofxKinect::getDepthPixelsRef()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>get the pixels of the most recent depth frame </p>
+<p>grayscale values </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getDepthTextureReference" data-lookup="getDepthTextureReference" data-item-type="method">
+  	 
+	<h1><a name="show_getDepthTextureReference">getDepthTextureReference()</a></h1>
+	<h2>
+  <p>ofTexture &amp; ofxKinect::getDepthTextureReference()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>get the grayscale depth texture </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getDeviceId" data-lookup="getDeviceId" data-item-type="method">
+  	 
+	<h1><a name="show_getDeviceId">getDeviceId()</a></h1>
+	<h2>
+  <p>int ofxKinect::getDeviceId()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getDistanceAt" data-lookup="getDistanceAt" data-item-type="method">
+  	 
+	<h1><a name="show_getDistanceAt">getDistanceAt(...)</a></h1>
+	<h2>
+  <p>float ofxKinect::getDistanceAt(const ofPoint &amp;p)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getDistanceAt" data-lookup="getDistanceAt" data-item-type="method">
+  	 
+	<h1><a name="show_getDistanceAt">getDistanceAt(...)</a></h1>
+	<h2>
+  <p>float ofxKinect::getDistanceAt(int x, int y)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>get the calulated distance for a depth point </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getDistancePixels" data-lookup="getDistancePixels" data-item-type="method">
+  	 
+	<h1><a name="show_getDistancePixels">getDistancePixels()</a></h1>
+	<h2>
+  <p>float * ofxKinect::getDistancePixels()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>get the distance in millimeters to a given point as a float array </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getDistancePixelsRef" data-lookup="getDistancePixelsRef" data-item-type="method">
+  	 
+	<h1><a name="show_getDistancePixelsRef">getDistancePixelsRef()</a></h1>
+	<h2>
+  <p>ofFloatPixels &amp; ofxKinect::getDistancePixelsRef()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>get the distance in millimeters to a given point as a float array </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getFarClipping" data-lookup="getFarClipping" data-item-type="method">
+  	 
+	<h1><a name="show_getFarClipping">getFarClipping()</a></h1>
+	<h2>
+  <p>float ofxKinect::getFarClipping()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getHeight" data-lookup="getHeight" data-item-type="method">
+  	 
+	<h1><a name="show_getHeight">getHeight()</a></h1>
+	<h2>
+  <p>float ofxKinect::getHeight()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getMksAccel" data-lookup="getMksAccel" data-item-type="method">
+  	 
+	<h1><a name="show_getMksAccel">getMksAccel()</a></h1>
+	<h2>
+  <p>ofPoint ofxKinect::getMksAccel()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>axis-based gravity adjusted accelerometer values</p>
+<p>from libfreeenect:</p>
+<p>as laid out via the accelerometer data sheet, which is available at</p>
+<p><a href="http://www.kionix.com/Product%20Sheets/KXSD9%20Product%20Brief.pdf">http://www.kionix.com/Product%20Sheets/KXSD9%20Product%20Brief.pdf</a> </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getNearClipping" data-lookup="getNearClipping" data-item-type="method">
+  	 
+	<h1><a name="show_getNearClipping">getNearClipping()</a></h1>
+	<h2>
+  <p>float ofxKinect::getNearClipping()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getPixels" data-lookup="getPixels" data-item-type="method">
+  	 
+	<h1><a name="show_getPixels">getPixels()</a></h1>
+	<h2>
+  <p>unsigned char * ofxKinect::getPixels()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getPixelsRef" data-lookup="getPixelsRef" data-item-type="method">
+  	 
+	<h1><a name="show_getPixelsRef">getPixelsRef()</a></h1>
+	<h2>
+  <p>ofPixels &amp; ofxKinect::getPixelsRef()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>get the video pixels reference </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getRawAccel" data-lookup="getRawAccel" data-item-type="method">
+  	 
+	<h1><a name="show_getRawAccel">getRawAccel()</a></h1>
+	<h2>
+  <p>ofPoint ofxKinect::getRawAccel()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>raw axis values </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getRawDepthPixels" data-lookup="getRawDepthPixels" data-item-type="method">
+  	 
+	<h1><a name="show_getRawDepthPixels">getRawDepthPixels()</a></h1>
+	<h2>
+  <p>unsigned short * ofxKinect::getRawDepthPixels()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>raw 11 bit values </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getRawDepthPixelsRef" data-lookup="getRawDepthPixelsRef" data-item-type="method">
+  	 
+	<h1><a name="show_getRawDepthPixelsRef">getRawDepthPixelsRef()</a></h1>
+	<h2>
+  <p>ofShortPixels &amp; ofxKinect::getRawDepthPixelsRef()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>raw 11 bit values </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getSensorCameraDistance" data-lookup="getSensorCameraDistance" data-item-type="method">
+  	 
+	<h1><a name="show_getSensorCameraDistance">getSensorCameraDistance()</a></h1>
+	<h2>
+  <p>float ofxKinect::getSensorCameraDistance()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>get the distance between the IR sensor and the RGB camera in cm </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getSensorEmitterDistance" data-lookup="getSensorEmitterDistance" data-item-type="method">
+  	 
+	<h1><a name="show_getSensorEmitterDistance">getSensorEmitterDistance()</a></h1>
+	<h2>
+  <p>float ofxKinect::getSensorEmitterDistance()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>get the distance between the IR sensor and IR emitter in cm </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getSerial" data-lookup="getSerial" data-item-type="method">
+  	 
+	<h1><a name="show_getSerial">getSerial()</a></h1>
+	<h2>
+  <p>string ofxKinect::getSerial()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>get the unique serial number returns an empty string "" if not connected</p>
+<p>NOTE: currently, libfreenect returns a serial number with all 0s for kinect models &gt; 1414, so this will only work with the original xbox kinect </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getTargetCameraTiltAngle" data-lookup="getTargetCameraTiltAngle" data-item-type="method">
+  	 
+	<h1><a name="show_getTargetCameraTiltAngle">getTargetCameraTiltAngle()</a></h1>
+	<h2>
+  <p>float ofxKinect::getTargetCameraTiltAngle()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>get the target angle (if the camera is currently moving) </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getTextureReference" data-lookup="getTextureReference" data-item-type="method">
+  	 
+	<h1><a name="show_getTextureReference">getTextureReference()</a></h1>
+	<h2>
+  <p>ofTexture &amp; ofxKinect::getTextureReference()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>get the video (ir or rgb) texture </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getWidth" data-lookup="getWidth" data-item-type="method">
+  	 
+	<h1><a name="show_getWidth">getWidth()</a></h1>
+	<h2>
+  <p>float ofxKinect::getWidth()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getWorldCoordinateAt" data-lookup="getWorldCoordinateAt" data-item-type="method">
+  	 
+	<h1><a name="show_getWorldCoordinateAt">getWorldCoordinateAt(...)</a></h1>
+	<h2>
+  <p>ofVec3f ofxKinect::getWorldCoordinateAt(float cx, float cy, float wz)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getWorldCoordinateAt" data-lookup="getWorldCoordinateAt" data-item-type="method">
+  	 
+	<h1><a name="show_getWorldCoordinateAt">getWorldCoordinateAt(...)</a></h1>
+	<h2>
+  <p>ofVec3f ofxKinect::getWorldCoordinateAt(int cx, int cy)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>calculates the coordinate in the world for the depth point (perspective calculation)</p>
+<p>center of image is (0.0) </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getZeroPlaneDistance" data-lookup="getZeroPlaneDistance" data-item-type="method">
+  	 
+	<h1><a name="show_getZeroPlaneDistance">getZeroPlaneDistance()</a></h1>
+	<h2>
+  <p>float ofxKinect::getZeroPlaneDistance()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>get the focal length of the IR sensor in mm </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getZeroPlanePixelSize" data-lookup="getZeroPlanePixelSize" data-item-type="method">
+  	 
+	<h1><a name="show_getZeroPlanePixelSize">getZeroPlanePixelSize()</a></h1>
+	<h2>
+  <p>float ofxKinect::getZeroPlanePixelSize()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>get the size of a single pixel on the zero plane in mm </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail hasAccelControl" data-lookup="hasAccelControl" data-item-type="method">
+  	 
+	<h1><a name="show_hasAccelControl">hasAccelControl()</a></h1>
+	<h2>
+  <p>bool ofxKinect::hasAccelControl()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail hasCamTiltControl" data-lookup="hasCamTiltControl" data-item-type="method">
+  	 
+	<h1><a name="show_hasCamTiltControl">hasCamTiltControl()</a></h1>
+	<h2>
+  <p>bool ofxKinect::hasCamTiltControl()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail hasLedControl" data-lookup="hasLedControl" data-item-type="method">
+  	 
+	<h1><a name="show_hasLedControl">hasLedControl()</a></h1>
+	<h2>
+  <p>bool ofxKinect::hasLedControl()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail init" data-lookup="init" data-item-type="method">
+  	 
+	<h1><a name="show_init">init(...)</a></h1>
+	<h2>
+  <p>bool ofxKinect::init(bool infrared=false, bool video=true, bool texture=true)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail isConnected" data-lookup="isConnected" data-item-type="method">
+  	 
+	<h1><a name="show_isConnected">isConnected()</a></h1>
+	<h2>
+  <p>bool ofxKinect::isConnected()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>is the connection currently open? </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail isDepthNearValueWhite" data-lookup="isDepthNearValueWhite" data-item-type="method">
+  	 
+	<h1><a name="show_isDepthNearValueWhite">isDepthNearValueWhite()</a></h1>
+	<h2>
+  <p>bool ofxKinect::isDepthNearValueWhite()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail isDeviceConnected" data-lookup="isDeviceConnected" data-item-type="method">
+  	 
+	<h1><a name="show_isDeviceConnected">isDeviceConnected(...)</a></h1>
+	<h2>
+  <p>bool ofxKinect::isDeviceConnected(int id)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>is a device already connected? </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail isDeviceConnected" data-lookup="isDeviceConnected" data-item-type="method">
+  	 
+	<h1><a name="show_isDeviceConnected">isDeviceConnected(...)</a></h1>
+	<h2>
+  <p>bool ofxKinect::isDeviceConnected(string serial)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail isFrameNew" data-lookup="isFrameNew" data-item-type="method">
+  	 
+	<h1><a name="show_isFrameNew">isFrameNew()</a></h1>
+	<h2>
+  <p>bool ofxKinect::isFrameNew()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>is the current frame new? </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail isFrameNewDepth" data-lookup="isFrameNewDepth" data-item-type="method">
+  	 
+	<h1><a name="show_isFrameNewDepth">isFrameNewDepth()</a></h1>
+	<h2>
+  <p>bool ofxKinect::isFrameNewDepth()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail isFrameNewVideo" data-lookup="isFrameNewVideo" data-item-type="method">
+  	 
+	<h1><a name="show_isFrameNewVideo">isFrameNewVideo()</a></h1>
+	<h2>
+  <p>bool ofxKinect::isFrameNewVideo()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail listDevices" data-lookup="listDevices" data-item-type="method">
+  	 
+	<h1><a name="show_listDevices">listDevices()</a></h1>
+	<h2>
+  <p>void ofxKinect::listDevices()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>print the device list </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail nextAvailableId" data-lookup="nextAvailableId" data-item-type="method">
+  	 
+	<h1><a name="show_nextAvailableId">nextAvailableId()</a></h1>
+	<h2>
+  <p>int ofxKinect::nextAvailableId()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>get the id of the next available device, returns -1 if nothing found </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail nextAvailableSerial" data-lookup="nextAvailableSerial" data-item-type="method">
+  	 
+	<h1><a name="show_nextAvailableSerial">nextAvailableSerial()</a></h1>
+	<h2>
+  <p>string ofxKinect::nextAvailableSerial()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>get the serial number of the next available device, returns an empty string "" if nothing found </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail numAvailableDevices" data-lookup="numAvailableDevices" data-item-type="method">
+  	 
+	<h1><a name="show_numAvailableDevices">numAvailableDevices()</a></h1>
+	<h2>
+  <p>int ofxKinect::numAvailableDevices()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>get the number of available devices (not connected) </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail numConnectedDevices" data-lookup="numConnectedDevices" data-item-type="method">
+  	 
+	<h1><a name="show_numConnectedDevices">numConnectedDevices()</a></h1>
+	<h2>
+  <p>int ofxKinect::numConnectedDevices()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>get the number of currently connected devices </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail numTotalDevices" data-lookup="numTotalDevices" data-item-type="method">
+  	 
+	<h1><a name="show_numTotalDevices">numTotalDevices()</a></h1>
+	<h2>
+  <p>int ofxKinect::numTotalDevices()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>get the total number of devices </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail open" data-lookup="open" data-item-type="method">
+  	 
+	<h1><a name="show_open">open(...)</a></h1>
+	<h2>
+  <p>bool ofxKinect::open(int id=-1)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>open the connection and start grabbing images</p>
+<p>set the id to choose a kinect, see numAvailableDevices() if you don't set the id (ie id=-1), the first available kinect will be used</p>
+<p>note: this is the freenct bus id and may change each time the app is run </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail open" data-lookup="open" data-item-type="method">
+  	 
+	<h1><a name="show_open">open(...)</a></h1>
+	<h2>
+  <p>bool ofxKinect::open(string serial)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>open using a kinect unique serial number</p>
+<p>NOTE: currently, libfreenect returns a serial number with all 0s for kinect models &gt; 1414, so this will only work with the original xbox kinect </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setCameraTiltAngle" data-lookup="setCameraTiltAngle" data-item-type="method">
+  	 
+	<h1><a name="show_setCameraTiltAngle">setCameraTiltAngle(...)</a></h1>
+	<h2>
+  <p>bool ofxKinect::setCameraTiltAngle(float angleInDegrees)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setDepthClipping" data-lookup="setDepthClipping" data-item-type="method">
+  	 
+	<h1><a name="show_setDepthClipping">setDepthClipping(...)</a></h1>
+	<h2>
+  <p>void ofxKinect::setDepthClipping(float nearClip=500, float farClip=4000)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>set the clipping planes for the depth calculations in millimeters</p>
+<p>these are used for the depth value (12bit) -&gt; grayscale (1 byte) conversion ie setting a short range will give you greater sensitivity from 0-255</p>
+<p>default is 50cm - 4m note: you won't get any data &lt; 50cm and distances &gt; 4m start to get noisy </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setLed" data-lookup="setLed" data-item-type="method">
+  	 
+	<h1><a name="show_setLed">setLed(...)</a></h1>
+	<h2>
+  <p>void ofxKinect::setLed(ofxKinect::LedMode mode)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>set the current led color and/or blink mode, only applied while the kinect is open </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setRegistration" data-lookup="setRegistration" data-item-type="method">
+  	 
+	<h1><a name="show_setRegistration">setRegistration(...)</a></h1>
+	<h2>
+  <p>void ofxKinect::setRegistration(bool bUseRegistration=false)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>calibrates the depth image to align with the rgb image, disabled by default</p>
+<p>call this before open(), has no effect while the connection is running</p>
+<p>note: this calculation uses some cpu, leave off if not needed </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setUseTexture" data-lookup="setUseTexture" data-item-type="method">
+  	 
+	<h1><a name="show_setUseTexture">setUseTexture(...)</a></h1>
+	<h2>
+  <p>void ofxKinect::setUseTexture(bool bUse)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>enable/disable frame loading into textures on update() </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail update" data-lookup="update" data-item-type="method">
+  	 
+	<h1><a name="show_update">update()</a></h1>
+	<h2>
+  <p>void ofxKinect::update()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>updates the pixel buffers and textures</p>
+<p>make sure to call this to update to the latest incoming frames </p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+
+            <!-- vars detail -->
+              <!--h2><a name="variables"></a>ofxKinect variables</h2!-->
+                        
+<div class="documentation_detail  height" data-lookup="height" data-item-type="var">
+	<h1>const int  <a name="show_height">height</a></h1>
+	<h2>
+  <p>const int  ofxKinect::height</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  width" data-lookup="width" data-item-type="var">
+	<h1>const int  <a name="show_width">width</a></h1>
+	<h2>
+  <p>const int  ofxKinect::width</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+
+            <!-- functions detail -->
+            <hr/>
+                
+            <!--diqus comments for class/functions module description-->
+            <div id="comments_header">
+            <h2>comments</h2>
+            <p>You can add comments with usage examples or other information for each class, method or variable, for adding documentation to an empty section or reporting errors is better to send a fix or open an issue through <a href="https://github.com/openframeworks/ofSite">github</a>.</p>
+            <p>When posting code enclose it in:</p>
+            <pre><code class="html">&lt;pre&gt;&lt;code class=&quot;cpp&quot;&gt;&nbsp;&lt;/code&gt;&lt;/pre&gt;</code></pre>
+            <br/>
+            </div>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+
+            // DISQUS
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+
+            var disqus_shortname = 'openframeworks'; // required: replace example with your forum shortname
+            //var disqus_developer = 1;
+
+            location_elements = window.location.pathname.split("/");
+            module_name = location_elements[location_elements.length-1].split(".")[0];
+            section_name = location.hash.split("_")[1];
+            console.log(module_name + " " + section_name);
+            if(section_name!=undefined && section_name!=''){
+            var disqus_identifier = window.location.pathname + "#!show_" + section_name;  
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "#!show_" + section_name;
+            var discus_title = document.title + " - " + section_name;
+            }else{
+            var disqus_identifier = window.location.pathname;
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            var discus_title = document.title;
+            }
+
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */   
+            (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		
+        </div><!-- End Submenu right -->
+      </div><!-- End page wide -->
+      </div><!-- End body wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:33:52 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+4d738d6979d8e7992359cde47632192d1fbef472
+">
+
+4d738d6979d8e7992359cde47632192d1fbef472
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+

@@ -1,0 +1,1318 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr - ofBaseGLRenderer</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+    <script src="http://icq4ever.iptime.org//js/jquery.columnizer.min.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation.js"></script>
+  </head>
+  <body>
+    <div id="content">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">
+          <div class="page-wide">
+          
+              <div id="docstitle"><h1>ofBaseGLRenderer</h1></div>
+              <div id="editdocs">
+                    <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/types/ofBaseGLRenderer.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
+              </div>
+              
+          </div>
+          
+          
+        <div class="page-wide">
+		    <div class="submenucol-left">
+		     <!-- list of methods -->
+		     <p class="top_list_header">class methods</p>
+             <ul class="functionslist">
+                 
+                         <li class="noDoc">
+                         <a href="#show_begin" class="begin" data-lookup="begin">begin()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_bind" class="bind" data-lookup="bind">bind()</a></li>
+                     
+                     
+                     
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_bindForBlitting" class="bindForBlitting" data-lookup="bindForBlitting">bindForBlitting()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_disableAlphaMask" class="disableAlphaMask" data-lookup="disableAlphaMask">disableAlphaMask()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_disableLight" class="disableLight" data-lookup="disableLight">disableLight()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_disableLighting" class="disableLighting" data-lookup="disableLighting">disableLighting()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_disablePointSprites" class="disablePointSprites" data-lookup="disablePointSprites">disablePointSprites()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_disableSeparateSpecularLight" class="disableSeparateSpecularLight" data-lookup="disableSeparateSpecularLight">disableSeparateSpecularLight()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_disableTextureTarget" class="disableTextureTarget" data-lookup="disableTextureTarget">disableTextureTarget()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_draw" class="draw" data-lookup="draw">draw()</a></li>
+                     
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_drawElements" class="drawElements" data-lookup="drawElements">drawElements()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_drawElementsInstanced" class="drawElementsInstanced" data-lookup="drawElementsInstanced">drawElementsInstanced()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_drawInstanced" class="drawInstanced" data-lookup="drawInstanced">drawInstanced()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_enableLight" class="enableLight" data-lookup="enableLight">enableLight()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_enableLighting" class="enableLighting" data-lookup="enableLighting">enableLighting()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_enablePointSprites" class="enablePointSprites" data-lookup="enablePointSprites">enablePointSprites()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_enableSeparateSpecularLight" class="enableSeparateSpecularLight" data-lookup="enableSeparateSpecularLight">enableSeparateSpecularLight()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_enableTextureTarget" class="enableTextureTarget" data-lookup="enableTextureTarget">enableTextureTarget()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_end" class="end" data-lookup="end">end()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getGLVersionMajor" class="getGLVersionMajor" data-lookup="getGLVersionMajor">getGLVersionMajor()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getGLVersionMinor" class="getGLVersionMinor" data-lookup="getGLVersionMinor">getGLVersionMinor()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getLightingEnabled" class="getLightingEnabled" data-lookup="getLightingEnabled">getLightingEnabled()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_saveFullViewport" class="saveFullViewport" data-lookup="saveFullViewport">saveFullViewport()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_saveScreen" class="saveScreen" data-lookup="saveScreen">saveScreen()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setAlphaMaskTex" class="setAlphaMaskTex" data-lookup="setAlphaMaskTex">setAlphaMaskTex()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setGlobalAmbientColor" class="setGlobalAmbientColor" data-lookup="setGlobalAmbientColor">setGlobalAmbientColor()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setLightAmbientColor" class="setLightAmbientColor" data-lookup="setLightAmbientColor">setLightAmbientColor()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setLightAttenuation" class="setLightAttenuation" data-lookup="setLightAttenuation">setLightAttenuation()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setLightDiffuseColor" class="setLightDiffuseColor" data-lookup="setLightDiffuseColor">setLightDiffuseColor()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setLightPosition" class="setLightPosition" data-lookup="setLightPosition">setLightPosition()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setLightSpecularColor" class="setLightSpecularColor" data-lookup="setLightSpecularColor">setLightSpecularColor()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setLightSpotConcentration" class="setLightSpotConcentration" data-lookup="setLightSpotConcentration">setLightSpotConcentration()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setLightSpotDirection" class="setLightSpotDirection" data-lookup="setLightSpotDirection">setLightSpotDirection()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setLightSpotlightCutOff" class="setLightSpotlightCutOff" data-lookup="setLightSpotlightCutOff">setLightSpotlightCutOff()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setSmoothLighting" class="setSmoothLighting" data-lookup="setSmoothLighting">setSmoothLighting()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_unbind" class="unbind" data-lookup="unbind">unbind()</a></li>
+                     
+                     
+                     
+                     
+                     
+             </ul>
+            
+             
+             
+             <!-- list of variables -->              
+            
+             
+            
+             <!-- list of functions -->              
+		    </div>
+	    <div class="submenucol-right">
+            <div class="documentation_detail class_documentation">
+                    <h2><strong><em>Extends</em></strong></h2>
+                    <p>This class extends others, you can call their methods on an instance of ofBaseGLRenderer too:</p>
+                    <ul>
+                        <li><a href="../types/ofBaseRenderer.html" class="docs_class" >ofBaseRenderer</a> </li>
+                    </ul>
+              
+  
+
+
+              
+              
+  
+
+           </div>
+                  
+            <!-- methods detail -->
+              <!--h2><a name="methods"></a>ofBaseGLRenderer methods</h2-->
+                        
+<div class="documentation_detail begin" data-lookup="begin" data-item-type="method">
+  	 
+	<h1><a name="show_begin">begin(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::begin(const ofFbo &amp;fbo, bool setupPerspective)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail bind" data-lookup="bind" data-item-type="method">
+  	 
+	<h1><a name="show_bind">bind(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::bind(const ofBaseMaterial &amp;material)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail bind" data-lookup="bind" data-item-type="method">
+  	 
+	<h1><a name="show_bind">bind(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::bind(const ofBaseVideoDraws &amp;video)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail bind" data-lookup="bind" data-item-type="method">
+  	 
+	<h1><a name="show_bind">bind(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::bind(const ofFbo &amp;fbo)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail bind" data-lookup="bind" data-item-type="method">
+  	 
+	<h1><a name="show_bind">bind(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::bind(const ofShader &amp;shader)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail bind" data-lookup="bind" data-item-type="method">
+  	 
+	<h1><a name="show_bind">bind(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::bind(const ofTexture &amp;texture, int location)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail bindForBlitting" data-lookup="bindForBlitting" data-item-type="method">
+  	 
+	<h1><a name="show_bindForBlitting">bindForBlitting(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::bindForBlitting(const ofFbo &amp;fboSrc, ofFbo &amp;fboDst, int attachmentPoint=0)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail disableAlphaMask" data-lookup="disableAlphaMask" data-item-type="method">
+  	 
+	<h1><a name="show_disableAlphaMask">disableAlphaMask()</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::disableAlphaMask()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail disableLight" data-lookup="disableLight" data-item-type="method">
+  	 
+	<h1><a name="show_disableLight">disableLight(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::disableLight(int lightIndex)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail disableLighting" data-lookup="disableLighting" data-item-type="method">
+  	 
+	<h1><a name="show_disableLighting">disableLighting()</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::disableLighting()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail disablePointSprites" data-lookup="disablePointSprites" data-item-type="method">
+  	 
+	<h1><a name="show_disablePointSprites">disablePointSprites()</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::disablePointSprites()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail disableSeparateSpecularLight" data-lookup="disableSeparateSpecularLight" data-item-type="method">
+  	 
+	<h1><a name="show_disableSeparateSpecularLight">disableSeparateSpecularLight()</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::disableSeparateSpecularLight()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail disableTextureTarget" data-lookup="disableTextureTarget" data-item-type="method">
+  	 
+	<h1><a name="show_disableTextureTarget">disableTextureTarget(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::disableTextureTarget(int textureTarget, int textureLocation)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::draw(const ofTexture &amp;image, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::draw(const ofVbo &amp;vbo, GLuint drawMode, int first, int total)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail draw" data-lookup="draw" data-item-type="method">
+  	 
+	<h1><a name="show_draw">draw(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::draw(const ofVboMesh &amp;mesh, ofPolyRenderMode renderType)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawElements" data-lookup="drawElements" data-item-type="method">
+  	 
+	<h1><a name="show_drawElements">drawElements(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::drawElements(const ofVbo &amp;vbo, GLuint drawMode, int amt, int offsetelements)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawElementsInstanced" data-lookup="drawElementsInstanced" data-item-type="method">
+  	 
+	<h1><a name="show_drawElementsInstanced">drawElementsInstanced(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::drawElementsInstanced(const ofVbo &amp;vbo, GLuint drawMode, int amt, int primCount)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawInstanced" data-lookup="drawInstanced" data-item-type="method">
+  	 
+	<h1><a name="show_drawInstanced">drawInstanced(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::drawInstanced(const ofVbo &amp;vbo, GLuint drawMode, int first, int total, int primCount)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail drawInstanced" data-lookup="drawInstanced" data-item-type="method">
+  	 
+	<h1><a name="show_drawInstanced">drawInstanced(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::drawInstanced(const ofVboMesh &amp;mesh, ofPolyRenderMode renderType, int primCount)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail enableLight" data-lookup="enableLight" data-item-type="method">
+  	 
+	<h1><a name="show_enableLight">enableLight(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::enableLight(int lightIndex)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail enableLighting" data-lookup="enableLighting" data-item-type="method">
+  	 
+	<h1><a name="show_enableLighting">enableLighting()</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::enableLighting()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail enablePointSprites" data-lookup="enablePointSprites" data-item-type="method">
+  	 
+	<h1><a name="show_enablePointSprites">enablePointSprites()</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::enablePointSprites()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail enableSeparateSpecularLight" data-lookup="enableSeparateSpecularLight" data-item-type="method">
+  	 
+	<h1><a name="show_enableSeparateSpecularLight">enableSeparateSpecularLight()</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::enableSeparateSpecularLight()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail enableTextureTarget" data-lookup="enableTextureTarget" data-item-type="method">
+  	 
+	<h1><a name="show_enableTextureTarget">enableTextureTarget(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::enableTextureTarget(const ofTexture &amp;tex, int textureLocation)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail end" data-lookup="end" data-item-type="method">
+  	 
+	<h1><a name="show_end">end(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::end(const ofFbo &amp;fbo)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getGLVersionMajor" data-lookup="getGLVersionMajor" data-item-type="method">
+  	 
+	<h1><a name="show_getGLVersionMajor">getGLVersionMajor()</a></h1>
+	<h2>
+  <p>int ofBaseGLRenderer::getGLVersionMajor()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getGLVersionMinor" data-lookup="getGLVersionMinor" data-item-type="method">
+  	 
+	<h1><a name="show_getGLVersionMinor">getGLVersionMinor()</a></h1>
+	<h2>
+  <p>int ofBaseGLRenderer::getGLVersionMinor()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getLightingEnabled" data-lookup="getLightingEnabled" data-item-type="method">
+  	 
+	<h1><a name="show_getLightingEnabled">getLightingEnabled()</a></h1>
+	<h2>
+  <p>bool ofBaseGLRenderer::getLightingEnabled()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail saveFullViewport" data-lookup="saveFullViewport" data-item-type="method">
+  	 
+	<h1><a name="show_saveFullViewport">saveFullViewport(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::saveFullViewport(ofPixels &amp;pixels)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail saveScreen" data-lookup="saveScreen" data-item-type="method">
+  	 
+	<h1><a name="show_saveScreen">saveScreen(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::saveScreen(int x, int y, int w, int h, ofPixels &amp;pixels)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setAlphaMaskTex" data-lookup="setAlphaMaskTex" data-item-type="method">
+  	 
+	<h1><a name="show_setAlphaMaskTex">setAlphaMaskTex(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::setAlphaMaskTex(const ofTexture &amp;tex)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setGlobalAmbientColor" data-lookup="setGlobalAmbientColor" data-item-type="method">
+  	 
+	<h1><a name="show_setGlobalAmbientColor">setGlobalAmbientColor(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::setGlobalAmbientColor(const ofColor &amp;c)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setLightAmbientColor" data-lookup="setLightAmbientColor" data-item-type="method">
+  	 
+	<h1><a name="show_setLightAmbientColor">setLightAmbientColor(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::setLightAmbientColor(int lightIndex, const ofFloatColor &amp;c)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setLightAttenuation" data-lookup="setLightAttenuation" data-item-type="method">
+  	 
+	<h1><a name="show_setLightAttenuation">setLightAttenuation(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::setLightAttenuation(int lightIndex, float constant, float linear, float quadratic)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setLightDiffuseColor" data-lookup="setLightDiffuseColor" data-item-type="method">
+  	 
+	<h1><a name="show_setLightDiffuseColor">setLightDiffuseColor(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::setLightDiffuseColor(int lightIndex, const ofFloatColor &amp;c)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setLightPosition" data-lookup="setLightPosition" data-item-type="method">
+  	 
+	<h1><a name="show_setLightPosition">setLightPosition(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::setLightPosition(int lightIndex, const ofVec4f &amp;position)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setLightSpecularColor" data-lookup="setLightSpecularColor" data-item-type="method">
+  	 
+	<h1><a name="show_setLightSpecularColor">setLightSpecularColor(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::setLightSpecularColor(int lightIndex, const ofFloatColor &amp;c)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setLightSpotConcentration" data-lookup="setLightSpotConcentration" data-item-type="method">
+  	 
+	<h1><a name="show_setLightSpotConcentration">setLightSpotConcentration(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::setLightSpotConcentration(int lightIndex, float exponent)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setLightSpotDirection" data-lookup="setLightSpotDirection" data-item-type="method">
+  	 
+	<h1><a name="show_setLightSpotDirection">setLightSpotDirection(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::setLightSpotDirection(int lightIndex, const ofVec4f &amp;direction)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setLightSpotlightCutOff" data-lookup="setLightSpotlightCutOff" data-item-type="method">
+  	 
+	<h1><a name="show_setLightSpotlightCutOff">setLightSpotlightCutOff(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::setLightSpotlightCutOff(int lightIndex, float spotCutOff)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setSmoothLighting" data-lookup="setSmoothLighting" data-item-type="method">
+  	 
+	<h1><a name="show_setSmoothLighting">setSmoothLighting(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::setSmoothLighting(bool b)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail unbind" data-lookup="unbind" data-item-type="method">
+  	 
+	<h1><a name="show_unbind">unbind(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::unbind(const ofBaseMaterial &amp;material)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail unbind" data-lookup="unbind" data-item-type="method">
+  	 
+	<h1><a name="show_unbind">unbind(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::unbind(const ofBaseVideoDraws &amp;video)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail unbind" data-lookup="unbind" data-item-type="method">
+  	 
+	<h1><a name="show_unbind">unbind(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::unbind(const ofFbo &amp;fbo)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail unbind" data-lookup="unbind" data-item-type="method">
+  	 
+	<h1><a name="show_unbind">unbind(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::unbind(const ofShader &amp;shader)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail unbind" data-lookup="unbind" data-item-type="method">
+  	 
+	<h1><a name="show_unbind">unbind(...)</a></h1>
+	<h2>
+  <p>void ofBaseGLRenderer::unbind(const ofTexture &amp;texture, int location)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+
+            <!-- vars detail -->
+
+            <!-- functions detail -->
+            <hr/>
+                
+            <!--diqus comments for class/functions module description-->
+            <div id="comments_header">
+            <h2>comments</h2>
+            <p>You can add comments with usage examples or other information for each class, method or variable, for adding documentation to an empty section or reporting errors is better to send a fix or open an issue through <a href="https://github.com/openframeworks/ofSite">github</a>.</p>
+            <p>When posting code enclose it in:</p>
+            <pre><code class="html">&lt;pre&gt;&lt;code class=&quot;cpp&quot;&gt;&nbsp;&lt;/code&gt;&lt;/pre&gt;</code></pre>
+            <br/>
+            </div>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+
+            // DISQUS
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+
+            var disqus_shortname = 'openframeworks'; // required: replace example with your forum shortname
+            //var disqus_developer = 1;
+
+            location_elements = window.location.pathname.split("/");
+            module_name = location_elements[location_elements.length-1].split(".")[0];
+            section_name = location.hash.split("_")[1];
+            console.log(module_name + " " + section_name);
+            if(section_name!=undefined && section_name!=''){
+            var disqus_identifier = window.location.pathname + "#!show_" + section_name;  
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "#!show_" + section_name;
+            var discus_title = document.title + " - " + section_name;
+            }else{
+            var disqus_identifier = window.location.pathname;
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            var discus_title = document.title;
+            }
+
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */   
+            (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		
+        </div><!-- End Submenu right -->
+      </div><!-- End page wide -->
+      </div><!-- End body wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:34:07 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+eb73abcb6141243ae29291b42ec447024f00a570
+">
+
+eb73abcb6141243ae29291b42ec447024f00a570
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+

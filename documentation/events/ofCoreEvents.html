@@ -1,0 +1,1351 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr - ofCoreEvents</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+    <script src="http://icq4ever.iptime.org//js/jquery.columnizer.min.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation.js"></script>
+  </head>
+  <body>
+    <div id="content">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">
+          <div class="page-wide">
+          
+              <div id="docstitle"><h1>ofCoreEvents</h1></div>
+              <div id="editdocs">
+                    <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/events/ofCoreEvents.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
+              </div>
+              
+          </div>
+          
+          
+        <div class="page-wide">
+		    <div class="submenucol-left">
+		     <!-- list of methods -->
+		     <p class="top_list_header">class methods</p>
+             <ul class="functionslist">
+                 
+                         <li class="noDoc">
+                         <a href="#show_ofCoreEvents" class="ofCoreEvents" data-lookup="ofCoreEvents">ofCoreEvents()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_disable" class="disable" data-lookup="disable">disable()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_enable" class="enable" data-lookup="enable">enable()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getFrameNum" class="getFrameNum" data-lookup="getFrameNum">getFrameNum()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getFrameRate" class="getFrameRate" data-lookup="getFrameRate">getFrameRate()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getKeyPressed" class="getKeyPressed" data-lookup="getKeyPressed">getKeyPressed()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getLastFrameTime" class="getLastFrameTime" data-lookup="getLastFrameTime">getLastFrameTime()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getMousePressed" class="getMousePressed" data-lookup="getMousePressed">getMousePressed()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getMouseX" class="getMouseX" data-lookup="getMouseX">getMouseX()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getMouseY" class="getMouseY" data-lookup="getMouseY">getMouseY()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getPreviousMouseX" class="getPreviousMouseX" data-lookup="getPreviousMouseX">getPreviousMouseX()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getPreviousMouseY" class="getPreviousMouseY" data-lookup="getPreviousMouseY">getPreviousMouseY()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getTargetFrameRate" class="getTargetFrameRate" data-lookup="getTargetFrameRate">getTargetFrameRate()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_notifyDragEvent" class="notifyDragEvent" data-lookup="notifyDragEvent">notifyDragEvent()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_notifyDraw" class="notifyDraw" data-lookup="notifyDraw">notifyDraw()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_notifyExit" class="notifyExit" data-lookup="notifyExit">notifyExit()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_notifyKeyEvent" class="notifyKeyEvent" data-lookup="notifyKeyEvent">notifyKeyEvent()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_notifyKeyPressed" class="notifyKeyPressed" data-lookup="notifyKeyPressed">notifyKeyPressed()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_notifyKeyReleased" class="notifyKeyReleased" data-lookup="notifyKeyReleased">notifyKeyReleased()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_notifyMouseDragged" class="notifyMouseDragged" data-lookup="notifyMouseDragged">notifyMouseDragged()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_notifyMouseEntered" class="notifyMouseEntered" data-lookup="notifyMouseEntered">notifyMouseEntered()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_notifyMouseEvent" class="notifyMouseEvent" data-lookup="notifyMouseEvent">notifyMouseEvent()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_notifyMouseExited" class="notifyMouseExited" data-lookup="notifyMouseExited">notifyMouseExited()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_notifyMouseMoved" class="notifyMouseMoved" data-lookup="notifyMouseMoved">notifyMouseMoved()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_notifyMousePressed" class="notifyMousePressed" data-lookup="notifyMousePressed">notifyMousePressed()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_notifyMouseReleased" class="notifyMouseReleased" data-lookup="notifyMouseReleased">notifyMouseReleased()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_notifyMouseScrolled" class="notifyMouseScrolled" data-lookup="notifyMouseScrolled">notifyMouseScrolled()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_notifySetup" class="notifySetup" data-lookup="notifySetup">notifySetup()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_notifyUpdate" class="notifyUpdate" data-lookup="notifyUpdate">notifyUpdate()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_notifyWindowResized" class="notifyWindowResized" data-lookup="notifyWindowResized">notifyWindowResized()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_setFrameRate" class="setFrameRate" data-lookup="setFrameRate">setFrameRate()</a></li>
+                     
+             </ul>
+            
+             
+             
+             <!-- list of variables -->              
+                <p class="top_list_header">variables</p>
+                <ul class="functionslist">
+                            <li class="noDoc">
+                            <a href="#show_draw" class="draw" data-lookup="draw">ofEvent< ofEventArgs > draw</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_exit" class="exit" data-lookup="exit">ofEvent< ofEventArgs > exit</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_fileDragEvent" class="fileDragEvent" data-lookup="fileDragEvent">ofEvent fileDragEvent</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_keyPressed" class="keyPressed" data-lookup="keyPressed">ofEvent< ofKeyEventArgs > keyPressed</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_keyReleased" class="keyReleased" data-lookup="keyReleased">ofEvent< ofKeyEventArgs > keyReleased</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_messageEvent" class="messageEvent" data-lookup="messageEvent">ofEvent messageEvent</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_mouseDragged" class="mouseDragged" data-lookup="mouseDragged">ofEvent< ofMouseEventArgs > mouseDragged</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_mouseEntered" class="mouseEntered" data-lookup="mouseEntered">ofEvent< ofMouseEventArgs > mouseEntered</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_mouseExited" class="mouseExited" data-lookup="mouseExited">ofEvent< ofMouseEventArgs > mouseExited</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_mouseMoved" class="mouseMoved" data-lookup="mouseMoved">ofEvent< ofMouseEventArgs > mouseMoved</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_mousePressed" class="mousePressed" data-lookup="mousePressed">ofEvent< ofMouseEventArgs > mousePressed</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_mouseReleased" class="mouseReleased" data-lookup="mouseReleased">ofEvent< ofMouseEventArgs > mouseReleased</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_mouseScrolled" class="mouseScrolled" data-lookup="mouseScrolled">ofEvent< ofMouseEventArgs > mouseScrolled</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_setup" class="setup" data-lookup="setup">ofEvent< ofEventArgs > setup</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_touchCancelled" class="touchCancelled" data-lookup="touchCancelled">ofEvent touchCancelled</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_touchDoubleTap" class="touchDoubleTap" data-lookup="touchDoubleTap">ofEvent touchDoubleTap</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_touchDown" class="touchDown" data-lookup="touchDown">ofEvent touchDown</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_touchMoved" class="touchMoved" data-lookup="touchMoved">ofEvent touchMoved</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_touchUp" class="touchUp" data-lookup="touchUp">ofEvent touchUp</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_update" class="update" data-lookup="update">ofEvent< ofEventArgs > update</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_windowResized" class="windowResized" data-lookup="windowResized">ofEvent< ofResizeEventArgs > windowResized</a> </li>
+                 </ul>
+            
+             
+            
+             <!-- list of functions -->              
+		    </div>
+	    <div class="submenucol-right">
+            <div class="documentation_detail class_documentation">
+              
+  <p>Class for the core events in oF. This is used inside oF to create the global var ofEvents that can be used to register any class to the core events setup, update, draw, exit, keyPressed, keyReleased, mousePressed, mouseReleased, mouseDragged, mouseMoved and windowResize.</p>
+<p>To do so use the functions ofAddListener and ofRemoveListener.</p>
+<p>For a complete example take a look at the advancedEventsExample</p>
+
+
+              
+              
+  
+
+           </div>
+                  
+            <!-- methods detail -->
+              <!--h2><a name="methods"></a>ofCoreEvents methods</h2-->
+                        
+<div class="documentation_detail ofCoreEvents" data-lookup="ofCoreEvents" data-item-type="method">
+  	 
+	<h1><a name="show_ofCoreEvents">ofCoreEvents()</a></h1>
+	<h2>
+  <p>ofCoreEvents::ofCoreEvents()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail disable" data-lookup="disable" data-item-type="method">
+  	 
+	<h1><a name="show_disable">disable()</a></h1>
+	<h2>
+  <p>void ofCoreEvents::disable()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail enable" data-lookup="enable" data-item-type="method">
+  	 
+	<h1><a name="show_enable">enable()</a></h1>
+	<h2>
+  <p>void ofCoreEvents::enable()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getFrameNum" data-lookup="getFrameNum" data-item-type="method">
+  	 
+	<h1><a name="show_getFrameNum">getFrameNum()</a></h1>
+	<h2>
+  <p>uint64_t ofCoreEvents::getFrameNum()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getFrameRate" data-lookup="getFrameRate" data-item-type="method">
+  	 
+	<h1><a name="show_getFrameRate">getFrameRate()</a></h1>
+	<h2>
+  <p>float ofCoreEvents::getFrameRate()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getKeyPressed" data-lookup="getKeyPressed" data-item-type="method">
+  	 
+	<h1><a name="show_getKeyPressed">getKeyPressed(...)</a></h1>
+	<h2>
+  <p>bool ofCoreEvents::getKeyPressed(int key)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getLastFrameTime" data-lookup="getLastFrameTime" data-item-type="method">
+  	 
+	<h1><a name="show_getLastFrameTime">getLastFrameTime()</a></h1>
+	<h2>
+  <p>double ofCoreEvents::getLastFrameTime()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getMousePressed" data-lookup="getMousePressed" data-item-type="method">
+  	 
+	<h1><a name="show_getMousePressed">getMousePressed(...)</a></h1>
+	<h2>
+  <p>bool ofCoreEvents::getMousePressed(int button)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getMouseX" data-lookup="getMouseX" data-item-type="method">
+  	 
+	<h1><a name="show_getMouseX">getMouseX()</a></h1>
+	<h2>
+  <p>int ofCoreEvents::getMouseX()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getMouseY" data-lookup="getMouseY" data-item-type="method">
+  	 
+	<h1><a name="show_getMouseY">getMouseY()</a></h1>
+	<h2>
+  <p>int ofCoreEvents::getMouseY()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getPreviousMouseX" data-lookup="getPreviousMouseX" data-item-type="method">
+  	 
+	<h1><a name="show_getPreviousMouseX">getPreviousMouseX()</a></h1>
+	<h2>
+  <p>int ofCoreEvents::getPreviousMouseX()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getPreviousMouseY" data-lookup="getPreviousMouseY" data-item-type="method">
+  	 
+	<h1><a name="show_getPreviousMouseY">getPreviousMouseY()</a></h1>
+	<h2>
+  <p>int ofCoreEvents::getPreviousMouseY()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getTargetFrameRate" data-lookup="getTargetFrameRate" data-item-type="method">
+  	 
+	<h1><a name="show_getTargetFrameRate">getTargetFrameRate()</a></h1>
+	<h2>
+  <p>float ofCoreEvents::getTargetFrameRate()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail notifyDragEvent" data-lookup="notifyDragEvent" data-item-type="method">
+  	 
+	<h1><a name="show_notifyDragEvent">notifyDragEvent(...)</a></h1>
+	<h2>
+  <p>void ofCoreEvents::notifyDragEvent(ofDragInfo info)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail notifyDraw" data-lookup="notifyDraw" data-item-type="method">
+  	 
+	<h1><a name="show_notifyDraw">notifyDraw()</a></h1>
+	<h2>
+  <p>void ofCoreEvents::notifyDraw()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail notifyExit" data-lookup="notifyExit" data-item-type="method">
+  	 
+	<h1><a name="show_notifyExit">notifyExit()</a></h1>
+	<h2>
+  <p>void ofCoreEvents::notifyExit()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail notifyKeyEvent" data-lookup="notifyKeyEvent" data-item-type="method">
+  	 
+	<h1><a name="show_notifyKeyEvent">notifyKeyEvent(...)</a></h1>
+	<h2>
+  <p>void ofCoreEvents::notifyKeyEvent(const ofKeyEventArgs &amp;keyEvent)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail notifyKeyPressed" data-lookup="notifyKeyPressed" data-item-type="method">
+  	 
+	<h1><a name="show_notifyKeyPressed">notifyKeyPressed(...)</a></h1>
+	<h2>
+  <p>void ofCoreEvents::notifyKeyPressed(int key, int keycode, int scancode, int codepoint)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail notifyKeyReleased" data-lookup="notifyKeyReleased" data-item-type="method">
+  	 
+	<h1><a name="show_notifyKeyReleased">notifyKeyReleased(...)</a></h1>
+	<h2>
+  <p>void ofCoreEvents::notifyKeyReleased(int key, int keycode, int scancode, int codepoint)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail notifyMouseDragged" data-lookup="notifyMouseDragged" data-item-type="method">
+  	 
+	<h1><a name="show_notifyMouseDragged">notifyMouseDragged(...)</a></h1>
+	<h2>
+  <p>void ofCoreEvents::notifyMouseDragged(int x, int y, int button)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail notifyMouseEntered" data-lookup="notifyMouseEntered" data-item-type="method">
+  	 
+	<h1><a name="show_notifyMouseEntered">notifyMouseEntered(...)</a></h1>
+	<h2>
+  <p>void ofCoreEvents::notifyMouseEntered(int x, int y)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail notifyMouseEvent" data-lookup="notifyMouseEvent" data-item-type="method">
+  	 
+	<h1><a name="show_notifyMouseEvent">notifyMouseEvent(...)</a></h1>
+	<h2>
+  <p>void ofCoreEvents::notifyMouseEvent(const ofMouseEventArgs &amp;mouseEvent)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail notifyMouseExited" data-lookup="notifyMouseExited" data-item-type="method">
+  	 
+	<h1><a name="show_notifyMouseExited">notifyMouseExited(...)</a></h1>
+	<h2>
+  <p>void ofCoreEvents::notifyMouseExited(int x, int y)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail notifyMouseMoved" data-lookup="notifyMouseMoved" data-item-type="method">
+  	 
+	<h1><a name="show_notifyMouseMoved">notifyMouseMoved(...)</a></h1>
+	<h2>
+  <p>void ofCoreEvents::notifyMouseMoved(int x, int y)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail notifyMousePressed" data-lookup="notifyMousePressed" data-item-type="method">
+  	 
+	<h1><a name="show_notifyMousePressed">notifyMousePressed(...)</a></h1>
+	<h2>
+  <p>void ofCoreEvents::notifyMousePressed(int x, int y, int button)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail notifyMouseReleased" data-lookup="notifyMouseReleased" data-item-type="method">
+  	 
+	<h1><a name="show_notifyMouseReleased">notifyMouseReleased(...)</a></h1>
+	<h2>
+  <p>void ofCoreEvents::notifyMouseReleased(int x, int y, int button)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail notifyMouseScrolled" data-lookup="notifyMouseScrolled" data-item-type="method">
+  	 
+	<h1><a name="show_notifyMouseScrolled">notifyMouseScrolled(...)</a></h1>
+	<h2>
+  <p>void ofCoreEvents::notifyMouseScrolled(int x, int y, float scrollX, float scrollY)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail notifySetup" data-lookup="notifySetup" data-item-type="method">
+  	 
+	<h1><a name="show_notifySetup">notifySetup()</a></h1>
+	<h2>
+  <p>void ofCoreEvents::notifySetup()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail notifyUpdate" data-lookup="notifyUpdate" data-item-type="method">
+  	 
+	<h1><a name="show_notifyUpdate">notifyUpdate()</a></h1>
+	<h2>
+  <p>void ofCoreEvents::notifyUpdate()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail notifyWindowResized" data-lookup="notifyWindowResized" data-item-type="method">
+  	 
+	<h1><a name="show_notifyWindowResized">notifyWindowResized(...)</a></h1>
+	<h2>
+  <p>void ofCoreEvents::notifyWindowResized(int width, int height)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setFrameRate" data-lookup="setFrameRate" data-item-type="method">
+  	 
+	<h1><a name="show_setFrameRate">setFrameRate(...)</a></h1>
+	<h2>
+  <p>void ofCoreEvents::setFrameRate(int _targetRate)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+
+            <!-- vars detail -->
+              <!--h2><a name="variables"></a>ofCoreEvents variables</h2!-->
+                        
+<div class="documentation_detail  draw" data-lookup="draw" data-item-type="var">
+	<h1>ofEvent< ofEventArgs > <a name="show_draw">draw</a></h1>
+	<h2>
+  <p>ofEvent&lt; ofEventArgs &gt; ofCoreEvents::draw</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  exit" data-lookup="exit" data-item-type="var">
+	<h1>ofEvent< ofEventArgs > <a name="show_exit">exit</a></h1>
+	<h2>
+  <p>ofEvent&lt; ofEventArgs &gt; ofCoreEvents::exit</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  fileDragEvent" data-lookup="fileDragEvent" data-item-type="var">
+	<h1>ofEvent <a name="show_fileDragEvent">fileDragEvent</a></h1>
+	<h2>
+  <p>ofEvent ofCoreEvents::fileDragEvent</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  keyPressed" data-lookup="keyPressed" data-item-type="var">
+	<h1>ofEvent< ofKeyEventArgs > <a name="show_keyPressed">keyPressed</a></h1>
+	<h2>
+  <p>ofEvent&lt; ofKeyEventArgs &gt; ofCoreEvents::keyPressed</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  keyReleased" data-lookup="keyReleased" data-item-type="var">
+	<h1>ofEvent< ofKeyEventArgs > <a name="show_keyReleased">keyReleased</a></h1>
+	<h2>
+  <p>ofEvent&lt; ofKeyEventArgs &gt; ofCoreEvents::keyReleased</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  messageEvent" data-lookup="messageEvent" data-item-type="var">
+	<h1>ofEvent <a name="show_messageEvent">messageEvent</a></h1>
+	<h2>
+  <p>ofEvent ofCoreEvents::messageEvent</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  mouseDragged" data-lookup="mouseDragged" data-item-type="var">
+	<h1>ofEvent< ofMouseEventArgs > <a name="show_mouseDragged">mouseDragged</a></h1>
+	<h2>
+  <p>ofEvent&lt; ofMouseEventArgs &gt; ofCoreEvents::mouseDragged</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  mouseEntered" data-lookup="mouseEntered" data-item-type="var">
+	<h1>ofEvent< ofMouseEventArgs > <a name="show_mouseEntered">mouseEntered</a></h1>
+	<h2>
+  <p>ofEvent&lt; ofMouseEventArgs &gt; ofCoreEvents::mouseEntered</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  mouseExited" data-lookup="mouseExited" data-item-type="var">
+	<h1>ofEvent< ofMouseEventArgs > <a name="show_mouseExited">mouseExited</a></h1>
+	<h2>
+  <p>ofEvent&lt; ofMouseEventArgs &gt; ofCoreEvents::mouseExited</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  mouseMoved" data-lookup="mouseMoved" data-item-type="var">
+	<h1>ofEvent< ofMouseEventArgs > <a name="show_mouseMoved">mouseMoved</a></h1>
+	<h2>
+  <p>ofEvent&lt; ofMouseEventArgs &gt; ofCoreEvents::mouseMoved</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  mousePressed" data-lookup="mousePressed" data-item-type="var">
+	<h1>ofEvent< ofMouseEventArgs > <a name="show_mousePressed">mousePressed</a></h1>
+	<h2>
+  <p>ofEvent&lt; ofMouseEventArgs &gt; ofCoreEvents::mousePressed</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  mouseReleased" data-lookup="mouseReleased" data-item-type="var">
+	<h1>ofEvent< ofMouseEventArgs > <a name="show_mouseReleased">mouseReleased</a></h1>
+	<h2>
+  <p>ofEvent&lt; ofMouseEventArgs &gt; ofCoreEvents::mouseReleased</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  mouseScrolled" data-lookup="mouseScrolled" data-item-type="var">
+	<h1>ofEvent< ofMouseEventArgs > <a name="show_mouseScrolled">mouseScrolled</a></h1>
+	<h2>
+  <p>ofEvent&lt; ofMouseEventArgs &gt; ofCoreEvents::mouseScrolled</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  setup" data-lookup="setup" data-item-type="var">
+	<h1>ofEvent< ofEventArgs > <a name="show_setup">setup</a></h1>
+	<h2>
+  <p>ofEvent&lt; ofEventArgs &gt; ofCoreEvents::setup</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  touchCancelled" data-lookup="touchCancelled" data-item-type="var">
+	<h1>ofEvent <a name="show_touchCancelled">touchCancelled</a></h1>
+	<h2>
+  <p>ofEvent ofCoreEvents::touchCancelled</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  touchDoubleTap" data-lookup="touchDoubleTap" data-item-type="var">
+	<h1>ofEvent <a name="show_touchDoubleTap">touchDoubleTap</a></h1>
+	<h2>
+  <p>ofEvent ofCoreEvents::touchDoubleTap</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  touchDown" data-lookup="touchDown" data-item-type="var">
+	<h1>ofEvent <a name="show_touchDown">touchDown</a></h1>
+	<h2>
+  <p>ofEvent ofCoreEvents::touchDown</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  touchMoved" data-lookup="touchMoved" data-item-type="var">
+	<h1>ofEvent <a name="show_touchMoved">touchMoved</a></h1>
+	<h2>
+  <p>ofEvent ofCoreEvents::touchMoved</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  touchUp" data-lookup="touchUp" data-item-type="var">
+	<h1>ofEvent <a name="show_touchUp">touchUp</a></h1>
+	<h2>
+  <p>ofEvent ofCoreEvents::touchUp</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  update" data-lookup="update" data-item-type="var">
+	<h1>ofEvent< ofEventArgs > <a name="show_update">update</a></h1>
+	<h2>
+  <p>ofEvent&lt; ofEventArgs &gt; ofCoreEvents::update</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  windowResized" data-lookup="windowResized" data-item-type="var">
+	<h1>ofEvent< ofResizeEventArgs > <a name="show_windowResized">windowResized</a></h1>
+	<h2>
+  <p>ofEvent&lt; ofResizeEventArgs &gt; ofCoreEvents::windowResized</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+
+            <!-- functions detail -->
+            <hr/>
+                
+            <!--diqus comments for class/functions module description-->
+            <div id="comments_header">
+            <h2>comments</h2>
+            <p>You can add comments with usage examples or other information for each class, method or variable, for adding documentation to an empty section or reporting errors is better to send a fix or open an issue through <a href="https://github.com/openframeworks/ofSite">github</a>.</p>
+            <p>When posting code enclose it in:</p>
+            <pre><code class="html">&lt;pre&gt;&lt;code class=&quot;cpp&quot;&gt;&nbsp;&lt;/code&gt;&lt;/pre&gt;</code></pre>
+            <br/>
+            </div>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+
+            // DISQUS
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+
+            var disqus_shortname = 'openframeworks'; // required: replace example with your forum shortname
+            //var disqus_developer = 1;
+
+            location_elements = window.location.pathname.split("/");
+            module_name = location_elements[location_elements.length-1].split(".")[0];
+            section_name = location.hash.split("_")[1];
+            console.log(module_name + " " + section_name);
+            if(section_name!=undefined && section_name!=''){
+            var disqus_identifier = window.location.pathname + "#!show_" + section_name;  
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "#!show_" + section_name;
+            var discus_title = document.title + " - " + section_name;
+            }else{
+            var disqus_identifier = window.location.pathname;
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            var discus_title = document.title;
+            }
+
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */   
+            (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		
+        </div><!-- End Submenu right -->
+      </div><!-- End page wide -->
+      </div><!-- End body wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:33:41 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+4d738d6979d8e7992359cde47632192d1fbef472
+">
+
+4d738d6979d8e7992359cde47632192d1fbef472
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+

@@ -1,0 +1,1026 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+    <script src="http://icq4ever.iptime.org//js/jquery.columnizer.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/2.1.08/jquery.masonry.min.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation_index.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43083059-1', 'auto');
+  ga('send', 'pageview');
+
+  </script>
+  </head>
+  <body>
+    <div id="content">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">	
+	    <div class="page-wide-tutorial">
+            <!--ul class="submenu">
+                <li><a href="/documentation">레퍼런스</a></li>
+                <li><a href="/tutorials">튜토리얼</a></li>
+            </ul-->
+    	    <h1>video</h1>
+    	    <div class="article">
+    	    
+  <h2 id="classes-for-working-with-video-files-and-reading-a-video-feed-from-a-camera">Classes for working with video files and reading a video feed from a camera</h2>
+<p>This module contains classes that do mainly two things, playback and draw video files using <a href="ofVideoPlayer.html">ofVideoPlayer</a> and reading video streams from a camera using <a href="ofVideoGrabber.html">ofVideoGrabber</a>.</p>
+
+    		</div>
+        </div><!-- End Page Wide Tutorial --> 
+        <div class="page-wide">
+        	
+<div class="documentation_group">
+	
+
+	<!-- CLASSES -->
+
+    <div class="documentation_index_group">
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html" class="documentation_class_link"><strong>ofAVFoundationPlayer</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_ofAVFoundationPlayer" title="ofAVFoundationPlayer" class="documentation_func">ofAVFoundationPlayer()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_~ofAVFoundationPlayer" title="~ofAVFoundationPlayer" class="documentation_func">~ofAVFoundationPlayer()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_close" title="close" class="documentation_func">close()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_draw" title="draw" class="documentation_func">draw()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_firstFrame" title="firstFrame" class="documentation_func">firstFrame()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_getAVFoundationVideoPlayer" title="getAVFoundationVideoPlayer" class="documentation_func">getAVFoundationVideoPlayer()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_getCurrentFrame" title="getCurrentFrame" class="documentation_func">getCurrentFrame()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_getDuration" title="getDuration" class="documentation_func">getDuration()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_getHeight" title="getHeight" class="documentation_func">getHeight()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_getIsMovieDone" title="getIsMovieDone" class="documentation_func">getIsMovieDone()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_getLoopState" title="getLoopState" class="documentation_func">getLoopState()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_getPixelFormat" title="getPixelFormat" class="documentation_func">getPixelFormat()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_getPixels" title="getPixels" class="documentation_func">getPixels()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_getPosition" title="getPosition" class="documentation_func">getPosition()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_getSpeed" title="getSpeed" class="documentation_func">getSpeed()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_getTexturePtr" title="getTexturePtr" class="documentation_func">getTexturePtr()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_getTotalNumFrames" title="getTotalNumFrames" class="documentation_func">getTotalNumFrames()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_getWidth" title="getWidth" class="documentation_func">getWidth()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_initTextureCache" title="initTextureCache" class="documentation_func">initTextureCache()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_isFrameNew" title="isFrameNew" class="documentation_func">isFrameNew()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_isLoaded" title="isLoaded" class="documentation_func">isLoaded()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_isPaused" title="isPaused" class="documentation_func">isPaused()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_isPlaying" title="isPlaying" class="documentation_func">isPlaying()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_killTexture" title="killTexture" class="documentation_func">killTexture()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_killTextureCache" title="killTextureCache" class="documentation_func">killTextureCache()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_load" title="load" class="documentation_func">load()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_loadAsync" title="loadAsync" class="documentation_func">loadAsync()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_nextFrame" title="nextFrame" class="documentation_func">nextFrame()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_play" title="play" class="documentation_func">play()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_previousFrame" title="previousFrame" class="documentation_func">previousFrame()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_setFrame" title="setFrame" class="documentation_func">setFrame()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_setLoopState" title="setLoopState" class="documentation_func">setLoopState()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_setPaused" title="setPaused" class="documentation_func">setPaused()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_setPixelFormat" title="setPixelFormat" class="documentation_func">setPixelFormat()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_setPosition" title="setPosition" class="documentation_func">setPosition()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_setSpeed" title="setSpeed" class="documentation_func">setSpeed()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_setVolume" title="setVolume" class="documentation_func">setVolume()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_stop" title="stop" class="documentation_func">stop()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofAVFoundationPlayer.html#!show_update" title="update" class="documentation_func">update()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html" class="documentation_class_link"><strong>ofDirectShowPlayer</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html#!show_ofDirectShowPlayer" title="ofDirectShowPlayer" class="documentation_func">ofDirectShowPlayer()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html#!show_~ofDirectShowPlayer" title="~ofDirectShowPlayer" class="documentation_func">~ofDirectShowPlayer()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html#!show_close" title="close" class="documentation_func">close()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html#!show_draw" title="draw" class="documentation_func">draw()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html#!show_firstFrame" title="firstFrame" class="documentation_func">firstFrame()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html#!show_getCurrentFrame" title="getCurrentFrame" class="documentation_func">getCurrentFrame()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html#!show_getDuration" title="getDuration" class="documentation_func">getDuration()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html#!show_getHeight" title="getHeight" class="documentation_func">getHeight()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html#!show_getIsMovieDone" title="getIsMovieDone" class="documentation_func">getIsMovieDone()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html#!show_getLoopState" title="getLoopState" class="documentation_func">getLoopState()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html#!show_getPixelFormat" title="getPixelFormat" class="documentation_func">getPixelFormat()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html#!show_getPixels" title="getPixels" class="documentation_func">getPixels()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html#!show_getPosition" title="getPosition" class="documentation_func">getPosition()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html#!show_getSpeed" title="getSpeed" class="documentation_func">getSpeed()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html#!show_getTotalNumFrames" title="getTotalNumFrames" class="documentation_func">getTotalNumFrames()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html#!show_getWidth" title="getWidth" class="documentation_func">getWidth()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html#!show_isFrameNew" title="isFrameNew" class="documentation_func">isFrameNew()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html#!show_isLoaded" title="isLoaded" class="documentation_func">isLoaded()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html#!show_isPaused" title="isPaused" class="documentation_func">isPaused()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html#!show_isPlaying" title="isPlaying" class="documentation_func">isPlaying()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html#!show_load" title="load" class="documentation_func">load()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html#!show_nextFrame" title="nextFrame" class="documentation_func">nextFrame()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html#!show_play" title="play" class="documentation_func">play()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html#!show_previousFrame" title="previousFrame" class="documentation_func">previousFrame()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html#!show_setFrame" title="setFrame" class="documentation_func">setFrame()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html#!show_setLoopState" title="setLoopState" class="documentation_func">setLoopState()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html#!show_setPaused" title="setPaused" class="documentation_func">setPaused()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html#!show_setPixelFormat" title="setPixelFormat" class="documentation_func">setPixelFormat()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html#!show_setPosition" title="setPosition" class="documentation_func">setPosition()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html#!show_setSpeed" title="setSpeed" class="documentation_func">setSpeed()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html#!show_setVolume" title="setVolume" class="documentation_func">setVolume()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html#!show_stop" title="stop" class="documentation_func">stop()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofDirectShowPlayer.html#!show_update" title="update" class="documentation_func">update()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/video/ofGstCamData.html" class="documentation_class_link"><strong>ofGstCamData</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofGstCamData.html#!show_bInited" title="bInited" class="documentation_func">bInited</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofGstCamData.html#!show_webcam_devices" title="webcam_devices" class="documentation_func">webcam_devices</a></li>
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/video/ofGstDevice.html" class="documentation_class_link"><strong>ofGstDevice</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofGstDevice.html#!show_current_format" title="current_format" class="documentation_func">current_format</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofGstDevice.html#!show_gstreamer_src" title="gstreamer_src" class="documentation_func">gstreamer_src</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofGstDevice.html#!show_product_name" title="product_name" class="documentation_func">product_name</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofGstDevice.html#!show_serial_id" title="serial_id" class="documentation_func">serial_id</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofGstDevice.html#!show_video_device" title="video_device" class="documentation_func">video_device</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofGstDevice.html#!show_video_formats" title="video_formats" class="documentation_func">video_formats</a></li>
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/video/ofGstFramerate.html" class="documentation_class_link"><strong>ofGstFramerate</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofGstFramerate.html#!show_denominator" title="denominator" class="documentation_func">denominator</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofGstFramerate.html#!show_numerator" title="numerator" class="documentation_func">numerator</a></li>
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/video/ofGstVideoFormat.html" class="documentation_class_link"><strong>ofGstVideoFormat</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofGstVideoFormat.html#!show_choosen_framerate" title="choosen_framerate" class="documentation_func">choosen_framerate</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofGstVideoFormat.html#!show_format_name" title="format_name" class="documentation_func">format_name</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofGstVideoFormat.html#!show_framerates" title="framerates" class="documentation_func">framerates</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofGstVideoFormat.html#!show_height" title="height" class="documentation_func">height</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofGstVideoFormat.html#!show_mimetype" title="mimetype" class="documentation_func">mimetype</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofGstVideoFormat.html#!show_width" title="width" class="documentation_func">width</a></li>
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoDevice.html" class="documentation_class_link"><strong>ofVideoDevice</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoDevice.html#!show_bAvailable" title="bAvailable" class="documentation_func">bAvailable</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoDevice.html#!show_deviceName" title="deviceName" class="documentation_func">deviceName</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoDevice.html#!show_formats" title="formats" class="documentation_func">formats</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoDevice.html#!show_hardwareName" title="hardwareName" class="documentation_func">hardwareName</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoDevice.html#!show_id" title="id" class="documentation_func">id</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoDevice.html#!show_serialID" title="serialID" class="documentation_func">serialID</a></li>
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoFormat.html" class="documentation_class_link"><strong>ofVideoFormat</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoFormat.html#!show_framerates" title="framerates" class="documentation_func">framerates</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoFormat.html#!show_height" title="height" class="documentation_func">height</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoFormat.html#!show_pixelFormat" title="pixelFormat" class="documentation_func">pixelFormat</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoFormat.html#!show_width" title="width" class="documentation_func">width</a></li>
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoGrabber.html" class="documentation_class_link"><strong>ofVideoGrabber</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoGrabber.html#!show_bind" title="bind" class="documentation_func">bind()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoGrabber.html#!show_close" title="close" class="documentation_func">close()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoGrabber.html#!show_draw" title="draw" class="documentation_func">draw()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoGrabber.html#!show_getGrabber" title="getGrabber" class="documentation_func">getGrabber()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoGrabber.html#!show_getHeight" title="getHeight" class="documentation_func">getHeight()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoGrabber.html#!show_getPixelFormat" title="getPixelFormat" class="documentation_func">getPixelFormat()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoGrabber.html#!show_getPixels" title="getPixels" class="documentation_func">getPixels()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoGrabber.html#!show_getTexture" title="getTexture" class="documentation_func">getTexture()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoGrabber.html#!show_getTexturePlanes" title="getTexturePlanes" class="documentation_func">getTexturePlanes()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoGrabber.html#!show_getWidth" title="getWidth" class="documentation_func">getWidth()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoGrabber.html#!show_initGrabber" title="initGrabber" class="documentation_func">initGrabber()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoGrabber.html#!show_isFrameNew" title="isFrameNew" class="documentation_func">isFrameNew()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoGrabber.html#!show_isInitialized" title="isInitialized" class="documentation_func">isInitialized()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoGrabber.html#!show_isUsingTexture" title="isUsingTexture" class="documentation_func">isUsingTexture()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoGrabber.html#!show_listDevices" title="listDevices" class="documentation_func">listDevices()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoGrabber.html#!show_setAnchorPoint" title="setAnchorPoint" class="documentation_func">setAnchorPoint()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoGrabber.html#!show_setDesiredFrameRate" title="setDesiredFrameRate" class="documentation_func">setDesiredFrameRate()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoGrabber.html#!show_setDeviceID" title="setDeviceID" class="documentation_func">setDeviceID()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoGrabber.html#!show_setGrabber" title="setGrabber" class="documentation_func">setGrabber()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoGrabber.html#!show_setPixelFormat" title="setPixelFormat" class="documentation_func">setPixelFormat()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoGrabber.html#!show_setUseTexture" title="setUseTexture" class="documentation_func">setUseTexture()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoGrabber.html#!show_setVerbose" title="setVerbose" class="documentation_func">setVerbose()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoGrabber.html#!show_setup" title="setup" class="documentation_func">setup()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoGrabber.html#!show_unbind" title="unbind" class="documentation_func">unbind()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoGrabber.html#!show_update" title="update" class="documentation_func">update()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoGrabber.html#!show_videoSettings" title="videoSettings" class="documentation_func">videoSettings()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html" class="documentation_class_link"><strong>ofVideoPlayer</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_bind" title="bind" class="documentation_func">bind()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_close" title="close" class="documentation_func">close()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_closeMovie" title="closeMovie" class="documentation_func">closeMovie()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_draw" title="draw" class="documentation_func">draw()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_firstFrame" title="firstFrame" class="documentation_func">firstFrame()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_getCurrentFrame" title="getCurrentFrame" class="documentation_func">getCurrentFrame()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_getDuration" title="getDuration" class="documentation_func">getDuration()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_getHeight" title="getHeight" class="documentation_func">getHeight()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_getIsMovieDone" title="getIsMovieDone" class="documentation_func">getIsMovieDone()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_getLoopState" title="getLoopState" class="documentation_func">getLoopState()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_getMoviePath" title="getMoviePath" class="documentation_func">getMoviePath()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_getPixelFormat" title="getPixelFormat" class="documentation_func">getPixelFormat()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_getPixels" title="getPixels" class="documentation_func">getPixels()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_getPlayer" title="getPlayer" class="documentation_func">getPlayer()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_getPosition" title="getPosition" class="documentation_func">getPosition()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_getSpeed" title="getSpeed" class="documentation_func">getSpeed()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_getTexture" title="getTexture" class="documentation_func">getTexture()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_getTexturePlanes" title="getTexturePlanes" class="documentation_func">getTexturePlanes()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_getTotalNumFrames" title="getTotalNumFrames" class="documentation_func">getTotalNumFrames()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_getWidth" title="getWidth" class="documentation_func">getWidth()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_isFrameNew" title="isFrameNew" class="documentation_func">isFrameNew()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_isInitialized" title="isInitialized" class="documentation_func">isInitialized()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_isLoaded" title="isLoaded" class="documentation_func">isLoaded()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_isPaused" title="isPaused" class="documentation_func">isPaused()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_isPlaying" title="isPlaying" class="documentation_func">isPlaying()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_isUsingTexture" title="isUsingTexture" class="documentation_func">isUsingTexture()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_load" title="load" class="documentation_func">load()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_loadAsync" title="loadAsync" class="documentation_func">loadAsync()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_nextFrame" title="nextFrame" class="documentation_func">nextFrame()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_play" title="play" class="documentation_func">play()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_previousFrame" title="previousFrame" class="documentation_func">previousFrame()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_setAnchorPoint" title="setAnchorPoint" class="documentation_func">setAnchorPoint()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_setFrame" title="setFrame" class="documentation_func">setFrame()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_setLoopState" title="setLoopState" class="documentation_func">setLoopState()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_setPaused" title="setPaused" class="documentation_func">setPaused()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_setPixelFormat" title="setPixelFormat" class="documentation_func">setPixelFormat()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_setPlayer" title="setPlayer" class="documentation_func">setPlayer()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_setPosition" title="setPosition" class="documentation_func">setPosition()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_setSpeed" title="setSpeed" class="documentation_func">setSpeed()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_setUseTexture" title="setUseTexture" class="documentation_func">setUseTexture()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_setVolume" title="setVolume" class="documentation_func">setVolume()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_stop" title="stop" class="documentation_func">stop()</a></li>
+                        
+                        
+                            
+                        <li class="method noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_unbind" title="unbind" class="documentation_func">unbind()</a></li>
+                        
+                        
+                        <li class="method"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoPlayer.html#!show_update" title="update" class="documentation_func">update()</a></li>
+                        
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+        	<div class="box">
+        	<ul class="documentation_class">
+        	    <!-- class link -->
+                <li class="docs-module-title"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoSavedEventArgs.html" class="documentation_class_link"><strong>ofVideoSavedEventArgs</strong></a>&nbsp;
+                    <img src="http://icq4ever.iptime.org//icons/class.png" alt="C++ Class"/>
+                </li>
+                
+        	    <!-- class methods -->
+                
+                
+                
+                <!--hr/-->
+                
+                
+        	    <!-- class variables -->
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoSavedEventArgs.html#!show_error" title="error" class="documentation_func">error</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoSavedEventArgs.html#!show_grabber" title="grabber" class="documentation_func">grabber</a></li>
+                            
+                                
+                            <li class="variable noDoc"><a href="http://icq4ever.iptime.org//documentation/video/ofVideoSavedEventArgs.html#!show_videoPath" title="videoPath" class="documentation_func">videoPath</a></li>
+                
+                
+            <!--div-->
+            </ul>
+            </div>
+    </div>
+    
+</div>
+
+		</div><!-- End Page Wide -->   
+      </div><!-- End Body Wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:34:25 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+eb73abcb6141243ae29291b42ec447024f00a570
+">
+
+eb73abcb6141243ae29291b42ec447024f00a570
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+
+
+

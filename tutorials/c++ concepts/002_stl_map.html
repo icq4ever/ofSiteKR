@@ -1,0 +1,448 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+    <script src="http://icq4ever.iptime.org//js/jquery.columnizer.min.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-71930909-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
+  <body>
+    <div id="content">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">	
+	    <div class="page-wide-tutorial">
+            <!--ul class="submenu">
+                <li><a href="/documentation">레퍼런스</a></li>
+                <li><a href="/tutorials">튜토리얼</a></li>
+            </ul-->
+    	    <h1>Having fun with Maps, specifically std::map</h1>
+    	    <span class="article_meta">2013/03/07 10:00:00&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="">Joshua Noble</a></span><br/>
+    	    <div class="article">
+    	    
+  <p>This tutorial is composed by these sections:</p>
+<ol>
+<li><a href="#intro">Introduction: what is a map?</a></li>
+<li><a href="#assign">Insert values into a map</a></li>
+<li><a href="#erase">Deleting element from a map</a></li>
+<li><a href="#iteration">Iterating through a map</a></li>
+<li><a href="#find">Finding element in a map</a></li>
+<li><a href="#map_of_objects">Storing object in a map</a></li>
+<li><a href="#multimap">What is a multimap?</a></li>
+<li><a href="#usefull">Other usefull methods</a></li>
+</ol>
+<p><a name="intro"></a></p>
+<h3 id="introduction-what-is-a-map">Introduction: what is a map?</h3>
+<p>In the previous tutorial you learned about the std::vector but that's not the only kind of container that C++ provides for you. In fact, for almost any kind of data storage that you can think of, there's a container that's going to allow you to express it elegantly. In this little tutorial we're going to look at one that's really handy when you need something more specific than a vector. Maps are containers that store elements formed by a combination of a key value and a mapped value, following a specific order. If you've used Javascript or Ruby or Python you're already familiar with these and you've used them any time you want to do something like:</p>
+<pre><code class="cpp">images[&quot;Portland&quot;].draw();
+</code></pre>
+
+<p>Neat right? Instead of needing to look through a vector to find the right image, you can just store it with a key that will allow you to look it later in a way that goes better with your data. If you ever find yourself doing things like this:</p>
+<pre><code class="cpp">int theImageIWant, otherImageIWant;
+vector&lt;ofTexture&gt; images;
+</code></pre>
+
+<p>You might want to consider a map, because what you're saying is: I need a good way of storing the indexes to objects (really, they're "keys") so that I can get them later. The big problem with storing indices is that as soon as you reorder your vector, add something to beginning, remove something, your indices don't mean anything any more. Wouldn't it be nicer to have something like:</p>
+<pre><code class="cpp">string firstImageKey = &quot;Portland&quot;, secondImageKey = &quot;Tokyo&quot;;
+map&lt;string, ofTexture&gt; images;
+</code></pre>
+
+<p>This has a few advantages: "Portland" and "Tokyo" are always going to point to the same ofTextures, no matter what you do to the map and the names are human readable: you can just read them and see what they are. Let's look at a quick example. In my ofApp.h file, I add the following:</p>
+<pre><code class="cpp">map&lt;string, ofImage&gt; images;
+</code></pre>
+
+<p>This says: I will be storing images with a key that is a string. In my cpp file, I can do the following:</p>
+<pre><code class="cpp">void ofApp::setup(){
+    // make 2 images to store
+    ofImage pImage;
+    pImage.loadImage(&quot;portland.jpg&quot;);
+
+    ofImage tImage;
+    tImage.loadImage(&quot;tokyo.jpg&quot;);
+
+    // now store them with nice name
+    images[&quot;Portland&quot;] = pImage;
+    images[&quot;Tokyo&quot;] = tImage;
+}
+
+void ofApp::draw(){
+    // now I can access them with just their names:
+    images[&quot;Portland&quot;].draw(0, 0, 100, 100);
+    images[&quot;Tokyo&quot;].draw(100, 0, 100, 100);
+}
+</code></pre>
+
+<p>You can see how, though this isn't the most powerful example of that, that it might be really nice to be able to keep track of things by something concrete that will keep it's "location" no matter what. So, in a general sense in a map, the key values are generally used to sort and uniquely identify the elements, while the mapped values store the content associated to this key. What kinds of things can you use as a value? Anything. Really, anything can be a value. You will want to be careful storing pointers, but unlike a vector, once inserted into a map objects don't move around even if other elements are added or removed, however, storing pointers is good, especially if you're working with lots of textures or other large data objects. Make sure you don't invalidate your pointers (i.e. delete the object that is being pointed to) and you'll be good to go.</p>
+<h3 id="insert-values-into-a-map">Insert values into a  map</h3>
+<p><a name='assign'></a></p>
+<p>As far as adding things goes, doing this:</p>
+<pre><code class="cpp"> map[key] = value;
+</code></pre>
+
+<p>isn't the only way that you'll see objects added to a map. Each element in a map is a pair. A pair is composed by to parts, a key and a value.
+A declaration for a pair just looks like the declaration of the map itself:</p>
+<pre><code class="cpp">typedef pair&lt;const Key, T&gt; value_type;
+</code></pre>
+
+<p>Not particularly revelatory yet, but just wait. 
+Considering this, adding elements in a map means adding pairs into it. There
+are different ways to do this in c++. Let's instantiate 3 new cities</p>
+<pre><code class="cpp">ofImage bImage;
+bImage.loadImage(&quot;Berlin.jpg&quot;);
+
+ofImage lImage;
+lImage.loadImage(&quot;London.jpg&quot;);
+
+ofImage pImage;
+pImage.loadImage(&quot;Paris.jpg&quot;);
+</code></pre>
+
+<p>How do we add them into the map? One of the most common is to use the <code>insert</code> method combined with <code>make_pairs</code>.</p>
+<pre><code class="cpp">images.insert(make_pair(&quot;Berlin&quot;, bImage));
+</code></pre>
+
+<p>We can also use <code>insert</code> and <code>pair</code></p>
+<pre><code class="cpp">images.insert(pair&lt;string, ofTexture&gt;(&quot;London&quot;, lImage));
+</code></pre>
+
+<p>or we can use the std::pair construct</p>
+<pre><code class="cpp">images.insert(map&lt;string, ofTexture&gt;::value_type(&quot;Paris&quot;, pImage));
+</code></pre>
+
+<p><a name='erase'></a></p>
+<h3 id="deleting-element-from-a-map">Deleting element from a map</h3>
+<p>To delete an element from a map we use <code>erase</code></p>
+<pre><code class="cpp">images.erase(&quot;London&quot;);
+</code></pre>
+
+<p>To completely empty the map, we use <code>clear</code></p>
+<pre><code class="cpp">images.clear();
+</code></pre>
+
+<p><a name='iteration'></a></p>
+<h3 id="iterating-through-a-map">Iterating through a map</h3>
+<p>So, we know how to put things into a map and get them out, what about looking through them? You can't just loop through them with an int like a vector, so you need to use an iterator. So, let's put pairs and even maps on hold for just a moment and talk iterators because they make maps a lot more usable:</p>
+<p>The iterator is the C++ std version of a pointer. You use it to point to location in a container, kind of the same way that with a vector you might keep an index around that references a place in the vector that you're interested in, an iterator is like that index, but more so, it is that object in the vector. All containers have a begin() function, which returns an iterator pointing to the beginning of the container (the first element) and a function end() that returns an iterator corresponding to having reached the end of the container. Let's make a for loop with an iterator to see how they work a little better:</p>
+<pre><code class="cpp">map&lt;float,string&gt;::iterator it; // make the iterator, say it's going to iterate over a map&lt;float, string&gt;
+for ( it = aMap.begin(); // say the iterator should point to the beginning of a map called &quot;aMap&quot;
+      it != aMap.end();  // say let's stop when we get to the end aMap
+      ++it) {            // increment the iterator
+}
+</code></pre>
+
+<p>The iterator for a vector of ofImages would look like this: <code>vector&lt;ofImage&gt;::iterator</code> while an iterator for a map with string keys and ofMatrix4x4 values would be: <code>map&lt;string, ofMatrix4x4&gt;::iterator</code>. You can move an iterator forward with ++ and backward with --.Interesting thing: you can move an iterator with two positions with advance(it, 2) or twenty with advance(it, 20), though you'll probably never need to be able to do that. Ok, back to maps, let's iterate over our map to draw them to the screen:</p>
+<pre><code class="cpp">void ofApp::draw(){
+    int xpos = 0;
+    for (map&lt;string, ofTexture&gt;::iterator it=cities.begin(); it!=cities.end(); ++it){
+        // it-&gt;first contains the key
+        cout &lt;&lt; &quot; this is the key &quot; &lt;&lt; it-&gt;first &lt;&lt; endl;
+        // it-&gt;second contains the value
+        it-&gt;second.draw(xpos, 0, 100, 100);
+        xpos+= 100;
+    }
+}
+</code></pre>
+
+<p>So what's that iterator pointing to? Well, a pair, in this case a pair of <code>string,ofTexture</code>, like:</p>
+<pre><code class="cpp">pair&lt;string, ofTexture&gt; p;
+</code></pre>
+
+<p>C++ 11 introduce a shorthand to iterate through a map, <code>auto</code>. We can use it like this:</p>
+<pre><code class="cpp">for (auto&amp; pic : images )
+  cout &lt;&lt; pic.first &lt;&lt; endl;
+</code></pre>
+
+<p>Please note that we have used <code>pic.first</code> and not <code>pic-&gt;first</code>. That's beacause
+<code>pic</code> is a reference to the pair(note the <code>&amp;</code>), not a pointer like in the
+previous example. In this case, we can iterate through the map and change the
+value of the maps. But what if we want to simply read the values from the map,
+without changing them? In this case, we use the keyword <code>constant</code>. This
+keyword makes sure that no values in the map will be touched</p>
+<pre><code class="cpp">for (const auto&amp; pic : images )
+  cout &lt;&lt; pic.first &lt;&lt; endl;
+</code></pre>
+
+<p><a name='find'></a></p>
+<h3 id="finding-element-in-a-map">Finding element in a map</h3>
+<p>Whic could be the method name to search elements in a map if not <code>find</code>?</p>
+<pre><code class="cpp">  if (cities.find(&quot;Berlin&quot;) != cities.end())
+    cout &lt;&lt; it-&gt;first &lt;&lt; &quot; founded!&quot; &lt;&lt;endl;
+  else
+    cout &lt;&lt; &quot;city not found&quot; &lt;&lt; endl;
+</code></pre>
+
+<p>Notice the end() call there? That's because find() is actually returning an iterator, so if the element is inside the map, we get an iterator to it and if it isn't then we can an iterator that's pointing to the end of the iterator. There's a few other methods that the map provides that we'll list out in slightly abbreviated fashion:</p>
+<p><a name='map_of_objects'></a></p>
+<h3 id="storing-object-in-a-map">Storing object in a map</h3>
+<p>What kinds of things can you use as a key in a map? Well, pretty much all the things you probably want to: strings, floats, stuff like that. There are some limits to this though, you might try doing the following:</p>
+<pre><code class="cpp">map&lt;ofVec2f, string&gt; locations;
+</code></pre>
+
+<p>And this will throw a pretty obscure error, something like: "/usr/include/c++/4.2.1/bits/stl_function.h:227:20: error: invalid operands to binary expression ('const ofVec2f' and 'const ofVec2f')". This actually makes sense because the idea of a "less than" vector is a bit odd. There's a mathematical definition of it, but it doesn't make much common sense and the common sense one doesn't make much sense mathematically and that's not actually the point. The point is, anything that has a "&lt;" operator can be used as a key. Let's make one:</p>
+<pre><code class="cpp">class vec2Key
+{
+
+public:
+
+    float x, y;
+
+    vec2Key( float xValue, float yValue )
+    {
+        x = xValue;
+        y = yValue;
+    }
+
+    bool operator &lt; ( const vec2Key&amp; other) const
+    {
+        if ( x == other.x ) {
+            return y &lt; other.y;
+        }
+
+        return x &lt; other.x;
+    }
+
+};
+</code></pre>
+
+<p>Note that &lt; operator. This is key because it tells the map how to organize all the values that it's containing so that it's relatively quick to look-up needed values. Maps are usually a Red-Black Tree underneath and for those interested in what that is, <a href="http://en.wikipedia.org/wiki/Red%E2%80%93black_tree">knock yourself out</a>. Ok, so we've got a key object that we can use, let's go go ahead and use it:</p>
+<pre><code class="cpp">vec2Key k1(100, 200, 1);
+vec2Key k2(100, 300, 1);
+vec2Key k3(100, 400, 1);
+
+map&lt;vec2Key, string&gt; stringToLocation;
+
+stringToLocation[k1] = &quot;first&quot;;
+stringToLocation[k2] = &quot;second&quot;;
+stringToLocation[k3] = &quot;third&quot;;
+</code></pre>
+
+<p>Alright, let's test it:</p>
+<pre><code class="cpp">cout &lt;&lt; stringToLocation[vec2Key(100, 300)] &lt;&lt; endl; // prints &quot;second&quot;, all good
+</code></pre>
+
+<p>Anything that knows whether it's greater than something else can be put into a list. Let's say we want to look this up in a fuzzy kind of way, because we're doing a weird quadtree implementation or something like that, well we can make that &lt; operator do a lot for us. Let's give our vector a slightly more fluid comparison operator:</p>
+<pre><code class="cpp">    bool operator &lt; ( const vec2Key&amp; other) const
+    {
+        if ( fabs(x - other.x) &lt; 0.1 ) {
+              return fabs(y - other.y) &gt; 0.1;
+        }
+
+        return x &lt; other.x;
+    }
+</code></pre>
+
+<p>Now:</p>
+<pre><code class="cpp"> cout &lt;&lt; stringToLocation[vec2Key(100.01, 299.99)] &lt;&lt; endl; // returns &quot;second&quot; because 100,300 is both &lt; 0.1 away
+</code></pre>
+
+<p><a name='multimap'></a></p>
+<h3 id="what-is-a-multimap">What is a multimap?</h3>
+<p>In a <code>map</code> each key is unique, that means that is not possible to have in our
+previous map <code>map&lt;string, ofTexture&gt; images</code> two city's image with the same
+name as key, like "London".
+In a <code>multimap</code> we do not have this rule, a <code>multimap</code> can contains pair with
+the same key. Example:</p>
+<pre><code class="cpp">  multimap&lt;string, int&gt; coldestCities;
+  coldestCities.insert(make_pair(&quot;moskow&quot;,2015));
+  coldestCities.insert(make_pair(&quot;chicago&quot;,2014));
+  coldestCities.insert(make_pair(&quot;moskow&quot;,2013));
+  coldestCities.insert(make_pair(&quot;moskow&quot;,2012));
+  coldestCities.insert(make_pair(&quot;helsinki&quot;,2011));
+
+  cout &quot;coldest cities in the last 5 years&quot; &lt;&lt; endl;
+  cout &quot;disclaimer: this data are just an example&quot; &lt;&lt; endl;
+
+  for (const auto&amp; cityYear : coldestCities )
+    cout &lt;&lt; cityYear.first&lt;&lt; &quot;year: &quot;&lt;&lt; cityYear.second &lt;&lt; endl;
+</code></pre>
+
+<p>We use a map whan we want that our keys appear only once, we use a multimap
+when this detail is not important.</p>
+<p><a name="usefull"></a></p>
+<h3 id="other-usefull-methods">Other Usefull methods</h3>
+<p><code>empty</code> - if the container is empty returns true, otherwise returns false</p>
+<p><code>size</code> - returns the number of elements in the map</p>
+<p><code>lower_bound</code> - This gives you back an iterator to the first element not less than the given value, so:
+<code>upper_bound</code> - returns an iterator to the first element greater than a certain value </p>
+<p>As an example of these two:</p>
+<pre><code class="cpp">map&lt;float, string&gt; floatToString;
+
+floatToString[3.14] = &quot;PI&quot;;
+floatToString[2.71] = &quot;E&quot;;
+floatToString[2.29] = &quot;UPC&quot;;
+floatToString[0.83] = &quot;Gauss's constant&quot;;
+
+cout &lt;&lt; floatToString[0.83] &lt;&lt; endl;
+
+map&lt;float, string&gt;::iterator lb = floatToString.lower_bound(2.6);
+map&lt;float, string&gt;::iterator ub = floatToString.upper_bound(2.8);
+</code></pre>
+
+<p>And that concludes our adventures with the std::map. For a more complete explanation of the map, check <a href="en.cppreference.com/w/cpp/container/map">cppreference</a>. Go forth and use them where appropriate</p>
+
+    		</div>
+            
+        </div><!-- End Page Wide -->      
+      </div><!-- End Body Wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:33:31 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+4d738d6979d8e7992359cde47632192d1fbef472
+">
+
+4d738d6979d8e7992359cde47632192d1fbef472
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,1146 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr - ofSoundStream</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+    <script src="http://icq4ever.iptime.org//js/jquery.columnizer.min.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation.js"></script>
+  </head>
+  <body>
+    <div id="content">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">
+          <div class="page-wide">
+          
+              <div id="docstitle"><h1>ofSoundStream</h1></div>
+              <div id="editdocs">
+                    <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/sound/ofSoundStream.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
+                     <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/sound/ofSoundStream_functions.markdown" class="nohover"><img title="edit functions on GitHub" src="/images/editfunctions.png?a=5"/></a>
+              </div>
+              
+          </div>
+          
+          
+        <div class="page-wide">
+		    <div class="submenucol-left">
+		     <!-- list of methods -->
+		     <p class="top_list_header">class methods</p>
+             <ul class="functionslist">
+                 
+                         <li class="noDoc">
+                         <a href="#show_ofSoundStream" class="ofSoundStream" data-lookup="ofSoundStream">ofSoundStream()</a></li>
+                     
+                         <li>
+                         <a href="#show_close" class="close" data-lookup="close">close()</a></li>
+                     
+                         <li>
+                         <a href="#show_getBufferSize" class="getBufferSize" data-lookup="getBufferSize">getBufferSize()</a></li>
+                     
+                         <li>
+                         <a href="#show_getDeviceList" class="getDeviceList" data-lookup="getDeviceList">getDeviceList()</a></li>
+                     
+                         <li>
+                         <a href="#show_getMatchingDevices" class="getMatchingDevices" data-lookup="getMatchingDevices">getMatchingDevices()</a></li>
+                     
+                         <li>
+                         <a href="#show_getNumInputChannels" class="getNumInputChannels" data-lookup="getNumInputChannels">getNumInputChannels()</a></li>
+                     
+                         <li>
+                         <a href="#show_getNumOutputChannels" class="getNumOutputChannels" data-lookup="getNumOutputChannels">getNumOutputChannels()</a></li>
+                     
+                         <li>
+                         <a href="#show_getSampleRate" class="getSampleRate" data-lookup="getSampleRate">getSampleRate()</a></li>
+                     
+                         <li class="noDoc">
+                         <a href="#show_getSoundStream" class="getSoundStream" data-lookup="getSoundStream">getSoundStream()</a></li>
+                     
+                         <li>
+                         <a href="#show_getTickCount" class="getTickCount" data-lookup="getTickCount">getTickCount()</a></li>
+                     
+                         <li>
+                         <a href="#show_printDeviceList" class="printDeviceList" data-lookup="printDeviceList">printDeviceList()</a></li>
+                     
+                         <li>
+                         <a href="#show_setDevice" class="setDevice" data-lookup="setDevice">setDevice()</a></li>
+                     
+                         <li>
+                         <a href="#show_setDeviceID" class="setDeviceID" data-lookup="setDeviceID">setDeviceID()</a></li>
+                     
+                         <li>
+                         <a href="#show_setInput" class="setInput" data-lookup="setInput">setInput()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_setOutput" class="setOutput" data-lookup="setOutput">setOutput()</a></li>
+                     
+                     
+                         <li class="noDoc">
+                         <a href="#show_setSoundStream" class="setSoundStream" data-lookup="setSoundStream">setSoundStream()</a></li>
+                     
+                         <li>
+                         <a href="#show_setup" class="setup" data-lookup="setup">setup()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_start" class="start" data-lookup="start">start()</a></li>
+                     
+                         <li>
+                         <a href="#show_stop" class="stop" data-lookup="stop">stop()</a></li>
+                     
+             </ul>
+            
+             
+             
+             <!-- list of variables -->              
+            
+             
+            
+             <!-- list of functions -->              
+            <p class="top_list_header">global functions</p>
+                <ul class="functionslist">
+                     
+                            <li>
+                            <a href="#show_ofSoundStreamClose" class="ofSoundStreamClose" data-lookup="ofSoundStreamClose">ofSoundStreamClose()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofSoundStreamListDevices" class="ofSoundStreamListDevices" data-lookup="ofSoundStreamListDevices">ofSoundStreamListDevices()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofSoundStreamSetup" class="ofSoundStreamSetup" data-lookup="ofSoundStreamSetup">ofSoundStreamSetup()</a></li>
+                         
+                         
+                         
+                            <li>
+                            <a href="#show_ofSoundStreamStart" class="ofSoundStreamStart" data-lookup="ofSoundStreamStart">ofSoundStreamStart()</a></li>
+                         
+                            <li>
+                            <a href="#show_ofSoundStreamStop" class="ofSoundStreamStop" data-lookup="ofSoundStreamStop">ofSoundStreamStop()</a></li>
+                         
+                 </ul>
+		    </div>
+	    <div class="submenucol-right">
+            <div class="documentation_detail class_documentation">
+              
+  <p><a href="../sound/ofSoundStream.html" class="docs_class" >ofSoundStream</a> is used for more low-level access to the sound buffer and uses the RtAudio library developed at McGill University by Gary P. Scavone. RtAudio provides an API that lets you control and read data from the audio hardware of your computer. You can manipulate sound with openFrameworks using two approaches. The first op- tion is to directly manipulate the sound data sent from the sound card by using the <a href="../sound/ofSoundStream.html" class="docs_class" >ofSoundStream</a> class that is included as a part of the core oF distribution. 
+The <a href="../application/ofBaseApp.html" class="docs_class" >ofBaseApp</a> class defines two callback methods that let you work with sound: audioIn() is called when the system receives any sound, and audioOut() is called before the system sends sound to the sound card. Both of these callbacks require that the ofSoundStreamSetup() method is called before they will be activated. This tells the RtAudio library to start up, begin processing audio from the system microphone (or line in), and send data to the system sound card:
+ofSoundStreamSetup(int nOutputs, int nInputs, int sampleRate, int bufferSize, int nBuffers)
+The ofSoundStreamSetup() method has five parameters:
+nOutput
+Is the number of output channels that your computer supports. Usually this will be two: left and right. If you have a surround sound setup, it might be four or five.
+nInputs - Is the number of input channels that your system uses.
+sampleRate - Is usually 44,100 kHz, or CD quality, though you may want to make it higher or lower depending on the needs of your application.
+bufferSize - Is the size of the buffer that your system supports. At the time of writing this book, on any operating system, its probably 256 values.
+nBuffers - Is the number of buffers that your system will create and swap out. The more buffers, the faster your computer will write information into the buffer, but the more memory it will take up. You should probably use two for each channel that youre using. Heres an example call:</p>
+<p>ofSoundStreamSetup(2, 0, 44100, 256, 4);</p>
+<p>The previous snippet will send two channels of stereo sound to the audioIn() method each time the underlying RtAudio library sends information from the sound card. This should be called in the setup method of your openFrameworks application. Now, look at the first of two callback methods. The audioIn() method is called whenever the system microphone detects sound:
+void audioIn(float * input, int bufferSize, int nChannels) input
+Is a pointer to the array of data.
+bufferSize - Is the size of the buffer, the number of floating-point values in the input array.
+nChannels - Is the number of sound channels represented in the sound data.</p>
+<p>The input parameter is always an array of floating-point numbers with the length given in the bufferSize variable. This sounds a little tricky to work with, but as you can see, by using a for loop with a length determined by bufferSize, it isnt that difficult:</p>
+<p>float samples[bufferSize];
+for (int i = 0; i &lt; bufferSize; i++) {
+// increment the sample counter
+samples[sampleCounter] = input[i]; }</p>
+<p>Note that this callback wont be triggered unless you call ofSoundStreamSetup() with one or two channels set as the input, like so:</p>
+<p>ofSoundStreamSetup(0, 2, 44100, 256, 4);</p>
+<p>Next, the audioOut() method is called when the system needs one buffer worth of audio to send to the sound card. The method sends the array of floating-point information that represents the buffer of audio data, the size of the buffer, and the number of channels:
+void audioOut() (float * output, int bufferSize, int nChannels)
+To have the audioOut() callback triggered by the system, you would need to call ofSoundStreamSetup() with one or two channels in the output. If you want to alter the data before its sent to the sound buffer, you must do it within this method.</p>
+
+
+                    <div class="inlined_docs">
+                        <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+                        
+  <p>Gives access to audio input and output devices</p>
+<p><a href="../sound/ofSoundStream.html" class="docs_class" >ofSoundStream</a> controls access to your computer's audio input and output
+devices. For example, you could use an <a href="../sound/ofSoundStream.html" class="docs_class" >ofSoundStream</a> to get live input from
+a microphone, or generate sound in realtime for your computer's speakers.</p>
+<p>A typical openFrameworks app will use just one ofSoundStream, and you might
+not even need to use this class directly at all if you don't need to query
+things like the sample rate or buffer size. In order to start receiving or
+generating audio, your ofApp should implement either ofBaseApp::audioIn() or
+ofBaseApp::audioOut() respectively, and then call ofSoundStreamSetup(). You
+can find examples of this in either the audioInputExample or the
+audioOutputExample.</p>
+<p>Starting a stream with 0 input or output channels will prevent audioIn() or
+audioOut() from being called, respectively.</p>
+<p>Some platforms (iOS, for example) will expose additional platform-specific
+sound stream functionality. See the platform-specific examples for demos.</p>
+<p>Warning: Be aware that audioIn() and audioOut() will be called on a different
+thread from your app's update() / draw() thread.</p>
+
+                    </div>   
+              
+              
+  
+
+           </div>
+                  
+            <!-- methods detail -->
+              <!--h2><a name="methods"></a>ofSoundStream methods</h2-->
+                        
+<div class="documentation_detail ofSoundStream" data-lookup="ofSoundStream" data-item-type="method">
+  	 
+	<h1><a name="show_ofSoundStream">ofSoundStream()</a></h1>
+	<h2>
+  <p>ofSoundStream::ofSoundStream()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail close" data-lookup="close" data-item-type="method">
+  	 
+	<h1><a name="show_close">close()</a></h1>
+	<h2>
+  <p>void ofSoundStream::close()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>stops the stream and cleans up its resources.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getBufferSize" data-lookup="getBufferSize" data-item-type="method">
+  	 
+	<h1><a name="show_getBufferSize">getBufferSize()</a></h1>
+	<h2>
+  <p>int ofSoundStream::getBufferSize()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Queries the stream's buffer size.
+\return the current buffer size of the stream.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getDeviceList" data-lookup="getDeviceList" data-item-type="method">
+  	 
+	<h1><a name="show_getDeviceList">getDeviceList()</a></h1>
+	<h2>
+  <p>vector&lt; ofSoundDevice &gt; ofSoundStream::getDeviceList()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Retrieves a list of available audio devices</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getMatchingDevices" data-lookup="getMatchingDevices" data-item-type="method">
+  	 
+	<h1><a name="show_getMatchingDevices">getMatchingDevices(...)</a></h1>
+	<h2>
+  <p>vector&lt; ofSoundDevice &gt; ofSoundStream::getMatchingDevices(const string &amp;name, unsigned int inChannels, unsigned int outChannels)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get all devices which match the arguments (name can be a partial match)</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getNumInputChannels" data-lookup="getNumInputChannels" data-item-type="method">
+  	 
+	<h1><a name="show_getNumInputChannels">getNumInputChannels()</a></h1>
+	<h2>
+  <p>int ofSoundStream::getNumInputChannels()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Queries the stream's number of input channels.
+\return the number of input channels (e.g. 2 for stereo).</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getNumOutputChannels" data-lookup="getNumOutputChannels" data-item-type="method">
+  	 
+	<h1><a name="show_getNumOutputChannels">getNumOutputChannels()</a></h1>
+	<h2>
+  <p>int ofSoundStream::getNumOutputChannels()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Queries the stream's number of output channels.
+\return the number of output channels (e.g. 2 for stereo).</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getSampleRate" data-lookup="getSampleRate" data-item-type="method">
+  	 
+	<h1><a name="show_getSampleRate">getSampleRate()</a></h1>
+	<h2>
+  <p>int ofSoundStream::getSampleRate()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Queries the stream's sample rate
+\return the current sample rate of the stream
+\note The returned sample rate may differ from the requested sample rate.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getSoundStream" data-lookup="getSoundStream" data-item-type="method">
+  	 
+	<h1><a name="show_getSoundStream">getSoundStream()</a></h1>
+	<h2>
+  <p>shared_ptr&lt; ofBaseSoundStream &gt; ofSoundStream::getSoundStream()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getTickCount" data-lookup="getTickCount" data-item-type="method">
+  	 
+	<h1><a name="show_getTickCount">getTickCount()</a></h1>
+	<h2>
+  <p>unsigned long long ofSoundStream::getTickCount()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Queries the number of "ticks" passed since the stream started.</p>
+<p>This is a representation of how many buffers have passed through the
+stream since it started. This can be converted to seconds with the
+following formula:</p>
+<p>secondsOfPlayback = (tickCount * bufferSize) / sampleRate</p>
+<p>\return number of buffers passed through the stream since it started.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail printDeviceList" data-lookup="printDeviceList" data-item-type="method">
+  	 
+	<h1><a name="show_printDeviceList">printDeviceList()</a></h1>
+	<h2>
+  <p>void ofSoundStream::printDeviceList()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Prints a list of available audio devices to the console</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setDevice" data-lookup="setDevice" data-item-type="method">
+  	 
+	<h1><a name="show_setDevice">setDevice(...)</a></h1>
+	<h2>
+  <p>void ofSoundStream::setDevice(const ofSoundDevice &amp;device)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>sets the device represented by the stream, see ofSoundStream::getDeviceList().</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setDeviceID" data-lookup="setDeviceID" data-item-type="method">
+  	 
+	<h1><a name="show_setDeviceID">setDeviceID(...)</a></h1>
+	<h2>
+  <p>void ofSoundStream::setDeviceID(int deviceID)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>sets the device represented by the stream, see ofSoundStream::getDeviceList().</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setInput" data-lookup="setInput" data-item-type="method">
+  	 
+	<h1><a name="show_setInput">setInput(...)</a></h1>
+	<h2>
+  <p>void ofSoundStream::setInput(ofBaseSoundInput &amp;soundInput)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Sets the object which will have audioIn() called when the device receives audio.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setInput" data-lookup="setInput" data-item-type="method">
+  	 
+	<h1><a name="show_setInput">setInput(...)</a></h1>
+	<h2>
+  <p>void ofSoundStream::setInput(ofBaseSoundInput &amp;soundInput)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Sets the object which will have audioIn() called when the device receives audio.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setOutput" data-lookup="setOutput" data-item-type="method">
+  	 
+	<h1><a name="show_setOutput">setOutput(...)</a></h1>
+	<h2>
+  <p>void ofSoundStream::setOutput(ofBaseSoundOutput &amp;soundOutput)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Sets the object which will have audioOut() called when the device requests audio.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setOutput" data-lookup="setOutput" data-item-type="method">
+  	 
+	<h1><a name="show_setOutput">setOutput(...)</a></h1>
+	<h2>
+  <p>void ofSoundStream::setOutput(ofBaseSoundOutput &amp;soundOutput)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Sets the object which will have audioOut() called when the device requests audio.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setSoundStream" data-lookup="setSoundStream" data-item-type="method">
+  	 
+	<h1><a name="show_setSoundStream">setSoundStream(...)</a></h1>
+	<h2>
+  <p>void ofSoundStream::setSoundStream(shared_ptr&lt; ofBaseSoundStream &gt; soundStreamPtr)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setup" data-lookup="setup" data-item-type="method">
+  	 
+	<h1><a name="show_setup">setup(...)</a></h1>
+	<h2>
+  <p>bool ofSoundStream::setup(int outChannels, int inChannels, int sampleRate, int bufferSize, int nBuffers)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Sets up and starts the stream.</p>
+<p>Parameters:
+outChannels number of requested output channels (i.e. 2 for stereo).
+inChannels number of requested input channels.
+sampleRate requested sample rate (44100 is typical).
+bufferSize requested buffer size (256 is typical). Smaller values
+       will be more responsive, but less stable.
+nBuffers number of buffers to queue. Less buffers will be more
+       responsive, but less stable.
+\return true on success</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setup" data-lookup="setup" data-item-type="method">
+  	 
+	<h1><a name="show_setup">setup(...)</a></h1>
+	<h2>
+  <p>bool ofSoundStream::setup(ofBaseApp *app, int outChannels, int inChannels, int sampleRate, int bufferSize, int nBuffers)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Sets up and starts the stream.</p>
+<p>Parameters:
+app pointer to the app which will own the sound stream.
+outChannels number of requested output channels (i.e. 2 for stereo).
+inChannels number of requested input channels.
+sampleRate requested sample rate (44100 is typical).
+bufferSize requested buffer size (256 is typical). Smaller
+       values will be more responsive, but less stable.
+nBuffers number of buffers to queue. Less buffers will be more
+       responsive, but less stable.
+\return true on success</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail start" data-lookup="start" data-item-type="method">
+  	 
+	<h1><a name="show_start">start()</a></h1>
+	<h2>
+  <p>void ofSoundStream::start()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Starts a stream (note that setup() will start the stream on its own).</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail stop" data-lookup="stop" data-item-type="method">
+  	 
+	<h1><a name="show_stop">stop()</a></h1>
+	<h2>
+  <p>void ofSoundStream::stop()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Stops the stream.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+
+            <!-- vars detail -->
+
+            <!-- functions detail -->
+              <!--h2><a name="functions"></a>ofSoundStream functions</h2-->
+                        
+<div class="documentation_detail ofSoundStreamClose" data-lookup="ofSoundStreamClose" data-item-type="function">
+  	 
+	<h1><a name="show_ofSoundStreamClose">ofSoundStreamClose()</a></h1>
+	<h2>
+  <p>void ofSoundStreamClose()</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Stops the sound stream and also cleans up the stream's resources</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSoundStreamListDevices" data-lookup="ofSoundStreamListDevices" data-item-type="function">
+  	 
+	<h1><a name="show_ofSoundStreamListDevices">ofSoundStreamListDevices()</a></h1>
+	<h2>
+  <p>vector&lt; ofSoundDevice &gt; ofSoundStreamListDevices()</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Prints a list of all available audio devices
+\return all sound devices found on the system</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSoundStreamSetup" data-lookup="ofSoundStreamSetup" data-item-type="function">
+  	 
+	<h1><a name="show_ofSoundStreamSetup">ofSoundStreamSetup(...)</a></h1>
+	<h2>
+  <p>void ofSoundStreamSetup(int nOutputChannels, int nInputChannels, ofBaseApp *appPtr)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Sets up and starts a global ofSoundStream.</p>
+<p>This will set up a sound stream with a default sample rate of 44100, a
+buffer size of 256 samples, and a queue of 4 buffers.</p>
+<p>Parameters:
+nOutputChannels number of requested output channels (i.e. 2 for stereo).
+nInputChannels number of requested input channels.
+appPtr pointer to the app which will own the sound stream (optional).</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSoundStreamSetup" data-lookup="ofSoundStreamSetup" data-item-type="function">
+  	 
+	<h1><a name="show_ofSoundStreamSetup">ofSoundStreamSetup(...)</a></h1>
+	<h2>
+  <p>void ofSoundStreamSetup(int nOutputChannels, int nInputChannels, int sampleRate, int bufferSize, int nBuffers)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Sets up and starts a global ofSoundStream.</p>
+<p>Parameters:
+nOutputChannels number of requested output channels (i.e. 2 for stereo).
+nInputChannels number of requested input channels.
+sampleRate requested sample rate (44100 is typical).
+bufferSize requested buffer size (256 is typical). Smaller values
+       will be more responsive, but less stable.
+nBuffers number of buffers to queue. Less buffers will be more responsive, but less stable.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSoundStreamSetup" data-lookup="ofSoundStreamSetup" data-item-type="function">
+  	 
+	<h1><a name="show_ofSoundStreamSetup">ofSoundStreamSetup(...)</a></h1>
+	<h2>
+  <p>void ofSoundStreamSetup(int nOutputChannels, int nInputChannels, ofBaseApp *appPtr, int sampleRate, int bufferSize, int nBuffers)</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Sets up and starts a global ofSoundStream.</p>
+<p>Parameters:
+nOutputChannels number of requested output channels (i.e. 2 for stereo).
+nInputChannels number of requested input channels.
+appPtr pointer to the app which will own the sound stream (optional).
+sampleRate requested sample rate (44100 is typical).
+bufferSize requested buffer size (256 is typical). Smaller values
+       will be more responsive, but less stable.
+nBuffers number of buffers to queue. Less buffers will be more
+       responsive, but less stable.</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSoundStreamStart" data-lookup="ofSoundStreamStart" data-item-type="function">
+  	 
+	<h1><a name="show_ofSoundStreamStart">ofSoundStreamStart()</a></h1>
+	<h2>
+  <p>void ofSoundStreamStart()</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Starts the sound stream (audioIn() / audioOut() will start being called)</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofSoundStreamStop" data-lookup="ofSoundStreamStop" data-item-type="function">
+  	 
+	<h1><a name="show_ofSoundStreamStop">ofSoundStreamStop()</a></h1>
+	<h2>
+  <p>void ofSoundStreamStop()</p>
+</h2>
+	<div class="documentation_detail_description">
+        
+		
+  
+
+
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+            
+  <p>Stops the sound stream (audioIn() / audioOut() will stop being called)</p>
+
+            
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+            <hr/>
+                
+            <!--diqus comments for class/functions module description-->
+            <div id="comments_header">
+            <h2>comments</h2>
+            <p>You can add comments with usage examples or other information for each class, method or variable, for adding documentation to an empty section or reporting errors is better to send a fix or open an issue through <a href="https://github.com/openframeworks/ofSite">github</a>.</p>
+            <p>When posting code enclose it in:</p>
+            <pre><code class="html">&lt;pre&gt;&lt;code class=&quot;cpp&quot;&gt;&nbsp;&lt;/code&gt;&lt;/pre&gt;</code></pre>
+            <br/>
+            </div>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+
+            // DISQUS
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+
+            var disqus_shortname = 'openframeworks'; // required: replace example with your forum shortname
+            //var disqus_developer = 1;
+
+            location_elements = window.location.pathname.split("/");
+            module_name = location_elements[location_elements.length-1].split(".")[0];
+            section_name = location.hash.split("_")[1];
+            console.log(module_name + " " + section_name);
+            if(section_name!=undefined && section_name!=''){
+            var disqus_identifier = window.location.pathname + "#!show_" + section_name;  
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "#!show_" + section_name;
+            var discus_title = document.title + " - " + section_name;
+            }else{
+            var disqus_identifier = window.location.pathname;
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            var discus_title = document.title;
+            }
+
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */   
+            (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		
+        </div><!-- End Submenu right -->
+      </div><!-- End page wide -->
+      </div><!-- End body wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:34:23 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+eb73abcb6141243ae29291b42ec447024f00a570
+">
+
+eb73abcb6141243ae29291b42ec447024f00a570
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+

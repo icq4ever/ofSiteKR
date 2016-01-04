@@ -1,0 +1,4971 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+	
+  <title>openFrameworks.kr - ofColor</title>
+
+<!-- syntax highlighting for the documentation -->
+<script src="http://icq4ever.iptime.org//js/shCore.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shAutoloader.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushCpp.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushJava.js" type="text/javascript"></script>
+<script src="http://icq4ever.iptime.org//js/shBrushXml.js" type="text/javascript"></script>
+<link href="http://icq4ever.iptime.org//css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://icq4ever.iptime.org//css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://icq4ever.iptime.org//css/print.css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link rel="search" type="application/opensearchdescription+xml" href="http://icq4ever.iptime.org//opensearch.xml" title="openFrameworks.kr"/>
+
+<link rel="shortcut icon" href="http://icq4ever.iptime.org//favicon.ico" />
+<link rel="icon" href="http://icq4ever.iptime.org//favicon.ico" type="image/x-icon" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://icq4ever.iptime.org//js/jquery.timeago.js" type="text/javascript"></script>
+
+<meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
+
+
+    <script src="http://icq4ever.iptime.org//js/jquery.columnizer.min.js"></script>
+    <script src="http://icq4ever.iptime.org//js/documentation.js"></script>
+  </head>
+  <body>
+    <div id="content">
+      
+  
+
+<div id="head">
+
+		<div id="head-left">
+			<a href="http://icq4ever.iptime.org/" class="nohover"><img src="http://icq4ever.iptime.org//images/of-logo.svg" border="0" alt="openFrameworks" /></a>
+		</div>
+
+		<div id="head-right">
+		<ul>
+	        <li><a href="http://icq4ever.iptime.org//about" class="" >소개</a></li>
+	        <li><a href="http://icq4ever.iptime.org//download" class="" >다운로드</a></li>
+	        <li><a href="http://icq4ever.iptime.org//documentation" class="">도큐먼트</a></li>
+	        <li><a href="http://icq4ever.iptime.org//tutorials" class="">튜토리얼</a></li>
+	        <li><a href="http://icq4ever.iptime.org//gallery" class="">갤러리</a></li>
+	        <li><a href="http://icq4ever.iptime.org//community" class="">커뮤니티</a></li> 
+	        <li><a href="http://icq4ever.iptime.org//development" class="" >개발</a></li>
+		</ul>
+		
+		<ul class="menu-externals">
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
+		</ul>
+		
+			<!--form method="get" id="searchform" action="/index.php">
+			<input type="text" value="" name="s" id="s" class="search_input" /> <input type="submit" value="Search" class="search_button"/>
+			</form-->
+			<!--form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+                <input type="hidden" name="list" value="list@openframeworks.cc" />
+                <input type="hidden" name="domain" value="openframeworks.cc" />
+                <input type="hidden" name="url" value="http://openframeworks.cc/list-info/subscribe.html"  />
+                <input type="hidden" name="unsuburl" value="http://openframeworks.cc/list-info/unsubscribe.html" />
+                <input type="hidden" name="alreadyonurl" value="http://openframeworks.cc/list-info/already.html" />
+                <input type="hidden" name="notonurl" value="http://openframeworks.cc/list-info/not.html" />
+                <input type="hidden" name="invalidurl" value="http://openframeworks.cc/list-info/invalid.html" />
+                <input type="hidden" name="emailconfirmurl" value="http://openframeworks.cc/list-info/confirm.html" />
+                <input type="hidden" name="emailit" value="1" />
+                name: <input name="name" /> <br />
+                email: <input name="email" /><br />
+                <span class='but'><input type="submit" name="submit" value="subscribe" /></span> <br/ >
+                <span class='but'><input type="submit" name="unsub" value="unsubscribe" /></span>
+            </form-->
+        <ul class="submenu">
+            <li><a href="http://openframeworks.cc">english</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.jp">japanese</a></li>
+			<li>/</li>
+			<li>korean</li>
+        </ul>
+		</div>
+</div><!-- head -->
+
+
+
+      <div id="body-wrap">
+          <div class="page-wide">
+          
+              <div id="docstitle"><h1>ofColor</h1></div>
+              <div id="editdocs">
+                    <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/types/ofColor.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
+              </div>
+              
+          </div>
+          
+          
+        <div class="page-wide">
+		    <div class="submenucol-left">
+		     <!-- list of methods -->
+		     <p class="top_list_header">class methods</p>
+             <ul class="functionslist">
+                 
+                         <li>
+                         <a href="#show_ofColor_" class="ofColor_" data-lookup="ofColor_">ofColor_()</a></li>
+                     
+                     
+                     
+                     
+                     
+                         <li>
+                         <a href="#show_clamp" class="clamp" data-lookup="clamp">clamp()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_fromHex" class="fromHex" data-lookup="fromHex">fromHex()</a></li>
+                     
+                         <li>
+                         <a href="#show_fromHsb" class="fromHsb" data-lookup="fromHsb">fromHsb()</a></li>
+                     
+                         <li>
+                         <a href="#show_getBrightness" class="getBrightness" data-lookup="getBrightness">getBrightness()</a></li>
+                     
+                         <li>
+                         <a href="#show_getClamped" class="getClamped" data-lookup="getClamped">getClamped()</a></li>
+                     
+                         <li>
+                         <a href="#show_getHex" class="getHex" data-lookup="getHex">getHex()</a></li>
+                     
+                         <li>
+                         <a href="#show_getHsb" class="getHsb" data-lookup="getHsb">getHsb()</a></li>
+                     
+                         <li>
+                         <a href="#show_getHue" class="getHue" data-lookup="getHue">getHue()</a></li>
+                     
+                         <li>
+                         <a href="#show_getHueAngle" class="getHueAngle" data-lookup="getHueAngle">getHueAngle()</a></li>
+                     
+                         <li>
+                         <a href="#show_getInverted" class="getInverted" data-lookup="getInverted">getInverted()</a></li>
+                     
+                         <li>
+                         <a href="#show_getLerped" class="getLerped" data-lookup="getLerped">getLerped()</a></li>
+                     
+                         <li>
+                         <a href="#show_getLightness" class="getLightness" data-lookup="getLightness">getLightness()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_getSaturation" class="getSaturation" data-lookup="getSaturation">getSaturation()</a></li>
+                     
+                         <li>
+                         <a href="#show_invert" class="invert" data-lookup="invert">invert()</a></li>
+                     
+                         <li>
+                         <a href="#show_lerp" class="lerp" data-lookup="lerp">lerp()</a></li>
+                     
+                         <li>
+                         <a href="#show_limit" class="limit" data-lookup="limit">limit()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_operator!=" class="operator!=" data-lookup="operator!=">operator!=()</a></li>
+                     
+                         <li>
+                         <a href="#show_operator*" class="operator*" data-lookup="operator*">operator*()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_operator*=" class="operator*=" data-lookup="operator*=">operator*=()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_operator+" class="operator+" data-lookup="operator+">operator+()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_operator+=" class="operator+=" data-lookup="operator+=">operator+=()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_operator-" class="operator-" data-lookup="operator-">operator-()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_operator-=" class="operator-=" data-lookup="operator-=">operator-=()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_operator/" class="operator/" data-lookup="operator/">operator/()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_operator/=" class="operator/=" data-lookup="operator/=">operator/=()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_operator=" class="operator=" data-lookup="operator=">operator=()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_operator==" class="operator==" data-lookup="operator==">operator==()</a></li>
+                     
+                         <li>
+                         <a href="#show_operator[]" class="operator[]" data-lookup="operator[]">operator[]()</a></li>
+                     
+                     
+                         <li>
+                         <a href="#show_set" class="set" data-lookup="set">set()</a></li>
+                     
+                     
+                     
+                         <li>
+                         <a href="#show_setBrightness" class="setBrightness" data-lookup="setBrightness">setBrightness()</a></li>
+                     
+                         <li>
+                         <a href="#show_setHex" class="setHex" data-lookup="setHex">setHex()</a></li>
+                     
+                         <li>
+                         <a href="#show_setHsb" class="setHsb" data-lookup="setHsb">setHsb()</a></li>
+                     
+                         <li>
+                         <a href="#show_setHue" class="setHue" data-lookup="setHue">setHue()</a></li>
+                     
+                         <li>
+                         <a href="#show_setHueAngle" class="setHueAngle" data-lookup="setHueAngle">setHueAngle()</a></li>
+                     
+                         <li>
+                         <a href="#show_setSaturation" class="setSaturation" data-lookup="setSaturation">setSaturation()</a></li>
+                     
+             </ul>
+            
+             
+             
+             <!-- list of variables -->              
+                <p class="top_list_header">variables</p>
+                <ul class="functionslist">
+                            <li>
+                            <a href="#show_a" class="a" data-lookup="a">PixelType a</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_aliceBlue" class="aliceBlue" data-lookup="aliceBlue">ofColor_ aliceBlue</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_antiqueWhite" class="antiqueWhite" data-lookup="antiqueWhite">ofColor_ antiqueWhite</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_aqua" class="aqua" data-lookup="aqua">ofColor_ aqua</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_aquamarine" class="aquamarine" data-lookup="aquamarine">ofColor_ aquamarine</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_azure" class="azure" data-lookup="azure">ofColor_ azure</a> </li>
+                            <li>
+                            <a href="#show_b" class="b" data-lookup="b">PixelType b</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_beige" class="beige" data-lookup="beige">ofColor_ beige</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_bisque" class="bisque" data-lookup="bisque">ofColor_ bisque</a> </li>
+                            <li>
+                            <a href="#show_black" class="black" data-lookup="black">ofColor black</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_blanchedAlmond" class="blanchedAlmond" data-lookup="blanchedAlmond">ofColor_ blanchedAlmond</a> </li>
+                            <li>
+                            <a href="#show_blue" class="blue" data-lookup="blue">ofColor blue</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_blueSteel" class="blueSteel" data-lookup="blueSteel">ofColor_ blueSteel</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_blueViolet" class="blueViolet" data-lookup="blueViolet">ofColor_ blueViolet</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_brown" class="brown" data-lookup="brown">ofColor_ brown</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_burlyWood" class="burlyWood" data-lookup="burlyWood">ofColor_ burlyWood</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_cadetBlue" class="cadetBlue" data-lookup="cadetBlue">ofColor_ cadetBlue</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_chartreuse" class="chartreuse" data-lookup="chartreuse">ofColor_ chartreuse</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_chocolate" class="chocolate" data-lookup="chocolate">ofColor_ chocolate</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_coral" class="coral" data-lookup="coral">ofColor_ coral</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_cornflowerBlue" class="cornflowerBlue" data-lookup="cornflowerBlue">ofColor_ cornflowerBlue</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_cornsilk" class="cornsilk" data-lookup="cornsilk">ofColor_ cornsilk</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_crimson" class="crimson" data-lookup="crimson">ofColor_ crimson</a> </li>
+                            <li>
+                            <a href="#show_cyan" class="cyan" data-lookup="cyan">ofColor cyan</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_darkBlue" class="darkBlue" data-lookup="darkBlue">ofColor_ darkBlue</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_darkCyan" class="darkCyan" data-lookup="darkCyan">ofColor_ darkCyan</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_darkGoldenRod" class="darkGoldenRod" data-lookup="darkGoldenRod">ofColor_ darkGoldenRod</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_darkGray" class="darkGray" data-lookup="darkGray">ofColor_ darkGray</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_darkGreen" class="darkGreen" data-lookup="darkGreen">ofColor_ darkGreen</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_darkGrey" class="darkGrey" data-lookup="darkGrey">ofColor_ darkGrey</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_darkKhaki" class="darkKhaki" data-lookup="darkKhaki">ofColor_ darkKhaki</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_darkMagenta" class="darkMagenta" data-lookup="darkMagenta">ofColor_ darkMagenta</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_darkOliveGreen" class="darkOliveGreen" data-lookup="darkOliveGreen">ofColor_ darkOliveGreen</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_darkOrchid" class="darkOrchid" data-lookup="darkOrchid">ofColor_ darkOrchid</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_darkRed" class="darkRed" data-lookup="darkRed">ofColor_ darkRed</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_darkSalmon" class="darkSalmon" data-lookup="darkSalmon">ofColor_ darkSalmon</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_darkSeaGreen" class="darkSeaGreen" data-lookup="darkSeaGreen">ofColor_ darkSeaGreen</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_darkSlateBlue" class="darkSlateBlue" data-lookup="darkSlateBlue">ofColor_ darkSlateBlue</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_darkSlateGray" class="darkSlateGray" data-lookup="darkSlateGray">ofColor_ darkSlateGray</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_darkSlateGrey" class="darkSlateGrey" data-lookup="darkSlateGrey">ofColor_ darkSlateGrey</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_darkTurquoise" class="darkTurquoise" data-lookup="darkTurquoise">ofColor_ darkTurquoise</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_darkViolet" class="darkViolet" data-lookup="darkViolet">ofColor_ darkViolet</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_darkorange" class="darkorange" data-lookup="darkorange">ofColor_ darkorange</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_deepPink" class="deepPink" data-lookup="deepPink">ofColor_ deepPink</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_deepSkyBlue" class="deepSkyBlue" data-lookup="deepSkyBlue">ofColor_ deepSkyBlue</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_dimGray" class="dimGray" data-lookup="dimGray">ofColor_ dimGray</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_dimGrey" class="dimGrey" data-lookup="dimGrey">ofColor_ dimGrey</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_dodgerBlue" class="dodgerBlue" data-lookup="dodgerBlue">ofColor_ dodgerBlue</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_fireBrick" class="fireBrick" data-lookup="fireBrick">ofColor_ fireBrick</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_floralWhite" class="floralWhite" data-lookup="floralWhite">ofColor_ floralWhite</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_forestGreen" class="forestGreen" data-lookup="forestGreen">ofColor_ forestGreen</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_fuchsia" class="fuchsia" data-lookup="fuchsia">ofColor_ fuchsia</a> </li>
+                            <li>
+                            <a href="#show_g" class="g" data-lookup="g">PixelType g</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_gainsboro" class="gainsboro" data-lookup="gainsboro">ofColor_ gainsboro</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_ghostWhite" class="ghostWhite" data-lookup="ghostWhite">ofColor_ ghostWhite</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_gold" class="gold" data-lookup="gold">ofColor_ gold</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_goldenRod" class="goldenRod" data-lookup="goldenRod">ofColor_ goldenRod</a> </li>
+                            <li>
+                            <a href="#show_gray" class="gray" data-lookup="gray">ofColor gray</a> </li>
+                            <li>
+                            <a href="#show_green" class="green" data-lookup="green">ofColor green</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_greenYellow" class="greenYellow" data-lookup="greenYellow">ofColor_ greenYellow</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_grey" class="grey" data-lookup="grey">ofColor_ grey</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_honeyDew" class="honeyDew" data-lookup="honeyDew">ofColor_ honeyDew</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_hotPink" class="hotPink" data-lookup="hotPink">ofColor_ hotPink</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_indianRed" class="indianRed" data-lookup="indianRed">ofColor_ indianRed</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_indigo" class="indigo" data-lookup="indigo">ofColor_ indigo</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_ivory" class="ivory" data-lookup="ivory">ofColor_ ivory</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_khaki" class="khaki" data-lookup="khaki">ofColor_ khaki</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_lavender" class="lavender" data-lookup="lavender">ofColor_ lavender</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_lavenderBlush" class="lavenderBlush" data-lookup="lavenderBlush">ofColor_ lavenderBlush</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_lawnGreen" class="lawnGreen" data-lookup="lawnGreen">ofColor_ lawnGreen</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_lemonChiffon" class="lemonChiffon" data-lookup="lemonChiffon">ofColor_ lemonChiffon</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_lightBlue" class="lightBlue" data-lookup="lightBlue">ofColor_ lightBlue</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_lightCoral" class="lightCoral" data-lookup="lightCoral">ofColor_ lightCoral</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_lightCyan" class="lightCyan" data-lookup="lightCyan">ofColor_ lightCyan</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_lightGoldenRodYellow" class="lightGoldenRodYellow" data-lookup="lightGoldenRodYellow">ofColor_ lightGoldenRodYellow</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_lightGray" class="lightGray" data-lookup="lightGray">ofColor_ lightGray</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_lightGreen" class="lightGreen" data-lookup="lightGreen">ofColor_ lightGreen</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_lightGrey" class="lightGrey" data-lookup="lightGrey">ofColor_ lightGrey</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_lightPink" class="lightPink" data-lookup="lightPink">ofColor_ lightPink</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_lightSalmon" class="lightSalmon" data-lookup="lightSalmon">ofColor_ lightSalmon</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_lightSeaGreen" class="lightSeaGreen" data-lookup="lightSeaGreen">ofColor_ lightSeaGreen</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_lightSkyBlue" class="lightSkyBlue" data-lookup="lightSkyBlue">ofColor_ lightSkyBlue</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_lightSlateGray" class="lightSlateGray" data-lookup="lightSlateGray">ofColor_ lightSlateGray</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_lightSlateGrey" class="lightSlateGrey" data-lookup="lightSlateGrey">ofColor_ lightSlateGrey</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_lightSteelBlue" class="lightSteelBlue" data-lookup="lightSteelBlue">ofColor_ lightSteelBlue</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_lightYellow" class="lightYellow" data-lookup="lightYellow">ofColor_ lightYellow</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_lime" class="lime" data-lookup="lime">ofColor_ lime</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_limeGreen" class="limeGreen" data-lookup="limeGreen">ofColor_ limeGreen</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_linen" class="linen" data-lookup="linen">ofColor_ linen</a> </li>
+                            <li>
+                            <a href="#show_magenta" class="magenta" data-lookup="magenta">ofColor magenta</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_maroon" class="maroon" data-lookup="maroon">ofColor_ maroon</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_mediumAquaMarine" class="mediumAquaMarine" data-lookup="mediumAquaMarine">ofColor_ mediumAquaMarine</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_mediumBlue" class="mediumBlue" data-lookup="mediumBlue">ofColor_ mediumBlue</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_mediumOrchid" class="mediumOrchid" data-lookup="mediumOrchid">ofColor_ mediumOrchid</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_mediumPurple" class="mediumPurple" data-lookup="mediumPurple">ofColor_ mediumPurple</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_mediumSeaGreen" class="mediumSeaGreen" data-lookup="mediumSeaGreen">ofColor_ mediumSeaGreen</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_mediumSlateBlue" class="mediumSlateBlue" data-lookup="mediumSlateBlue">ofColor_ mediumSlateBlue</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_mediumSpringGreen" class="mediumSpringGreen" data-lookup="mediumSpringGreen">ofColor_ mediumSpringGreen</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_mediumTurquoise" class="mediumTurquoise" data-lookup="mediumTurquoise">ofColor_ mediumTurquoise</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_mediumVioletRed" class="mediumVioletRed" data-lookup="mediumVioletRed">ofColor_ mediumVioletRed</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_midnightBlue" class="midnightBlue" data-lookup="midnightBlue">ofColor_ midnightBlue</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_mintCream" class="mintCream" data-lookup="mintCream">ofColor_ mintCream</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_mistyRose" class="mistyRose" data-lookup="mistyRose">ofColor_ mistyRose</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_moccasin" class="moccasin" data-lookup="moccasin">ofColor_ moccasin</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_navajoWhite" class="navajoWhite" data-lookup="navajoWhite">ofColor_ navajoWhite</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_navy" class="navy" data-lookup="navy">ofColor_ navy</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_oldLace" class="oldLace" data-lookup="oldLace">ofColor_ oldLace</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_olive" class="olive" data-lookup="olive">ofColor_ olive</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_oliveDrab" class="oliveDrab" data-lookup="oliveDrab">ofColor_ oliveDrab</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_orange" class="orange" data-lookup="orange">ofColor_ orange</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_orangeRed" class="orangeRed" data-lookup="orangeRed">ofColor_ orangeRed</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_orchid" class="orchid" data-lookup="orchid">ofColor_ orchid</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_paleGoldenRod" class="paleGoldenRod" data-lookup="paleGoldenRod">ofColor_ paleGoldenRod</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_paleGreen" class="paleGreen" data-lookup="paleGreen">ofColor_ paleGreen</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_paleTurquoise" class="paleTurquoise" data-lookup="paleTurquoise">ofColor_ paleTurquoise</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_paleVioletRed" class="paleVioletRed" data-lookup="paleVioletRed">ofColor_ paleVioletRed</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_papayaWhip" class="papayaWhip" data-lookup="papayaWhip">ofColor_ papayaWhip</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_peachPuff" class="peachPuff" data-lookup="peachPuff">ofColor_ peachPuff</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_peru" class="peru" data-lookup="peru">ofColor_ peru</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_pink" class="pink" data-lookup="pink">ofColor_ pink</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_plum" class="plum" data-lookup="plum">ofColor_ plum</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_powderBlue" class="powderBlue" data-lookup="powderBlue">ofColor_ powderBlue</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_purple" class="purple" data-lookup="purple">ofColor_ purple</a> </li>
+                            <li>
+                            <a href="#show_r" class="r" data-lookup="r">PixelType r</a> </li>
+                            <li>
+                            <a href="#show_red" class="red" data-lookup="red">ofColor red</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_rosyBrown" class="rosyBrown" data-lookup="rosyBrown">ofColor_ rosyBrown</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_royalBlue" class="royalBlue" data-lookup="royalBlue">ofColor_ royalBlue</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_saddleBrown" class="saddleBrown" data-lookup="saddleBrown">ofColor_ saddleBrown</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_salmon" class="salmon" data-lookup="salmon">ofColor_ salmon</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_sandyBrown" class="sandyBrown" data-lookup="sandyBrown">ofColor_ sandyBrown</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_seaGreen" class="seaGreen" data-lookup="seaGreen">ofColor_ seaGreen</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_seaShell" class="seaShell" data-lookup="seaShell">ofColor_ seaShell</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_sienna" class="sienna" data-lookup="sienna">ofColor_ sienna</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_silver" class="silver" data-lookup="silver">ofColor_ silver</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_skyBlue" class="skyBlue" data-lookup="skyBlue">ofColor_ skyBlue</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_slateBlue" class="slateBlue" data-lookup="slateBlue">ofColor_ slateBlue</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_slateGray" class="slateGray" data-lookup="slateGray">ofColor_ slateGray</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_slateGrey" class="slateGrey" data-lookup="slateGrey">ofColor_ slateGrey</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_snow" class="snow" data-lookup="snow">ofColor_ snow</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_springGreen" class="springGreen" data-lookup="springGreen">ofColor_ springGreen</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_steelBlue" class="steelBlue" data-lookup="steelBlue">ofColor_ steelBlue</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_tan" class="tan" data-lookup="tan">ofColor_ tan</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_teal" class="teal" data-lookup="teal">ofColor_ teal</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_thistle" class="thistle" data-lookup="thistle">ofColor_ thistle</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_tomato" class="tomato" data-lookup="tomato">ofColor_ tomato</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_turquoise" class="turquoise" data-lookup="turquoise">ofColor_ turquoise</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_violet" class="violet" data-lookup="violet">ofColor_ violet</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_wheat" class="wheat" data-lookup="wheat">ofColor_ wheat</a> </li>
+                            <li>
+                            <a href="#show_white" class="white" data-lookup="white">ofColor white</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_whiteSmoke" class="whiteSmoke" data-lookup="whiteSmoke">ofColor_ whiteSmoke</a> </li>
+                            <li>
+                            <a href="#show_yellow" class="yellow" data-lookup="yellow">ofColor yellow</a> </li>
+                            <li class="noDoc">
+                            <a href="#show_yellowGreen" class="yellowGreen" data-lookup="yellowGreen">ofColor_ yellowGreen</a> </li>
+                 </ul>
+            
+             
+            
+             <!-- list of functions -->              
+		    </div>
+	    <div class="submenucol-right">
+            <div class="documentation_detail class_documentation">
+              
+  <p><a href="../types/ofColor.html" class="docs_class" >ofColor</a> represents a color in openFrameworks. Colors are usually defined by specifying a red, green, and blue component (RGB), and a transparency (alpha) component. You can also specify colors using hue, saturation and brightness (HSB).</p>
+<p>For example: </p>
+<pre><code class="cpp">// set red, component by component
+&lt;a href=&quot;../types/ofColor.html&quot; class=&quot;docs_class&quot; &gt;ofColor&lt;/a&gt; red;
+red.r=255;
+red.g=0;
+red.b=0;
+ofSetColor(red); 
+// draw color is now red
+
+// shorter notation is also possible
+&lt;a href=&quot;../types/ofColor.html&quot; class=&quot;docs_class&quot; &gt;ofColor&lt;/a&gt; green(0, 255, 0);
+ofSetColor(green); 
+// draw color is now green
+
+// or even shorter 
+ofSetColor( &lt;a href=&quot;../types/ofColor.html&quot; class=&quot;docs_class&quot; &gt;ofColor&lt;/a&gt;(0, 0, ofRandom( 128, 255 ) ); 
+// draw color is now a random blue
+</code></pre>
+
+<p><a href="../types/ofColor.html" class="docs_class" >ofColor</a> also enables a lot of extra functionality like using HSB instead of color spectrums, lerping or linearly interpolating between colors, and inverting colors, among other things. </p>
+<p><a href="../types/ofColor.html" class="docs_class" >ofColor</a> is templated, which means that it has several different ways it can be created. These are probably best to leave as they are because there's already a few kinds typedefed for you. The default <a href="../types/ofColor.html" class="docs_class" >ofColor</a> uses unsigned char values (0 to 255), but you can make an ofFloatColor if you want to work with floating point numbers between 0 and 1, or ofShortColor if you want to work with integers between 0 and 65,535.</p>
+<h3 id="hsb">HSB</h3>
+<p>You're probably familiar with RGB colors already, but HSB is a big part of ofColor. It uses a <em>hue</em> value (for the standard <a href="../types/ofColor.html" class="docs_class" >ofColor</a> the range for this value is between 0 and 255) to determine what the hue (the 'color' in the sense of a color in the rainbow) will be:</p>
+<p><img alt="HSB" src="../types/hsb.png" /></p>
+<p>Approximate hues for some common colors:</p>
+<ul>
+<li>Red: 0 (wrapped round from 255)</li>
+<li>Orange: 25</li>
+<li>Yellow: 42</li>
+<li>Green: 85</li>
+<li>Blue: 170</li>
+<li>Purple: 205</li>
+<li>Red: 255 (wraps round to 0)</li>
+</ul>
+<p>Once you've selected a hue, you can use the <em>saturation</em> and <em>brightness</em> values to further refine the color. The saturation determines how much of the hue versus white is present and brightness determines how much hue versus black is present:</p>
+<p><img alt="SB" src="../types/hsb-cone.jpg" /></p>
+<p>In other words, saturation refers to the intensity of the color: high saturation means intense color, low saturation means washed out or black and white. Brightness refers to how light or dark the color is: high brightness means a bright color, low brightness means a dark color. If the brightness is 0 the resulting color will be black, regardless of the values of hue or saturation.</p>
+
+
+              
+              
+  
+
+           </div>
+                  
+            <!-- methods detail -->
+              <!--h2><a name="methods"></a>ofColor methods</h2-->
+                        
+<div class="documentation_detail ofColor_" data-lookup="ofColor_" data-item-type="method">
+  	 
+	<h1><a name="show_ofColor_">ofColor_()</a></h1>
+	<h2>
+  <p>ofColor_::ofColor_()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Creates a color and sets it to white.</p>
+<pre><code class="cpp">ofColor c;
+ofSetColor( c ); // draw color is now white
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Construct a default white color.</p>
+<pre><code class="cpp">    ofColor c;
+    ofSetColor(c); // Draw color is now white.
+</code></pre>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofColor_" data-lookup="ofColor_" data-item-type="method">
+  	 
+	<h1><a name="show_ofColor_">ofColor_(...)</a></h1>
+	<h2>
+  <p>ofColor_::ofColor_(const ofColor_&lt; PixelType &gt; &amp;color, float alpha)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Creates a color by copying another color, overriding the existing alpha value with the value of _a:</p>
+<pre><code class="cpp">ofColor mom(255, 0, 0); // red
+ofColor c(mom, 128); // now c is red with 50% alpha
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Construct an ofColor_ from an existing ofColor_.</p>
+<p>This constructor will use the R, G, and B components from the passed
+color ignoring its alpha channel.  The provided alpha channel will be
+used instead.</p>
+<p>Parameters:
+color The ofColor_ to copy.
+alpha The new alpha value to replace the alpha value in color.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofColor_" data-lookup="ofColor_" data-item-type="method">
+  	 
+	<h1><a name="show_ofColor_">ofColor_(...)</a></h1>
+	<h2>
+  <p>ofColor_::ofColor_(const ofColor_&lt; SrcType &gt; &amp;color)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Creates a color by copying another color with a different type (for example when copying from a standard ofColor using unsigned chars to an ofFloatColor):</p>
+<pre><code class="cpp">ofColor c1(255, 128, 0); // orange
+ofFloatColor c2(c1);
+float g = c2.g; // g is now 0.5
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Construct an ofColor_ from an existing ofColor_.</p>
+<p>This constructor will attempt to convert between color instances of
+differing precision.</p>
+<pre><code class="cpp">    ofColor colorA(255, 0, 0);
+    ofColor colorB(colorA); // colorB is now equal to colorA.
+</code></pre>
+
+<p>Warning: Depending on the PixelType and SrcType used, color precision
+         may be lost when converting a higher precision to a lower
+         precision representation.</p>
+<p>Parameters:
+color The ofColor_ to copy.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofColor_" data-lookup="ofColor_" data-item-type="method">
+  	 
+	<h1><a name="show_ofColor_">ofColor_(...)</a></h1>
+	<h2>
+  <p>ofColor_::ofColor_(float gray, float alpha)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Creates a gray color from the value of gray. _a defaults to completely opaque.</p>
+<pre><code class="cpp">ofColor c(0.5, 122); // now c is 50% alpha gray, ooh, dismal
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Construct a grayscale ofColor_ by specifying a single number.</p>
+<p>This constructor will use a single value to describe a grayscale color.
+This single value will be taken by each of the R, G and B components.
+The alpha channel is specified separately and will and will default to
+the PixelType's maximum resulting in an opaque color.</p>
+<pre><code class="cpp">    ofColor c(0.5); // c is now gray.
+</code></pre>
+
+<p>Parameters:
+gray A grayscale value.
+alpha The opacity of the color.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail ofColor_" data-lookup="ofColor_" data-item-type="method">
+  	 
+	<h1><a name="show_ofColor_">ofColor_(...)</a></h1>
+	<h2>
+  <p>ofColor_::ofColor_(float red, float green, float blue, float alpha)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Creates a color using RGB values and optional alpha value. The default alpha value makes a completely opaque color:</p>
+<pre><code class="cpp">ofColor c1(255, 0, 0); // red with 100% alpha
+ofColor c2(255, 0, 0, 128); // red with 50% alpha.
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Construct an ofColor_ by using channel values.</p>
+<p>When creating an instance of ofColor_ the channel values must fall
+within the range represented by the PixelType.  By default, the alpha
+component will take the PixelType's maximum, producing an opaque color.</p>
+<pre><code class="cpp">    ofColor c1(255, 0, 0); // Red with 100% alpha.
+    ofColor c2(255, 0, 0, 128); // Red with 50% alpha.
+</code></pre>
+
+<p>Parameters:
+red The red component.
+green The green component.
+blue The blue component.
+alpha The alpha component.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail clamp" data-lookup="clamp" data-item-type="method">
+  	 
+	<h1><a name="show_clamp">clamp()</a></h1>
+	<h2>
+  <p>ofColor_&lt; PixelType &gt; &amp; ofColor_::clamp()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>This clamps the values of your color in case they're too high or low for their types, in case you go negative or too use values that are too high, like anything &gt;1.0 in the case of ofFloatColor.</p>
+<pre><code class="cpp">ofFloatColor c( 1, 0, 0 );
+c.g = 2; // g now has 2: this is usually invalid!
+c.clamp(); // c.g has now been clamped so its value is 1.
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Clamp values between 0 and the limit().</p>
+<p>Clamps the value of each component, R, G, B and A to a maximum of
+limit() and a minimum of zero.</p>
+<pre><code class="cpp">    ofColor c( 300, 0, 0 );
+    // r component is above the limit() of 255.
+    c.clamp(); // c.r has now been clamped so its value is 255.
+</code></pre>
+
+<p>Returns: A reference to itself.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail fromHex" data-lookup="fromHex" data-item-type="method">
+  	 
+	<h1><a name="show_fromHex">fromHex(...)</a></h1>
+	<h2>
+  <p>ofColor_&lt; PixelType &gt; ofColor_::fromHex(int hexColor, float alpha)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Convenience method to construct an ofColor from a 24 bit hex value.</p>
+<pre><code class="cpp">ofColor c = ofColor::fromHex(0xFFFF00); // c is yellow
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Create an ofColor_ from a hexadecimal value.</p>
+<p>In some cases, it is convenient to represent colors using a hexadecimal
+number. In this case, red, green, and blue values are packed into a
+single integer.</p>
+<p>The alpha channel is specified separately and will default to the
+PixelType's maximum, resulting in an opaque color.</p>
+<pre><code class="cpp">    ofColor c = ofColor::fromHex(0xFFFF00); // c is yellow.
+</code></pre>
+
+<p>Parameters:
+hexColor A color in hexadecimal form.
+alpha The alpha value of the color.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail fromHsb" data-lookup="fromHsb" data-item-type="method">
+  	 
+	<h1><a name="show_fromHsb">fromHsb(...)</a></h1>
+	<h2>
+  <p>ofColor_&lt; PixelType &gt; ofColor_::fromHsb(float hue, float saturation, float brightness, float alpha)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Convenience method to construct an ofColor from Hsb values.</p>
+<pre><code class="cpp">ofColor c = ofColor::fromHsb(128, 255, 255); // c is bright saturated cyan
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Create an ofColor_ from an HSB representation.</p>
+<p>While ofColor_ represents color using R, G, B, and A components, other
+representations are available.  This method allows the user to construct
+an ofColor_ from a Hue (H), Saturation (S), and Brightness (B) and an
+optional alpha value.</p>
+<p>The alpha channel is specified separately and will default to the
+PixelType's maximum, resulting in an opaque color.</p>
+<pre><code class="cpp">    ofColor c = ofColor::fromHsb(128, 255, 255);
+    // c is bright saturated cyan.
+</code></pre>
+
+<p>For more information about HSB, see:
+    http://en.wikipedia.org/wiki/HSV_color_space</p>
+<p>Parameters:
+hue The hue of the color.
+saturation The saturation of the color.
+brightness The brightness of the color.
+alpha The alpha value of the color.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getBrightness" data-lookup="getBrightness" data-item-type="method">
+  	 
+	<h1><a name="show_getBrightness">getBrightness()</a></h1>
+	<h2>
+  <p>float ofColor_::getBrightness()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Return the brightness component of the HSB representation of this color. Refer the <a href="#HSB">discussion of HSB</a> above.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Calculate the brightness of of the R, G and B components.</p>
+<p>Brightness is simply the maximum of the three color components. This
+method of calculating brightness is used by Photoshop (HSB) and
+Processing (HSB).  Note that brightness is also called "Value".</p>
+<p>Returns: the brightness in the range 0 - limit().</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getClamped" data-lookup="getClamped" data-item-type="method">
+  	 
+	<h1><a name="show_getClamped">getClamped()</a></h1>
+	<h2>
+  <p>ofColor_&lt; PixelType &gt; ofColor_::getClamped()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns a clamped version of this color, without modifying the original. See <a href="#clamp">clamp</a> for more info.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>A non-destructive version of clamp().</p>
+<p>See also: clamp()</p>
+<p>Returns: A copy of this color, clamped.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getHex" data-lookup="getHex" data-item-type="method">
+  	 
+	<h1><a name="show_getHex">getHex()</a></h1>
+	<h2>
+  <p>int ofColor_::getHex()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Return a 24 bit hexidecimal number representing this color.</p>
+<pre><code class="cpp">ofColor c( 255, 255, 0 ); // yellow
+int hex = c.getHex(); // hex is 0xffff00 (or 16776960 in decimal)
+</code></pre>
+
+<p>Usually when we look at these colors in print they're hex, so don't be surprised if they don't look familiar when you print them as decimal. </p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get a 24-bit hexadecimal representation of the RGB color.</p>
+<pre><code class="cpp">    ofColor c( 255, 255, 0 ); // Yellow.
+    int hex = c.getHex(); // Hex is 0xffff00 (or 16776960 in decimal).
+</code></pre>
+
+<p>Warning: This method does <em>not</em> encode the alpha component.</p>
+<p>Returns: An integer representing an RGB color.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getHsb" data-lookup="getHsb" data-item-type="method">
+  	 
+	<h1><a name="show_getHsb">getHsb(...)</a></h1>
+	<h2>
+  <p>void ofColor_::getHsb(float &amp;hue, float &amp;saturation, float &amp;brightness)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Return all three components of the HSB representation of this color at the same time.</p>
+<pre><code class="cpp">ofColor red(255,0,0);
+float hue, saturation, brightness;
+red.getHsb( hue, saturation, brightness );
+// hue is now 0 (for red), saturation is 255, brightness is 255
+</code></pre>
+
+<p>Refer the <a href="#HSB">discussion of HSB</a> above.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Extract the hue, saturation and brightness (HSB) from this color.</p>
+<pre><code class="cpp">    ofColor red(255,0,0);
+    float hue = 0;  // The hue value to set.
+    float saturation = 0; // The saturation value to set.
+    float brightness = 0; The brightness value to set.
+    red.getHsb(hue, saturation, brightness);
+    // Hue is now 0 (for red), saturation is 255, brightness is 255.
+</code></pre>
+
+<p>Parameters:
+hue A reference to the hue to fill. Will be in the range of
+    0 - limit().
+saturation A reference to the saturation to fill. Will be in the
+        range of 0 - limit().
+brightness A reference to the brightness to fill. Will be in the
+    range of 0 - limit().</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getHue" data-lookup="getHue" data-item-type="method">
+  	 
+	<h1><a name="show_getHue">getHue()</a></h1>
+	<h2>
+  <p>float ofColor_::getHue()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Return the hue component of the HSB representation of this color. Refer the <a href="#HSB">discussion of HSB</a> above.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get the Hue of this color.</p>
+<p>The color is converted from the default RGB to an HSB color space and
+the resulting Hue value is returned.  The resulting hue value will
+always be returned in the range 0 - limit().</p>
+<p>Returns: The Hue value in the range 0 - limit().</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getHueAngle" data-lookup="getHueAngle" data-item-type="method">
+  	 
+	<h1><a name="show_getHueAngle">getHueAngle()</a></h1>
+	<h2>
+  <p>float ofColor_::getHueAngle()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get the Hue angle of this color.</p>
+<p>The color is converted from the default RGB to an HSB color space and
+the resulting Hue angle is returned.  The resulting hue value will
+always be returned in degrees in the range 0 - 360.</p>
+<p>Returns: The Hue angle in the range 0 - 360.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getInverted" data-lookup="getInverted" data-item-type="method">
+  	 
+	<h1><a name="show_getInverted">getInverted()</a></h1>
+	<h2>
+  <p>ofColor_&lt; PixelType &gt; ofColor_::getInverted()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the color that is the inverted version (complement) to this color, without modifying the original. See <a href="#invert">invert</a> for more info.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>A non-destructive version of invert().</p>
+<p>See also: invert()</p>
+<p>Returns: A copy of this color, inverted.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getLerped" data-lookup="getLerped" data-item-type="method">
+  	 
+	<h1><a name="show_getLerped">getLerped(...)</a></h1>
+	<h2>
+  <p>ofColor_&lt; PixelType &gt; ofColor_::getLerped(const ofColor_&lt; PixelType &gt; &amp;target, float amount)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns this color lerped towards target by amount, without modifying the original. See <a href="#lerp">lerp</a> for more info.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>A non-destructive version of lerp().</p>
+<p>See also: lerp()</p>
+<p>Returns: A copy of this color, lerped.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getLightness" data-lookup="getLightness" data-item-type="method">
+  	 
+	<h1><a name="show_getLightness">getLightness()</a></h1>
+	<h2>
+  <p>float ofColor_::getLightness()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Return the average of the three color components. This is used by the Lab and HSL color spaces.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Calculate the lightness of the R, G and B components.</p>
+<p>Lightness is simply the average of the three color components. This
+method of calculating lightness is used by the Lab and HSL color spaces.</p>
+<p>Returns: the lightness in the range 0 - limit().</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail getSaturation" data-lookup="getSaturation" data-item-type="method">
+  	 
+	<h1><a name="show_getSaturation">getSaturation()</a></h1>
+	<h2>
+  <p>float ofColor_::getSaturation()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Return the saturation component of the HSB representation of this color. Refer the <a href="#HSB">discussion of HSB</a> above.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get the Saturation of this color.</p>
+<p>The color is converted from the default RGB to an HSB color space and
+the resulting saturation is returned.  The resulting saturation value
+will always be returned in the range 0 - limit().</p>
+<p>Returns: The saturation in the range 0 - limit().</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail invert" data-lookup="invert" data-item-type="method">
+  	 
+	<h1><a name="show_invert">invert()</a></h1>
+	<h2>
+  <p>ofColor_&lt; PixelType &gt; &amp; ofColor_::invert()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Invert the color, which turns it into its complement.</p>
+<pre><code class="cpp">ofColor c(0, 0, 255); // blue
+c.invert(); // c is now (255,255,0), or yellow, which is blue's complement
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Invert the R, G and B components.</p>
+<p>Performs an inversion operation on the color by replacing the red, green
+and blue components with their original value subtracted from the
+limit().  For example, an ofColor value of:</p>
+<pre><code class="cpp">    unsigned char maxValue = limit(); // would return 255
+
+    unsigned char r = 255;
+    unsigned char g = 255;
+    unsigned char b = 0;
+
+    unsigned char rNew = maxValue - r; // 255 - 255 = 0
+    unsigned char gNew = maxValue - g; // 255 - 255 = 0
+    unsigned char bNew = maxValue - b; // 255 - 0   = 255;
+</code></pre>
+
+<p>Example usage:</p>
+<pre><code class="cpp">    ofColor c(0, 0, 255); // Blue.
+    c.invert();
+    // c is now (255,255,0), or yellow, which is blue's complement.
+</code></pre>
+
+<p>Returns: A reference to itself.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail lerp" data-lookup="lerp" data-item-type="method">
+  	 
+	<h1><a name="show_lerp">lerp(...)</a></h1>
+	<h2>
+  <p>ofColor_&lt; PixelType &gt; &amp; ofColor_::lerp(const ofColor_&lt; PixelType &gt; &amp;target, float amount)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Perform a linear interpolation (lerp) between this color and the target. Amount is a percentage represented by a float from 0 to 1. </p>
+<p>This function allows to blend between colors. For instance, if you have red and you want halfway between red and blue, you can do this:</p>
+<pre><code class="cpp">ofColor r = ofColor::red;
+ofColor b = ofColor::blue;
+b.lerp(r, 0.5); // now purple!
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>A linear interpolation between all components of two colors.</p>
+<p>The lerp method performs a linear interpolation (or <a href="http://en.wikipedia.org/wiki/Lerp_(computing)" title="Lerp">lerp</a>) between
+this color and a target color.  In contrast to many of the mathematical
+functions found in ofColor_, The linear interpolation is carried out
+on <em>all</em> components, R, G, B <em>and</em> A.  The amount is typically a value
+between 0.0 and 1.0, with 0.0 yielding an unchanged color and 1.0
+yielding a color identical to the target color.</p>
+<pre><code class="cpp">    ofColor r = ofColor::red;
+    ofColor b = ofColor::blue;
+    b.lerp(r, 0.5); // now purple
+</code></pre>
+
+<p>Parameters:
+target The target color corresponding to an amount of 1.0.
+amount The amount (between 0.0 and 1.0) to interpolate.
+    A value of 0.0 will yield an unchanged color.  A value of 1.0
+    will yield the target color.</p>
+<p>Returns: A reference to itself.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail limit" data-lookup="limit" data-item-type="method">
+  	 
+	<h1><a name="show_limit">limit()</a></h1>
+	<h2>
+  <p>float ofColor_::limit()</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Returns the maximum value for a component for this color. For standard ofColor returns 255, for ofFloatColor returns 1.0, for ofShortColor returns 65,536.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Get the maximum value of a color component.</p>
+<p>Based on the type of PixelType (whether its a ofColor, ofFloatColor or
+ofShortColor), the maximum value different. For a ofFloatColor the
+maximum is <code>1.0</code>, but for a ofColor it's <code>255</code>.</p>
+<p>Use this function to get this maximum number.</p>
+<p>Returns: The value associated with a fully saturated color component.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator!=" data-lookup="operator!=" data-item-type="method">
+  	 
+	<h1><a name="show_operator!=">operator!=(...)</a></h1>
+	<h2>
+  <p>bool ofColor_::operator!=(const ofColor_&lt; PixelType &gt; &amp;color)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Test two colors for inequality.</p>
+<p>Returns: true iff any of the R, G, B or A components are not equal.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator*" data-lookup="operator*" data-item-type="method">
+  	 
+	<h1><a name="show_operator*">operator*(...)</a></h1>
+	<h2>
+  <p>ofColor_&lt; PixelType &gt; ofColor_::operator*(const float &amp;value)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Clamped scalar multiplication operator.</p>
+<p>Multiply the R, G and B components by a scaler and clamp each.</p>
+<p>Warning: The alpha component is ignored.</p>
+<p>Parameters:
+value The value to multiply.</p>
+<p>Returns: The new clamped color.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator*" data-lookup="operator*" data-item-type="method">
+  	 
+	<h1><a name="show_operator*">operator*(...)</a></h1>
+	<h2>
+  <p>ofColor_&lt; PixelType &gt; ofColor_::operator*(const ofColor_&lt; PixelType &gt; &amp;color)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Clamped multiplication operator.</p>
+<p>Multiply two colors by multiplying and clamping their R, G and B
+components.</p>
+<p>Warning: The alpha component is ignored.</p>
+<p>Parameters:
+color The color to multiply.</p>
+<p>Returns: The new clamped color.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator*=" data-lookup="operator*=" data-item-type="method">
+  	 
+	<h1><a name="show_operator*=">operator*=(...)</a></h1>
+	<h2>
+  <p>ofColor_&lt; PixelType &gt; &amp; ofColor_::operator*=(const float &amp;value)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Clamped scalar multiplication operator.</p>
+<p>Multiply the R, G and B components by a scaler and clamp each.</p>
+<p>Warning: The alpha component is ignored.</p>
+<p>Parameters:
+value The scaler value.</p>
+<p>Returns: A reference to itself, the new clamped color.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator*=" data-lookup="operator*=" data-item-type="method">
+  	 
+	<h1><a name="show_operator*=">operator*=(...)</a></h1>
+	<h2>
+  <p>ofColor_&lt; PixelType &gt; &amp; ofColor_::operator*=(const ofColor_&lt; PixelType &gt; &amp;color)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Clamped multiplication operator.</p>
+<p>Multiply two colors by multiplying and clamping their R, G and B
+components.</p>
+<p>Warning: The alpha component is ignored.</p>
+<p>Parameters:
+color The color to multiply.</p>
+<p>Returns: A reference to itself, the new clamped color.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator+" data-lookup="operator+" data-item-type="method">
+  	 
+	<h1><a name="show_operator+">operator+(...)</a></h1>
+	<h2>
+  <p>ofColor_&lt; PixelType &gt; ofColor_::operator+(const float &amp;color)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Clamped addition operator.</p>
+<p>Add a value to each of the R, G and B components and clamp each.</p>
+<p>Warning: The alpha component is ignored.</p>
+<p>Parameters:
+color The value to add.</p>
+<p>Returns: The new clamped color.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator+" data-lookup="operator+" data-item-type="method">
+  	 
+	<h1><a name="show_operator+">operator+(...)</a></h1>
+	<h2>
+  <p>ofColor_&lt; PixelType &gt; ofColor_::operator+(const ofColor_&lt; PixelType &gt; &amp;color)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Clamped addition operator.</p>
+<p>Add two colors by summing and clamping their R, G and B components.</p>
+<p>Warning: The alpha component is ignored.</p>
+<p>Parameters:
+color The color to add.</p>
+<p>Returns: The new clamped color.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator+=" data-lookup="operator+=" data-item-type="method">
+  	 
+	<h1><a name="show_operator+=">operator+=(...)</a></h1>
+	<h2>
+  <p>ofColor_&lt; PixelType &gt; &amp; ofColor_::operator+=(const float &amp;color)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Clamped addition operator.</p>
+<p>Add a value to each of the R, G and B components and clamp each.</p>
+<p>Warning: The alpha component is ignored.</p>
+<p>Parameters:
+color The value to add.</p>
+<p>Returns: A reference to itself, the new clamped color.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator+=" data-lookup="operator+=" data-item-type="method">
+  	 
+	<h1><a name="show_operator+=">operator+=(...)</a></h1>
+	<h2>
+  <p>ofColor_&lt; PixelType &gt; &amp; ofColor_::operator+=(const ofColor_&lt; PixelType &gt; &amp;color)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Clamped addition operator.</p>
+<p>Add two colors by summing and clamping their R, G and B components.</p>
+<p>Warning: The alpha component is ignored.</p>
+<p>Parameters:
+color The color to add.</p>
+<p>Returns: A reference to itself, the new clamped color.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator-" data-lookup="operator-" data-item-type="method">
+  	 
+	<h1><a name="show_operator-">operator-(...)</a></h1>
+	<h2>
+  <p>ofColor_&lt; PixelType &gt; ofColor_::operator-(const float &amp;value)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Clamped subtraction operator.</p>
+<p>Subtract a value from each of the R, G and B components and clamp each.</p>
+<p>Warning: The alpha component is ignored.</p>
+<p>Parameters:
+value The value to subtract.</p>
+<p>Returns: The new clamped color.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator-" data-lookup="operator-" data-item-type="method">
+  	 
+	<h1><a name="show_operator-">operator-(...)</a></h1>
+	<h2>
+  <p>ofColor_&lt; PixelType &gt; ofColor_::operator-(const ofColor_&lt; PixelType &gt; &amp;color)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Clamped subtraction operator.</p>
+<p>Subtract two colors by subtracting and clamping their R, G and B
+components.</p>
+<p>Warning: The alpha component is ignored.</p>
+<p>Parameters:
+color The color to subtract.</p>
+<p>Returns: The new clamped color.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator-=" data-lookup="operator-=" data-item-type="method">
+  	 
+	<h1><a name="show_operator-=">operator-=(...)</a></h1>
+	<h2>
+  <p>ofColor_&lt; PixelType &gt; &amp; ofColor_::operator-=(const float &amp;color)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Clamped subtraction operator.</p>
+<p>Subtract a value to each of the R, G and B components and clamp each.</p>
+<p>Warning: The alpha component is ignored.</p>
+<p>Parameters:
+color The value to subtract.</p>
+<p>Returns: A reference to itself, the new clamped color.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator-=" data-lookup="operator-=" data-item-type="method">
+  	 
+	<h1><a name="show_operator-=">operator-=(...)</a></h1>
+	<h2>
+  <p>ofColor_&lt; PixelType &gt; &amp; ofColor_::operator-=(const ofColor_&lt; PixelType &gt; &amp;color)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Clamped subtraction operator.</p>
+<p>Add two colors by subtracting and clamping their R, G and B components.</p>
+<p>Parameters:
+color The color to subtract.</p>
+<p>Returns: A reference to itself, the new clamped color.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator/" data-lookup="operator/" data-item-type="method">
+  	 
+	<h1><a name="show_operator/">operator/(...)</a></h1>
+	<h2>
+  <p>ofColor_&lt; PixelType &gt; ofColor_::operator/(const float &amp;value)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Clamped scalar division operator.</p>
+<p>Divide each of the R, G and B components by a scalar and clamp each.</p>
+<p>Warning: The alpha component is ignored.</p>
+<p>Parameters:
+value The divisor value.</p>
+<p>Returns: The new clamped color.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator/" data-lookup="operator/" data-item-type="method">
+  	 
+	<h1><a name="show_operator/">operator/(...)</a></h1>
+	<h2>
+  <p>ofColor_&lt; PixelType &gt; ofColor_::operator/(const ofColor_&lt; PixelType &gt; &amp;color)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Clamped division operator.</p>
+<p>Divide two colors by treating the passed color components as divisors.</p>
+<p>Warning: The alpha component is ignored.</p>
+<p>Parameters:
+color The divisor color.</p>
+<p>Returns: The new clamped color.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator/=" data-lookup="operator/=" data-item-type="method">
+  	 
+	<h1><a name="show_operator/=">operator/=(...)</a></h1>
+	<h2>
+  <p>ofColor_&lt; PixelType &gt; &amp; ofColor_::operator/=(const float &amp;value)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Clamped scalar division operator.</p>
+<p>Divide each of the R, G and B components by a scalar and clamp each.</p>
+<p>Warning: The alpha component is ignored.</p>
+<p>Parameters:
+value The divisor value.</p>
+<p>Returns: A reference to itself, the new clamped color.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator/=" data-lookup="operator/=" data-item-type="method">
+  	 
+	<h1><a name="show_operator/=">operator/=(...)</a></h1>
+	<h2>
+  <p>ofColor_&lt; PixelType &gt; &amp; ofColor_::operator/=(const ofColor_&lt; PixelType &gt; &amp;color)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Clamped division operator.</p>
+<p>Divide two colors by treating the passed color components as divisors.</p>
+<p>Parameters:
+color The divisor color.</p>
+<p>Returns: A reference to itself, the new clamped color.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator=" data-lookup="operator=" data-item-type="method">
+  	 
+	<h1><a name="show_operator=">operator=(...)</a></h1>
+	<h2>
+  <p>ofColor_&lt; PixelType &gt; &amp; ofColor_::operator=(const float &amp;value)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Assign a color using a grayscale value.</p>
+<p>R, G and B components are set to the grayscale value and alpha is
+set to limit().</p>
+<pre><code class="cpp">    ofColor myColor = 127;
+</code></pre>
+
+<p>is equivalent to:</p>
+<pre><code class="cpp">    ofColor myColor(127, 127, 127, 255);
+</code></pre>
+
+<p>Parameters:
+value The grayscale value.</p>
+<p>Returns: A reference to itself.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator=" data-lookup="operator=" data-item-type="method">
+  	 
+	<h1><a name="show_operator=">operator=(...)</a></h1>
+	<h2>
+  <p>ofColor_&lt; PixelType &gt; &amp; ofColor_::operator=(const ofColor_&lt; SrcType &gt; &amp;color)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Assign a color using an existing color.</p>
+<p>R, G, B and A components are set to the the values of the assigned
+color.</p>
+<p>Warning: Depending on the PixelType and SrcType used, color precision
+    may be lost when converting a higher precision to a lower precision
+    representation.</p>
+<p>Parameters:
+color The color to assign.</p>
+<p>Returns: A reference to itself.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator==" data-lookup="operator==" data-item-type="method">
+  	 
+	<h1><a name="show_operator==">operator==(...)</a></h1>
+	<h2>
+  <p>bool ofColor_::operator==(const ofColor_&lt; PixelType &gt; &amp;color)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Test two colors for equality.</p>
+<p>Returns: true iff the R, G, B and A components are all equal.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator[]" data-lookup="operator[]" data-item-type="method">
+  	 
+	<h1><a name="show_operator[]">operator[](...)</a></h1>
+	<h2>
+  <p>const PixelType &amp; ofColor_::operator<a href="size_t n"></a></p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Array subscript operator.</p>
+<p>If n is 0 returns .r, if 1 returns .g, if 2 returns .b, if 3 returns
+alpha.</p>
+<pre><code class="cpp">    ofColor c(128, 64, 255);
+    float red = c[0]; // Red is 128.
+</code></pre>
+
+<p>Parameters:
+n An index 0-3 of the component to get.</p>
+<p>Returns: The value of the requested component.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail operator[]" data-lookup="operator[]" data-item-type="method">
+  	 
+	<h1><a name="show_operator[]">operator[](...)</a></h1>
+	<h2>
+  <p>PixelType &amp; ofColor_::operator<a href="size_t n"></a></p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Array subscript operator. If n is 0 returns .r, if 1 returns .g, if 2 returns .b, if 3 returns alpha.</p>
+<pre><code class="cpp">ofColor c(128, 64, 255);
+float red = c[0]; // red is 128
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Array subscript operator.</p>
+<p>If n is 0 returns .r, if 1 returns .g, if 2 returns .b, if 3 returns
+alpha.</p>
+<pre><code class="cpp">    ofColor c(128, 64, 255);
+    float red = c[0]; // Red is 128.
+</code></pre>
+
+<p>Parameters:
+n An index 0-3 of the component to get.</p>
+<p>Returns: The value of the requested component.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail set" data-lookup="set" data-item-type="method">
+  	 
+	<h1><a name="show_set">set(...)</a></h1>
+	<h2>
+  <p>void ofColor_::set(const ofColor_&lt; PixelType &gt; &amp;color)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Set an ofColor_ from an existing ofColor_.</p>
+<p>This will use the R, G, B and A components from the passed color.</p>
+<p>Parameters:
+color The ofColor_ to copy.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail set" data-lookup="set" data-item-type="method">
+  	 
+	<h1><a name="show_set">set(...)</a></h1>
+	<h2>
+  <p>void ofColor_::set(float gray, float alpha)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Creates a gray color from the value of gray. _a defaults to completely opaque.</p>
+<pre><code class="cpp">ofColor c(255, 0, 0); // red
+c.set( 128, 128 ); // now 50% gray with 50% alpha
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Set a grayscale ofColor_ by specifying a single number.</p>
+<p>When modifying an instance of ofColor_ you can use a single value to
+describe a grayscale color. This single value will be taken by each of
+the R, G and B components. The alpha channel is specified separately
+and will and will default to the PixelType's maximum resulting in an
+opaque color.</p>
+<pre><code class="cpp">    ofColor c(255, 0, 0); // Red ...
+    c.set(128, 128); // ... and now 50% gray with 50% alpha.
+</code></pre>
+
+<p>Parameters:
+gray A grayscale value.
+alpha The opacity of the color.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail set" data-lookup="set" data-item-type="method">
+  	 
+	<h1><a name="show_set">set(...)</a></h1>
+	<h2>
+  <p>void ofColor_::set(float red, float green, float blue, float alpha)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Creates a color using RGB values and optional alpha value. The default alpha value makes a completely opaque color.</p>
+<pre><code class="cpp">ofColor c(255, 0, 0); // red
+c.set(0, 255, 0); // and now green
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Set an ofColor_ by using channel values.</p>
+<p>When modifying an instance of ofColor_ the channel values must fall
+within the range represented by the PixelType.  By default, the alpha
+component will take the PixelType's maximum, producing an opaque color.</p>
+<pre><code class="cpp">    ofColor c(255, 0, 0); // Red ...
+    c.set(0, 255, 0); // ... and now green.
+</code></pre>
+
+<p>Parameters:
+red The red component.
+green The green component.
+blue The blue component.
+alpha The alpha component.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setBrightness" data-lookup="setBrightness" data-item-type="method">
+  	 
+	<h1><a name="show_setBrightness">setBrightness(...)</a></h1>
+	<h2>
+  <p>void ofColor_::setBrightness(float brightness)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Change the current brightness, leaving hue and saturation intact.</p>
+<pre><code class="cpp">ofColor c( 0, 0, 255 ); // bright blue
+c.setBrightness( 128 ); // dark blue
+</code></pre>
+
+<p>Refer the <a href="#HSB">discussion of HSB</a> above.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Set the brightness of this color.</p>
+<pre><code class="cpp">    ofColor c(0, 0, 255); // Bright blue ...
+    c.setBrightness(128); // ... dark blue.
+</code></pre>
+
+<p>Parameters:
+brightness A brightness value to set in the range of 0 - limit().</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setHex" data-lookup="setHex" data-item-type="method">
+  	 
+	<h1><a name="show_setHex">setHex(...)</a></h1>
+	<h2>
+  <p>void ofColor_::setHex(int hexColor, float alpha)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Set this color to hexColor using a 24 bit hex-style color as normally used in web development.  alpha defaults to completely opaque.</p>
+<pre><code class="cpp">ofColor c;
+c.setHex( 0xFFFFFF ); // white
+c.setHex( 0x00FF00 ); // green
+c.setHex( 0xFF8000, 128 ); // orange, 50% alpha
+</code></pre>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Set an ofColor_ from a hexadecimal representation.</p>
+<p>In some cases, it is convenient to represent colors using a hexadecimal
+number.  In this case, red, green and blue values are packed into a
+integer.</p>
+<p>The alpha channel is specified separately and will default to the
+PixelType's maximum, resulting in an opaque color.</p>
+<pre><code class="cpp">    ofColor c;
+    c.setHex(0xFFFFFF); // White.
+    c.setHex(0x00FF00); // Green.
+    c.setHex(0xFF8000, 128); // Orange, 50% alpha.
+</code></pre>
+
+<p>Warning: The alpha value <em>should not</em> be packed in the hexColor and
+    must be specified separately.</p>
+<p>Parameters:
+hexColor An RGB color in hexadecimal form.
+alpha The alpha value of the color.</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setHsb" data-lookup="setHsb" data-item-type="method">
+  	 
+	<h1><a name="show_setHsb">setHsb(...)</a></h1>
+	<h2>
+  <p>void ofColor_::setHsb(float hue, float saturation, float brightness, float alpha)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Set this color using a HSB representation. Refer the <a href="#HSB">discussion of HSB</a> above. <strong>Note</strong> that the hue value has a range that matches the base data type (ie <strong>0 to 255</strong> for the standard ofColor), rather than 0 to 360, 0 to 100 or float 0 to 1, as may be expected.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Set the color using HSB components.</p>
+<p>Parameters:
+hue A hue value to set in the range of 0 - limit().
+saturation A saturation value to set in the range of 0 - limit().
+brightness A brightness value to set in the range of 0 - limit().
+alpha An alpha value to set in the range of 0 - limit().</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setHue" data-lookup="setHue" data-item-type="method">
+  	 
+	<h1><a name="show_setHue">setHue(...)</a></h1>
+	<h2>
+  <p>void ofColor_::setHue(float hue)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Change the current hue, leaving saturation and brightness intact. </p>
+<pre><code class="cpp">ofColor c = ofColor::fromHsb( 0, 255, 255 ); // bright red
+c.setHue( 128 ); // now bright cyan
+</code></pre>
+
+<p>Refer the <a href="#HSB">discussion of HSB</a> above.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Set the hue of this color.</p>
+<pre><code class="cpp">    ofColor c = ofColor::fromHsb(0, 255, 255); // Bright red ...
+    c.setHue(128); // ... now bright cyan.
+</code></pre>
+
+<p>Parameters:
+hue A hue value to set in the range of 0 - limit().</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setHueAngle" data-lookup="setHueAngle" data-item-type="method">
+  	 
+	<h1><a name="show_setHueAngle">setHueAngle(...)</a></h1>
+	<h2>
+  <p>void ofColor_::setHueAngle(float angle)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  
+
+
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Set the hue angle of this color.</p>
+<p>Parameters:
+angle A hue angle value to set in the range of 0 - 360 degrees.</p>
+
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail setSaturation" data-lookup="setSaturation" data-item-type="method">
+  	 
+	<h1><a name="show_setSaturation">setSaturation(...)</a></h1>
+	<h2>
+  <p>void ofColor_::setSaturation(float saturation)</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+		
+  <p>Change the current saturation, leaving hue and brightness intact.</p>
+<pre><code class="cpp">ofColor c( 0, 0, 255 ); // vibrant blue
+c.setSaturation( 128 ); // pale blue
+</code></pre>
+
+<p>Refer the <a href="#HSB">discussion of HSB</a> above.</p>
+
+
+            <div class="inlined_docs">
+                <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+		        
+  <p>Set the saturation of this color.</p>
+<p>This method uses HSB not HSL. So red desaturated is white, not gray</p>
+<pre><code class="cpp">    ofColor c(0, 0, 255); // Vibrant blue ...
+    c.setSaturation( 128 ); // ... pale blue.
+</code></pre>
+
+<p>Parameters:
+saturation A saturation value value in the range of 0 - limit().</p>
+<p>See also: http://en.wikipedia.org/wiki/HSL_and_HSV</p>
+
+            </div>
+    
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+
+            <!-- vars detail -->
+              <!--h2><a name="variables"></a>ofColor variables</h2!-->
+                        
+<div class="documentation_detail  a" data-lookup="a" data-item-type="var">
+	<h1>PixelType <a name="show_a">a</a></h1>
+	<h2>
+  <p>PixelType ofColor_::a</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  <p>The alpha value (transparency) of a color. 0 is completely transparent, 255 is completely opaque.</p>
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  aliceBlue" data-lookup="aliceBlue" data-item-type="var">
+	<h1>ofColor_ <a name="show_aliceBlue">aliceBlue</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::aliceBlue</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  antiqueWhite" data-lookup="antiqueWhite" data-item-type="var">
+	<h1>ofColor_ <a name="show_antiqueWhite">antiqueWhite</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::antiqueWhite</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  aqua" data-lookup="aqua" data-item-type="var">
+	<h1>ofColor_ <a name="show_aqua">aqua</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::aqua</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  aquamarine" data-lookup="aquamarine" data-item-type="var">
+	<h1>ofColor_ <a name="show_aquamarine">aquamarine</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::aquamarine</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  azure" data-lookup="azure" data-item-type="var">
+	<h1>ofColor_ <a name="show_azure">azure</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::azure</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  b" data-lookup="b" data-item-type="var">
+	<h1>PixelType <a name="show_b">b</a></h1>
+	<h2>
+  <p>PixelType ofColor_::b</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  <p>The blue component of this color.</p>
+<pre><code class="cpp">ofColor c = ofColor::cyan;
+float blue = c.b; // 255
+</code></pre>
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  beige" data-lookup="beige" data-item-type="var">
+	<h1>ofColor_ <a name="show_beige">beige</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::beige</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  bisque" data-lookup="bisque" data-item-type="var">
+	<h1>ofColor_ <a name="show_bisque">bisque</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::bisque</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  black" data-lookup="black" data-item-type="var">
+	<h1>ofColor <a name="show_black">black</a></h1>
+	<h2>
+  <p>ofColor ofColor_::black</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  <p>Pre-iniatilized black color.</p>
+<pre><code class="cpp">ofColor c = ofColor::black; // (0, 0, 0)
+</code></pre>
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  blanchedAlmond" data-lookup="blanchedAlmond" data-item-type="var">
+	<h1>ofColor_ <a name="show_blanchedAlmond">blanchedAlmond</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::blanchedAlmond</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  blue" data-lookup="blue" data-item-type="var">
+	<h1>ofColor <a name="show_blue">blue</a></h1>
+	<h2>
+  <p>ofColor ofColor_::blue</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  <p>Pre-iniatilized blue color.</p>
+<pre><code class="cpp">ofColor c = ofColor::blue; // (0, 0, 255)
+</code></pre>
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  blueSteel" data-lookup="blueSteel" data-item-type="var">
+	<h1>ofColor_ <a name="show_blueSteel">blueSteel</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::blueSteel</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  blueViolet" data-lookup="blueViolet" data-item-type="var">
+	<h1>ofColor_ <a name="show_blueViolet">blueViolet</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::blueViolet</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  brown" data-lookup="brown" data-item-type="var">
+	<h1>ofColor_ <a name="show_brown">brown</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::brown</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  burlyWood" data-lookup="burlyWood" data-item-type="var">
+	<h1>ofColor_ <a name="show_burlyWood">burlyWood</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::burlyWood</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  cadetBlue" data-lookup="cadetBlue" data-item-type="var">
+	<h1>ofColor_ <a name="show_cadetBlue">cadetBlue</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::cadetBlue</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  chartreuse" data-lookup="chartreuse" data-item-type="var">
+	<h1>ofColor_ <a name="show_chartreuse">chartreuse</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::chartreuse</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  chocolate" data-lookup="chocolate" data-item-type="var">
+	<h1>ofColor_ <a name="show_chocolate">chocolate</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::chocolate</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  coral" data-lookup="coral" data-item-type="var">
+	<h1>ofColor_ <a name="show_coral">coral</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::coral</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  cornflowerBlue" data-lookup="cornflowerBlue" data-item-type="var">
+	<h1>ofColor_ <a name="show_cornflowerBlue">cornflowerBlue</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::cornflowerBlue</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  cornsilk" data-lookup="cornsilk" data-item-type="var">
+	<h1>ofColor_ <a name="show_cornsilk">cornsilk</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::cornsilk</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  crimson" data-lookup="crimson" data-item-type="var">
+	<h1>ofColor_ <a name="show_crimson">crimson</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::crimson</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  cyan" data-lookup="cyan" data-item-type="var">
+	<h1>ofColor <a name="show_cyan">cyan</a></h1>
+	<h2>
+  <p>ofColor ofColor_::cyan</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  <p>Pre-iniatilized cyan color.</p>
+<pre><code class="cpp">ofColor c = ofColor::cyan; // (0, 255, 255)
+</code></pre>
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  darkBlue" data-lookup="darkBlue" data-item-type="var">
+	<h1>ofColor_ <a name="show_darkBlue">darkBlue</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::darkBlue</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  darkCyan" data-lookup="darkCyan" data-item-type="var">
+	<h1>ofColor_ <a name="show_darkCyan">darkCyan</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::darkCyan</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  darkGoldenRod" data-lookup="darkGoldenRod" data-item-type="var">
+	<h1>ofColor_ <a name="show_darkGoldenRod">darkGoldenRod</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::darkGoldenRod</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  darkGray" data-lookup="darkGray" data-item-type="var">
+	<h1>ofColor_ <a name="show_darkGray">darkGray</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::darkGray</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  darkGreen" data-lookup="darkGreen" data-item-type="var">
+	<h1>ofColor_ <a name="show_darkGreen">darkGreen</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::darkGreen</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  darkGrey" data-lookup="darkGrey" data-item-type="var">
+	<h1>ofColor_ <a name="show_darkGrey">darkGrey</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::darkGrey</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  darkKhaki" data-lookup="darkKhaki" data-item-type="var">
+	<h1>ofColor_ <a name="show_darkKhaki">darkKhaki</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::darkKhaki</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  darkMagenta" data-lookup="darkMagenta" data-item-type="var">
+	<h1>ofColor_ <a name="show_darkMagenta">darkMagenta</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::darkMagenta</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  darkOliveGreen" data-lookup="darkOliveGreen" data-item-type="var">
+	<h1>ofColor_ <a name="show_darkOliveGreen">darkOliveGreen</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::darkOliveGreen</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  darkOrchid" data-lookup="darkOrchid" data-item-type="var">
+	<h1>ofColor_ <a name="show_darkOrchid">darkOrchid</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::darkOrchid</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  darkRed" data-lookup="darkRed" data-item-type="var">
+	<h1>ofColor_ <a name="show_darkRed">darkRed</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::darkRed</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  darkSalmon" data-lookup="darkSalmon" data-item-type="var">
+	<h1>ofColor_ <a name="show_darkSalmon">darkSalmon</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::darkSalmon</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  darkSeaGreen" data-lookup="darkSeaGreen" data-item-type="var">
+	<h1>ofColor_ <a name="show_darkSeaGreen">darkSeaGreen</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::darkSeaGreen</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  darkSlateBlue" data-lookup="darkSlateBlue" data-item-type="var">
+	<h1>ofColor_ <a name="show_darkSlateBlue">darkSlateBlue</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::darkSlateBlue</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  darkSlateGray" data-lookup="darkSlateGray" data-item-type="var">
+	<h1>ofColor_ <a name="show_darkSlateGray">darkSlateGray</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::darkSlateGray</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  darkSlateGrey" data-lookup="darkSlateGrey" data-item-type="var">
+	<h1>ofColor_ <a name="show_darkSlateGrey">darkSlateGrey</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::darkSlateGrey</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  darkTurquoise" data-lookup="darkTurquoise" data-item-type="var">
+	<h1>ofColor_ <a name="show_darkTurquoise">darkTurquoise</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::darkTurquoise</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  darkViolet" data-lookup="darkViolet" data-item-type="var">
+	<h1>ofColor_ <a name="show_darkViolet">darkViolet</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::darkViolet</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  darkorange" data-lookup="darkorange" data-item-type="var">
+	<h1>ofColor_ <a name="show_darkorange">darkorange</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::darkorange</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  deepPink" data-lookup="deepPink" data-item-type="var">
+	<h1>ofColor_ <a name="show_deepPink">deepPink</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::deepPink</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  deepSkyBlue" data-lookup="deepSkyBlue" data-item-type="var">
+	<h1>ofColor_ <a name="show_deepSkyBlue">deepSkyBlue</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::deepSkyBlue</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  dimGray" data-lookup="dimGray" data-item-type="var">
+	<h1>ofColor_ <a name="show_dimGray">dimGray</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::dimGray</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  dimGrey" data-lookup="dimGrey" data-item-type="var">
+	<h1>ofColor_ <a name="show_dimGrey">dimGrey</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::dimGrey</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  dodgerBlue" data-lookup="dodgerBlue" data-item-type="var">
+	<h1>ofColor_ <a name="show_dodgerBlue">dodgerBlue</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::dodgerBlue</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  fireBrick" data-lookup="fireBrick" data-item-type="var">
+	<h1>ofColor_ <a name="show_fireBrick">fireBrick</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::fireBrick</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  floralWhite" data-lookup="floralWhite" data-item-type="var">
+	<h1>ofColor_ <a name="show_floralWhite">floralWhite</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::floralWhite</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  forestGreen" data-lookup="forestGreen" data-item-type="var">
+	<h1>ofColor_ <a name="show_forestGreen">forestGreen</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::forestGreen</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  fuchsia" data-lookup="fuchsia" data-item-type="var">
+	<h1>ofColor_ <a name="show_fuchsia">fuchsia</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::fuchsia</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  g" data-lookup="g" data-item-type="var">
+	<h1>PixelType <a name="show_g">g</a></h1>
+	<h2>
+  <p>PixelType ofColor_::g</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  <p>The green component of this color.</p>
+<pre><code class="cpp">ofColor c = ofColor::yellow;
+float green = c.g; // 255
+</code></pre>
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  gainsboro" data-lookup="gainsboro" data-item-type="var">
+	<h1>ofColor_ <a name="show_gainsboro">gainsboro</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::gainsboro</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  ghostWhite" data-lookup="ghostWhite" data-item-type="var">
+	<h1>ofColor_ <a name="show_ghostWhite">ghostWhite</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::ghostWhite</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  gold" data-lookup="gold" data-item-type="var">
+	<h1>ofColor_ <a name="show_gold">gold</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::gold</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  goldenRod" data-lookup="goldenRod" data-item-type="var">
+	<h1>ofColor_ <a name="show_goldenRod">goldenRod</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::goldenRod</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  gray" data-lookup="gray" data-item-type="var">
+	<h1>ofColor <a name="show_gray">gray</a></h1>
+	<h2>
+  <p>ofColor ofColor_::gray</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  <p>Pre-iniatilized gray color.</p>
+<pre><code class="cpp">ofColor c = ofColor::gray;
+</code></pre>
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  green" data-lookup="green" data-item-type="var">
+	<h1>ofColor <a name="show_green">green</a></h1>
+	<h2>
+  <p>ofColor ofColor_::green</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  <p>Pre-iniatilized green color.</p>
+<pre><code class="cpp">ofColor c = ofColor::green; // (0, 255, 0)
+</code></pre>
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  greenYellow" data-lookup="greenYellow" data-item-type="var">
+	<h1>ofColor_ <a name="show_greenYellow">greenYellow</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::greenYellow</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  grey" data-lookup="grey" data-item-type="var">
+	<h1>ofColor_ <a name="show_grey">grey</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::grey</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  honeyDew" data-lookup="honeyDew" data-item-type="var">
+	<h1>ofColor_ <a name="show_honeyDew">honeyDew</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::honeyDew</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  hotPink" data-lookup="hotPink" data-item-type="var">
+	<h1>ofColor_ <a name="show_hotPink">hotPink</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::hotPink</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  indianRed" data-lookup="indianRed" data-item-type="var">
+	<h1>ofColor_ <a name="show_indianRed">indianRed</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::indianRed</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  indigo" data-lookup="indigo" data-item-type="var">
+	<h1>ofColor_ <a name="show_indigo">indigo</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::indigo</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  ivory" data-lookup="ivory" data-item-type="var">
+	<h1>ofColor_ <a name="show_ivory">ivory</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::ivory</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  khaki" data-lookup="khaki" data-item-type="var">
+	<h1>ofColor_ <a name="show_khaki">khaki</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::khaki</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  lavender" data-lookup="lavender" data-item-type="var">
+	<h1>ofColor_ <a name="show_lavender">lavender</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::lavender</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  lavenderBlush" data-lookup="lavenderBlush" data-item-type="var">
+	<h1>ofColor_ <a name="show_lavenderBlush">lavenderBlush</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::lavenderBlush</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  lawnGreen" data-lookup="lawnGreen" data-item-type="var">
+	<h1>ofColor_ <a name="show_lawnGreen">lawnGreen</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::lawnGreen</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  lemonChiffon" data-lookup="lemonChiffon" data-item-type="var">
+	<h1>ofColor_ <a name="show_lemonChiffon">lemonChiffon</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::lemonChiffon</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  lightBlue" data-lookup="lightBlue" data-item-type="var">
+	<h1>ofColor_ <a name="show_lightBlue">lightBlue</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::lightBlue</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  lightCoral" data-lookup="lightCoral" data-item-type="var">
+	<h1>ofColor_ <a name="show_lightCoral">lightCoral</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::lightCoral</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  lightCyan" data-lookup="lightCyan" data-item-type="var">
+	<h1>ofColor_ <a name="show_lightCyan">lightCyan</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::lightCyan</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  lightGoldenRodYellow" data-lookup="lightGoldenRodYellow" data-item-type="var">
+	<h1>ofColor_ <a name="show_lightGoldenRodYellow">lightGoldenRodYellow</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::lightGoldenRodYellow</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  lightGray" data-lookup="lightGray" data-item-type="var">
+	<h1>ofColor_ <a name="show_lightGray">lightGray</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::lightGray</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  lightGreen" data-lookup="lightGreen" data-item-type="var">
+	<h1>ofColor_ <a name="show_lightGreen">lightGreen</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::lightGreen</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  lightGrey" data-lookup="lightGrey" data-item-type="var">
+	<h1>ofColor_ <a name="show_lightGrey">lightGrey</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::lightGrey</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  lightPink" data-lookup="lightPink" data-item-type="var">
+	<h1>ofColor_ <a name="show_lightPink">lightPink</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::lightPink</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  lightSalmon" data-lookup="lightSalmon" data-item-type="var">
+	<h1>ofColor_ <a name="show_lightSalmon">lightSalmon</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::lightSalmon</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  lightSeaGreen" data-lookup="lightSeaGreen" data-item-type="var">
+	<h1>ofColor_ <a name="show_lightSeaGreen">lightSeaGreen</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::lightSeaGreen</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  lightSkyBlue" data-lookup="lightSkyBlue" data-item-type="var">
+	<h1>ofColor_ <a name="show_lightSkyBlue">lightSkyBlue</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::lightSkyBlue</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  lightSlateGray" data-lookup="lightSlateGray" data-item-type="var">
+	<h1>ofColor_ <a name="show_lightSlateGray">lightSlateGray</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::lightSlateGray</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  lightSlateGrey" data-lookup="lightSlateGrey" data-item-type="var">
+	<h1>ofColor_ <a name="show_lightSlateGrey">lightSlateGrey</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::lightSlateGrey</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  lightSteelBlue" data-lookup="lightSteelBlue" data-item-type="var">
+	<h1>ofColor_ <a name="show_lightSteelBlue">lightSteelBlue</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::lightSteelBlue</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  lightYellow" data-lookup="lightYellow" data-item-type="var">
+	<h1>ofColor_ <a name="show_lightYellow">lightYellow</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::lightYellow</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  lime" data-lookup="lime" data-item-type="var">
+	<h1>ofColor_ <a name="show_lime">lime</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::lime</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  limeGreen" data-lookup="limeGreen" data-item-type="var">
+	<h1>ofColor_ <a name="show_limeGreen">limeGreen</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::limeGreen</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  linen" data-lookup="linen" data-item-type="var">
+	<h1>ofColor_ <a name="show_linen">linen</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::linen</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  magenta" data-lookup="magenta" data-item-type="var">
+	<h1>ofColor <a name="show_magenta">magenta</a></h1>
+	<h2>
+  <p>ofColor ofColor_::magenta</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  <p>Pre-iniatilized magenta color.</p>
+<pre><code class="cpp">ofColor c = ofColor::magenta; // (255, 0, 255)
+</code></pre>
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  maroon" data-lookup="maroon" data-item-type="var">
+	<h1>ofColor_ <a name="show_maroon">maroon</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::maroon</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  mediumAquaMarine" data-lookup="mediumAquaMarine" data-item-type="var">
+	<h1>ofColor_ <a name="show_mediumAquaMarine">mediumAquaMarine</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::mediumAquaMarine</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  mediumBlue" data-lookup="mediumBlue" data-item-type="var">
+	<h1>ofColor_ <a name="show_mediumBlue">mediumBlue</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::mediumBlue</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  mediumOrchid" data-lookup="mediumOrchid" data-item-type="var">
+	<h1>ofColor_ <a name="show_mediumOrchid">mediumOrchid</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::mediumOrchid</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  mediumPurple" data-lookup="mediumPurple" data-item-type="var">
+	<h1>ofColor_ <a name="show_mediumPurple">mediumPurple</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::mediumPurple</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  mediumSeaGreen" data-lookup="mediumSeaGreen" data-item-type="var">
+	<h1>ofColor_ <a name="show_mediumSeaGreen">mediumSeaGreen</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::mediumSeaGreen</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  mediumSlateBlue" data-lookup="mediumSlateBlue" data-item-type="var">
+	<h1>ofColor_ <a name="show_mediumSlateBlue">mediumSlateBlue</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::mediumSlateBlue</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  mediumSpringGreen" data-lookup="mediumSpringGreen" data-item-type="var">
+	<h1>ofColor_ <a name="show_mediumSpringGreen">mediumSpringGreen</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::mediumSpringGreen</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  mediumTurquoise" data-lookup="mediumTurquoise" data-item-type="var">
+	<h1>ofColor_ <a name="show_mediumTurquoise">mediumTurquoise</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::mediumTurquoise</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  mediumVioletRed" data-lookup="mediumVioletRed" data-item-type="var">
+	<h1>ofColor_ <a name="show_mediumVioletRed">mediumVioletRed</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::mediumVioletRed</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  midnightBlue" data-lookup="midnightBlue" data-item-type="var">
+	<h1>ofColor_ <a name="show_midnightBlue">midnightBlue</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::midnightBlue</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  mintCream" data-lookup="mintCream" data-item-type="var">
+	<h1>ofColor_ <a name="show_mintCream">mintCream</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::mintCream</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  mistyRose" data-lookup="mistyRose" data-item-type="var">
+	<h1>ofColor_ <a name="show_mistyRose">mistyRose</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::mistyRose</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  moccasin" data-lookup="moccasin" data-item-type="var">
+	<h1>ofColor_ <a name="show_moccasin">moccasin</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::moccasin</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  navajoWhite" data-lookup="navajoWhite" data-item-type="var">
+	<h1>ofColor_ <a name="show_navajoWhite">navajoWhite</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::navajoWhite</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  navy" data-lookup="navy" data-item-type="var">
+	<h1>ofColor_ <a name="show_navy">navy</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::navy</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  oldLace" data-lookup="oldLace" data-item-type="var">
+	<h1>ofColor_ <a name="show_oldLace">oldLace</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::oldLace</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  olive" data-lookup="olive" data-item-type="var">
+	<h1>ofColor_ <a name="show_olive">olive</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::olive</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  oliveDrab" data-lookup="oliveDrab" data-item-type="var">
+	<h1>ofColor_ <a name="show_oliveDrab">oliveDrab</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::oliveDrab</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  orange" data-lookup="orange" data-item-type="var">
+	<h1>ofColor_ <a name="show_orange">orange</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::orange</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  orangeRed" data-lookup="orangeRed" data-item-type="var">
+	<h1>ofColor_ <a name="show_orangeRed">orangeRed</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::orangeRed</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  orchid" data-lookup="orchid" data-item-type="var">
+	<h1>ofColor_ <a name="show_orchid">orchid</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::orchid</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  paleGoldenRod" data-lookup="paleGoldenRod" data-item-type="var">
+	<h1>ofColor_ <a name="show_paleGoldenRod">paleGoldenRod</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::paleGoldenRod</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  paleGreen" data-lookup="paleGreen" data-item-type="var">
+	<h1>ofColor_ <a name="show_paleGreen">paleGreen</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::paleGreen</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  paleTurquoise" data-lookup="paleTurquoise" data-item-type="var">
+	<h1>ofColor_ <a name="show_paleTurquoise">paleTurquoise</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::paleTurquoise</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  paleVioletRed" data-lookup="paleVioletRed" data-item-type="var">
+	<h1>ofColor_ <a name="show_paleVioletRed">paleVioletRed</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::paleVioletRed</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  papayaWhip" data-lookup="papayaWhip" data-item-type="var">
+	<h1>ofColor_ <a name="show_papayaWhip">papayaWhip</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::papayaWhip</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  peachPuff" data-lookup="peachPuff" data-item-type="var">
+	<h1>ofColor_ <a name="show_peachPuff">peachPuff</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::peachPuff</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  peru" data-lookup="peru" data-item-type="var">
+	<h1>ofColor_ <a name="show_peru">peru</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::peru</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  pink" data-lookup="pink" data-item-type="var">
+	<h1>ofColor_ <a name="show_pink">pink</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::pink</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  plum" data-lookup="plum" data-item-type="var">
+	<h1>ofColor_ <a name="show_plum">plum</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::plum</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  powderBlue" data-lookup="powderBlue" data-item-type="var">
+	<h1>ofColor_ <a name="show_powderBlue">powderBlue</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::powderBlue</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  purple" data-lookup="purple" data-item-type="var">
+	<h1>ofColor_ <a name="show_purple">purple</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::purple</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  r" data-lookup="r" data-item-type="var">
+	<h1>PixelType <a name="show_r">r</a></h1>
+	<h2>
+  <p>PixelType ofColor_::r</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  <p>The red component of this color.</p>
+<pre><code class="cpp">ofColor c = ofColor::red;
+float red = c.r; // 255
+</code></pre>
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  red" data-lookup="red" data-item-type="var">
+	<h1>ofColor <a name="show_red">red</a></h1>
+	<h2>
+  <p>ofColor ofColor_::red</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  <p>Pre-iniatilized red color.</p>
+<pre><code class="cpp">ofColor c = ofColor::red; // (255, 0, 0)
+</code></pre>
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  rosyBrown" data-lookup="rosyBrown" data-item-type="var">
+	<h1>ofColor_ <a name="show_rosyBrown">rosyBrown</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::rosyBrown</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  royalBlue" data-lookup="royalBlue" data-item-type="var">
+	<h1>ofColor_ <a name="show_royalBlue">royalBlue</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::royalBlue</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  saddleBrown" data-lookup="saddleBrown" data-item-type="var">
+	<h1>ofColor_ <a name="show_saddleBrown">saddleBrown</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::saddleBrown</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  salmon" data-lookup="salmon" data-item-type="var">
+	<h1>ofColor_ <a name="show_salmon">salmon</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::salmon</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  sandyBrown" data-lookup="sandyBrown" data-item-type="var">
+	<h1>ofColor_ <a name="show_sandyBrown">sandyBrown</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::sandyBrown</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  seaGreen" data-lookup="seaGreen" data-item-type="var">
+	<h1>ofColor_ <a name="show_seaGreen">seaGreen</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::seaGreen</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  seaShell" data-lookup="seaShell" data-item-type="var">
+	<h1>ofColor_ <a name="show_seaShell">seaShell</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::seaShell</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  sienna" data-lookup="sienna" data-item-type="var">
+	<h1>ofColor_ <a name="show_sienna">sienna</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::sienna</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  silver" data-lookup="silver" data-item-type="var">
+	<h1>ofColor_ <a name="show_silver">silver</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::silver</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  skyBlue" data-lookup="skyBlue" data-item-type="var">
+	<h1>ofColor_ <a name="show_skyBlue">skyBlue</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::skyBlue</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  slateBlue" data-lookup="slateBlue" data-item-type="var">
+	<h1>ofColor_ <a name="show_slateBlue">slateBlue</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::slateBlue</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  slateGray" data-lookup="slateGray" data-item-type="var">
+	<h1>ofColor_ <a name="show_slateGray">slateGray</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::slateGray</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  slateGrey" data-lookup="slateGrey" data-item-type="var">
+	<h1>ofColor_ <a name="show_slateGrey">slateGrey</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::slateGrey</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  snow" data-lookup="snow" data-item-type="var">
+	<h1>ofColor_ <a name="show_snow">snow</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::snow</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  springGreen" data-lookup="springGreen" data-item-type="var">
+	<h1>ofColor_ <a name="show_springGreen">springGreen</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::springGreen</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  steelBlue" data-lookup="steelBlue" data-item-type="var">
+	<h1>ofColor_ <a name="show_steelBlue">steelBlue</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::steelBlue</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  tan" data-lookup="tan" data-item-type="var">
+	<h1>ofColor_ <a name="show_tan">tan</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::tan</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  teal" data-lookup="teal" data-item-type="var">
+	<h1>ofColor_ <a name="show_teal">teal</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::teal</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  thistle" data-lookup="thistle" data-item-type="var">
+	<h1>ofColor_ <a name="show_thistle">thistle</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::thistle</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  tomato" data-lookup="tomato" data-item-type="var">
+	<h1>ofColor_ <a name="show_tomato">tomato</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::tomato</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  turquoise" data-lookup="turquoise" data-item-type="var">
+	<h1>ofColor_ <a name="show_turquoise">turquoise</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::turquoise</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  violet" data-lookup="violet" data-item-type="var">
+	<h1>ofColor_ <a name="show_violet">violet</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::violet</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  wheat" data-lookup="wheat" data-item-type="var">
+	<h1>ofColor_ <a name="show_wheat">wheat</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::wheat</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  white" data-lookup="white" data-item-type="var">
+	<h1>ofColor <a name="show_white">white</a></h1>
+	<h2>
+  <p>ofColor ofColor_::white</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  <p>Pre-iniatilized white color.</p>
+<pre><code class="cpp">ofColor c = ofColor::white;
+</code></pre>
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  whiteSmoke" data-lookup="whiteSmoke" data-item-type="var">
+	<h1>ofColor_ <a name="show_whiteSmoke">whiteSmoke</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::whiteSmoke</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  yellow" data-lookup="yellow" data-item-type="var">
+	<h1>ofColor <a name="show_yellow">yellow</a></h1>
+	<h2>
+  <p>ofColor ofColor_::yellow</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  <p>Pre-iniatilized yellow color.</p>
+<pre><code class="cpp">ofColor c = ofColor::yellow; // (255, 255, 0)
+</code></pre>
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+                        
+<div class="documentation_detail  yellowGreen" data-lookup="yellowGreen" data-item-type="var">
+	<h1>ofColor_ <a name="show_yellowGreen">yellowGreen</a></h1>
+	<h2>
+  <p>ofColor_ ofColor_::yellowGreen</p>
+</h2>
+	<div class="documentation_detail_description">
+		
+  
+
+	</div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
+</div>
+
+
+    
+
+            <!-- functions detail -->
+            <hr/>
+                
+            <!--diqus comments for class/functions module description-->
+            <div id="comments_header">
+            <h2>comments</h2>
+            <p>You can add comments with usage examples or other information for each class, method or variable, for adding documentation to an empty section or reporting errors is better to send a fix or open an issue through <a href="https://github.com/openframeworks/ofSite">github</a>.</p>
+            <p>When posting code enclose it in:</p>
+            <pre><code class="html">&lt;pre&gt;&lt;code class=&quot;cpp&quot;&gt;&nbsp;&lt;/code&gt;&lt;/pre&gt;</code></pre>
+            <br/>
+            </div>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+
+            // DISQUS
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+
+            var disqus_shortname = 'openframeworks'; // required: replace example with your forum shortname
+            //var disqus_developer = 1;
+
+            location_elements = window.location.pathname.split("/");
+            module_name = location_elements[location_elements.length-1].split(".")[0];
+            section_name = location.hash.split("_")[1];
+            console.log(module_name + " " + section_name);
+            if(section_name!=undefined && section_name!=''){
+            var disqus_identifier = window.location.pathname + "#!show_" + section_name;  
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "#!show_" + section_name;
+            var discus_title = document.title + " - " + section_name;
+            }else{
+            var disqus_identifier = window.location.pathname;
+            var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            var discus_title = document.title;
+            }
+
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */   
+            (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		
+        </div><!-- End Submenu right -->
+      </div><!-- End page wide -->
+      </div><!-- End body wrap -->
+      
+      <div id="footer">
+        
+  <p id="credits">
+
+
+  
+Monday, 04 January 2016 00:34:06 UTC
+에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
+
+eb73abcb6141243ae29291b42ec447024f00a570
+">
+
+eb73abcb6141243ae29291b42ec447024f00a570
+</a>
+
+<!--br/>RSS feeds for <a href="/feed">Entries</a-->
+
+<br/>
+<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
+<!--Hosting for openFrameworks is generously provided by Rackspace-->
+hosting for openFrameworks.kr is provided by icq4ever@gmail.com
+<br/>
+	<img src="http://icq4ever.net/apple-touch-icon.png">
+</a>
+
+</p>
+
+
+
+
+<!--tracking -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9614675-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+
+
+
+
