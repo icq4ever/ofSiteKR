@@ -95,6 +95,7 @@ If you don't want to use the command line, there is a number of visual git clien
 ### 깃, SVN에서 넘어오기
 <!-- If you come from SVN, and want to jump into git, things can be confusing. There are some resources on the web, one tutorial explaining the equivalent commands can be found [here](http://git.or.cz/course/svn.html). -->
 <!-- One thing to note is that a commit is much less serious in git, since it will remain in your local repository. In git, **"commit early, commit often"** is the key. -->
+
 여러분중에 SVN을 사용하다가 깃으로 전환하고 싶으신 분이 있으시다면, 약간 혼란스러울 수 있습니다. 웹상에 이와 관련하여 다양한 자료들이 있습니다. [이곳](http://git.or.cz/course/svn.html)은 동일한 수행의 명령어 비교를 설명하는 튜토리얼입니다. 
 힌트를 드리자면 커밋은 로컬 저장소에만 영향을 미치므로, 깃에서 훨씬 덜 심각(중요)하다는 것입니다.  깃에서는 **빨리 커밋하고, 자주 커밋하라**가 핵심입니다.
 
@@ -105,9 +106,9 @@ If you don't want to use the command line, there is a number of visual git clien
 
 <!-- ### Pushing new branches to github -->
 ### 새로운 가지를 github에 푸쉬 하기
-<!-- If you have some new work in a separate branch, and you want to push this to your github repository, you say -->
-만약 분리된 가지(branch)에서 새로운 작업을 했고, 그것을 github 저장소에 푸쉬하고 싶을때에는
-	
+
+<!-- If you have some new work in a separate branch, and you want to push this to your github repository, you say -->만약 분리된 가지(branch)에서 새로운 작업을 했고, 그것을 github 저장소에 푸쉬하고 싶을때에는
+
 	git push origin new-work
 
 라고 하시면 됩니다. (역자 주 : new-work는 분리된 가지(branch)의 이름입니다.)
@@ -115,8 +116,8 @@ If you don't want to use the command line, there is a number of visual git clien
 <!-- ### Creating a local copy of a branch on a remote -->
 ### 로컬상의 가지(branch)복사본을 remote에 생성하기
 If you want to check out a branch on a repository, which does not yet exist in your local repository, you use
-만약 로컬 저장소에 존재하지 않는, 저장소의 branch로 체크아웃하고 싶다면
-	
+만약 로컬 저장소에 존재하지 않는, 저장소의 branch로 체크아웃하고 싶으시다면
+
 	git fetch origin
 	git checkout --track origin/interesting-branch
 
@@ -144,10 +145,11 @@ If you want to check out a branch on a repository, which does not yet exist in y
 <!-- ## Solutions for commonly occurring problems -->
 ## 일반적으로 발생하는 문제점의 해결법들
 
-There are certain problematic situations which you are probably going encounter when working with git.
-In what follows, some of these situations are identified and a solution method is identified.
+<!-- There are certain problematic situations which you are probably going encounter when working with git. -->
+<!-- In what follows, some of these situations are identified and a solution method is identified. -->
 
-여러분이 깃으로 작업하면서 마주칠만한 문제가 발생할 상황들 몇몇 있습니다. 이러한 동일한 상황중에는 해결법도 동일합니다.
+여러분이 깃으로 작업하면서 마주칠만한 문제가 발생할 상황들 몇몇 있습니다. 
+대부분의 이러한 문제들은 해결법이 동일합니다.
 
 <!-- ### Pulling when you have uncommitted changes -->
 ### 커밋되지 않은 변경을 pulling 할 경우
