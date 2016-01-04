@@ -12,9 +12,7 @@ href="http://${bf.config.blog.disqus.name}.disqus.com/latest.rss">Comments</a>.
 <br/>
 <a href="http://www.icq4ever.net" target="_blank" class="rackspace">
 <!--Hosting for openFrameworks is generously provided by Rackspace-->
-hosting for openFrameworks.kr is provided by icq4ever@gmail.com
-<br/>
-	<img src="http://icq4ever.net/apple-touch-icon.png">
+hosting for openFrameworks.kr is provided by github.com
 </a>
 
 </p>
@@ -36,8 +34,6 @@ hosting for openFrameworks.kr is provided by icq4ever@gmail.com
 </script>
 % endif
 
-
-
 <!--tracking -->
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
@@ -45,7 +41,7 @@ document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.
 </script>
 <script type="text/javascript">
 try {
-var pageTracker = _gat._getTracker("UA-9614675-1");
+var pageTracker = _gat._getTracker("UA-71930909-1");
 pageTracker._trackPageview();
 } catch(err) {}</script>
 
