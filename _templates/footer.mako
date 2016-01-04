@@ -10,13 +10,8 @@ ${self.getTime()}에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nb
 href="http://${bf.config.blog.disqus.name}.disqus.com/latest.rss">Comments</a>.
 % endif
 <br/>
-<a href="http://www.icq4ever.net" target="_blank" class="rackspace">
 <!--Hosting for openFrameworks is generously provided by Rackspace-->
-hosting for openFrameworks.kr is provided by icq4ever@gmail.com
-<br/>
-	<img src="http://icq4ever.net/apple-touch-icon.png">
-</a>
-
+hosting for openFrameworks.kr is provided by github.com
 </p>
 
 % if bf.config.blog.disqus.enabled:
