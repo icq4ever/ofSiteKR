@@ -1,7 +1,7 @@
 ## -*- coding: utf-8 -*-
 <p id="credits">
 
-Last updated ${self.getTime()}&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR090-/commit/${self.getLastCommitHash()}">${self.getLastCommitHash()}</a>
+${self.getTime()}에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/${self.getLastCommitHash()}">${self.getLastCommitHash()}</a>
 
 <!--br/>RSS feeds for <a href="${bf.util.site_path_helper(bf.config.blog.path,'feed')}">Entries</a-->
 

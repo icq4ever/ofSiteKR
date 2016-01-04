@@ -6,9 +6,6 @@
 		<!-- OF video -->
 		<iframe src="http://player.vimeo.com/video/74124094?title=0&amp;byline=0&amp;portrait=0" width="700" height="393" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 	</p>
-
-
-
 </div>
 
 <div class="page-right-narrow">
@@ -19,10 +16,11 @@
         <p>가장 최신의 릴리즈(${bf.config.currentVersion})을 받으시고, openFrameworks를 구동하기 위한 셋업 가이드를 따라주시기 바랍니다.</p>
         
 	<h3><a href="documentation/">도큐먼트</a></h3>
-	<p>openFrameworks의 클래스, 함수, 애드온의 레퍼런스입니다. 또한 <a href="http://icq4ever.iptime.org/tutorials">튜토리얼</a>섹션을 살펴보실 수 있습니다.</p>
+	<p>openFrameworks의 클래스, 함수, 애드온의 레퍼런스입니다. 또한 <a href="http://openframeworks.kr/tutorials">튜토리얼</a>섹션을 살펴보실 수 있습니다.</p>
         
-	<h3><a href="http://forum.openframeworks.cc/">forum</a></h3>
+	<h3><a href="http://forum.openframeworks.cc/">포럼</a></h3>
 	<p>오픈프레임웍스로 활동하는 다른 사람들을 만나볼 수 있는 포럼입니다. 여기서 여러분의 작업을 공유하거나 문제를 해결을 찾을 수 있습니다.</p>
+    <p>오픈프레임웍스 한국어 포럼은 <a href="http://openframeworks-kr.slack.com/" target="_blank">이곳</a>입니다. 가입을 위해 <a href="slack-ofkr-auto-invite.herokuapp.com/" target="_blank">이 링크</a>를 사용해주시기 바랍니다.</p>
     </div>
 </div>
 
