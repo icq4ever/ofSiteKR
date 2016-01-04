@@ -194,6 +194,5 @@ This is a really useful [feature](http://gitready.com/beginner/2009/01/10/stashi
 <!-- If you ever have a question about how to do things in git, it is often best to enter your question on [Stack overflow](http://www.stackoverflow.com). Most probably someone there has had your problem before. For example, [How do I make git ignore mode changes?](http://stackoverflow.com/search?q=How+do+I+make+git+ignore+mode+changes) -->
 git을 어떻게 사용하는지 질문이 있으시다면, [스택오버플로우](http://www.stackoverflow.com)가 최선입니다. 같은 문제를 겪고있는 누군가가 아마도 이미 있을것입니다. 예를들면 이런겁니다. [How do I make git ignore mode changes?: 깃에서 ignore모드를 변경할려면 어떻게 해야하나요?](http://stackoverflow.com/search?q=How+do+I+make+git+ignore+mode+changes)
 
-There is also a great amount of articles, wiki pages, tutorials and blog posts about git, for example [git for the lazy](http://spheredev.org/wiki/Git_for_the_lazy) or [Git Immersion](http://library.edgecase.com/git_immersion/index.html).
-
+<!-- There is also a great amount of articles, wiki pages, tutorials and blog posts about git, for example [git for the lazy](http://spheredev.org/wiki/Git_for_the_lazy) or [Git Immersion](http://library.edgecase.com/git_immersion/index.html). -->
 기사, 위키페이지, 튜토리얼, 블로그 등에 git에 관한 방대한 자료들이 있습니다. [git for the lazy](http://spheredev.org/wiki/Git_for_the_lazy)나  [Git Immersion](http://library.edgecase.com/git_immersion/index.html) 가 그 예입니다.
