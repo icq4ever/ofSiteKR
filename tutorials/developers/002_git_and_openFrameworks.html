@@ -191,12 +191,12 @@
 
 <p>이미 저장소에 주가되어 있는 파일들의 경우, 무시되지 않음에 주의하시기 바랍니다.
 <!-- Also, once files are added to the repository, they become part of the history and are there to stay. This way, it's very easy to unnecessarily bloat your repository size because there's no easy way to purge erroneously added files from the repository (especially if you have already pushed your repo online). -->
-For these reasons, it's <strong>really important</strong> to be attentive when adding files to your repository.
+<!-- For these reasons, it's **really important** to be attentive when adding files to your repository. -->
 또한, 파일들이 한번이라도 저장소에 추가되면, 그것들은 히스토리에 기록되어 머물게 됩니다. 이런 경우 불필요하게 저장소의 크기가 늘어나기 쉬운데, 이는 저장소에 실수로 추가된 파일들을 쉽게 비우기 힘들기 때문입니다(특히 이미 온라인에 저장소를 동기화 시킨 경우에 말이죠). 이러한 이유로, 저장소에 파일을 추가할때에는 신중해야 하는것이 <strong>매우 중요합니다</strong>.</p>
 <!-- ### Git GUIs -->
 
 <h3 id="gui">GUI기반의 깃 툴들</h3>
-<p>If you don't want to use the command line, there is a number of visual git clients out there you can use.
+<p><!-- If you don't want to use the command line, there is a number of visual git clients out there you can use. -->
 <!-- Stackoverflow has a nice collection of candidates for <a href="http://stackoverflow.com/q/2141611/599884">Linux</a>, <a href="http://stackoverflow.com/questions/455698/best-visual-client-for-git-on-mac-os-x">MacOS</a> and <a href="http://stackoverflow.com/questions/157476/what-guis-exist-for-git-on-windows">Windows</a>. -->
 만약 명령어모드(command line)를 사용하고 싶지 않을경우에는, 다양한 그래픽 인터페이스 클라이언트를 사용할 수도 있습니다. Stackoverflow에 훌륭한 추천들이 있습니다. <a href="http://stackoverflow.com/q/2141611/599884">Linux</a>, <a href="http://stackoverflow.com/questions/455698/best-visual-client-for-git-on-mac-os-x">MacOS</a> and <a href="http://stackoverflow.com/questions/157476/what-guis-exist-for-git-on-windows">Windows</a>용을 확인해보세요.</p>
 <!-- ### Remotes: origin and upstream -->
@@ -214,8 +214,8 @@ For these reasons, it's <strong>really important</strong> to be attentive when a
 
 <h3 id="svn">깃, SVN에서 넘어오기</h3>
 <p><!-- If you come from SVN, and want to jump into git, things can be confusing. There are some resources on the web, one tutorial explaining the equivalent commands can be found <a href="http://git.or.cz/course/svn.html">here</a>. -->
-<!-- One thing to note is that a commit is much less serious in git, since it will remain in your local repository. In git, **"commit early, commit often"** is the key. -->
-여러분중에 SVN을 사용하다가 깃으로 전환하고 싶으신 분이 있으시다면, 약간 혼란스러울 수 있습니다. 웹상에 이와 관련하여 다양한 자료들이 있습니다. <a href="http://git.or.cz/course/svn.html">이곳</a>은 동일한 수행의 명령어 비교를 설명하는 튜토리얼입니다. 
+<!-- One thing to note is that a commit is much less serious in git, since it will remain in your local repository. In git, **"commit early, commit often"** is the key. --></p>
+<p>여러분중에 SVN을 사용하다가 깃으로 전환하고 싶으신 분이 있으시다면, 약간 혼란스러울 수 있습니다. 웹상에 이와 관련하여 다양한 자료들이 있습니다. <a href="http://git.or.cz/course/svn.html">이곳</a>은 동일한 수행의 명령어 비교를 설명하는 튜토리얼입니다. 
 힌트를 드리자면 커밋은 로컬 저장소에만 영향을 미치므로, 깃에서 훨씬 덜 심각(중요)하다는 것입니다.  깃에서는 <strong>빨리 커밋하고, 자주 커밋하라</strong>가 핵심입니다.</p>
 <!-- Another distinction is that you got your own repository is much more separate from a central repository. -->
 
@@ -225,16 +225,17 @@ For these reasons, it's <strong>really important</strong> to be attentive when a
 <!-- ### Pushing new branches to github -->
 
 <h3 id="github">새로운 가지를 github에 푸쉬 하기</h3>
-<p><!-- If you have some new work in a separate branch, and you want to push this to your github repository, you say -->
-만약 분리된 가지(branch)에서 새로운 작업을 했고, 그것을 github 저장소에 푸쉬하고 싶을때에는</p>
+<!-- If you have some new work in a separate branch, and you want to push this to your github repository, you say -->
+
+<p>만약 분리된 가지(branch)에서 새로운 작업을 했고, 그것을 github 저장소에 푸쉬하고 싶을때에는</p>
 <pre><code>git push origin new-work
 </code></pre>
 <p>라고 하시면 됩니다. (역자 주 : new-work는 분리된 가지(branch)의 이름입니다.)</p>
 <!-- ### Creating a local copy of a branch on a remote -->
 
-<h3 id="branch-remote">로컬상의 가지(branch)복사본을 remote에 생성하기</h3>
+<h3 id="remote-branch-local">remote상의 가지(branch)를 local에 복사하기</h3>
 <p>If you want to check out a branch on a repository, which does not yet exist in your local repository, you use
-만약 로컬 저장소에 존재하지 않는, 저장소의 branch로 체크아웃하고 싶다면</p>
+만약 로컬 저장소에 존재하지 않는, 저장소의 branch로 체크아웃하고 싶으시다면</p>
 <pre><code>git fetch origin
 git checkout --track origin/interesting-branch
 </code></pre>
@@ -261,9 +262,12 @@ git checkout --track origin/interesting-branch
 <!-- ## Solutions for commonly occurring problems -->
 
 <h2 id="_5">일반적으로 발생하는 문제점의 해결법들</h2>
-<p>There are certain problematic situations which you are probably going encounter when working with git.
-In what follows, some of these situations are identified and a solution method is identified.</p>
-<p>여러분이 깃으로 작업하면서 마주칠만한 문제가 발생할 상황들 몇몇 있습니다. 이러한 동일한 상황중에는 해결법도 동일합니다.</p>
+<!-- There are certain problematic situations which you are probably going encounter when working with git. -->
+
+<!-- In what follows, some of these situations are identified and a solution method is identified. -->
+
+<p>여러분이 깃으로 작업하면서 마주칠만한 문제가 발생할 상황들 몇몇 있습니다. 
+대부분의 이러한 문제들은 해결법이 동일합니다.</p>
 <!-- ### Pulling when you have uncommitted changes -->
 
 <h3 id="pulling">커밋되지 않은 변경을 pulling 할 경우</h3>
@@ -305,7 +309,8 @@ git stash pop
 <!-- If you ever have a question about how to do things in git, it is often best to enter your question on [Stack overflow](http://www.stackoverflow.com). Most probably someone there has had your problem before. For example, [How do I make git ignore mode changes?](http://stackoverflow.com/search?q=How+do+I+make+git+ignore+mode+changes) -->
 
 <p>git을 어떻게 사용하는지 질문이 있으시다면, <a href="http://www.stackoverflow.com">스택오버플로우</a>가 최선입니다. 같은 문제를 겪고있는 누군가가 아마도 이미 있을것입니다. 예를들면 이런겁니다. <a href="http://stackoverflow.com/search?q=How+do+I+make+git+ignore+mode+changes">How do I make git ignore mode changes?: 깃에서 ignore모드를 변경할려면 어떻게 해야하나요?</a></p>
-<p>There is also a great amount of articles, wiki pages, tutorials and blog posts about git, for example <a href="http://spheredev.org/wiki/Git_for_the_lazy">git for the lazy</a> or <a href="http://library.edgecase.com/git_immersion/index.html">Git Immersion</a>.</p>
+<!-- There is also a great amount of articles, wiki pages, tutorials and blog posts about git, for example [git for the lazy](http://spheredev.org/wiki/Git_for_the_lazy) or [Git Immersion](http://library.edgecase.com/git_immersion/index.html). -->
+
 <p>기사, 위키페이지, 튜토리얼, 블로그 등에 git에 관한 방대한 자료들이 있습니다. <a href="http://spheredev.org/wiki/Git_for_the_lazy">git for the lazy</a>나  <a href="http://library.edgecase.com/git_immersion/index.html">Git Immersion</a> 가 그 예입니다.</p>
 
     		</div>
@@ -319,13 +324,13 @@ git stash pop
 
 
   
-Monday, 04 January 2016 20:34:55 UTC
+Monday, 04 January 2016 20:52:31 UTC
 에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
 
-3e0221070fc26b1454b066320ad6d47a2c13a49d
+4a47a8218cd25d9fb6db738a2a2fa20e5db2f293
 ">
 
-3e0221070fc26b1454b066320ad6d47a2c13a49d
+4a47a8218cd25d9fb6db738a2a2fa20e5db2f293
 </a>
 
 <!--br/>RSS feeds for <a href="/feed">Entries</a-->
