@@ -70,7 +70,7 @@ author_site:
 <!-- Be aware that files which are already part of the repository are not ignored. -->
 이미 저장소에 주가되어 있는 파일들의 경우, 무시되지 않음에 주의하시기 바랍니다.
 <!-- Also, once files are added to the repository, they become part of the history and are there to stay. This way, it's very easy to unnecessarily bloat your repository size because there's no easy way to purge erroneously added files from the repository (especially if you have already pushed your repo online). -->
-For these reasons, it's **really important** to be attentive when adding files to your repository.
+<!-- For these reasons, it's **really important** to be attentive when adding files to your repository. -->
 또한, 파일들이 한번이라도 저장소에 추가되면, 그것들은 히스토리에 기록되어 머물게 됩니다. 이런 경우 불필요하게 저장소의 크기가 늘어나기 쉬운데, 이는 저장소에 실수로 추가된 파일들을 쉽게 비우기 힘들기 때문입니다(특히 이미 온라인에 저장소를 동기화 시킨 경우에 말이죠). 이러한 이유로, 저장소에 파일을 추가할때에는 신중해야 하는것이 **매우 중요합니다**.
 
 
