@@ -76,7 +76,7 @@ author_site:
 
 <!-- ### Git GUIs -->
 ### GUI기반의 깃 툴들
-If you don't want to use the command line, there is a number of visual git clients out there you can use.
+<!-- If you don't want to use the command line, there is a number of visual git clients out there you can use. -->
 <!-- Stackoverflow has a nice collection of candidates for [Linux](http://stackoverflow.com/q/2141611/599884), [MacOS](http://stackoverflow.com/questions/455698/best-visual-client-for-git-on-mac-os-x) and [Windows](http://stackoverflow.com/questions/157476/what-guis-exist-for-git-on-windows). -->
 만약 명령어모드(command line)를 사용하고 싶지 않을경우에는, 다양한 그래픽 인터페이스 클라이언트를 사용할 수도 있습니다. Stackoverflow에 훌륭한 추천들이 있습니다. [Linux](http://stackoverflow.com/q/2141611/599884), [MacOS](http://stackoverflow.com/questions/455698/best-visual-client-for-git-on-mac-os-x) and [Windows](http://stackoverflow.com/questions/157476/what-guis-exist-for-git-on-windows)용을 확인해보세요.
 
