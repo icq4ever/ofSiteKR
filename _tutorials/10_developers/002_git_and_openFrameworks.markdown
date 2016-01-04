@@ -114,7 +114,7 @@ author_site:
 라고 하시면 됩니다. (역자 주 : new-work는 분리된 가지(branch)의 이름입니다.)
 
 <!-- ### Creating a local copy of a branch on a remote -->
-### 로컬상의 가지(branch)복사본을 remote에 생성하기
+### remote상의 가지(branch)를 local에 복사하기 
 If you want to check out a branch on a repository, which does not yet exist in your local repository, you use
 만약 로컬 저장소에 존재하지 않는, 저장소의 branch로 체크아웃하고 싶으시다면
 
