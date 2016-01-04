@@ -104,7 +104,7 @@ author_site:
 <!-- Also, merging and branching are things which are central to how git works, so use it liberally. -->
 또한, 병합(merging)과 가지치기(branching)는 깃의 동작의 핵심이므로, 자유롭게 사용하시길 바랍니다.
 
-### 새로운 가지를 github에 푸쉬 하기
+### 새로운 가지를 github에 push하기
 
 만약 분리된 가지(branch)에서 새로운 작업을 했고, 그것을 github 저장소에 푸쉬하고 싶을때에는
 
