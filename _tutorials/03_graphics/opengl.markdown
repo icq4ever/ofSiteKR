@@ -1,7 +1,7 @@
 ---
 date: 2013/09/01 00:00:00
 title: OpenGL의 기초
-Summary: OF를 위한 OpenGL 소개
+summary: OF를 위한 OpenGL 소개
 author: [Joshua Noble](http://twitter.com/fctry2/)
 ---
 
