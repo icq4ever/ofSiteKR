@@ -96,7 +96,7 @@ author_site:
 <!-- If you come from SVN, and want to jump into git, things can be confusing. There are some resources on the web, one tutorial explaining the equivalent commands can be found [here](http://git.or.cz/course/svn.html). -->
 <!-- One thing to note is that a commit is much less serious in git, since it will remain in your local repository. In git, **"commit early, commit often"** is the key. -->
 
-여러분중에 SVN을 사용하다가 깃으로 전환하고 싶으신 분이 있으시다면, 약간 혼란스러울 수 있습니다. 웹상에 이와 관련하여 다양한 자료들이 있습니다. [이곳](http://git.or.cz/course/svn.html)은 동일한 수행의 명령어 비교를 설명하는 튜토리얼입니다. 
+여러분 중에 SVN을 사용하다가 깃으로 전환하고 싶으신 분이 있으시다면, 약간 혼란스러울 수 있습니다. 웹상에 이와 관련하여 다양한 자료들이 있습니다. [이곳](http://git.or.cz/course/svn.html)은 동일한 수행의 명령어 비교를 설명하는 튜토리얼입니다. 
 힌트를 드리자면 커밋은 로컬 저장소에만 영향을 미치므로, 깃에서 훨씬 덜 심각(중요)하다는 것입니다.  깃에서는 **빨리 커밋하고, 자주 커밋하라**가 핵심입니다.
 
 <!-- Another distinction is that you got your own repository is much more separate from a central repository. -->
@@ -104,17 +104,17 @@ author_site:
 <!-- Also, merging and branching are things which are central to how git works, so use it liberally. -->
 또한, 병합(merging)과 가지치기(branching)는 깃의 동작의 핵심이므로, 자유롭게 사용하시길 바랍니다.
 
-<!-- ### Pushing new branches to github -->
 ### 새로운 가지를 github에 푸쉬 하기
 
-<!-- If you have some new work in a separate branch, and you want to push this to your github repository, you say -->만약 분리된 가지(branch)에서 새로운 작업을 했고, 그것을 github 저장소에 푸쉬하고 싶을때에는
+만약 분리된 가지(branch)에서 새로운 작업을 했고, 그것을 github 저장소에 푸쉬하고 싶을때에는
 
 	git push origin new-work
 
 라고 하시면 됩니다. (역자 주 : new-work는 분리된 가지(branch)의 이름입니다.)
 
-<!-- ### Creating a local copy of a branch on a remote -->
+
 ### remote상의 가지(branch)를 local에 복사하기 
+
 If you want to check out a branch on a repository, which does not yet exist in your local repository, you use
 만약 로컬 저장소에 존재하지 않는, 저장소의 branch로 체크아웃하고 싶으시다면
 
