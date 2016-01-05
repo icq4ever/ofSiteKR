@@ -122,7 +122,7 @@ _field: value_ 로 작성된 필드를 수정하지 **마십시오**: 이부분�
 [github.com](https://github.com)에 가입하여 계정을 얻으세요! 
 
 <!-- ###Making Changes to the openFrameworks Documentation on Github -->
-#### Github에 있는 오픈프레임웍스 도큐먼트 수정하기
+#### Github에 있는 오픈프레임웍스 OF 도큐먼트 수정하기
 
 <!-- #### Step 1:  Find the Class -->
 #### 단계 1 : 클래스 찾기
@@ -526,5 +526,5 @@ pull request에 관한 더 자세한 사항은, Github에서 제공하는 [Using
 <!-- <small>Written by [David Newbury](https://twitter.com/workergnome) with help from [Bernardo Schorr](https://twitter.com/bernardoschorr) and [Chris Coleman](https://twitter.com/digitalcoleman).</small>   -->
 <small>본 튜토리얼은 [Bernardo Schorr](https://twitter.com/bernardoschorr)와 [Chris Coleman](https://twitter.com/digitalcoleman)의 도움을 받아 [David Newbury](https://twitter.com/workergnome)의해 작성되었습니다.</small>
 <!-- <small>The initial version was written at the [openFrameworks/RaspberryPI workshop](http://studioforcreativeinquiry.org/events/creative-coding-on-the-raspberry-pi-with-openframeworks) at the [Frank-Ratchye STUDIO for Creative Inquiry](http://studioforcreativeinquiry.org), October 11-13, 2013.</small> -->
-<small>본 튜토리얼의 초기버전은 [Frank-Ratchye STUDIO for Creative Inquiry](http://studioforcreativeinquiry.org)에서 2013년 10월 11-13일에 열린 [오픈프레임웍스/라즈베리파이 워크샵](http://studioforcreativeinquiry.org/events/creative-coding-on-the-raspberry-pi-with-openframeworks)에서 작성되었습니다.</small>
+<br/><small>본 튜토리얼의 초기버전은 [Frank-Ratchye STUDIO for Creative Inquiry](http://studioforcreativeinquiry.org)에서 2013년 10월 11-13일에 열린 [오픈프레임웍스/라즈베리파이 워크샵](http://studioforcreativeinquiry.org/events/creative-coding-on-the-raspberry-pi-with-openframeworks)에서 작성되었습니다.</small>
 
