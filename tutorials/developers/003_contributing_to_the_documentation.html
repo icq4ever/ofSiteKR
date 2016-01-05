@@ -120,21 +120,34 @@
                 <li><a href="/documentation">레퍼런스</a></li>
                 <li><a href="/tutorials">튜토리얼</a></li>
             </ul-->
-    	    <h1>Contributing to the Documentation</h1>
+    	    <h1>도큐먼트작성에 공헌하기</h1>
     	    <span class="article_meta">2013/10/21 7:40:00&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="http://workergnome.com">David Newbury</a></span><br/>
     	    <div class="article">
     	    
-  <p>The openFrameworks documentation is a community effort, and we'd love for people to contribute missing documentation, fix typos, add examples, and generally make it a better representation of the community.   If you're interested in helping or if you're frustrated by something, there are two ways to contribute by modifying the documentation.   There's the Easy Way, and the Hard Way.</p>
-<p>First, a bit about the structure and formatting of the documentation.</p>
-<h2 id="documentation-structure-and-formatting">Documentation Structure and Formatting</h2>
-<p>The documentation of the OF site is contained in a set of <a href="http://daringfireball.net/projects/markdown/syntax">.markdown</a> files on the <a href="https://github.com/openframeworks/ofSite/">openFrameworks ofSite Github</a>.  The documentation for each class is contained in a single .markdown file containing all the methods and variables of that class named after the class.  They're contained in a directory structure that mirrors both the documentation website and the openFrameworks class structure.</p>
-<p>For instance, if you're looking for the <code>ofMesh</code> documentation, it would be at:</p>
+  <!-- The openFrameworks documentation is a community effort, and we'd love for people to contribute missing documentation, fix typos, add examples, and generally make it a better representation of the community.   If you're interested in helping or if you're frustrated by something, there are two ways to contribute by modifying the documentation.   There's the Easy Way, and the Hard Way. -->
+
+<p>오픈프레임웍스 도큐먼트는 커뮤니티의 노력에 의해 만들어졌으며, 많은 사람들이 참여하여 부족한 오타를 수정하거나, 예제를 추가하여 토큐먼트를 완성해 나가기를 고대하고 있습니다. 이런 도움을 주는데 관심이 있으시더나 뭔가에 대해서 힘들하신다면, 토큐먼트를 수정하는데 공한할 수 있는 두가지 방법이 있습니다. 하나는 쉬운 방법이고, 다른것은 좀 어려운 방법입니다.
+<!-- First, a bit about the structure and formatting of the documentation. -->
+우선, 토큐먼트의 구조와 포맷에 대해 잠깐 살펴봅시다.</p>
+<!-- ## Documentation Structure and Formatting -->
+
+<h2 id="_1">토큐먼트의 구조와 포맷팅</h2>
+<!-- The documentation of the OF site is contained in a set of [.markdown](http://daringfireball.net/projects/markdown/syntax) files on the [openFrameworks ofSite Github](https://github.com/openframeworks/ofSite/).  The documentation for each class is contained in a single .markdown file containing all the methods and variables of that class named after the class.  They're contained in a directory structure that mirrors both the documentation website and the openFrameworks class structure. -->
+
+<p>오픈프레임웍스 사이트의 토큐먼트는 <a href="http://daringfireball.net/projects/markdown/syntax">.markdown</a>파일들로 작성되어 <a href="https://github.com/openframeworks/ofSite/">openFrameworks ofSite Github</a>에 저장되어있습니다. 각 클래스의 도큐먼트는 해당 클래스이름으로 된 .markdown파일로 작성되어 있으며, 안에는 해당 클래스의 모든 메소드와 변수들이 담겨있죠. 도큐먼트 웹사이트의 폴더구조는 오픈프레임웍스 클래스 구조와 동일하게 되어있습니다.</p>
+<!-- For instance, if you're looking for the ``ofMesh`` documentation, it would be at: -->
+
+<p>예를들어, <code>ofMesh</code> 도큐먼트를 살펴보면 아래와 같습니다:</p>
 <pre><code>_documentation/3d/ofMesh.markdown
 </code></pre>
-<p>For reasons lost to the mists of time, the functions of the class are in their own file:</p>
+<!-- For reasons lost to the mists of time, the functions of the class are in their own file: -->
+
+<p>헤매지 않도록, 플래스의 함수들은 자신만의 파일에 작성되어있습니다.</p>
 <pre><code>_documentation/3d/ofMesh_functions.markdown
 </code></pre>
-<p>The documentation files are formatted in a modified version of the <a href="http://daringfireball.net/projects/markdown/syntax">markdown syntax</a> with the following structure:</p>
+<!-- The documentation files are formatted in a modified version of the [markdown syntax](http://daringfireball.net/projects/markdown/syntax) with the following structure: -->
+
+<p>도큐먼트 문서는 약간 수정된 <a href="http://daringfireball.net/projects/markdown/syntax">마크다운(markdown) 문법</a>으로 작성되어있으며, 아래의 구조를 따릅니다:</p>
 <pre><code># class ofClass
 
 ## Description
@@ -159,16 +172,25 @@ _description: _
 
 </code></pre>
 
-<p>When editing, only add documentation in the spaces after <code>##Description</code> or <code>_description: _</code>:  All of the other lines are auto-generated and used in the build scripts that construct the site.<br />
-</p>
-<p>Links are added using normal markdown format:</p>
-<pre><code>[Link Title](http://google.com "alt text")
+<!-- When editing, only add documentation in the spaces after ``##Description`` or ``_description: _``:  All of the other lines are auto-generated and used in the build scripts that construct the site.   -->
+
+<p>편집을 할때에는, <code>##Description</code>이나 <code>_description: _</code>의 뒷부분에 작성해야합니다: 다른 모든 라인들은 자동으로 생성되며, 사이트 내의 빌드 스크립트로 생성될 때 사용됩니다.</p>
+<!-- Links are added using normal markdown format: -->
+
+<p>링크를 걸때는 일반적인 마크다운 문법을 사용합니다:</p>
+<pre><code>[링크제목](http://google.com "대체 텍스트")
 </code></pre>
-<p>Images are added using normal markdown format:</p>
-<pre><code>![Image Title](filename.png "alt text")
+<!-- Images are added using normal markdown format: -->
+
+<p>이미지도 일반적인 마크다운 문법을 사용합니다:</p>
+<pre><code>![이미지제목](filename.png "대체 텍스트")
 </code></pre>
-<p>The largest formatting exception from standard markdown is the code block syntax. Rather than using the standard indentation method,  code blocks are marked with four tildes followed by curly braces with ".cpp" inside.   A block is also ended with four tildes.</p>
-<p>For example:</p>
+<!-- The largest formatting exception from standard markdown is the code block syntax. Rather than using the standard indentation method,  code blocks are marked with four tildes followed by curly braces with ".cpp" inside.   A block is also ended with four tildes. -->
+
+<p>일반적인 표준 마크다운 문법과 가장 큰 차이를 보이는 곳은 코드 블럭 작성입니다. 표준 들여쓰기 방법 대신, 코드블럭은 내게의 틸드(~)와 괄호로 묶인 ".cpp"로 시작됩니다. 블럭이 끝날때 역시 네개의 틸드를 사용합니다.</p>
+<!-- For example: -->
+
+<p>예를 들면 다음과 같습니다:</p>
 <pre><code>~~~~{.cpp}
 
 // Get the area of that rectangle
@@ -177,222 +199,429 @@ float areaValue = myRect.getArea();
 // areaValue will be 20000.0.
 ~~~~
 </code></pre>
-<p>Everything between the tildes will be formatted and highlighted as C++ code.</p>
-<h4 id="things-not-to-do">Things Not to Do:</h4>
-<p><strong>DON'T</strong> add headers to your description, using the <code>### I'm A Header</code> syntax: headers are used to separate individual functions during the build process, and you'll break the site. </p>
-<p><strong>DON'T</strong> add new functions or variables to the documents: they will be autogenerated every time openFrameworks releases a new version.<br />
-</p>
-<p><strong>DON'T</strong> modify fields that are marked with <em>field: value</em>: they are flags used in building the site.</p>
-<hr />
-<h2 id="how-to-modify-the-openframeworks-documentation-the-easy-way">How to Modify the openFrameworks documentation, The Easy Way:</h2>
-<p>Much like the <a href="https://github.com/openframeworks/openFrameworks">openFrameworks</a> project, the <a href="http://www.openframeworks.cc/">openFrameworks Website</a> is on <a href="https://github.com/openframeworks/ofSite">Github</a>.  Github is a website, and it's also a massive online code repository built around the distributed version control system <a href="http://git-scm.com">git</a>.  Github is extremely open-source friendly and is a where an increasingly large amount of the world's open-source software is kept, modified, and updated.</p>
-<p>Anybody can submit <a href="https://help.github.com/articles/using-pull-requests">pull requests</a> through Github to update the website.   If you're interested in changing something but aren't really sure how git works, Github has made it really easy to modify text files directly from their website.  All you need is a Github account, which is free for open-source projects, and for people working with open-source.<br />
-</p>
-<p>Getting an account is easy—just go to <a href="https://github.com">github.com</a> and sign up!</p>
-<h3 id="making-changes-to-the-openframeworks-documentation-on-github">Making Changes to the openFrameworks Documentation on Github</h3>
-<h4 id="step-1-find-the-class">Step 1:  Find the Class</h4>
-<p>Within the <a href="http://www.openframeworks.cc/documentation/"> openFrameworks documentation</a>, at the top of every class's page, there are two buttons on the top of the page for "Edit Class" and/or "Edit Functions":</p>
+<!-- Everything between the tildes will be formatted and highlighted as C++ code. -->
+
+<p>틸드 사이의 모든것은 C++코드로 구문 하이라이트 되어 보여집니다.</p>
+<!-- ####Things Not to Do: -->
+
+<h4 id="_2">하지 말아야 할 것들:</h4>
+<!-- **DON'T** add headers to your description, using the ``### I'm A Header`` syntax: headers are used to separate individual functions during the build process, and you'll break the site.  -->
+
+<p><code>### 이것은 헤더입니다</code>문법을 사용하여 설명에 헤더를 추가하지 <strong>마십시오</strong> : 헤더는 개별적인 함수들을 구별하는데 사용되므로, 사이트를 빌드할 때에 사이트를 망가뜨리게 됩니다.</p>
+<!-- **DON'T** add new functions or variables to the documents: they will be autogenerated every time openFrameworks releases a new version.   -->
+
+<p>도큐먼트에 새로운 함수를 작성하지 <strong>마십시오</strong>: 오픈프레임웍스의 새 버젼이 릴리즈될 때마다 자동으로 생성됩니다.</p>
+<!-- **DON'T** modify fields that are marked with _field: value_: they are flags used in building the site. -->
+
+<h2 id="field-value"><em>field: value</em> 로 작성된 필드를 수정하지 <strong>마십시오</strong>: 이부분은 사이트를 빌드할때 사용되는 플래그입니다.</h2>
+<!-- ## How to Modify the openFrameworks documentation, The Easy Way: -->
+
+<h2 id="_3">오픈프레임웍스 도큐먼트를 수정하는, 쉬운방법 :</h2>
+<!-- Much like the [openFrameworks](https://github.com/openframeworks/openFrameworks) project, the [openFrameworks Website](http://www.openframeworks.cc/) is on [Github](https://github.com/openframeworks/ofSite).  Github is a website, and it's also a massive online code repository built around the distributed version control system [git](http://git-scm.com).  Github is extremely open-source friendly and is a where an increasingly large amount of the world's open-source software is kept, modified, and updated. -->
+
+<p><a href="https://github.com/openframeworks/openFrameworks">오픈프레임웍스</a> 프로젝트와 마찬가지로, <a href="http://www.openframeworks.cc/">오픈프레임웍스 웹사이트</a>역시 <a href="https://github.com/openframeworks/ofSite">Github</a>에 저장되어있습니다. Github는 웹사이트로, <a href="http://git-scm.com">깃</a>시스템을 사용하는 거대한 분산 버전관리 온라인 코드 저장소입니다. Github는 오픈소스친화적이며, 이곳에 점점 많은 오픈소스 소프트웨어들이 저장, 수정, 업데이트되고 있습니다.</p>
+<!-- Anybody can submit [pull requests](https://help.github.com/articles/using-pull-requests) through Github to update the website.   If you're interested in changing something but aren't really sure how git works, Github has made it really easy to modify text files directly from their website.  All you need is a Github account, which is free for open-source projects, and for people working with open-source.   -->
+
+<p>누구든지 Github를 통해 <a href="https://help.github.com/articles/using-pull-requests">pull requests</a>를 하여 웹사이트를 업데이트 할 수 있습니다. 여러분이 뭔갈 바꾸고 싶으나 깃의 동작법에 대해서 잘 모른다 하더라도, Github은 웹 페이지에서 아주 쉽게 텍스트파일을 수정할 수 있는 방법을 제공하고 있습니다. Github계정을 만들기만 하면 말이죠. 이 계정이 있으면 무료로 오픈소스 프로젝트를 운영하거나, 사람들과 함께 오픈소스프로젝트를 진행 할 수 있습니다.</p>
+<!-- Getting an account is easy—just go to [github.com](https://github.com) and sign up! -->
+
+<p><a href="https://github.com">github.com</a>에 가입하여 계정을 얻으세요! </p>
+<!-- ###Making Changes to the openFrameworks Documentation on Github -->
+
+<h4 id="github">Github에 있는 오픈프레임웍스 도큐먼트 수정하기</h4>
+<!-- #### Step 1:  Find the Class -->
+
+<h4 id="1">단계 1 : 클래스 찾기</h4>
+<!-- Within the [openFrameworks documentation](http://www.openframeworks.cc/documentation/), at the top of every class's page, there are two buttons on the top of the page for "Edit Class" and/or "Edit Functions": -->
+
+<p><a href="http://www.openframeworks.cc/documentation/">오픈프레임웍스 도큐먼트 페이지</a>에서, 클래스의 매 페이지 상단에 보면, 두 개의 버튼이 있을겁니다. "Edit Clas" 그리고/혹은 "Edit Functions"입니다:</p>
 <p><img alt="" src="003_images/editclass.png" /></p>
-<p>If you click either of these buttons, you'll be taken to a page on github with a text area containing the entire documentation for that class or set of functions.  It will look something like this:</p>
+<!-- If you click either of these buttons, you'll be taken to a page on github with a text area containing the entire documentation for that class or set of functions.  It will look something like this: -->
+
+<p>두 버튼중 하나를 클릭하면, github의 문서 전체의 내용이 담긴 텍스트 편집창으로 이동할것입니다. 이 텍스트들은 클래스 혹은 함수들의 세트입니다. 아마도 이렇게 보일것입니다:</p>
 <p><img alt="" src="003_images/editscreen.png" /></p>
-<h4 id="step-2-edit-the-documentation">Step 2:  Edit the Documentation</h4>
-<p>Within that block of text, you'll find the method, variable, or function that you're interested in editing.  Directly edit the text.  When you've made your changes, you can propose the edit using the box below the text:</p>
+<!-- #### Step 2:  Edit the Documentation -->
+
+<h4 id="2">단계 2: 문서 편집하기</h4>
+<!-- Within that block of text, you'll find the method, variable, or function that you're interested in editing.  Directly edit the text.  When you've made your changes, you can propose the edit using the box below the text: -->
+
+<p>텍스트의 블록에서, 편집하고 싶은 메소드, 편수, 함수를 찾습니다. 텍스트를 바로 편집하세요. 편집이 완료되었다면, 텍스트박스 하단에서 편집을 완료할 수 있습니다.</p>
 <p><img alt="" src="003_images/edit_save.png" /></p>
-<p>Write a summary and an optional brief description of the changes you made, and click the "Propose File Change" button.</p>
-<h4 id="step-3-review-your-change">Step 3:  Review your Change</h4>
-<p>You'll end up on the following page, which will let you review your changes:</p>
+<!-- Write a summary and an optional brief description of the changes you made, and click the "Propose File Change" button. -->
+
+<p>여러분이 변형한 내용들에 대해서 간단한 설명이나 요약을 덧붙일 수 있습니다. "Propose File Change"버튼을 클릭하시면 됩니다.</p>
+<!-- #### Step 3:  Review your Change -->
+
+<h4 id="3">단계 3: 변경 리뷰하기</h4>
+<!-- You'll end up on the following page, which will let you review your changes: -->
+
+<p>과정이 완료되고 나면, 변경된 내용을 리뷰할 수 있습니다:</p>
 <p><img alt="" src="003_images/review.png" /></p>
-<p>Below that will be a list of all of the lines of text that you've changed.   It's a good practice to go through the changes and make sure that you didn't accidentally delete something and that your changes are what you thought they were.  If you'd like to write a message to the person who will be reviewing your changes, you can do that, too.</p>
-<p>When you're comfortable with your changes, press the "Send Pull Request" button.  This will submit a pull request for review.  It will end up in the list of pull requests on the site, to be approved by an administrator and pushed to the site.   This usually happens pretty quickly, but this is a volunteer team, and sometimes it takes a couple days.  Be patient—Github will send you an email when your change is merged into the site.</p>
-<p>Congrats!  You've just modified the openFrameworks documentation, contributed to the community, and made some future person's life better. Wasn't that easy?</p>
+<!-- Below that will be a list of all of the lines of text that you've changed.   It's a good practice to go through the changes and make sure that you didn't accidentally delete something and that your changes are what you thought they were.  If you'd like to write a message to the person who will be reviewing your changes, you can do that, too. -->
+
+<p>아레에 보시면 변경된 텍스트들의 모든 내용이 있습니다. 변경한 내용들을 쭉 훑어보면서 실수로 삭제했거나 잘못 작성한 곳이 있는지 확인해보세요. 여러분의 코드를 리뷰한
+사람에게 메시지를 보내고 싶다면 그것도 가능합니다. </p>
+<!-- When you're comfortable with your changes, press the "Send Pull Request" button.  This will submit a pull request for review.  It will end up in the list of pull requests on the site, to be approved by an administrator and pushed to the site.   This usually happens pretty quickly, but this is a volunteer team, and sometimes it takes a couple days.  Be patient—Github will send you an email when your change is merged into the site. -->
+
+<p>변경된 내용이 맘에 든다면, "Send Pull Request"버튼을 클릭하세요. 리뷰된 내용은 pull request 되어 submit될 것입니다. pull request 리스트에 등록되고, 추후 관리자에 의해 승인되어, 사이트에 반영될것입니다.이 과정들은 보통 순식간에 벌어지지만, 지원자 팀이므로 가끔은 며칠이 소요될 수 있습니다. 기다리시면 변경된 내용이 사이트에 merge되었다는 이메일을 Github에서 받으실 수 있습니다. </p>
+<!-- Congrats!  You've just modified the openFrameworks documentation, contributed to the community, and made some future person's life better. Wasn't that easy? -->
+
+<p>축하드립니다! 오픈프레임웍스 토큐먼트 페이지를 수정했군요. 커뮤니티에 공헌도 했고, 미래의 사람들의 인생을 더 낫게 했습니다. 아주 쉽죠?</p>
 <hr />
-<h2 id="how-to-modify-the-openframeworks-documentation-the-hard-way">How to Modify the openFrameworks documentation, The Hard Way:</h2>
-<p>Directly editing the documentation on Github is a great way to make improvements, but it does have its limits.  It's not easy to add images to the documentation and its not easy to see how your work will look when it is on the actual site.  In order to do those things, you'll need a copy of the ofSite that runs locally on your computer.</p>
-<p>If you know what you're doing, skip to the bottom of the section for the TL;DR version of the instructions.</p>
-<h2 id="step-1-install-requirements">Step 1:  Install Requirements</h2>
-<p>Installing the requirements for the site requires different steps on different operating systems.  Currently we have instructions for OS X and Linux.</p>
-<h3 id="installing-requirements-on-os-x">Installing Requirements on OS X</h3>
-<h3 id="step-11-install-python">Step 1.1:  Install Python</h3>
-<p><a href="http://www.python.org/">Python</a> is a programming language used to build and compile the ofSite website.  Most OS X machines have a copy of python, but you'll need to check if yours is one of them.The easiest way to check is to open a terminal window and type:</p>
+<!-- ## How to Modify the openFrameworks documentation, The Hard Way: -->
+
+<h2 id="_4">오픈프레임웍스 토큐먼트를 수정하는, 어려운 방법:</h2>
+<!-- Directly editing the documentation on Github is a great way to make improvements, but it does have its limits.  It's not easy to add images to the documentation and its not easy to see how your work will look when it is on the actual site.  In order to do those things, you'll need a copy of the ofSite that runs locally on your computer. -->
+
+<p>Github의 도큐먼트를 직접 수정하는것이 훌륭하지만, 나름의 한계가 있습니다. 이미지를 토큐먼트에 추가할 수 없고 , 실제 사이트에 반영되었을 때 어떻게 보일지 알수 없죠. 이런것들이 가능할려면, 여러분의 컴퓨터에 로컬상으로 복사본을 받아 구동해야 합니다.</p>
+<!-- If you know what you're doing, skip to the bottom of the section for the TL;DR version of the instructions. -->
+
+<p>어떻게 하는지 이미 알고 있다면, 맨 하단 섹션 요약 설명으로 넘어가시기 바랍니다.</p>
+<!-- ## Step 1:  Install Requirements -->
+
+<h2 id="1_1">단계 1: 요구사항 설치</h2>
+<!-- Installing the requirements for the site requires different steps on different operating systems.  Currently we have instructions for OS X and Linux. -->
+
+<p>사이트 구동을 위해 설치해야할 필요 요구사항은 운영체제에 따라 다릅니다. 현재는 OS X와 리눅스만 제공됩니다.</p>
+<!-- ### Installing Requirements on OS X  -->
+
+<h3 id="os-x">OS X 에 요구사항 설치</h3>
+<!-- ### Step 1.1:  Install Python -->
+
+<h3 id="11">단계 1.1 : 파이썬 설치</h3>
+<!-- [Python](http://www.python.org/) is a programming language used to build and compile the ofSite website.  Most OS X machines have a copy of python, but you'll need to check if yours is one of them.The easiest way to check is to open a terminal window and type: -->
+
+<p><a href="http://www.python.org/">Python</a>은 프로그래밍 언어로 ofSite 웹사이트를 빌드하고 컴파일하는데 사용됩니다. 대부분의 OS X머신들은 파이썬을 가지고 있지만, 여러분의 컴퓨터에 설치가 되어있는지 확인해야합니다. 가장 쉬운 방법은 터미널 윈도우를 띄워 아래와 같이 명령어를 사용하는 것입니다:</p>
 <pre><code>python --version
 </code></pre>
-<p>If you <strong>DO</strong> have python installed, you should see <code>Python 2.7.5</code>.  The number might be different, but any number greater than 2.7 is fine.  Congrats!  You're well on your way.  Skip to <strong>Step 1.4</strong>.</p>
-<p>If you <strong>DON'T</strong> have python installed, you should see <code>python: command not found</code>.  Follow the next couple steps.</p>
-<h4 id="step-12-install-homebrew">Step 1.2:  Install Homebrew.</h4>
-<p><a href="http://brew.sh">Homebrew</a> is a package manager for OSX.   It allows you to simply install applications onto OSX from the command line.</p>
-<p>Again, to determine if you have brew, type into your terminal:</p>
+<!-- If you **DO** have python installed, you should see ``Python 2.7.5``.  The number might be different, but any number greater than 2.7 is fine.  Congrats!  You're well on your way.  Skip to **Step 1.4**. -->
+
+<p>만약 이미 파이썬이 <strong>설치되어 있다면</strong>, <code>Python 2.7.5</code>라고 보일것입니다. 숫자는 아마도 다를 수 있으나, 2.7보다 크다면 상관없습니다. 
+축하드립니다! 바로 진행하시면 되겠네요. <strong>단계 1.4</strong>로 넘어가세요.</p>
+<!-- If you **DON'T** have python installed, you should see ``python: command not found``.  Follow the next couple steps. -->
+
+<p>만약 파이썬이 <strong>설치되어 있지 않다면</strong>, <code>python: command not found</code>라는 결과가 보일것입니다. 다음의 단계들을 따라주시기 바랍니다.</p>
+<!-- #### Step 1.2:  Install Homebrew. -->
+
+<h4 id="12-homebrew">단계 1.2: Homebrew 설치하기</h4>
+<!-- [Homebrew](http://brew.sh) is a package manager for OSX.   It allows you to simply install applications onto OSX from the command line. -->
+
+<p><a href="http://brew.sh">Homebrew</a>는 OSX를 위한 패키지 매니저입니다. 커맨드라인에서 OSX용 어플리케이션을 쉽게 설치할 수 있게 해줍니다.
+<!-- Again, to determine if you have brew, type into your terminal: -->
+마찬가지로, brew가 설치되었는지 확인하려면, 터미널에 아래와 같이 입력합니다:</p>
 <pre><code>brew -v
 </code></pre>
-<p>If you <strong>DO</strong> have Homebrew installed, you should see <code>Homebrew 0.9.4</code>.  The number might be different, but any number greater than 0.9 is fine.   Go onto <strong>Step 1.3</strong>.<br />
-</p>
-<p>If you <strong>DON'T</strong> have homebrew installed, you should see <code>brew: command not found</code>. You can install it using a script found at the <a href="http://brew.sh">homebrew website</a>.  Near the bottom of the page, there will be installation instructions: it will be a script that looks something like:</p>
+<!-- If you **DO** have Homebrew installed, you should see ``Homebrew 0.9.4``.  The number might be different, but any number greater than 0.9 is fine.   Go onto **Step 1.3**.   -->
+
+<p>만약 Homebrew가 <strong>설치되어 있다면</strong>, <code>Homebrew 0.9.4</code>라고 보일것입니다.  숫자는 아마도 다를수 있으나, 0.9보타 크다면 상관없습니다. <strong>단계 1.3</strong>으로 넘어가세요.</p>
+<!-- If you **DON'T** have homebrew installed, you should see ``brew: command not found``. You can install it using a script found at the [homebrew website](http://brew.sh).  Near the bottom of the page, there will be installation instructions: it will be a script that looks something like: -->
+
+<p>만약 Homebrew가 <strong>설치되어있지 않다면</strong>, <code>brew: command not found</code>가 보일것입니다. 이럴 경우 <a href="http://brew.sh">homebrew website</a>에서 소개하는대로 스크립트를 사용하여 설치하면 됩니다. 페이지의 하단 부근에 보시면, 설치방법이 있습니다. 스크립트는 아래와 같을 것입니다:</p>
 <pre><code>ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 </code></pre>
-<p>Copy that script and paste in into your terminal.  It will ask for your password, lots of text will scroll, and it will install.  It might ask you to run</p>
+<!-- Copy that script and paste in into your terminal.  It will ask for your password, lots of text will scroll, and it will install.  It might ask you to run -->
+
+<p>스크립트를 복사해서 터미널에 붙여넣고 실행해보십시오. 패스워드를 물어볼 것이며, 많은 텍스트들이 출력될것입니다. 설치되는 과정입니다. 마치작에 아마도 아래에 보이는 명령어를 실행하라고 물어볼것입니다.</p>
 <pre><code>brew doctor
 </code></pre>
-<p>at the end, which is a good idea, and will give you instructions on what to do next that are specific to your computer.</p>
-<h4 id="step-13-actually-install-python">Step 1.3:  Actually Install Python</h4>
-<p>Type into your terminal:</p>
+<!-- at the end, which is a good idea, and will give you instructions on what to do next that are specific to your computer. -->
+
+<p>그리고 다음으로 컴퓨터에서 정확히 뭘 할것인지 설명을 제공해 줄것입니다.</p>
+<!-- #### Step 1.3:  Actually Install Python -->
+
+<h4 id="13">단계 1.3: 파이선을 실제로 설치하기</h4>
+<!-- Type into your terminal: -->
+
+<p>터미널에 아래와 같이 입력합니다:</p>
 <pre><code>brew install python
 </code></pre>
-<p>This should install python.  You're well on your way.</p>
-<h3 id="step-14-install-blogofile">Step 1.4:  Install blogofile</h3>
-<p>Now you'll need to actually install the <a href="http://www.blogofile.com/">blogofile</a> software, which is the blogging framework the openFrameworks website is built with.  The easiest way to do this is with the <a href="http://peak.telecommunity.com/DevCenter/EasyInstall">easy_install</a> software, which comes as part of Python, to install blogofile onto your local machine.<br />
-</p>
-<p>Copy and paste the the following two lines into your terminal:</p>
+<!-- This should install python.  You're well on your way. -->
+
+<p>파이썬이 설치될 것입니다. 잘 하고 계십니다.</p>
+<!-- ### Step 1.4:  Install blogofile -->
+
+<h3 id="14-logofile">단계 1.4: logofile 설치하기</h3>
+<!-- Now you'll need to actually install the [blogofile](http://www.blogofile.com/) software, which is the blogging framework the openFrameworks website is built with.  The easiest way to do this is with the [easy_install](http://peak.telecommunity.com/DevCenter/EasyInstall) software, which comes as part of Python, to install blogofile onto your local machine.   -->
+
+<p>이제 실제로 <a href="http://www.blogofile.com/">blogofile</a>을 설치할 것입니다. blogofile은 블로그 프레임워크로, 오픈프레임웍스 웹사이트는 이것으로 빌드되었습니다. 쉽게 신스톨할려면 <a href="http://peak.telecommunity.com/DevCenter/EasyInstall">easy_install</a>을 사용하는것입니다. 이는 파이썬의 일부로, blogofile을 설치할 때 사용할 수 있습니다.</p>
+<!-- Copy and paste the the following two lines into your terminal: -->
+
+<p>아래의 두줄을 차례로 복사하여 터미널에 붙여넣으십시오:</p>
 <pre><code>sudo easy_install lxml 
 sudo easy_install blogofile
 </code></pre>
-<p>This may prompt you for your password—or it may not, depending on how recently you've used <code>sudo</code>. </p>
+<!-- This may prompt you for your password—or it may not, depending on how recently you've used ``sudo``.  -->
+
+<p>최근 <code>sudo</code>를 사용했느냐 따라서 패스워드를 물어볼 수도 있습니다.</p>
 <h3 id="step-15-install-git">Step 1.5: Install Git</h3>
-<p><a href="http://git-scm.com/">Git</a> is a distributed version control system used by openFrameworks and most of the open source world.  It's an essential tool for working with code, and a deep topic well worth learning.</p>
-<p>Almost all OS X machines have a copy of Git at this point: you can make sure by typing into your terminal:</p>
+<h3 id="15">단계 1.5 : 깃 설치하기</h3>
+<!-- [Git](http://git-scm.com/) is a distributed version control system used by openFrameworks and most of the open source world.  It's an essential tool for working with code, and a deep topic well worth learning. -->
+
+<p><a href="http://git-scm.com/">깃</a>은 분산 버전관리 시스템으로, 오픈프레임웍스 뿐만 아니라 오픈소스의 대부분이 사용하는 것입니다. 코드작업을 할때에 핵심이자, 배워둘만한 가치가 있는 심오한 분야입니다.</p>
+<!-- Almost all OS X machines have a copy of Git at this point: you can make sure by typing into your terminal: -->
+
+<p>현재 대부분의 OS X 컴퓨터는 이미 깃을 가지고 있을것입니다: 혹시 모르니 터미널에 아래의 명령어를 입력하여 확인해봅시다:</p>
 <pre><code>git --version
 </code></pre>
-<p>if you <strong>DO</strong> have git, you should see something like:  <code>git version 1.7.12.4 (Apple Git-37)</code>. Skip to <strong>Step 2</strong>!<br />
-</p>
-<p>If you <strong>DON'T</strong> have git, you should see <code>git: command not found</code>.  You'll need to install git, which you can get from the <a href="http://git-scm.com/download">Git website</a>.<br />
-</p>
-<h3 id="installing-requirements-on-linux">Installing Requirements on Linux</h3>
-<h3 id="step-11-install-blogofile">Step 1.1: Install blogofile</h3>
-<p>Blogofile is the tool we use to generate the openFramworks site, to install it under linux you'll need a python tool called pip, most probably you'll have it already installed in the system, but in case it's not you can install it with:</p>
+<!-- if you **DO** have git, you should see something like:  ``git version 1.7.12.4 (Apple Git-37)``. Skip to **Step 2**!   -->
+
+<p>깃이 <strong>설치되어 있다면</strong>, <code>git version 1.7.12.4(Apple Git-37)</code>이라고 보일것입니다. <strong>단계 2</strong>로 넘어가세요!
+<!-- If you **DON'T** have git, you should see <code>git: command not found</code>.  You'll need to install git, which you can get from the <a href="http://git-scm.com/download">Git website</a>.   -->
+만약 깃이 <strong>설치되어 있지 않다면</strong>, <code>git: command not found</code>라 보일것입니다. <a href="http://git-scm.com/download">Git website</a>로 가서 깃을 설치해야 합니다.</p>
+<!-- ### Installing Requirements on Linux  -->
+
+<h3 id="_5">리눅스에서 요구 사항 설치</h3>
+<!-- ### Step 1.1: Install blogofile -->
+
+<h3 id="11-blogofile">단계 1.1: blogofile 설치</h3>
+<!-- Blogofile is the tool we use to generate the openFramworks site, to install it under linux you'll need a python tool called pip, most probably you'll have it already installed in the system, but in case it's not you can install it with: -->
+
+<p>Blogofile은 오픈프레임웍스를 생성하는 도구입니다. 리눅스에서 설치하기 위해서는, pip라고 불리우는 파이썬 도구를 사용해야합니다. 아마도 대부분 이미 시스템에 설치되어있을것입니다만, 만약 설치되어있지 않다면, 아래의 명령어로 설치할 수 있습니다:</p>
 <pre><code>sudo apt-get install python-pip
 </code></pre>
-<p>The site also needs a python module for parsing xml called lxml. You can install it with:</p>
+<!-- The site also needs a python module for parsing xml called lxml. You can install it with: -->
+
+<p>사이트는 또한 lxml이라 불리우는, xml을 파싱하는 파이썬 모듈을 필요로 합니다. 아래 명령어로 설치할 수 있습니다:</p>
 <pre><code>sudo apt-get install python-lxml
 </code></pre>
-<p>Now you can install blogofile doing:</p>
+<!-- Now you can install blogofile doing: -->
+
+<p>이제 blogofile을 설치할 수 있습니다:</p>
 <pre><code>sudo pip install blogofile
 </code></pre>
-<h3 id="step-12-install-git">Step 1.2: Install git</h3>
-<p>In case you don't have git already installed you can install it with:</p>
+<!-- ### Step 1.2: Install git -->
+
+<h3 id="12">단계 1.2: 깃 설치하기</h3>
+<!-- In case you don't have git already installed you can install it with: -->
+
+<p>깃이 설치되어있지 않다면, 아래 명령어로 깃을 설치할 수 있습니다:</p>
 <pre><code>sudo apt-get install git
 </code></pre>
-<h3 id="step-2-get-your-own-copy-of-ofsite">Step 2:  Get your own copy of ofSite</h3>
-<p>Much like openFrameworks itself, <a href="https://github.com/openframeworks/ofSite">ofSite's repository</a>  is hosted on Github.  Github is a massive online code repository built around git, and is a where an increasingly large amount of the open-source software is kept, modified, and updated.</p>
-<p>You'll need a Github account.   If you don't have one, they're free for open source work, and you can get one by going to <a href="https://github.com">Github</a>.  You'll see a signup form there. </p>
-<p>Once you have an account, you'll want to fork the master ofSite repository.  Forking means taking the existing codebase and making a personal copy of the code, but one that's still linked back into the original codebase.</p>
-<p>You'll do this by going to <a href="https://github.com/openframeworks/ofSite">https://github.com/openframeworks/ofSite</a>.  In the top left corner, you'll see a button marked <strong>fork</strong> that looks like:</p>
+<!-- ### Step 2:  Get your own copy of ofSite -->
+
+<h3 id="2-ofsite">단계 2: 여러분만의 ofSite의 복사본 얻어오기</h3>
+<!-- Much like openFrameworks itself, [ofSite's repository](https://github.com/openframeworks/ofSite)  is hosted on Github.  Github is a massive online code repository built around git, and is a where an increasingly large amount of the open-source software is kept, modified, and updated. -->
+
+<p>오픈프레임웍스와 마찬가지로, <a href="https://github.com/openframeworks/ofSite">ofSite 저장소</a>또한 Github에 호스팅되어있습니다. Github은 깃으로 만들어진 거대한 온라인 코드 저장소로, 오픈소스친화적이며, 이곳에 점점 많은 오픈소스 소프트웨어들이 저장, 수정, 업데이트되고 있습니다</p>
+<!-- You'll need a Github account.   If you don't have one, they're free for open source work, and you can get one by going to [Github](https://github.com).  You'll see a signup form there.  -->
+
+<p>Github계정이 필요합니다. 만약 계정이 없다면, 무료로 만드실 수 있습니다. <a href="https://github.com">Github</a>로 가셔서 가입하십시오.</p>
+<!-- Once you have an account, you'll want to fork the master ofSite repository.  Forking means taking the existing codebase and making a personal copy of the code, but one that's still linked back into the original codebase. -->
+
+<p>계정을 만들었다면, ofSite저장소의 master브랜치를 fork할 수 있습니다. fork를 하면, 존재하고 있는 코드묶음을 가져다가 개인적인 복사본으로 만들지만, 뒷단에서는 여전히 원본 코드들과 연결되어있습니다. (역자 주: 분기를 만든다는 뜻입니다. 원본코드와 별도로 복사본을 가지고, 독립적이지만, 백단에서는 연결되어있습니다.)</p>
+<!-- You'll do this by going to [https://github.com/openframeworks/ofSite](https://github.com/openframeworks/ofSite).  In the top left corner, you'll see a button marked **fork** that looks like: -->
+
+<p><a href="https://github.com/openframeworks/ofSite">https://github.com/openframeworks/ofSite</a>에 접속해, 좌측 상단에 보시면, <strong>fork</strong>버튼을 볼 수 있을것입니다. 아마 이렇게 생겼을 것입니다:</p>
 <p><img alt="" src="003_images/fork.png" /></p>
-<p>Clicking it will create a your own repository—the only difference is that it will be at https://github.com/<YOUR_USERNAME>/ofSite.</p>
-<p>This is your personal playground—you can make changes here, test them, and when you're satisfied, you can submit them back to the main ofSite repository and have them merged by an admin into the live site.</p>
-<h3 id="step-3-clone-the-site-to-your-local-machine">Step 3:  Clone the site to your local machine</h3>
-<p>On the left side of your ofSite repository, there's a text box marked <strong>clone URL</strong> that looks like:</p>
+<!-- Clicking it will create a your own repository—the only difference is that it will be at https://github.com/<YOUR_USERNAME>/ofSite. -->
+
+<p>클릭하면, 여러분만의 저장소가 생성될것입니다. 다른점이 있다면 주소가 https://github.com/<YOUR_USERNAME>/ofSite라는 것입니다.</p>
+<!-- This is your personal playground—you can make changes here, test them, and when you're satisfied, you can submit them back to the main ofSite repository and have them merged by an admin into the live site. -->
+
+<p>저 주소가 바로 개인적인 놀이터입니다. 여기서 코드를 변경할 수 있고, 테스트 할수 있으며, 만족스러운 결과를 얻었을때, 그것을 원래 메인 ofSite저장소로 요청하여 관리자에 의해 승인되면, 오픈프레임웍스의 사이트에 반영이 됩니다.</p>
+<!-- ### Step 3:  Clone the site to your local machine -->
+
+<h3 id="3_1">단계 3: 로컬머신에 사이트를 복제하기</h3>
+<!-- On the left side of your ofSite repository, there's a text box marked **clone URL** that looks like: -->
+
+<p>ofSite 저장소의 좌측에, <strong>Clone URL</strong>이라는 텍스트 박스가 보일겁니다. 이렇게 생겼습니다:</p>
 <p><img alt="" src="003_images/clone.png" /></p>
-<p>If you push the little clipboard button, it will copy your URL into your clipboard.  You can also just copy it the old-fashioned way.<br />
-</p>
-<p>Open your terminal and navigate to a directory where you'll want to store the code.  Within that directory, type:</p>
+<!-- If you push the little clipboard button, it will copy your URL into your clipboard.  You can also just copy it the old-fashioned way.   -->
+
+<p>작은 clipboard버튼을 클릭하면, 클립보드에 여러분의 URL이 복사될것입니다. 아니면 그냥 드래그하여 복사할 수도 있습니다.</p>
+<!-- Open your terminal and navigate to a directory where you'll want to store the code.  Within that directory, type: -->
+
+<p>터미널을 열어, 코드를 저장할 원하는 디렉토리로 이동한 다음, 아래와 같이 입력하세요 :</p>
 <pre><code>git clone &lt;&lt;paste the url here&gt;&gt;.
 </code></pre>
-<p>For example, cloning my copy of the repository would look like:</p>
+<!-- For example, cloning my copy of the repository would look like: -->
+
+<p>예를 들어, 제 저장소의 복사본의 경우 아래와 같습니다:</p>
 <pre><code> # EXAMPLE:
  git clone git@github.com:workergnome/ofSite.git
 </code></pre>
-<p>This will download your copy of the repository into that directory.  You're almost there!</p>
-<h3 id="step-4-build-and-run-the-site">Step 4:  Build and Run the Site</h3>
-<p>The final step is to actually compile and serve the site.  You'll go into the directory of your the repository and run the build command:</p>
+<!-- This will download your copy of the repository into that directory.  You're almost there! -->
+
+<p>위 명령어가 실행되면, 디렉토리에 저장소의 복사본이 다운됩니다. 거의 다 되었습니다!</p>
+<!-- ### Step 4:  Build and Run the Site -->
+
+<h3 id="4">단계 4: 빌드하여 사이트를 구동하기</h3>
+<!-- The final step is to actually compile and serve the site.  You'll go into the directory of your the repository and run the build command: -->
+
+<p>마지막 단계는 실제로 컴파일하고 사이트를 구동하는 것입니다. 저장소의 디렉토리로 가서 아래의 빌드 명령어를 실행하세요:</p>
 <pre><code>cd ofSite
 blogofile build
 </code></pre>
-<p>This will take a few minutes to build the site.  When it's complete, you'll type: </p>
+<!-- This will take a few minutes to build the site.  When it's complete, you'll type:  -->
+
+<p>사이트를 빌드하는데는 몇분정도 소요될 것입니다. 다 되면, 아래와 같이 입력하여 로컬상에서 서버를 시작합니다:</p>
 <pre><code>blogofile serve
 </code></pre>
-<p>Which will start a web server running on your local machine with your copy of the site running at <a href="http://localhost:8080">http://localhost:8080</a>.<br />
-</p>
-<p>When you're done with the server, you can type <code>&lt;control-c&gt;</code> into the terminal window to quit.</p>
-<h3 id="step-5-make-changes">Step 5:  Make Changes!</h3>
-<p>Congrats!  You now have a working version of the site running on your local machine.<br />
-</p>
-<p>The current best practices for Github are to make your changes within a 'feature' branch of the repository, not the master branch repository.  This will create yet another branch of the repository, this time on your local machine.  Choose a <code>&lt;feature_name&gt;</code> that describes loosely the changes that you want to make.</p>
-<p>In a second terminal window, navigate to the repository directory and type:</p>
+<!-- Which will start a web server running on your local machine with your copy of the site running at [http://localhost:8080](http://localhost:8080). -->
+
+<p>로컬에서 구동되고 있는 서버를 확인할때에는 웹브라우저에서 <a href="http://localhost:8080">http://localhost:8080</a>로 접속합니다.</p>
+<!-- When you're done with the server, you can type ``<control-c>`` into the terminal window to quit. -->
+
+<p>확인을 마쳤다면, 터미널에서 <code>&lt;control-c&gt;</code>를 입력하여 서버구동을 종료할 수 있습니다.</p>
+<!-- ### Step 5:  Make Changes! -->
+
+<h3 id="5">단계 5: 변경해봅시다!</h3>
+<!-- Congrats!  You now have a working version of the site running on your local machine.   -->
+
+<p>축하합니다! 이제 로컬머신상에서 서버를 구동할 수 있게 되었습니다. </p>
+<!-- The current best practices for Github are to make your changes within a 'feature' branch of the repository, not the master branch repository.  This will create yet another branch of the repository, this time on your local machine.  Choose a ``<feature_name>`` that describes loosely the changes that you want to make. -->
+
+<p>현 상황에서 Github로 할수있는 최고의 연습은 저장소에서 master 가지(branch)가 아닌 <code>feature</code> 브랜치(branch)를 만들어 변경하는것입니다.
+로컬상에 저장소에 새로운 브랜치를 생성하는데, 브랜치의 이름으로 간략하게 어떤 작업을 할것인지 <code>feature_name</code>을 줄 수 있습니다.</p>
+<!-- In a second terminal window, navigate to the repository directory and type: -->
+
+<p>두번째 터미널 윈도우에서, 저장소의 디렉토리로 이동하여 아래와 같이 입력합니다:</p>
 <pre><code>git branch &lt;feature_name&gt;
 git checkout &lt;feature_name&gt;
 </code></pre>
-<p>For example, if you were interested in updating the docs for the colors, you could type:</p>
-<pre><code>#EXAMPLE
+<!-- For example, if you were interested in updating the docs for the colors, you could type: -->
+
+<p>예를들어, 만약 컬러와 관련된 문서를 업데이트 하고 싶다면, 아래와 같이 입력할 수 있을것입니다:</p>
+<pre><code># EXAMPLE
 git branch colors
 git checkout colors
 </code></pre>
-<p>Remember this branch name—you'll need it again in the future.   If you forget, you can always get a list of your branches by typing</p>
+<!-- Remember this branch name—you'll need it again in the future.   If you forget, you can always get a list of your branches by typing -->
+
+<p>이 브랜치 이름은 앞으로 다시 사용할 필요가 있다는 것을 명심하십시오. 만약 이름이 무엇인지 잊어버렸다면, 아래의 명령어로 브랜치의 리스트를 확인할 수 있습니다:</p>
 <pre><code>git branch
 </code></pre>
-<p>The first time that you do this, it will prompt you for your github account username and password.</p>
-<p>Which will give you a list of all your branches, with an asterisk next to the currently-checked out branch.</p>
-<p>You can modify the site by making changes to the files in the <code>_documentation</code> directory, and then, in the terminal window that's running blogofile, you can terminate the web server by pressing <code>&lt;control-c&gt;</code>, and typing:</p>
+<!-- The first time that you do this, it will prompt you for your github account username and password. -->
+
+<p>맨 처음 이 작업을 수행할때, github계정의 이름과 패스워드를 입력해야 합니다.</p>
+<!-- Which will give you a list of all your branches, with an asterisk next to the currently-checked out branch. -->
+
+<p>이렇게 하면 모든 브랜치의 리스트를 볼 수 있으며, 그중 현재 작업중인 브랜치에는 *가 붙어있습니다.</p>
+<!-- You can modify the site by making changes to the files in the ``_documentation`` directory, and then, in the terminal window that's running blogofile, you can terminate the web server by pressing ``<control-c>``, and typing: -->
+
+<p><code>_documentation</code> 디렉토리안의 파일을 수정하여 사이트를 업데이트 할 수 있습니다. 이후 blogofile을 구동하고 있는 터미널 윈도우에서, <code>&lt;control-c&gt;</code>를 입력해 웹서버 구동을 종료하고, 아래와 같이 입력하여 사이트의 재구축을 완료하십시오.:</p>
 <pre><code>blogofile build
 blogofile serve
 </code></pre>
-<p>When that's completed rebuilding the site, reloading the webpage will show your changes!</p>
-<p>For formatting and syntax of the documentation, see the <strong>Documentation Structure and Formatting</strong> section above.</p>
-<h3 id="step-6-pushing-your-changes-back-to-your-github-respository">Step 6:  Pushing Your Changes Back to your Github Respository</h3>
-<p>Now that you've made your improvements to the documentation, you'll add and commit your code back into the git repository.</p>
-<p>First, you'll add your code back into git.</p>
-<pre><code>git add .
+<!-- When that's completed rebuilding the site, reloading the webpage will show your changes! -->
+
+<p>이후 웹브라우저를 새로고침하여 변경된 사항을 확인할 수 있습니다</p>
+<!-- For formatting and syntax of the documentation, see the **Documentation Structure and Formatting** section above. -->
+
+<p>도큐먼트의 문법과 포맷은 위의 <strong>도큐먼트 구조와 포맷팅</strong> 섹션을 읽어주시기 바랍니다.</p>
+<!-- ### Step 6:  Pushing Your Changes Back to your Github Respository -->
+
+<h3 id="6-github">단계 6: 변경된 사항을 Github 저장소로 푸쉬하기</h3>
+<!-- Now that you've made your improvements to the documentation, you'll add and commit your code back into the git repository. -->
+
+<p>자 이제 도큐먼트를 업데이트 하였으니, 해당 파일을 깃 저장소에 추가(add)하고, 커밋(commit)해야 합니다.</p>
+<!-- First, you'll add your code back into git. -->
+
+<p>우선, 업데이트한 파일을 깃에 추가(add)해야 합니다.(역자 주: file_name은 변경한(저장소에서 추가할)파일명입니다. .으로 비어있어서 수정했습니다.)</p>
+<pre><code>git add file_name
 </code></pre>
-<p>Then you'll commit your code, with a note describing the modifications you've made, known as a 'commit message'.  This should be as detailed as necessary, and can be multiple lines.   Typically, if it's something that can be described in one sentence, do so, otherwise use the first sentence as a descriptive title and add additional information in subsequent paragraphs.</p>
+<!-- Then you'll commit your code, with a note describing the modifications you've made, known as a 'commit message'.  This should be as detailed as necessary, and can be multiple lines.   Typically, if it's something that can be described in one sentence, do so, otherwise use the first sentence as a descriptive title and add additional information in subsequent paragraphs. -->
+
+<p>그리고 나서, 파일을 커밋(commit)합니다. 커밋할때 '커밋 메시지(commit message)'라 불리우는, 수정한 사항에 관한 설명을 함께 작성해야 합니다. 이 커밋 메시지는 필요할 경우 가능한 자세하게, 여러줄로도 작성할 수 있습니다. 일반적으로로 한 문장으로 작성하지만, 여러줄로 작성할 경우  첫 문장은 설명의 제목이, 추가 문장들은 문단이 됩니다.</p>
 <pre><code>git commit -m "&lt;A note describing what things you've changed&gt;"
 </code></pre>
-<p>Then you'll push your code back up to the server.  You'll need to remember the branch name you created back in <strong>Step 5</strong>.</p>
+<!-- Then you'll push your code back up to the server.  You'll need to remember the branch name you created back in **Step 5**. -->
+
+<p>그 다음, 서버에 해당파일을 푸쉬하니다. <strong>단계 5</strong>에서 생성했던 브랜치 이름(feature_name)을 기억해야 합니다.</p>
 <pre><code>git push origin &lt;feature_name&gt;
 </code></pre>
-<p>For example,</p>
+<!-- For example, -->
+
+<p>예를들면 아래와 같습니다.</p>
 <pre><code>#EXAMPLE
 git add .
 git commit -m "Updated the docs on RGBA to HLSA conversions"
 git push origin colors
 </code></pre>
-<p>For more information on forking, pushing, and git, check our the <a href="https://help.github.com/articles/fork-a-repo">Fork a Repo</a> article on Github.</p>
-<h3 id="step-7-submit-a-pull-request">Step 7:  Submit a Pull Request</h3>
-<p>Go back to the Github page for your personal copy of the ofSite repository.   There, you'll see a banner that looks like:</p>
+<!-- For more information on forking, pushing, and git, check our the [Fork a Repo](https://help.github.com/articles/fork-a-repo) article on Github. -->
+
+<p>fork, 푸쉬, 그리고 깃에 관한 더 자새한 사항은, Github에서 제공하는 <a href="https://help.github.com/articles/fork-a-repo">Fork a Repo</a>문서를 참고해주세요.</p>
+<!-- ### Step 7:  Submit a Pull Request -->
+
+<h3 id="7-pull-request">단계 7: Pull Request 제출하기</h3>
+<!-- Go back to the Github page for your personal copy of the ofSite repository.   There, you'll see a banner that looks like: -->
+
+<p>ofSite 저장소의 개인 복사본인 Github페이지로 접속해보면, 아래와 같은 배너를 볼 수 있습니다:</p>
 <p><img alt="" src="003_images/pull.png" /></p>
-<p>If you click the "Compare &amp; pull request" button, you'll be taken to a page where you can add a message to the ofSite admins describing your changes, and a pull request will be filed on the main site for approval and merging with the main code base.</p>
-<p>For more information on pull requests, see the <a href="https://help.github.com/articles/using-pull-requests">Using Pull Requests</a> article on Github.</p>
-<p>At this point, you can check back out the master branch, using</p>
+<!-- If you click the "Compare & pull request" button, you'll be taken to a page where you can add a message to the ofSite admins describing your changes, and a pull request will be filed on the main site for approval and merging with the main code base. -->
+
+<p>"Compare &amp; pull request" 버튼을 누르면, 원본 ofSite의 관리자에게 여러분이 작성한 변경사항을 담은 메시지를 작성하면서, pull request를 요청할 수 있는 페이지가 뜹니다. pull request가 완료되면, 원본 ofSite관리자에 의해 승인되어 원본 ofSite 저장소에 병합(merge)됩니다.</p>
+<!-- For more information on pull requests, see the [Using Pull Requests](https://help.github.com/articles/using-pull-requests) article on Github. -->
+
+<p>pull request에 관한 더 자세한 사항은, Github에서 제공하는 <a href="https://help.github.com/articles/using-pull-requests">Using Pull Requests</a>문서를 참고해주세요.</p>
+<!-- At this point, you can check back out the master branch, using -->
+
+<p>현재 상황에서, 아래 명령어로 master 브랜치로 돌아갈 수 있습니다</p>
 <pre><code>git checkout master
 </code></pre>
-<p>And continue to make changes.  Remember:</p>
+<!-- And continue to make changes.  Remember: -->
+
+<p>이후 다른 작업을 계속할 수 있습니다. 기억하세요:</p>
+<!-- 1. branch the repo
+- change the code
+- add to the repo
+- commit to the repo
+- push to github
+- request pull on github
+ -->
+
 <ol>
-<li>branch the repo</li>
-<li>change the code</li>
-<li>add to the repo</li>
-<li>commit to the repo</li>
-<li>push to github</li>
-<li>request pull on github</li>
+<li>저장소에 브랜치를 생성한다</li>
+<li>코드를 수정한다</li>
+<li>저장소에 추가한다 (add)</li>
+<li>저장소에 커밋한다 (commit)</li>
+<li>github에 푸시한다 (push)</li>
+<li>github에서 pull request한다. </li>
 </ol>
-<p>If, after the admin reviews your changes, they ask you to make changes to your pull request, you can always check that branch back out and use <strong>Step 6</strong> and <strong>Step 7</strong> to modify and push new changes.  If you push changes on that branch, they'll automatically be appended to your pull request.</p>
-<p>Congratulations!   You've built, modified, tested, and submitted to an open-source project!</p>
-<h3 id="tldr-instructions-for-osx">TL;DR instructions for OSX:</h3>
+<!-- If, after the admin reviews your changes, they ask you to make changes to your pull request, you can always check that branch back out and use **Step 6** and **Step 7** to modify and push new changes.  If you push changes on that branch, they'll automatically be appended to your pull request. -->
+
+<p>관리자가 여러분의 변경사항을 리뷰하면서, 해당 pull request에 대해 수정을 요청할 때에는, <strong>단계 6</strong>과 <strong>단계 7</strong>을 통해 언제든지 해당 브랜치로 돌아가 수정하고, 새로운 변경을 푸시할 수 있습니다. 해당 브랜치에서 변경을 푸시하면, 변경된 사항은 pull request에 자동으로 추가될 것입니다.</p>
+<!-- Congratulations!   You've built, modified, tested, and submitted to an open-source project! -->
+
+<p>축하드립니다! 오픈소스 프로젝트를 구축, 수정, 테스트, 제출하였습니다!</p>
+<!-- ### TL;DR instructions for OSX: -->
+
+<h3 id="osx">OSX 를 위한 요약 설명:</h3>
 <ul>
-<li>Install Python</li>
+<li>파이썬 설치</li>
 <li><code>easy_install lxml</code></li>
 <li><code>easy_install blogofile</code></li>
-<li>fork and clone <a href="https://github.com/openframeworks/ofSite">https://github.com/openframeworks/ofSite</a></li>
-<li>From the repo directory:  <code>blogofile build &amp;&amp; blogofile serve</code></li>
-<li>Go to <a href="http:\localhost:8080">http:\localhost:8080</a></li>
-<li>create a feature branch</li>
-<li>modify code</li>
-<li>From the repo directory:  <code>blogofile build &amp;&amp; blogofile serve</code> to verify changes</li>
-<li>push branch</li>
-<li>submit pull request</li>
+<li><a href="https://github.com/openframeworks/ofSite">https://github.com/openframeworks/ofSite</a>를 fork 및 복제 </li>
+<li>저장소 디렉토리에서:  <code>blogofile build &amp;&amp; blogofile serve</code></li>
+<li>브라우저에서 <a href="http:\localhost:8080">http:\localhost:8080</a>로 접속하여 확인</li>
+<li>작업 브랜치 생성</li>
+<li>코드 수정</li>
+<li>저장소 디렉토리에서 :  <code>blogofile build &amp;&amp; blogofile serve</code> 를 입력하여 변경사항 확인</li>
+<li>브랜치를 푸시</li>
+<li>pull request 제출</li>
 </ul>
-<h3 id="tldr-instructions-for-linux">TL;DR instructions for Linux:</h3>
+<!-- ### TL;DR instructions for Linux: -->
+
+<h3 id="_6">리눅스를 위한 요약설명:</h3>
 <ul>
 <li><code>sudo apt-get install python-pip</code></li>
 <li><code>sudo apt-get install python-lxml</code></li>
 <li><code>sudo pip install blogofile</code></li>
-<li>fork and clone <a href="https://github.com/openframeworks/ofSite">https://github.com/openframeworks/ofSite</a></li>
-<li>From the repo directory:  <code>blogofile build &amp;&amp; blogofile serve</code></li>
-<li>Go to <a href="http:\localhost:8080">http:\localhost:8080</a></li>
-<li>create a feature branch</li>
-<li>modify code</li>
-<li>From the repo directory:  <code>blogofile build &amp;&amp; blogofile serve</code> to verify changes</li>
-<li>push branch</li>
-<li>submit pull request</li>
+<li><a href="https://github.com/openframeworks/ofSite">https://github.com/openframeworks/ofSite</a>를 fork 및 복제</li>
+<li>저장소 디렉토리에서:  <code>blogofile build &amp;&amp; blogofile serve</code></li>
+<li>브라우저에서 <a href="http:\localhost:8080">http:\localhost:8080</a>로 접속하여 확인</li>
+<li>작업 브랜치 생성</li>
+<li>코드 수정</li>
+<li>저장소 디렉토리에서:  <code>blogofile build &amp;&amp; blogofile serve</code> 를 입력하여 변경사항 확인</li>
+<li>브랜치를 푸시</li>
+<li>pull request 제출</li>
 </ul>
 <hr />
-<p><small>Written by <a href="https://twitter.com/workergnome">David Newbury</a> with help from <a href="https://twitter.com/bernardoschorr">Bernardo Schorr</a> and <a href="https://twitter.com/digitalcoleman">Chris Coleman</a>.</small><br />
-<small>The initial version was written at the <a href="http://studioforcreativeinquiry.org/events/creative-coding-on-the-raspberry-pi-with-openframeworks">openFrameworks/RaspberryPI workshop</a> at the <a href="http://studioforcreativeinquiry.org">Frank-Ratchye STUDIO for Creative Inquiry</a>, October 11-13, 2013.</small></p>
+<!-- <small>Written by [David Newbury](https://twitter.com/workergnome) with help from [Bernardo Schorr](https://twitter.com/bernardoschorr) and [Chris Coleman](https://twitter.com/digitalcoleman).</small>   -->
+
+<p><small>본 튜토리얼은 <a href="https://twitter.com/bernardoschorr">Bernardo Schorr</a>와 <a href="https://twitter.com/digitalcoleman">Chris Coleman</a>의 도움을 받아 <a href="https://twitter.com/workergnome">David Newbury</a>의해 작성되었습니다.</small>
+<!-- <small>The initial version was written at the <a href="http://studioforcreativeinquiry.org/events/creative-coding-on-the-raspberry-pi-with-openframeworks">openFrameworks/RaspberryPI workshop</a> at the <a href="http://studioforcreativeinquiry.org">Frank-Ratchye STUDIO for Creative Inquiry</a>, October 11-13, 2013.</small> -->
+<small>본 튜토리얼의 초기버전은 <a href="http://studioforcreativeinquiry.org">Frank-Ratchye STUDIO for Creative Inquiry</a>에서 2013년 10월 11-13일에 열린 <a href="http://studioforcreativeinquiry.org/events/creative-coding-on-the-raspberry-pi-with-openframeworks">오픈프레임웍스/라즈베리파이 워크샵</a>에서 작성되었습니다.</small></p>
 
     		</div>
             
@@ -405,13 +634,13 @@ git push origin colors
 
 
   
-Monday, 04 January 2016 21:19:43 UTC
+Tuesday, 05 January 2016 21:08:26 UTC
 에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
 
-cafd1f156761bd9a2dfbe6d8714841a1a4769398
+a6e12246dac5c4cbd92a638513f8d6f46d6aeb72
 ">
 
-cafd1f156761bd9a2dfbe6d8714841a1a4769398
+a6e12246dac5c4cbd92a638513f8d6f46d6aeb72
 </a>
 
 <!--br/>RSS feeds for <a href="/feed">Entries</a-->
