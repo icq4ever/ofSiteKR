@@ -154,9 +154,9 @@ void ofApp::draw(){
 
 ### GL 데이터 컨테이너(GL Data containers)
 
-GL data containers are a special case of data containers. The functionality is pretty similar to other data containers and they also follow the allocate/loadData pattern. These are classes like ofTexture, ofFbo, ofVbo or ofVboMesh. All of them are in the gl folder, although not everything in the gl folder is a data container, like ofShader or ofLight, which are GL utility classes and usually behave exactly the same as other utility classes.
+<!-- GL data containers are a special case of data containers. The functionality is pretty similar to other data containers and they also follow the allocate/loadData pattern. These are classes like ofTexture, ofFbo, ofVbo or ofVboMesh. All of them are in the gl folder, although not everything in the gl folder is a data container, like ofShader or ofLight, which are GL utility classes and usually behave exactly the same as other utility classes. -->
 
-GL 데이터 컨테이너는 데이터 컨테이너의 특별한 케이스입니다. 기능은 다른 데이터 컨테이너와 매우 흡사하며, 마찬가지로 allocate/loadData패턴을 따릅니다. 이러한 클래스들의 예로는 ofTexture, ofFbo, ofVbo, ofVboMesh등이 있습니다.
+GL 데이터 컨테이너는 데이터 컨테이너의 특별한 케이스입니다. 기능은 다른 데이터 컨테이너와 매우 흡사하며, 마찬가지로 allocate/loadData패턴을 따릅니다. 이러한 클래스들의 예로는 ofTexture, ofFbo, ofVbo, ofVboMesh등이 있습니다. 이러한 것들은 gl폴더에 담겨있으며, ofShare나 oflight같이 다른 유틸리티 클래스처럼 동작하는 GL 유틸리티 클래스들도 함께 같은 위치에 담겨있습니다.
 
 <!-- The main difference between GL data containers and other data containers is that GL data containers follow a shallow copy pattern. The main reason for this is performance, making a copy of resources in the GPU is usually slow so we don't copy them by default. -->
 이러한 GL 데이터 컨테이너와 다른 데이터 컨테이너의 주 차이점은, GL 데이터 컨테이너는 shallow copy 패턴을 갖는다는 것입니다. 이는 퍼포먼스 때문인데, GPU상에서 자원을 복사하는것은 일반적으로 매우 느리기 때문입니다.
