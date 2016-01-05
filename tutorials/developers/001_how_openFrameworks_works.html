@@ -249,8 +249,9 @@ void ofApp::draw(){
 
 <p>위 코드는 화면 좌측에 완전히 까만 이미지를 그리고, 우측에는 10,10에 흰 픽샐이 있는 까만 이미지를 그립니다. <code>pixels2 = pixels1</code> 호출할때, <code>pixels2</code>는 <code>pixels1</code>과 완전히 동일한 크기와 채널갯수를 할당받습니다. 이후 <code>pixels1</code>의 데이터가 <code>pixels2</code>로 복사됩니다.</p>
 <h3 id="gl-gl-data-containers">GL 데이터 컨테이너(GL Data containers)</h3>
-<p>GL data containers are a special case of data containers. The functionality is pretty similar to other data containers and they also follow the allocate/loadData pattern. These are classes like ofTexture, ofFbo, ofVbo or ofVboMesh. All of them are in the gl folder, although not everything in the gl folder is a data container, like ofShader or ofLight, which are GL utility classes and usually behave exactly the same as other utility classes.</p>
-<p>GL 데이터 컨테이너는 데이터 컨테이너의 특별한 케이스입니다. 기능은 다른 데이터 컨테이너와 매우 흡사하며, 마찬가지로 allocate/loadData패턴을 따릅니다. 이러한 클래스들의 예로는 ofTexture, ofFbo, ofVbo, ofVboMesh등이 있습니다.</p>
+<!-- GL data containers are a special case of data containers. The functionality is pretty similar to other data containers and they also follow the allocate/loadData pattern. These are classes like ofTexture, ofFbo, ofVbo or ofVboMesh. All of them are in the gl folder, although not everything in the gl folder is a data container, like ofShader or ofLight, which are GL utility classes and usually behave exactly the same as other utility classes. -->
+
+<p>GL 데이터 컨테이너는 데이터 컨테이너의 특별한 케이스입니다. 기능은 다른 데이터 컨테이너와 매우 흡사하며, 마찬가지로 allocate/loadData패턴을 따릅니다. 이러한 클래스들의 예로는 ofTexture, ofFbo, ofVbo, ofVboMesh등이 있습니다. 이러한 것들은 gl폴더에 담겨있으며, ofShare나 oflight같이 다른 유틸리티 클래스처럼 동작하는 GL 유틸리티 클래스들도 함께 같은 위치에 담겨있습니다.</p>
 <!-- The main difference between GL data containers and other data containers is that GL data containers follow a shallow copy pattern. The main reason for this is performance, making a copy of resources in the GPU is usually slow so we don't copy them by default. -->
 
 <p>이러한 GL 데이터 컨테이너와 다른 데이터 컨테이너의 주 차이점은, GL 데이터 컨테이너는 shallow copy 패턴을 갖는다는 것입니다. 이는 퍼포먼스 때문인데, GPU상에서 자원을 복사하는것은 일반적으로 매우 느리기 때문입니다.</p>
@@ -302,13 +303,13 @@ void ofApp::draw(){
 
 
   
-Tuesday, 05 January 2016 22:12:04 UTC
+Tuesday, 05 January 2016 22:27:52 UTC
 에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
 
-bb16734cb0853dbd25bd98e5819db2852995bdc1
+d8a10d6db55b529e4dd2818e174f714bfcdbe9fe
 ">
 
-bb16734cb0853dbd25bd98e5819db2852995bdc1
+d8a10d6db55b529e4dd2818e174f714bfcdbe9fe
 </a>
 
 <!--br/>RSS feeds for <a href="/feed">Entries</a-->
