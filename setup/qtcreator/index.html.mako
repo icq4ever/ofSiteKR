@@ -34,7 +34,7 @@ msys2에 의존하고 있는 빌드 시스템의 몇몇 부분들은 기본적�
 <!-- To use QtCreator with msys2 go to Qt Creator > Preferences > Build and Run > Compilers and if it's not there add a compiler that points to c:\msys64\mingw32\bin then in the Kits tab configure the Desktop Kit to use gcc from msys2. -->
 msys2와 함께 QtCreator를 사용하기 위해서는, Qt Creator > Preferences > Build and Run > Compiler로 가셔서 비어있는 경우 compiler에 c:\msys64\mingw32\bin을 추가 하십시오. Kits 탭에서 Desktop Kit부분에 msys2의 gcc를 사용하도록 설정해 주십시오.
 
-Once installed you can install the Qt Creator plugin for openFrameworks that comes with the OF download by copying the templates in scripts/qtcreator/templates to c:\Qt\qtcreator-3.5.1\share\qtcreator\templates.
+<!-- Once installed you can install the Qt Creator plugin for openFrameworks that comes with the OF download by copying the templates in scripts/qtcreator/templates to c:\Qt\qtcreator-3.5.1\share\qtcreator\templates. -->
 설치를 마치면 오픈프레임웍스를 다운받을때 함께 받아지는, 오픈프레임웍스를 위한 Qt Creator 플러그인을 설치할 수 있습니다. scripts/qtcreator/templates폴더 내 스크립트들을 c:\Qt\qtcreator-3.5\share\qtcreator\templates폴더로 복사해주시면 됩니다.
 
 맥 OSX
@@ -43,7 +43,7 @@ Once installed you can install the Qt Creator plugin for openFrameworks that com
 <!-- After installing QtCreator go to Qt Creator > Preferences > Build and Run and configure the Desktop Kit to use clang instead of gcc. If you can't change it from there, press manage or go to the Compilers tab and check that clang is available. You might need to add a custom config to be able to enable clang instead of GCC. -->
 Qtcreator를 설치하고 난 후 Qt Creator > Preferences > Build and Run으로 이동하신후 Desktop Kit에서 gcc 대신 clang을 사용하도록 설정하십시오. 만약 변경할 수 없다면, manager를 누르거나 Compilers 탭으로 가서 clang이 사용가능한지 확인해보십시오. 아마도 GCC 대신 clang을 활성화 할수 있도록 커스텀 설정을 추가해야 할 수도 있습니다.
 
-Once installed you can install the Qt Creator plugin for openFrameworks that comes with the OF download, you can run the install_template.sh script in scripts/qtcreator and it'll install everything for you.
+<!-- Once installed you can install the Qt Creator plugin for openFrameworks that comes with the OF download, you can run the install_template.sh script in scripts/qtcreator and it'll install everything for you. -->
 설치를 마치면 오픈프레임웍스를 다운받을때 함께 받아지는, 오픈프레임웍스를 위한 Qt Creator 플러그인을 설치할 수 있습니다. scripts/qtcreator 폴더에서 install_template.sh스크립트를 실행하면 끝입니다.
 
 모든 플랫폼
@@ -61,7 +61,7 @@ Configuring Clang Code Model Plugin
 <!-- The openFrameworks plugin allows to create new projects and add official addons through a wizard, once the project is created you can edit the .qbs project file to easily add any new addons just by adding their name in the of.addons array. -->
 오픈프레임웍스 플러그인은 새로운 프로젝트를 생성하거나, 공식적인 애드온을 마법사로 추가할수 있게 해줍니다. 한번 프로젝트가 생성되면, .qbs 프로젝트 파일을 수정해해, 추가할 애드온의 이름을 of.addon 배열에 추가하는것만으로 애드온을 쉽게 추가할 수 있습니다.
 
-There's a second project type in the wizard that allows to create a project from existing code.
+<!-- There's a second project type in the wizard that allows to create a project from existing code. -->
 마법사에서 두번째 프로젝트 타입을 이용하면, 이미 존재하고있는 코드로부터 프로젝트를 생성할 수 있습니다.
 
 <!-- A project created in any platform will work right away in any of the other supported platforms -->
