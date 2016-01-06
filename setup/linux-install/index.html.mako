@@ -45,7 +45,7 @@ make Run
 <!-- Or use any of the officially supported IDEs: [qtcreator](../qtcreator/) or [eclipse](../eclipse/) both IDEs have plugins that allow to create new projects, import existing ones, add addons to them. -->
 위처럼 명령어로 컴파일을 하거나, 또는 공식적으로 지원되는 IDE(통합개발환경)인 : [qtcreator](../qtcreator/) 또는 [eclipse](../eclipse/)를 사용할 수 있습니다. 두 IDE모두 새 프로젝트를 생성하거나, 이미 존재하고 있는것을 임포트하거나, 애드온을 추가할 수 있는 플러그인을 제공하고 있습니다.
 
-If you want to install the project generator, a tool that allows to create and update an OF project, you'll need to run one last script:
+<!-- If you want to install the project generator, a tool that allows to create and update an OF project, you'll need to run one last script: -->
 만약 오픈프레임웍스 프로젝트를 생성하고 업데이트 할 수 있는 프로젝트 생성기를 설치하고 싶다면, 아래의 스크립트를 실행하면 됩니다:
 
 ```
