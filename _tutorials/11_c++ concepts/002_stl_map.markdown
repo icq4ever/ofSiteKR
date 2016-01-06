@@ -381,3 +381,5 @@ map<float, string>::iterator ub = floatToString.upper_bound(2.8);
 And that concludes our adventures with the std::map. For a more complete explanation of the map, check [cppreference](en.cppreference.com/w/cpp/container/map). Go forth and use them where appropriate
 
 이로써 std::map에 대한 탐험을 마쳤습니다. map에 관한 완성된 설명을 원하신다면, [cppreference](en.cppreference.com/w/cpp/container/map)를 일거보십시오. 계속 전진하시고, 적절한 곳에 사용해보십시오.
+
+<small>역자 주 : stl::map과 관련된 자료는 한빛미디어서에 제공하는 [C++ STL::map](http://www.hanbit.co.kr/network/view.html?bi_id=1618)에서도 보실 수 있습니다. <br/> 혹은 소프트웨어공학연구소에서 제공되는 [C++고급과정](http://soen.kr/lecture/ccpp/cpp4/cpp4.htm)중에서 41장-2절의 맵 부분을 참고하실 수도 있습니다.</small>
