@@ -379,9 +379,8 @@ map<float, string>::iterator lb = floatToString.lower_bound(2.6);
 map<float, string>::iterator ub = floatToString.upper_bound(2.8);
 ~~~~
 
-And that concludes our adventures with the std::map. For a more complete explanation of the map, check [cppreference](en.cppreference.com/w/cpp/container/map). Go forth and use them where appropriate
-
-이로써 std::map에 대한 탐험을 마쳤습니다. map에 관한 완성된 설명을 원하신다면, [cppreference](en.cppreference.com/w/cpp/container/map)를 일거보십시오. 계속 전진하시고, 적절한 곳에 사용해보십시오.
+<!-- And that concludes our adventures with the std::map. For a more complete explanation of the map, check [cppreference](en.cppreference.com/w/cpp/container/map). Go forth and use them where appropriate -->
+이로써 std::map에 대한 탐험을 마쳤습니다. map에 관한 완성된 설명을 원하신다면, [cppreference](en.cppreference.com/w/cpp/container/map)를 읽어보십시오. 계속 전진하시고, 적절한 곳에 사용해보십시오.
 
 <a name="more_resource"></a>
 ## 추가 참고 자료 (역자에 의해 추가됨)
