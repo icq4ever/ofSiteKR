@@ -384,5 +384,5 @@ map<float, string>::iterator ub = floatToString.upper_bound(2.8);
 
 <a name="more_resource"></a>
 ## 추가 참고 자료 (역자에 의해 추가됨)
-stl::map과 관련된 자료는 한빛미디어서에 제공하는 [C++ STL::map](http://www.hanbit.co.kr/network/view.html?bi_id=1618)에서도 보실 수 있습니다. 
+stl::map과 관련된 자료는 한빛미디어서에 제공하는 [C++ STL::map](http://www.hanbit.co.kr/network/view.html?bi_id=1618)에서도 보실 수 있습니다. <br/>
 혹은 소프트웨어공학연구소에서 제공되는 [C++고급과정](http://soen.kr/lecture/ccpp/cpp4/cpp4.htm)중에서 41장-2절의 맵 부분을 참고하실 수도 있습니다.
