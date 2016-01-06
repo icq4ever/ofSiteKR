@@ -54,8 +54,9 @@ cd OF/scripts/linux
 ```
 
 <!-- This will compile the GUI version of the project generator which will be placed in the root of the OF folder. When it's done compiling it will ask you if you also want to install the optional command line version of the tool which allows you to create projects from anywhere on your system. -->
-If you installed the command line tool and want to change the OF path it uses, you can change the value of PG_OF_PATH in ~/.profile.
-위 명령어로 GUI버전의 프로젝트 생성기가 컴파일 되어, 오픈프레임웍스의 최상위 폴더에 위치될 것입니다.컴파일이 완료되면, 시스템의 어느곳에서도 프로젝트를 생성할 수 있는 명령어 모드 도구를 옵션으로 설치할 것인지 물을 것입니다. 명령어 도구를 설치하고나서 프로젝트 생성기가 사용할 오픈프레임웍스 경로를 수정하고 싶다면, ~/.profile파일에서 PG_OF_PATH의 값을 변경하시면 됩니다.
+<!-- If you installed the command line tool and want to change the OF path it uses, you can change the value of PG_OF_PATH in ~/.profile. -->
+위 명령어로 GUI버전의 프로젝트 생성기가 컴파일 되어, 오픈프레임웍스의 최상위 폴더에 위치될 것입니다.컴파일이 완료되면, 시스템의 어느곳에서도 프로젝트를 생성할 수 있는 명령어 모드 도구를 옵션으로 설치할 것인지 물을 것입니다. 
+명령어 도구를 설치하고나서 프로젝트 생성기가 사용할 오픈프레임웍스 경로를 수정하고 싶다면, ~/.profile파일에서 PG_OF_PATH의 값을 변경하시면 됩니다.
 
 <!-- Run the commandline project generator without any arguments to see how to use it: -->
 명령어모드로 프로젝트 생성기를 실행하기 위해서는, 아무런 매개변수 없이 아래와같이 사용하면 됩니다:
