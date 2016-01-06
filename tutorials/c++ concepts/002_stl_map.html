@@ -120,77 +120,104 @@
                 <li><a href="/documentation">레퍼런스</a></li>
                 <li><a href="/tutorials">튜토리얼</a></li>
             </ul-->
-    	    <h1>Having fun with Maps, specifically std::map</h1>
+    	    <h1>Map과 함께 놀아봅시다, 정확히 std::map말이죠</h1>
     	    <span class="article_meta">2013/03/07 10:00:00&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="">Joshua Noble</a></span><br/>
     	    <div class="article">
     	    
-  <p>This tutorial is composed by these sections:</p>
+  <!-- This tutorial is composed by these sections: -->
+
+<p>본 튜토리얼은 아래의 섹션으로 구성되어있습니다.</p>
 <ol>
-<li><a href="#intro">Introduction: what is a map?</a></li>
-<li><a href="#assign">Insert values into a map</a></li>
-<li><a href="#erase">Deleting element from a map</a></li>
-<li><a href="#iteration">Iterating through a map</a></li>
-<li><a href="#find">Finding element in a map</a></li>
-<li><a href="#map_of_objects">Storing object in a map</a></li>
-<li><a href="#multimap">What is a multimap?</a></li>
-<li><a href="#usefull">Other usefull methods</a></li>
+<li><a href="#intro">소개 : map이 무엇인가요?</a></li>
+<li><a href="#assign">map에 값 삽입하기</a></li>
+<li><a href="#erase">map에서 요소 삭제하기</a></li>
+<li><a href="#iteration">map을 훑기</a></li>
+<li><a href="#find">map에서 요소 찾기</a></li>
+<li><a href="#map_of_objects">map에 오브젝트 저장하기</a></li>
+<li><a href="#multimap">multimap이란 무엇인가요?</a></li>
+<li><a href="#usefull">다른 유용한 메소드들</a></li>
 </ol>
 <p><a name="intro"></a></p>
-<h3 id="introduction-what-is-a-map">Introduction: what is a map?</h3>
-<p>In the previous tutorial you learned about the std::vector but that's not the only kind of container that C++ provides for you. In fact, for almost any kind of data storage that you can think of, there's a container that's going to allow you to express it elegantly. In this little tutorial we're going to look at one that's really handy when you need something more specific than a vector. Maps are containers that store elements formed by a combination of a key value and a mapped value, following a specific order. If you've used Javascript or Ruby or Python you're already familiar with these and you've used them any time you want to do something like:</p>
+<h3 id="map">소개 : map이 무엇인가요?</h3>
+<!-- In the previous tutorial you learned about the std::vector but that's not the only kind of container that C++ provides for you. In fact, for almost any kind of data storage that you can think of, there's a container that's going to allow you to express it elegantly. In this little tutorial we're going to look at one that's really handy when you need something more specific than a vector. Maps are containers that store elements formed by a combination of a key value and a mapped value, following a specific order. If you've used Javascript or Ruby or Python you're already familiar with these and you've used them any time you want to do something like: -->
+
+<p>이전 튜토리얼에서는, std::vector에 대해서 배웠습니다만, C++이 제공하는 컨테이너는 그것만이 아닙니다. 사실, 여러분이 생각할 수 있는 데이터를 저장하는 어떠한 방법이라도, 그것을 우아하게 표현할 수 있는 컨테이너가 있습니다. 이 작은 튜토리얼에서는 여러분들이 vector보다 좀더 구체적인 뭔가가 필요할 때 정말 유용할 방법에 대해 살펴보고자 합니다. map은 특수한 방법에 따라 <code>키(key)와 값(value)</code>의 조합으로 이루어진 요소들을 저장하는 컨테이너입니다. 여러분중에 자바스크립트나 루비, 파이썬의 경험이 있으시다면, 이것들에 대해 이미 친숙하므로 이전에 언제든지 원하는대로 아래처럼 사용했을 것입니다:</p>
 <pre><code class="cpp">images[&quot;Portland&quot;].draw();
 </code></pre>
 
-<p>Neat right? Instead of needing to look through a vector to find the right image, you can just store it with a key that will allow you to look it later in a way that goes better with your data. If you ever find yourself doing things like this:</p>
+<!-- Neat right? Instead of needing to look through a vector to find the right image, you can just store it with a key that will allow you to look it later in a way that goes better with your data. If you ever find yourself doing things like this: -->
+
+<p>간결하죠? vector를 훑어서 적절한 이미지를 찾을 필요 없이, 잠시 후에 살펴보겠지만, 데이터를 보다 편리하게 다루는 방법인 키(key)를 이용해서 데이터를 저장할 수 있습니다. 한번이라도 이렇게 시도해본 적이 있으신가요?:</p>
 <pre><code class="cpp">int theImageIWant, otherImageIWant;
 vector&lt;ofTexture&gt; images;
 </code></pre>
 
-<p>You might want to consider a map, because what you're saying is: I need a good way of storing the indexes to objects (really, they're "keys") so that I can get them later. The big problem with storing indices is that as soon as you reorder your vector, add something to beginning, remove something, your indices don't mean anything any more. Wouldn't it be nicer to have something like:</p>
+<!-- You might want to consider a map, because what you're saying is: I need a good way of storing the indexes to objects (really, they're "keys") so that I can get them later. The big problem with storing indices is that as soon as you reorder your vector, add something to beginning, remove something, your indices don't mean anything any more. Wouldn't it be nicer to have something like: -->
+
+<p>아마도 map을 사용하는것을 고려하고 있는겁니다. 여러분이 말하려는것은 이것과 같기 때문이죠: 인덱스를 이용해서 오브젝트를 저장하는 좋은 방법이 필요해 (사실, 이게 바로 "키"입니다!) 따라서 나중에 키를 이용해서 얻을수 있어. 하지만 인덱스를 사용할때 vector를 재정렬하거나, 뭔가를 추가하기 시작할때나, 뭔가를 삭제하거나 하기 시작하면, 인덱스는 더이상 아무 의미가 없게되는 큰 문제가 생깁니다.  이렇게 하는것이 좀더 훌륭하지 않을까요?</p>
 <pre><code class="cpp">string firstImageKey = &quot;Portland&quot;, secondImageKey = &quot;Tokyo&quot;;
 map&lt;string, ofTexture&gt; images;
 </code></pre>
 
-<p>This has a few advantages: "Portland" and "Tokyo" are always going to point to the same ofTextures, no matter what you do to the map and the names are human readable: you can just read them and see what they are. Let's look at a quick example. In my ofApp.h file, I add the following:</p>
+<!-- This has a few advantages: "Portland" and "Tokyo" are always going to point to the same ofTextures, no matter what you do to the map and the names are human readable: you can just read them and see what they are. Let's look at a quick example. In my ofApp.h file, I add the following: -->
+
+<p>이 방법은 몇몇 장점을 가집니다: "Portland"와 "Tokyo"는 map을 사용하여 무슨짓을 하더라도, 이름이 사람이 읽을 수 있기 때문에 항상 같은 ofTexture를 가리킬 것입니다: 그냥 읽으면 그게 뭔지를 알 수 있죠. 아주 간단한 예제를 살펴보도록 합니다. ofApp.h파일에서, 아래와 같이 추가하였습니다.</p>
 <pre><code class="cpp">map&lt;string, ofImage&gt; images;
 </code></pre>
 
-<p>This says: I will be storing images with a key that is a string. In my cpp file, I can do the following:</p>
+<!-- This says: I will be storing images with a key that is a string. In my cpp file, I can do the following: -->
+
+<p>이 말은 "이미지들을 문자열 키로 저장하겠다."라고 하는것입니다. 
+cpp파일에서, 이렇게 작성할 수 있습니다:</p>
 <pre><code class="cpp">void ofApp::setup(){
-    // make 2 images to store
+    // 저장하기 위해 2개의 이미지를 만든다 
     ofImage pImage;
     pImage.loadImage(&quot;portland.jpg&quot;);
 
     ofImage tImage;
     tImage.loadImage(&quot;tokyo.jpg&quot;);
 
-    // now store them with nice name
+    // 이제 이것들을 훌륭한 이름으로 저장한다
     images[&quot;Portland&quot;] = pImage;
     images[&quot;Tokyo&quot;] = tImage;
 }
 
 void ofApp::draw(){
-    // now I can access them with just their names:
+    // 이제, 이름으로 이미지들에 접근할 수 있다.
     images[&quot;Portland&quot;].draw(0, 0, 100, 100);
     images[&quot;Tokyo&quot;].draw(100, 0, 100, 100);
 }
 </code></pre>
 
-<p>You can see how, though this isn't the most powerful example of that, that it might be really nice to be able to keep track of things by something concrete that will keep it's "location" no matter what. So, in a general sense in a map, the key values are generally used to sort and uniquely identify the elements, while the mapped values store the content associated to this key. What kinds of things can you use as a value? Anything. Really, anything can be a value. You will want to be careful storing pointers, but unlike a vector, once inserted into a map objects don't move around even if other elements are added or removed, however, storing pointers is good, especially if you're working with lots of textures or other large data objects. Make sure you don't invalidate your pointers (i.e. delete the object that is being pointed to) and you'll be good to go.</p>
-<h3 id="insert-values-into-a-map">Insert values into a  map</h3>
+<!-- You can see how, though this isn't the most powerful example of that, that it might be really nice to be able to keep track of things by something concrete that will keep it's "location" no matter what. So, in a general sense in a map, the key values are generally used to sort and uniquely identify the elements, while the mapped values store the content associated to this key. What kinds of things can you use as a value? Anything. Really, anything can be a value. You will want to be careful storing pointers, but unlike a vector, once inserted into a map objects don't move around even if other elements are added or removed, however, storing pointers is good, especially if you're working with lots of textures or other large data objects. Make sure you don't invalidate your pointers (i.e. delete the object that is being pointed to) and you'll be good to go. -->
+
+<p>비록 이것이 map의 아주 강력한 예제가 아니지만, 아주 굳건하게 데이터의 "위치"를 유지할 수 있다는 것이 정말 훌륭하다는 것을 알 수 있습니다. map에서는 이 키와 함께 매핑된 값이 저장되므로, 정렬이나 요소를 확인할 때에 대개 키값이 사용됩니다. 값으로 어떠한 것들이 가능하냐구요? 뭐든지 가능합니다. 정말로 뭐든지 값으로 사용될 수 있습니다. 포인터를 저장할때에는 조심해야겠지만, vector와 달리, 한번 map에 삽입된 오브젝트는 다른 요소들이 추가되거나 삭제되더라도 움직이지 않습니다. 하지만 포인터를 저장하는것도 좋습니다. 특히 엄청난 양의 텍스쳐나 다른 거대한 데이터 오브젝트들을 다룰 때 말이죠. 포인터를 확실히 유효하게 유지한다면 (예를들어 가리키고 있는 오브젝트를 지워준다든가 하여서) map에 포인터를 저장해도 좋습니다.</p>
 <p><a name='assign'></a></p>
-<p>As far as adding things goes, doing this:</p>
+<h3 id="map_1">map에 값 삽입하기</h3>
+<!-- As far as adding things goes, doing this: -->
+
+<p>뭔가를 추가할려면, 이렇게 합니다.</p>
 <pre><code class="cpp"> map[key] = value;
 </code></pre>
 
-<p>isn't the only way that you'll see objects added to a map. Each element in a map is a pair. A pair is composed by to parts, a key and a value.
-A declaration for a pair just looks like the declaration of the map itself:</p>
+<!-- isn't the only way that you'll see objects added to a map. Each element in a map is a pair. A pair is composed by to parts, a key and a value. -->
+
+<!-- A declaration for a pair just looks like the declaration of the map itself: -->
+
+<p>객체를 볼 수 있는 유일한 방법(키)이 맵에 추가되는것이 아닙니다. map안의 각 요소들은 쌍으로 이루어져 있습니다. 쌍은 키, 값 부분의 조합으로 이루어져 죠. 
+이 쌍의 선언은 그저 map 자체의 선언처럼 보여집니다.</p>
 <pre><code class="cpp">typedef pair&lt;const Key, T&gt; value_type;
 </code></pre>
 
-<p>Not particularly revelatory yet, but just wait. 
-Considering this, adding elements in a map means adding pairs into it. There
-are different ways to do this in c++. Let's instantiate 3 new cities</p>
+<!-- Not particularly revelatory yet, but just wait.  -->
+
+<!-- Considering this, adding elements in a map means adding pairs into it. There -->
+
+<!-- are different ways to do this in c++. Let's instantiate 3 new cities -->
+
+<p>아직 특별하게 나타나진 않는군요, 하지만 잠시 기다려봅시다.
+map에 요소를 추가하는것이 map에 쌍을 추가한다고 생각해보자구요. 
+C++에서는 이를 위해 다른 방법을 사용합니다. 3개의 도시를 인스턴스화 해봅시다.</p>
 <pre><code class="cpp">ofImage bImage;
 bImage.loadImage(&quot;Berlin.jpg&quot;);
 
@@ -201,88 +228,127 @@ ofImage pImage;
 pImage.loadImage(&quot;Paris.jpg&quot;);
 </code></pre>
 
-<p>How do we add them into the map? One of the most common is to use the <code>insert</code> method combined with <code>make_pairs</code>.</p>
+<!-- How do we add them into the map? One of the most common is to use the `insert` method combined with `make_pairs`. -->
+
+<p>이것들을 어떻게 map에 추가할까요? 가장 일반적인 방법중 하나는 <code>make_pairs</code>와 <code>insert</code>메소드의 조합을 사용하는 것입니다.</p>
 <pre><code class="cpp">images.insert(make_pair(&quot;Berlin&quot;, bImage));
 </code></pre>
 
-<p>We can also use <code>insert</code> and <code>pair</code></p>
+<!-- We can also use `insert` and `pair` -->
+
+<p>또한 <code>insert</code>와 <code>pair</code>를 사용할 수 있습니다.</p>
 <pre><code class="cpp">images.insert(pair&lt;string, ofTexture&gt;(&quot;London&quot;, lImage));
 </code></pre>
 
-<p>or we can use the std::pair construct</p>
+<!-- or we can use the std::pair construct -->
+
+<p>또는 std::pair 구조를 사용할 수 있습니다.</p>
 <pre><code class="cpp">images.insert(map&lt;string, ofTexture&gt;::value_type(&quot;Paris&quot;, pImage));
 </code></pre>
 
 <p><a name='erase'></a></p>
-<h3 id="deleting-element-from-a-map">Deleting element from a map</h3>
-<p>To delete an element from a map we use <code>erase</code></p>
+<h3 id="map_2">map에서 요소 삭제하기</h3>
+<!-- To delete an element from a map we use `erase` -->
+
+<p>map에서 요소를 살제할려면, <code>erase</code>를 사용합니다.</p>
 <pre><code class="cpp">images.erase(&quot;London&quot;);
 </code></pre>
 
-<p>To completely empty the map, we use <code>clear</code></p>
+<!-- To completely empty the map, we use `clear` -->
+
+<p>map을 완전히 비울려면, <code>clear</code>를 사용합니다.</p>
 <pre><code class="cpp">images.clear();
 </code></pre>
 
 <p><a name='iteration'></a></p>
-<h3 id="iterating-through-a-map">Iterating through a map</h3>
-<p>So, we know how to put things into a map and get them out, what about looking through them? You can't just loop through them with an int like a vector, so you need to use an iterator. So, let's put pairs and even maps on hold for just a moment and talk iterators because they make maps a lot more usable:</p>
-<p>The iterator is the C++ std version of a pointer. You use it to point to location in a container, kind of the same way that with a vector you might keep an index around that references a place in the vector that you're interested in, an iterator is like that index, but more so, it is that object in the vector. All containers have a begin() function, which returns an iterator pointing to the beginning of the container (the first element) and a function end() that returns an iterator corresponding to having reached the end of the container. Let's make a for loop with an iterator to see how they work a little better:</p>
-<pre><code class="cpp">map&lt;float,string&gt;::iterator it; // make the iterator, say it's going to iterate over a map&lt;float, string&gt;
-for ( it = aMap.begin(); // say the iterator should point to the beginning of a map called &quot;aMap&quot;
-      it != aMap.end();  // say let's stop when we get to the end aMap
-      ++it) {            // increment the iterator
+<h3 id="map_3">map을 훑기</h3>
+<!-- So, we know how to put things into a map and get them out, what about looking through them? You can't just loop through them with an int like a vector, so you need to use an iterator. So, let's put pairs and even maps on hold for just a moment and talk iterators because they make maps a lot more usable: -->
+
+<p>자, 이제 우리는 map에 뭔가를 넣거나 얻어올 수 있습니다. 하지만 그것을 훑으며 살펴볼려면 어떻게 해야하죠? vector처럼 정수를 사용하여 훑을수는 없습니다. 따라서 iterator를 사용해야 합니다. 자, 잠시 map과 키/값의 쌍은 잠시 놓아두고 iterator에 대해서 애기해보도록 하죠. 왜냐하면 iterator는 map을 보다 더 쉽게 사용할수 있게 해주기 때문이죠:</p>
+<!-- The iterator is the C++ std version of a pointer. You use it to point to location in a container, kind of the same way that with a vector you might keep an index around that references a place in the vector that you're interested in, an iterator is like that index, but more so, it is that object in the vector. All containers have a begin() function, which returns an iterator pointing to the beginning of the container (the first element) and a function end() that returns an iterator corresponding to having reached the end of the container. Let's make a for loop with an iterator to see how they work a little better: -->
+
+<p>iterator는 C++의 std 버전 포인터입니다. 이것을 컨테이너에서 위치를 가리키도록 사용하고 있죠. 마치 vector에서 인덱스로 관심있어하는 레퍼런스를 추적하듯이 말이죠. iterator는 인덱스 같은 것입니다만, 이 녀석은 그보다 더한 vector 내의 오브젝트 입니다. 모든 컨테이너는 컨테이너의 시작(첫번째 요소)을 가리키고 있는 iterator를 리턴하는 begin()함수와, 컨테이너의 끝에 해당하는 iterator를 리턴하는 end()함수를 가지고 있습니다. 한번 for 반복문과 iterator로 코드를 상성하여 얼마나 이것이 조금 더 나은지 살펴봅시다.</p>
+<pre><code class="cpp">map&lt;float,string&gt;::iterator it; // iterator를 만든다. map&lt;float, string&gt;을 훑을것이라고 말한다.
+for ( it = aMap.begin(); // iterator가 &quot;aMap&quot;이라 불리는 map의 첫부분을 가리키도록 한다 
+      it != aMap.end();  // aMap의 끝에 다다르면 멈추도록 한다.
+      ++it) {            // iterator를 증가시킨다
 }
 </code></pre>
 
-<p>The iterator for a vector of ofImages would look like this: <code>vector&lt;ofImage&gt;::iterator</code> while an iterator for a map with string keys and ofMatrix4x4 values would be: <code>map&lt;string, ofMatrix4x4&gt;::iterator</code>. You can move an iterator forward with ++ and backward with --.Interesting thing: you can move an iterator with two positions with advance(it, 2) or twenty with advance(it, 20), though you'll probably never need to be able to do that. Ok, back to maps, let's iterate over our map to draw them to the screen:</p>
+<!-- The iterator for a vector of ofImages would look like this: `vector<ofImage>::iterator` while an iterator for a map with string keys and ofMatrix4x4 values would be: `map<string, ofMatrix4x4>::iterator`. You can move an iterator forward with ++ and backward with --.Interesting thing: you can move an iterator with two positions with advance(it, 2) or twenty with advance(it, 20), though you'll probably never need to be able to do that. Ok, back to maps, let's iterate over our map to draw them to the screen: -->
+
+<p>ofimage의 vector를 위한 iterator는 이와 같을 것입니다: <code>vector&lt;ofImage&gt;::iterator</code>. 문자열 키와 ofMatrix4x4값으로 이루어진 map을 위한 iterator는 이와 같습니다: <code>map&lt;string, ofMatrix4x4&gt;::iterator</code>. iterator를 앞으로 이동할려면 ++를, 반대로 이동할려면 --를 사용합니다. 흥미로운 사실은: iterator를 두단계만큼 앞으로 이동할려면 (it,2), 앞으로 20만큼 이동할려면 (it, 20)을 사용할 수 있다는겁니다. 굳이 절대 이렇게 할 필요가 없지만 말이죠. 좋습니다, 다시 map으로 돌아와서, 우리의 map을 iterator로 훑어서 화면에 그것들을 그려봅시다:</p>
 <pre><code class="cpp">void ofApp::draw(){
     int xpos = 0;
     for (map&lt;string, ofTexture&gt;::iterator it=cities.begin(); it!=cities.end(); ++it){
-        // it-&gt;first contains the key
+        // it-&gt;first 는 키를 담고 있다.
         cout &lt;&lt; &quot; this is the key &quot; &lt;&lt; it-&gt;first &lt;&lt; endl;
-        // it-&gt;second contains the value
+        // it-&gt;second 는 값을 담고 있다.
         it-&gt;second.draw(xpos, 0, 100, 100);
         xpos+= 100;
     }
 }
 </code></pre>
 
-<p>So what's that iterator pointing to? Well, a pair, in this case a pair of <code>string,ofTexture</code>, like:</p>
+<!-- So what's that iterator pointing to? Well, a pair, in this case a pair of `string,ofTexture`, like: -->
+
+<p>자, 저 iterator가 무엇을 가리기고 있지요? 쌍이죠, 위의 경우, <code>string, ofTextre</code>입니다. 이와 같이요 :</p>
 <pre><code class="cpp">pair&lt;string, ofTexture&gt; p;
 </code></pre>
 
-<p>C++ 11 introduce a shorthand to iterate through a map, <code>auto</code>. We can use it like this:</p>
+<!-- C++ 11 introduce a shorthand to iterate through a map, `auto`. We can use it like this: -->
+
+<p>C++ 11에서는 map을 훑는 단축방법인 <code>auto</code>를 제공합니다. 이런식으로 사용할 수 있습니다:</p>
 <pre><code class="cpp">for (auto&amp; pic : images )
   cout &lt;&lt; pic.first &lt;&lt; endl;
 </code></pre>
 
-<p>Please note that we have used <code>pic.first</code> and not <code>pic-&gt;first</code>. That's beacause
-<code>pic</code> is a reference to the pair(note the <code>&amp;</code>), not a pointer like in the
-previous example. In this case, we can iterate through the map and change the
-value of the maps. But what if we want to simply read the values from the map,
-without changing them? In this case, we use the keyword <code>constant</code>. This
-keyword makes sure that no values in the map will be touched</p>
+<!-- Please note that we have used `pic.first` and not `pic->first`. That's beacause -->
+
+<!-- `pic` is a reference to the pair(note the `&`), not a pointer like in the -->
+
+<!-- previous example. In this case, we can iterate through the map and change the -->
+
+<!-- value of the maps. But what if we want to simply read the values from the map, -->
+
+<!-- without changing them? In this case, we use the keyword `constant`. This -->
+
+<!-- keyword makes sure that no values in the map will be touched -->
+
+<p>여기서 <code>pic-&gt;first</code>가 아닌 <code>pic.first</code>를 사용하였다는 것을 기억하세요. 이는 앞의 예제에서처럼 포인터가 아닌, <code>pic</code>이 쌍을 참조(<code>&amp;</code>입니다)하고 있기 때문입니다.
+이 경우, map을 훑으면서 map의 값을 변경할 수 있습니다. 
+하지만 만약 map에서 값을 변경하는것이 아니라, 단순히 값을 읽기를 원한다면요? 
+이러한 경우 <code>constant</code>키워드를 사용합니다. 이 키워드를 사용하면 어떠한 map의 값들도 변경되지 않습니다.</p>
 <pre><code class="cpp">for (const auto&amp; pic : images )
   cout &lt;&lt; pic.first &lt;&lt; endl;
 </code></pre>
 
 <p><a name='find'></a></p>
-<h3 id="finding-element-in-a-map">Finding element in a map</h3>
-<p>Whic could be the method name to search elements in a map if not <code>find</code>?</p>
+<h3 id="map_4">map에서 요소 찾기</h3>
+<!-- Which could be the method name to search elements in a map if not `find`? -->
+
+<p><code>find</code>가 아니라면 어떤 메소드 이름이 map에서 요소를 검색하는 키워드로 사용될까요?</p>
 <pre><code class="cpp">  if (cities.find(&quot;Berlin&quot;) != cities.end())
-    cout &lt;&lt; it-&gt;first &lt;&lt; &quot; founded!&quot; &lt;&lt;endl;
+    cout &lt;&lt; it-&gt;first &lt;&lt; &quot; founded!&quot; &lt;&lt; endl;
   else
     cout &lt;&lt; &quot;city not found&quot; &lt;&lt; endl;
 </code></pre>
 
-<p>Notice the end() call there? That's because find() is actually returning an iterator, so if the element is inside the map, we get an iterator to it and if it isn't then we can an iterator that's pointing to the end of the iterator. There's a few other methods that the map provides that we'll list out in slightly abbreviated fashion:</p>
-<p><a name='map_of_objects'></a></p>
-<h3 id="storing-object-in-a-map">Storing object in a map</h3>
-<p>What kinds of things can you use as a key in a map? Well, pretty much all the things you probably want to: strings, floats, stuff like that. There are some limits to this though, you might try doing the following:</p>
+<!-- Notice the end() call there? That's because find() is actually returning an iterator, so if the element is inside the map, we get an iterator to it and if it isn't then we can an iterator that's pointing to the end of the iterator. There's a few other methods that the map provides that we'll list out in slightly abbreviated fashion: -->
+
+<p>end()가 호출되는걸 보셨죠? 이는 find()역시 실제로 iterator를 리턴하기 때문입니다. 따라서 만약 map내에 요소가 있다면 그것을 가리키는 iterator를 얻을것이며, 만약  그렇지 않다면, iterator의 끝을 가리키는 iterator를 얻게 될 것입니다. map에서 제공하는 다른 메소드들은 약간 축약된 리스트로 살펴보겠습니다:</p>
+<p><a name='map_of_objects'></a>
+<!-- ### Storing object in a map --></p>
+<h3 id="map_5">map에 오브젝트 저장하기</h3>
+<!-- What kinds of things can you use as a key in a map? Well, pretty much all the things you probably want to: strings, floats, stuff like that. There are some limits to this though, you might try doing the following: -->
+
+<p>map에서 키를 사용하여 어떤 작업들을 할 수 있을까요? 흠. 분명 여러분이 하고싶은 모든걸 할수 있을것입니다: 문자열, float, 같은것들요. 비록 약간의 제약이 있지만, 아래와 같은 것들을 시도할 수 있을겁니다:</p>
 <pre><code class="cpp">map&lt;ofVec2f, string&gt; locations;
 </code></pre>
 
-<p>And this will throw a pretty obscure error, something like: "/usr/include/c++/4.2.1/bits/stl_function.h:227:20: error: invalid operands to binary expression ('const ofVec2f' and 'const ofVec2f')". This actually makes sense because the idea of a "less than" vector is a bit odd. There's a mathematical definition of it, but it doesn't make much common sense and the common sense one doesn't make much sense mathematically and that's not actually the point. The point is, anything that has a "&lt;" operator can be used as a key. Let's make one:</p>
+<!-- And this will throw a pretty obscure error, something like: "/usr/include/c++/4.2.1/bits/stl_function.h:227:20: error: invalid operands to binary expression ('const ofVec2f' and 'const ofVec2f')". This actually makes sense because the idea of a "less than" vector is a bit odd. There's a mathematical definition of it, but it doesn't make much common sense and the common sense one doesn't make much sense mathematically and that's not actually the point. The point is, anything that has a "<" operator can be used as a key. Let's make one: -->
+
+<p>그리고 이것은 상당히 애매한 에러를 내밷을 것입니다, 이러한 것들처럼요: "/usr/include/c++/4.2.1/bits/stl_function.h:227:20: error: invalid operands to binary expression ('const ofVec2f' and 'const ofVec2f')". 이것은 사실 vector에서 "보다 작은(&lt;)" 의 개념이 다소 이상하기 때문에 그렇습니다. 이것에 대한 수학적 정의가 있습니다만, 상식적으로 맞지 않고, 수학적으로도 맞지 않은 상식이죠. 하지만 이게 중요한게 아닙니다.  중요한 것은, "&lt;" 연산자같은 것들이 키로 사용될 수 있다는 점입니다. 하나를 만들어보죠:</p>
 <pre><code class="cpp">class vec2Key
 {
 
@@ -308,7 +374,9 @@ public:
 };
 </code></pre>
 
-<p>Note that &lt; operator. This is key because it tells the map how to organize all the values that it's containing so that it's relatively quick to look-up needed values. Maps are usually a Red-Black Tree underneath and for those interested in what that is, <a href="http://en.wikipedia.org/wiki/Red%E2%80%93black_tree">knock yourself out</a>. Ok, so we've got a key object that we can use, let's go go ahead and use it:</p>
+<!-- Note that < operator. This is key because it tells the map how to organize all the values that it's containing so that it's relatively quick to look-up needed values. Maps are usually a Red-Black Tree underneath and for those interested in what that is, [knock yourself out](http://en.wikipedia.org/wiki/Red%E2%80%93black_tree). Ok, so we've got a key object that we can use, let's go go ahead and use it: -->
+
+<p>&lt; 연산자를 봅시다. 이것은 map이 갖고 있는 모든 값들을 어떻게 관리할지 알려주기 때문에 키입니다. 따라서 값들을 상대적으로 빨리 훑을 수 있습니다. map은 일반적으로 하는 역할때문에 레드-블랙 트리의 종류라고 할 수 있습니다.(<a href="https://ko.wikipedia.org/wiki/%EB%A0%88%EB%93%9C-%EB%B8%94%EB%9E%99_%ED%8A%B8%EB%A6%AC">한번 읽어보세요:레드-블랙트리</a>). 좋습니다. 우리에겐 사용할수 있는 키 오브젝트를 갖고 있으니, 계속 진행하여 사용해봅시다:</p>
 <pre><code class="cpp">vec2Key k1(100, 200, 1);
 vec2Key k2(100, 300, 1);
 vec2Key k3(100, 400, 1);
@@ -320,11 +388,15 @@ stringToLocation[k2] = &quot;second&quot;;
 stringToLocation[k3] = &quot;third&quot;;
 </code></pre>
 
-<p>Alright, let's test it:</p>
-<pre><code class="cpp">cout &lt;&lt; stringToLocation[vec2Key(100, 300)] &lt;&lt; endl; // prints &quot;second&quot;, all good
+<!-- Alright, let's test it: -->
+
+<p>좋습니다, 테스트해봅시다:</p>
+<pre><code class="cpp">cout &lt;&lt; stringToLocation[vec2Key(100, 300)] &lt;&lt; endl; // &quot;second&quot;가 출력됩니다. 잘 되고 있군요
 </code></pre>
 
-<p>Anything that knows whether it's greater than something else can be put into a list. Let's say we want to look this up in a fuzzy kind of way, because we're doing a weird quadtree implementation or something like that, well we can make that &lt; operator do a lot for us. Let's give our vector a slightly more fluid comparison operator:</p>
+<!-- Anything that knows whether it's greater than something else can be put into a list. Let's say we want to look this up in a fuzzy kind of way, because we're doing a weird quadtree implementation or something like that, well we can make that < operator do a lot for us. Let's give our vector a slightly more fluid comparison operator: -->
+
+<p>리스트에 추가되는 그것이 다른 것들보다 클지 작을지는 아무도 모릅니다. 현재 우리가 괴상한 쿼드트리(역자 주:자식노드가 4개인 트리)같은 것을 하고 있으로, 애매한 방법으로 살펴보도록 하죠. &lt; 연산자가 좀더 많은 일을 할 수 있도록 만들 수 있습니다. 우리의 vector에게 좀더 유동적으로 비교하는 연산자를 제공해봅시다:</p>
 <pre><code class="cpp">    bool operator &lt; ( const vec2Key&amp; other) const
     {
         if ( fabs(x - other.x) &lt; 0.1 ) {
@@ -335,17 +407,25 @@ stringToLocation[k3] = &quot;third&quot;;
     }
 </code></pre>
 
-<p>Now:</p>
-<pre><code class="cpp"> cout &lt;&lt; stringToLocation[vec2Key(100.01, 299.99)] &lt;&lt; endl; // returns &quot;second&quot; because 100,300 is both &lt; 0.1 away
+<p>이제:</p>
+<pre><code class="cpp"> cout &lt;&lt; stringToLocation[vec2Key(100.01, 299.99)] &lt;&lt; endl; // 100, 300은 모두 &lt; 0.1만큼 차이가 나므로 &quot;second&quot;를 리턴합니다.
 </code></pre>
 
-<p><a name='multimap'></a></p>
-<h3 id="what-is-a-multimap">What is a multimap?</h3>
-<p>In a <code>map</code> each key is unique, that means that is not possible to have in our
-previous map <code>map&lt;string, ofTexture&gt; images</code> two city's image with the same
-name as key, like "London".
-In a <code>multimap</code> we do not have this rule, a <code>multimap</code> can contains pair with
-the same key. Example:</p>
+<p><a name='multimap'></a>
+<!-- ### What is a multimap? --></p>
+<h3 id="multimap">multimap이란 무엇인가요?</h3>
+<!-- In a `map` each key is unique, that means that is not possible to have in our -->
+
+<!-- previous map `map<string, ofTexture> images` two city's image with the same -->
+
+<!-- name as key, like "London". -->
+
+<!-- In a `multimap` we do not have this rule, a `multimap` can contains pair with -->
+
+<!-- the same key. Example: -->
+
+<p><code>map</code>의 각 키는 유일합니다. 이는 즉 앞에서 봤던 map <code>map&lt;string, ofTexture&gt; images</code>에서 두 도시의 image가 같은 이름의 키를 갖는 것이 불가능하다는 의미입니다. "London"과 같이요.
+<code>multimap</code>에서는, 이러한 규칙이 없습니다. <code>multimap</code>은 같은 키로 이루어진 쌍을 포함할 수 있습니다. 예를 보죠:</p>
 <pre><code class="cpp">  multimap&lt;string, int&gt; coldestCities;
   coldestCities.insert(make_pair(&quot;moskow&quot;,2015));
   coldestCities.insert(make_pair(&quot;chicago&quot;,2014));
@@ -360,15 +440,28 @@ the same key. Example:</p>
     cout &lt;&lt; cityYear.first&lt;&lt; &quot;year: &quot;&lt;&lt; cityYear.second &lt;&lt; endl;
 </code></pre>
 
-<p>We use a map whan we want that our keys appear only once, we use a multimap
-when this detail is not important.</p>
-<p><a name="usefull"></a></p>
-<h3 id="other-usefull-methods">Other Usefull methods</h3>
-<p><code>empty</code> - if the container is empty returns true, otherwise returns false</p>
-<p><code>size</code> - returns the number of elements in the map</p>
-<p><code>lower_bound</code> - This gives you back an iterator to the first element not less than the given value, so:
-<code>upper_bound</code> - returns an iterator to the first element greater than a certain value </p>
-<p>As an example of these two:</p>
+<!-- We use a map whan we want that our keys appear only once, we use a multimap -->
+
+<!-- when this detail is not important. -->
+
+<p>map을 사용할때에는 키는 한번만 등장하였지만, multimap을 사용할때에는 이러한 디테일은 필요없습니다.</p>
+<p><a name="usefull"></a>
+<!-- ### Other Usefull methods --></p>
+<h3 id="_1">다른 유용한 메소드들</h3>
+<!-- `empty` - if the container is empty returns true, otherwise returns false -->
+
+<p><code>empty</code> - 컨테이너가 비어있으면 true를, 그렇지 않으면 false를 리턴합니다.</p>
+<!-- `size` - returns the number of elements in the map -->
+
+<p><code>size</code> - map의 요소들의 갯수를 리턴합니다.</p>
+<!-- `lower_bound` - This gives you back an iterator to the first element not less than the given value, so: -->
+
+<p><code>lower_bound</code> - 이는 추어진 값보다 작지 않은 요소(주어진 값)로 iterator를 되돌립니다.
+<!-- <code>upper_bound</code> - returns an iterator to the first element greater than a certain value  -->
+<code>upper_bound</code> - 주어진 값보다 큰 첫번째 요소로 iterator를 리턴합니다.</p>
+<!-- As an example of these two: -->
+
+<p>이 두 예제는 아래와 같습니다:</p>
 <pre><code class="cpp">map&lt;float, string&gt; floatToString;
 
 floatToString[3.14] = &quot;PI&quot;;
@@ -383,6 +476,8 @@ map&lt;float, string&gt;::iterator ub = floatToString.upper_bound(2.8);
 </code></pre>
 
 <p>And that concludes our adventures with the std::map. For a more complete explanation of the map, check <a href="en.cppreference.com/w/cpp/container/map">cppreference</a>. Go forth and use them where appropriate</p>
+<p>이로써 std::map에 대한 탐험을 마쳤습니다. map에 관한 완성된 설명을 원하신다면, <a href="en.cppreference.com/w/cpp/container/map">cppreference</a>를 일거보십시오. 계속 전진하시고, 적절한 곳에 사용해보십시오.</p>
+<p><small>역자 주 : stl::map과 관련된 자료는 한빛미디어서에 제공하는 <a href="http://www.hanbit.co.kr/network/view.html?bi_id=1618">C++ STL::map</a>에서도 보실 수 있습니다. <br/> 혹은 소프트웨어공학연구소에서 제공되는 <a href="http://soen.kr/lecture/ccpp/cpp4/cpp4.htm">C++고급과정</a>중에서 41장-2절의 맵 부분을 참고하실 수도 있습니다.</small></p>
 
     		</div>
             
@@ -395,13 +490,13 @@ map&lt;float, string&gt;::iterator ub = floatToString.upper_bound(2.8);
 
 
   
-Wednesday, 06 January 2016 11:14:34 UTC
+Wednesday, 06 January 2016 14:48:59 UTC
 에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
 
-442faa3e8826845409f383b38af722aab39c4fc7
+d1fadbb988ea8eecc1b74c2bf980ad43f094d16e
 ">
 
-442faa3e8826845409f383b38af722aab39c4fc7
+d1fadbb988ea8eecc1b74c2bf980ad43f094d16e
 </a>
 
 <!--br/>RSS feeds for <a href="/feed">Entries</a-->

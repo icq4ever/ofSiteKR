@@ -303,7 +303,7 @@ iterator는 연속된 요소들(가령 vector와 같은)을 훑는데 도움을 
 
 <!-- Note that when using iterators we want to test that our iterator ( *it* in this case) is not equal to *end()* (it != particles.end()) rather than > test. *end()* signifies one element beyond the last. This is important because an iterator cannot be incremented beyond *end()* or bad things can happen. -->
 
-<p>iterator를 사용할 때, 우리의 iterator(지금의 경우 <em>it</em>)를 &gt;가 아닌 <em>end()</em>와 같지 않다(it != particles.end())라고 했다는것을 기억하세요. <em>end()</em>는 마지막 너머의 요소를 의미합니다. 이는 매우 중요한데, iterator 는 <em>end()</em>너머로 증가될 수 없기 때문입니다. 만약 너머로 증가할 경우 안좋은 상황이 발생합니다.</p>
+<p>iterator를 사용할 때, 우리의 iterator(지금의 경우 <em>it</em>)를 &gt;가 아닌 <em>end()</em>와 같지 않다(it != particles.end())라고 했다는것을 기억하세요. <em>end()</em>는 마지막 너머의 요소를 의미합니다. 이는 매우 중요한데, iterator 는 <em>end()</em> 너머로 증가될 수 없기 때문입니다. 만약 너머로 증가할 경우 안좋은 상황이 발생합니다.</p>
 <!-- In a while loop the structure would be: -->
 
 <p>while 반복문 구조에서는 이렇게 사용됩니다:</p>
@@ -419,8 +419,9 @@ iterator는 연속된 요소들(가령 vector와 같은)을 훑는데 도움을 
 <hr />
 <p><a name="vectorsobjects"></a></p>
 <h2 id="vector_5">오브젝트의 vector</h2>
-<p>As indicated in the above examples, it is quite common to create vectors of objects. 
-위의 예제에서 지적했듯이, 오브젝트의 vector를 생성하는것은 매우 일반적입니다.</p>
+<!-- As indicated in the above examples, it is quite common to create vectors of objects.  -->
+
+<p>위의 예제에서 지적했듯이, 오브젝트의 vector를 생성하는것은 매우 일반적입니다.</p>
 <pre><code class="cpp">    vector&lt;Particle&gt; particles;
 </code></pre>
 
@@ -590,6 +591,8 @@ iterator는 연속된 요소들(가령 vector와 같은)을 훑는데 도움을 
     }
 </code></pre>
 
+<p><small>역자 주 : stl:: vector와 관련된 자료는 한빛미디어에서 제공하는 <a href="http://www.hanbit.co.kr/network/view.html?bi_id=1606">C++ STL::vector</a>에서도 보실 수 있습니다. 혹은 소프트웨어공학연구소에서 제공되는 <a href="http://soen.kr/lecture/ccpp/cpp4/cpp4.htm">C++고급과정</a>중에서 40장-1절의 벡터 부분을 참고하실 수도 있습니다.</small></p>
+
     		</div>
             
         </div><!-- End Page Wide -->      
@@ -601,13 +604,13 @@ iterator는 연속된 요소들(가령 vector와 같은)을 훑는데 도움을 
 
 
   
-Wednesday, 06 January 2016 11:14:34 UTC
+Wednesday, 06 January 2016 14:48:59 UTC
 에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
 
-442faa3e8826845409f383b38af722aab39c4fc7
+d1fadbb988ea8eecc1b74c2bf980ad43f094d16e
 ">
 
-442faa3e8826845409f383b38af722aab39c4fc7
+d1fadbb988ea8eecc1b74c2bf980ad43f094d16e
 </a>
 
 <!--br/>RSS feeds for <a href="/feed">Entries</a-->
