@@ -520,3 +520,4 @@ iterator를 사용하는 ofApp.cpp
     }
 ~~~~
 
+<small>역자 주 : stl:: vector와 관련된 자료는 한빛미디어에서 제공하는 [C++ STL::vector](http://www.hanbit.co.kr/network/view.html?bi_id=1606)에서도 보실 수 있습니다. 혹은 소프트웨어공학연구소에서 제공되는 [C++고급과정](http://soen.kr/lecture/ccpp/cpp4/cpp4.htm)중에서 40장-1절의 벡터 부분을 참고하실 수도 있습니다.</small>
