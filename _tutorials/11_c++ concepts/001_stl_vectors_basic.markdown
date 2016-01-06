@@ -209,9 +209,9 @@ iterator를 사용하여 vector를 훑으며 반복하기:
 ~~~~
 
 <!-- Note that when using iterators we want to test that our iterator ( *it* in this case) is not equal to *end()* (it != particles.end()) rather than > test. *end()* signifies one element beyond the last. This is important because an iterator cannot be incremented beyond *end()* or bad things can happen. -->
-iterator를 사용할 때, 우리의 iterator(지금의 경우 *it*)를 >가 아닌 *end()*와 같지 않다(it != particles.end())라고 했다는것을 기억하세요. *end()*는 마지막 너머의 요소를 의미합니다. 이는 매우 중요한데, iterator 는 *end()*너머로 증가될 수 없기 때문입니다. 만약 너머로 증가할 경우 안좋은 상황이 발생합니다.
+iterator를 사용할 때, 우리의 iterator(지금의 경우 *it*)를 >가 아닌 *end()*와 같지 않다(it != particles.end())라고 했다는것을 기억하세요. *end()*는 마지막 너머의 요소를 의미합니다. 이는 매우 중요한데, iterator 는 *end()* 너머로 증가될 수 없기 때문입니다. 만약 너머로 증가할 경우 안좋은 상황이 발생합니다.
 
-
+ 
 <!-- In a while loop the structure would be: -->
 while 반복문 구조에서는 이렇게 사용됩니다:
 
@@ -338,7 +338,7 @@ vector의 범위와 boolean 함수가 *sort*함수로 전달됩니다:
 <a name="vectorsobjects"></a>
 ## 오브젝트의 vector
 
-As indicated in the above examples, it is quite common to create vectors of objects. 
+<!-- As indicated in the above examples, it is quite common to create vectors of objects.  -->
 위의 예제에서 지적했듯이, 오브젝트의 vector를 생성하는것은 매우 일반적입니다.
 
 ~~~~{.cpp}
