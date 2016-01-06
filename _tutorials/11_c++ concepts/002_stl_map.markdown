@@ -16,7 +16,7 @@ author: Joshua Noble
 6. [map에 오브젝트 저장하기](#map_of_objects)
 7. [multimap이란 무엇인가요?](#multimap)
 8. [다른 유용한 메소드들](#usefull)
-9. [추가 참고 자료](#more_resource)]
+9. [추가 참고 자료](#more_resource)
 
 <a name="intro"></a>
 ### 소개 : map이 무엇인가요?
