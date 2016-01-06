@@ -1,7 +1,7 @@
 ---
 date: 2012/03/20 20:18:00
-title: openFrameworks 007 Presentations
-summary: This collection of keynotes documents the majority of the openFrameworks core, and was prepared for a FreakDay meeting in Antwerp.
+title: 오픈프레임웍스 007 프리젠테이션
+summary: 이 키노트 모음은 오픈프레임웍스의 주요 핵심문서들로, Antiwerp에서 열린 FreakDay 모임을 위해 작성된 것입니다.
 author: roxlu
 author_site: http://www.roxlu.com/
 ---
