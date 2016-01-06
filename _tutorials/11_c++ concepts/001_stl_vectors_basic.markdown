@@ -25,7 +25,7 @@ C++ vector는 (배열과 같은)컨테이너의 타입으로, 다양한 요소�
 
 추가적인 자료들:
 
-<a href="http://www.cplusplus.com/reference/vector/vector/">C++ Vector 레퍼런스/a>
+<a href="http://www.cplusplus.com/reference/vector/vector/">C++ Vector 레퍼런스</a>
 
 ----------------------------------------------------------------------------------------------------------------------------
 <a name="quick review"></a>
