@@ -22,6 +22,7 @@ C++ vector는 (배열과 같은)컨테이너의 타입으로, 다양한 요소�
 * [오브젝트를 가리키는 포인터의 vector](#vectorspointers)
 * [예약과 리사이징을 통한 최적화](#optimizing)
 * [오픈프레임웍스 예제](#of)
+* [추가 참고 자료](#more_resource)
 
 추가적인 자료들:
 
@@ -520,4 +521,7 @@ iterator를 사용하는 ofApp.cpp
     }
 ~~~~
 
-<small>역자 주 : stl:: vector와 관련된 자료는 한빛미디어에서 제공하는 [C++ STL::vector](http://www.hanbit.co.kr/network/view.html?bi_id=1606)에서도 보실 수 있습니다. 혹은 소프트웨어공학연구소에서 제공되는 [C++고급과정](http://soen.kr/lecture/ccpp/cpp4/cpp4.htm)중에서 40장-1절의 벡터 부분을 참고하실 수도 있습니다.</small>
+<a name="more_resource"></a>
+## 추가 참고 자료 (역자에 의해 추가됨)
+stl:: vector와 관련된 자료는 한빛미디어에서 제공하는 [C++ STL::vector](http://www.hanbit.co.kr/network/view.html?bi_id=1606)에서도 보실 수 있습니다. 
+혹은 소프트웨어공학연구소에서 제공되는 [C++고급과정](http://soen.kr/lecture/ccpp/cpp4/cpp4.htm)중에서 40장-1절의 벡터 부분을 참고하실 수도 있습니다.
