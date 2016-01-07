@@ -2,14 +2,14 @@
 <%inherit file="/_templates/markdown.mako" />
 ${'''
 
-Raspberry Pi
+라즈베리파이
 ============
 
-[Getting Started with Wheezy and openFrameworks 0.84](Raspberry-Pi-Getting-Started-Wheezy.html)
+[Wheezy 와 오픈프레임월스 0.84](Raspberry-Pi-Getting-Started-Wheezy.html)
 
-[Raspberry Pi DISTCC Guide](Raspberry-Pi-DISTCC-guide.html)
+[라즈베리파이 DISTCC 가이드](Raspberry-Pi-DISTCC-guide.html)
 
-[Raspberry Pi Cross Compiling Guide](Raspberry-Pi-Cross-compiling-guide-Wheezy.html)
+[라즈베리파이 크로스컴파일 가이드](Raspberry-Pi-Cross-compiling-guide-Wheezy.html)
 
 
 '''}
