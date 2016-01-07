@@ -42,7 +42,7 @@
 			    <p>이 페이지는 openFrameworks의 코어와 포함된 addon들에 대한 레퍼런스를 다루고 있습니다. 또한 <a href="http://ofxaddons.com/">contributed addons</a>도 있습니다. openFrameworks의 API는 꾸준히 진화하고 있습니다.
 수정, 추가, 의견이 있으시다면 언제든지 환영입니다! </p>
                 <p><a href="/tutorials/developers/003_contributing_to_the_documentation.html">도큐먼트 튜토리얼 제작설명서</a>를 읽어볼 수도 있고 GitHub를 통해 이 도큐멘트 제작에 참여하실 수도 있습니다.</p>
-			    <p>이 문서는 가장 최근데 릴리즈된 <strong>${bf.config.currentVersion}</strong>버전을 따릅니다.</p>
+			    <p>이 문서는 가장 최근에 릴리즈된 <strong>${bf.config.currentVersion}</strong>버전을 따릅니다.</p>
 		    </div>
 	   </div>
 	   
