@@ -40,11 +40,13 @@ CPU에 최소 128MB의 램을 할당하였는지 확인하십시오. [라즈베�
 
 * `rm /var/log/kern.log /var/log/kern.log.1 /var/log/kern.log.*.gz`
 * `shutdown -r now`
-* run your App
+<!-- * run your App -->
+* 어플리케이션을 실행한다
 * `lsusb -v | grep -iP "Transfer Type.*(Interrupt|Isochronous)" | wc -l`
 * `cat /var/log/kern.log | grep -iP "fail|warn|error" | perl -p -e 's/^[^]\n]*]//g;s/(warn_alloc_failed: )[0-9]+/$1/g' | sort -u;`
 * `dmesg`
-* copy and paste the output to a gist
+<!-- * copy and paste the output to a gist -->
+* 결과를 복사하여 요약본에 모은다
 
 <!-- For more information on debugging USB devices reference the [Raspberry Pi USB checklist](http://elinux.org/Rpi_USB_check-list) -->
 USB 장치 디버그에 관한 더 많은 정보는 [라즈베리파이 USB 체크리스트](http://elinux.org/Rpi_USB_check-list)를 살펴봐주시기 바랍니다.
