@@ -19,7 +19,7 @@ ${'''
 
 <!-- ## File Browser -->
 ## 파일 브라우저
-Although you can do all copy/move/edit operations through a shell, you may prefer to use an Desktop text editor to edit source code or the Apple Finder/Windows Explorer to manipulate files. In order to to this you will need to setup some services that allow you to mount the Raspberry Pi as a hard drive. [Here is a guide to setting up Samba, a good cross-platform solution.](Raspberry-Pi-SMB.html)
+<!-- Although you can do all copy/move/edit operations through a shell, you may prefer to use an Desktop text editor to edit source code or the Apple Finder/Windows Explorer to manipulate files. In order to to this you will need to setup some services that allow you to mount the Raspberry Pi as a hard drive. [Here is a guide to setting up Samba, a good cross-platform solution.](Raspberry-Pi-SMB.html) -->
 비록 쉘에서 복사/이동/편집을 다 할 수 있지만, 아마도 데스크탑상에서 텍스트 편집기로 소스코드를 수정하거나, 애플의 파인더/윈도우의 탑색기로 파일을 조작하는것을 선호할 수도 있습니다. 이러할 경우 라즈베리파이를 마운트하여 하드디스크처럼 사용할수 있는데, 이를 위해 몇가지 셋업이 필요합니다. [여기에 크로스 플랫폼 해결책으로, 삼바를 세팅하는 가이드가 있습니다](Raspberry-Pi-SMB.html).
 
 ## 유용한 정보들
