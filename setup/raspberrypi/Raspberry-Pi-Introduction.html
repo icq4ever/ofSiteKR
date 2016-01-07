@@ -111,7 +111,7 @@
 
 <h2 id="_2">라즈베리파이와 오픈프레임웍스에 오신것을 환영합니다</h2>
 <p><!-- You are now entering the world of embedded linux development.  You'll be using mostly bash scripts, gcc, and your preferred commandline Text Editor.  It this world <code>screen</code> is your friend, from bash type <a href="http://www.rackaid.com/resources/linux-screen-tutorial-and-how-to/">klzzwxh:0001</a> to learn more.  If you are completely new to the idea of doing linux development from a command line and have no idea what a commandline Text Editor is, you're in luck we'll show you how to get started and point you in the right direction to learn more. _Note: If you are a seasoned vet and use vim+regX to refactor your code move along to our <a href="Raspberry-Pi-Getting-Started">getting started guide</a>_ -->
-여러분은 지금 임베디드 리눅스 개발 세상에 들어오셨습니다. 이제부터 bash 스크립트, gcc, 선호하는 명령어라인 텍스트 편집기를 주로 사용하게 될 것입니다. 이곳에서는 <code>screen</code>이 여러분의 친구입니다. 보다 많은 정보는 bash에 <a href="http://www.rackaid.com/resources/linux-screen-tutorial-and-how-to/"><code>man screen</code></a>를 입력해보세요. 만약 여러분이 커맨드라인으로 리눅스에서 개발하는것에 무지하다거나, 커맨드라인 텍스트가 뭔지 전혀 모르겠다면, 운이 좋은겁니다! 여러분께 하나하나 올바른 방향으로 어떻게 시작할 것인지 알려드릴 테니깐요.  <em>노트 : 여러분이 이미 짭짤한 베테랑이어서 vim+regX를 사용해 바로 코드를 적용하고 싶다면 <a href="Raspberry-Pi-Getting-Started">시작 가이드</a>로 바로 넘어가세요</em></p>
+여러분은 지금 임베디드 리눅스 개발 세상에 들어오셨습니다. 이제부터 bash 스크립트, gcc, 선호하는 명령어라인 텍스트 편집기를 주로 사용하게 될 것입니다. 이곳에서는 <code>screen</code>이 여러분의 친구입니다. 보다 많은 정보는 bash에 <a href="http://www.rackaid.com/resources/linux-screen-tutorial-and-how-to/"><code>man screen</code></a>를 입력해보세요. 만약 여러분이 커맨드라인으로 리눅스에서 개발하는것에 무지하다거나, 커맨드라인 텍스트가 뭔지 전혀 모르겠다면, 운이 좋은겁니다! 여러분께 하나하나 올바른 방향으로 어떻게 시작할 것인지 알려드릴 테니깐요. <em>노트 : 여러분이 이미 짭짤한 베테랑이어서 vim+regX를 사용해 바로 코드를 적용하고 싶다면 <a href="Raspberry-Pi-Getting-Started">시작 가이드</a>로 바로 넘어가세요</em></p>
 <!-- ## The Bash Shell -->
 
 <h2 id="bash">bash 쉘</h2>
@@ -144,7 +144,7 @@ eth0      Link encap:Ethernet  HWaddr b8:27:eb:ca:c2:da
 
 <h2 id="_3">텍스트 편집기 고르기</h2>
 <p><!-- While some hardcore nerds and hackers like to <a href="http://en.wikipedia.org/wiki/Editor_war">pick fights</a> over text editors, there is no right answer as to which one is the best. You have many to choose from but here are 3 that work very well.  <a href="http://en.wikipedia.org/wiki/GNU_nano">klzzwxh:0037</a> is a very simple text editor.  All of your commands are base of a <a href="http://mintaka.sdsu.edu/reu/nano.html">klzzwxh:0038</a> style, so if <code>control</code> is the <a href="http://emacswiki.org/emacs/MovingTheCtrlKey">right place</a> it is very easy to use.  If you are first starting out I would suggest using <code>nano</code>.  <a href="http://www.gnu.org/software/emacs/">klzzwxh:0041</a> is a very powerful text editor that <a href="http://en.wikipedia.org/wiki/Emacs#Features">verges on being a complete IDE or OS</a>.  We could spend weeks talking about Emacs but here is a <a href="http://www2.lib.uchicago.edu/keith/tcl-course/emacs-tutorial.html">nice tutorial</a> to get started.   You might need to run <code>sudo apt-get install emacs</code> if your linux image doesn't include it by default.  Lastly, <a href="http://www.vim.org/">klzzwxh:0043</a> is the go to text editor for hardcore linux users.  But you can be hardcore too if you want to learn this <a href="http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html">complicated beast</a> via this <a href="http://www.openvim.com/tutorial.html">interactive tutorial</a> or this <a href="http://vim-adventures.com/">fun game</a>. You will need to run <code>sudo apt-get install vim</code> to install it and <code>vi testpApp.cpp</code> to for example edit the ofApp.cpp file of a project. -->
-몇 하드코어 너드와 해커들은 텍스트 편집기를 <a href="http://en.wikipedia.org/wiki/Editor_war">뭘 쓸것인지를 가지고 싸후지만</a>, 사실 어떤 편집기가 최고인지 올바른 정답은 없습니다. 여러분이 선택할 수 있는 편집기는 다양하지만, 잘 동작하는 세가지를 추천해드릴 수 있습니다. </p>
+몇 하드코어 너드와 해커들은 텍스트 편집기를 <a href="http://en.wikipedia.org/wiki/Editor_war">뭘 쓸것인지를 가지고 싸우지만</a>, 사실 올바른 정답은 없습니다. 여러분이 선택할 수 있는 편집기는 다양하지만, 잘 동작하는 세가지를 추천해드릴 수 있습니다. </p>
 <p><a href="http://en.wikipedia.org/wiki/GNU_nano"><code>나노(nano)</code></a>는 아주 간단한 텍스트 편집기입니다. 모든 명령은 <a href="http://mintaka.sdsu.edu/reu/nano.html"><code>control+키</code></a>의 스타일을 따릅니다. 따라서 쉽게 사용하려면 <code>control</code>이 <a href="http://emacswiki.org/emacs/MovingTheCtrlKey">올바른 위치</a> 입니다.쳐러분이 처음 시작한다면 <code>나노</code>를 추천해드리고 싶습니다.</p>
 <p><a href="http://www.gnu.org/software/emacs/"><code>이맥스(emacs)</code></a>는 아주 강력한 텍스 편집기로, <a href="http://en.wikipedia.org/wiki/Emacs#Features">통합개발환경(IDE)이나 운영체제(OS)에 거의 가깝습니다</a>. 아마도 이맥스에 대해서만 일주일동안 얘기할수 있겠지만, 여기 시작하기에 좋은 <a href="http://www2.lib.uchicago.edu/keith/tcl-course/emacs-tutorial.html">멋진 튜토리얼</a>이 있습니다. 만약 여러분의 리눅스 이미지가 이맥스를 기본적으로 갖고 있지 않다면, <code>sudo apt-get install emacs</code>명령어를 실행해야 합니다.</p>
 <p>마지막으로 <a href="http://www.vim.org/"><code>빔(vim)</code></a>은 하드코어 리눅스 유저를 위한 텍스트 편집기입니다. <a href="http://www.openvim.com/tutorial.html">인터랙티브 튜토리얼</a>이나 요 <a href="http://vim-adventures.com/">재밌는 게임</a>를 통해 <a href="http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html">complicated beast</a>에 대해 배운다면 여러분도 하드코어 유저가 될 수 있습니다. 빔은 <code>sudo apt-get install vim</code> 명령어로 인스톨할 수 있습니다(역자 주 : 라즈베리파이에는 대부분 기본적으로 빔이 설치되어 있습니다). 예를들어 프로젝트의 ofApp.cpp파일을 편집하려면, <code>testApp.cpp</code> 명령어를 사용합니다.</p>
@@ -186,13 +186,13 @@ eth0      Link encap:Ethernet  HWaddr b8:27:eb:ca:c2:da
 
 
   
-Thursday, 07 January 2016 11:24:41 UTC
+Thursday, 07 January 2016 13:25:52 UTC
 에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
 
-9ebb0cf5b48d6a70cf6830c67b181bbd988c5676
+4536e39980c12fc7757c5b839c51e9300dd74ff4
 ">
 
-9ebb0cf5b48d6a70cf6830c67b181bbd988c5676
+4536e39980c12fc7757c5b839c51e9300dd74ff4
 </a>
 
 <!--br/>RSS feeds for <a href="/feed">Entries</a-->
