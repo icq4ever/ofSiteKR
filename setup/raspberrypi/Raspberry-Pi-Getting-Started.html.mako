@@ -72,7 +72,7 @@ Wheezy 배포판과는 다르게, 데비안 Jessie는 부팅시에 IP 주소를 
 
 <!-- ## Download openFrameworks -->
 ## 오픈프레임웍스 다운받기
-You now can download openFrameworks and uncompress it into a folder. Using a Shell, The following commands will download openFrameworks and uncompress it into the folder `/home/pi/openFrameworks`
+<!-- You now can download openFrameworks and uncompress it into a folder. Using a Shell, The following commands will download openFrameworks and uncompress it into the folder `/home/pi/openFrameworks` -->
 이제 오픈프레임웍스를 다운받아 압축을 폴더에 풀 수 있습니다. 쉘에서 아래의 명령을 입력하여, 오픈프레임웍스를 다운받고 `/home/pi/openFrameworks`의 폴더에 압축을 풉니다.
  
 <!-- <h3> For the Raspberry Pi 1/arm6</h3> -->
