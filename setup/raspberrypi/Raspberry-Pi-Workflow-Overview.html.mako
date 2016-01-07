@@ -15,7 +15,7 @@ ${'''
 <!-- ## Text Editor   -->
 ## 텍스트 편집기
 <!-- You will need a text editor to edit source code. If you are already a Linux user you undoubtably have a preferred text editor. For the sake of consistency, this guide will use [`nano`](http://en.wikipedia.org/wiki/GNU_nano) as it is popular in the Raspberry Pi community and conveniently has important commands listed at the bottom of the window. -->
-소스코드 편집을 위해 텍스트 편집기를 사용합니다. 여러분이 이미 리눅스 사용자라면 두말할 필요없이 이미 선호하는 텍스트 편집기가 있을겁니다. 일관성을 유지하기 위해, 이 가이드는 라즈베리파이 커뮤니티에서 아주 유명한 [`nano`](http://en.wikipedia.org/wiki/GNU_nano)를 사용할 것입니다. 또한 화면 하단에 이와 관련한 중요 명령어들도 정리되어있으니 읽어보시기 바랍니다.
+소스코드 편집을 위해 텍스트 편집기를 사용합니다. 여러분이 이미 리눅스 사용자라면 두말할 필요없이 이미 선호하는 텍스트 편집기가 있을겁니다. 일관성을 유지하기 위해, 이 가이드는 라즈베리파이 커뮤니티에서 아주 유명한 [`나노(nano)`](http://en.wikipedia.org/wiki/GNU_nano)를 사용할 것입니다. 또한 화면 하단에 이와 관련한 중요 명령어들도 정리되어있으니 읽어보시기 바랍니다.
 
 <!-- ## File Browser -->
 ## 파일 브라우저
@@ -26,15 +26,15 @@ ${'''
 [make](http://www.gnu.org/software/make/manual/make.html)   
 [Bash 튜토리얼](http://linuxconfig.org/Bash_scripting_Tutorial)   
 [Bash 치트 시트 pdf](http://dl.dropbox.com/u/397277/bash_shell_cheat_sheetV2.pdf)      
-[nano](http://en.wikipedia.org/wiki/GNU_nano)   
-[nano 가이드](http://mintaka.sdsu.edu/reu/nano.html)   
-[emacs](http://www.gnu.org/software/emacs/)   
-[emacs 기능 정리](http://en.wikipedia.org/wiki/Emacs#Features)   
-[emacs 튜토리얼](http://www2.lib.uchicago.edu/keith/tcl-course/emacs-tutorial.html)   
-[vim](http://www.vim.org/)   
-[vim 치트 시트/튜토리얼](http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html)   
-[vim 인터페이스 튜토리얼](http://www.openvim.com/tutorial.html)   
-[vim game](http://vim-adventures.com/)   
+[나노(nano)](http://en.wikipedia.org/wiki/GNU_nano)   
+[나노 가이드](http://mintaka.sdsu.edu/reu/nano.html)   
+[이맥스(emacs)](http://www.gnu.org/software/emacs/)   
+[이맥스 기능 정리](http://en.wikipedia.org/wiki/Emacs#Features)   
+[이맥스 튜토리얼](http://www2.lib.uchicago.edu/keith/tcl-course/emacs-tutorial.html)   
+[빔(vim)](http://www.vim.org/)   
+[빔 치트 시트/튜토리얼](http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html)   
+[빔 인터페이스 튜토리얼](http://www.openvim.com/tutorial.html)   
+[빔 게임](http://vim-adventures.com/)   
 
 '''}
 
