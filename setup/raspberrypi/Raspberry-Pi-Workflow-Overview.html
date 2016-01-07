@@ -106,26 +106,35 @@
       <div id="body-wrap">
       		<div class="page-left-wide">
                 
-  <h1 id="raspberry-pi-workflow">Raspberry Pi Workflow</h1>
-<p>To use openFrameworks on the Raspberry Pi you will be using a few different tools</p>
-<h2 id="bash-shell">Bash Shell</h2>
-<p>A shell application provides a command line interface to the Raspberry Pi. Mac OS X ships with Terminal.app located at Applications &gt; Utilities &gt; Terminal. Windows users often use <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">PuTTY</a>. The shell is used to send commands to compile, run and stop applications. </p>
-<h2 id="text-editor">Text Editor</h2>
-<p>You will need a text editor to edit source code. If you are already a Linux user you undoubtably have a preferred text editor. For the sake of consistency, this guide will use <a href="http://en.wikipedia.org/wiki/GNU_nano"><code>nano</code></a> as it is popular in the Raspberry Pi community and conveniently has important commands listed at the bottom of the window.</p>
-<h2 id="file-browser">File Browser</h2>
-<p>Although you can do all copy/move/edit operations through a shell, you may prefer to use an Desktop text editor to edit source code or the Apple Finder/Windows Explorer to manipulate files. In order to to this you will need to setup some services that allow you to mount the Raspberry Pi as a hard drive. <a href="Raspberry-Pi-SMB.html">Here is a guide to setting up Samba, a good cross-platform solution.</a></p>
-<h2 id="useful-resources">Useful resources</h2>
+  <h1 id="_1">라즈베리파이 워크플로우</h1>
+<!-- To use openFrameworks on the Raspberry Pi you will be using a few different tools -->
+
+<p>라즈베리파이에서 오픈프레임월스를 사용하기 위해서는, 몇가지 다른 툴을 사용해야 합니다.</p>
+<h2 id="bash">Bash 쉘</h2>
+<p><!-- A shell application provides a command line interface to the Raspberry Pi. Mac OS X ships with Terminal.app located at Applications > Utilities > Terminal. Windows users often use <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">PuTTY</a>. The shell is used to send commands to compile, run and stop applications.  -->
+쉘 어플리케이션은 라즈베리파이에서 명령어 인터페이스를 제공합니다. 맥 OSX은 응용프로그램&gt;유틸리티&gt;터미널 에 위치한 터미널.app이 제공됩니다. 윈도우는 대체로 <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">PuTTY</a>를 사용합니다. 쉘은 어플리케이션을 컴파일/실행, 중단하는 명령을 전달할 때 사용됩니다.</p>
+<!-- ## Text Editor   -->
+
+<h2 id="_2">텍스트 편집기</h2>
+<p><!-- You will need a text editor to edit source code. If you are already a Linux user you undoubtably have a preferred text editor. For the sake of consistency, this guide will use <a href="http://en.wikipedia.org/wiki/GNU_nano">klzzwxh:0003</a> as it is popular in the Raspberry Pi community and conveniently has important commands listed at the bottom of the window. -->
+소스코드 편집을 위해 텍스트 편집기를 사용합니다. 여러분이 이미 리눅스 사용자라면 두말할 필요없이 이미 선호하는 텍스트 편집기가 있을겁니다. 일관성을 유지하기 위해, 이 가이드는 라즈베리파이 커뮤니티에서 아주 유명한 <a href="http://en.wikipedia.org/wiki/GNU_nano"><code>nano</code></a>를 사용할 것입니다. 또한 화면 하단에 이와 관련한 중요 명령어들도 정리되어있으니 읽어보시기 바랍니다.</p>
+<!-- ## File Browser -->
+
+<h2 id="_3">파일 브라우저</h2>
+<p>Although you can do all copy/move/edit operations through a shell, you may prefer to use an Desktop text editor to edit source code or the Apple Finder/Windows Explorer to manipulate files. In order to to this you will need to setup some services that allow you to mount the Raspberry Pi as a hard drive. <a href="Raspberry-Pi-SMB.html">Here is a guide to setting up Samba, a good cross-platform solution.</a>
+비록 쉘에서 복사/이동/편집을 다 할 수 있지만, 아마도 데스크탑상에서 텍스트 편집기로 소스코드를 수정하거나, 애플의 파인더/윈도우의 탑색기로 파일을 조작하는것을 선호할 수도 있습니다. 이러할 경우 라즈베리파이를 마운트하여 하드디스크처럼 사용할수 있는데, 이를 위해 몇가지 셋업이 필요합니다. <a href="Raspberry-Pi-SMB.html">여기에 크로스 플랫폼 해결책으로, 삼바를 세팅하는 가이드가 있습니다</a>.</p>
+<h2 id="_4">유용한 정보들</h2>
 <p><a href="http://www.gnu.org/software/make/manual/make.html">make</a> <br />
-<a href="http://linuxconfig.org/Bash_scripting_Tutorial">Bash Tutorial</a> <br />
-<a href="http://dl.dropbox.com/u/397277/bash_shell_cheat_sheetV2.pdf">Bash cheat sheet pdf</a>    <br />
+<a href="http://linuxconfig.org/Bash_scripting_Tutorial">Bash 튜토리얼</a> <br />
+<a href="http://dl.dropbox.com/u/397277/bash_shell_cheat_sheetV2.pdf">Bash 치트 시트 pdf</a>    <br />
 <a href="http://en.wikipedia.org/wiki/GNU_nano">nano</a> <br />
-<a href="http://mintaka.sdsu.edu/reu/nano.html">nano guide</a> <br />
+<a href="http://mintaka.sdsu.edu/reu/nano.html">nano 가이드</a> <br />
 <a href="http://www.gnu.org/software/emacs/">emacs</a> <br />
-<a href="http://en.wikipedia.org/wiki/Emacs#Features">emacs feature list</a> <br />
-<a href="http://www2.lib.uchicago.edu/keith/tcl-course/emacs-tutorial.html">emacs tutorial</a> <br />
+<a href="http://en.wikipedia.org/wiki/Emacs#Features">emacs 기능 정리</a> <br />
+<a href="http://www2.lib.uchicago.edu/keith/tcl-course/emacs-tutorial.html">emacs 튜토리얼</a> <br />
 <a href="http://www.vim.org/">vim</a> <br />
-<a href="http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html">vim cheat sheet/tutorial</a> <br />
-<a href="http://www.openvim.com/tutorial.html">vim interactive tutorial</a> <br />
+<a href="http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html">vim 치트 시트/튜토리얼</a> <br />
+<a href="http://www.openvim.com/tutorial.html">vim 인터페이스 튜토리얼</a> <br />
 <a href="http://vim-adventures.com/">vim game</a> <br />
 </p>
 
@@ -137,13 +146,13 @@
 
 
   
-Wednesday, 06 January 2016 18:28:37 UTC
+Thursday, 07 January 2016 11:24:41 UTC
 에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
 
-3e6c5b1a76ad6ac525404bee691d3ca9a53e51fe
+9ebb0cf5b48d6a70cf6830c67b181bbd988c5676
 ">
 
-3e6c5b1a76ad6ac525404bee691d3ca9a53e51fe
+9ebb0cf5b48d6a70cf6830c67b181bbd988c5676
 </a>
 
 <!--br/>RSS feeds for <a href="/feed">Entries</a-->
