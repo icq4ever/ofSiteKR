@@ -58,7 +58,7 @@ bash와 [bash 스크립트 작성](http://linuxconfig.org/Bash_scripting_Tutoria
 라즈베리파이는 저렴(35$ 이하)하면서 리눅스(와 다른 운영체제)를 구동할 수 있는 멀티미디어 컴퓨터입니다.
 
 <!-- The primary development platform used for development is the Raspbian Wheezy Linux distro. It is currently optimized to use the hardware floating point processor and is significantly faster (from an openFrameworks perspective) than the Soft Float debian Wheezy image. -->
-원래 개발을 위한 개발 플랫폼은 Raspbian Wheezy 리죽스 배포판이 사용되었었습니다. 이 배포판은 현재 하드웨어 부동소수점 처리(hardware floating point processor)에 최적화 되어있으며, soft float 데비안 wheezy 이미지보다 (오픈프레임 웍스 측면에서) 두드러지게 빨라졌습니다.
+원래 개발을 위한 개발 플랫폼은 Raspbian Wheezy 리눅스 배포판이 사용되었었습니다. 이 배포판은 현재 하드웨어 부동소수점 처리(hardware floating point processor)에 최적화 되어있으며, soft float 데비안 wheezy 이미지보다 (오픈프레임 웍스 측면에서) 두드러지게 빨라졌습니다.
 (역자 주 : HW/SW float의 내용은 [이곳:What do you mean by "soft float ABI" and "hard float ABI"?](https://www.raspbian.org/RaspbianFAQ#What_do_you_mean_by_.22soft_float_ABI.22_and_.22hard_float_ABI.22.3F)을 읽어보세요)
 
 <!-- The Raspbian image provides `apt-get` style package management which is familar to Ubuntu and Debian users, and useful for developing with openFrameworks. -->
