@@ -94,7 +94,7 @@ _We need to make sure the CPU has 192MB of RAM in order to compile openFramework
 
 <!-- ## Compile your first app -->
 ## 여러분의 첫 앱을 컴파일 하기
-Like on other platforms, openFrameworks ships with a bunch of examples located in the `openFrameworks/examples` folder. Inside examples the projects are sorted by the categories: 
+<!-- Like on other platforms, openFrameworks ships with a bunch of examples located in the `openFrameworks/examples` folder. Inside examples the projects are sorted by the categories:  -->
 다른 플랫폼들과 마찬가지로, 오픈프레임웍스는 `openFrameworks/example`폴더에 다양한 예제파일을 함께 제공합니다. 예제의 프로젝트들은 카테고리별로 아래와 같이 정리될 수 있습니다.
 
 * 3d 
