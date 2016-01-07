@@ -73,7 +73,7 @@ Wheezy 배포판과는 다르게, 데비안 Jessie는 부팅시에 IP 주소를 
 <!-- ## Download openFrameworks -->
 ## 오픈프레임웍스 다운받기
 <!-- You now can download openFrameworks and uncompress it into a folder. Using a Shell, The following commands will download openFrameworks and uncompress it into the folder `/home/pi/openFrameworks` -->
-이제 오픈프레임웍스를 다운받아 압축을 폴더에 풀 수 있습니다. 쉘에서 아래의 명령을 입력하여, 오픈프레임웍스를 다운받고 `/home/pi/openFrameworks`의 폴더에 압축을 풉니다.
+이제 오픈프레임웍스를 다운받아 폴더에 압축을 풀 수 있습니다. 쉘에서 아래의 명령을 입력하여, 오픈프레임웍스를 다운받고 `/home/pi/openFrameworks`의 폴더에 압축을 풉니다.
  
 <!-- <h3> For the Raspberry Pi 1/arm6</h3> -->
 <h3> 라즈베리파이1/arm6</h3>
@@ -121,7 +121,7 @@ Wheezy 배포판과는 다르게, 데비안 Jessie는 부팅시에 IP 주소를 
 <!-- ## Compile your first app -->
 ## 여러분의 첫 앱을 컴파일 하기
 <!-- openFrameworks ships with a bunch of examples located in the `openFrameworks/examples` folder. Inside examples the projects are sorted by the categories:  -->
-오픈프레임웍스는 `openFrameworks/example`폴더에 엄청난 양의 예제파일을 함께 제공합니다. 예제의 프로젝트들은 카테고리별로 아래와 같이 정리될 수 있습니다.
+오픈프레임웍스는 `openFrameworks/example`폴더에 다양한 예제파일을 함께 제공합니다. 예제의 프로젝트들은 카테고리별로 아래와 같이 정리될 수 있습니다.
 
 * 3d 
 * addons 
