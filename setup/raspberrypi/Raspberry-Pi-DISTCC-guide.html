@@ -106,93 +106,124 @@
       <div id="body-wrap">
       		<div class="page-left-wide">
                 
-  <h1 id="raspberry-pi">Raspberry Pi</h1>
-<h2 id="distcc">distcc</h2>
-<p><em>This guide is recommended for developers who are working on the openFrameworks core or projects that have lots of source files.  For some users, the speed of a native Raspberry Pi build (as outlined in our getting started guide), might be just fine.  For those who need speed, see below!</em></p>
-<p><code>distcc</code> is a program that enables a single "master" computer (the Raspberry Pi in our case) to distribute its compiling load to other "helper" machines (a multi-core Ubuntu Linux machine) over the network.  In standard mode, source files are preprocessed on the Raspberry Pi, compressed and sent to the helper machine for compiling.  The helper machine, which in this case is running an arm-compatible cross-compiler, compiles the object files (.o files) and sends them back to the Raspberry Pi.  Once the Raspberry Pi has received all of the object files, it will then link them into a library or executable.<br />
-</p>
-<p>It is also possible to distribute preprocessing using <code>distcc-pump</code>, but this feature is not explored below.</p>
-<p><em>Note: On OS X.  You can install a Ubuntu "helper" machine running inside Parallels 8.  Networking for the Ubuntu instance is set to _BRIDGED</em> allowing it to be accessible to the Raspberry Pi on the same network. In Windows you can use a similar setup with any vm tool like vmware or virtualbox. In Linux you can just follow the next steps without installing a vm, the compiler will run on your machine directly_</p>
-<h3 id="on-the-ubuntu-machine"><strong>On the Ubuntu Machine</strong></h3>
+  <h1 id="distcc">라즈베리파이 DISTCC 가이드</h1>
+<h2 id="distcc_1">distcc</h2>
+<!-- _This guide is recommended for developers who are working on the openFrameworks core or projects that have lots of source files.  For some users, the speed of a native Raspberry Pi build (as outlined in our getting started guide), might be just fine.  For those who need speed, see below!_ -->
+
+<p>_ 이 가이드는 많은 소스파일을 갖는 프로젝트나 오픈프레임웍스 코어를 갖고 작업하는 개발자들에게 추천됩니다. 일반 유저들에게는, 라즈베리파이의 빌드 속도(시작하기 가이드에 의할 경우)가 충분할 수 있습니다. 속도가 더 필요하신 분들은, 아래를 봐주십오!_ </p>
+<!-- `distcc` is a program that enables a single "master" computer (the Raspberry Pi in our case) to distribute its compiling load to other "helper" machines (a multi-core Ubuntu Linux machine) over the network.  In standard mode, source files are preprocessed on the Raspberry Pi, compressed and sent to the helper machine for compiling.  The helper machine, which in this case is running an arm-compatible cross-compiler, compiles the object files (.o files) and sends them back to the Raspberry Pi.  Once the Raspberry Pi has received all of the object files, it will then link them into a library or executable.   -->
+
+<p><code>distcc</code>는 하나의 "마스터" 컴퓨터(우리의 경우 라즈베리파이)가 컴파일하는 부하를 다른 "헬퍼" 머신(멀티코어 우분투 리눅스 머신)으로 네트워크를 통해 분산시킬 수 있도록 해주는 프로그램입니다. 일반적인 모드에서, 소스파일은 라즈베리파이상에서 사전처리(preprocessed)된 뒤, 압축되어 다른 헬퍼 머신으로 컴파일을 위해 보내어집니다. 이 경우 헬퍼 머신에서는 arm호환 크로스 커파일러가 동작하여, object파일(.o file)을 컵파일하고, 이것을 다시 라즈베리파일로 되돌려줍니다. 라즈베리파이가 object 파일을 모두 받으면, 이것들이 연결되어 라이브리나 실행가능한 파일이 됩니다.</p>
+<!-- It is also possible to distribute preprocessing using `distcc-pump`, but this feature is not explored below. -->
+
+<p><code>distcc-pump</code> 명령어를 사용하여 분산 사전처리를 수행할 수도 있지만, 이 기능은 제외하였습니다.</p>
+<!-- _Note: On OS X.  You can install a Ubuntu "helper" machine running inside Parallels 8.  Networking for the Ubuntu instance is set to _BRIDGED_ allowing it to be accessible to the Raspberry Pi on the same network. In Windows you can use a similar setup with any vm tool like vmware or virtualbox. In Linux you can just follow the next steps without installing a vm, the compiler will run on your machine directly_ -->
+
+<p><em>노트: 맥 OS X에서는, 페러럴즈 8을 이용해 우분투 "헬퍼" 머신을 구동할 수 있습니다. 우분투 인스턴스를 _BRIDGED_로 네트워크 세팅을 하면 같은 네트워크상에서 라즈베리파이로 접근할 수 있습니다. 윈도우즈에서는 vmware나 virtualbox같은 가상머신 도구로 비슷한 세팅을 할 수 있습니다. 리눅스의 경우에는 가상머신을 설치할 필요 없이 바로 다음 단계로 넘어가시면 되며, 컴파일러는 리눅스 머신에서 직접 구동됩니다.</em></p>
+<!-- ### __On the Ubuntu Machine__  -->
+
+<h3 id="_1"><strong>우분투 머신에서</strong></h3>
+<!-- * Install dependencies -->
+
 <ul>
-<li>
-<p>Install dependencies</p>
-<ul>
+<li>의존성 패키지 설치하기<ul>
 <li><code>sudo apt-get install mercurial bison flex texinfo automake curl</code></li>
-<li><code>sudo apt-get install build-essential libncurses-dev libtool gawk gperf</code></li>
-<li>if you are using a 64bit linux distribution you'll need to install also:</li>
+<li><code>sudo apt-get install build-essential libncurses-dev libtool gawk gperf</code>
+<!-- * if you are using a 64bit linux distribution you'll need to install also: --></li>
+<li>만약 64비트 리눅스 배포판을 사용한다면, 하단의  명령어를 추가로 설치해줘야 합니다:</li>
 <li><code>sudo aptitude install ia32-libs</code></li>
 </ul>
 </li>
-<li>
-<p>Download the Raspberry Pi compiler for linux</p>
+</ul>
+<!-- * Download the Raspberry Pi compiler for linux -->
+
 <ul>
-<li>you can download it as a zip or clone the repo at from <a href="https://github.com/raspberrypi/tools/">https://github.com/raspberrypi/tools/</a></li>
-<li>rename the folder to something more identifiable like rpi-tools, we'll refer to this path as $RPI_TOOLS from now on</li>
+<li>리눅스를 위한 라즈베리파이 컴파일러 다운받기
+    <!-- * you can download it as a zip or clone the repo at from <a href="https://github.com/raspberrypi/tools/">https://github.com/raspberrypi/tools/</a> --><ul>
+<li><a href="https://github.com/raspberrypi/tools/">https://github.com/raspberrypi/tools/</a>에서 zip파일로 받거나 clone할 수 있습니다.
+<!-- * rename the folder to something more identifiable like rpi-tools, we'll refer to this path as $RPI_TOOLS from now on --></li>
+<li>rpi-tools와 같은 구별될 수 있는 이름으로 폴더이름을 변경합니다. 이 폴더는 이제부터 <code>$RPI_TOOLS</code>로 조회될 것입니다.</li>
 </ul>
 </li>
-<li>
-<p>Install and configure <code>distcc</code> on the Ubuntu Helper machine</p>
+</ul>
+<!-- * Install and configure `distcc` on the Ubuntu Helper machine -->
+
 <ul>
+<li>우분투 헬퍼머신에 <code>distcc</code>를 설치하고 설정하기<ul>
 <li><code>sudo apt-get install distcc</code></li>
-<li>Edit <code>/etc/default/distcc</code> (e.g. <code>sudo vi /etc/default/distcc</code>)<ul>
-<li>Change <code>STARTDISTCC="false"</code> to <code>STARTDISTCC="true"</code></li>
-<li>Change <code>ALLOWEDNETS="127.0.0.1"</code> to include the network IP addresses of your Raspberry Pis <ul>
-<li><em>Note: Addresses use CIDR notation.  To allow your <code>localhost</code> AND IP addresses in the range <code>192.168.1.0-192.168.1.255</code> use this <code>ALLOWEDNETS="127.0.0.1 192.168.1.0/24</code>.</em></li>
-<li><em>Note: If you want help with CIDR notation, you can use the calculator here http://www.subnet-calculator.com/cidr.php.</em></li>
+<li><code>/etc/default/distcc</code>를 편집한다 (예시: <code>sudo vi /etc/default/distcc</code>)<ul>
+<li>Change <code>STARTDISTCC="false"</code>를 <code>STARTDISTCC="true"</code>로 변경한다.
+<!-- * Change <code>ALLOWEDNETS="127.0.0.1"</code> to include the network IP addresses of your Raspberry Pis  --></li>
+<li><code>ALLOWEDNETS="127.0.0.1"</code>를 라즈베리파이의 네트워크 IP주소가 포함되도록 한다.
+    <!-- * _Note: Addresses use CIDR notation.  To allow your <code>localhost</code> AND IP addresses in the range <code>192.168.1.0-192.168.1.255</code> use this <code>ALLOWEDNETS="127.0.0.1 192.168.1.0/24</code>._ --><ul>
+<li><em>노트: 주소들은 CIDR 표기법을 따릅니다. <code>localhost</code> 와 <code>192.168.1.0-192.168.1.255</code> 범위내의 IP 주소들을 허용하려면, <code>ALLOWEDNETS="127.0.0.1 192.168.1.0/24</code>로 작성합니다.</em>
+<!-- * _Note: If you want help with CIDR notation, you can use the calculator <a href="http://www.subnet-calculator.com/cidr.php">here</a>._ --></li>
+<li>_노트: 만약 CIRD 표기에 도움이 필요하면, <a href="http://www.subnet-calculator.com/cidr.php">이곳</a>의 계산기를 사용할 수 있습니다.</li>
 </ul>
 </li>
-<li>Change <code>ZEROCONF="false"</code> to <code>ZEROCONF="true"</code></li>
-<li>Change <code>LISTENER="127.0.0.1"</code> to <code>LISTENER=""</code> in order to listen for incoming connections all any network interface (not just the <code>localhost/127.0.0.1</code>).</li>
+<li><code>ZEROCONF="false"</code>를 <code>ZEROCONF="true"</code>로 변경한다.
+<!-- * Change <code>LISTENER="127.0.0.1"</code> to <code>LISTENER=""</code> in order to listen for incoming connections all any network interface (not just the <code>localhost/127.0.0.1</code>). --></li>
+<li>(<code>localhost/127.0.0.1</code>뿐만 아니라) 모든 네트워크 인터페이스에서 들어오는 접속을 허용하도록 <code>LISTENER="127.0.0.1"</code>를 <code>LISTENER=""</code>로 수정합니다.</li>
 </ul>
 </li>
-<li>Edit <code>/etc/init.d/distcc</code> (e.g. <code>sudo vi /etc/init.d/distcc</code>)<ul>
-<li>Change <code>PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin</code> to <code>PATH=$RPI_TOOLS/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin</code> <ul>
-<li><em>Note: $RPI_TOOLS should be the path were you installed the raspberry pi compiler before.</em></li>
+<li><code>/etc/init.d/distcc</code>을 편집한다 (예시: <code>sudo vi /etc/init.d/distcc</code>)<ul>
+<li><code>PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin</code>을 <code>PATH=$RPI_TOOLS/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin</code>로 변경한다.
+    <!-- * _Note: $RPI_TOOLS should be the path were you installed the raspberry pi compiler before._ --><ul>
+<li>_노트: $RPI_TOOLS는 이전에 라즈베리파이를 설치할때 지정했던 경로가 되어야 합니다.</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li>
-<p>Start <code>distcc</code> on your Ubuntu machine</p>
+</ul>
+<!-- * Start `distcc` on your Ubuntu machine -->
+
 <ul>
-<li><code>sudo service distcc start</code> (you may have to reboot if fails)</li>
-<li>If it fails, you might also try:</li>
+<li>우분투 머신에서 <code>distcc</code>를 시작한다.
+    <!-- * <code>sudo service distcc start</code> (you may have to reboot if fails) --><ul>
+<li><code>sudo service distcc start</code> (실패할 경우, 재부팅을 해야 합니다.)
+<!-- * If it fails, you might also try: --></li>
+<li>실패할경우, 아래 명령어를 시도해보세요:</li>
 <li><code>sudo service distcc restart</code></li>
 </ul>
 </li>
 </ul>
-<h3 id="on-the-raspberry-pi"><strong>On the Raspberry Pi</strong></h3>
+<!-- ### __On the Raspberry Pi__    -->
+
+<h3 id="_2"><strong>라즈베리파이에서</strong></h3>
 <ul>
-<li>
-<p>Install <code>distcc</code></p>
-<ul>
+<li><code>distcc</code> 설치하기<ul>
 <li><code>sudo apt-get install distcc</code></li>
 </ul>
 </li>
-<li>
-<p>Configure the Raspberry Pi to use the Ubuntu helper you just configured</p>
+</ul>
+<!-- * Configure the Raspberry Pi to use the Ubuntu helper you just configured -->
+
 <ul>
-<li>Make directory <code>mkdir $HOME/.distcc/</code></li>
-<li>Edit <code>$HOME/.distcc/hosts</code> (e.g. <code>vi $HOME/.distcc/hosts</code>) and add the ip(s) of the computers that have the rpi tools installed</li>
-<li>To compile (finally!)<ul>
-<li>First, figure out how many processors you have available on the Ubuntu machine(s) using <code>nproc</code> on each.  Tally the total number of helper processors.  When we issue our make command we will use the <code>-j</code> flag to tell make how many jobs we want to be distribted over distcc.  According to the distcc documentation, you should run make with 2 x TOTAL_PROCESSORS in your cluster.  So, if you have one helper machine with 8 cores <code>8x2=16</code>, so you'll run <code>make -j 16</code>. If this is the same machine you are working from you probably want lower numbers so the computer is still usable while compiling</li>
-<li>Next, we need our makefiles to know that we won't be using the normal RPI gcc, but rather the gcc (etc) located in <code>/usr/lib/distcc</code>.  The command itself looks like <code>/usr/lib/distcc/g++</code> or simply <code>distcc g++</code>, rather than the normal <code>g++</code>.  So the full make for the core openFrameworks lib OR projects will look something like this:<ul>
-<li><code>make -j 6 CXX=/usr/lib/distcc/arm-linux-gnueabihf-g++ CC=/usr/lib/distcc/arm-linux-gnueabihf-gcc</code></li>
-</ul>
-</li>
-<li>If you would like to simplify your command, you can set <code>MAKEFLAGS</code> using the following:<ul>
-<li><code>export MAKEFLAGS="-s -j 6 CXX=/usr/lib/distcc/arm-linux-gnueabihf-g++ CC=/usr/lib/distcc/arm-linux-gnueabihf-gcc"</code></li>
-<li><code>make</code></li>
-</ul>
-</li>
+<li>방금 설정한 우분투 헬퍼 머신을 사용하기 위해 라즈베리파이를 설정합니다.
+    <!-- * Make directory <code>mkdir $HOME/.distcc/</code> --><ul>
+<li>디렉토리를 만듭니다 <code>mkdir $HOME/.distcc/</code>
+<!-- * Edit <code>$HOME/.distcc/hosts</code> (e.g. <code>vi $HOME/.distcc/hosts</code>) and add the ip(s) of the computers that have the rpi tools installed --></li>
+<li><code>$HOME/.distcc/hosts</code>파일을 편집하고(예시: <code>vi $HOME/.distcc/hosts</code>), rpi_tools가 인스톨된 컴퓨터들의 IP주소(들)을 추가한다.
+<!-- * To compile (finally!) --></li>
+<li>컴파일을 하기 위해서 (마침내!)
+    <!-- * First, figure out how many processors you have available on the Ubuntu machine(s) using <code>nproc</code> on each.  Tally the total number of helper processors.  When we issue our make command we will use the <code>-j</code> flag to tell make how many jobs we want to be distribted over distcc.  According to the distcc documentation, you should run make with 2 x TOTAL_PROCESSORS in your cluster.  So, if you have one helper machine with 8 cores <code>8x2=16</code>, so you'll run <code>make -j 16</code>. If this is the same machine you are working from you probably want lower numbers so the computer is still usable while compiling --><ul>
+<li>우선, 각 우분투 머신(들)에서 몇개의 프로세서가 가능한지 <code>nproc</code>명령어를 이용하여 확인합니다. 그 다음 헐퍼 프로세서의 최종 합계를 계산합니다. 추후 distcc로 분산 컴파일을 할 때, 얼마나 많은 작업을 할지 <code>-j</code> 플래그를 이용해 알려줄 수 있습니다. distcc 문서에 의하면, 클러스터에서 최종 프로세서 X 2의 값으로 make를 수행할 수 있습니다. 따라서 만약 8코어를 갖는 하나의 헬퍼 머신이 있다면 <code>8x2=16</code>이 되므로, <code>make -j 16</code>이라고 실행할 수 있습니다. 만약 같은 머신에서 수행할 경우 낮은 숫자를 사용해야 할텐데, 이 플래그는 이 때도 사용 가능합니다.</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
+<!-- *      Next, we need our makefiles to know that we won't be using the normal RPI gcc, but rather the gcc (etc) located in `/usr/lib/distcc`.  The command itself looks like `/usr/lib/distcc/g++` or simply `distcc g++`, rather than the normal `g++`. So the full make for the core openFrameworks lib OR projects will look something like this: -->
+
+<pre><code>    * 다음으로, makefile에게 일반 RPI gcc가 아닌, (예를 들어) `/usr/lib/distcc`에 위치한 gcc를 사용하라고 알려줘야 합니다. 명령어은 일반 `g++`가 아닌, `/usr/lib/distcc/g++`나 `distcc g++`가 되어야 합니다.  따라서 오픈프레임웍스 코어 나 프로젝트를 컴파일할때 최종 make는 아래와 같습니다:
+        * `make -j 6 CXX=/usr/lib/distcc/arm-linux-gnueabihf-g++ CC=/usr/lib/distcc/arm-linux-gnueabihf-gcc`
+</code></pre>
+<p><!--         * If you would like to simplify your command, you can set <code>MAKEFLAGS</code> using the following: -->
+        * 만약 명령을 단축하고 싶다면, 아래의 명령어로 <code>MAKEFLAGS</code>를 설정할 수 있습니다.
+            * <code>export MAKEFLAGS="-s -j 6 CXX=/usr/lib/distcc/arm-linux-gnueabihf-g++ CC=/usr/lib/distcc/arm-linux-gnueabihf-gcc"</code>
+            * <code>make</code></p>
 
             </div>
       </div>
@@ -202,13 +233,13 @@
 
 
   
-Thursday, 07 January 2016 15:36:00 UTC
+Thursday, 07 January 2016 17:45:27 UTC
 에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
 
-cdcc3ff1b3fb205df947d35acce8c66fe32c71f4
+36214174f6c517138d3078f73903d153cf45e53c
 ">
 
-cdcc3ff1b3fb205df947d35acce8c66fe32c71f4
+36214174f6c517138d3078f73903d153cf45e53c
 </a>
 
 <!--br/>RSS feeds for <a href="/feed">Entries</a-->

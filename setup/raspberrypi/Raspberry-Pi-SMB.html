@@ -106,22 +106,33 @@
       <div id="body-wrap">
       		<div class="page-left-wide">
                 
-  <h1 id="raspberry-pi">Raspberry Pi</h1>
-<h2 id="mount-your-raspberry-pi-as-a-hard-drive">Mount your Raspberry Pi as a hard drive</h2>
-<p><strong>WARNING: This is a very permissive file sharing configuration that gives you read/write/delete permissions across the entire file system. It is not recommended if you are the least bit concerned about being able to delete important files over a network.</strong></p>
-<h3 id="install-samba">Install Samba</h3>
-<p>From a Shell run these commands</p>
+  <h1 id="_1">라즈베리파이</h1>
+<!-- ## Mount your Raspberry Pi as a hard drive -->
+
+<h2 id="_2">라즈베리파이를 하드드라이브처럼 마운트하기</h2>
+<!-- **WARNING: This is a very permissive file sharing configuration that gives you read/write/delete permissions across the entire file system. It is not recommended if you are the least bit concerned about being able to delete important files over a network.** -->
+
+<p><strong>경고 : 이는 파일시스템 전체에 걸쳐 읽기/쓰기/삭제 원한을 주는 공유설정입니다.  네트워크상에서 중요한 파일들이 삭제되는것이 염려되는 분들께는 추천하지 않습니다</strong></p>
+<!-- ### Install Samba -->
+
+<h3 id="samba">삼바(Samba) 설치</h3>
+<p><!-- From a Shell run these commands -->
+쉘에서 아래의 명령어를 실행하세요</p>
 <ul>
 <li><code>sudo apt-get install samba samba-common-bin</code></li>
 </ul>
-<p>The next command will prompt you for a password you will need to remember. Use <code>raspberry</code> if you want to keep the default as the pi user's defaults</p>
+<!-- The next command will prompt you for a password you will need to remember. Use `raspberry` if you want to keep the default as the pi user's defaults -->
+
+<p>아래의 명령어들을 입력하면 패스워드를 물어볼것이니, 기억해두어야 하니다. pi 계정의 기본설정으로 유지하고 싶다면 <code>raspberry</code>를 사용하십시오.</p>
 <ul>
 <li><code>sudo smbpasswd -a pi</code></li>
 <li><code>sudo cp /etc/samba/smb.conf /etc/samba/smb.conf.old</code></li>
 <li><code>sudo rm /etc/samba/smb.conf</code></li>
 <li><code>sudo nano /etc/samba/smb.conf</code></li>
 </ul>
-<p>You should now be editing the configuration file. Paste this into it: </p>
+<!-- You should now be editing the configuration file. Paste this into it:  -->
+
+<p>설정파일을 편집해야합니다. 아래 내용을 붙여넣으세요:</p>
 <p>[global]<br />
         workgroup = HOME<br />
         netbios name = SAMBA<br />
@@ -148,9 +159,15 @@
 </li>
 <li><code>sudo /etc/init.d/samba restart</code></li>
 </ul>
-<p>You should now be able to mount your Raspberry Pi via the address smb://your.raspberry.pi.ip/Data</p>
-<p>You user will be pi and the password will be <code>raspberry</code> or whatever you set it to above</p>
-<p><strong>Note: The Mac will often write hidden ._ files on the drive that can sometimes confuse the compiler into thinking they are source files. <a href="http://www.zeroonetwenty.com/blueharvest">Blue Harvest</a> is good at removing these on the fly.</strong> </p>
+<!-- You should now be able to mount your Raspberry Pi via the address smb://your.raspberry.pi.ip/Data -->
+
+<p>이제 smb://your.raspberry.pi.ip/Data의 주소로 마운트된 라즈베리파이로 접근할 수 있습니다.</p>
+<!-- You user will be pi and the password will be `raspberry` or whatever you set it to above -->
+
+<p>사용자계정은 pi이며 패스워드는 기본설정은 <code>raspberry</code> 또는 여러분이 위에서 설정한 패스워드 입니다.</p>
+<!-- **Note: The Mac will often write hidden ._ files on the drive that can sometimes confuse the compiler into thinking they are source files. [Blue Harvest](http://www.zeroonetwenty.com/blueharvest) is good at removing these on the fly.**  -->
+
+<p>**노트: 맥에서 사용할경우 종종 숨겨진 파일인 ._으로 시작하는 파일을 하여 컴파일러가 이것들을 소스파일로 간주하고 혼란스러워 하는 경우가 종종 있습니다. <a href="http://www.zeroonetwenty.com/blueharvest">Blue Harvest</a>가 이러한 파일들을 그때 그때 삭제해주는 도구입니다.</p>
 
             </div>
       </div>
@@ -160,13 +177,13 @@
 
 
   
-Thursday, 07 January 2016 15:36:00 UTC
+Thursday, 07 January 2016 17:45:27 UTC
 에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
 
-cdcc3ff1b3fb205df947d35acce8c66fe32c71f4
+36214174f6c517138d3078f73903d153cf45e53c
 ">
 
-cdcc3ff1b3fb205df947d35acce8c66fe32c71f4
+36214174f6c517138d3078f73903d153cf45e53c
 </a>
 
 <!--br/>RSS feeds for <a href="/feed">Entries</a-->
