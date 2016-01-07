@@ -17,7 +17,7 @@ ${'''
 데스크탑 기반의 플랫폼과 마찬가지로, 오픈프레임웍스는 실시간 그래픽, 쉐이더, 오디오/비디오 처리, 네트워크처리 등을 통합한 어플리케이션 제작을 위한 범용 인터페이스를 제공합니다. OpenCv, OSC와 같은 다양한 기술들을 추가할 수 있는 오픈프레임웍스 애드온(보통 ofxAddons라고 합니다)도 함께 제공합니다.
 
 <!-- openFrameworks 0.9.0 supports the Raspberry Pi via the recommended Linux distribution Raspbian "Jessie" (hard float). Wheezy can be used with older versions of openFrameworks (0.84 recommended). [See here for the older versions of this guide that talk about Wheezy](Raspberry-Pi-Wheezy-index.html) -->
-오픈프레임웍스 0.9.0에서는 라즈베리 지원을 위해 Raspbian "Jessie" (hard float) 리눅스 배포판을 추천합니다. Wheezy는 구 버전의 오픈프레임웍스 (0.84를 추천해드립니다)와 사용이 가능합니다. [Wheey를 위한 구 버전의 가이드는 이곳을 참고하세요](Raspberry-Pi-Wheezy-index.html)
+오픈프레임웍스 0.9.0에서는 라즈베리 지원을 위해 Raspbian "Jessie" (hard float) 리눅스 배포판을 추천합니다. Wheezy는 구 버전의 오픈프레임웍스 (0.84를 추천해드립니다)와 사용이 가능합니다. [Wheezy를 위한 구 버전의 가이드는 이곳을 참고하세요](Raspberry-Pi-Wheezy-index.html)
 
 <!-- If you are an existing openFrameworks/RPi user you may wish to read [what's different in 0.9.0](Raspberry-Pi-8-9-Transition-Notes.html)  -->
 만약 이미 openFrameworks/RPi를 갖고 계신다면, [0.9.0에서 달라진점](Raspberry-Pi-8-9-Transition-Notes.html)을 읽어주십시오.
