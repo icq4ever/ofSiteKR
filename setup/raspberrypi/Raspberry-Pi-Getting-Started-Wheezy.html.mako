@@ -9,7 +9,7 @@ ${'''
     
 <!-- ## Install Raspbian "wheezy" -->
 ## Raspbian "wheezy" 설치
-0. Install the latest _**Raspbian** (Debian Wheezy)_ image from the [Raspberry Pi downloads page](http://www.raspberrypi.org/downloads)
+<!-- 0. Install the latest _**Raspbian** (Debian Wheezy)_ image from the [Raspberry Pi downloads page](http://www.raspberrypi.org/downloads) -->
 0. 가장 최신의 _**Raspbian** (데비안 Wheezy) 이미지를 [라즈베리파이 다운로드 페이지](http://www.raspberrypi.org/downloads)에서 다운받으세요
 <!-- 1. Follow the instructions at [Raspberry Pi Preparing Your SD Card](http://elinux.org/RPi_Easy_SD_Card_Setup) to get Raspbian installed onto your SD Card -->
 1. [라즈베리파이를 위한 SD카드 준비하기](http://elinux.org/RPi_Easy_SD_Card_Setup)의 설명에 따라 SD카드에 Raspbian을 설치해주세요.
