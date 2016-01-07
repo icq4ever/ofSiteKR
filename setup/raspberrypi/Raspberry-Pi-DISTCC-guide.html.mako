@@ -5,10 +5,9 @@ ${'''
 라즈베리파이 DISTCC 가이드
 ============
 
-## distcc
-
+##distcc
 <!-- _This guide is recommended for developers who are working on the openFrameworks core or projects that have lots of source files.  For some users, the speed of a native Raspberry Pi build (as outlined in our getting started guide), might be just fine.  For those who need speed, see below!_ -->
-_ 이 가이드는 많은 소스파일을 갖는 프로젝트나 오픈프레임웍스 코어를 갖고 작업하는 개발자들에게 추천됩니다. 일반 유저들에게는, 라즈베리파이의 빌드 속도(시작하기 가이드에 의할 경우)가 충분할 수 있습니다. 속도가 더 필요하신 분들은, 아래를 봐주십오!_ 
+_이 가이드는 많은 소스파일로 이루어진 프로젝트나 오픈프레임웍스 코어를 갖고 작업하는 개발자들에게 추천됩니다. 일반 유저들에게는, 라즈베리파이의 빌드 속도(시작하기 가이드에 의할 경우)가 아마 문제 없을겁니다. 속도가 더 필요하신 분들은, 아래를 봐주십오!_ 
 
 <!-- `distcc` is a program that enables a single "master" computer (the Raspberry Pi in our case) to distribute its compiling load to other "helper" machines (a multi-core Ubuntu Linux machine) over the network.  In standard mode, source files are preprocessed on the Raspberry Pi, compressed and sent to the helper machine for compiling.  The helper machine, which in this case is running an arm-compatible cross-compiler, compiles the object files (.o files) and sends them back to the Raspberry Pi.  Once the Raspberry Pi has received all of the object files, it will then link them into a library or executable.   -->
 `distcc`는 하나의 "마스터" 컴퓨터(우리의 경우 라즈베리파이)가 컴파일하는 부하를 다른 "헬퍼" 머신(멀티코어 우분투 리눅스 머신)으로 네트워크를 통해 분산시킬 수 있도록 해주는 프로그램입니다. 일반적인 모드에서, 소스파일은 라즈베리파이상에서 사전처리(preprocessed)된 뒤, 압축되어 다른 헬퍼 머신으로 컴파일을 위해 보내어집니다. 이 경우 헬퍼 머신에서는 arm호환 크로스 커파일러가 동작하여, object파일(.o file)을 컵파일하고, 이것을 다시 라즈베리파일로 되돌려줍니다. 라즈베리파이가 object 파일을 모두 받으면, 이것들이 연결되어 라이브리나 실행가능한 파일이 됩니다.
@@ -81,10 +80,10 @@ _노트: 맥 OS X에서는, 페러럴즈 8을 이용해 우분투 "헬퍼" 머�
         <!-- * First, figure out how many processors you have available on the Ubuntu machine(s) using `nproc` on each.  Tally the total number of helper processors.  When we issue our make command we will use the `-j` flag to tell make how many jobs we want to be distribted over distcc.  According to the distcc documentation, you should run make with 2 x TOTAL_PROCESSORS in your cluster.  So, if you have one helper machine with 8 cores `8x2=16`, so you'll run `make -j 16`. If this is the same machine you are working from you probably want lower numbers so the computer is still usable while compiling -->
         * 우선, 각 우분투 머신(들)에서 몇개의 프로세서가 가능한지 `nproc`명령어를 이용하여 확인합니다. 그 다음 헐퍼 프로세서의 최종 합계를 계산합니다. 추후 distcc로 분산 컴파일을 할 때, 얼마나 많은 작업을 할지 `-j` 플래그를 이용해 알려줄 수 있습니다. distcc 문서에 의하면, 클러스터에서 최종 프로세서 X 2의 값으로 make를 수행할 수 있습니다. 따라서 만약 8코어를 갖는 하나의 헬퍼 머신이 있다면 `8x2=16`이 되므로, `make -j 16`이라고 실행할 수 있습니다. 만약 같은 머신에서 수행할 경우 낮은 숫자를 사용해야 할텐데, 이 플래그는 이 때도 사용 가능합니다.
 
-<!-- *      Next, we need our makefiles to know that we won't be using the normal RPI gcc, but rather the gcc (etc) located in `/usr/lib/distcc`.  The command itself looks like `/usr/lib/distcc/g++` or simply `distcc g++`, rather than the normal `g++`. So the full make for the core openFrameworks lib OR projects will look something like this: -->
+    <!-- *Next, we need our makefiles to know that we won't be using the normal RPI gcc, but rather the gcc (etc) located in `/usr/lib/distcc`.  The command itself looks like `/usr/lib/distcc/g++` or simply `distcc g++`, rather than the normal `g++`. So the full make for the core openFrameworks lib OR projects will look something like this: -->
         * 다음으로, makefile에게 일반 RPI gcc가 아닌, (예를 들어) `/usr/lib/distcc`에 위치한 gcc를 사용하라고 알려줘야 합니다. 명령어은 일반 `g++`가 아닌, `/usr/lib/distcc/g++`나 `distcc g++`가 되어야 합니다.  따라서 오픈프레임웍스 코어 나 프로젝트를 컴파일할때 최종 make는 아래와 같습니다:
             * `make -j 6 CXX=/usr/lib/distcc/arm-linux-gnueabihf-g++ CC=/usr/lib/distcc/arm-linux-gnueabihf-gcc`
-<!--         * If you would like to simplify your command, you can set `MAKEFLAGS` using the following: -->
+        <!--* If you would like to simplify your command, you can set `MAKEFLAGS` using the following: -->
         * 만약 명령을 단축하고 싶다면, 아래의 명령어로 `MAKEFLAGS`를 설정할 수 있습니다.
             * `export MAKEFLAGS="-s -j 6 CXX=/usr/lib/distcc/arm-linux-gnueabihf-g++ CC=/usr/lib/distcc/arm-linux-gnueabihf-gcc"`
             * `make`
