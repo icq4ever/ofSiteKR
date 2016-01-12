@@ -17,14 +17,16 @@ _extends: _
 
 ##Description
 
-ofBuffer is a convenience class that provides easy methods for reading from and writing to files. It makes heavy use of the standard C++ ostream and istream classes, but also adds in easy ways to convert file data to strings, like:
+<!-- ofBuffer is a convenience class that provides easy methods for reading from and writing to files. It makes heavy use of the standard C++ ostream and istream classes, but also adds in easy ways to convert file data to strings, like: -->
+ofBuffer는 파일을 읽고 쓸때 쉬운 방법을 제공하는 편리한 클래스입니다. 표준 C++ ostream/isstream 클래스를 많이 사용하지만. 파일 데이터를 문자열로 바꾸는 쉬운 방법을 제공합니다. 이와 같이요:
 
 ~~~~{.cpp}
-ofBuffer buffer = ofBufferFromFile("someFile.txt"); // reading into the buffer
+ofBuffer buffer = ofBufferFromFile("someFile.txt"); // 버퍼로 읽는다
 cout << buffer.getText(); // let's see what it says
 ~~~~
 
-You can also use the ofBufferFromFile() method to create a buffer from a file:
+<!-- You can also use the ofBufferFromFile() method to create a buffer from a file: -->
+파일에서 버퍼를 생성하기 위해 ofBufferFromFile()메소드를 사용할 수도 있습니다.
 
 ~~~~{.cpp}
 ofBuffer fileBuffer = ofBufferFromFile("someFile.txt");
@@ -66,7 +68,8 @@ _inlined_description: _
 
 _description: _
 
-Allocate memory for the buffer to use. This sizes the char vector that the ofBuffer instance contains.
+<!-- Allocate memory for the buffer to use. This sizes the char vector that the ofBuffer instance contains. -->
+사용하기 위해 버퍼에 메모리를 할당합니다. This sizes the char vector that the ofBuffer instance contains.
 
 
 
