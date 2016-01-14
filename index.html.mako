@@ -20,7 +20,7 @@
         
 	<h3><a href="http://forum.openframeworks.cc/">포럼</a></h3>
 	<p>오픈프레임웍스로 활동하는 다른 사람들을 만나볼 수 있는 포럼입니다. 여기서 여러분의 작업을 공유하거나 문제를 해결을 찾을 수 있습니다.</p>
-    <p>오픈프레임웍스 한국어 포럼은 <a href="http://openframeworks-kr.slack.com/" target="_blank">이곳</a>입니다. 가입을 위해 <a href="slack-ofkr-auto-invite.herokuapp.com/" target="_blank">이 링크</a>를 사용해주시기 바랍니다.</p>
+    <p>오픈프레임웍스 한국어 포럼은 <a href="http://openframeworks-kr.slack.com/" target="_blank">이곳</a>입니다. 가입을 위해 <a href="http://slack-ofkr-auto-invite.herokuapp.com/" target="_blank">이 링크</a>를 사용해주시기 바랍니다.</p>
     </div>
 </div>
 
