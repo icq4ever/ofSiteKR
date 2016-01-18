@@ -20,11 +20,11 @@
 		
 		<ul class="menu-externals">
 			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">포럼(EN)</a></li>
-			<li><span class="external-dot"> ></span>&nbsp;<a href="https://openframeworks-kr.slack.com/" target="_blank">포럼(KR)</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.kr" target="_blank">포럼(KR)</a></li>
 			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">애드온</a></li>
 			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
 			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">메일링 리스트</a></li>
-			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.kr/t/slack/32" target="_blank">slack</a></li>
 			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">블로그</a></li>
 		</ul>
 		
