@@ -19,16 +19,16 @@
               <div id="editdocs">
                 % if not clazz is None:
                   % if is_addon:
-                    <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/addons/${clazz.module}/${clazz.name}.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
+                    <a href="https://github.com/icq4ever/ofSiteKR/edit/master/_documentation/addons/${clazz.module}/${clazz.name}.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
                   % else:
-                    <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/${clazz.module}/${clazz.name}.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
+                    <a href="https://github.com/icq4ever/ofSiteKR/edit/master/_documentation/${clazz.module}/${clazz.name}.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
                   % endif
                 % endif
                 % if not functions is None and len(functions.function_list)>0:
                    % if is_addon:
-                     <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/addons/${functions.module}/${functions.name}_functions.markdown" class="nohover"><img title="edit functions on GitHub" src="/images/editfunctions.png?a=5"/></a>
+                     <a href="https://github.com/icq4ever/ofSiteKR/edit/master/_documentation/addons/${functions.module}/${functions.name}_functions.markdown" class="nohover"><img title="edit functions on GitHub" src="/images/editfunctions.png?a=5"/></a>
                    % else:
-                     <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/${functions.module}/${functions.name}_functions.markdown" class="nohover"><img title="edit functions on GitHub" src="/images/editfunctions.png?a=5"/></a>
+                     <a href="https://github.com/icq4ever/ofSiteKR/edit/master/_documentation/${functions.module}/${functions.name}_functions.markdown" class="nohover"><img title="edit functions on GitHub" src="/images/editfunctions.png?a=5"/></a>
                    % endif
                 % endif
               </div>
@@ -168,7 +168,7 @@ ${functions.description}
             <!--diqus comments for class/functions module description-->
             <div id="comments_header">
             <h2>comments</h2>
-            <p>You can add comments with usage examples or other information for each class, method or variable, for adding documentation to an empty section or reporting errors is better to send a fix or open an issue through <a href="https://github.com/openframeworks/ofSite">github</a>.</p>
+            <p>You can add comments with usage examples or other information for each class, method or variable, for adding documentation to an empty section or reporting errors is better to send a fix or open an issue through <a href="https://github.com/icq4ever/ofSiteKR">github</a>.</p>
             <p>When posting code enclose it in:</p>
             <pre><code class="html">&lt;pre&gt;&lt;code class=&quot;cpp&quot;&gt;&nbsp;&lt;/code&gt;&lt;/pre&gt;</code></pre>
             <br/>
