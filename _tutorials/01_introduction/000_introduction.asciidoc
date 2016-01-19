@@ -126,6 +126,7 @@ g++ -o hello hello.cpp <2>
 <3> 방금 생성된 "hello"를 실행합니다.
 
 결과는 아래와 같습니다:
+
 image::images/HelloWorld.png["Hello World!"]
 
 축하드립니다, 여러분은 방금 여러분의 첫번째 C++프로그램을 생성(그리고 실행)하였습니다! 바탕화면에 아래와 같은 화면이 보여질 것입니다:
@@ -171,7 +172,6 @@ Linux
 What Can I Make with oF?
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-<!-- The following collection of projects is an attempt to illustrate the range of different kinds of projects that have been built using openFrameworks. -->
 아래의 프로젝트 모음은 오픈프레임웍스로 제작할 수 있는 범주를 보여주기 위함입니다.
 
 Puppet Parade
@@ -212,7 +212,7 @@ One great thing about openFrameworks is that how easy to incorporate C++ code fr
 ++++
 
 
-왜 오픈프레임웍스인가요?
+Why openFrameworks?
 ~~~~~~~~~~~~~~~~~~~
 오픈프레임웍스는 존재하고 있는 창의적인 코딩 프레임워크 뿐만이 아닙니다. 그렇다면 왜 여러분이 오픈프레임웍스를 사용해야(혹은 사용하지 않아야) 하나요?
 
