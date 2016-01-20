@@ -47,7 +47,7 @@
 <!-- <h3>Community management and outreach</h3> -->
 <h3>커뮤니티 관리 및 확장</h3>
 
-<p><a href="https://github.com/kylemcdonald">Kyle McDonald</a> (kylemcdonald)</a>, <a href="https://github.com/bilderbuchi">Christoph Buchner</a> (bilderbuchi), <a href="https://github.com/caitlinmorris">caitlinmorris</a></p>
+<p><p><a href="https://github.com/caitlinmorris">caitlinmorris</a></p></p>
 
 <h3>도큐먼트</h3>
 <p><a href="https://github.com/HalfdanJ">Jonas Jongejan</a> (HalfdanJ), <a href="https://github.com/jefftimesten">Jeff Crouse</a> (jefftimesten), <a href="https://github.com/roxlu">@roxlu</a> (roxlu)</p>
@@ -80,6 +80,8 @@
 
 <p>그리고 이전분들:</p>
 <ul>
+<li><a href="https://github.com/kylemcdonald">Kyle McDonald</a> (kylemcdonald) for community management</li>
+ <li><a href="https://github.com/bilderbuchi">Christoph Buchner</a> (bilderbuchi) for community management and GitHub leadership</li>
 <li><a href="https://github.com/jvcleave">Jason Van Cleave</a> (jvcleave) as forum leader</li>
 <li><a href="http://www.roxlu.com/">Diederick Huijbers</a> (roxlu) as tutorial leader</li>
 <li><a href="http://www.jeffcrouse.info/">Jeff Crouse</a> (jefftimesten) as tutorial leader</li>
