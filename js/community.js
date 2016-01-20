@@ -138,7 +138,7 @@ $(document).ready(
       $("#media").hide();
       $.ajax({
         type: "GET",
-        url: "http://forum.openframeworks.cc/chris_test/getUser.php?user="+getUrlVars()["user"],
+        url: "http://forum.openframeworks.kr/icq4ever/getUser.php?user="+getUrlVars()["user"],
         //dataType: "xml",
         success: parseXML
       });
