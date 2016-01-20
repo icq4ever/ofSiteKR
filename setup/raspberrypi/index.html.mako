@@ -19,6 +19,9 @@ ${'''
 <!-- openFrameworks 0.9.0 supports the Raspberry Pi via the recommended Linux distribution Raspbian "Jessie" (hard float). Wheezy can be used with older versions of openFrameworks (0.84 recommended). [See here for the older versions of this guide that talk about Wheezy](Raspberry-Pi-Wheezy-index.html) -->
 오픈프레임웍스 0.9.0에서는 라즈베리 지원을 위해 Raspbian "Jessie" (hard float) 리눅스 배포판을 추천합니다. Wheezy는 구 버전의 오픈프레임웍스 (0.84를 추천해드립니다)와 사용이 가능합니다. [Wheezy를 위한 구 버전의 가이드는 이곳을 참고하세요](Raspberry-Pi-Wheezy-index.html)
 
+<!-- On the Raspberry 2 although it's architecture is arm7 raspbian only supports arm6 by now so be sure to download that version as is explained in the [getting started guide](Raspberry-Pi-Getting-Started.html). If you want to use arm7 binaries with the raspberry PI 2 you can try other distributions like archlinux or ubuntu core and the arm7 download of OF but this is still not very well tested so some changes might be required to the original install scripts -->
+라즈베리파이 2에서는, 라즈베리파이2의 아키텍쳐가 arm7 이지만, rasbian이 arm6 아키텍쳐만 지원하기 때문에, 이제부터는 [라즈베리파이 시작 가이드](Raspberry-Pi-Getting-Started.html)에 설명된 버전으로 다운받으시기 바랍니다. 만약 라즈베리파이2에서 arm7 바이너리를 사용하고 싶다면, 아키리눅스나 우분투 코어를 설치한 후, 오픈프레임웍스의 arm7버전 배포판을 사용해주시기 바랍니다. 하지만 이부분에 대해서는 아직 제대로 테스트가 되지 않았으므로, 원본 설치스크립트를 약간 변경해야 할 수 있습니다.
+
 <!-- If you are an existing openFrameworks/RPi user you may wish to read [what's different in 0.9.0](Raspberry-Pi-8-9-Transition-Notes.html)  -->
 만약 이미 openFrameworks/RPi를 갖고 계신다면, [0.9.0에서 달라진점](Raspberry-Pi-8-9-Transition-Notes.html)을 읽어주십시오.
 
