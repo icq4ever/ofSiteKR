@@ -57,7 +57,7 @@ function feedForumLoaded(result) {
   if (!result.error) {
     // Grab the container we will put the results into
     var container = document.getElementById("forum");
-    container.innerHTML = '<h3>forum</h3>';
+    container.innerHTML = '<h3>포럼</h3>';
     
     
 
