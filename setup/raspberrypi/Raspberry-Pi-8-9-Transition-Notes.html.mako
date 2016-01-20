@@ -7,7 +7,6 @@ ${'''
 
 <!-- Raspberry Pi Transition Notes -->
 
-## Jessie Requirements
 ## Jessie 요구사항
 
 <!-- openFrameworks 0.9.0 uses C++11 features that require GCC 4.9 in order to compile. Raspbian Wheezy only supports GCC 4.8. -->
@@ -16,7 +15,7 @@ ${'''
 <!-- ## Arm7 now default variant -->
 ## Arm7은 이제 기본 변종 입니다.
 <!-- openFrameworks uses a variant system that allows developers to more easily port to new platforms. The Raspberry Pi 1 uses an armv6 architecture and although the RPI2 uses armv7 unless you are using archlinux or another distribution that is compiled for arm7 support we recommend to use the armv6 version of openFrameworks with raspbian since it's compiled for that architecture and mixing binaries for different architectures has shown some problems in the past.  -->
-오픈프레임은 개발자들이 새로운 플랫폼으로 쉽게 포팅할 수 있도록 변종시스템을 사용합니다. 라즈베리파이1은 armv61 아키텍쳐를 사용합니다. 라즈베리파이2는 armv7 아키텍쳐를 사용합니다만, 여러분이 아키리눅스나 arm7 아키텍쳐를 지원하도록 컴파일된 다른 배포판을 사용하지 않는다면, raspbian을 설치하고 armv6용 오픈프레임웍스를 사용하는것을 추천드립니다. (원문 : although the RPI2 uses armv7 unless you are using archlinux or another distribution that is compiled for arm7 support we recommend to use the armv6 version of openFrameworks with raspbian since it's compiled for that architecture and mixing binaries for different architectures has shown some problems in the past.)
+오픈프레임은 개발자들이 새로운 플랫폼으로 쉽게 포팅할 수 있도록 변종시스템을 사용합니다. 라즈베리파이1은 armv6 아키텍쳐를 사용합니다. 라즈베리파이2는 armv7 아키텍쳐를 사용합니다만, 여러분이 아키리눅스나 arm7 아키텍쳐를 지원하도록 컴파일된 다른 배포판을 사용하지 않는다면, raspbian을 설치하고 armv6용 오픈프레임웍스를 사용하는것을 추천드립니다. (원문 : although the RPI2 uses armv7 unless you are using archlinux or another distribution that is compiled for arm7 support we recommend to use the armv6 version of openFrameworks with raspbian since it's compiled for that architecture and mixing binaries for different architectures has shown some problems in the past.)
 
 <!-- ## Cross-compiling -->
 ## 크로스 컴파일링

@@ -91,10 +91,11 @@ Wheezy 배포판과는 다르게, 데비안 Jessie는 부팅시에 IP 주소를 
 
 <!-- <h3> For the Raspberry Pi using OF for arm6</h3> -->
 <h3> For the Raspberry Pi using OF for arm6</h3>
- 	* `cd` 
- 	* `curl -O http://www.openframeworks.cc/versions/v0.9.0/of_v0.9.0_linuxarmv6l_release.tar.gz` 
- 	* `mkdir openFrameworks`
- 	* `tar vxfz of_v0.9.0_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1`
+ 0. `cd` 
+ 0. `curl -O http://www.openframeworks.cc/versions/v0.9.0/of_v0.9.0_linuxarmv6l_release.tar.gz` 
+ 0. `mkdir openFrameworks`
+ 0.	`tar vxfz of_v0.9.0_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1`
+
 
 <!-- ## Install packages and compile openFrameworks: -->
 ## 패키지 인스톨 및 오픈프레임웍스 컴파일하기
@@ -105,8 +106,8 @@ Wheezy 배포판과는 다르게, 데비안 Jessie는 부팅시에 IP 주소를 
 <!-- Assuming openFrameworks is located at `/home/pi/openFrameworks` run the following commands to install the necessary packages and compile openFrameworks.  -->
 이 단계에서 소요되는 시간은 라즈베리파이1인지 라즈베리파이2인지에 따라, 또 패키지를 다운받는 Raspbian 미러의 속도에 따라 달라질 수 있습니다.
 
-	*`cd /home/pi/openFrameworks/scripts/linux/debian`  
-	*`sudo ./install_dependencies.sh` 
+0. `cd /home/pi/openFrameworks/scripts/linux/debian`  
+0. `sudo ./install_dependencies.sh` 
 
 <!-- You are now ready to compile openFrameworks!  -->
 이제 오픈프레임웍스를 컴파일할 준비가 되었습니다!
@@ -117,6 +118,7 @@ Wheezy 배포판과는 다르게, 데비안 Jessie는 부팅시에 IP 주소를 
 ### 라즈베리파이2/arm7
 0. `make Release -j4 -C /home/pi/openFrameworks/libs/openFrameworksCompiled/project` -->
 	* `make Release -C /home/pi/openFrameworks/libs/openFrameworksCompiled/project`
+
 
 <!-- ## Speeding up compiling -->
 ## 컴파일 속도 높이기
