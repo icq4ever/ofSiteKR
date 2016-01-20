@@ -190,14 +190,12 @@
 이제 오픈프레임웍스를 다운받아 폴더에 압축을 풀 수 있습니다. 쉘에서 아래의 명령을 입력하여, 오픈프레임웍스를 다운받고 <code>/home/pi/openFrameworks</code>의 폴더에 압축을 풉니다.</p>
 <!-- <h3> For the Raspberry Pi 1/arm6</h3> -->
 
-<h3> 라즈베리파이1/arm6</h3>
+<!-- <h3> 라즈베리파이1/arm6</h3>
+0. `cd` 
+0. `curl -O http://www.openframeworks.cc/versions/v0.9.0/of_v0.9.0_linuxarmv6l_release.tar.gz` 
+0.  `mkdir openFrameworks`
+0.  `tar vxfz of_v0.9.0_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1` -->
 
-<ol>
-<li><code>cd</code> </li>
-<li><code>curl -O http://www.openframeworks.cc/versions/v0.9.0/of_v0.9.0_linuxarmv6l_release.tar.gz</code> </li>
-<li><code>mkdir openFrameworks</code></li>
-<li><code>tar vxfz of_v0.9.0_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1</code></li>
-</ol>
 <!-- <h3> For the Raspberry Pi 2/arm7</h3> -->
 
 <h3> 라즈베리파이2/arm7</h3>
@@ -208,6 +206,15 @@
 <li><code>mkdir openFrameworks</code></li>
 <li><code>tar vxfz of_v0.9.0_linuxarmv7l_release.tar.gz -C openFrameworks --strip-components 1</code></li>
 </ol>
+<!-- <h3> For the Raspberry Pi using OF for arm6</h3> -->
+
+<h3> For the Raspberry Pi using OF for arm6</h3>
+
+<pre><code>* `cd` 
+* `curl -O http://www.openframeworks.cc/versions/v0.9.0/of_v0.9.0_linuxarmv6l_release.tar.gz` 
+* `mkdir openFrameworks`
+* `tar vxfz of_v0.9.0_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1`
+</code></pre>
 <!-- ## Install packages and compile openFrameworks: -->
 
 <h2 id="_4">패키지 인스톨 및 오픈프레임웍스 컴파일하기</h2>
@@ -218,27 +225,25 @@
 <!-- Assuming openFrameworks is located at `/home/pi/openFrameworks` run the following commands to install the necessary packages and compile openFrameworks.  -->
 
 <p>이 단계에서 소요되는 시간은 라즈베리파이1인지 라즈베리파이2인지에 따라, 또 패키지를 다운받는 Raspbian 미러의 속도에 따라 달라질 수 있습니다.</p>
-<ol>
-<li><code>cd /home/pi/openFrameworks/scripts/linux/debian</code><br />
-</li>
-<li><code>sudo ./install_dependencies.sh</code> </li>
-</ol>
+<pre><code>*`cd /home/pi/openFrameworks/scripts/linux/debian`  
+*`sudo ./install_dependencies.sh`
+</code></pre>
 <!-- You are now ready to compile openFrameworks!  -->
 
 <p>이제 오픈프레임웍스를 컴파일할 준비가 되었습니다!</p>
-<h3 id="1arm6">라즈베리파이1/arm6</h3>
-<ol>
-<li><code>make Release -C /home/pi/openFrameworks/libs/openFrameworksCompiled/project</code></li>
-</ol>
-<h3 id="2arm7">라즈베리파이2/arm7</h3>
-<ol>
-<li><code>make Release -j4 -C /home/pi/openFrameworks/libs/openFrameworksCompiled/project</code></li>
-</ol>
+<!-- ### 라즈베리파이1/arm6
+0. `make Release -C /home/pi/openFrameworks/libs/openFrameworksCompiled/project`
+
+### 라즈베리파이2/arm7
+0. `make Release -j4 -C /home/pi/openFrameworks/libs/openFrameworksCompiled/project` -->
+
+<pre><code>* `make Release -C /home/pi/openFrameworks/libs/openFrameworksCompiled/project`
+</code></pre>
 <!-- ## Speeding up compiling -->
 
 <h2 id="_5">컴파일 속도 높이기</h2>
 <p><!-- Compiling natively on the Raspberry Pi 1 takes a long time. openFrameworks applications typically take much less time than the core library. Taking the time to set up a cross-compiling solution will save you enormous amounts of time.  -->
-라즈베리파이1 상에서 네이티브로 컴파일할 경우 시간이 오래 걸립니다. 일반적인 오픈프레임웍스 어플리케이션의 경우에는 코어 라이리브러리보다 훨씬 적게 걸립니다. 크로스 컴파일 해결법을 사용하면 엄청난 시간을 절약할 수 있습니다.</p>
+라즈베리파이 상에서 네이티브로 컴파일할 경우 시간이 오래 걸립니다. 일반적인 오픈프레임웍스 어플리케이션의 경우에는 코어 라이리브러리보다 훨씬 적게 걸립니다. 크로스 컴파일 해결법을 사용하면 엄청난 시간을 절약할 수 있습니다.</p>
 <!-- [Raspberry Pi Cross Compiling Guide](Raspberry-Pi-Cross-compiling-guide.html) -->
 
 <p><a href="Raspberry-Pi-Cross-compiling-guide.html">라즈베리파이 크로스 컴파일 가이드</a></p>
@@ -298,13 +303,13 @@
 
 
   
-Wednesday, 20 January 2016 08:48:42 UTC
+Wednesday, 20 January 2016 10:01:54 UTC
 에 마지막으로 업데이트됨&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="https://github.com/icq4ever/ofSiteKR/commit/
 
-584471b8dc7c5c39d312515a3344c687de54b259
+81b72b4d4ce464540eb1250e6251756de64cd3d3
 ">
 
-584471b8dc7c5c39d312515a3344c687de54b259
+81b72b4d4ce464540eb1250e6251756de64cd3d3
 </a>
 
 <!--br/>RSS feeds for <a href="/feed">Entries</a-->
