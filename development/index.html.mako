@@ -63,6 +63,9 @@
 <h3>openframeworks.cc</h3>
 <p><a href="https://github.com/admsyn">Adam Carlucci</a> (admsyn), <a href="https://github.com/arturoc">arturo</a> (arturoc), <a href="https://github.com/caitlinmorris">caitlinmorris</a>, <a href="https://github.com/csugrue">csugrue</a>, <a href="https://github.com/jefftimesten">Jeff Crouse</a> (jefftimesten), <a href="https://github.com/jvcleave">Jason Van Cleave</a> (jvcleave), <a href="https://github.com/kylemcdonald">Kyle McDonald</a> (kylemcdonald), <a href="https://github.com/lmccart">Lauren McCarthy</a> (lmccart), <a href="https://github.com/ofTheo">Theodore Watson</a> (ofTheo), <a href="https://github.com/ofZach">ofZach</a>, <a href="https://github.com/roxlu">@roxlu</a> (roxlu), <a href="https://github.com/tado">Atsushi Tadokoro</a> (tado), <a href="https://github.com/workergnome">David Newbury</a> (workergnome)</p>
 
+###openframeworks.kr
+[Yi donghoon](https://github.comm/icq4ever/) (icq4ever), [Kim jungun](http://github.com/azuremous) (zauremous)
+
 <h3>오픈프레임웍스 코드베이스</h3>
 <ul>
 	<li><b>2D-3D</b>: <a href="https://github.com/elliotwoods">Elliot Woods</a> (elliotwoods), <a href="https://github.com/tgfrerer">Tim Gfrerer</a> (tgfrerer)</li>
