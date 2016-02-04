@@ -1,6 +1,6 @@
 # openFrameworks.kr 프로젝트
 
-##**[openFrameworks](http://openFrameworks.cc) 페이지 렌더링 엔진이 멀티랭귀지를 지원하는 시스템으로 전환함에 따라, 이 저장소는 더이상 사용되지 않습니다. [openFrameworks 공식 gitHub 저장소](https://github.com/openframeworks/ofSite)를 사용해주시기 바랍니다.*
+## *[openFrameworks](http://openFrameworks.cc) 페이지 렌더링 엔진이 다중언어를 지원하는 시스템으로 전환함에 따라, 이 저장소는 더이상 사용되지 않습니다. [openFrameworks 공식 gitHub 저장소](https://github.com/openframeworks/ofSite)를 사용해주시기 바랍니다.*
 
 이 저장소는 [openFrameworks](http://openFrameworks.cc)웹사이트의 한글페이지를 생성하는 코드와 콘텐츠를 저장하는 곳입니다.
 
