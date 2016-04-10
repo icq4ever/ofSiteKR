@@ -65,9 +65,8 @@ A recurring analogy is to see a Class as a the cookie cutter and the cookies as 
     /* 아래 if문을 사용하여 클래스가 선언되지 않았을때만 클래스를 선언하도록 합니다.
        클래스가 여러번 호출되어 컴파일러를 혼동에 빠지지 않게 할 수 있습니다. */
     
-    #ifndef _OF_BALL // if this class hasn't been defined, the program can define it
-    #define _OF_BALL // by using this if statement you prevent the class to be called more
-    #endif           // than once which would confuse the compiler
+    #ifndef _OF_BALL // if this class hasn't been defined, the program can define it. By using
+    #define _OF_BALL // this if statement the class is only defined once.
 
     #include "ofMain.h"
 

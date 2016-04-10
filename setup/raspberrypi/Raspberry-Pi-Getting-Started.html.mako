@@ -10,8 +10,9 @@ ${'''
 <!-- ## Install Raspbian "Jessie" -->
 ## Raspbian "Jessie" 설치
 <!-- 0. Install the latest _**Raspbian** (Debian Jessie)_ image from the [Raspberry Pi downloads page](http://www.raspberrypi.org/downloads) -->
-0. 가장 최신의 _**Raspbian** (데비안 Jessie)_ 이미지를 [라즈베리파이 다운로드 페이지](http://www.raspberrypi.org/downloads)에서 다운받으세요.
 <!-- 1. Follow the instructions at [Raspberry Pi Preparing Your SD Card](http://elinux.org/RPi_Easy_SD_Card_Setup) to get Raspbian installed onto your SD Card -->
+
+0. 가장 최신의 _**Raspbian** (데비안 Jessie)_ 이미지를 [라즈베리파이 다운로드 페이지](http://www.raspberrypi.org/downloads)에서 다운받으세요.
 1. [라즈베리파이를 위한 SD카드 준비하기](http://elinux.org/RPi_Easy_SD_Card_Setup)의 설명에 따라 SD카드에 Raspbian을 설치해주세요.
          
 <!-- ## Configure the Raspberry Pi -->
@@ -76,11 +77,11 @@ Wheezy 배포판과는 다르게, 데비안 Jessie는 부팅시에 IP 주소를 
 이제 오픈프레임웍스를 다운받아 폴더에 압축을 풀 수 있습니다. 쉘에서 아래의 명령을 입력하여, 오픈프레임웍스를 다운받고 `/home/pi/openFrameworks`의 폴더에 압축을 풉니다.
  
 <!-- <h3> For the Raspberry Pi 1/arm6</h3> -->
-<h3> 라즈베리파이1/arm6</h3>
+<!-- <h3> 라즈베리파이1/arm6</h3>
 0. `cd` 
 0. `curl -O http://www.openframeworks.cc/versions/v0.9.0/of_v0.9.0_linuxarmv6l_release.tar.gz` 
 0.  `mkdir openFrameworks`
-0.  `tar vxfz of_v0.9.0_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1`
+0.  `tar vxfz of_v0.9.0_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1` -->
 
 <!-- <h3> For the Raspberry Pi 2/arm7</h3> -->
 <h3> 라즈베리파이2/arm7</h3>
@@ -88,6 +89,14 @@ Wheezy 배포판과는 다르게, 데비안 Jessie는 부팅시에 IP 주소를 
 0. `curl -O http://www.openframeworks.cc/versions/v0.9.0/of_v0.9.0_linuxarmv7l_release.tar.gz` 
 0.  `mkdir openFrameworks`
 0.  `tar vxfz of_v0.9.0_linuxarmv7l_release.tar.gz -C openFrameworks --strip-components 1`
+
+<!-- <h3> For the Raspberry Pi using OF for arm6</h3> -->
+<h3> For the Raspberry Pi using OF for arm6</h3>
+ 0. `cd` 
+ 0. `curl -O http://www.openframeworks.cc/versions/v0.9.0/of_v0.9.0_linuxarmv6l_release.tar.gz` 
+ 0. `mkdir openFrameworks`
+ 0.	`tar vxfz of_v0.9.0_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1`
+
 
 <!-- ## Install packages and compile openFrameworks: -->
 ## 패키지 인스톨 및 오픈프레임웍스 컴파일하기
@@ -104,16 +113,18 @@ Wheezy 배포판과는 다르게, 데비안 Jessie는 부팅시에 IP 주소를 
 <!-- You are now ready to compile openFrameworks!  -->
 이제 오픈프레임웍스를 컴파일할 준비가 되었습니다!
 
-### 라즈베리파이1/arm6
+<!-- ### 라즈베리파이1/arm6
 0. `make Release -C /home/pi/openFrameworks/libs/openFrameworksCompiled/project`
 
 ### 라즈베리파이2/arm7
-0. `make Release -j4 -C /home/pi/openFrameworks/libs/openFrameworksCompiled/project`
+0. `make Release -j4 -C /home/pi/openFrameworks/libs/openFrameworksCompiled/project` -->
+	* `make Release -C /home/pi/openFrameworks/libs/openFrameworksCompiled/project`
+
 
 <!-- ## Speeding up compiling -->
 ## 컴파일 속도 높이기
 <!-- Compiling natively on the Raspberry Pi 1 takes a long time. openFrameworks applications typically take much less time than the core library. Taking the time to set up a cross-compiling solution will save you enormous amounts of time.  -->
-라즈베리파이1 상에서 네이티브로 컴파일할 경우 시간이 오래 걸립니다. 일반적인 오픈프레임웍스 어플리케이션의 경우에는 코어 라이리브러리보다 훨씬 적게 걸립니다. 크로스 컴파일 해결법을 사용하면 엄청난 시간을 절약할 수 있습니다.
+라즈베리파이 상에서 네이티브로 컴파일할 경우 시간이 오래 걸립니다. 일반적인 오픈프레임웍스 어플리케이션의 경우에는 코어 라이리브러리보다 훨씬 적게 걸립니다. 크로스 컴파일 해결법을 사용하면 엄청난 시간을 절약할 수 있습니다.
 
 <!-- [Raspberry Pi Cross Compiling Guide](Raspberry-Pi-Cross-compiling-guide.html) -->
 [라즈베리파이 크로스 컴파일 가이드](Raspberry-Pi-Cross-compiling-guide.html)

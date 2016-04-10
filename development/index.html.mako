@@ -47,7 +47,7 @@
 <!-- <h3>Community management and outreach</h3> -->
 <h3>커뮤니티 관리 및 확장</h3>
 
-<p><a href="https://github.com/kylemcdonald">Kyle McDonald</a> (kylemcdonald)</a>, <a href="https://github.com/bilderbuchi">Christoph Buchner</a> (bilderbuchi), <a href="https://github.com/caitlinmorris">caitlinmorris</a></p>
+<p><p><a href="https://github.com/caitlinmorris">caitlinmorris</a></p></p>
 
 <h3>도큐먼트</h3>
 <p><a href="https://github.com/HalfdanJ">Jonas Jongejan</a> (HalfdanJ), <a href="https://github.com/jefftimesten">Jeff Crouse</a> (jefftimesten), <a href="https://github.com/roxlu">@roxlu</a> (roxlu)</p>
@@ -62,6 +62,9 @@
 
 <h3>openframeworks.cc</h3>
 <p><a href="https://github.com/admsyn">Adam Carlucci</a> (admsyn), <a href="https://github.com/arturoc">arturo</a> (arturoc), <a href="https://github.com/caitlinmorris">caitlinmorris</a>, <a href="https://github.com/csugrue">csugrue</a>, <a href="https://github.com/jefftimesten">Jeff Crouse</a> (jefftimesten), <a href="https://github.com/jvcleave">Jason Van Cleave</a> (jvcleave), <a href="https://github.com/kylemcdonald">Kyle McDonald</a> (kylemcdonald), <a href="https://github.com/lmccart">Lauren McCarthy</a> (lmccart), <a href="https://github.com/ofTheo">Theodore Watson</a> (ofTheo), <a href="https://github.com/ofZach">ofZach</a>, <a href="https://github.com/roxlu">@roxlu</a> (roxlu), <a href="https://github.com/tado">Atsushi Tadokoro</a> (tado), <a href="https://github.com/workergnome">David Newbury</a> (workergnome)</p>
+
+###openframeworks.kr
+[Yi donghoon](https://github.comm/icq4ever/) (icq4ever), [Kim jungun](http://github.com/azuremous) (zauremous)
 
 <h3>오픈프레임웍스 코드베이스</h3>
 <ul>
@@ -80,6 +83,8 @@
 
 <p>그리고 이전분들:</p>
 <ul>
+<li><a href="https://github.com/kylemcdonald">Kyle McDonald</a> (kylemcdonald) for community management</li>
+ <li><a href="https://github.com/bilderbuchi">Christoph Buchner</a> (bilderbuchi) for community management and GitHub leadership</li>
 <li><a href="https://github.com/jvcleave">Jason Van Cleave</a> (jvcleave) as forum leader</li>
 <li><a href="http://www.roxlu.com/">Diederick Huijbers</a> (roxlu) as tutorial leader</li>
 <li><a href="http://www.jeffcrouse.info/">Jeff Crouse</a> (jefftimesten) as tutorial leader</li>

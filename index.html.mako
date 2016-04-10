@@ -12,10 +12,10 @@
     <div class="home-links">
         <h2>openFrameworks는 창의적 코딩을 위한 오픈소스 C++ 툴킷입니다. </h2>
 
-        <h3><a href="download/">다운로드</a></h3>
+        <h3><a href="${bf.config.site.url}/download/">다운로드</a></h3>
         <p>가장 최신의 릴리즈(${bf.config.currentVersion})를 받으시고, openFrameworks를 구동하기 위한 셋업 가이드를 따라주시기 바랍니다.</p>
         
-	<h3><a href="documentation/">도큐먼트</a></h3>
+	<h3><a href="${bf.config.site.url}/documentation/">도큐먼트</a></h3>
 	<p>openFrameworks의 클래스, 함수, 애드온의 레퍼런스입니다. 또한 <a href="http://openframeworks.kr/tutorials">튜토리얼</a>섹션을 살펴보실 수 있습니다.</p>
         
 	<h3><a href="http://forum.openframeworks.cc/">포럼</a></h3>

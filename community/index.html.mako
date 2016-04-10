@@ -18,7 +18,7 @@
     <li><a href="http://www.openframeworks.cc/list-info/"> 메일링 리스트</a></li>
     <li><a href="http://twitter.com/openFrameworks"> 트위터</a></li>
     <li><a href="http://www.facebook.com/groups/openframeworks.kr/"> 오픈프레임웍스 대한민국 사용자 모임</a></li>
-    <li><a href="https://openframeworks-kr.slack.com/"> 오픈프레임웍스 대한민국 포럼</a></li>
+    <li><a href="http://forum.openframeworks.kr/"> 오픈프레임웍스 대한민국 포럼</a></li>
 </ul>
 
 
