@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="pandoc" name="generator"/>
+<title>ofBook - let's play with Map, std::map</title>
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+<link href="../style/bootstrap.min.css" rel="stylesheet">
+<link href="../style/style.css" rel="stylesheet" type="text/css"/>
+<link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Merriweather:400,300,300italic,400italic,700,900,700italic,900italic" rel="stylesheet" type="text/css">
+<script src="../javascript/jquery-1.8.3.min.js"></script>
+<script src="../javascript/bootstrap.min.js"></script>
+<script src="../javascript/navbar.js"></script>
+</link></link></head>
+<body>
+<div class="banner">
+<div class="content-wrapper">
+<b>Work in progress!</b>
+        This is a preliminary version of ofBook, a collaboratively written book about openFrameworks.  Please post any issues, suggestions, comments on our <a href="https://github.com/openframeworks/ofBook/" target="_blank">repo</a>.
+    </div>
+</div>
+<div class="content-wrapper">
+<nav role="navigation">
+<ul id="nav-parts"><li class="group"><div class="groupTitle">Foreword</div><ul><li class="chapter"><div class="chapterTitle"><a href="foreword.html">foreword</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#책에관하여" target="_top">책에 관하여</a></li><li class="section"><a href="#credits" target="_top">Credits</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Basics</div><ul><li class="chapter"><div class="chapterTitle"><a href="of_philosophy.html">Philosophy</a></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="cplusplus_basics.html">C++ Language Basics</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#lookalive" target="_top">Look Alive!</a></li><li class="section"><a href="#iteration" target="_top">Iteration</a></li><li class="section"><a href="#compilingmyfirstapp" target="_top">Compiling My First App</a></li><li class="section"><a href="#beyondhelloworld" target="_top">Beyond Hello World</a></li><li class="section"><a href="#functions" target="_top">Functions</a></li><li class="section"><a href="#customfunctions" target="_top">Custom Functions</a></li><li class="section"><a href="#encapsulationofcomplexity" target="_top">Encapsulation of Complexity</a></li><li class="section"><a href="#variablespart1" target="_top">Variables (part 1)</a></li><li class="section"><a href="#conclusion" target="_top">Conclusion</a></li><li class="section"><a href="#ps" target="_top">PS.</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="setup_and_project_structure.html">oF structure</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#firstthingsfirst" target="_top">First things first</a></li><li class="section"><a href="#welcometoyournewkitchen" target="_top">Welcome to your new kitchen</a></li><li class="section"><a href="#runningexamples" target="_top">Running examples</a></li><li class="section"><a href="#offolderstructure" target="_top">oF folder structure</a></li><li class="section"><a href="#theofpantry" target="_top">The oF Pantry</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="intro_to_graphics.html">Graphics</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#brusheswithbasicshapes" target="_top">Brushes with Basic Shapes</a></li><li class="section"><a href="#brushesfromfreeformshapes" target="_top">Brushes from Freeform Shapes</a></li><li class="section"><a href="#movingtheworld" target="_top">Moving The World</a></li><li class="section"><a href="#nextsteps" target="_top">Next Steps</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#overview" target="_top">Overview</a></li><li class="section"><a href="#whatisobjectorientedprogramming" target="_top">What is Object Oriented Programming</a></li><li class="section"><a href="#howtobuildyourownclassessimpleclass" target="_top">How to build your own Classes (simple Class)</a></li><li class="section"><a href="#makeanobjectfromyourclass" target="_top">Make an Object from your Class</a></li><li class="section"><a href="#makeobjectsfromyourclass" target="_top">Make objects from your Class</a></li><li class="section"><a href="#makemoreobjectsfromyourclass" target="_top">Make more Objects from your Class</a></li><li class="section"><a href="#makeevenmoreobjectsfromyourclasspropertiesandconstructors" target="_top">Make even more Objects from your Class: properties and constructors</a></li><li class="section"><a href="#makeobjectsonthefly" target="_top">Make Objects on the fly</a></li><li class="section"><a href="#makinganddeleteasyouwishusingvectors" target="_top">Making and delete as you wish - using vectors</a></li><li class="section"><a href="#quickintrotopolymorphisminheritance" target="_top">Quick intro to polymorphism (inheritance)</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="how_of_works.html">how OF works</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#오픈프레임웍스코드의일반적인패턴설명" target="_top">오픈프레임웍스 코드의 일반적인 패턴 설명</a></li><li class="section"><a href="#setupupdatedraw" target="_top">setup, update, draw</a></li><li class="section"><a href="#클래스" target="_top">클래스</a></li><li class="section"><a href="#함수" target="_top">함수</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Approaches</div><ul><li class="chapter"><div class="chapterTitle"><a href="animation.html">Animation</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#background" target="_top">Background</a></li><li class="section"><a href="#animationinofusefulconcepts" target="_top">Animation in oF / useful concepts:</a></li><li class="section"><a href="#linearmovement" target="_top">Linear movement</a></li><li class="section"><a href="#functionbasedmovement" target="_top">Function based movement</a></li><li class="section"><a href="#simulation" target="_top">Simulation</a></li><li class="section"><a href="#wheretogofurther" target="_top">Where to go further</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="game_design.html">Experimental Game Development</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#howdogamedevelopersactuallymakegames" target="_top">How do game developers actually make games?</a></li><li class="section"><a href="#sowhatisoscanyway" target="_top">So what is OSC, anyway?</a></li><li class="section"><a href="#ourbasicgameandmakingitnotsobasic" target="_top">Our basic game–and making it not so basic</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="image_processing_computer_vision.html">image processing and computer vision</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#maybethereisamagicbullet" target="_top">Maybe There is a Magic Bullet</a></li><li class="section"><a href="#preliminariestoimageprocessing" target="_top">Preliminaries to Image Processing</a></li><li class="section"><a href="#이미지처리를얘기하기전에알아두어야할것들" target="_top">이미지처리를 얘기하기 전에 알아두어야 할것들</a></li><li class="section"><a href="#pointprocessingoperationsonimages" target="_top">Point Processing Operations on Images</a></li><li class="section"><a href="#acompleteworkflowbackgroundsubtraction" target="_top">A Complete Workflow: Background Subtraction</a></li><li class="section"><a href="#refinements" target="_top">Refinements</a></li><li class="section"><a href="#suggestionsforfurtherexperimentation" target="_top">Suggestions for Further Experimentation</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">I/O</div><ul><li class="chapter"><div class="chapterTitle"><a href="hardware.html">Hardware</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introduction" target="_top">introduction</a></li><li class="section"><a href="#소개" target="_top">소개</a></li><li class="section"><a href="#gettingstartedwithserialcommunication" target="_top">getting started with serial communication</a></li><li class="section"><a href="#시리얼통신시작하기" target="_top">시리얼 통신 시작 하기</a></li><li class="section"><a href="#digitalandanalogcommunication" target="_top">digital and analog communication</a></li><li class="section"><a href="#디지털과아날로그통신" target="_top">디지털과 아날로그 통신</a></li><li class="section"><a href="#usingserialforcommunicationbetweenarduinoandopenframeworks" target="_top">using serial for communication between arduino and openframeworks</a></li><li class="section"><a href="#lightsoncontrollinghardwareviadmx" target="_top">Lights On - controlling hardware via DMX</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="sound.html">Sound</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#gettingstartedwithsoundfiles" target="_top">Getting Started With Sound Files</a></li><li class="section"><a href="#gettingstartedwiththesoundstream" target="_top">Getting Started With the Sound Stream</a></li><li class="section"><a href="#why1to1" target="_top">Why -1 to 1?</a></li><li class="section"><a href="#timedomainvsfrequencydomain" target="_top">Time Domain vs Frequency Domain</a></li><li class="section"><a href="#reactingtoliveaudio" target="_top">Reacting to Live Audio</a></li><li class="section"><a href="#synthesizingaudio" target="_top">Synthesizing Audio</a></li><li class="section"><a href="#audiogotchas" target="_top">Audio Gotchas</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="network.html">Network</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#tcpvsudp" target="_top">TCP vs UDP</a></li><li class="section"><a href="#osc" target="_top">OSC</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Graphics</div><ul><li class="chapter"><div class="chapterTitle"><a href="openGL.html">Introducing OpenGL for OF</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introducing" target="_top">Introducing</a></li><li class="section"><a href="#vertices" target="_top">Vertices</a></li><li class="section"><a href="#meshes" target="_top">Meshes</a></li><li class="section"><a href="#vbos" target="_top">VBOs</a></li><li class="section"><a href="#abasic3dscene" target="_top">A Basic 3D Scene</a></li><li class="section"><a href="#matrices" target="_top">Matrices</a></li><li class="section"><a href="#textures" target="_top">Textures</a></li><li class="section"><a href="#cameras" target="_top">Cameras</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="lines.html">drawing lines</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#소개" target="_top">소개 ...</a></li><li class="section"><a href="#선그리기" target="_top">선 그리기</a></li><li class="section"><a href="#약간의노이즈abitofnoise" target="_top">약간의 노이즈A bit of noise</a></li><li class="section"><a href="#aweboflines" target="_top">A web of lines</a></li><li class="section"><a href="#makeasmoothlineinmovementina3dspace" target="_top">Make a smooth line in movement in a 3D space</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="generativemesh.html">Basics of Generating Meshes from an Image</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#basicsofgeneratingmeshesfromanimage1" target="_top">Basics of Generating Meshes from an Image</a></li><li class="section"><a href="#basicsworkingwithofmesh" target="_top">Basics: Working with ofMesh</a></li><li class="section"><a href="#generativemeshusinganimagetodrivethecreationofamesh" target="_top">Generative Mesh: Using an image to drive the creation of a mesh</a></li><li class="section"><a href="#manipulationsaddingeffectsthatmodifythemesh" target="_top">Manipulations: Adding effects that modify the mesh</a></li><li class="section"><a href="#nextsteps" target="_top">Next Steps</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="advanced_graphics.html">Advanced graphics</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#dimmediatemodevsofpolylineofpath" target="_top">2D, immediate mode vs ofPolyline/ofPath</a></li><li class="section"><a href="#d" target="_top">3D</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="shaders.html">Introducing Shaders</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introducing" target="_top">introducing</a></li><li class="section"><a href="#yourfirstshader" target="_top">Your first shader!</a></li><li class="section"><a href="#addinguniforms" target="_top">Adding Uniforms</a></li><li class="section"><a href="#addingsomeinteractivity" target="_top">Adding some interactivity</a></li><li class="section"><a href="#addingtextures" target="_top">Adding Textures</a></li><li class="section"><a href="#alphamasking" target="_top">Alpha Masking</a></li><li class="section"><a href="#multipletextures" target="_top">Multiple Textures</a></li><li class="section"><a href="#offbo" target="_top">ofFbo</a></li><li class="section"><a href="#texturesasdataegdisplacement" target="_top">Textures as Data (e.g. Displacement)</a></li><li class="section"><a href="#theendcongrats" target="_top">The End, Congrats!</a></li></ul></div></li></ul></li><li class="group selected"><div class="groupTitle">C++</div><ul><li class="chapter"><div class="chapterTitle"><a href="threads.html">threads</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#쓰레드란무엇이고언제사용해야하는가" target="_top">쓰레드란 무엇이고 언제 사용해야 하는가</a></li><li class="section"><a href="#ofthread" target="_top">ofThread</a></li><li class="section"><a href="#스레드와opengl" target="_top">스레드와 openGL</a></li><li class="section"><a href="#ofmutex" target="_top">ofMutex</a></li><li class="section"><a href="#externalthreadsanddoublebuffering" target="_top">External threads and double buffering</a></li><li class="section"><a href="#ofscopedlock" target="_top">ofScopedLock</a></li><li class="section"><a href="#pococondition" target="_top">Poco::Condition</a></li><li class="section"><a href="#conclusion" target="_top">Conclusion</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="memory.html">memory of C++</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#컴퓨터메모리와변수" target="_top">컴퓨터 메모리와 변수</a></li><li class="section"><a href="#스택변수함수내의변수vs오브젝트내의변수" target="_top">스택 변수, 함수내의 변수 vs 오브젝트내의 변수</a></li><li class="section"><a href="#포인터와레퍼런스" target="_top">포인터와 레퍼런스</a></li><li class="section"><a href="#힙heap영역에서의변수들" target="_top">힙(heap) 영역에서의 변수들</a></li><li class="section"><a href="#메모리구조배열과vector" target="_top">메모리 구조, 배열과 vector</a></li><li class="section"><a href="#다른메모리구조리스트와맵" target="_top">다른 메모리 구조, 리스트와 맵</a></li><li class="section"><a href="#스마트포인터" target="_top">스마트 포인터</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="stl_vector.html">Introduction to vectors</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#quickreview" target="_top">Quick Review:</a></li><li class="section"><a href="#declaringavector" target="_top">Declaring a vector</a></li><li class="section"><a href="#addingelementstoavector" target="_top">Adding elements to a vector</a></li><li class="section"><a href="#resize" target="_top">resize</a></li><li class="section"><a href="#assign" target="_top">assign</a></li><li class="section"><a href="#accessingelementsofavector" target="_top">Accessing elements of a vector</a></li><li class="section"><a href="#erasingelementsofavector" target="_top">Erasing elements of a vector</a></li><li class="section"><a href="#iterators" target="_top">Iterators</a></li><li class="section"><a href="#sortingandshufflingavector" target="_top">Sorting and shuffling a vector</a></li><li class="section"><a href="#vectorsofobjects" target="_top">Vectors of objects</a></li></ul></div></li></ul><ul><li class="chapter selected"><div class="chapterTitle selected"><a href="stl_map.html">let's play with Map, std::map</a></div><div class="chapterContents selected"><ul><li class="section selected"><a href="#소개map이무엇인가요" target="_top">소개 : map이 무엇인가요?</a></li><li class="section"><a href="#map에값삽입하기" target="_top">map에 값 삽입하기</a></li><li class="section"><a href="#map에서요소삭제하기" target="_top">map에서 요소 삭제하기</a></li><li class="section"><a href="#map을훑기" target="_top">map을 훑기</a></li><li class="section"><a href="#map에서요소찾기" target="_top">map에서 요소 찾기</a></li><li class="section"><a href="#map에오브젝트저장하기" target="_top">map에 오브젝트 저장하기</a></li><li class="section"><a href="#multimap이란무엇인가요" target="_top">multimap이란 무엇인가요?</a></li><li class="section"><a href="#다른유용한메소드들" target="_top">다른 유용한 메소드들</a></li><li class="section"><a href="#추가참고자료역자에의해추가됨" target="_top">추가 참고 자료 (역자에 의해 추가됨)</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="c++11.html">C++ 11</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introduction" target="_top">Introduction</a></li><li class="section"><a href="#auto" target="_top">auto</a></li><li class="section"><a href="#forthingthings" target="_top">for (thing : things)</a></li><li class="section"><a href="#override" target="_top">override</a></li><li class="section"><a href="#lambdafunctions" target="_top">Lambda functions</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Advanced topics</div><ul><li class="chapter"><div class="chapterTitle"><a href="math.html">Math: From 1D to 4D</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#onedimensionusingchange" target="_top">One Dimension: Using Change</a></li><li class="section"><a href="#moredimensionssomelinearalgebra" target="_top">More Dimensions: Some Linear Algebra</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Platforms</div><ul><li class="chapter"><div class="chapterTitle"><a href="ios.html">ofxiOS</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#openframeworksoniosdevices" target="_top">OpenFrameworks on iOS devices.</a></li><li class="section"><a href="#intro" target="_top">Intro</a></li><li class="section"><a href="#introtoobjectivec" target="_top">Intro to Objective-C</a></li><li class="section"><a href="#underthehood" target="_top">Under the Hood</a></li><li class="section"><a href="#ofuikit" target="_top">OF &amp; UIKit</a></li><li class="section"><a href="#mediaplaybackandcapture" target="_top">Media Playback and Capture</a></li><li class="section"><a href="#lifehacks" target="_top">Life Hacks</a></li><li class="section"><a href="#appstore" target="_top">App Store</a></li><li class="section"><a href="#casestudies" target="_top">Case Studies</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Tools</div><ul><li class="chapter"><div class="chapterTitle"><a href="version_control_with_git.html">Version control with Git</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#whatisversioncontrolandwhyshouldyouuseit" target="_top">What is version control, and why should you use it?</a></li><li class="section"><a href="#differentversioncontrolsystems" target="_top">Different version control systems</a></li><li class="section"><a href="#introductiontogit" target="_top">Introduction to Git</a></li><li class="section"><a href="#popularguiclients" target="_top">Popular GUI clients</a></li><li class="section"><a href="#conclusion" target="_top">Conclusion</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="ofSketch.html">ofSketch</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#whatisofsketch" target="_top">What is ofSketch?</a></li><li class="section"><a href="#download" target="_top">Download</a></li><li class="section"><a href="#sketchformat" target="_top">Sketch Format</a></li><li class="section"><a href="#remotecoding" target="_top">Remote Coding</a></li><li class="section"><a href="#future" target="_top">Future</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="installation_up_4evr_macosx.html">Installation up 4evr</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#step1prepyoursoftwareandthecomputer" target="_top">Step 1: Prep your software and the computer</a></li><li class="section"><a href="#step2bootintoyoursoftware" target="_top">Step 2: Boot into your software</a></li><li class="section"><a href="#step3keepitupchamp" target="_top">Step 3: Keep it up (champ!)</a></li><li class="section"><a href="#step4rebootperiodically" target="_top">Step 4: Reboot periodically</a></li><li class="section"><a href="#step5checkinonitfromafar" target="_top">Step 5: Check in on it from afar.</a></li><li class="section"><a href="#step6testtesttest" target="_top">Step 6: Test, test, test.</a></li><li class="section"><a href="#additionaltipslogging" target="_top">Additional Tips: Logging</a></li><li class="section"><a href="#memoryleakmurderer" target="_top">Memory leak murderer</a></li><li class="section"><a href="#alternateresources" target="_top">Alternate resources:</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="installation_up_4evr_linux.html">installation up4ever - linux</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#몇가지추가적인팁" target="_top">몇가지 추가적인 팁:</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Case studies</div><ul><li class="chapter"><div class="chapterTitle"><a href="project_eva.html">Choreographies for Humans and Stars</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#projectoverview" target="_top">Project Overview</a></li><li class="section"><a href="#ideationandprototyping" target="_top">Ideation and Prototyping</a></li><li class="section"><a href="#findingthetechnicalsolutions" target="_top">Finding the Technical Solutions</a></li><li class="section"><a href="#developingthevisualizationsoftware" target="_top">Developing the Visualization Software</a></li><li class="section"><a href="#failsafesanddirtyfixes" target="_top">Fail-safes and dirty fixes</a></li><li class="section"><a href="#resultsandreception" target="_top">Results and Reception</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="project_joel.html">Anthropocene</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#theproject" target="_top">The Project</a></li><li class="section"><a href="#development" target="_top">Development</a></li><li class="section"><a href="#showtime" target="_top">Show time</a></li><li class="section"><a href="#postevent" target="_top">Post Event</a></li><li class="section"><a href="#teamandcredits" target="_top">Team and Credits</a></li><li class="section"><a href="#hardwareselection" target="_top">Hardware selection</a></li></ul></div></li></ul></li></ul>
+</nav>
+<div class="chapter-content">
+<h1 id="lets-play-with-map-stdmap">let's play with Map, std::map</h1>
+<p><em>Joshua Noble에 의해 작성 </em></p>
+<h2 id="소개map이무엇인가요">소개 : map이 무엇인가요?</h2>
+<p>In the previous tutorial you learned about the std::vector but that's not the only kind of container that C++ provides for you. In fact, for almost any kind of data storage that you can think of, there's a container that's going to allow you to express it elegantly. In this little tutorial we're going to look at one that's really handy when you need something more specific than a vector. Maps are containers that store elements formed by a combination of a key value and a mapped value, following a specific order. If you've used Javascript or Ruby or Python you're already familiar with these and you've used them any time you want to do something like:</p>
+<p>이전 튜토리얼에서는, std::vector에 대해서 배웠습니다만, C++이 제공하는 컨테이너는 그것만이 아닙니다. 사실, 여러분이 생각할 수 있는 데이터를 저장하는 어떠한 방법이라도, 그것을 우아하게 표현할 수 있는 컨테이너가 있습니다. 이 작은 튜토리얼에서는 여러분들이 vector보다 좀더 구체적인 뭔가가 필요할 때 정말 유용할 방법에 대해 살펴보고자 합니다. map은 특수한 방법에 따라 <code>키(key)와 값(value)</code>의 조합으로 이루어진 요소들을 저장하는 컨테이너입니다. 여러분중에 자바스크립트나 루비, 파이썬의 경험이 있으시다면, 이것들에 대해 이미 친숙하므로 이전에 언제든지 원하는대로 아래처럼 사용했을 것입니다:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">images[<span class="st">"Portland"</span>].draw();</code></pre>
+<p>간결하죠? vector를 훑어서 적절한 이미지를 찾을 필요 없이, 잠시 후에 살펴보겠지만, 데이터를 보다 편리하게 다루는 방법인 키(key)를 이용해서 데이터를 저장할 수 있습니다. 한번이라도 이렇게 시도해본 적이 있으신가요?:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span> theImageIWant, otherImageIWant;
+vector&lt;ofTexture&gt; images;</code></pre>
+<p>아마도 map을 사용하는것을 고려하고 있는겁니다. 여러분이 말하려는것은 이것과 같기 때문이죠: 인덱스를 이용해서 오브젝트를 저장하는 좋은 방법이 필요해 (사실, 이게 바로 "키"입니다!) 따라서 나중에 키를 이용해서 얻을수 있어. 하지만 인덱스를 사용할때 vector를 재정렬하거나, 뭔가를 추가하기 시작할때나, 뭔가를 삭제하거나 하기 시작하면, 인덱스는 더이상 아무 의미가 없게되는 큰 문제가 생깁니다. 이렇게 하는것이 좀더 훌륭하지 않을까요?</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">string firstImageKey = <span class="st">"Portland"</span>, secondImageKey = <span class="st">"Tokyo"</span>;
+map&lt;string, ofTexture&gt; images;</code></pre>
+<p>이 방법은 몇몇 장점을 가집니다: "Portland"와 "Tokyo"는 map을 사용하여 무슨짓을 하더라도, 이름이 사람이 읽을 수 있기 때문에 항상 같은 ofTexture를 가리킬 것입니다: 그냥 읽으면 그게 뭔지를 알 수 있죠. 아주 간단한 예제를 살펴보도록 합니다. ofApp.h파일에서, 아래와 같이 추가하였습니다.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">map&lt;string, ofImage&gt; images;</code></pre>
+<p>이 말은 "이미지들을 문자열 키로 저장하겠다."라고 하는것입니다. cpp파일에서, 이렇게 작성할 수 있습니다:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> ofApp::setup(){
+    <span class="co">// 저장하기 위해 2개의 이미지를 만든다 </span>
+    ofImage pImage;
+    pImage.loadImage(<span class="st">"portland.jpg"</span>);
+    
+    ofImage tImage;
+    tImage.loadImage(<span class="st">"tokyo.jpg"</span>);
+    
+    <span class="co">// 이제 이것들을 훌륭한 이름으로 저장한다</span>
+    images[<span class="st">"Portland"</span>] = pImage;
+    images[<span class="st">"Tokyo"</span>] = tImage;
+}
+
+<span class="dt">void</span> ofApp::draw(){
+    <span class="co">// 이제, 이름으로 이미지들에 접근할 수 있다.</span>
+    images[<span class="st">"Portland"</span>].draw(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">100</span>, <span class="dv">100</span>);
+    images[<span class="st">"Tokyo"</span>].draw(<span class="dv">100</span>, <span class="dv">0</span>, <span class="dv">100</span>, <span class="dv">100</span>);
+}</code></pre>
+<p>You can see how, though this isn't the most powerful example of that, that it might be really nice to be able to keep track of things by something concrete that will keep it's "location" no matter what. So, in a general sense in a map, the key values are generally used to sort and uniquely identify the elements, while the mapped values store the content associated to this key. What kinds of things can you use as a value? Anything. Really, anything can be a value. You will want to be careful storing pointers, but unlike a vector, once inserted into a map objects don't move around even if other elements are added or removed, however, storing pointers is good, especially if you're working with lots of textures or other large data objects. Make sure you don't invalidate your pointers (i.e. delete the object that is being pointed to) and you'll be good to go.</p>
+<p>이 예시가 map의 아주 강력한 예제는 아닐지는 모르겠지만, 아주 굳건하게 데이터의 "위치"를 유지할 수 있다는 것이 정말 훌륭하다는 것을 알 수 있습니다. map에서는 이 키와 함께 매핑된 값이 저장되므로, 정렬이나 요소를 확인할 때에 대개 키값이 사용됩니다. 값으로 어떠한 것들이 가능하냐구요? 뭐든지 가능합니다. 정말로 뭐든지 값으로 사용될 수 있습니다. 포인터를 저장할때에는 조심해야겠지만, vector와 달리, 한번 map에 삽입된 오브젝트는 다른 요소들이 추가되거나 삭제되더라도 움직이지 않습니다. 하지만 포인터를 저장하는것도 좋습니다. 특히 엄청난 양의 텍스쳐나 다른 거대한 데이터 오브젝트들을 다룰 때 말이죠. 포인터를 확실히 유효하게 유지한다면 (예를들어 가리키고 있는 오브젝트를 지워준다든가 하여서) map에 포인터를 저장해도 좋습니다.</p>
+<h2 id="map에값삽입하기">map에 값 삽입하기</h2>
+<p>뭔가를 추가할려면, 이렇게 합니다:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"> map[key] = value;</code></pre>
+<p>맵에 추가된 오브젝트를 보는 방법이 하나만 있는것은 아닙니다. map안의 각 요소들은 쌍으로 이루어져 있습니다. 쌍은 키, 값 부분의 조합으로 이루어져 있죠. 이 쌍의 선언은 그저 map 자체의 선언처럼 보여집니다:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">typedef</span> pair&lt;<span class="dt">const</span> Key, T&gt; value_type;</code></pre>
+<p>아직 특별하게 나타나진 않는군요, 하지만 잠시 기다려봅시다. map에 요소를 추가하는것이 map에 쌍을 추가한다고 생각해보자구요. C++에서는 이를 위해 다른 방법을 사용합니다. 3개의 도시를 인스턴스화 해봅시다.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">ofImage bImage;
+bImage.loadImage(<span class="st">"Berlin.jpg"</span>);
+
+ofImage lImage;
+lImage.loadImage(<span class="st">"London.jpg"</span>);
+
+ofImage pImage;
+pImage.loadImage(<span class="st">"Paris.jpg"</span>);</code></pre>
+<p>이것들을 어떻게 map에 추가할까요? 가장 일반적인 방법중 하나는 <code>make_pairs</code>와 <code>insert</code>메소드의 조합을 사용하는 것입니다.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">images.insert(make_pair(<span class="st">"Berlin"</span>, bImage));</code></pre>
+<p>또한 <code>insert</code>와 <code>pair</code>를 사용할 수 있습니다.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">images.insert(pair&lt;string, ofTexture&gt;(<span class="st">"London"</span>, lImage));</code></pre>
+<p>또는 std::pair 구조를 사용할 수 있습니다.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">images.insert(map&lt;string, ofTexture&gt;::value_type(<span class="st">"Paris"</span>, pImage));</code></pre>
+<h2 id="map에서요소삭제하기">map에서 요소 삭제하기</h2>
+<p>map에서 요소를 삭제할려면, <code>erase</code>를 사용합니다.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">images.erase(<span class="st">"London"</span>);</code></pre>
+<p>map을 완전히 비울려면, <code>clear</code>를 사용합니다.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">images.clear();</code></pre>
+<h2 id="map을훑기">map을 훑기</h2>
+<p>자, 이제 우리는 map에 뭔가를 넣거나 얻어올 수 있습니다. 하지만 그것을 훑으며 살펴볼려면 어떻게 해야하죠? vector처럼 정수를 사용하여 훑을수는 없습니다. 따라서 iterator를 사용해야 합니다. 자, 잠시 map과 키/값의 쌍은 잠시 놓아두고 iterator에 대해서 애기해보도록 하죠. 왜냐하면 iterator는 map을 보다 더 쉽게 사용할수 있게 해주기 때문이죠:</p>
+<p>iterator는 C++의 std 버전 포인터입니다. 이것을 컨테이너에서 위치를 가리키도록 사용하고 있죠. 마치 vector에서 인덱스로 관심있어하는 레퍼런스를 추적하듯이 말이죠. iterator는 인덱스 같은 것입니다만, 이 녀석은 그보다 더한 vector 내의 오브젝트 입니다. 모든 컨테이너는 컨테이너의 시작(첫번째 요소)을 가리키고 있는 iterator를 리턴하는 begin()함수와, 컨테이너의 끝에 해당하는 iterator를 리턴하는 end()함수를 가지고 있습니다. 한번 for 반복문과 iterator로 코드를 상성하여 얼마나 이것이 조금 더 나은지 살펴봅시다:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">map&lt;<span class="dt">float</span>,string&gt;::iterator it; <span class="co">// make the iterator, say it's going to iterate over a map&lt;float, string&gt;</span>
+<span class="kw">for</span> ( it = aMap.begin(); <span class="co">// say the iterator should point to the beginning of a map called "aMap"</span>
+      it != aMap.end();  <span class="co">// say let's stop when we get to the end aMap</span>
+      ++it) {            <span class="co">// increment the iterator</span>
+}</code></pre>
+<p>ofimage의 vector를 위한 iterator는 이와 같을 것입니다: <code>vector&lt;ofImage&gt;::iterator</code>. 문자열 키와 ofMatrix4x4값으로 이루어진 map을 위한 iterator는 이와 같습니다: <code>map&lt;string, ofMatrix4x4&gt;::iterator</code>. iterator를 앞으로 이동할려면 ++를, 반대로 이동할려면 --를 사용합니다. 흥미로운 사실은: iterator를 두단계만큼 앞으로 이동할려면 (it,2), 앞으로 20만큼 이동할려면 (it, 20)을 사용할 수 있다는겁니다. 굳이 절대 이렇게 할 필요가 없지만 말이죠. 좋습니다, 다시 map으로 돌아와서, 우리의 map을 iterator로 훑어서 화면에 그것들을 그려봅시다:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> ofApp::draw(){
+    <span class="dt">int</span> xpos = <span class="dv">0</span>;
+    <span class="kw">for</span> (map&lt;string, ofTexture&gt;::iterator it=cities.begin(); it!=cities.end(); ++it){
+        <span class="co">// it-&gt;first contains the key</span>
+        cout &lt;&lt; <span class="st">" this is the key "</span> &lt;&lt; it-&gt;first &lt;&lt; endl;
+        <span class="co">// it-&gt;second contains the value</span>
+        it-&gt;second.draw(xpos, <span class="dv">0</span>, <span class="dv">100</span>, <span class="dv">100</span>);
+        xpos+= <span class="dv">100</span>;
+    }
+}</code></pre>
+<p>자, 저 iterator가 무엇을 가리기고 있지요? 쌍이죠, 위의 경우, <code>string, ofTexture</code>입니다. 이와 같이요 :</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">pair&lt;string, ofTexture&gt; p;</code></pre>
+<p>C++ 11에서는 map을 훑는 단축방법인 <code>auto</code>를 제공합니다. 이런식으로 사용할 수 있습니다:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">for</span> (<span class="dt">auto</span>&amp; pic : images )
+  cout &lt;&lt; pic.first &lt;&lt; endl;</code></pre>
+<p>여기서 <code>pic-&gt;first</code>가 아닌 <code>pic.first</code>를 사용하였다는 것을 기억하세요. 이는 앞의 예제에서처럼 포인터가 아닌, <code>pic</code>이 쌍을 참조(<code>&amp;</code>입니다)하고 있기 때문입니다. 이 경우, map을 훑으면서 map의 값을 변경할 수 있습니다. 하지만 만약 map에서 값을 변경하는것이 아니라, 단순히 값을 읽기를 원한다면요? 이러한 경우 <code>constant</code>키워드를 사용합니다. 이 키워드를 사용하면 어떠한 map의 값들도 변경되지 않습니다.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">for</span> (<span class="dt">const</span> <span class="dt">auto</span>&amp; pic : images )
+  cout &lt;&lt; pic.first &lt;&lt; endl;</code></pre>
+<h2 id="map에서요소찾기">map에서 요소 찾기</h2>
+<p><code>find</code>가 아니라면 어떤 메소드 이름이 map에서 요소를 검색하는 키워드로 사용될까요?</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">  <span class="kw">if</span> (cities.find(<span class="st">"Berlin"</span>) != cities.end())
+    cout &lt;&lt; it-&gt;first &lt;&lt; <span class="st">" founded!"</span> &lt;&lt; endl;
+  <span class="kw">else</span>
+    cout &lt;&lt; <span class="st">"city not found"</span> &lt;&lt; endl;</code></pre>
+<p>end()가 호출되는걸 보셨죠? 이는 find()역시 실제로 iterator를 리턴하기 때문입니다. 따라서 만약 map내에 요소가 있다면 그것을 가리키는 iterator를 얻을것이며, 만약 그렇지 않다면, iterator의 끝을 가리키는 iterator를 얻게 될 것입니다. map에서 제공하는 다른 메소드들은 약간 축약된 리스트로 살펴보겠습니다:</p>
+<h2 id="map에오브젝트저장하기">map에 오브젝트 저장하기</h2>
+<p>map에서 키를 사용하여 어떤 작업들을 할 수 있을까요? 흠. 분명 여러분이 하고싶은 모든걸 할수 있을것입니다: 문자열, float, 같은것들요. 비록 약간의 제약이 있지만, 아래와 같은 것들을 시도할 수 있을겁니다:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">map&lt;ofVec2f, string&gt; locations;</code></pre>
+<p>그리고 이것은 상당히 애매한 에러를 내밷을 것입니다, 이러한 것들처럼요: "/usr/include/c++/4.2.1/bits/stl_function.h:227:20: error: invalid operands to binary expression ('const ofVec2f' and 'const ofVec2f')". 이것은 사실 vector에서 "보다 작은(&lt;)" 의 개념이 다소 이상하기 때문에 그렇습니다. 이것에 대한 수학적 정의가 있습니다만, 상식적으로 맞지 않고, 수학적으로도 맞지 않은 상식이죠. 하지만 이게 중요한게 아닙니다. 중요한 것은, "&lt;" 연산자같은 것들이 키로 사용될 수 있다는 점입니다. 하나를 만들어보죠:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> vec2Key
+{
+    
+<span class="kw">public</span>:
+    
+    <span class="dt">float</span> x, y;
+    
+    vec2Key( <span class="dt">float</span> xValue, <span class="dt">float</span> yValue )
+    {
+        x = xValue;
+        y = yValue;
+    }
+    
+    <span class="dt">bool</span> <span class="kw">operator</span> &lt; ( <span class="dt">const</span> vec2Key&amp; other) <span class="dt">const</span>
+    {
+        <span class="kw">if</span> ( x == other.x ) {
+            <span class="kw">return</span> y &lt; other.y;
+        }
+        
+        <span class="kw">return</span> x &lt; other.x;
+    }
+    
+};</code></pre>
+<p>&lt; 연산자를 봅시다. 이것은 map이 갖고 있는 모든 값들을 어떻게 관리할지 알려주기 때문에 키입니다. 따라서 값들을 상대적으로 빨리 훑을 수 있습니다. map은 일반적으로 하는 역할때문에 레드-블랙 트리의 종류라고 할 수 있습니다.(<a href="https://ko.wikipedia.org/wiki/%EB%A0%88%EB%93%9C-%EB%B8%94%EB%9E%99_%ED%8A%B8%EB%A6%AC" target="_blank">한번 읽어보세요:레드-블랙트리</a>). 좋습니다. 우리에겐 사용할수 있는 키 오브젝트를 갖고 있으니, 계속 진행하여 사용해봅시다:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">vec2Key k1(<span class="dv">100</span>, <span class="dv">200</span>, <span class="dv">1</span>);
+vec2Key k2(<span class="dv">100</span>, <span class="dv">300</span>, <span class="dv">1</span>);
+vec2Key k3(<span class="dv">100</span>, <span class="dv">400</span>, <span class="dv">1</span>);
+
+map&lt;vec2Key, string&gt; stringToLocation;
+
+stringToLocation[k1] = <span class="st">"first"</span>;
+stringToLocation[k2] = <span class="st">"second"</span>;
+stringToLocation[k3] = <span class="st">"third"</span>;</code></pre>
+<p>좋습니다, 테스트해봅시다:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">cout &lt;&lt; stringToLocation[vec2Key(<span class="dv">100</span>, <span class="dv">300</span>)] &lt;&lt; endl; <span class="co">// prints "second", all good</span></code></pre>
+<p>리스트에 추가되는 그것이 다른 것들보다 클지 작을지는 아무도 모릅니다. 현재 우리가 괴상한 쿼드트리(역자 주:자식노드가 4개인 트리)같은 것을 하고 있으로, 애매한 방법으로 살펴보도록 하죠. &lt; 연산자가 좀더 많은 일을 할 수 있도록 만들 수 있습니다. 우리의 vector에게 좀더 유동적으로 비교하는 연산자를 제공해봅시다:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">    <span class="dt">bool</span> <span class="kw">operator</span> &lt; ( <span class="dt">const</span> vec2Key&amp; other) <span class="dt">const</span>
+    {
+        <span class="kw">if</span> ( fabs(x - other.x) &lt; <span class="fl">0.1</span> ) {
+              <span class="kw">return</span> fabs(y - other.y) &gt; <span class="fl">0.1</span>;
+        }
+        
+        <span class="kw">return</span> x &lt; other.x;
+    }</code></pre>
+<p>이제:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"> cout &lt;&lt; stringToLocation[vec2Key(<span class="fl">100.01</span>, <span class="fl">299.99</span>)] &lt;&lt; endl; <span class="co">// 100, 300은 모두 &lt; 0.1만큼 차이가 나므로 "second"를 리턴합니다.</span></code></pre>
+<h2 id="multimap이란무엇인가요">multimap이란 무엇인가요?</h2>
+<p>I<code>map</code>의 각 키는 유일합니다. 이는 즉 앞에서 봤던 map <code>map&lt;string, ofTexture&gt; images</code>에서 두 도시의 image가 같은 이름의 키를 갖는 것이 불가능하다는 의미입니다. "London"과 같이요. <code>multimap</code>에서는, 이러한 규칙이 없습니다. <code>multimap</code>은 같은 키로 이루어진 쌍을 포함할 수 있습니다. 예를 보죠:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">  multimap&lt;string, <span class="dt">int</span>&gt; coldestCities;
+  coldestCities.insert(make_pair(<span class="st">"moskow"</span>,<span class="dv">2015</span>));
+  coldestCities.insert(make_pair(<span class="st">"chicago"</span>,<span class="dv">2014</span>));
+  coldestCities.insert(make_pair(<span class="st">"moskow"</span>,<span class="dv">2013</span>));
+  coldestCities.insert(make_pair(<span class="st">"moskow"</span>,<span class="dv">2012</span>));
+  coldestCities.insert(make_pair(<span class="st">"helsinki"</span>,<span class="dv">2011</span>));
+
+  cout <span class="st">"coldest cities in the last 5 years"</span> &lt;&lt; endl;
+  cout <span class="st">"disclaimer: this data are just an example"</span> &lt;&lt; endl;
+
+  <span class="kw">for</span> (<span class="dt">const</span> <span class="dt">auto</span>&amp; cityYear : coldestCities )
+    cout &lt;&lt; cityYear.first&lt;&lt; <span class="st">"year: "</span>&lt;&lt; cityYear.second &lt;&lt; endl;</code></pre>
+<p>map을 사용할때에는 키는 한번만 등장하였지만, multimap을 사용할때에는 이러한 디테일은 필요없습니다.</p>
+<h2 id="다른유용한메소드들">다른 유용한 메소드들</h2>
+<p><code>empty</code> - 컨테이너가 비어있으면 true를, 그렇지 않으면 false를 리턴합니다.</p>
+<p><code>size</code> - map의 요소들의 갯수를 리턴합니다.</p>
+<p><code>lower_bound</code> - 이는 추어진 값보다 작지 않은 요소(주어진 값)로 iterator를 되돌립니다.</p>
+<p><code>upper_bound</code> - 주어진 값보다 큰 첫번째 요소로 iterator를 리턴합니다.</p>
+<p>As an example of these two:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">map&lt;<span class="dt">float</span>, string&gt; floatToString;
+
+floatToString[<span class="fl">3.14</span>] = <span class="st">"PI"</span>;
+floatToString[<span class="fl">2.71</span>] = <span class="st">"E"</span>;
+floatToString[<span class="fl">2.29</span>] = <span class="st">"UPC"</span>;
+floatToString[<span class="fl">0.83</span>] = <span class="st">"Gauss's constant"</span>;
+
+cout &lt;&lt; floatToString[<span class="fl">0.83</span>] &lt;&lt; endl;
+
+map&lt;<span class="dt">float</span>, string&gt;::iterator lb = floatToString.lower_bound(<span class="fl">2.6</span>);
+map&lt;<span class="dt">float</span>, string&gt;::iterator ub = floatToString.upper_bound(<span class="fl">2.8</span>);</code></pre>
+<p>이로써 std::map에 대한 탐험을 마쳤습니다. map에 관한 완성된 설명을 원하신다면, <a href="en.cppreference.com/w/cpp/container/map" target="_blank">cppreference</a>를 읽어보십시오. <!-- 계속 전진하시고, 적절한 곳에 사용해보십시오. --></p>
+<h2 id="추가참고자료역자에의해추가됨">추가 참고 자료 (역자에 의해 추가됨)</h2>
+<p>stl::map과 관련된 자료는 한빛미디어서에 제공하는 <a href="http://www.hanbit.co.kr/network/view.html?bi_id=1618" target="_blank">C++ STL::map</a>에서도 보실 수 있습니다. <br/> 혹은 소프트웨어공학연구소에서 제공되는 <a href="http://soen.kr/lecture/ccpp/cpp4/cpp4.htm" target="_blank">C++고급과정</a>중에서 41장-2절의 맵 부분을 참고하실 수도 있습니다.</p>
+<div class="footer">
+<div id="prev_chapter"><a href="stl_vector.html">&lt; Introduction to vectors</a></div>
+<div id="next_chapter"><a href="c++11.html">C++ 11 &gt;</a></div>
+</div>
+<div id="help"><i>please note that this book / chapter is a work in progress.  Feel free to suggest edits / corrections <a href="https://github.com/openframeworks/ofbook" target="_blank">here</a></i></div>
+</div>
+</div>
+</body>
+</html>

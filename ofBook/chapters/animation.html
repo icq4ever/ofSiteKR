@@ -1,0 +1,530 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="pandoc" name="generator"/>
+<title>ofBook - Animation</title>
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+<link href="../style/bootstrap.min.css" rel="stylesheet">
+<link href="../style/style.css" rel="stylesheet" type="text/css"/>
+<link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Merriweather:400,300,300italic,400italic,700,900,700italic,900italic" rel="stylesheet" type="text/css">
+<script src="../javascript/jquery-1.8.3.min.js"></script>
+<script src="../javascript/bootstrap.min.js"></script>
+<script src="../javascript/navbar.js"></script>
+</link></link></head>
+<body>
+<div class="banner">
+<div class="content-wrapper">
+<b>Work in progress!</b>
+        This is a preliminary version of ofBook, a collaboratively written book about openFrameworks.  Please post any issues, suggestions, comments on our <a href="https://github.com/openframeworks/ofBook/" target="_blank">repo</a>.
+    </div>
+</div>
+<div class="content-wrapper">
+<nav role="navigation">
+<ul id="nav-parts"><li class="group"><div class="groupTitle">Foreword</div><ul><li class="chapter"><div class="chapterTitle"><a href="foreword.html">foreword</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#책에관하여" target="_top">책에 관하여</a></li><li class="section"><a href="#credits" target="_top">Credits</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Basics</div><ul><li class="chapter"><div class="chapterTitle"><a href="of_philosophy.html">Philosophy</a></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="cplusplus_basics.html">C++ Language Basics</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#lookalive" target="_top">Look Alive!</a></li><li class="section"><a href="#iteration" target="_top">Iteration</a></li><li class="section"><a href="#compilingmyfirstapp" target="_top">Compiling My First App</a></li><li class="section"><a href="#beyondhelloworld" target="_top">Beyond Hello World</a></li><li class="section"><a href="#functions" target="_top">Functions</a></li><li class="section"><a href="#customfunctions" target="_top">Custom Functions</a></li><li class="section"><a href="#encapsulationofcomplexity" target="_top">Encapsulation of Complexity</a></li><li class="section"><a href="#variablespart1" target="_top">Variables (part 1)</a></li><li class="section"><a href="#conclusion" target="_top">Conclusion</a></li><li class="section"><a href="#ps" target="_top">PS.</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="setup_and_project_structure.html">oF structure</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#firstthingsfirst" target="_top">First things first</a></li><li class="section"><a href="#welcometoyournewkitchen" target="_top">Welcome to your new kitchen</a></li><li class="section"><a href="#runningexamples" target="_top">Running examples</a></li><li class="section"><a href="#offolderstructure" target="_top">oF folder structure</a></li><li class="section"><a href="#theofpantry" target="_top">The oF Pantry</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="intro_to_graphics.html">Graphics</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#brusheswithbasicshapes" target="_top">Brushes with Basic Shapes</a></li><li class="section"><a href="#brushesfromfreeformshapes" target="_top">Brushes from Freeform Shapes</a></li><li class="section"><a href="#movingtheworld" target="_top">Moving The World</a></li><li class="section"><a href="#nextsteps" target="_top">Next Steps</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#overview" target="_top">Overview</a></li><li class="section"><a href="#whatisobjectorientedprogramming" target="_top">What is Object Oriented Programming</a></li><li class="section"><a href="#howtobuildyourownclassessimpleclass" target="_top">How to build your own Classes (simple Class)</a></li><li class="section"><a href="#makeanobjectfromyourclass" target="_top">Make an Object from your Class</a></li><li class="section"><a href="#makeobjectsfromyourclass" target="_top">Make objects from your Class</a></li><li class="section"><a href="#makemoreobjectsfromyourclass" target="_top">Make more Objects from your Class</a></li><li class="section"><a href="#makeevenmoreobjectsfromyourclasspropertiesandconstructors" target="_top">Make even more Objects from your Class: properties and constructors</a></li><li class="section"><a href="#makeobjectsonthefly" target="_top">Make Objects on the fly</a></li><li class="section"><a href="#makinganddeleteasyouwishusingvectors" target="_top">Making and delete as you wish - using vectors</a></li><li class="section"><a href="#quickintrotopolymorphisminheritance" target="_top">Quick intro to polymorphism (inheritance)</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="how_of_works.html">how OF works</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#오픈프레임웍스코드의일반적인패턴설명" target="_top">오픈프레임웍스 코드의 일반적인 패턴 설명</a></li><li class="section"><a href="#setupupdatedraw" target="_top">setup, update, draw</a></li><li class="section"><a href="#클래스" target="_top">클래스</a></li><li class="section"><a href="#함수" target="_top">함수</a></li></ul></div></li></ul></li><li class="group selected"><div class="groupTitle">Approaches</div><ul><li class="chapter selected"><div class="chapterTitle selected"><a href="animation.html">Animation</a></div><div class="chapterContents selected"><ul><li class="section selected"><a href="#background" target="_top">Background</a></li><li class="section"><a href="#animationinofusefulconcepts" target="_top">Animation in oF / useful concepts:</a></li><li class="section"><a href="#linearmovement" target="_top">Linear movement</a></li><li class="section"><a href="#functionbasedmovement" target="_top">Function based movement</a></li><li class="section"><a href="#simulation" target="_top">Simulation</a></li><li class="section"><a href="#wheretogofurther" target="_top">Where to go further</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="game_design.html">Experimental Game Development</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#howdogamedevelopersactuallymakegames" target="_top">How do game developers actually make games?</a></li><li class="section"><a href="#sowhatisoscanyway" target="_top">So what is OSC, anyway?</a></li><li class="section"><a href="#ourbasicgameandmakingitnotsobasic" target="_top">Our basic game–and making it not so basic</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="image_processing_computer_vision.html">image processing and computer vision</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#maybethereisamagicbullet" target="_top">Maybe There is a Magic Bullet</a></li><li class="section"><a href="#preliminariestoimageprocessing" target="_top">Preliminaries to Image Processing</a></li><li class="section"><a href="#이미지처리를얘기하기전에알아두어야할것들" target="_top">이미지처리를 얘기하기 전에 알아두어야 할것들</a></li><li class="section"><a href="#pointprocessingoperationsonimages" target="_top">Point Processing Operations on Images</a></li><li class="section"><a href="#acompleteworkflowbackgroundsubtraction" target="_top">A Complete Workflow: Background Subtraction</a></li><li class="section"><a href="#refinements" target="_top">Refinements</a></li><li class="section"><a href="#suggestionsforfurtherexperimentation" target="_top">Suggestions for Further Experimentation</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">I/O</div><ul><li class="chapter"><div class="chapterTitle"><a href="hardware.html">Hardware</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introduction" target="_top">introduction</a></li><li class="section"><a href="#소개" target="_top">소개</a></li><li class="section"><a href="#gettingstartedwithserialcommunication" target="_top">getting started with serial communication</a></li><li class="section"><a href="#시리얼통신시작하기" target="_top">시리얼 통신 시작 하기</a></li><li class="section"><a href="#digitalandanalogcommunication" target="_top">digital and analog communication</a></li><li class="section"><a href="#디지털과아날로그통신" target="_top">디지털과 아날로그 통신</a></li><li class="section"><a href="#usingserialforcommunicationbetweenarduinoandopenframeworks" target="_top">using serial for communication between arduino and openframeworks</a></li><li class="section"><a href="#lightsoncontrollinghardwareviadmx" target="_top">Lights On - controlling hardware via DMX</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="sound.html">Sound</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#gettingstartedwithsoundfiles" target="_top">Getting Started With Sound Files</a></li><li class="section"><a href="#gettingstartedwiththesoundstream" target="_top">Getting Started With the Sound Stream</a></li><li class="section"><a href="#why1to1" target="_top">Why -1 to 1?</a></li><li class="section"><a href="#timedomainvsfrequencydomain" target="_top">Time Domain vs Frequency Domain</a></li><li class="section"><a href="#reactingtoliveaudio" target="_top">Reacting to Live Audio</a></li><li class="section"><a href="#synthesizingaudio" target="_top">Synthesizing Audio</a></li><li class="section"><a href="#audiogotchas" target="_top">Audio Gotchas</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="network.html">Network</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#tcpvsudp" target="_top">TCP vs UDP</a></li><li class="section"><a href="#osc" target="_top">OSC</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Graphics</div><ul><li class="chapter"><div class="chapterTitle"><a href="openGL.html">Introducing OpenGL for OF</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introducing" target="_top">Introducing</a></li><li class="section"><a href="#vertices" target="_top">Vertices</a></li><li class="section"><a href="#meshes" target="_top">Meshes</a></li><li class="section"><a href="#vbos" target="_top">VBOs</a></li><li class="section"><a href="#abasic3dscene" target="_top">A Basic 3D Scene</a></li><li class="section"><a href="#matrices" target="_top">Matrices</a></li><li class="section"><a href="#textures" target="_top">Textures</a></li><li class="section"><a href="#cameras" target="_top">Cameras</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="lines.html">drawing lines</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#소개" target="_top">소개 ...</a></li><li class="section"><a href="#선그리기" target="_top">선 그리기</a></li><li class="section"><a href="#약간의노이즈abitofnoise" target="_top">약간의 노이즈A bit of noise</a></li><li class="section"><a href="#aweboflines" target="_top">A web of lines</a></li><li class="section"><a href="#makeasmoothlineinmovementina3dspace" target="_top">Make a smooth line in movement in a 3D space</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="generativemesh.html">Basics of Generating Meshes from an Image</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#basicsofgeneratingmeshesfromanimage1" target="_top">Basics of Generating Meshes from an Image</a></li><li class="section"><a href="#basicsworkingwithofmesh" target="_top">Basics: Working with ofMesh</a></li><li class="section"><a href="#generativemeshusinganimagetodrivethecreationofamesh" target="_top">Generative Mesh: Using an image to drive the creation of a mesh</a></li><li class="section"><a href="#manipulationsaddingeffectsthatmodifythemesh" target="_top">Manipulations: Adding effects that modify the mesh</a></li><li class="section"><a href="#nextsteps" target="_top">Next Steps</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="advanced_graphics.html">Advanced graphics</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#dimmediatemodevsofpolylineofpath" target="_top">2D, immediate mode vs ofPolyline/ofPath</a></li><li class="section"><a href="#d" target="_top">3D</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="shaders.html">Introducing Shaders</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introducing" target="_top">introducing</a></li><li class="section"><a href="#yourfirstshader" target="_top">Your first shader!</a></li><li class="section"><a href="#addinguniforms" target="_top">Adding Uniforms</a></li><li class="section"><a href="#addingsomeinteractivity" target="_top">Adding some interactivity</a></li><li class="section"><a href="#addingtextures" target="_top">Adding Textures</a></li><li class="section"><a href="#alphamasking" target="_top">Alpha Masking</a></li><li class="section"><a href="#multipletextures" target="_top">Multiple Textures</a></li><li class="section"><a href="#offbo" target="_top">ofFbo</a></li><li class="section"><a href="#texturesasdataegdisplacement" target="_top">Textures as Data (e.g. Displacement)</a></li><li class="section"><a href="#theendcongrats" target="_top">The End, Congrats!</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">C++</div><ul><li class="chapter"><div class="chapterTitle"><a href="threads.html">threads</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#쓰레드란무엇이고언제사용해야하는가" target="_top">쓰레드란 무엇이고 언제 사용해야 하는가</a></li><li class="section"><a href="#ofthread" target="_top">ofThread</a></li><li class="section"><a href="#스레드와opengl" target="_top">스레드와 openGL</a></li><li class="section"><a href="#ofmutex" target="_top">ofMutex</a></li><li class="section"><a href="#externalthreadsanddoublebuffering" target="_top">External threads and double buffering</a></li><li class="section"><a href="#ofscopedlock" target="_top">ofScopedLock</a></li><li class="section"><a href="#pococondition" target="_top">Poco::Condition</a></li><li class="section"><a href="#conclusion" target="_top">Conclusion</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="memory.html">memory of C++</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#컴퓨터메모리와변수" target="_top">컴퓨터 메모리와 변수</a></li><li class="section"><a href="#스택변수함수내의변수vs오브젝트내의변수" target="_top">스택 변수, 함수내의 변수 vs 오브젝트내의 변수</a></li><li class="section"><a href="#포인터와레퍼런스" target="_top">포인터와 레퍼런스</a></li><li class="section"><a href="#힙heap영역에서의변수들" target="_top">힙(heap) 영역에서의 변수들</a></li><li class="section"><a href="#메모리구조배열과vector" target="_top">메모리 구조, 배열과 vector</a></li><li class="section"><a href="#다른메모리구조리스트와맵" target="_top">다른 메모리 구조, 리스트와 맵</a></li><li class="section"><a href="#스마트포인터" target="_top">스마트 포인터</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="stl_vector.html">Introduction to vectors</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#quickreview" target="_top">Quick Review:</a></li><li class="section"><a href="#declaringavector" target="_top">Declaring a vector</a></li><li class="section"><a href="#addingelementstoavector" target="_top">Adding elements to a vector</a></li><li class="section"><a href="#resize" target="_top">resize</a></li><li class="section"><a href="#assign" target="_top">assign</a></li><li class="section"><a href="#accessingelementsofavector" target="_top">Accessing elements of a vector</a></li><li class="section"><a href="#erasingelementsofavector" target="_top">Erasing elements of a vector</a></li><li class="section"><a href="#iterators" target="_top">Iterators</a></li><li class="section"><a href="#sortingandshufflingavector" target="_top">Sorting and shuffling a vector</a></li><li class="section"><a href="#vectorsofobjects" target="_top">Vectors of objects</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="stl_map.html">let's play with Map, std::map</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#소개map이무엇인가요" target="_top">소개 : map이 무엇인가요?</a></li><li class="section"><a href="#map에값삽입하기" target="_top">map에 값 삽입하기</a></li><li class="section"><a href="#map에서요소삭제하기" target="_top">map에서 요소 삭제하기</a></li><li class="section"><a href="#map을훑기" target="_top">map을 훑기</a></li><li class="section"><a href="#map에서요소찾기" target="_top">map에서 요소 찾기</a></li><li class="section"><a href="#map에오브젝트저장하기" target="_top">map에 오브젝트 저장하기</a></li><li class="section"><a href="#multimap이란무엇인가요" target="_top">multimap이란 무엇인가요?</a></li><li class="section"><a href="#다른유용한메소드들" target="_top">다른 유용한 메소드들</a></li><li class="section"><a href="#추가참고자료역자에의해추가됨" target="_top">추가 참고 자료 (역자에 의해 추가됨)</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="c++11.html">C++ 11</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introduction" target="_top">Introduction</a></li><li class="section"><a href="#auto" target="_top">auto</a></li><li class="section"><a href="#forthingthings" target="_top">for (thing : things)</a></li><li class="section"><a href="#override" target="_top">override</a></li><li class="section"><a href="#lambdafunctions" target="_top">Lambda functions</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Advanced topics</div><ul><li class="chapter"><div class="chapterTitle"><a href="math.html">Math: From 1D to 4D</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#onedimensionusingchange" target="_top">One Dimension: Using Change</a></li><li class="section"><a href="#moredimensionssomelinearalgebra" target="_top">More Dimensions: Some Linear Algebra</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Platforms</div><ul><li class="chapter"><div class="chapterTitle"><a href="ios.html">ofxiOS</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#openframeworksoniosdevices" target="_top">OpenFrameworks on iOS devices.</a></li><li class="section"><a href="#intro" target="_top">Intro</a></li><li class="section"><a href="#introtoobjectivec" target="_top">Intro to Objective-C</a></li><li class="section"><a href="#underthehood" target="_top">Under the Hood</a></li><li class="section"><a href="#ofuikit" target="_top">OF &amp; UIKit</a></li><li class="section"><a href="#mediaplaybackandcapture" target="_top">Media Playback and Capture</a></li><li class="section"><a href="#lifehacks" target="_top">Life Hacks</a></li><li class="section"><a href="#appstore" target="_top">App Store</a></li><li class="section"><a href="#casestudies" target="_top">Case Studies</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Tools</div><ul><li class="chapter"><div class="chapterTitle"><a href="version_control_with_git.html">Version control with Git</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#whatisversioncontrolandwhyshouldyouuseit" target="_top">What is version control, and why should you use it?</a></li><li class="section"><a href="#differentversioncontrolsystems" target="_top">Different version control systems</a></li><li class="section"><a href="#introductiontogit" target="_top">Introduction to Git</a></li><li class="section"><a href="#popularguiclients" target="_top">Popular GUI clients</a></li><li class="section"><a href="#conclusion" target="_top">Conclusion</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="ofSketch.html">ofSketch</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#whatisofsketch" target="_top">What is ofSketch?</a></li><li class="section"><a href="#download" target="_top">Download</a></li><li class="section"><a href="#sketchformat" target="_top">Sketch Format</a></li><li class="section"><a href="#remotecoding" target="_top">Remote Coding</a></li><li class="section"><a href="#future" target="_top">Future</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="installation_up_4evr_macosx.html">Installation up 4evr</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#step1prepyoursoftwareandthecomputer" target="_top">Step 1: Prep your software and the computer</a></li><li class="section"><a href="#step2bootintoyoursoftware" target="_top">Step 2: Boot into your software</a></li><li class="section"><a href="#step3keepitupchamp" target="_top">Step 3: Keep it up (champ!)</a></li><li class="section"><a href="#step4rebootperiodically" target="_top">Step 4: Reboot periodically</a></li><li class="section"><a href="#step5checkinonitfromafar" target="_top">Step 5: Check in on it from afar.</a></li><li class="section"><a href="#step6testtesttest" target="_top">Step 6: Test, test, test.</a></li><li class="section"><a href="#additionaltipslogging" target="_top">Additional Tips: Logging</a></li><li class="section"><a href="#memoryleakmurderer" target="_top">Memory leak murderer</a></li><li class="section"><a href="#alternateresources" target="_top">Alternate resources:</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="installation_up_4evr_linux.html">installation up4ever - linux</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#몇가지추가적인팁" target="_top">몇가지 추가적인 팁:</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Case studies</div><ul><li class="chapter"><div class="chapterTitle"><a href="project_eva.html">Choreographies for Humans and Stars</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#projectoverview" target="_top">Project Overview</a></li><li class="section"><a href="#ideationandprototyping" target="_top">Ideation and Prototyping</a></li><li class="section"><a href="#findingthetechnicalsolutions" target="_top">Finding the Technical Solutions</a></li><li class="section"><a href="#developingthevisualizationsoftware" target="_top">Developing the Visualization Software</a></li><li class="section"><a href="#failsafesanddirtyfixes" target="_top">Fail-safes and dirty fixes</a></li><li class="section"><a href="#resultsandreception" target="_top">Results and Reception</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="project_joel.html">Anthropocene</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#theproject" target="_top">The Project</a></li><li class="section"><a href="#development" target="_top">Development</a></li><li class="section"><a href="#showtime" target="_top">Show time</a></li><li class="section"><a href="#postevent" target="_top">Post Event</a></li><li class="section"><a href="#teamandcredits" target="_top">Team and Credits</a></li><li class="section"><a href="#hardwareselection" target="_top">Hardware selection</a></li></ul></div></li></ul></li></ul>
+</nav>
+<div class="chapter-content">
+<h1 id="animation">Animation</h1>
+<p><em>by <a href="http://thesystemis.com" target="_blank">Zach Lieberman</a></em></p>
+<p><em>with edits from tpltnt, Kayla Lewis</em></p>
+<h2 id="background">Background</h2>
+<p>The word animation is a medieval term stemming from the Latin animare, which means 'instill with life''. In modern terms, it's used to describe the process of creating movement from still, sequential images. Early creators of animation used spinning discs (<a href="https://en.wikipedia.org/wiki/Phenakistoscope" target="_blank" title="Wikipedia on phenakistoscopes">phenakistoscopes</a>) and cylinders (<a href="https://en.wikipedia.org/wiki/Zoetrope" target="_blank" title="Wikipedia on zoetropes">zoetropes</a>) with successive frames to create the illusion of a smooth movement from persistence of vision. In modern times, we're quite used to other techniques such as <a href="https://en.wikipedia.org/wiki/Flip_book" target="_blank" title="Wikipedia on flip books">flip books</a> and cinematic techniques like <a href="https://en.wikipedia.org/wiki/Stop_motion" target="_blank" title="Wikipedia on stop motion">stop motion</a>. Increasingly, artists have been using computational techniques to create animation -- using code to "bring life" to objects on the screen over successive frames. This chapter is going to look at these techniques and specifically try to address a central question: how can we create compelling, organic, and even absurd movement through code?</p>
+<p>As a side note, I studied fine arts, painting and printmaking, and it was accidental that I started using computers. The moment I saw how you could write code to move something across the screen, even as simple as silly rectangle, I was hooked. I began during the first dot-com era working with Flash / ActionScript and Lingo / Macromedia Director and have never looked back.</p>
+<p>This chapter will first explain some basic principles that are useful to understanding animation in oF, then attempt to show a few entry-points to interesting approaches.</p>
+<h2 id="animationinofusefulconcepts">Animation in oF / useful concepts:</h2>
+<h3 id="draw-a-cycle">Draw a cycle</h3>
+<p>The first point to make about animation is that it's based on successive still frames. In openFrameworks we have a certain loop cycle that's based roughly on game programming paradigms. It goes like this:</p>
+<ul>
+<li><code>setup()</code></li>
+<li><code>update()</code></li>
+<li><code>draw()</code></li>
+<li><code>update()</code></li>
+<li><code>draw()</code></li>
+<li>...</li>
+</ul>
+<p>The <code>setup()</code> function gets called once, right at the start of an oF apps lifecycle and <code>update()</code> / <code>draw()</code> get called repeatedly. Sometimes people ask why two functions get called repeatedly, especially if they are familiar with <a href="http://www.processing.org/" target="_blank" title="Processing website">Processing</a>, which has only a setup and a draw command. There are a few reasons. The first is that drawing in OpenGL is asynchronous, meaning there's a chance, when you send drawing code to the computer, that it can return execution back to your program so that it can perform other operations while it draws. The second is that it's generally very practical to have your drawing code separated from your non-drawing code. If you need to quickly debug something – say, for example, your code is running slow – you can comment out the draw function and just leave the update running. It's separating out the update of the world from the presentation and it can often help clean up and organize your code. Think about it like a stop frame animator working with an overhead camera that might reposition objects while the camera is not taking a picture then snap a photograph the moment things are ready. In the update function you would be moving things around and in the draw function you draw things exactly as they are at that moment.</p>
+<h3 id="variables">Variables</h3>
+<p>The second point to make about animation is that it requires variables. A variable is a placeholder for a value, which means that you can put the value in and you can also get the value out. Variables are essential for animation since they "hold" value from frame to frame – e.g., if you put a value into a variable in the <code>setup()</code> function or <code>update()</code> function, you can also get it out from memory in the <code>draw()</code> function. Take this example where <code>xpos</code> (int) is already defined in the header:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> ofApp::setup(){
+    xpos = <span class="dv">5</span>;  <span class="co">// horizontal start position</span>
+    ofBackground(ofColor::black);  <span class="co">// black background</span>
+}
+
+<span class="dt">void</span> ofApp::update(){
+    xpos += <span class="dv">2</span>;
+    <span class="kw">if</span>(ofGetWidth()&lt;xPos){  <span class="co">// if horizontal position is off the screen (width)</span>
+        xPos = <span class="dv">5</span>;             <span class="co">// reset horizontal position</span>
+    }
+}
+
+<span class="dt">void</span> ofApp::draw(){
+    ofSetColor(ofColor::red);  <span class="co">// draw everything in red</span>
+    ofDrawCircle(xpos, <span class="dv">100</span>, <span class="dv">10</span>);   <span class="co">// draw a circle at the (variable) horizontal position, 100 pixels from the top with a 10 pixel diameter</span>
+}</code></pre>
+<p>In this example a red circle moves from the left to the right on the screen. The horizontal position (<code>xpos</code>) is an integer and gets set to 5 as the initial value in <code>setup()</code>. The <code>update()</code> function always adds 2 to the <code>xpos</code> variable and stores the new value until it becomes larger than the screen width (<code>ofGetWidth()</code>), then the horizontal position gets reset. The <code>draw()</code> function reads the value stored in the variable <code>xpos</code> and draws the red circle accordingly.</p>
+<h3 id="frame-rate">Frame rate</h3>
+<p>The third point to make about oF and animation is frame rate. We animate in openFrameworks using successive frames. Frame rate refers to how quickly frames get drawn. In oF there are several important functions to know about.</p>
+<ul>
+<li><a href="http://openframeworks.cc/documentation/application/ofAppRunner.html#!show_ofGetFrameRate" target="_blank" title="ofGetFrameRate Documentation Page"><code>ofGetFrameRate()</code></a> returns the current frame rate (in frames per second).</li>
+<li><a href="http://openframeworks.cc/documentation/application/ofAppRunner.html#!show_ofSetFrameRate" target="_blank" title="ofSetFrameRate Documentation Page"><code>ofSetFrameRate( float targetFrameRate )</code></a> sets the maximum frame rate. If the software is animating faster than this, <code>ofSetFrameRate</code> will slow it down. Think of it like a speed limit. It doesn't make you go faster, but it prevents you from going too fast. Set the value to 0 to run as fast as possible.</li>
+</ul>
+<p>In addition, OpenGL works with an output display and will attempt to synchronize with the refresh rate of the monitor -- sometimes called vertical-sync or vertical blanking. If you don't synchronize with the refresh rate, you can get something called frame tearing, where the non-synchronization can mean frames get drawn before and after a change. This leads to horizontal lines of discontinuity called <a href="https://en.wikipedia.org/wiki/Screen_tearing" target="_blank" title="Wikipedia on screen tearing">screen tearing</a>.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/animation/images/638px-Tearing_simulated.jpg" target="_blank"><img alt="simulated screen tearing" src="../images/animation/images/638px-Tearing_simulated.jpg"/></a></div><div class="caption">simulated screen tearing</div>
+</div></div>
+<p>The image above is from <a href="https://commons.wikimedia.org/wiki/User:Vanessaezekowitz" target="_blank" title="Vanessaezekowitz user page">Vanessaezekowitz</a>, licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" target="_blank" title="link to CC-BY-SA 3.0 license text">CC-BY-SA 3.0</a>.</p>
+<p>We have a function in oF for controlling this. Some graphics card drivers (see for example Nvidia's PC drivers) have settings that override application settings, so please be sure to check your driver options.</p>
+<ul>
+<li><a href="http://openframeworks.cc/documentation/application/ofAppRunner.html#!show_ofSetVerticalSync" target="_blank" title="ofSetVerticalSync Documentation Page"><code>ofSetVerticalSync (bool bUseSync)</code></a> set this true if you want to synchronized vertically, false if you want to draw as fast as possible.</li>
+</ul>
+<p>By default, oF enables vertical sync and sets a frame rate of 60 FPS. You can adjust the VSYNC and frame rate settings if you want to animate faster, but please note that by default oF wants to run as fast as possible. It's not uncommon if you are drawing a simple scene to see frame rates of 800 FPS if you don't have VSYNC enabled (and the frame rate cap set really high or disabled).</p>
+<p>Another important point which is a bit hard to cover deeply in this chapter is frame rate independence. If you animate using a simple model -- say for example, you create a variable called <code>xPos</code>, increase it by a certain amount every frame and draw it.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> testApp::setup(){
+    xPos = <span class="dv">100</span>;
+}
+
+<span class="dt">void</span> testApp::update(){
+    xPos += <span class="fl">0.5</span>;
+}
+
+<span class="dt">void</span> testApp::draw(){
+    ofRect(xPos, <span class="dv">100</span>, <span class="dv">10</span>, <span class="dv">10</span>);
+}</code></pre>
+<p>This kind of animation works fine, but it assumes that your frame rate is constant. If your app runs faster, say by jumping from 30 FPS to 60 FPS, the object will appear to go twice as fast, since there will be 2x the number of update and draw functions called per second. Typically more complex animations will be written to take this into account, either by using functions like time (explained below) or mixing the frame rate or elapsed time into your update. For example, a solution might be something like:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> testApp::update(){
+    xPos += ofGetLastFrameTime() * speed;
+}</code></pre>
+<p>Here <code>ofGetLastFrameTime()</code> returns the time it took to complete the last frame. Since this time has passed in the system, we use it to multiply with the speed. This is going to yield the distance (virtually) travelled by the rectangle. Now it is effectively moving at the same speed regardless of frame rate. Frame rate independence is fairly important to think about once you get the hang of things. As observers of animation, we really do feel objects speeding up or slowing down even slightly, but in this chapter I will skip it for the sake of simplicity in the code.</p>
+<h3 id="time-functions">Time functions</h3>
+<p>Finally, there are a few other functions that are useful for animation timing:</p>
+<ul>
+<li><a href="http://openframeworks.cc/documentation/utils/ofUtils.html#!show_ofGetElapsedTimef" target="_blank" title="ofGetElapsedTimef Documentation Page"><code>ofGetElapsedTimef()</code></a> returns the elapsed time in floating point numbers, starting from 0 when the app starts.</li>
+<li><a href="http://openframeworks.cc/documentation/utils/ofUtils.html#!show_ofGetElapsedTimeMillis" target="_blank" title="ofGetElapsedTimeMillis Documentation Page"><code>ofGetElapsedTimeMillis()</code></a> similarly returns the elapsed time starting from 0 in milliseconds.</li>
+<li><a href="http://openframeworks.cc/documentation/utils/ofUtils.html#!show_ofGetFrameNum" target="_blank" title="ofGetFrameNum Documentation Page"><code>ofGetFrameNum()</code></a> returns the number of frames the software has drawn. If you wanted, for example, to do something every other frame you could use the mod operator, e.g., <code>if (ofGetFrameNum() % 2 == 0)</code>.</li>
+</ul>
+<h3 id="objects">Objects</h3>
+<p>In these examples, I'll be using objects pretty heavily. It's helpful to feel comfortable with object-oriented programming (OOP) to understand the code. One object that is used heavily is <a href="http://openframeworks.cc/documentation/types/ofPoint.html" target="_blank" title="ofPoint Documentation Page"><code>ofPoint</code></a>, which contains an x,y and z variable. In the past this was called "ofVec3f" (vector of three floating point numbers), but we just use the more convenient ofPoint. In some animation code, you'll see vectors used, and you should know that ofPoint is essentially a vector.</p>
+<p>You will also see objects that have basic functionality and internal variables. I will typically have a setup, update and draw inside them. A lot of times, these objects are either made because they are useful recipes to have many things on the screen or they help by putting all the variables and logic of movement in one place. I like to have as little code as possible at the testApp / ofApp level. If you are familiar with ActionScript / Flash, this would be similar to having as a little as possible in your main timeline.</p>
+<h2 id="linearmovement">Linear movement</h2>
+<h3 id="getting-from-point-a-to-point-b">Getting from point a to point b</h3>
+<p>One of the most important things to think about when it comes to animation is answering the simple question:</p>
+<p><em>How do you get from point A to point B?</em></p>
+<p>In this chapter we will look at animating movement (changing position over time) but we could very well be animating any other numeric property, such as color, the width or height of a drawn shape, radius of a circle, etc.</p>
+<p>The first and probably most important lesson of animation is that we <strong>love</strong> numbers between 0 and 1.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/animation/images/heart.jpg" target="_blank"><img alt="loving 0...1" src="../images/animation/images/heart.jpg"/></a></div><div class="caption">loving 0...1</div>
+</div></div>
+<p>The thing about numbers between 0 and 1 is that they are super easy to use in interesting ways. We typically refer to these kinds of numbers as percent, and you'll see me use the shorthand <code>pct</code> in the code – this is a floating point number between 0 and 1. If we wanted to get from point A to point B, we could use this number to figure out how much of one point and how much of another point to use. The formula is this:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">((<span class="dv">1</span>-pct) * A) + (pct * B)</code></pre>
+<p>To add some detail if we are 0 pct of the way from A to B, we calculate</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">((<span class="dv">1-0</span>) * A) + (<span class="dv">0</span> * B)</code></pre>
+<p>which simplifies to <code>(1*A + 0*B)</code> or A. If we are 25 percent of the way, it looks like</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">((<span class="dv">1</span><span class="fl">-0.25</span>) * A) + (<span class="fl">0.25</span> * B)</code></pre>
+<p>which is 75% of A + 25% of B. Essentially by taking a mix, you get from one to the other. The first example (<strong>1_rectangleInterpolate</strong>) shows how this is done.</p>
+<p>For this example, we will be using an object called "rectangle". It has a variable for position, as well as two other variables (posA and posB) that represent the a and b positions we are moving between.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="ot">#include "ofMain.h"</span>
+
+<span class="kw">class</span> rectangle {
+
+    <span class="kw">public</span>:
+
+        rectangle();
+        <span class="dt">void</span> draw();
+        <span class="dt">void</span> interpolateByPct(<span class="dt">float</span> myPct);
+
+        ofPoint pos;
+        ofPoint posa;
+        ofPoint	posb;
+        <span class="dt">float</span> pct;	<span class="co">// what pct are we between "a" and "b"</span>
+};</code></pre>
+<p>the function interpolateByPct() does the actual interpolation:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> rectangle::interpolateByPct(<span class="dt">float</span> myPct){
+	pos.x = (<span class="dv">1</span>-pct) * posa.x + (pct) * posb.x;
+	pos.y = (<span class="dv">1</span>-pct) * posa.y + (pct) * posb.y;
+}</code></pre>
+<p>in the ofApp file, we create a variable called pct, and set it to 0. We increment pct every frame and pass it through to the rectangle object in the update function:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">pct += <span class="fl">0.</span>01f;		<span class="co">// increase by a certain amount</span>
+<span class="kw">if</span> (pct &gt; <span class="dv">1</span>) {
+	pct = <span class="dv">0</span>;	<span class="co">// just between 0 and 1 (0% and 100%)</span>
+}
+myRectangle.interpolateByPct(pct);	<span class="co">// go between pta and ptb</span></code></pre>
+<p>If everything is working as expected, you should see the following screen:</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/animation/images/screenshot_1_rectangleInterpolate.png" target="_blank"><img alt="screenshot of 1_rectangleInterpolate" src="../images/animation/images/screenshot_1_rectangleInterpolate.png"/></a></div><div class="caption">screenshot of 1_rectangleInterpolate</div>
+</div></div>
+<p>As a side note, the function <code>ofMap</code>, which maps between an input range, uses pct internally. It takes a value, converts it into a percentage based on the input range, and then uses that pct to find the point between the output range. You have seen <code>ofMap</code> in the "Graphics" chapter already. More details can be found in the "Math: From 1D to 4D" chapter.</p>
+<h3 id="curves">Curves</h3>
+<p>One of the interesting properties of numbers between 0 and 1 is that they can be easily adjusted / curved.</p>
+<p>The easiest way to see this is by raising the number to a power. A power, as you might remember from math class, is multiplying a number by itself, e.g., 2^3 = <code>2*2*2 = 8</code>. Numbers between 0 and 1 have some interesting properties. If you raise 0 to any power it equals 0 (<code>0*0*0*0 = 0</code>). The same thing is true for 1 (<code>1*1*1*1 = 1</code>), but if you raise a number between 0 and 1 to a power, it changes. For example, 0.5 to the 2nd power = 0.25.</p>
+<p>Let's look at a plot of pct raised to the second power:</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/animation/images/x_squared_plot.png" target="_blank"><img alt="pct raised to second power" src="../images/animation/images/x_squared_plot.png"/></a></div><div class="caption">pct raised to second power</div>
+</div></div>
+<p>The plot shows the graph of a <a href="https://en.wikipedia.org/wiki/Function_%28mathematics%29#Notation" target="_blank" title="Wikipedia on (the notation of) mathematical functions">mathematical function</a>, namely <code>f(x) = y = x²</code>. Think about the x value of the plot (horizontal axis) as the input and y value as the output (vertical axis). If put in 0, we get out a y value of 0, if we put in 0.1, we get out a y value of 0.01, all the way to putting in a value of 1 and getting out a value of 1. Depending on the mathematical function, you can have different curves and therefore different mapping behaviour.</p>
+<p>As a side note, it's important to be aware that things in the world often don't move linearly. They don't take "even" steps. Roll a ball on the floor, it slows down. It's accelerating in a negative direction. Sometimes things speed up, like a baseball bat going from resting to swinging. Curving pct leads to interesting behavior. The objects still take the same amount of time to get there, but they do it in more lifelike, non-linear ways.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/animation/images/atob_nonlinear.png" target="_blank"><img alt="nonlinear" src="../images/animation/images/atob_nonlinear.png"/></a></div><div class="caption">nonlinear</div>
+</div></div>
+<p>If you raise the incoming number between 0 and 1 to a larger power it looks more extreme. Interestingly, if you raise this value between 0 and 1 to a fractional (rational) power (i.e., a power that's less than 1 and greater than 0), it curves in the other direction.</p>
+<p>The next example (<strong>3_rectangleInterpolatePowf</strong>) shows an animation that uses pct again to get from A to B, but in this case, pct is raised to a power:</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/animation/images/3_rectangleInterpolatePowf_animation.gif" target="_blank"><img alt="looping gif of 3_rectangleInterpolatePowf" src="../images/animation/images/3_rectangleInterpolatePowf_animation.gif"/></a></div><div class="caption">looping gif of 3_rectangleInterpolatePowf</div>
+</div></div>
+<p>In <strong>4_rectangleInterpolatePowfMultiple</strong>, you can see a variety of these rectangles, all moving with different shaping functions. They take the same amount of time to get from A to B, but do it in very different ways. I usually ask my students to guess which one is moving linearly -- see if you can figure it out without looking at the code:</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/animation/images/multiCurved.png" target="_blank"><img alt="zeno diagram" src="../images/animation/images/multiCurved.png"/></a></div><div class="caption">zeno diagram</div>
+</div></div>
+<p>Using curves to control change is a very important principle in animation. It is called <a href="https://en.wikipedia.org/wiki/12_basic_principles_of_animation#Slow_In_and_slow_Out" target="_blank">"Slow In and Slow Out"</a> and is explicitly mentioned as one of the famous "Twelve Basic Principles of Animation" described in the "The Illusion of Life: Disney Animation" book written by Ollie Johnston and Frank Thomas in 1981. It basically says that bodies naturally need time to change their speed and therefore the movement around extreme positions (where change happens) is slower than in the middle of said movement (where no/less change happens).</p>
+<p>Raising percent to a power is one of a whole host of functions that are called "shaping functions" or "easing equations." Robert Penner wrote about and derived many of these functions so they are also commonly referred to as "Penner Easing Equations." <a href="http://easings.net/" target="_blank">Easings.net</a> is a good resource, as well there are several openFrameworks addons for easing (e.g. <a href="https://github.com/satoruhiga/ofxEasingFunc" target="_blank" title="ofxEasingFunc github repository">ofxEasingFunc</a>).</p>
+<h3 id="zeno">Zeno</h3>
+<p>A small twist on the linear interpolation is a technique that I call "Zeno" based on <a href="https://en.wikipedia.org/wiki/Zeno_of_Elea" target="_blank" title="Wikipedia on Zeno of Elea">Zeno of Elea's</a> <em>dichotomy paradox</em>:</p>
+<blockquote>
+<p>Imagine there is a runner in a race and the runner covers 1/2 of the distance in a certain amount of time, and then they run 1/2 of the remaining distance in the same amount of time, and run 1/2 of that remaining distance, etc. Do they finish the race? There is always some portion of the distance left remaining to run one half of. The idea is that you can always keep splitting the distance.</p>
+</blockquote>
+<p>If we take the linear interpolation code but always alter our own position instead (e.g., take 50% of our current position + 50% of our target position), we can animate our way from one value to another. I usually explain the algorithm in class by asking someone to do this:</p>
+<ol style="list-style-type: decimal">
+<li>Start at one position in your room.</li>
+<li>Pick a point to move to.</li>
+<li>Calculate the distance between your current position and that point.</li>
+<li>Move 50% closer.</li>
+<li>Go to (3).</li>
+</ol>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/animation/images/zeno.png" target="_blank"><img alt="zeno diagram" src="../images/animation/images/zeno.png"/></a></div><div class="caption">zeno diagram</div>
+</div></div>
+<p>In code, that's basically the same as saying</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">currentValue = currentValue + ( targetValue - currentValue ) * <span class="fl">0.5</span>.</code></pre>
+<p>In this case <code>targetValue - currentValue</code> is the distance. You could also change the size of the step you make every time, for example, taking steps of 10% instead of 50%:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">currentValue = currentValue + ( targetValue - currentValue ) * <span class="fl">0.1</span>.</code></pre>
+<p>If you expand the expression, you can write the same thing this way:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">currentValue = currentValue * <span class="fl">0.9</span> + targetValue * <span class="fl">0.1</span>.</code></pre>
+<p>This is a form of smoothing: you take some percentage of your current value and another percentage of the target and add them together. Those percentages have to add up to 100%, so if you take 95% of the current position, you need to take 5% of the target (e.g., currentValue * 0.95 + target * 0.05).</p>
+<p>In Zeno's paradox, you never actually get to the target, since there's always some remaining distance to go. On the computer, since we are dealing with pixel positions on the screen and floating point numbers at a specific range, the object appears to stop.</p>
+<p>In the 5th example (<strong>5_rectangleZeno</strong>), we add a function to the rectangle that uses zeno to catch up to a point:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> rectangle::zenoToPoint(<span class="dt">float</span> catchX, <span class="dt">float</span> catchY){
+    pos.x = catchUpSpeed * catchX + (<span class="dv">1</span>-catchUpSpeed) * pos.x; 
+    pos.y = catchUpSpeed * catchY + (<span class="dv">1</span>-catchUpSpeed) * pos.y; 
+}</code></pre>
+<p>Here, we have a value, <code>catchUpSpeed</code>, that represents how fast we catch up to the object we are trying to get to. It's set to 0.01 (1%) in this example code, which means take 99% of my own position, 1% of the target position and move to their sum. If you alter this number you'll see the rectangle catch up to the mouse faster or slower. A value of 0.001 means it will run 10 times slower, a value of 0.1 means ten times faster.</p>
+<p>This technique is very useful if you are working with noisy data -- a sensor for example. You can create a variable that catches up to it using zeno and smoothes out the result. I use this quite often when I'm working with hardware sensors / physical computing, or when I have noisy data. The nice thing is that the catch up speed becomes a knob that you can adjust between more real-time (and more noisy data) and less real-time (and more smooth) data. Having that kind of control comes in handy!</p>
+<h2 id="functionbasedmovement">Function based movement</h2>
+<p>In this section of the book we'll look at a few examples that show function based movement, which means using a function that takes some input and returns an output that we'll use for animation. For input, we'll be passing in counters, elapsed time, position, and the output we'll use to control position.</p>
+<h3 id="sine-and-cosine">Sine and Cosine</h3>
+<p>Another interesting and simple system to experiment with motion in openFrameworks is using <a href="http://www.cplusplus.com/reference/cmath/sin/" target="_blank" title="C++ sin() documentation page"><code>sin(...)</code></a> and <a href="http://www.cplusplus.com/reference/cmath/cos/" target="_blank" title="C++ cos() documentation page)"><code>cos(...)</code></a>.</p>
+<p><code>sin(...)</code> and <code>cos(...)</code> (sine and cosine) are <a href="https://en.wikipedia.org/wiki/Trigonometric_functions" target="_blank" title="Wikipedia on trigonometric functions">trigonometric functions</a>, which means they are based on angles. They are the x and y position of a point moving with a constant radius and rate around a circle. The circle is a unit circle with a radius (r) of 1, which means the diameter is <code>2*r*PI</code> or <code>2*PI</code>. In oF you'll see this constant as <code>TWO_PI</code>, which is 6.28318...</p>
+<p><em>As a side note, sometimes it can be confusing that some functions in oF take degrees where others take radians. <code>sin(...)</code> and <code>cos(...)</code> are part of the math library, so they take radians, whereas most OpenGL rotation takes degrees. We have some helper constants such as <code>DEG_TO_RAD</code> and <code>RAD_TO_DEG</code>, which can help you convert one to the other.</em></p>
+<p>Here's a simple drawing that helps explain sine and cosine.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/animation/images/atob_circle.png" target="_blank"><img alt="sin" src="../images/animation/images/atob_circle.png"/></a></div><div class="caption">sin</div>
+</div></div>
+<p>All you have to do is imagine a unit circle, which has a radius of 1 and a center position of 0,0. Now, imagine a point moving counterclockwise around that point at a constant speed and distance. If you look at the height of that point, it goes from 0 at the far right (3 o'clock position), up to 1 at the top (12 o'clock), back at 0 at the left (9 o'clock) and down to -1 at the bottom (6 o'clock). So it's a smooth, curving line that moves between -1 and 1. That's it. The sine is the height of this dot and the cosine is the horizontal position of this dot. At the far right, where the height of this dot is 0, the horizontal position is 1. When the sine is 1, the cosine is 0, etc. They are in sync, but shifted.</p>
+<h4 id="simple-examples">Simple examples</h4>
+<p>It's pretty easy to use <code>sin(...)</code> to animate the position of an object.</p>
+<p>Here, we'll take the sine of the elapsed time <code>sin(ofGetElpasedTimef())</code>. This returns a number between negative one and one. It does this every 6.28 seconds. We can use ofMap to map this to a new range. For example</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> ofApp::draw(){
+    <span class="dt">float</span> xPos = ofMap(sin(ofGetElpasedTimef()), -<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, ofGetWidth());
+    ofRect(xPos, ofGetHeight()/<span class="dv">2</span>, <span class="dv">10</span>,<span class="dv">10</span>);
+}</code></pre>
+<p>This draws a rectangle which moves sinusoidally across the screen, back and forth every 6.28 seconds.</p>
+<p>You can do simple things with offsets to the phase (how shifted over the sine wave is). In example 7 (<strong>7_sinExample_phase</strong>), we calculate the sine of the time twice, but at the second instance, we add PI: <code>ofGetElapsedTimef() + PI</code>. This means the two values will be offset from each other by 180 degrees on the circle (imagining our dot, when one is far right, the other will be far left. When one is up, the other is down). Here we set the background color and the color of a rectangle using these offset values. It's useful if you start playing with sine and cosine to manipulate phase.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//--------------------------------------------------------------</span>
+<span class="dt">void</span> testApp::draw(){
+    <span class="dt">float</span> sinOfTime               = sin( ofGetElapsedTimef() );
+    <span class="dt">float</span> sinOfTimeMapped         = ofMap(sinOfTime, -<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">255</span>);
+
+    ofBackground(sinOfTimeMapped, sinOfTimeMapped, sinOfTimeMapped);
+
+    <span class="dt">float</span> sinOfTime2              = sin( ofGetElapsedTimef() + PI);
+    <span class="dt">float</span> sinOfTimeMapped2        = ofMap(sinOfTime2, -<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">255</span>);
+
+    ofSetColor(sinOfTimeMapped2, sinOfTimeMapped2, sinOfTimeMapped2);
+    ofRect(<span class="dv">100</span>,<span class="dv">100</span>,ofGetWidth()-<span class="dv">200</span>, ofGetHeight()-<span class="dv">200</span>);
+}</code></pre>
+<p><em>As a nerdy detail, floating point numbers are not linearly precise, e.g., there's a different number of floating point numbers between 0.0 and 1.0 than 100.0 and 101.0. You actually lose precision the larger a floating point number gets, so taking the sine of elapsed time can start looking crunchy after some time. For long running installations I will sometimes write code that looks like</em> <code>sin((ofGetElapsedTimeMillis() % 6283) / 6283.0)</code> <em>or something similar, to account for this. Even though <code>ofGetElapsedTimef()</code> gets larger over time, it's a worse and worse input to <code>sin(...)</code> as it grows. <code>ofGetElapsedTimeMillis()</code> doesn't suffer from this problem since it's an integer number and the number of integers between 0 and 10 is the same as between 1000 and 1010.</em></p>
+<h4 id="circular-movement">Circular movement</h4>
+<p>Since sine and cosine are derived from the circle, we can use them to move things in a circular way. We have four variables we need to know:</p>
+<ul>
+<li>the origin of the circle (<code>xOrig</code>, <code>yOrig</code>)</li>
+<li>the radius of the circle (<code>radius</code>)</li>
+<li>the angle around the circle (<code>angle</code>)</li>
+</ul>
+<p>The formula is fairly simple:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">xPos = xOrig + radius * cos(angle);
+yPos = yOrig + radius * sin(angle);</code></pre>
+<p>This allows us to create something moving in a circular way. In the circle example (<strong>12_sinExample_circlePlusPath</strong>), I will animate using this approach.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">float</span> xorig = <span class="dv">500</span>;
+<span class="dt">float</span> yorig = <span class="dv">300</span>;
+<span class="dt">float</span> angle = ofGetElapsedTimef()*<span class="fl">3.5</span>;
+<span class="dt">float</span> x = xorig + radius * cos(angle);
+<span class="dt">float</span> y = yorig + radius * sin(angle);</code></pre>
+<p><em>Note: In oF, the top left corner is 0,0 (y axis is increasing as you go down) so you'll notice that the point travels clockwise instead of counterclockwise. If this bugs you (since above, I asked you imagine it moving counterclockwise) you can modify this line <code>float y = yorig + radius * sin(angle)</code> to <code>float y = yorig + radius * -sin(angle)</code> and see the circle go in the counterclockwise direction.</em></p>
+<p>For these examples, I start to add a "trail" to the object by using the <a href="http://openframeworks.cc/documentation/graphics/ofPolyline.html" target="_blank" title="ofPolyline Documentation Page">ofPolyline</a> object. I keep adding points, and once I have a certain number I delete the oldest one. This helps us better see the motion of the object.</p>
+<p>If we increase the radius, for example by doing:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> testApp::update(){
+    radius = radius + <span class="fl">0.1</span>;
+}</code></pre>
+<p>we get spirals.</p>
+<h4 id="lissajous-figures">Lissajous figures</h4>
+<p>Finally, if we alter the angles we pass in to x and y for this formula at different rates, we can get interesting figures, called <a href="https://en.wikipedia.org/wiki/Lissajous_curve" target="_blank" title="Wikipedia on Lissajous figures">"Lissajous" figures</a>, named after the French mathematician, Jules Antoine Lissajous. These formulas look cool. Oftentimes I joke with my students in algorithm class about how this is really a course to make cool screen savers.</p>
+<h3 id="noise">Noise</h3>
+<p>Noise is similar to sine/cosine in that it's a function taking some input and producing output, which we can then use for movement. In the case of sine/cosine you are passing in an angle and getting a result back that goes back and forth between -1 and 1. In openFrameworks we wrap code using <a href="https://en.wikipedia.org/wiki/Simplex_noise" target="_blank" title="Wikipedia on simplex noise">simplex noise</a>, which is comparable to <a href="https://en.wikipedia.org/wiki/Perlin_noise" target="_blank" title="Wikipedia on Perlin noise">Perlin noise</a> and we have a function <a href="http://openframeworks.cc/documentation/math/ofMath.html#!show_ofNoise" target="_blank" title="ofNoise Documentation Page"><code>ofNoise()</code></a> that takes an input and produces an output. Both algorithms (Perlin, Simplex) provide a pseudo random noise pattern -- they are quite useful for animation, because they are continuous functions, unlike <a href="http://openframeworks.cc/documentation/math/ofMath.html#!show_ofRandom" target="_blank" title="ofRandom Documentation Page">ofRandom</a> for example, which just returns random values.</p>
+<p>When I say continuous function, what I mean is if you pass in smaller changes as input, you get smaller output and if you pass in the same value you get the same result. For example, <code>sin(1.7)</code> always returns the same value, and <code>ofNoise(1.7)</code> also always returns the same result. Likewise if you call <code>sin(1.7)</code> and <code>sin(1.75)</code> you get results that are continuous (meaning, you can call <code>sin(1.71) sin(1.72)... sin(1.74)</code> to get intermediate results).</p>
+<p>You can do the same thing with ofNoise -- here, I write a for loop to draw noise as a line. <code>ofNoise</code> takes an input, here i/10 and produces an output which is between 0 and 1. <a href="http://openframeworks.cc/documentation/math/ofMath.html#!show_ofSignedNoise" target="_blank" title="ofSignedNoise Documentation Page"><code>ofSignedNoise</code></a> is similar but it produces an output between -1 and 1.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/animation/images/noiseLine.png" target="_blank"><img alt="noise line" src="../images/animation/images/noiseLine.png"/></a></div><div class="caption">noise line</div>
+</div></div>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">ofBackground(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>);
+ofSetColor(<span class="dv">255</span>);
+
+ofNoFill();
+ofBeginShape();
+<span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; <span class="dv">500</span>; i++){
+    <span class="dt">float</span> x = i;
+    <span class="dt">float</span> noise = ofNoise(i/<span class="fl">10.0</span>);
+    <span class="dt">float</span> y = ofMap(noise, <span class="dv">0</span>,<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">100</span>);
+    ofVertex(x,y);
+}
+ofEndShape();</code></pre>
+<p>If you alter the i/10.0, you can adjust the scale of the noise, either zooming in (i.e., i/100.0), so you see more details, or zooming out (i.e., i/5.0) so you see more variation.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/animation/images/noise_i_d_100.png" target="_blank"><img alt="noise with i divided by 100" src="../images/animation/images/noise_i_d_100.png"/></a></div><div class="caption">noise with i divided by 100</div>
+</div></div>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/animation/images/noise_i_d_5.png" target="_blank"><img alt="noise with i divided by 5" src="../images/animation/images/noise_i_d_5.png"/></a></div><div class="caption">noise with i divided by 5</div>
+</div></div>
+<p>We can use noise to animate. Here, for example, we move an object on screen using noise:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">float</span> x = ofMap( ofNoise( ofGetElapsedTimef()), <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, ofGetWidth());
+ofDrawCircle(x,<span class="dv">200</span>,<span class="dv">30</span>);</code></pre>
+<p>If we move y via noise, we can take a noise input value somewhere "away" from the x value, i.e. further down the curved line:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">float</span> x = ofMap( ofNoise( ofGetElapsedTimef()), <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, ofGetWidth());
+<span class="dt">float</span> y = ofMap( ofNoise( <span class="fl">1000.0</span>+ ofGetElapsedTimef()), <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, ofGetHeight());
+ofDrawCircle(x,y,<span class="dv">30</span>);</code></pre>
+<p>Alternatively, ofNoise takes multiple dimensions. Here's a quick sketch moving something in a path via ofNoise using the 2D dimensions:</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/animation/images/noise2d.png" target="_blank"><img alt="noise via 2D" src="../images/animation/images/noise2d.png"/></a></div><div class="caption">noise via 2D</div>
+</div></div>
+<p>The code for this example (note the 2 inputs into ofNoise, this is a 2-dimensional noise call. It allows us to use the same value for time, but get different results):</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//--------------------------------------------------------------</span>
+<span class="dt">void</span> ofApp::setup(){
+    ofBackground(<span class="dv">0</span>);
+    ofSetBackgroundAuto(<span class="kw">false</span>);
+}
+
+<span class="co">//--------------------------------------------------------------</span>
+<span class="dt">void</span> ofApp::update(){
+}
+
+<span class="co">//--------------------------------------------------------------</span>
+<span class="dt">void</span> ofApp::draw(){
+
+    <span class="dt">float</span> x = ofMap( ofNoise( ofGetElapsedTimef()/<span class="fl">2.0</span>, -<span class="dv">1000</span>), <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, ofGetWidth());
+    <span class="dt">float</span> y = ofMap( ofNoise( ofGetElapsedTimef()/<span class="fl">2.0</span>, <span class="dv">1000</span>), <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, ofGetHeight());
+    ofNoFill();
+    ofDrawCircle(x,y,<span class="dv">3</span>);
+
+}</code></pre>
+<p>There's a ton more we can do with noise, we'll leave it for now but encourage you to look at the noise examples that come with openFrameworks, which show how noise can be use to create lifelike movement. Also, we encourage readers to investigate the work of <a href="http://mrl.nyu.edu/~perlin/" target="_blank">Ken Perlin</a>, author of the simplex noise algorithm -- he's got great examples of how you can use noise in creative, playful ways.</p>
+<h2 id="simulation">Simulation</h2>
+<p>If you have a photograph of an object at one point in time, you know its position. If you have a photograph of an object at another point in time and the camera hasn't changed, you can measure its velocity, i.e., its change in distance over time. If you have a photograph at three points in time, you can measure its acceleration, i.e., how much the speed changing over time.</p>
+<p>The individual measurements compared together tell us something about movement. Now, we're going to go in the opposite direction. Think about how we can use measurements like speed and acceleration to control position.</p>
+<p>If you know how fast an object is traveling, you can determine how far it has traveled in a certain amount of time. For example, if you are driving at 50 miles per hour (roughly 80km / hour), how far have you traveled in one hour? That's easy. You've traveled 50 miles. How far have you traveled in two or three hours? There is a simple equation to calculate this distance:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">position = position + (velocity * elapsed time)</code></pre>
+<p>e.g.:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">position = position + <span class="dv">50</span> * <span class="dv">1</span>;   <span class="co">// for one hour away</span></code></pre>
+<p>or</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">position = position + <span class="dv">50</span> * <span class="dv">2</span>;   <span class="co">// for two hours driving</span></code></pre>
+<p>The key expression -- position = position + velocity -- in shorthand would be <code>p=p+v</code>.</p>
+<p><em>Note that the elapsed time part is important. When we animate we'll be doing <code>p=p+v</code> quite regularly and you may see us drop this to simplify things (assume every frame has an elapsed time of one). This isn't entirely accurate but it keeps things simple. See the previous section on frame rate (and frame rate independence) for more details.</em></p>
+<p>In addition, if you are traveling at 50 miles per hour (apologies to everyone who thinks in km!) and you accelerate by 5 miles per hour, how fast are you driving in 1 hr? The answer is 55 mph. In 2 hrs, you'd be traveling 60 mph. In these examples, you are doing the following:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">velocity = velocity + acceleration</code></pre>
+<p>In shorthand, we'll use <code>v=v+a</code>. So we have two important equations for showing movement based on speed:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">p = p + v;   <span class="co">// position = position + velocity</span>
+v = v + a;   <span class="co">// velocity = velocity + acceleration</span></code></pre>
+<p>The amazing thing is that we've just described a system that can use acceleration to control position. Why is this useful? It's useful - if you remember from physics class - because Newton had very simple laws of motion, the second of which says</p>
+<pre><code>Force = Mass x Acceleration</code></pre>
+<p>In shorthand, <code>F = M x A</code>. This means force and acceleration are linearly related. If we assume that an object has a mass of one, then force equals acceleration. This means we can use force to control velocity and velocity to control position.</p>
+<p>The cool, amazing, beautiful thing is there are plenty of forces we can apply to an object, such as spring forces, repulsion forces, alignment forces, etc.</p>
+<p>I have several particle examples that use this approach, and while I won't go deeply into them, I'll try to explain some interesting ideas you might find.</p>
+<h3 id="particle-class">Particle class</h3>
+<p>The particle class in all of the examples is designed to be pretty straight forward. Let's take a look at the header (.h) file:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> particle{
+
+    <span class="kw">public</span>:
+        ofVec2f pos;
+        ofVec2f vel;
+        ofVec2f frc;
+        
+        particle();
+        <span class="dt">void</span> setInitialCondition(<span class="dt">float</span> px, <span class="dt">float</span> py, <span class="dt">float</span> vx, <span class="dt">float</span> vy);
+
+        <span class="dt">void</span> resetForce();
+        <span class="dt">void</span> addForce(<span class="dt">float</span> x, <span class="dt">float</span> y);
+        <span class="dt">void</span> addDampingForce();
+
+        <span class="dt">void</span> update();
+        <span class="dt">void</span> draw();
+
+        <span class="dt">float</span> damping;
+};</code></pre>
+<p>For variables, it has <a href="http://openframeworks.cc/documentation/types/ofPoint.html" target="_blank" title="ofPoint Documentation Page">ofPoint</a> objects for position, velocity and force (abbreviated as <code>pos</code>, <code>vel</code> and <code>frc</code>). It also has a variable for damping, which represents how much this object slows down over time. A damping of 0 would mean not slowing down at all, and as damping gets higher, it's like adding more friction - imagine rolling a ball on ice, concrete or sand. It would slow down at different rates.</p>
+<p>In terms of functions, it has a <a href="https://en.wikipedia.org/wiki/Constructor_%28object-oriented_programming%29" target="_blank" title="Wikipedia on constructors">constructor</a> which sets some internal variables like <code>damping</code> and a <code>setInitialCondition(...)</code> that allows you to set the position and velocity of the particle. Think about this as setting up its initial state, and from here you let the particle play out. The next three functions are about forces (we'll see more) -- the first one, <code>resetForce()</code>, clears all the internal force variable <code>frc</code>. Forces are not cumulative across frames, so at the start of every frame we clear it. <code>addForce(...)</code> adds a force in a given direction, useful for constant forces, like gravity. <code>addDampingForce()</code> adds a force opposite velocity (damping is a force felt opposite the direction of travel). Finally, update takes force and adds it to velocity, and takes velocity and adds it to position. Draw just draws a dot where position is.</p>
+<p>The particle class is really simple, and throughout these examples, we add complexity to it. In general, the formula you will see in all the examples is</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; particles.size(); i++){
+    particles[i].resetForce();
+}
+
+<span class="co">// &lt;------ magic happens here ---------&gt;</span>
+
+<span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; particles.size(); i++){
+    particles[i].update();
+}</code></pre>
+<p>where the magic is happening between the <code>resetForce()</code> and <code>update()</code>. Although these examples increase in complexity, they do so simply by adding new functions to the particle class, and adding more things between reset and update.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/animation/images/19_multiParticles_small.gif" target="_blank"><img alt="example 19_multiParticles in action" src="../images/animation/images/19_multiParticles_small.gif"/></a></div><div class="caption">example <strong>19_multiParticles</strong> in action</div>
+</div></div>
+<p><em>This is the '19_multiParticles' example in action.</em></p>
+<h3 id="simple-forces-repulsion-and-attraction">Simple forces, repulsion and attraction</h3>
+<p>In the next few examples, I added a few functions to the particle object:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> addRepulsionForce( <span class="dt">float</span> px, <span class="dt">float</span> py, <span class="dt">float</span> radius, <span class="dt">float</span> strength);
+<span class="dt">void</span> addAttractionForce( <span class="dt">float</span> px, <span class="dt">float</span> py, <span class="dt">float</span> radius, <span class="dt">float</span> strength);
+<span class="dt">void</span> addClockwiseForce( <span class="dt">float</span> px, <span class="dt">float</span> py, <span class="dt">float</span> radius, <span class="dt">float</span> strength);
+<span class="dt">void</span> addCounterClockwiseForce( <span class="dt">float</span> px, <span class="dt">float</span> py, <span class="dt">float</span> radius, <span class="dt">float</span> strength);</code></pre>
+<p>They essentially add forces the move towards or away from a point that you pass in, or in the case of clockwise forces, around a point.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/animation/images/particle.png" target="_blank"><img alt="sin" src="../images/animation/images/particle.png"/></a></div><div class="caption">sin</div>
+</div></div>
+<p>The calculation of these forces is fairly straightforward - first, we figure out how far away a point is from the center of the force. If it's outside of the radius of interaction, we disregard it. If it's inside, we figure out its percentage, i.e., the distance between the force and the particle divided by the radius of interaction. This gives us a number that's close to 1 when we are towards the far edge of the circle and 0 as we get towards the center. If we invert this, by taking 1 - percent, we get a number that's small on the outside, and larger as we get closer to the center.</p>
+<p>This is useful because oftentimes forces are proportional to distance. For example, a magnetic force will have a radius at which it works, and the closer you get to the magnet the stronger the force.</p>
+<p>Here's a quick look at one of the functions for adding force:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> particle::addAttractionForce( <span class="dt">float</span> px, <span class="dt">float</span> py, <span class="dt">float</span> radius, <span class="dt">float</span> strength){
+
+    ofVec2f posOfForce;
+    posOfForce.set(px, py);
+    ofVec2f diff = pos - posOfForce;
+
+    <span class="kw">if</span> (diff.length() &lt; radius){ 
+        <span class="dt">float</span> pct = <span class="dv">1</span> - (diff.length() / radius);
+        diff.normalize();
+        frc.x -= diff.x * pct * strength;
+        frc.y -= diff.y * pct * strength;
+    }
+} </code></pre>
+<p><code>diff</code> is a line between the particle and the position of the force. If the length of diff is less than the radius, we calculate the pct as a number that goes between 0 and 1 (0 on the outside of the radius of interaction, 1 as we get to the center of the force). We take the line <code>diff</code> and normalize it to get a "directional" vector, its magnitude (distance) is one, but the angle is still there. We then multiply that by pct * strength to get a line that tells us how to move. This gets added to our force.</p>
+<p>You'll notice that all the code is relatively similar, but with different additions to force. For example, repulsion is just the opposite of attraction:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">frc.x += diff.x * pct * strength;
+frc.y += diff.y * pct * strength;</code></pre>
+<p>We just move in the opposite direction. For the clockwise and counterclockwise forces we add the perpendicular of the diff line. The perpendicular of a 2D vector is just simply switching x and y and making one of them negative.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/animation/images/22_particle_particle_small.gif" target="_blank"><img alt="example 22_particle_particle in action" src="../images/animation/images/22_particle_particle_small.gif"/></a></div><div class="caption">example <strong>22_particle_particle</strong> in action</div>
+</div></div>
+<p><em>This is the '22_particle_particle' example in action.</em></p>
+<h3 id="particle-interaction">Particle interaction</h3>
+<p>Now that we have particles interacting with forces, the next step is to give them more understanding of each other. For example, if you have a broad attraction force, they will all converge on the same point without any respect for their neighbors. The trick is to add a function that allows the particle to feel a force based on their neighbor.</p>
+<p>We've added new functions to the particle object (looking in the header file):</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> addRepulsionForce(particle &amp;p, <span class="dt">float</span> radius, <span class="dt">float</span> scale);
+<span class="dt">void</span> addAttractionForce(particle &amp;p, <span class="dt">float</span> radius, <span class="dt">float</span> scale);</code></pre>
+<p>This looks really similar to the code before, except here we pass in a particle instead of an x and y position. You'll notice that we pass by reference (using &amp;) as opposed to passing by copy. This is because internally we'll alter both the particle which has this function called as well as particle <code>p</code> -- i.e., if you calculate A vs. B, you don't need to calculate B vs. A.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> particle::addRepulsionForce(particle &amp;p, <span class="dt">float</span> radius, <span class="dt">float</span> scale){
+
+    <span class="co">// ----------- (1) make a vector of where this particle p is: </span>
+    ofVec2f posOfForce;
+    posOfForce.set(p.pos.x,p.pos.y);
+
+    <span class="co">// ----------- (2) calculate the difference &amp; length</span>
+    ofVec2f diff    = pos - posOfForce;
+    <span class="dt">float</span> length    = diff.length();
+
+    <span class="co">// ----------- (3) check close enough</span>
+    <span class="dt">bool</span> bAmCloseEnough = <span class="kw">true</span>;
+    <span class="kw">if</span> (radius &gt; <span class="dv">0</span>){
+        <span class="kw">if</span> (length &gt; radius){
+            bAmCloseEnough = <span class="kw">false</span>;
+        }
+    }
+
+    <span class="co">// ----------- (4) if so, update force</span>
+    <span class="kw">if</span> (bAmCloseEnough == <span class="kw">true</span>){
+        <span class="dt">float</span> pct = <span class="dv">1</span> - (length / radius);  <span class="co">// stronger on the inside</span>
+        diff.normalize();
+        frc.x = frc.x + diff.x * scale * pct;
+        frc.y = frc.y + diff.y * scale * pct;
+        p.frc.x = p.frc.x - diff.x * scale * pct;
+        p.frc.y = p.frc.y - diff.y * scale * pct;
+    }
+}</code></pre>
+<p>The code should look very similar to before, except with these added lines:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">frc.x = frc.x + diff.x * scale * pct;
+frc.y = frc.y + diff.y * scale * pct;
+p.frc.x = p.frc.x - diff.x * scale * pct;
+p.frc.y = p.frc.y - diff.y * scale * pct;</code></pre>
+<p>This is modifying both the particle you are calling this on and the particle that is passed in.</p>
+<p>This means we can cut down on the number of particle interactions we need to calculate:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; particles.size(); i++){
+    <span class="kw">for</span> (<span class="dt">int</span> j = <span class="dv">0</span>; j &lt; i; j++){
+        particles[i].addRepulsionForce(particles[j], <span class="dv">10</span>, <span class="fl">0.4</span>);
+    }
+}</code></pre>
+<p>You'll notice in this 2D for loop, the inner loop counts up to the outer loop, so when <code>i</code> is 0, we don't even do the inner loop. When <code>i</code> is 1, we compare it to 0 (1 vs. 0). When i is 2, we compare it to 0 and 1 (2 vs. 0, 2 vs. 1). This way we never compare a particle with itself, as that would make no sense (although we might know some people in our lives that have a strong self attraction or repulsion). This also prevents the unnecessary reverse comparison, e.g. particle 3 to particle 42 vs. particle 42 to particle 3, since both yield the same result.</p>
+<p>One thing to note is that even though we've cut down the number of calculations, it's still quite a lot! This is a problem that doesn't scale linearly. In computer science, you talk about a problem using "O" notation, i.e. <a href="https://en.wikipedia.org/wiki/Big_O_notation" target="_blank" title="Wikipedia on big O notation">big O notation</a>. This is a bit more like O^2 / 2 -- the complexity is approximately 1/2 of a square. If you have 100 particles, you are doing almost 5000 calculations (100 * 100 / 2). If you have 1000 particles, it's almost half a million. Needless to say, lots of particles can get slow...</p>
+<p>We don't have time to get into it in this chapter, but there are different approaches to avoiding that many calculations. Many of them have to deal with spatial hashing, ways of quickly identifying which particles are far away enough to not even consider (thus avoiding a distance calculation).</p>
+<h2 id="wheretogofurther">Where to go further</h2>
+<h3 id="openframeworks-animation-in-general">openFrameworks / animation in general</h3>
+<ul>
+<li><a href="https://github.com/ofZach/algo2012" target="_blank" title="Algorithmic animation code">Algorithmic animation code</a> (Code from a class I've taught at Parsons School for Design and School for Poetic Computation)</li>
+<li><a href="http://www.ofxaddons.com/categories/7-animation" target="_blank" title="ofxAddons for animation">ofxAddons: animation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Portal:Animation" target="_blank">Wikipedia animations portal</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Book:Animation" target="_blank">Wikipedia book: Animation</a></li>
+<li><a href="http://blender.org/" target="_blank">Blender</a> animation tutorial: <a href="http://wiki.blender.org/index.php/Doc:2.4/Tutorials/Animation/BSoD/Principles_of_Animation" target="_blank">Principles of Animation</a></li>
+<li>Thomas, Frank; Ollie Johnston, The Illusion of Life: Disney Animation, Hyperion, ISBN 978-0-7868-6070-8</li>
+</ul>
+<h3 id="mathematical-concepts">Mathematical concepts</h3>
+<ul>
+<li><a href="http://easings.net/" target="_blank">easings.net</a> resource for shaping/easing functions</li>
+<li><a href="http://sol.gfxile.net/interpolation/" target="_blank">"Interpolation Tricks or How I Learned to Stop Worrying and Love the 0..1 Range"</a> is another resource for shaping/easing functions</li>
+<li>Sato Masahiko Laboratory, <a href="http://www.masahicom.com/blog/index.cgi/books/20100817mathematicalcurves_dvdbook.htm" target="_blank">Mathematical Curves Hidden Around Us</a></li>
+<li><a href="http://www.gamedev.net/user/6-dave-astle" target="_blank">Tristam MacDonald</a>, <a href="http://www.gamedev.net/page/resources/_/technical/game-programming/spatial-hashing-r2697" target="_blank">Spatial Hashing</a></li>
+<li><a href="http://www-sop.inria.fr/reves/personnel/Sylvain.Lefebvre/" target="_blank">Sylvain Lefebvre</a>, <a href="http://research.microsoft.com/~hoppe/" target="_blank">Hugues Hoppe</a>: <a href="http://research.microsoft.com/en-us/um/people/hoppe/proj/perfecthash/" target="_blank">Perfect spatial hashing</a>, ACM Trans. Graphics (SIGGRAPH), 25(3), 2006.</li>
+<li><a href="http://entitycrisis.blogspot.com/" target="_blank">Simon Wittber</a>, <a href="http://entitycrisis.blogspot.de/2007/11/spatial-hashing.html" target="_blank">Spatial Hashing</a></li>
+</ul>
+<h3 id="physics-and-animation-libraries">Physics and animation libraries</h3>
+<ul>
+<li><a href="http://www.bulletphysics.org/" target="_blank" title="Bullet Physics Library website">Bullet Physics Library</a></li>
+<li><a href="http://www.box2d.org/" target="_blank" title="Box2D website">Box2D</a></li>
+<li><a href="http://chipmunk-physics.net/" target="_blank" title="Chipmunk2D website">Chipmunk2D</a></li>
+<li><a href="http://www.newtondynamics.com/" target="_blank" title="Newton Game Dynamics website">Newton Game Dynamics</a></li>
+<li><a href="http://www.ode.org/" target="_blank" title="Open Dynamics Engine website">Open Dynamics Engine</a></li>
+<li><a href="http://www.adrianboeing.com/pal/index.html" target="_blank" title="Physics Abstraction Layer website">Physics Abstraction Layer</a></li>
+<li><a href="http://siconos.gforge.inria.fr/" target="_blank" title="SICONOS website">SICONOS - SImulation and COntrol of NOnsmooth Systems</a></li>
+<li><a href="http://www.tokamakphysics.com/" target="_blank" title="Tokamak Game Physics SDK website">Tokamak Game Physics SDK</a></li>
+<li><a href="http://www.sofa-framework.org/" target="_blank" title="SOFA website">SOFA - Simulation Open Framework Architecture</a></li>
+</ul>
+<div class="footer">
+<div id="prev_chapter"><a href="how_of_works.html">&lt; how OF works</a></div>
+<div id="next_chapter"><a href="game_design.html">Experimental Game Development &gt;</a></div>
+</div>
+<div id="help"><i>please note that this book / chapter is a work in progress.  Feel free to suggest edits / corrections <a href="https://github.com/openframeworks/ofbook" target="_blank">here</a></i></div>
+</div>
+</div>
+</body>
+</html>

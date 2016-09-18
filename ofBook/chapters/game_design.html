@@ -1,0 +1,970 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="pandoc" name="generator"/>
+<title>ofBook - Experimental Game Development</title>
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+<link href="../style/bootstrap.min.css" rel="stylesheet">
+<link href="../style/style.css" rel="stylesheet" type="text/css"/>
+<link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Merriweather:400,300,300italic,400italic,700,900,700italic,900italic" rel="stylesheet" type="text/css">
+<script src="../javascript/jquery-1.8.3.min.js"></script>
+<script src="../javascript/bootstrap.min.js"></script>
+<script src="../javascript/navbar.js"></script>
+</link></link></head>
+<body>
+<div class="banner">
+<div class="content-wrapper">
+<b>Work in progress!</b>
+        This is a preliminary version of ofBook, a collaboratively written book about openFrameworks.  Please post any issues, suggestions, comments on our <a href="https://github.com/openframeworks/ofBook/" target="_blank">repo</a>.
+    </div>
+</div>
+<div class="content-wrapper">
+<nav role="navigation">
+<ul id="nav-parts"><li class="group"><div class="groupTitle">Foreword</div><ul><li class="chapter"><div class="chapterTitle"><a href="foreword.html">foreword</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#책에관하여" target="_top">책에 관하여</a></li><li class="section"><a href="#credits" target="_top">Credits</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Basics</div><ul><li class="chapter"><div class="chapterTitle"><a href="of_philosophy.html">Philosophy</a></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="cplusplus_basics.html">C++ Language Basics</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#lookalive" target="_top">Look Alive!</a></li><li class="section"><a href="#iteration" target="_top">Iteration</a></li><li class="section"><a href="#compilingmyfirstapp" target="_top">Compiling My First App</a></li><li class="section"><a href="#beyondhelloworld" target="_top">Beyond Hello World</a></li><li class="section"><a href="#functions" target="_top">Functions</a></li><li class="section"><a href="#customfunctions" target="_top">Custom Functions</a></li><li class="section"><a href="#encapsulationofcomplexity" target="_top">Encapsulation of Complexity</a></li><li class="section"><a href="#variablespart1" target="_top">Variables (part 1)</a></li><li class="section"><a href="#conclusion" target="_top">Conclusion</a></li><li class="section"><a href="#ps" target="_top">PS.</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="setup_and_project_structure.html">oF structure</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#firstthingsfirst" target="_top">First things first</a></li><li class="section"><a href="#welcometoyournewkitchen" target="_top">Welcome to your new kitchen</a></li><li class="section"><a href="#runningexamples" target="_top">Running examples</a></li><li class="section"><a href="#offolderstructure" target="_top">oF folder structure</a></li><li class="section"><a href="#theofpantry" target="_top">The oF Pantry</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="intro_to_graphics.html">Graphics</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#brusheswithbasicshapes" target="_top">Brushes with Basic Shapes</a></li><li class="section"><a href="#brushesfromfreeformshapes" target="_top">Brushes from Freeform Shapes</a></li><li class="section"><a href="#movingtheworld" target="_top">Moving The World</a></li><li class="section"><a href="#nextsteps" target="_top">Next Steps</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#overview" target="_top">Overview</a></li><li class="section"><a href="#whatisobjectorientedprogramming" target="_top">What is Object Oriented Programming</a></li><li class="section"><a href="#howtobuildyourownclassessimpleclass" target="_top">How to build your own Classes (simple Class)</a></li><li class="section"><a href="#makeanobjectfromyourclass" target="_top">Make an Object from your Class</a></li><li class="section"><a href="#makeobjectsfromyourclass" target="_top">Make objects from your Class</a></li><li class="section"><a href="#makemoreobjectsfromyourclass" target="_top">Make more Objects from your Class</a></li><li class="section"><a href="#makeevenmoreobjectsfromyourclasspropertiesandconstructors" target="_top">Make even more Objects from your Class: properties and constructors</a></li><li class="section"><a href="#makeobjectsonthefly" target="_top">Make Objects on the fly</a></li><li class="section"><a href="#makinganddeleteasyouwishusingvectors" target="_top">Making and delete as you wish - using vectors</a></li><li class="section"><a href="#quickintrotopolymorphisminheritance" target="_top">Quick intro to polymorphism (inheritance)</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="how_of_works.html">how OF works</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#오픈프레임웍스코드의일반적인패턴설명" target="_top">오픈프레임웍스 코드의 일반적인 패턴 설명</a></li><li class="section"><a href="#setupupdatedraw" target="_top">setup, update, draw</a></li><li class="section"><a href="#클래스" target="_top">클래스</a></li><li class="section"><a href="#함수" target="_top">함수</a></li></ul></div></li></ul></li><li class="group selected"><div class="groupTitle">Approaches</div><ul><li class="chapter"><div class="chapterTitle"><a href="animation.html">Animation</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#background" target="_top">Background</a></li><li class="section"><a href="#animationinofusefulconcepts" target="_top">Animation in oF / useful concepts:</a></li><li class="section"><a href="#linearmovement" target="_top">Linear movement</a></li><li class="section"><a href="#functionbasedmovement" target="_top">Function based movement</a></li><li class="section"><a href="#simulation" target="_top">Simulation</a></li><li class="section"><a href="#wheretogofurther" target="_top">Where to go further</a></li></ul></div></li></ul><ul><li class="chapter selected"><div class="chapterTitle selected"><a href="game_design.html">Experimental Game Development</a></div><div class="chapterContents selected"><ul><li class="section selected"><a href="#howdogamedevelopersactuallymakegames" target="_top">How do game developers actually make games?</a></li><li class="section"><a href="#sowhatisoscanyway" target="_top">So what is OSC, anyway?</a></li><li class="section"><a href="#ourbasicgameandmakingitnotsobasic" target="_top">Our basic game–and making it not so basic</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="image_processing_computer_vision.html">image processing and computer vision</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#maybethereisamagicbullet" target="_top">Maybe There is a Magic Bullet</a></li><li class="section"><a href="#preliminariestoimageprocessing" target="_top">Preliminaries to Image Processing</a></li><li class="section"><a href="#이미지처리를얘기하기전에알아두어야할것들" target="_top">이미지처리를 얘기하기 전에 알아두어야 할것들</a></li><li class="section"><a href="#pointprocessingoperationsonimages" target="_top">Point Processing Operations on Images</a></li><li class="section"><a href="#acompleteworkflowbackgroundsubtraction" target="_top">A Complete Workflow: Background Subtraction</a></li><li class="section"><a href="#refinements" target="_top">Refinements</a></li><li class="section"><a href="#suggestionsforfurtherexperimentation" target="_top">Suggestions for Further Experimentation</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">I/O</div><ul><li class="chapter"><div class="chapterTitle"><a href="hardware.html">Hardware</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introduction" target="_top">introduction</a></li><li class="section"><a href="#소개" target="_top">소개</a></li><li class="section"><a href="#gettingstartedwithserialcommunication" target="_top">getting started with serial communication</a></li><li class="section"><a href="#시리얼통신시작하기" target="_top">시리얼 통신 시작 하기</a></li><li class="section"><a href="#digitalandanalogcommunication" target="_top">digital and analog communication</a></li><li class="section"><a href="#디지털과아날로그통신" target="_top">디지털과 아날로그 통신</a></li><li class="section"><a href="#usingserialforcommunicationbetweenarduinoandopenframeworks" target="_top">using serial for communication between arduino and openframeworks</a></li><li class="section"><a href="#lightsoncontrollinghardwareviadmx" target="_top">Lights On - controlling hardware via DMX</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="sound.html">Sound</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#gettingstartedwithsoundfiles" target="_top">Getting Started With Sound Files</a></li><li class="section"><a href="#gettingstartedwiththesoundstream" target="_top">Getting Started With the Sound Stream</a></li><li class="section"><a href="#why1to1" target="_top">Why -1 to 1?</a></li><li class="section"><a href="#timedomainvsfrequencydomain" target="_top">Time Domain vs Frequency Domain</a></li><li class="section"><a href="#reactingtoliveaudio" target="_top">Reacting to Live Audio</a></li><li class="section"><a href="#synthesizingaudio" target="_top">Synthesizing Audio</a></li><li class="section"><a href="#audiogotchas" target="_top">Audio Gotchas</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="network.html">Network</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#tcpvsudp" target="_top">TCP vs UDP</a></li><li class="section"><a href="#osc" target="_top">OSC</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Graphics</div><ul><li class="chapter"><div class="chapterTitle"><a href="openGL.html">Introducing OpenGL for OF</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introducing" target="_top">Introducing</a></li><li class="section"><a href="#vertices" target="_top">Vertices</a></li><li class="section"><a href="#meshes" target="_top">Meshes</a></li><li class="section"><a href="#vbos" target="_top">VBOs</a></li><li class="section"><a href="#abasic3dscene" target="_top">A Basic 3D Scene</a></li><li class="section"><a href="#matrices" target="_top">Matrices</a></li><li class="section"><a href="#textures" target="_top">Textures</a></li><li class="section"><a href="#cameras" target="_top">Cameras</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="lines.html">drawing lines</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#소개" target="_top">소개 ...</a></li><li class="section"><a href="#선그리기" target="_top">선 그리기</a></li><li class="section"><a href="#약간의노이즈abitofnoise" target="_top">약간의 노이즈A bit of noise</a></li><li class="section"><a href="#aweboflines" target="_top">A web of lines</a></li><li class="section"><a href="#makeasmoothlineinmovementina3dspace" target="_top">Make a smooth line in movement in a 3D space</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="generativemesh.html">Basics of Generating Meshes from an Image</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#basicsofgeneratingmeshesfromanimage1" target="_top">Basics of Generating Meshes from an Image</a></li><li class="section"><a href="#basicsworkingwithofmesh" target="_top">Basics: Working with ofMesh</a></li><li class="section"><a href="#generativemeshusinganimagetodrivethecreationofamesh" target="_top">Generative Mesh: Using an image to drive the creation of a mesh</a></li><li class="section"><a href="#manipulationsaddingeffectsthatmodifythemesh" target="_top">Manipulations: Adding effects that modify the mesh</a></li><li class="section"><a href="#nextsteps" target="_top">Next Steps</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="advanced_graphics.html">Advanced graphics</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#dimmediatemodevsofpolylineofpath" target="_top">2D, immediate mode vs ofPolyline/ofPath</a></li><li class="section"><a href="#d" target="_top">3D</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="shaders.html">Introducing Shaders</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introducing" target="_top">introducing</a></li><li class="section"><a href="#yourfirstshader" target="_top">Your first shader!</a></li><li class="section"><a href="#addinguniforms" target="_top">Adding Uniforms</a></li><li class="section"><a href="#addingsomeinteractivity" target="_top">Adding some interactivity</a></li><li class="section"><a href="#addingtextures" target="_top">Adding Textures</a></li><li class="section"><a href="#alphamasking" target="_top">Alpha Masking</a></li><li class="section"><a href="#multipletextures" target="_top">Multiple Textures</a></li><li class="section"><a href="#offbo" target="_top">ofFbo</a></li><li class="section"><a href="#texturesasdataegdisplacement" target="_top">Textures as Data (e.g. Displacement)</a></li><li class="section"><a href="#theendcongrats" target="_top">The End, Congrats!</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">C++</div><ul><li class="chapter"><div class="chapterTitle"><a href="threads.html">threads</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#쓰레드란무엇이고언제사용해야하는가" target="_top">쓰레드란 무엇이고 언제 사용해야 하는가</a></li><li class="section"><a href="#ofthread" target="_top">ofThread</a></li><li class="section"><a href="#스레드와opengl" target="_top">스레드와 openGL</a></li><li class="section"><a href="#ofmutex" target="_top">ofMutex</a></li><li class="section"><a href="#externalthreadsanddoublebuffering" target="_top">External threads and double buffering</a></li><li class="section"><a href="#ofscopedlock" target="_top">ofScopedLock</a></li><li class="section"><a href="#pococondition" target="_top">Poco::Condition</a></li><li class="section"><a href="#conclusion" target="_top">Conclusion</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="memory.html">memory of C++</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#컴퓨터메모리와변수" target="_top">컴퓨터 메모리와 변수</a></li><li class="section"><a href="#스택변수함수내의변수vs오브젝트내의변수" target="_top">스택 변수, 함수내의 변수 vs 오브젝트내의 변수</a></li><li class="section"><a href="#포인터와레퍼런스" target="_top">포인터와 레퍼런스</a></li><li class="section"><a href="#힙heap영역에서의변수들" target="_top">힙(heap) 영역에서의 변수들</a></li><li class="section"><a href="#메모리구조배열과vector" target="_top">메모리 구조, 배열과 vector</a></li><li class="section"><a href="#다른메모리구조리스트와맵" target="_top">다른 메모리 구조, 리스트와 맵</a></li><li class="section"><a href="#스마트포인터" target="_top">스마트 포인터</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="stl_vector.html">Introduction to vectors</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#quickreview" target="_top">Quick Review:</a></li><li class="section"><a href="#declaringavector" target="_top">Declaring a vector</a></li><li class="section"><a href="#addingelementstoavector" target="_top">Adding elements to a vector</a></li><li class="section"><a href="#resize" target="_top">resize</a></li><li class="section"><a href="#assign" target="_top">assign</a></li><li class="section"><a href="#accessingelementsofavector" target="_top">Accessing elements of a vector</a></li><li class="section"><a href="#erasingelementsofavector" target="_top">Erasing elements of a vector</a></li><li class="section"><a href="#iterators" target="_top">Iterators</a></li><li class="section"><a href="#sortingandshufflingavector" target="_top">Sorting and shuffling a vector</a></li><li class="section"><a href="#vectorsofobjects" target="_top">Vectors of objects</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="stl_map.html">let's play with Map, std::map</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#소개map이무엇인가요" target="_top">소개 : map이 무엇인가요?</a></li><li class="section"><a href="#map에값삽입하기" target="_top">map에 값 삽입하기</a></li><li class="section"><a href="#map에서요소삭제하기" target="_top">map에서 요소 삭제하기</a></li><li class="section"><a href="#map을훑기" target="_top">map을 훑기</a></li><li class="section"><a href="#map에서요소찾기" target="_top">map에서 요소 찾기</a></li><li class="section"><a href="#map에오브젝트저장하기" target="_top">map에 오브젝트 저장하기</a></li><li class="section"><a href="#multimap이란무엇인가요" target="_top">multimap이란 무엇인가요?</a></li><li class="section"><a href="#다른유용한메소드들" target="_top">다른 유용한 메소드들</a></li><li class="section"><a href="#추가참고자료역자에의해추가됨" target="_top">추가 참고 자료 (역자에 의해 추가됨)</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="c++11.html">C++ 11</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introduction" target="_top">Introduction</a></li><li class="section"><a href="#auto" target="_top">auto</a></li><li class="section"><a href="#forthingthings" target="_top">for (thing : things)</a></li><li class="section"><a href="#override" target="_top">override</a></li><li class="section"><a href="#lambdafunctions" target="_top">Lambda functions</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Advanced topics</div><ul><li class="chapter"><div class="chapterTitle"><a href="math.html">Math: From 1D to 4D</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#onedimensionusingchange" target="_top">One Dimension: Using Change</a></li><li class="section"><a href="#moredimensionssomelinearalgebra" target="_top">More Dimensions: Some Linear Algebra</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Platforms</div><ul><li class="chapter"><div class="chapterTitle"><a href="ios.html">ofxiOS</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#openframeworksoniosdevices" target="_top">OpenFrameworks on iOS devices.</a></li><li class="section"><a href="#intro" target="_top">Intro</a></li><li class="section"><a href="#introtoobjectivec" target="_top">Intro to Objective-C</a></li><li class="section"><a href="#underthehood" target="_top">Under the Hood</a></li><li class="section"><a href="#ofuikit" target="_top">OF &amp; UIKit</a></li><li class="section"><a href="#mediaplaybackandcapture" target="_top">Media Playback and Capture</a></li><li class="section"><a href="#lifehacks" target="_top">Life Hacks</a></li><li class="section"><a href="#appstore" target="_top">App Store</a></li><li class="section"><a href="#casestudies" target="_top">Case Studies</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Tools</div><ul><li class="chapter"><div class="chapterTitle"><a href="version_control_with_git.html">Version control with Git</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#whatisversioncontrolandwhyshouldyouuseit" target="_top">What is version control, and why should you use it?</a></li><li class="section"><a href="#differentversioncontrolsystems" target="_top">Different version control systems</a></li><li class="section"><a href="#introductiontogit" target="_top">Introduction to Git</a></li><li class="section"><a href="#popularguiclients" target="_top">Popular GUI clients</a></li><li class="section"><a href="#conclusion" target="_top">Conclusion</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="ofSketch.html">ofSketch</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#whatisofsketch" target="_top">What is ofSketch?</a></li><li class="section"><a href="#download" target="_top">Download</a></li><li class="section"><a href="#sketchformat" target="_top">Sketch Format</a></li><li class="section"><a href="#remotecoding" target="_top">Remote Coding</a></li><li class="section"><a href="#future" target="_top">Future</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="installation_up_4evr_macosx.html">Installation up 4evr</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#step1prepyoursoftwareandthecomputer" target="_top">Step 1: Prep your software and the computer</a></li><li class="section"><a href="#step2bootintoyoursoftware" target="_top">Step 2: Boot into your software</a></li><li class="section"><a href="#step3keepitupchamp" target="_top">Step 3: Keep it up (champ!)</a></li><li class="section"><a href="#step4rebootperiodically" target="_top">Step 4: Reboot periodically</a></li><li class="section"><a href="#step5checkinonitfromafar" target="_top">Step 5: Check in on it from afar.</a></li><li class="section"><a href="#step6testtesttest" target="_top">Step 6: Test, test, test.</a></li><li class="section"><a href="#additionaltipslogging" target="_top">Additional Tips: Logging</a></li><li class="section"><a href="#memoryleakmurderer" target="_top">Memory leak murderer</a></li><li class="section"><a href="#alternateresources" target="_top">Alternate resources:</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="installation_up_4evr_linux.html">installation up4ever - linux</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#몇가지추가적인팁" target="_top">몇가지 추가적인 팁:</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Case studies</div><ul><li class="chapter"><div class="chapterTitle"><a href="project_eva.html">Choreographies for Humans and Stars</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#projectoverview" target="_top">Project Overview</a></li><li class="section"><a href="#ideationandprototyping" target="_top">Ideation and Prototyping</a></li><li class="section"><a href="#findingthetechnicalsolutions" target="_top">Finding the Technical Solutions</a></li><li class="section"><a href="#developingthevisualizationsoftware" target="_top">Developing the Visualization Software</a></li><li class="section"><a href="#failsafesanddirtyfixes" target="_top">Fail-safes and dirty fixes</a></li><li class="section"><a href="#resultsandreception" target="_top">Results and Reception</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="project_joel.html">Anthropocene</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#theproject" target="_top">The Project</a></li><li class="section"><a href="#development" target="_top">Development</a></li><li class="section"><a href="#showtime" target="_top">Show time</a></li><li class="section"><a href="#postevent" target="_top">Post Event</a></li><li class="section"><a href="#teamandcredits" target="_top">Team and Credits</a></li><li class="section"><a href="#hardwareselection" target="_top">Hardware selection</a></li></ul></div></li></ul></li></ul>
+</nav>
+<div class="chapter-content">
+<h1 id="experimental-game-development">Experimental Game Development</h1>
+<p><em>by <a href="http://www.phoenixperry.com" target="_blank">Phoenix Perry</a> and <a href="janefriedhoff.com" target="_blank">Jane Friedhoff</a></em></p>
+<p><em>additional edits by <a href="http://kaylalewis.net/" target="_blank">Kayla Lewis</a></em></p>
+<p>Game developers are, in greater and greater numbers, turning to openFrameworks' creative coding toolkit to develop their games. Unlike platforms such as Unity, GameMaker, and Construct2, OF was not specifically developed for game makers. However, OF's ability to port to mobile, manipulate video, utilize camera input, support generative graphics, and hook in with devices like Arduino and Kinect (among other features) makes it a very attractive option for developers who want to be able to rapidly produce compelling, unique games.</p>
+<h3 id="popular-games-made-with-openframeworks">Popular games made with openFrameworks</h3>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/game_design/images/RushModeSm.png" target="_blank"><img alt="Spell Tower by Zach Gage" src="../images/game_design/images/RushModeSm.png" title="Spell Tower by Zach Gage"/></a></div><div class="caption">Spell Tower by Zach Gage</div>
+</div></div>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/game_design/images/particleMace.png" target="_blank"><img alt="Particle Mace by Andy Wallace" src="../images/game_design/images/particleMace.png" title="Particle Mace by Andy Wallace"/></a></div><div class="caption">Particle Mace by Andy Wallace</div>
+</div></div>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/game_design/images/eliss012.jpg" target="_blank"><img alt="Eliss by Steph Thirion" src="../images/game_design/images/eliss012.jpg" title="Eliss by Steph Thirion"/></a></div><div class="caption">Eliss by Steph Thirion</div>
+</div></div>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/game_design/images/screamup.png" target="_blank"><img alt="Scream Em Up by Jane Friedhoff" src="../images/game_design/images/screamup.png" title="Scream Em Up by Jane Friedhoff"/></a></div><div class="caption">Scream Em Up by Jane Friedhoff</div>
+</div></div>
+<p>In this chapter, we'll learn about game development in openFrameworks. We'll cover what goes into making a game, as well as how to code a simple space shooter. Finally, we'll put an experimental oF twist on our game by implementing OSC functionality, which will allow you to alter the difficulty of the game live (while the player is playing it).</p>
+<p>Ready? Let's go!</p>
+<h2 id="howdogamedevelopersactuallymakegames">How do game developers actually make games?</h2>
+<p>There are as many ways to make games as there are game developers. However, many developers follow an iterative process: adding a single component, testing it, adding an additional component, testing it again, and so on. Regardless of the platform, this method allows game developers to quickly figure out what parts of the initial idea are worth keeping and test additions they think might be interesting without wasting time building a complete game that, in retrospect, isn't compelling.</p>
+<p>This iterative process can be done digitally or physically. Paper prototyping is the process of testing mechanics and interactions with paper models and analogs. Although these paper prototypes don't necessarily look like the final game, they can be mocked up quickly, allowing developers to experiment with core mechanics more rapidly than they could with code. For example, a puzzle game's board and pieces can be mocked up with paper and dice quicker than it can be implemented in even a basic mobile app. Similarly, when a developer makes a digital prototype, or one with code, they will start by refining game mechanics and keeping assets rough until they get closer to the end. Finally, developers enter the long process of tuning their game–tweaking various parameters until it feels just right.</p>
+<p>We're going to use openFrameworks to play with the final step of this process. In the game we're making, we're not going to settle on one set of parameters that stay static from game to game. We're going to use openFrameworks' OSC library to allow us to communicate wirelessly from another device (e.g. a smartphone or tablet) so we can tune those parameters live, giving our players experiences tailored just for them.</p>
+<h2 id="sowhatisoscanyway">So what is OSC, anyway?</h2>
+<p>OSC, or Open Sound Control, came about as an advancement to MIDI, so let's talk about MIDI first. MIDI is a data protocol that sends and receives information between devices, typically electronic musical instruments. MIDI is what allowed things like keyboards and drum machines to fire in sync. If you've heard pop music, you've heard MIDI in action.</p>
+<p>MIDI has data channels, on which you can send or receive single messages, or events. Programmers could associate these MIDI events with actions that their electronic instruments could take. For example, you could set up your keyboard to send data on channel 1, and receive data on MIDI channel 2. More specifically, you could program a specific key (say, the 'a' key) to send out a MIDI event on channel 1. If your drum machine is set up to receive on channel 1, it will receive that message and perform the appropriate action (e.g. playing). A pretty cool system, but one that was limited by its pre-defined and discrete message types.</p>
+<p>As time advanced, so did computers and the speed of data transfers, leading us to OSC. OSC was designed to allow for more expressive performance data, with different, flexible kinds of messages sent over networks. OSC is a thin layer on top of the UDP (User Datagram Protocol), and allows users to send information over networks just by specifying the network address and the incoming and outgoing ports. (UDP is used frequently in games, and it is possible to use both of these protocols at the same time in the same code base with no issues.)</p>
+<p>OSC messages consist of the following:</p>
+<ul>
+<li>An address pattern. This is a hierarchical name space, and looks a bit like a Unix filesystem or URL (e.g. <code>/Address1</code>). These patterns can effectively be anything you want (e.g. <code>/EnemySpeed</code>)--think of them as names for what you send.</li>
+<li>A Type tag string. This simply represents the kind of data being sent (e.g. <code>int</code>, <code>string</code>).</li>
+<li>Arguments. The actual value that is being transmitted (e.g. <code>6</code>, <code>"Hello world"</code>, etc.).</li>
+</ul>
+<p>There are plenty of inexpensive apps for smartphones and tablets that provide customizable GUIs (complete with buttons, sliders, etc.) for sending different kinds of MIDI messages. Download one (we like TouchOSC) so we have something to send our messages with. With this in mind, let's start making our game!</p>
+<h2 id="ourbasicgameandmakingitnotsobasic">Our basic game–and making it not so basic</h2>
+<p>OpenFrameworks handles OSC as an included addon, so our first step will be to run the project generator and create a project with the OSC addon. (If you haven't had a chance to read about addons, now would be a good time to jump over to [here] and do just that!) Launch the project generator, then, in the main menu, click the word "Addons." A popup will appear. Select ofxOsc and then click back. Now, next to the word Addons, you should see ofxOsc. Press "generate". When it completes the project creation process, close the generator and open up the project in either Visual Studio or Xcode. The project will be set up in your myApps folder. Open it now.</p>
+<p>Here's what our game will have:</p>
+<ul>
+<li>A player, who has an on-screen position, a movement speed, and an image to represent it</li>
+<li>Some enemies, who have an on-screen position, a movement speed (with the horizontal value based on a sine wave), an image to represent them, and an interval to keep track of when they can shoot next</li>
+<li>A level controller, which has an interval to keep track of when an enemy should be spawned next</li>
+<li>Bullets (for the player and the enemies), which have an on-screen position, images to represent them, a way to keep track of where they come from (player or enemy), and a speed</li>
+<li>Bonus lives, which have an on-screen position, an image to represent them, and a speed</li>
+</ul>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/game_design/images/game.png" target="_blank"><img alt="Space Game in action!" src="../images/game_design/images/game.png" title="Space Game in action!"/></a></div><div class="caption">Space Game in action!</div>
+</div></div>
+<p>With all that written out, let's use OSC to affect the following:</p>
+<ul>
+<li>The horizontal movement of our enemies--whether they move in a more exaggerated sine wave, or whether they move in more of a straight line</li>
+<li>The frequency with which our enemies shoot</li>
+<li>The frequency with which our level controller spawn enemies</li>
+<li>Whether a life bonus is on screen or not</li>
+</ul>
+<p>These three parameters will allow the developer to tailor the difficulty of the game to the individual playing it, second-by-second.</p>
+<p>Let's start with our testApp. There are a few things we definitely know we'll want classes for, so make corresponding .h and .cpp files for Player, Bullet, Life, Enemy, and LevelController. Remember to <code>#include "ofMain.h"</code> in each of those classes, and to include the .h file of each of those classes in <code>testApp.h</code>.</p>
+<h3 id="gamestates">Gamestates</h3>
+<p>First let's create the basic structure of our game. Games typically have at least three parts: a start screen, the game itself, and an end screen. We need to keep track of which section of the game we're in, which we'll do using a variable called <code>game_state</code>. In this example, our <code>game_state</code> variable is a string, and the three parts of our game are <code>start</code>, <code>game</code>, and <code>end</code>. Let's add a score and a player at this point as well.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">string game_state;
+<span class="dt">int</span> score;
+Player player_1;</code></pre>
+<p>We'll then divide up <code>testApp</code>'s <code>update()</code> and <code>draw()</code> loops between those game states:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//--------------------------------------------------------------</span>
+<span class="dt">void</span> testApp::update(){
+   <span class="kw">if</span> (game_state == <span class="st">"start"</span>) {
+
+   } <span class="kw">else</span> <span class="kw">if</span> (game_state == <span class="st">"game"</span>) {
+   } <span class="kw">else</span> <span class="kw">if</span> (game_state == <span class="st">"end"</span>) {
+
+   }
+}
+<span class="co">//--------------------------------------------------------------</span>
+<span class="dt">void</span> testApp::draw(){
+   <span class="kw">if</span> (game_state == <span class="st">"start"</span>) {
+   } <span class="kw">else</span> <span class="kw">if</span> (game_state == <span class="st">"game"</span>) {
+   } <span class="kw">else</span> <span class="kw">if</span> (game_state == <span class="st">"end"</span>) {
+
+   }
+}</code></pre>
+<p>Let's set the initial value of <code>game_state</code> to <code>"start"</code> right when the app begins.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//--------------------------------------------------------------</span>
+<span class="dt">void</span> testApp::setup(){
+   game_state = <span class="st">"start"</span>;
+  score = <span class="dv">0</span>;
+}</code></pre>
+<p>Finally, let's make sure that we can move forward from the start screen. In this example, when the player is on the start screen and releases the space key, they'll be taken to the game.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//--------------------------------------------------------------</span>
+<span class="dt">void</span> testApp::keyReleased(<span class="dt">int</span> key){
+   
+   <span class="kw">if</span> (game_state == <span class="st">"start"</span>) {
+       game_state = <span class="st">"game"</span>;
+   } <span class="kw">else</span> <span class="kw">if</span> (game_state == <span class="st">"game"</span>) {
+      <span class="co">// blank for now</span>
+   }
+}</code></pre>
+<h3 id="player-movement">Player movement</h3>
+<p>Great! Let's move onto our player. Our player's class looks like this:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> Player {
+<span class="kw">public</span>:
+   ofPoint pos;
+   <span class="dt">float</span> width, height, speed;
+   <span class="dt">int</span> lives;
+   
+   <span class="dt">bool</span> is_left_pressed, is_right_pressed, is_down_pressed, is_up_pressed;
+   
+   <span class="dt">void</span> setup(ofImage * _img);
+   <span class="dt">void</span> update();
+   <span class="dt">void</span> draw();
+   <span class="dt">void</span> shoot();
+   
+   <span class="dt">void</span> calculate_movement();
+   
+   <span class="dt">bool</span> check_can_shoot();
+   
+   ofImage * img;
+   
+};</code></pre>
+<p>Taking this one step at a time:</p>
+<ul>
+<li>Our player's position will be stored in an <code>ofPoint</code> called <code>pos</code>. ofPoints are handy datatypes that contain <code>x</code> and <code>y</code> values, letting us access our player's position through <code>pos.x</code> and <code>pos.y</code>.</li>
+<li>Our player will have <code>width</code>, <code>height</code>, and <code>speed</code> variables (which we'll use for collision detection and movement, respectively).</li>
+<li>Our player will have an integer number of lives (since it wouldn't make any sense for them to have 4.33333333333 lives).</li>
+<li>Our player will keep track of what movement keys are currently pressed in separate booleans.</li>
+<li>Our player will have <code>setup</code>, <code>update</code>, <code>draw</code>, <code>shoot</code>, and <code>calculate_movement</code> methods.</li>
+<li>Finally, our player will have a pointer to the image we're using for the player.</li>
+</ul>
+<p>You may be wondering why we're using all these booleans--why not just check and see which keys are pressed?</p>
+<p>The problem is that, in openFrameworks, <code>keyPressed()</code> does not return all the keys currently being pressed--just the last key that was pressed. That means that if the player presses up and left (intending to move diagonally), openFrameworks will only report one of the keys being pressed. You can try printing out the result of keyPressed to see this in action. What we'll do to avoid this is instead base the player's movement on the booleans we wrote earlier. If the player presses a certain key, that boolean will be true; if they release that key, that boolean will be false. That way, if the player presses up and left, we'll report up and left as being true until those keys are released.</p>
+<p>Here's what our new <code>keyPressed()</code> and <code>keyReleased()</code> functions look like:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//--------------------------------------------------------------</span>
+<span class="dt">void</span> testApp::keyPressed(<span class="dt">int</span> key){
+   <span class="kw">if</span> (game_state == <span class="st">"game"</span>) {
+       <span class="kw">if</span> (key == OF_KEY_LEFT) {
+           player_1.is_left_pressed = <span class="kw">true</span>;
+       }
+       
+       <span class="kw">if</span> (key == OF_KEY_RIGHT) {
+           player_1.is_right_pressed = <span class="kw">true</span>;
+       }
+       
+       <span class="kw">if</span> (key == OF_KEY_UP) {
+           player_1.is_up_pressed = <span class="kw">true</span>;
+       }
+       
+       <span class="kw">if</span> (key == OF_KEY_DOWN) {
+           player_1.is_down_pressed = <span class="kw">true</span>;
+       }
+   }
+
+}
+<span class="co">//--------------------------------------------------------------</span>
+<span class="dt">void</span> testApp::keyReleased(<span class="dt">int</span> key){
+   <span class="kw">if</span> (game_state == <span class="st">"start"</span>) {
+       game_state = <span class="st">"game"</span>;
+   } <span class="kw">else</span> <span class="kw">if</span> (game_state == <span class="st">"game"</span>) {
+       <span class="kw">if</span> (key == OF_KEY_LEFT) {
+           player_1.is_left_pressed = <span class="kw">false</span>;
+       }
+       
+       <span class="kw">if</span> (key == OF_KEY_RIGHT) {
+           player_1.is_right_pressed = <span class="kw">false</span>;
+       }
+       
+       <span class="kw">if</span> (key == OF_KEY_UP) {
+           player_1.is_up_pressed = <span class="kw">false</span>;
+       }
+       
+       <span class="kw">if</span> (key == OF_KEY_DOWN) {
+           player_1.is_down_pressed = <span class="kw">false</span>;
+       }
+   }
+}</code></pre>
+<p>Add <code>ofImage player_image</code> to <code>testApp.h</code>, then load the player's image and instantiate the player in <code>testApp</code>'s <code>setup()</code>:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> testApp::setup(){
+   game_state = <span class="st">"start"</span>;
+   player_image.loadImage(<span class="st">"player.png"</span>);
+   
+   player_1.setup(&amp;player_image);
+}</code></pre>
+<p>Finally, update and draw your player in the appropriate part of <code>testApp::update()</code> and <code>testApp::draw()</code>:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//--------------------------------------------------------------</span>
+<span class="dt">void</span> testApp::update(){
+   <span class="kw">if</span> (game_state == <span class="st">"start"</span>) {
+      
+   } <span class="kw">else</span> <span class="kw">if</span> (game_state == <span class="st">"game"</span>) {
+       player_1.update();
+   }
+}
+
+<span class="co">//--------------------------------------------------------------</span>
+<span class="dt">void</span> testApp::draw(){
+   <span class="kw">if</span> (game_state == <span class="st">"start"</span>) {
+
+   } <span class="kw">else</span> <span class="kw">if</span> (game_state == <span class="st">"game"</span>) {
+       player_1.draw();
+   } <span class="kw">else</span> <span class="kw">if</span> (game_state == <span class="st">"end"</span>) {
+
+   }  
+}</code></pre>
+<p>You should have a player who moves around on-screen. Sweet!</p>
+<h3 id="player-bullets">Player bullets</h3>
+<p>Let's make our bullets next. In order to have a variable number of bullets on screen at a time, we need to add a <code>vector&lt;Bullet&gt; bullets</code> to testApp.h. Let's also create a <code>void update_bullets()</code> function, which will update our vector of bullets (and, shortly, trigger the check for bullet collisions). We also want our player and enemy bullets to look different, so we'll add <code>ofImage enemy_bullet_image</code> and <code>ofImage player_bullet_image</code> to our <code>testApp.h</code> file.</p>
+<p>Our bullet class will look a lot like the player class and have a position, speed, width, pointer to an image, and various functions. The big difference is that the bullets will keep track of who they came from (since that will affect who they can hurt and which direction they move).</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> Bullet {
+<span class="kw">public</span>:
+   ofPoint pos;
+   <span class="dt">float</span> speed;
+   <span class="dt">float</span> width;
+   <span class="dt">bool</span> from_player;
+   
+   <span class="dt">void</span> setup(<span class="dt">bool</span> f_p, ofPoint p, <span class="dt">float</span> s, ofImage * bullet_image);
+   <span class="dt">void</span> update();
+   <span class="dt">void</span> draw();
+   
+   ofImage * img;
+};</code></pre>
+<p>Our <code>Bullet.cpp</code> will look like this:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> Bullet::setup(<span class="dt">bool</span> f_p, ofPoint p, <span class="dt">float</span> s, ofImage * bullet_image) {
+   from_player = f_p;
+   pos = p;
+   speed = s + <span class="dv">3</span>;
+   img = bullet_image;
+   width = img-&gt;width;
+   
+}
+<span class="dt">void</span> Bullet::update() {
+   <span class="kw">if</span> (from_player) {
+       pos.y -= speed;
+   } <span class="kw">else</span> {
+       pos.y += speed;
+   }
+}
+<span class="dt">void</span> Bullet::draw() {
+   img-&gt;draw(pos.x - width/<span class="dv">2</span>, pos.y - width/<span class="dv">2</span>);
+   
+}</code></pre>
+<p>Again, this is much like the code for the player, but with two differences:</p>
+<ul>
+<li>We keep track of where the bullet comes from, and alter the code based on that variable (meaning we can keep all the bullets in the same vector)</li>
+<li>When instantiating a bullet, we check to see the position of the shooter, as well as the shooter's current speed (so it will always move faster than the thing that shot it)</li>
+</ul>
+<p>Now that our bullet class is implemented, we can go back to <code>testApp::setup()</code> and add <code>enemy_bullet_image.loadImage("enemy_bullet.png");</code> and <code>player_bullet_image.loadImage("player_bullet.png");</code> right underneath where we loaded in our <code>player_image</code>.   For now, our <code>update_bullets()</code> function will call the <code>update()</code> function in each bullet, and will also get rid of bullets that have flown offscreen in either direction.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//--------------------------------------------------------------</span>
+<span class="dt">void</span> testApp::update_bullets() {
+   <span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; bullets.size(); i++) {
+       bullets[i].update();
+       <span class="kw">if</span> (bullets[i].pos.y - bullets[i].width/<span class="dv">2</span> &lt; <span class="dv">0</span> || bullets[i].pos.y + bullets[i].width/<span class="dv">2</span> &gt; ofGetHeight()) {
+           bullets.erase(bullets.begin()+i);
+       }
+   }
+   <span class="co">// we'll call a collision check function here shortly</span>
+}</code></pre>
+<p>Our <code>testApp::update()</code> and <code>testApp::draw()</code> will now look like this:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//--------------------------------------------------------------</span>
+<span class="dt">void</span> testApp::update(){
+   <span class="kw">if</span> (game_state == <span class="st">"start"</span>) {
+
+   } <span class="kw">else</span> <span class="kw">if</span> (game_state == <span class="st">"game"</span>) {
+       player_1.update();
+       update_bullets();
+   }
+}
+<span class="co">//--------------------------------------------------------------</span>
+<span class="dt">void</span> testApp::draw(){
+   <span class="kw">if</span> (game_state == <span class="st">"start"</span>) {
+
+   } <span class="kw">else</span> <span class="kw">if</span> (game_state == <span class="st">"game"</span>) {
+       ofBackground(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>);
+       player_1.draw();
+       
+       <span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; bullets.size(); i++) {
+           bullets[i].draw();
+       }
+   } <span class="kw">else</span> <span class="kw">if</span> (game_state == <span class="st">"end"</span>) {
+
+   }
+}</code></pre>
+<p>Finally, let's add an if-statement to our <code>keyPressed()</code> so that when we press the spacebar during the game, we spawn a player bullet:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//--------------------------------------------------------------</span>
+<span class="dt">void</span> testApp::keyPressed(<span class="dt">int</span> key){
+   <span class="kw">if</span> (game_state == <span class="st">"game"</span>) {
+       <span class="kw">if</span> (key == OF_KEY_LEFT) {
+           player_1.is_left_pressed = <span class="kw">true</span>;
+       }
+       
+       <span class="kw">if</span> (key == OF_KEY_RIGHT) {
+           player_1.is_right_pressed = <span class="kw">true</span>;
+       }
+       
+       <span class="kw">if</span> (key == OF_KEY_UP) {
+           player_1.is_up_pressed = <span class="kw">true</span>;
+       }
+       
+       <span class="kw">if</span> (key == OF_KEY_DOWN) {
+           player_1.is_down_pressed = <span class="kw">true</span>;
+       }
+       
+       <span class="kw">if</span> (key == ' ') {
+           Bullet b;
+           b.setup(<span class="kw">true</span>, player_1.pos, player_1.speed, &amp;player_bullet_image);
+           bullets.push_back(b);
+       }   
+   }
+}</code></pre>
+<p>Remember, the first parameter in the bullet's setup is whether it comes from the player (which, in this case, is always true). Run your app and fly around shooting for a bit to see how it feels.</p>
+<h3 id="adding-adversaries">Adding adversaries</h3>
+<p>Let's move on to our enemy. This process should be familiar by now. Add an <code>ofImage enemy_image</code> and a <code>vector&lt;Enemy&gt; enemies</code> to <code>testApp.h</code>. Additionally, add <code>float max_enemy_amplitude</code> and <code>float max_enemy_shoot_interval</code> to <code>testApp.h</code>. These are two of the enemy parameters we'll affect with OSC. Your enemy class will look like this:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> Enemy {
+<span class="kw">public</span>:
+   ofPoint pos;
+   <span class="dt">float</span> speed;
+   <span class="dt">float</span> amplitude;
+   <span class="dt">float</span> width;
+   
+   <span class="dt">float</span> start_shoot;
+   <span class="dt">float</span> shoot_interval;
+   
+   <span class="dt">void</span> setup(<span class="dt">float</span> max_enemy_amplitude, <span class="dt">float</span> max_enemy_shoot_interval, ofImage * enemy_image);
+   <span class="dt">void</span> update();
+   <span class="dt">void</span> draw();
+   <span class="dt">bool</span> time_to_shoot();
+   
+   ofImage * img;
+};</code></pre>
+<p>Our enemy's horizontal movement will be shaped by the values fed to a sine wave (which we'll see in a moment). We'll keep track of our amplitude variable so different enemies can have different amplitudes. We'll also want to keep track of whether enough time has passed for this enemy to shoot again, which utilizes the start_shoot and shoot_interval variables. Both of these variables will actually be set in our setup() function. Finally, we'll have a boolean function that will tell us whether the enemy can shoot this frame or not.  Our enemy class will look like this:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> Enemy::setup(<span class="dt">float</span> max_enemy_amplitude, <span class="dt">float</span> max_enemy_shoot_interval, ofImage * enemy_image) {
+   pos.x = ofRandom(ofGetWidth());
+   pos.y = <span class="dv">0</span>;
+   img = enemy_image;
+   width = img-&gt;width;
+   speed = ofRandom(<span class="dv">2</span>, <span class="dv">7</span>);
+   amplitude = ofRandom(max_enemy_amplitude);
+   shoot_interval = ofRandom(<span class="fl">0.5</span>, max_enemy_shoot_interval);
+   start_shoot = ofGetElapsedTimef();
+}
+<span class="dt">void</span> Enemy::update() {
+   pos.y += speed;
+   pos.x += amplitude * sin(ofGetElapsedTimef());
+}
+<span class="dt">void</span> Enemy::draw() {
+   img-&gt;draw(pos.x - width/<span class="dv">2</span>, pos.y - width/<span class="dv">2</span>);
+}
+<span class="dt">bool</span> Enemy::time_to_shoot() {
+   <span class="kw">if</span> (ofGetElapsedTimef() - start_shoot &gt; shoot_interval) {
+       start_shoot = ofGetElapsedTimef();
+       <span class="kw">return</span> <span class="kw">true</span>;
+   }
+   <span class="kw">return</span> <span class="kw">false</span>;
+}</code></pre>
+<p>In update, we're using the current elapsed time, in frames, to give us a constantly increasing number to feed to the sine function, which in turn returns a value between -1 and 1. We multiply it by the amplitude of the wave, making this curve more or less exaggerated.</p>
+<p>In <code>time_to_shoot()</code>, we check to see whether the difference between the current time and the time this enemy last shot is greater than the enemy's shooting interval. If it is, we set <code>start_shoot</code> to the current time, and return true. If not, we return false. Let's integrate our enemies into the rest of our <code>testApp.cpp</code>:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//--------------------------------------------------------------</span>
+<span class="dt">void</span> testApp::setup(){
+   game_state = <span class="st">"start"</span>;
+   
+   max_enemy_amplitude = <span class="fl">3.0</span>;
+   max_enemy_shoot_interval = <span class="fl">1.5</span>;
+   
+   enemy_image.loadImage(<span class="st">"enemy0.png"</span>);
+   player_image.loadImage(<span class="st">"player.png"</span>);
+   enemy_bullet_image.loadImage(<span class="st">"enemy_bullet.png"</span>);
+   player_bullet_image.loadImage(<span class="st">"player_bullet.png"</span>);
+   
+   player_1.setup(&amp;player_image);
+}
+<span class="co">//--------------------------------------------------------------</span>
+<span class="dt">void</span> testApp::update(){
+   <span class="kw">if</span> (game_state == <span class="st">"start"</span>) {
+       
+   } <span class="kw">else</span> <span class="kw">if</span> (game_state == <span class="st">"game"</span>) {
+       player_1.update();
+       update_bullets();
+       
+       <span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; enemies.size(); i++) {
+           enemies[i].update();
+           <span class="kw">if</span> (enemies[i].time_to_shoot()) {
+               Bullet b;
+               b.setup(<span class="kw">false</span>, enemies[i].pos, enemies[i].speed, &amp;enemy_bullet_image);
+               bullets.push_back(b);
+           }
+       }
+   } <span class="kw">else</span> <span class="kw">if</span> (game_state ==<span class="st">"draw"</span>) {
+   }
+}
+<span class="co">//--------------------------------------------------------------</span>
+<span class="dt">void</span> testApp::draw(){
+   <span class="kw">if</span> (game_state == <span class="st">"start"</span>) {
+   } <span class="kw">else</span> <span class="kw">if</span> (game_state == <span class="st">"game"</span>) {
+       ofBackground(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>);
+       player_1.draw();
+       <span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; enemies.size(); i++) {
+           enemies[i].draw();
+       }
+       <span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; bullets.size(); i++) {
+           bullets[i].draw();
+       }
+   } <span class="kw">else</span> <span class="kw">if</span> (game_state == <span class="st">"end"</span>) {
+   }
+}</code></pre>
+<h3 id="collisions">Collisions</h3>
+<p>Let's implement our bullet collision checks. Add a <code>void check_bullet_collisions()</code> to your <code>testApp.h</code>, then write the following function:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//--------------------------------------------------------------</span>
+<span class="dt">void</span> testApp::check_bullet_collisions() {
+   <span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; bullets.size(); i++) {
+       <span class="kw">if</span> (bullets[i].from_player) {
+           <span class="kw">for</span> (<span class="dt">int</span> e = enemies.size()-<span class="dv">1</span>; e &gt;= <span class="dv">0</span>; e--) {
+               <span class="kw">if</span> (ofDist(bullets[i].pos.x, bullets[i].pos.y, enemies[e].pos.x, enemies[e].pos.y) &lt; (enemies[e].width + bullets[i].width)/<span class="dv">2</span>) {
+                   enemies.erase(enemies.begin()+e);
+                   bullets.erase(bullets.begin()+i);
+                   score+=<span class="dv">10</span>;
+               }
+           }
+       } <span class="kw">else</span> {
+           <span class="kw">if</span> (ofDist(bullets[i].pos.x, bullets[i].pos.y, player_1.pos.x, player_1.pos.y) &lt; (bullets[i].width+player_1.width)/<span class="dv">2</span>) {
+               bullets.erase(bullets.begin()+i);
+               player_1.lives--;
+               
+               <span class="kw">if</span> (player_1.lives &lt;= <span class="dv">0</span>) {
+                   game_state = <span class="st">"end"</span>;
+               }
+           }
+       }
+   }
+}</code></pre>
+<p>This code is a bit nested, but actually pretty simple. First, it goes through each bullet in the vector and checks to see whether it's from the player. If it's from the player, it starts a for-loop for all the enemies, so we can compare the player bullet position against all the enemy positions. We use <code>ofDist()</code> to see whether the distance between a given bullet and a given enemy is less than the sum of their radii--if it is, they're overlapping. If a bullet is not from the player, the function does a distance calculation against the player, to see whether a given enemy bullet and the player are close enough to count it as a hit. If there is a hit, we subtract a player's life and erase that bullet. If the player has less than or equal to 0 lives, we change the game state to the end.</p>
+<p>Don't forget to call <code>check_bullet_collisions()</code> as part of <code>update_bullets()</code>:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//--------------------------------------------------------------</span>
+<span class="dt">void</span> testApp::update_bullets() {
+   <span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; bullets.size(); i++) {
+       bullets[i].update();
+       <span class="kw">if</span> (bullets[i].pos.y - bullets[i].width/<span class="dv">2</span> &lt; <span class="dv">0</span> || bullets[i].pos.y + bullets[i].width/<span class="dv">2</span> &gt; ofGetHeight()) {
+           bullets.erase(bullets.begin()+i);
+       }
+   }
+   check_bullet_collisions();
+}</code></pre>
+<h3 id="our-games-brain">Our game's brain</h3>
+<p>Great! Except… we don't have any enemies yet! Definitely an oversight. This is where our level controller comes in. Add <code>LevelController level_controller;</code> to your <code>testApp.h</code>.  Our level controller class is super simple:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> LevelController {
+<span class="kw">public</span>:
+   <span class="dt">float</span> start_time;
+   <span class="dt">float</span> interval_time;
+   
+   <span class="dt">void</span> setup(<span class="dt">float</span> e);
+   <span class="dt">bool</span> should_spawn();
+};</code></pre>
+<p>As you might guess, all it'll really do is keep track of whether it's time to spawn another enemy yet.</p>
+<p>Inside our <code>LevelController.cpp</code>:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> LevelController::setup(<span class="dt">float</span> s) {
+   start_time = s;
+   interval_time = <span class="dv">500</span>;
+}
+<span class="dt">bool</span> LevelController::should_spawn() {
+   <span class="kw">if</span> (ofGetElapsedTimeMillis() - start_time &gt; interval_time) {
+       start_time = ofGetElapsedTimeMillis();
+       <span class="kw">return</span> <span class="kw">true</span>;
+   }
+   <span class="kw">return</span> <span class="kw">false</span>;
+}</code></pre>
+<p>When we set up our level controller, we'll give it a starting time. It'll use this time as a baseline for the first enemy spawn. The <code>should_spawn</code> code should look familiar from the enemy bullet section.</p>
+<p>We'll wait to set up our level controller until the game actually starts, namely, when the game state changes from <code>"start"</code> to <code>"game"</code>.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> testApp::keyReleased(<span class="dt">int</span> key){
+   <span class="kw">if</span> (game_state == <span class="st">"start"</span>) {
+       game_state = <span class="st">"game"</span>;
+       level_controller.setup(ofGetElapsedTimeMillis());
+   }
+
+  ...
+}</code></pre>
+<p>Next we'll integrate it into our <code>testApp::update()</code>:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//--------------------------------------------------------------</span>
+<span class="dt">void</span> testApp::update(){
+   <span class="kw">if</span> (game_state == <span class="st">"start"</span>) {
+       
+   } <span class="kw">else</span> <span class="kw">if</span> (game_state == <span class="st">"game"</span>) {
+       player_1.update();
+       update_bullets();
+       
+       <span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; enemies.size(); i++) {
+           enemies[i].update();
+           <span class="kw">if</span> (enemies[i].time_to_shoot()) {
+               Bullet b;
+               b.setup(<span class="kw">false</span>, enemies[i].pos, enemies[i].speed, &amp;enemy_bullet_image);
+               bullets.push_back(b);
+           }
+       }
+       
+       <span class="kw">if</span> (level_controller.should_spawn() == <span class="kw">true</span>) {
+           Enemy e;
+           e.setup(max_enemy_amplitude, max_enemy_shoot_interval, &amp;enemy_image);
+           enemies.push_back(e);
+       }
+   }
+}</code></pre>
+<p>Awesome! We're close to done!</p>
+<h3 id="bonus-lives">Bonus lives</h3>
+<p>Before we finish, let's add in our last OSC feature: the ability to throw in bonus lives on the fly. Add <code>vector&lt;Life&gt; bonuses</code> and <code>ofImage life_image</code> to your <code>testApp.h</code>. To keep our code modular, let's also add <code>void update_bonuses()</code> in the same place. Don't forget to <code>life_image.loadImage("life_image.png")</code> in <code>testApp::setup()</code>.</p>
+<p><code>Life.h</code> should look like this:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> Life {
+<span class="kw">public</span>:
+   ofPoint pos;
+   <span class="dt">float</span> speed;
+   <span class="dt">float</span> width;
+   
+   ofImage * img;
+   
+   <span class="dt">void</span> setup(ofImage * _img);
+   <span class="dt">void</span> update();
+   <span class="dt">void</span> draw();
+};</code></pre>
+<p>It'll function like this (a lot like the bullet):</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> Life::setup(ofImage * _img) {
+   img = _img;
+   width = img-&gt;width;
+   speed = <span class="dv">5</span>;
+   pos.x = ofRandom(ofGetWidth());
+   pos.y = -img-&gt;width/<span class="dv">2</span>;
+}
+<span class="dt">void</span> Life::update() {
+   pos.y += speed;
+}
+<span class="dt">void</span> Life::draw() {
+   img-&gt;draw(pos.x - img-&gt;width/<span class="dv">2</span>, pos.y - img-&gt;width/<span class="dv">2</span>);
+}</code></pre>
+<p>Our <code>update_bonuses()</code> function works a lot like the bullet collision function:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//--------------------------------------------------------------</span>
+<span class="dt">void</span> testApp::update_bonuses() {
+   <span class="kw">for</span> (<span class="dt">int</span> i = bonuses.size()-<span class="dv">1</span>; i &gt; <span class="dv">0</span>; i--) {
+       bonuses[i].update();
+       <span class="kw">if</span> (ofDist(player_1.pos.x, player_1.pos.y, bonuses[i].pos.x, bonuses[i].pos.y) &lt; (player_1.width + bonuses[i].width)/<span class="dv">2</span>) {
+           player_1.lives++;
+           bonuses.erase(bonuses.begin() + i);
+       }
+       
+       <span class="kw">if</span> (bonuses[i].pos.y + bonuses[i].width/<span class="dv">2</span> &gt; ofGetHeight()) {
+           bonuses.erase(bonuses.begin() + i);
+       }
+   }
+}</code></pre>
+<p>All that's left for our lives functionality is to alter <code>testApp::update()</code> and <code>testApp::draw()</code>.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//--------------------------------------------------------------</span>
+<span class="dt">void</span> testApp::update(){
+   <span class="kw">if</span> (game_state == <span class="st">"start"</span>) {
+       
+   } <span class="kw">else</span> <span class="kw">if</span> (game_state == <span class="st">"game"</span>) {
+       player_1.update();
+       update_bullets();
+       update_bonuses();
+       
+       <span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; enemies.size(); i++) {
+           enemies[i].update();
+           <span class="kw">if</span> (enemies[i].time_to_shoot()) {
+               Bullet b;
+               b.setup(<span class="kw">false</span>, enemies[i].pos, enemies[i].speed, &amp;enemy_bullet_image);
+               bullets.push_back(b);
+           }
+       }
+       
+       <span class="kw">if</span> (level_controller.should_spawn() == <span class="kw">true</span>) {
+           Enemy e;
+           e.setup(max_enemy_amplitude, max_enemy_shoot_interval, &amp;enemy_image);
+           enemies.push_back(e);
+       }
+   }
+}
+<span class="co">//--------------------------------------------------------------</span>
+<span class="dt">void</span> testApp::draw(){
+   <span class="kw">if</span> (game_state == <span class="st">"start"</span>) {
+       start_screen.draw(<span class="dv">0</span>,<span class="dv">0</span>);
+   } <span class="kw">else</span> <span class="kw">if</span> (game_state == <span class="st">"game"</span>) {
+       ofBackground(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>);
+       player_1.draw();
+       draw_lives();
+       
+       <span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; enemies.size(); i++) {
+           enemies[i].draw();
+       }
+       
+       <span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; bullets.size(); i++) {
+           bullets[i].draw();
+       }
+       
+       <span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; bonuses.size(); i++) {
+           bonuses[i].draw();
+       }
+   } <span class="kw">else</span> <span class="kw">if</span> (game_state == <span class="st">"end"</span>) {
+
+   }    
+}</code></pre>
+<h3 id="lets-get-visual">Let's get visual</h3>
+<p>Finally! We've been a bit stingy with visual feedback, so let's add in a start screen, a score, a visual representation of the lives left, and an end screen. Add <code>ofImage start_screen;</code>, <code>ofImage end_screen;</code>, <code>void draw_lives();</code>, and <code>void draw_score();</code> to <code>testApp.h</code>.</p>
+<p>Change <code>testApp::setup()</code> to load in those assets:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//--------------------------------------------------------------</span>
+<span class="dt">void</span> testApp::setup(){
+    ...
+   player_1.setup(&amp;player_image);
+   start_screen.loadImage(<span class="st">"start_screen.png"</span>);
+   end_screen.loadImage(<span class="st">"end_screen.png"</span>);
+   score_font.loadFont(<span class="st">"Gota_Light.otf"</span>, <span class="dv">48</span>);
+}</code></pre>
+<p>Draw them in the appropriate game states using <code>start_screen.draw(0, 0)</code> and <code>end_screen.draw(0, 0)</code>.</p>
+<p>Add in the last two functions:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//--------------------------------------------------------------</span>
+<span class="dt">void</span> testApp::draw_lives() {
+   <span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; player_1.lives; i++) {
+       player_image.draw(ofGetWidth() - (i * player_image.width) - <span class="dv">100</span>, <span class="dv">30</span>);
+   }
+   
+}
+<span class="co">//--------------------------------------------------------------</span>
+<span class="dt">void</span> testApp::draw_score() {
+   <span class="kw">if</span> (game_state == <span class="st">"game"</span>) {
+       score_font.drawString(ofToString(score), <span class="dv">30</span>, <span class="dv">72</span>);
+   } <span class="kw">else</span> <span class="kw">if</span> (game_state == <span class="st">"end"</span>) {
+       <span class="dt">float</span> w = score_font.stringWidth(ofToString(score));
+       score_font.drawString(ofToString(score), ofGetWidth()/<span class="dv">2</span> - w/<span class="dv">2</span>, ofGetHeight()/<span class="dv">2</span> + <span class="dv">100</span>);
+   }
+}</code></pre>
+<p>By using <code>stringWidth()</code>, we can calculate the width of a string and shift the text over (handy for centering it).</p>
+<p>All that's left after that is to call <code>draw_score()</code> and <code>draw_lives()</code> during the <code>testApp::draw()</code>'s game state, and to call <code>draw_score()</code> during the end state.</p>
+<p>Congrats–you made a game!</p>
+<h3 id="linking-of-and-osc">Linking oF and OSC</h3>
+<p>Now let's add in the OSC functionality. We are going to set our application up to receive messages from our iPad and then make changes in real-time while our game is running to test some possible player scenarios. As mentioned before, this can trump going into your application and making manual changes because you skip the need to recompile your game and playtest live. In fact, you can even use TouchOSC to open up new ways to interact with your players.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/game_design/images/touchGame.png" target="_blank"><img alt="Nightgame developer interface by Phoenix Perry" src="../images/game_design/images/touchGame.png" title="Nightgame developer interface by Phoenix Perry"/></a></div><div class="caption">Nightgame developer interface by Phoenix Perry</div>
+</div></div>
+<p><em>TouchOSC is used to switch game levels on the fly and to run challenges.</em></p>
+<p>To accomplish this we are going to create a new class that will contain our OSC functionality. Create a .cpp and .h file for this class now and name it LiveTesting. Open <code>LiveTesting.h</code> And let's add the line to import the OSC at the top of your file after your preprocessor directives and also a line for using iostream for testing purposes. As we add the code we will explain inline in code comments.</p>
+<p>Add the following:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="ot">#include &lt;iostream&gt;</span>
+<span class="ot">#include "ofxOsc.h"</span></code></pre>
+<p>Next let's set up all of the variables we are going to use to receive OSC data and map it to game values. Add the following code into your class:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> LiveTesting
+{
+<span class="kw">public</span>: 
+    LiveTesting();
+    <span class="co">//a default c++ constructor  </span>
+    <span class="dt">void</span> setup();	<span class="co">//for setup</span>
+    <span class="dt">void</span> update(); <span class="co">//for updating </span>
+	
+    ofxOscSender sender;
+    <span class="co">//you can set up a sender! </span>
+    <span class="co">//We are going to use this network connection to give us </span>
+    <span class="co">//some visual feedback of our current game values.  </span>
+
+    ofxOscReceiver receiver;
+    <span class="co">//this is the magic! This is the port on which your game gets incoming data. </span>
+
+    ofxOscMessage m;
+    <span class="co">//this is the osc message your application gets from your device.</span>
+    
+    
+    <span class="co">//these are the values we will be tweaking during testing</span>
+    <span class="dt">float</span> max_enemy_amplitude; 
+    <span class="dt">int</span> interval_time;
+    <span class="dt">float</span> max_enemy_shoot_interval;
+    <span class="dt">bool</span> triggerBonus; 
+    
+};</code></pre>
+<p>Now let's jump over to the <code>LiveTesting.cpp</code> file. In this file we are going to set up our network address and the ports we are sending and receiving data on as the first order of business. However, to go any further we are going to need to do some housekeeping and install additional software. For OSC to work it will need a local wifi network to send the messages across. (Note this tactic may not work for a network outside of your own because often a sysadmin will stop this kind of traffic from being transmitted on a very public network. We suggest bringing an Airport Express or something similar with you so you can quickly and wirelessly establish a local network for play testing.)</p>
+<p>For the purpose of this chapter and to allow us to create an experience that will work on both Android and iOS, we are going to use a piece of software called TouchOSC from this URL: http://hexler.net/software/touchosc</p>
+<p>The desktop editor software is free, however, the matching software for your device will be $4.99. Get both now. As a matter of principle, we endorse building your own tools and you could easily build a second oF project to be your OSC sender and receiver on your mobile device. With that said, nothing beats TouchOSC for speed, ease of use, and complete, platform independent flexibility. If you are someone who often moves between an iOS and Android device on both Windows and Mac, this tool will become indispensible to you. As a game's designer it can open up possibilities like changing levels on the fly, updating game variables, adjusting for-player feedback, and adding new features into and taking them out of your game as it's running. We highly endorse using it and support the continued advancement of the tool. You can also use it with music production tools like Ableton Live and it comes with great presets for things like DJing and mixing music live. Go to the app store of your device and purchase the mobile version now if you would like to continue down this route.</p>
+<p>After we get all of the tools downloaded and installed, let's start setting everything up. You are going to need two bits of information. You are going to need to know the IP address of your computer and the IP address of your laptop. If you are on a Mac, just open up your System Preferences. Go to the Network setting and click on your WiFi connection in the left sidebar. On the right side it will display your IP address. You can also get this setting by opening up Terminal and entering in the command "ifconfig." Terminal will list every network that's a possible connection for your machine from the past, even if it's not currently active. For example, if you have ever connected your phone, it will be in the list with some flag and listed as inactive. Look for the connection that's currently active. It will look something like this:</p>
+<pre><code>en1: flags=8863&lt;UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST&gt; mtu 1500
+	ether 60:33:4b:12:e5:3b 
+	inet6 fe80::6233:4bff:fe12:e53b%en1 prefixlen 64 scopeid 0x5 
+	inet 192.168.0.5 netmask 0xffffff00 broadcast 192.168.0.255
+	media: autoselect
+	status: active</code></pre>
+<p>The inet address is your current IP.</p>
+<p>On Windows, open the <code>charms</code> bar. In search type <code>cmd</code> and open the command prompt. Type in <code>ipconfig</code>. This information is much clearer than the data dump from terminal. The connected listed as your Wireless LAM adapter Wi-Fi will list your current IPv4 address. This is your IP address. Finally, obtain your mobile device's IP address as well from your device settings. Make a note of your IP address for the next section.</p>
+<p>At this point, go ahead and launch TouchOSC on your device and the TouchOSC desktop editor on your computer. If you are on Windows, you will need to make sure you have Java installed first. Once the software is open, click the open icon in the top tool bar. In the file containing the code for this chapter you will see a file called <code>ofBook.touchosc</code>.</p>
+<p>We are going to make this interface now and deploy it to our phone. We will make this interface to control certain parameters in our game:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//these are the values we will be tweaking during testing</span>
+<span class="dt">float</span> max_enemy_amplitude; 
+<span class="dt">int</span> interval_time;
+<span class="dt">float</span> max_enemy_shoot_interval;
+<span class="dt">bool</span> triggerBonus; </code></pre>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/game_design/images/controls.png" target="_blank"><img src="../images/game_design/images/controls.png"/></a></div>
+</div></div>
+<p>To build the app, let's start by adding our first knob. Right click in the black empty space to the right. Choose to make a <code>rotaryH</code>. Next make two <code>labelH</code> objects. The first one will be the name of our knob. The second one will be for displaying the value of the current variable in our game. Place one label above the knob and one below. It should look like this:</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/game_design/images/label1_label2.png" target="_blank"><img src="../images/game_design/images/label1_label2.png"/></a></div>
+</div></div>
+<p>Now look to the left side of the app. At this point, it's time to set all of the values this knob will be sending and what the labels will display. Let's start with <code>label1</code>. We will name our knob on screen to make things easier to read. The first value in our game we want to control, the level controller interval time, should be what this label reads onscreen. Changing the name field in the app interface will do little. However, note under the name field you can change the color of the label. For this example, use yellow. Next, jump down to the next to last field on screen called <code>Text</code>. You will want to set this to 'level controller interval time'.</p>
+<p>Moving on, select the knob. This one will require more set up because it will actually be sending values to our game. Color it yellow first. In the dark grey OSC box set all of the values we need to receive for the game. If auto is checked, uncheck it. Now customize the text in that box to <code>/game/interval_time</code>. In the <code>From</code> fields set the parameters to a range of values to try out in the game during a playtest. We will use from 0 to 300. These two elements, the tag, and the parameters will get packed up into a message and sent over our OSC network to our game when values change.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/game_design/images/game_interval_time.png" target="_blank"><img src="../images/game_design/images/game_interval_time.png"/></a></div>
+</div></div>
+<p>The last thing to set up will be the bottom label to display what our interval variable is currently set to in our running game. Select it. We will change the settings and the address tag to reflect that it is not game data being sent to our game but rather data being sent out of our game. Select the label on screen to pull up the parameters for it on the right. In the darkened OSC box change the parameters to those below:</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/game_design/images/updatedValsinterval.png" target="_blank"><img src="../images/game_design/images/updatedValsinterval.png"/></a></div>
+</div></div>
+<p>This is the pattern we are going to use for all of our knobs and labels. Essentially, the pattern is:</p>
+<ul>
+<li>Create three interface elements for each parameter
+<ul>
+<li>A label for the name of the parameter you will be controlling</li>
+<li>An interface element like a knob to change the parameter</li>
+<li>An output label to display the current in game variable setting</li>
+</ul></li>
+</ul>
+<p>Do this now for the other two knobs. The settings are below for each one.</p>
+<p><strong>Label / Knob Set Two</strong></p>
+<ul>
+<li>Label H
+<ul>
+<li>Color: orange</li>
+<li>Text: Max Enemy Shoot Interval</li>
+</ul></li>
+<li>Rotary H
+<ul>
+<li>Color: orange</li>
+<li>OSC: /game/max_enemy_shoot_interval</li>
+<li>Value Range: From: 0 To: 1</li>
+</ul></li>
+<li>Label H
+<ul>
+<li>Color: Orange</li>
+<li>OSC: /updatedVals/max_enemy_shoot_interval</li>
+</ul></li>
+</ul>
+<p><strong>Label / Knob Set Three</strong></p>
+<ul>
+<li>Label H
+<ul>
+<li>Color: Green</li>
+<li>Text: max enemy amplitude</li>
+</ul></li>
+<li>Rotary H
+<ul>
+<li>Color: Green</li>
+<li>OSC: /game/max_enemy_amplitude</li>
+<li>Value Range: From: 0 To: 1</li>
+</ul></li>
+<li>Label H
+<ul>
+<li>Color: Green</li>
+<li>OSC: /updatedVals/max_enemy_amplitude <strong>[KL: The first two oranges on the list aren't capitalized like the remaining colors. I didn't want to change it without double checking that they aren't lowercase for a reason. If that's not the case, I'd capitalize them for consistency.]</strong> <strong>Set Four</strong></li>
+</ul></li>
+</ul>
+<p>We are going to add one more but this one will be a Push Button instead of a RotaryH. Right click to create it just like the knob. Make the Push Button and two labels. Here are the settings:</p>
+<ul>
+<li>Label H
+<ul>
+<li>Color: Pink</li>
+<li>Text: Trigger Bonus</li>
+</ul></li>
+<li>Push Button
+<ul>
+<li>Color: Pink</li>
+<li>OSC: /game/triggerBonus</li>
+<li>From: 0 To: 1</li>
+</ul></li>
+<li>Label H
+<ul>
+<li>Color: Pink</li>
+<li>OSC: /updatedVals/triggerBonus</li>
+</ul></li>
+</ul>
+<p>Save your file to your hard drive desktop and name it <code>PlaytestInterface</code>.</p>
+<p>You are done building your interface for play testing. Now let's deploy it! On your mobile device, launch TouchOSC. It will launch and open a settings screen.</p>
+<p>This is when we need the network address of your computer we retrieved earlier. Under Connections, touch OSC: <strong>[KL: Is this colon intentional? Unfortunately I can't follow this part of the tutorial right now to know for sure.]</strong> and set it to the IP address of your computer to link the two. It should look something like <code>192.165.0.3</code>.</p>
+<p>The ports also need set. Tap each one and set them to these values:</p>
+<pre><code>Port (outgoing) 8001
+Port (incoming) 8000 </code></pre>
+<p>Next tap TouchOSC in the upper left corner of the app to go back to the settings.</p>
+<p>Now click on <code>Layout</code>. Then tap <code>Add</code>. It will start to search for your computer. Switch back over to your computer now and into the TouchOSC Editor. Press the green <code>Sync</code> arrow.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/game_design/images/sync.png" target="_blank"><img src="../images/game_design/images/sync.png"/></a></div>
+</div></div>
+<p>Switch back to your device. You should see your computer listed under FOUND HOSTS. Select it. It will pop back to the settings screen. Scroll down and find PlaytestInterface in the list of interfaces. Select it and it will take you back to the main menu. Press Done in the upper left corner and your interface will now launch. If you want to get back to the settings screen at any point, the white dot in the upper right-hand corner will return the user interface to that screen.</p>
+<p>Finally, TouchOSC is set up! Let's link it to our game and run our very first playtest. Go back to the programming IDE. Open <code>LiveTesting.cpp</code>. In our default constructor, we will now set up our game to send and receive values over the network. To do this we will need to know which IP address and port on our device we will send to as well as set up a port on our local computer's network to receive incoming data. Your computer will have only one IP address but it can send and receive data on thousands of ports. We aren't going into too much detail about ports, but you can think of the IP address like a boat pier. Lots of boats can be docked at a single pier. This is no different. Your ports are your docks and your IP address is your pier. You can think of the data like the people departing and arriving. You'll need a separate port for each activity in this scenario. If a port isn't used by your operating system, you can send and receive data there. <strong>[KL: since IP addresses were mentioned earlier, maybe this analogy should also be introduced earlier.]</strong> We are going to use <code>8000</code> and <code>8001</code>. The final thing to establish is the address pattern. It will look like a file path and allow us to specify that our messages match to their right values. Add this code:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="ot">#include "LiveTesting.h"</span>
+
+LiveTesting::LiveTesting(){
+
+    sender.setup(<span class="st">"192.168.0.11"</span>, <span class="dv">8000</span>);
+    <span class="co">//this is the IP address of your iOS/Android device and the port it should be</span>
+    <span class="co">//set to receive on</span>
+    
+	receiver.setup(<span class="dv">8001</span>);
+    <span class="co">/*this is the port your game will receive data on. </span>
+<span class="co">    For us this is the important one! Set your mobile device to send on this port.*/</span>
+    
+    m.setAddress(<span class="st">"/game"</span>);
+    
+    <span class="co">/*This is OSC's URL like naming convention. You can use a root URL address like </span>
+<span class="co">     structure and then everything under that address will be accessible by that message. </span>
+<span class="co">    </span>
+<span class="co">   	 It's very similar to a folder path on your hard drive. You can think of the </span>
+<span class="co">     game folder as your root directory and all the bits that are </span>
+<span class="co">     /game/someOtherName are inside of it.*/</span>   
+}</code></pre>
+<p>In the above code we simply set up our network address, incoming and outgoing ports and created a default address pattern. From here we should be good to set up the messages we'd like to send and receive in our code. Let's move on to the next major function we want to write. We need to run an update function in this class to update every frame so we can make sure that if we move a slider on our mobile device that change becomes reflected within the game. Also, we might want to send that value back out once we receive it so we can get some visual feedback on our device to let us know what our current settings are.</p>
+<p>Each time we make a change on our device, it will send over the updates to our code via TouchOSC. We want to make sure we get all of the incoming messages that are being sent so we will create a simple while loop. We will loop through the whole list of messages that came into our game that frame and match it to the corresponding variable in our game via if statements.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">  <span class="kw">while</span> (receiver.hasWaitingMessages()) {        
+        <span class="co">//get the next message</span>
+        ofxOscMessage m;
+        receiver.getNextMessage(&amp;m);</code></pre>
+<p>Every incoming message will come with its own unique address tag and new arguments. You can get access to a message's address via the getAddress function. For example,<code>if(m.getAddress() == "/game/max_enemy_amplitude")</code>, will test to see if the message address is /game/max_enemy_amplitude. If it is, set the variable equal to that value in your game's codebase so they are linked together. Every swipe of the knob will translate to direct changes in your game. We do this for every single value we want to set.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">	<span class="kw">if</span>(m.getAddress() == <span class="st">"/game/max_enemy_amplitude"</span>)
+        {
+            max_enemy_amplitude = m.getArgAsFloat(<span class="dv">0</span>);
+            
+            <span class="co">//these values send back to OSC to display the</span>
+            <span class="co">//current settings for visual feedback</span>
+            sendBack.addFloatArg(max_enemy_amplitude);
+            sendBack.setAddress(<span class="st">"/updatedVals/max_enemy_amplitude"</span>);
+            sender.sendMessage(sendBack);
+            
+            cout &lt;&lt; max_enemy_amplitude &lt;&lt; endl;
+        }</code></pre>
+<p>At the same time, we are also going to send those exact same values back out to our device so we can see the numbers that the settings in our game are currently at. <strong>[KL: You might want to make this sentence more concise, preferably not ending with "at."]</strong> This is handy for two reasons. One, you get visual feedback of the current variables' values on your device. Two, if you happen to land on settings that feel right in your game, you can take a screen cap on your device. After stopping the game, go back and change the variables to match in your code and the next time you run your program, it will start with those parameters.</p>
+<p>To pack up all of the values in our current running game and send them back to the device every frame, we will create a variable of type <code>ofxOscMessage</code> called <code>sendBack</code>. When we have a string match for the address in the <code>ofxOscMessage m</code>, we just copy the arguments over to <code>sendBack</code> via the right function (in this case usually <code>addFloatArg</code>) and set the address pattern using the <code>setAddress</code> function. Finally, we use the built in <code>sendMessage</code> function to send the message out over OSC.</p>
+<p>Here's the complete code to add to your LiveTesting.cpp file</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> LiveTesting::update()
+{
+    <span class="co">//our simple while loop to make sure we get all of our messages</span>
+    <span class="kw">while</span> (receiver.hasWaitingMessages()) {
+        
+        <span class="co">//Get the message, which will hold all of our arguments inside of it. </span>
+        <span class="co">//It's a collection of data</span>
+        
+        ofxOscMessage m;
+        <span class="co">//Pass a reference to that message to the receiver </span>
+        <span class="co">//we set up above using the getNextMessage function in the OSC add on.</span>
+        
+        receiver.getNextMessage(&amp;m);
+       
+        <span class="co">//This will be the message we send back from our game </span>
+        <span class="co">//to our device letting it know what value we received</span>
+        <span class="co">//from it and displaying that back to us so we know what our </span>
+        <span class="co">//current game settings are at.</span>
+        
+        ofxOscMessage sendBack;
+        
+        <span class="co">//Remember our address tags are unique. </span>
+        <span class="co">//We set up the /game tag as our root address and each "/" denotes a sub tag.</span>
+        <span class="co">//If these strings are a match, we know the message that came in is our </span>
+        <span class="co">//amplitude.</span>
+        
+        <span class="kw">if</span>(m.getAddress() == <span class="st">"/game/max_enemy_amplitude"</span>)
+        {
+        
+            <span class="co">//This is critical. </span>
+            <span class="co">//Each type must match if you want to be able to run your code.</span>
+            <span class="co">//We know the first argument in our array of messages </span>
+            <span class="co">//will be a float if the above if statement evaluates to true.</span>
+            
+            max_enemy_amplitude = m.getArgAsFloat(<span class="dv">0</span>);
+            
+            <span class="co">//Now we are going to pack up a collection of data to send back to </span>
+            <span class="co">//our device. </span>
+           <span class="co">//sendBack is also a collection of data we</span>
+            <span class="co">//add arguments to. </span>
+            <span class="co">//Add the value we set for our amplitude to the message and move on.</span>
+             
+            sendBack.addFloatArg(max_enemy_amplitude);
+            sendBack.setAddress(<span class="st">"/updatedVals/max_enemy_amplitude"</span>);
+            sender.sendMessage(sendBack);
+            
+            cout &lt;&lt; max_enemy_amplitude &lt;&lt; endl;
+        }
+        
+        <span class="kw">else</span> <span class="kw">if</span> (m.getAddress() == <span class="st">"/game/interval_time"</span>)
+        {
+            <span class="co">//This is exactly the same as above. </span>
+            <span class="co">//We are simply testing to see if the address </span>
+            <span class="co">//tag is this value, and if so, doing the exact</span>
+            <span class="co">//process of setting our ingame value to match the value of the </span>
+   			<span class="co">//incoming argument and sending back our interval_time to our device.</span>
+   			
+            interval_time = m.getArgAsInt32(<span class="dv">0</span>);
+            
+            <span class="co">//Send visual feedback.  </span>
+            sendBack.addIntArg(interval_time);
+            sendBack.setAddress(<span class="st">"/updatedVals/interval"</span>);
+            sender.sendMessage(sendBack);
+        }
+        <span class="kw">else</span> <span class="kw">if</span> (m.getAddress() == <span class="st">"/game/max_enemy_shoot_interval"</span>)
+        {
+            <span class="co">//again the same process of testing the address tag</span>
+            max_enemy_shoot_interval = m.getArgAsFloat(<span class="dv">0</span>);
+            
+            <span class="co">//Send visual feedback.</span>
+            sendBack.addFloatArg(max_enemy_shoot_interval);
+            sendBack.setAddress(<span class="st">"/updatedVals/max_enemy_shoot_interval"</span>);
+            sender.sendMessage(sendBack);
+
+        }
+        <span class="kw">else</span> <span class="kw">if</span> (m.getAddress() == <span class="st">"/game/triggerBonus"</span>)
+        {
+            <span class="co">//Finally we wrap it up. This is last test.</span>
+            triggerBonus = m.getArgAsInt32(<span class="dv">0</span>);
+            cout &lt;&lt; triggerBonus &lt;&lt; endl;
+            <span class="co">//Send visual feedback.</span>
+            sendBack.addIntArg(triggerBonus);
+            sendBack.setAddress(<span class="st">"/updatedVals/triggerBouns"</span>);
+            sender.sendMessage(sendBack);
+
+            
+        }
+    }</code></pre>
+<p>You have reached the end of the tutorial. <strong>[KL: Make this statement more congratulatory. It's a great accomplishment!]</strong> Now do a real testing session. Run the game and have a friend play it while you change the knobs. Once you have settings you like, quit the game and add those values into the code to make them permanent updates.</p>
+<p>For a bonus challenge, find a few settings you like and create a difficulty ramp for the game using those values of time.</p>
+<h3 id="resouces">Resouces</h3>
+<p>We've reached the end of the chapter but not the end of the journey. A few great resources for independent games scene are listed here:<br/><a href="http://www.comeoutandplay.org/" target="_blank">Come Out And Play</a><br/><a href="http://killscreendaily.com/" target="_blank">Kill Screen</a><br/><a href="http://www.indiecade.com" target="_blank">Indiecade</a><br/><a href="http://www.babycastles.com" target="_blank">Babycastles</a><br/><a href="http://www.polygon.com/" target="_blank">Polygon</a><br/><a href="http://www.igda.org/" target="_blank">IDGA</a><br/><a href="http://www.gamedev.net/page/index.html" target="_blank">Game Dev Net</a><br/><a href="http://gamedev.stackexchange.com/" target="_blank">Game Dev Stack Exchange</a><br/><a href="http://gamasutra.com/" target="_blank">Gamasutra</a><br/><a href="http://www.digra.org/" target="_blank">Digra</a><br/><a href="http://www.differentgames.org/" target="_blank">Different Games</a></p>
+<h3 id="about-us">About us</h3>
+<p>This chapter was written by two members of the <a href="http://www.codeliberation.org" target="_blank">Code Liberation Foundation</a>, <a href="http://www.phoenixperry.com" target="_blank">Phoenix Perry</a> and <a href="janefriedhoff.com" target="_blank">Jane Friedhoff</a>. This organization teaches women to program games for free. Featuring game art by Loren Bednar. We build community, create safe spaces for women who want to learn to program in a non-male dominated setting and generally rock.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/game_design/images/clfTwitter.png" target="_blank"><img src="../images/game_design/images/clfTwitter.png"/></a></div>
+</div></div>
+<div class="footer">
+<div id="prev_chapter"><a href="animation.html">&lt; Animation</a></div>
+<div id="next_chapter"><a href="image_processing_computer_vision.html">image processing and computer vision &gt;</a></div>
+</div>
+<div id="help"><i>please note that this book / chapter is a work in progress.  Feel free to suggest edits / corrections <a href="https://github.com/openframeworks/ofbook" target="_blank">here</a></i></div>
+</div>
+</div>
+</body>
+</html>

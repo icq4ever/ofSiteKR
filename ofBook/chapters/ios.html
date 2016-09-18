@@ -1,0 +1,366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="pandoc" name="generator"/>
+<title>ofBook - ofxiOS</title>
+<style type="text/css">code{white-space: pre;}</style>
+<link href="../style/bootstrap.min.css" rel="stylesheet">
+<link href="../style/style.css" rel="stylesheet" type="text/css"/>
+<link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Merriweather:400,300,300italic,400italic,700,900,700italic,900italic" rel="stylesheet" type="text/css">
+<script src="../javascript/jquery-1.8.3.min.js"></script>
+<script src="../javascript/bootstrap.min.js"></script>
+<script src="../javascript/navbar.js"></script>
+</link></link></head>
+<body>
+<div class="banner">
+<div class="content-wrapper">
+<b>Work in progress!</b>
+        This is a preliminary version of ofBook, a collaboratively written book about openFrameworks.  Please post any issues, suggestions, comments on our <a href="https://github.com/openframeworks/ofBook/" target="_blank">repo</a>.
+    </div>
+</div>
+<div class="content-wrapper">
+<nav role="navigation">
+<ul id="nav-parts"><li class="group"><div class="groupTitle">Foreword</div><ul><li class="chapter"><div class="chapterTitle"><a href="foreword.html">foreword</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#책에관하여" target="_top">책에 관하여</a></li><li class="section"><a href="#credits" target="_top">Credits</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Basics</div><ul><li class="chapter"><div class="chapterTitle"><a href="of_philosophy.html">Philosophy</a></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="cplusplus_basics.html">C++ Language Basics</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#lookalive" target="_top">Look Alive!</a></li><li class="section"><a href="#iteration" target="_top">Iteration</a></li><li class="section"><a href="#compilingmyfirstapp" target="_top">Compiling My First App</a></li><li class="section"><a href="#beyondhelloworld" target="_top">Beyond Hello World</a></li><li class="section"><a href="#functions" target="_top">Functions</a></li><li class="section"><a href="#customfunctions" target="_top">Custom Functions</a></li><li class="section"><a href="#encapsulationofcomplexity" target="_top">Encapsulation of Complexity</a></li><li class="section"><a href="#variablespart1" target="_top">Variables (part 1)</a></li><li class="section"><a href="#conclusion" target="_top">Conclusion</a></li><li class="section"><a href="#ps" target="_top">PS.</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="setup_and_project_structure.html">oF structure</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#firstthingsfirst" target="_top">First things first</a></li><li class="section"><a href="#welcometoyournewkitchen" target="_top">Welcome to your new kitchen</a></li><li class="section"><a href="#runningexamples" target="_top">Running examples</a></li><li class="section"><a href="#offolderstructure" target="_top">oF folder structure</a></li><li class="section"><a href="#theofpantry" target="_top">The oF Pantry</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="intro_to_graphics.html">Graphics</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#brusheswithbasicshapes" target="_top">Brushes with Basic Shapes</a></li><li class="section"><a href="#brushesfromfreeformshapes" target="_top">Brushes from Freeform Shapes</a></li><li class="section"><a href="#movingtheworld" target="_top">Moving The World</a></li><li class="section"><a href="#nextsteps" target="_top">Next Steps</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#overview" target="_top">Overview</a></li><li class="section"><a href="#whatisobjectorientedprogramming" target="_top">What is Object Oriented Programming</a></li><li class="section"><a href="#howtobuildyourownclassessimpleclass" target="_top">How to build your own Classes (simple Class)</a></li><li class="section"><a href="#makeanobjectfromyourclass" target="_top">Make an Object from your Class</a></li><li class="section"><a href="#makeobjectsfromyourclass" target="_top">Make objects from your Class</a></li><li class="section"><a href="#makemoreobjectsfromyourclass" target="_top">Make more Objects from your Class</a></li><li class="section"><a href="#makeevenmoreobjectsfromyourclasspropertiesandconstructors" target="_top">Make even more Objects from your Class: properties and constructors</a></li><li class="section"><a href="#makeobjectsonthefly" target="_top">Make Objects on the fly</a></li><li class="section"><a href="#makinganddeleteasyouwishusingvectors" target="_top">Making and delete as you wish - using vectors</a></li><li class="section"><a href="#quickintrotopolymorphisminheritance" target="_top">Quick intro to polymorphism (inheritance)</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="how_of_works.html">how OF works</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#오픈프레임웍스코드의일반적인패턴설명" target="_top">오픈프레임웍스 코드의 일반적인 패턴 설명</a></li><li class="section"><a href="#setupupdatedraw" target="_top">setup, update, draw</a></li><li class="section"><a href="#클래스" target="_top">클래스</a></li><li class="section"><a href="#함수" target="_top">함수</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Approaches</div><ul><li class="chapter"><div class="chapterTitle"><a href="animation.html">Animation</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#background" target="_top">Background</a></li><li class="section"><a href="#animationinofusefulconcepts" target="_top">Animation in oF / useful concepts:</a></li><li class="section"><a href="#linearmovement" target="_top">Linear movement</a></li><li class="section"><a href="#functionbasedmovement" target="_top">Function based movement</a></li><li class="section"><a href="#simulation" target="_top">Simulation</a></li><li class="section"><a href="#wheretogofurther" target="_top">Where to go further</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="game_design.html">Experimental Game Development</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#howdogamedevelopersactuallymakegames" target="_top">How do game developers actually make games?</a></li><li class="section"><a href="#sowhatisoscanyway" target="_top">So what is OSC, anyway?</a></li><li class="section"><a href="#ourbasicgameandmakingitnotsobasic" target="_top">Our basic game–and making it not so basic</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="image_processing_computer_vision.html">image processing and computer vision</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#maybethereisamagicbullet" target="_top">Maybe There is a Magic Bullet</a></li><li class="section"><a href="#preliminariestoimageprocessing" target="_top">Preliminaries to Image Processing</a></li><li class="section"><a href="#이미지처리를얘기하기전에알아두어야할것들" target="_top">이미지처리를 얘기하기 전에 알아두어야 할것들</a></li><li class="section"><a href="#pointprocessingoperationsonimages" target="_top">Point Processing Operations on Images</a></li><li class="section"><a href="#acompleteworkflowbackgroundsubtraction" target="_top">A Complete Workflow: Background Subtraction</a></li><li class="section"><a href="#refinements" target="_top">Refinements</a></li><li class="section"><a href="#suggestionsforfurtherexperimentation" target="_top">Suggestions for Further Experimentation</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">I/O</div><ul><li class="chapter"><div class="chapterTitle"><a href="hardware.html">Hardware</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introduction" target="_top">introduction</a></li><li class="section"><a href="#소개" target="_top">소개</a></li><li class="section"><a href="#gettingstartedwithserialcommunication" target="_top">getting started with serial communication</a></li><li class="section"><a href="#시리얼통신시작하기" target="_top">시리얼 통신 시작 하기</a></li><li class="section"><a href="#digitalandanalogcommunication" target="_top">digital and analog communication</a></li><li class="section"><a href="#디지털과아날로그통신" target="_top">디지털과 아날로그 통신</a></li><li class="section"><a href="#usingserialforcommunicationbetweenarduinoandopenframeworks" target="_top">using serial for communication between arduino and openframeworks</a></li><li class="section"><a href="#lightsoncontrollinghardwareviadmx" target="_top">Lights On - controlling hardware via DMX</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="sound.html">Sound</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#gettingstartedwithsoundfiles" target="_top">Getting Started With Sound Files</a></li><li class="section"><a href="#gettingstartedwiththesoundstream" target="_top">Getting Started With the Sound Stream</a></li><li class="section"><a href="#why1to1" target="_top">Why -1 to 1?</a></li><li class="section"><a href="#timedomainvsfrequencydomain" target="_top">Time Domain vs Frequency Domain</a></li><li class="section"><a href="#reactingtoliveaudio" target="_top">Reacting to Live Audio</a></li><li class="section"><a href="#synthesizingaudio" target="_top">Synthesizing Audio</a></li><li class="section"><a href="#audiogotchas" target="_top">Audio Gotchas</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="network.html">Network</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#tcpvsudp" target="_top">TCP vs UDP</a></li><li class="section"><a href="#osc" target="_top">OSC</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Graphics</div><ul><li class="chapter"><div class="chapterTitle"><a href="openGL.html">Introducing OpenGL for OF</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introducing" target="_top">Introducing</a></li><li class="section"><a href="#vertices" target="_top">Vertices</a></li><li class="section"><a href="#meshes" target="_top">Meshes</a></li><li class="section"><a href="#vbos" target="_top">VBOs</a></li><li class="section"><a href="#abasic3dscene" target="_top">A Basic 3D Scene</a></li><li class="section"><a href="#matrices" target="_top">Matrices</a></li><li class="section"><a href="#textures" target="_top">Textures</a></li><li class="section"><a href="#cameras" target="_top">Cameras</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="lines.html">drawing lines</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#소개" target="_top">소개 ...</a></li><li class="section"><a href="#선그리기" target="_top">선 그리기</a></li><li class="section"><a href="#약간의노이즈abitofnoise" target="_top">약간의 노이즈A bit of noise</a></li><li class="section"><a href="#aweboflines" target="_top">A web of lines</a></li><li class="section"><a href="#makeasmoothlineinmovementina3dspace" target="_top">Make a smooth line in movement in a 3D space</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="generativemesh.html">Basics of Generating Meshes from an Image</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#basicsofgeneratingmeshesfromanimage1" target="_top">Basics of Generating Meshes from an Image</a></li><li class="section"><a href="#basicsworkingwithofmesh" target="_top">Basics: Working with ofMesh</a></li><li class="section"><a href="#generativemeshusinganimagetodrivethecreationofamesh" target="_top">Generative Mesh: Using an image to drive the creation of a mesh</a></li><li class="section"><a href="#manipulationsaddingeffectsthatmodifythemesh" target="_top">Manipulations: Adding effects that modify the mesh</a></li><li class="section"><a href="#nextsteps" target="_top">Next Steps</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="advanced_graphics.html">Advanced graphics</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#dimmediatemodevsofpolylineofpath" target="_top">2D, immediate mode vs ofPolyline/ofPath</a></li><li class="section"><a href="#d" target="_top">3D</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="shaders.html">Introducing Shaders</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introducing" target="_top">introducing</a></li><li class="section"><a href="#yourfirstshader" target="_top">Your first shader!</a></li><li class="section"><a href="#addinguniforms" target="_top">Adding Uniforms</a></li><li class="section"><a href="#addingsomeinteractivity" target="_top">Adding some interactivity</a></li><li class="section"><a href="#addingtextures" target="_top">Adding Textures</a></li><li class="section"><a href="#alphamasking" target="_top">Alpha Masking</a></li><li class="section"><a href="#multipletextures" target="_top">Multiple Textures</a></li><li class="section"><a href="#offbo" target="_top">ofFbo</a></li><li class="section"><a href="#texturesasdataegdisplacement" target="_top">Textures as Data (e.g. Displacement)</a></li><li class="section"><a href="#theendcongrats" target="_top">The End, Congrats!</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">C++</div><ul><li class="chapter"><div class="chapterTitle"><a href="threads.html">threads</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#쓰레드란무엇이고언제사용해야하는가" target="_top">쓰레드란 무엇이고 언제 사용해야 하는가</a></li><li class="section"><a href="#ofthread" target="_top">ofThread</a></li><li class="section"><a href="#스레드와opengl" target="_top">스레드와 openGL</a></li><li class="section"><a href="#ofmutex" target="_top">ofMutex</a></li><li class="section"><a href="#externalthreadsanddoublebuffering" target="_top">External threads and double buffering</a></li><li class="section"><a href="#ofscopedlock" target="_top">ofScopedLock</a></li><li class="section"><a href="#pococondition" target="_top">Poco::Condition</a></li><li class="section"><a href="#conclusion" target="_top">Conclusion</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="memory.html">memory of C++</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#컴퓨터메모리와변수" target="_top">컴퓨터 메모리와 변수</a></li><li class="section"><a href="#스택변수함수내의변수vs오브젝트내의변수" target="_top">스택 변수, 함수내의 변수 vs 오브젝트내의 변수</a></li><li class="section"><a href="#포인터와레퍼런스" target="_top">포인터와 레퍼런스</a></li><li class="section"><a href="#힙heap영역에서의변수들" target="_top">힙(heap) 영역에서의 변수들</a></li><li class="section"><a href="#메모리구조배열과vector" target="_top">메모리 구조, 배열과 vector</a></li><li class="section"><a href="#다른메모리구조리스트와맵" target="_top">다른 메모리 구조, 리스트와 맵</a></li><li class="section"><a href="#스마트포인터" target="_top">스마트 포인터</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="stl_vector.html">Introduction to vectors</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#quickreview" target="_top">Quick Review:</a></li><li class="section"><a href="#declaringavector" target="_top">Declaring a vector</a></li><li class="section"><a href="#addingelementstoavector" target="_top">Adding elements to a vector</a></li><li class="section"><a href="#resize" target="_top">resize</a></li><li class="section"><a href="#assign" target="_top">assign</a></li><li class="section"><a href="#accessingelementsofavector" target="_top">Accessing elements of a vector</a></li><li class="section"><a href="#erasingelementsofavector" target="_top">Erasing elements of a vector</a></li><li class="section"><a href="#iterators" target="_top">Iterators</a></li><li class="section"><a href="#sortingandshufflingavector" target="_top">Sorting and shuffling a vector</a></li><li class="section"><a href="#vectorsofobjects" target="_top">Vectors of objects</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="stl_map.html">let's play with Map, std::map</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#소개map이무엇인가요" target="_top">소개 : map이 무엇인가요?</a></li><li class="section"><a href="#map에값삽입하기" target="_top">map에 값 삽입하기</a></li><li class="section"><a href="#map에서요소삭제하기" target="_top">map에서 요소 삭제하기</a></li><li class="section"><a href="#map을훑기" target="_top">map을 훑기</a></li><li class="section"><a href="#map에서요소찾기" target="_top">map에서 요소 찾기</a></li><li class="section"><a href="#map에오브젝트저장하기" target="_top">map에 오브젝트 저장하기</a></li><li class="section"><a href="#multimap이란무엇인가요" target="_top">multimap이란 무엇인가요?</a></li><li class="section"><a href="#다른유용한메소드들" target="_top">다른 유용한 메소드들</a></li><li class="section"><a href="#추가참고자료역자에의해추가됨" target="_top">추가 참고 자료 (역자에 의해 추가됨)</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="c++11.html">C++ 11</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introduction" target="_top">Introduction</a></li><li class="section"><a href="#auto" target="_top">auto</a></li><li class="section"><a href="#forthingthings" target="_top">for (thing : things)</a></li><li class="section"><a href="#override" target="_top">override</a></li><li class="section"><a href="#lambdafunctions" target="_top">Lambda functions</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Advanced topics</div><ul><li class="chapter"><div class="chapterTitle"><a href="math.html">Math: From 1D to 4D</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#onedimensionusingchange" target="_top">One Dimension: Using Change</a></li><li class="section"><a href="#moredimensionssomelinearalgebra" target="_top">More Dimensions: Some Linear Algebra</a></li></ul></div></li></ul></li><li class="group selected"><div class="groupTitle">Platforms</div><ul><li class="chapter selected"><div class="chapterTitle selected"><a href="ios.html">ofxiOS</a></div><div class="chapterContents selected"><ul><li class="section selected"><a href="#openframeworksoniosdevices" target="_top">OpenFrameworks on iOS devices.</a></li><li class="section"><a href="#intro" target="_top">Intro</a></li><li class="section"><a href="#introtoobjectivec" target="_top">Intro to Objective-C</a></li><li class="section"><a href="#underthehood" target="_top">Under the Hood</a></li><li class="section"><a href="#ofuikit" target="_top">OF &amp; UIKit</a></li><li class="section"><a href="#mediaplaybackandcapture" target="_top">Media Playback and Capture</a></li><li class="section"><a href="#lifehacks" target="_top">Life Hacks</a></li><li class="section"><a href="#appstore" target="_top">App Store</a></li><li class="section"><a href="#casestudies" target="_top">Case Studies</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Tools</div><ul><li class="chapter"><div class="chapterTitle"><a href="version_control_with_git.html">Version control with Git</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#whatisversioncontrolandwhyshouldyouuseit" target="_top">What is version control, and why should you use it?</a></li><li class="section"><a href="#differentversioncontrolsystems" target="_top">Different version control systems</a></li><li class="section"><a href="#introductiontogit" target="_top">Introduction to Git</a></li><li class="section"><a href="#popularguiclients" target="_top">Popular GUI clients</a></li><li class="section"><a href="#conclusion" target="_top">Conclusion</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="ofSketch.html">ofSketch</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#whatisofsketch" target="_top">What is ofSketch?</a></li><li class="section"><a href="#download" target="_top">Download</a></li><li class="section"><a href="#sketchformat" target="_top">Sketch Format</a></li><li class="section"><a href="#remotecoding" target="_top">Remote Coding</a></li><li class="section"><a href="#future" target="_top">Future</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="installation_up_4evr_macosx.html">Installation up 4evr</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#step1prepyoursoftwareandthecomputer" target="_top">Step 1: Prep your software and the computer</a></li><li class="section"><a href="#step2bootintoyoursoftware" target="_top">Step 2: Boot into your software</a></li><li class="section"><a href="#step3keepitupchamp" target="_top">Step 3: Keep it up (champ!)</a></li><li class="section"><a href="#step4rebootperiodically" target="_top">Step 4: Reboot periodically</a></li><li class="section"><a href="#step5checkinonitfromafar" target="_top">Step 5: Check in on it from afar.</a></li><li class="section"><a href="#step6testtesttest" target="_top">Step 6: Test, test, test.</a></li><li class="section"><a href="#additionaltipslogging" target="_top">Additional Tips: Logging</a></li><li class="section"><a href="#memoryleakmurderer" target="_top">Memory leak murderer</a></li><li class="section"><a href="#alternateresources" target="_top">Alternate resources:</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="installation_up_4evr_linux.html">installation up4ever - linux</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#몇가지추가적인팁" target="_top">몇가지 추가적인 팁:</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Case studies</div><ul><li class="chapter"><div class="chapterTitle"><a href="project_eva.html">Choreographies for Humans and Stars</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#projectoverview" target="_top">Project Overview</a></li><li class="section"><a href="#ideationandprototyping" target="_top">Ideation and Prototyping</a></li><li class="section"><a href="#findingthetechnicalsolutions" target="_top">Finding the Technical Solutions</a></li><li class="section"><a href="#developingthevisualizationsoftware" target="_top">Developing the Visualization Software</a></li><li class="section"><a href="#failsafesanddirtyfixes" target="_top">Fail-safes and dirty fixes</a></li><li class="section"><a href="#resultsandreception" target="_top">Results and Reception</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="project_joel.html">Anthropocene</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#theproject" target="_top">The Project</a></li><li class="section"><a href="#development" target="_top">Development</a></li><li class="section"><a href="#showtime" target="_top">Show time</a></li><li class="section"><a href="#postevent" target="_top">Post Event</a></li><li class="section"><a href="#teamandcredits" target="_top">Team and Credits</a></li><li class="section"><a href="#hardwareselection" target="_top">Hardware selection</a></li></ul></div></li></ul></li></ul>
+</nav>
+<div class="chapter-content">
+<h1 id="ofxios">ofxiOS</h1>
+<p><em>by <a href="http://www.julapy.com/" target="_blank">Lukasz Karluk</a></em></p>
+<h2 id="openframeworksoniosdevices">OpenFrameworks on iOS devices.</h2>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/ios/images/ofxiOS_iPhone_sml.png" target="_blank"><img alt="Figure 1: OF on iPhone." src="../images/ios/images/ofxiOS_iPhone_sml.png" title="Figure 1: OF on iPhone."/></a></div><div class="caption">Figure 1: OF on iPhone.</div>
+</div></div>
+<h2 id="intro">Intro</h2>
+<p>The beauty behind OpenFrameworks is its cross-platform nature and the ability to run the same code on your desktop and mobile devices while achieving the same results.</p>
+<p>Support for the iPhone in OpenFrameworks started when the very early iPhones (iPhone 2 or 3 - fact check!) were being released. Some clever people from the OF community realised that the iPhone supported OpenGL which also happened to be what OF was using for rendering graphics, and even more importantly, that C++ code could be mixed with Obj-C code. With these two very important pieces of the puzzle in place it was a matter of tweaking the core OF code to begin it's support for iOS devices. It was then when ofxiPhone was born.</p>
+<p>Since then Apple have released a number of other devices like the iPad and so the ofxiPhone title became less accurate and was eventually changed to ofxiOS, OpenFrameworks support for all iOS devices.</p>
+<h2 id="introtoobjectivec">Intro to Objective-C</h2>
+<p>We've briefly mentioned Objective-C or Obj-C for short and some people may know or may not know what it is. Obj-C is the main programming language used by Apple for OSX and iOS systems. Obj-C is also a superset of the C programming language which makes it possible to compile C and C++ code with an Obj-C compiler, which means its possible to mix OF C++ code with native Obj-C code.</p>
+<p>Some people right about now may be letting off long desperate sighs, thinking - "I'm just starting to get my head around C++ and now I have to learn Obj-C... what tha?!" Lucky for you OpenFrameworks has done all the hard work of keeping most Obj-C code hidden so you don't have to worry about it. By using the OpenFrameworks API, you can access most iOS device functionality like the gyro, accelerometer or camera without having to type any Obj-C code what so ever. BUT, the time will come when you're comfortable with the iOS environment and you want to access something really specific, so specific that OF hasn't even considered wrapping for you. In this case you'll need to put your Obj-C hat on and get those hands dirty.</p>
+<p>Obj-C syntax can look a little daunting when you first look at it. It certainly scared the hell out of me the first time I saw it. And you may notice its unusually very long which is due to it's very explicit nature, meaning that all function names are very descriptive of the functionality they perform and all those words add up. You may think that it would take longer to work with an explicit language but its actually the opposite, because the functions are easier to find and in XCode you can usually start typing the function you are looking for and XCode will give you a list of suggestions and complete the function name for you.</p>
+<h3 id="obj-c-class-structure">Obj-C Class structure</h3>
+<p>Like in C++, in Obj-C your code is broken down into two files, the header file and the implementation file. The header file still has the same .h extension but a implementation file has a .m extension. Here is a very basic example of how these two files look like.</p>
+<p>I created a class called MyClass which extends a UIView class.</p>
+<p>In the header (.h) file below we need to define our class interface and we do this between the <code>@interface</code> and <code>@end</code> tags. The class interface defines instance variables and public methods, but for now we're going to leave it empty.</p>
+<pre><code>@interface MyClass : NSObject {
+    //
+}
+
+@end</code></pre>
+<p>The implementation (.m) file is where you add your actual code for the methods defined in the header file. The first thing you need to do is import your <code>MyClass.h</code> header file which defines the structure and then write your implementation between the <code>@implementation</code> and <code>@end</code> tags.</p>
+<pre><code>#import "MyClass.h"
+
+@implementation MyClass
+
+@end</code></pre>
+<h3 id="make-new-obj-c-class-in-xcode">Make new Obj-C Class in XCode</h3>
+<p>Nice thing about XCode is that it makes programming easier by creating the basic structure of a class when you first create it, so you don't have to type out the above code structure everytime. By going to File menu, selecting New and then File... a dialogue will appear showing all the files that XCode can create for you. Select <code>Objective-C class</code> and another dialogue will appear where you can name your new Class and specify which Subclass it will extend. MyClass will then be automatically generated, ready for you to enter your code into.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/ios/images/ofxiOS_objc_0_sml.jpg" target="_blank"><img alt="Figure 1: OF on iPhone." src="../images/ios/images/ofxiOS_objc_0_sml.jpg" title="Figure 1: OF on iPhone."/></a></div><div class="caption">Figure 1: OF on iPhone.</div>
+</div></div>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/ios/images/ofxiOS_objc_1_sml.jpg" target="_blank"><img alt="Figure 1: OF on iPhone." src="../images/ios/images/ofxiOS_objc_1_sml.jpg" title="Figure 1: OF on iPhone."/></a></div><div class="caption">Figure 1: OF on iPhone.</div>
+</div></div>
+<h3 id="variables-and-methods">Variables and Methods</h3>
+<p>So now that we have the bare bones of our class, lets add some methods and variables to it so it actually does something. Lets start simple and say that MyClass contains two string variables, one for my first name and one for my last name. We will also want to create some methods for setting and retrieving these variables from the class.</p>
+<p>MyClass header (.h) file now looks like this,</p>
+<pre><code>@interface MyClass : NSObject {
+    NSString * firstName;
+    NSString * lastName;
+}
+
+- (void)setFirstName:(NSString *)nameStr;
+- (void)setLastName:(NSString *)nameStr;
+
+- (NSString *)getFirstName;
+- (NSString *)getLastName;
+
+@end</code></pre>
+<p>Inside MyClass interface, you can now see two <code>NSString</code> variables being defined, <code>firstName</code> and <code>lastName</code>. <code>NSString</code> is the Obj-C equivalent of <code>string</code> in C++. The <code>*</code> means that <code>firstName</code> and <code>lastName</code> are pointers to <code>NSString</code> objects. In Obj-C, all instance variables are private by default, which means you can not access them directly from outside of the class object, so you need to create accessor methods to set and get these values.</p>
+<p>Lets look at how methods are structured in Obj-C and take <code>setFirstName</code> as an example,</p>
+<pre><code>- (void)setFirstName:(NSString *)nameStr;</code></pre>
+<p>The very first thing that comes before every Obj-C method is a dash <code>-</code> or a plus <code>+</code>. A dash means that the method is a instance method and a plus means that the method is a class method. Next in line we have the return type of the method. In this instance method we are setting the first name and not returning any value, so therefor the return type is <code>void</code>. Next is the name of the method <code>setFirstName</code> and then separated by a colon <code>:</code> are the variables that we pass into the method. In this example we are passing in a <code>nameStr</code> variable and we have to specify the type of that variable which is <code>NSString</code>.</p>
+<p>Now that we have defined our variables and methods in the class interface, lets look at the implementation file where our functional code will live.</p>
+<pre><code>#import "MyClass.h"
+
+@implementation MyClass
+
+- (void)setFirstName:(NSString *)nameStr {
+    [firstName autorelease];
+    firstName = [nameStr retain];
+}
+
+- (void)setLastName:(NSString *)nameStr {
+    [lastName autorelease];
+    lastName = [nameStr retain];
+}
+
+- (NSString *)getFirstName {
+    return firstName;
+}
+
+- (NSString *)getLastName {
+    return lastName;
+}
+
+@end</code></pre>
+<p>In terms of structure, the methods look almost exactly the same as the in the class interface, only now each method has curly braces on the end <code>{</code> and <code>}</code> which symbolise the begining and end of the method code. The two getter methods (<code>getFirstName</code> and <code>getLastName</code>) are pretty straight forward and simply return a pointer to a <code>NSString</code> variable. The setter methods (<code>setFirstName</code> and <code>setLastName</code>) contain code which is more specific to Obj-C and here is where we first touch upon the topic of memory managemen in Obj-C.</p>
+<h3 id="memory-management">Memory Management</h3>
+<p>Lets look at what is going on inside the <code>setFirstName</code> method.</p>
+<pre><code>[firstName autorelease];
+firstName = [nameStr retain];</code></pre>
+<p>All that the above is doing is assigning a new string value to <code>firstName</code> but it's also making sure the previous value is released before a new one is retained to prevent memory leaks. Calling <code>autorelease</code> on a object is telling the object to <code>release</code> at some stage in the not too distant future when it is no longer being used, usually at the end of the method when it is no longer needed. We then need to <code>retain</code> the new string which you can think of as binding it to the <code>NSString * firstName</code> pointer reference. Retaining and releasing objects is at the core of the Obj-C memory management system and is know as reference counting.</p>
+<p>The basic theory behind reference counting is that when ever an object is retained, the reference count goes up by +1 and everytime it is released, the reference count is goes down by -1. When the reference count is back down to zero, the object is released from memory.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/ios/images/ofxiOS_objc_2.png" target="_blank"><img alt="Figure 1: OF on iPhone." src="../images/ios/images/ofxiOS_objc_2.png" title="Figure 2: ofxiOS XCode."/></a></div><div class="caption">Figure 1: OF on iPhone.</div>
+</div></div>
+<p>NEED TO RECREATE THIS DIAGRAM.</p>
+<p>There are a couple way of creating an Obj-C object and we'll use the NSString class to demonstrate. Below is a code sample of how a <code>NSString</code> object is created using the <code>alloc</code> method. Calling <code>alloc</code> on a <code>NSString</code> class returns a new <code>NSString</code> object. A very important thing to note here is that when an object is created using <code>alloc</code>, it's reference count is at +1. So behind the scenes, Obj-C has created a new string object and has already called <code>retain</code> on the object for us. The final line in the code example is initialising the string object with some text which says <code>"I'm a string"</code>.</p>
+<pre><code>firstName = [NSString alloc];
+[firstName initWithString:@"I'm a string"];
+</code></pre>
+<p>Another way of creating a string is using <code>NSString</code> class methods shown in the code sample below. When a object is created using class method, it is created in a <code>autorelease</code> state which means it's reference count is at +1 but because it has been marked as <code>autorelease</code>, it will be released from memory soon after if not retained. This is why we need to call <code>retain</code> on the new string object, so that we can hold onto its reference and use it somewhere else in our code.</p>
+<pre><code>firstName = [NSString stringWithString:@"I'm a string"];
+[firstName retain];</code></pre>
+<p>The general rule when it comes to Obj-C memory management is if you create an object using the <code>alloc</code> method or call <code>retain</code> on a object, you have taken responsibility for that object and sometime in the the future you will have to <code>release</code> it.</p>
+<h3 id="ins-and-outs">Ins and Outs</h3>
+<p>With everything that was just discussed, lets take another look at MyClass which will now include the <code>init</code> and <code>dealloc</code> methods, the entry and exit points of all Obj-C objects.</p>
+<pre><code>#import "MyClass.h"
+
+@implementation MyClass
+
+- (id)init {
+    self = [super init];
+    if(self != nil) {
+        firstName = [[NSString alloc] initWithString:@"Lukasz"];
+        lastName = [[NSString alloc] initWithString:@"Karluk"];
+    }
+    return self;
+}
+
+- (void)dealloc {
+    [firstName release];
+    [lastName release];
+    [super dealloc];
+}
+
+- (void)setFirstName:(NSString *)nameStr {
+    [firstName autorelease];
+    firstName = [nameStr retain];
+}
+
+- (void)setLastName:(NSString *)nameStr {
+    [lastName autorelease];
+    lastName = [nameStr retain];
+}
+
+- (NSString *)getFirstName {
+    return firstName;
+}
+
+- (NSString *)getLastName {
+    return lastName;
+}
+
+@end</code></pre>
+<p>Both the <code>init</code> and <code>dealloc</code> methods are already defined in every Obj-C object so we are then extending these methods and overriding their behaviour. The <code>init</code> method is the first method to be called on every Obj-C object which makes it the ideal place to intialise your variables. The <code>init</code> method always returns a reference of itself with type <code>id</code>, which in C++ is equivalent to returning <code>void *</code>. Because we are extending the <code>init</code> method, we need to make sure we call it's super method first, otherwise the object will not initialise correctly. We then make sure that <code>[super init]</code> is called successfully without any issues before initialising variables <code>firstName</code> and <code>lastName</code>. The last thing an <code>init</code> method needs to do is return a reference to itself.</p>
+<p>The <code>dealloc</code> method is called when an object is about to be released from memory, which makes it the perfect place to release any other memory the object is holding onto. <code>firstName</code> and <code>lastName</code> objects are released and the last order of business is calling the <code>[super dealloc]</code> method, before the object is completely removed from memory.</p>
+<h3 id="properties">Properties</h3>
+<p>Nice thing about Obj-C is that it really makes programming a lot faster by providing syntax shortcuts where possible. In <code>MyClass</code> we had to create getter and setter methods for passing in the <code>firstName</code> and <code>lastName</code> into the object. In Obj-C there is actually a much faster way of declaring getters and setters with the use of properties. Properties are a syntax feature that allow to automatically declare getter and setter accessors. Here is how the <code>@property</code> syntax looks like in the header file,</p>
+<pre><code>@interface MyClass : NSObject {
+    NSString * firstName;
+    NSString * lastName;
+}
+
+@property (retain) NSString * firstName;
+@property (retain) NSString * lastName;
+
+@end</code></pre>
+<p>You can see that we've ditched the old getter and setter methods and have now replaced it with the <code>@property</code> syntax. After the <code>@property</code> tag we can also declare some extra setter attributes, where we have <code>retain</code> in brackets. This means that every time we use the <code>firstName</code> property to set a new value, it will automatically <code>retain</code> the new <code>NSString</code> which is super handy and means we're writing less code to get the same result.</p>
+<p>Next lets jump into the implementation file,</p>
+<pre><code>#import "MyClass.h"
+
+@implementation MyClass
+
+@synthesize firstName;
+@synthesize lastName;
+
+- (id)init {
+    self = [super init];
+    if(self != nil) {
+        self.firstName = [[[NSString alloc] initWithString:@"Lukasz"] autorelease];
+        self.lastName = [[[NSString alloc] initWithString:@"Karluk"] autorelease];
+    }
+    return self;
+}
+
+- (void)dealloc {
+    self.firstName = nil;
+    self.lastName = nil;
+    [super dealloc];
+}
+
+@end</code></pre>
+<p>The first thing we need to do inside the implementation file is <code>@synthesize</code> the <code>@property</code> that we declared in the header file. <code>@synthesize</code> tells the Obj-C compiler to generate the getter and setters methods defined through the <code>@property</code> directive in the header.</p>
+<p>Now we can access the <code>firstName</code> and <code>lastName</code> string objects via the getter and setter methods created by the <code>@property</code> directive. These methods are generated internally and we don't actually see them but everytime we write <code>self.firstName</code> or <code>self.lastName</code>, we are accessing the getter and setter methods.</p>
+<p>In the <code>init</code> method, one thing that has changed is that an <code>autorelease</code> method is being called on the <code>NSString</code> object as soon as it is created. This might initially look incorrect as it appears that we are creating an object, retaining it and then releasing it which will bring the reference count back down to zero and means the object will be released from memory. But we have to realise that we are using the setter method created by the <code>@property</code> directive which automatically retains the object. This means the final reference count will be +1.</p>
+<p>In the <code>dealloc</code> method you will notice that <code>firstName</code> and <code>lastName</code> are not actually being released but are set to <code>nil</code> via the <code>@property</code> setter. Behind the scenes, when the setter receives a <code>nil</code> value it first checks if the object is valid and if so it automatically calls <code>release</code> on the object and invalidates the object by setting it to nil. If we were to write out this logic it would look like this,</p>
+<pre><code>if(firstName != nil) {
+    [firstName release];
+    firstName = nil;
+}</code></pre>
+<p>Properties definitely take a little while to get used to but when mastered are very powerful tool to faster and flexible coding.</p>
+<h3 id="delegates">Delegates</h3>
+<h3 id="automatic-reference-counting-arc">Automatic Reference Counting (ARC)</h3>
+<p>All this talk of memory management can get pretty heavy, so you'll be happy to know that Obj-C have made programming easier using Automatic Reference Countng (ARC). ARC does all the memory management for you so you no longer have to worry about retaining and releasing objects, its all done by the compiler. ARC works by looking at your code at compile time and making sure that each object is retained for as long as it needs to be but also that its released as soon as it no longer used.</p>
+<p>By default ARC is turned off inside ofxiOS XCode projects, but can be easily turned on in the project's Build Settings. Worth noting is that even though ARC can be turned on, ofxiOS source files are still compiled with non-ARC. ARC is only applied to Obj-C files in the main XCode project.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/ios/images/ofxiOS_ARC_0_sml.jpg" target="_blank"><img alt="Figure 1: OF on iPhone." src="../images/ios/images/ofxiOS_ARC_0_sml.jpg" title="Figure 2: ofxiOS XCode."/></a></div><div class="caption">Figure 1: OF on iPhone.</div>
+</div></div>
+<p>When ARC is turned on, it is possible to specify which Obj-C class should use ARC and which should use regular memory management. You can disable ARC for a specific class using the -fno-objc-arc compiler flag for that class.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/ios/images/ofxiOS_ARC_1.png" target="_blank"><img alt="Figure 1: OF on iPhone." src="../images/ios/images/ofxiOS_ARC_1.png" title="Figure 2: ofxiOS XCode."/></a></div><div class="caption">Figure 1: OF on iPhone.</div>
+</div></div>
+<h3 id="mixing-obj-c-and-c-objective-c">Mixing Obj-C and C++ (Objective-C++)</h3>
+<p>Since both the Obj-C and C++ languages are a subset of the C language, it is possible to mix the two together. First of all before you start typing C++ code into your Obj-C classes or vise versa you need to rename your implementation file extension from <code>(*.m)</code> =&gt; <code>(*.mm)</code>. This lets the XCode compiler know that the file is a combination of Obj-C and C++.</p>
+<p><code>ofApp.mm</code> by default is already to setup this way so you can start using Obj-C code inside your app. One example of this might be that you would like to use UIKit to add some kind of user interface over the top of your ofApp. There are many very useful possibilities of mixing Obj-C with C++ and we'll go into more detail later in this chapter.</p>
+<h3 id="todo">TODO</h3>
+<ul>
+<li>what does objective-C look like?</li>
+<li>differences between C++ and Obj-C (string, arrays)</li>
+<li>brief overview of Obj-C memory management compared to C++ (retain/release and ARC)</li>
+<li>How C++ and Obj-C can be mixed together. Mention .mm files.</li>
+</ul>
+<p>good reference =&gt; http://cocoadevcentral.com/d/learn_objectivec/</p>
+<h2 id="underthehood">Under the Hood</h2>
+<p>UIKit is the backbone of all iOS apps. It is a collection of classes or framework that provide a standardised structure for creating and running applications. UIKit provides the skeleton structure into which you can insert your custom application code and makes it easy to receive system events like device orientation changes or memory warning as two examples amongst many.</p>
+<p>UIKit organises its classes using the MVC (model-view-controller) design pattern. When you get into iOS programming you will see the MVC patterns everywhere, especially when working with UIViewControllers. MVC breaks up code into one of the three categories and makes the code more extensible and reusable.</p>
+<p>When you run a iOS app, it always begins with the UIApplication class which listens for system events and passes them into the app code for further handling. The first class you can start writing your own code into is the Application Delegate. The App Delegate is responsible for creating and managing the UIWindow as well as the root UIViewController, two very important objects in the iOS app structure. UIWindow's job is to coordinate and display content on the screen. As for a UIViewController, you can think of it as a single app screen and using the this analogy the root UIViewController can be thought of as the home screen for the app. The root UIViewController is the bottom most view controller on top of which you can stack other view controllers, aptly named the view controller stack. When stacking UIViewController objects on top of one another you get the beginnings of an app. You now have a few screens with different UIView objects that you can navigate between.</p>
+<p>(explain UIViews)</p>
+<p>So that's the super compressed summary which is only skiming the surface of iOS development. It can be a very steap learning curve and this is where ofxiOS comes to the rescue as an elevator that takes you straight to the top of that curve. ofxiOS allows you to make native iOS apps using OpenFrameworks without knowing anything about UIKit or Obj-C at all.</p>
+<p>Inside ofxiOS are classes which extend UIKit and take care of creating the iOS application structure. The three core classes are ofxiOSAppDelegate which extends the application delegate, ofxiOSViewController which extends a UIViewController and is the root view controller for an OF application, and ofxiOSEAGLView which extends a UIView and is the view to which OpenGL content is drawn to.</p>
+<p>ofxiOSAppDelegate is mainly in responsible for listening to and handling global events like orientation changes, memory warnings, and events for when the application is exited or moves to the background state. ofxiOSAppDelegate alerts the ofApp that that these events have happened and it is then up to the programmer to handle these events as they chose inside the ofApp.</p>
+<p>ofxiOSViewController is the OF UIViewController and like the name suggest, its main responsibility is to create and control the OF UIView. It also takes care of orientation changes and can rotate an OF application to match the orientation changes on the device.</p>
+<p>ofxiOSEAGLView is the OF UIView which displays all OF rendered content. ofxiOSEAGLView is respinsible for creating a ESRenderer which encapsulates low-level OpenGL setup and makes it possible to render OpenGL graphics into a UIView. ofxiOSEAGLView also listens out for touch events which it passes into the ofApp to be handled by the programmer.</p>
+<p>TODO // need to make a diagram to visualise all this.</p>
+<h3 id="ofxiosapp">ofxiOSApp</h3>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/ios/images/ofxiOS_XCode_sml.png" target="_blank"><img alt="Figure 1: OF on iPhone." src="../images/ios/images/ofxiOS_XCode_sml.png" title="Figure 2: ofxiOS XCode."/></a></div><div class="caption">Figure 1: OF on iPhone.</div>
+</div></div>
+<p>When you open up a empty ofxiOS project you will immediatly notice some differences in the ofApp header file. You will see that ofApp extends ofxiOSApp instead of ofBaseApp as you would see when running a desktop app. This is because iOS apps and desktop apps are slightly different, desktop apps receive mouse and keyboard events and iOS apps receive touch events as well a orientation events and memory warnings. To handle these new events, new methods had to be defined inside ofxiOSApp which the ofApp inherits from.</p>
+<pre><code>void touchDown(ofTouchEventArgs &amp; touch);
+void touchMoved(ofTouchEventArgs &amp; touch);
+void touchUp(ofTouchEventArgs &amp; touch);
+void touchDoubleTap(ofTouchEventArgs &amp; touch);
+void touchCancelled(ofTouchEventArgs &amp; touch);</code></pre>
+<p>Touch events are passed into the ofApp through these methods. Each method receives a ofTouchEventArgs object which contains all the information about the touch event, such as the touch ID and the x and y position of the touch on the screen.</p>
+<pre><code>void lostFocus();
+void gotFocus();</code></pre>
+<p>Focus events are passed into the ofApp when the application goes from active to inactive state and vise versa. <code>gotFocus()</code> method tells the ofApp that the application has becomes active, which happens when the application first launches. <code>lostFocus()</code> method tells the ofApp that the application has become inactive which happens when a phone call or SMS interrupts the app or when the user exits the app.</p>
+<pre><code>void gotMemoryWarning();</code></pre>
+<p>Each iOS application is allocated a limited amount of memory for it to run. When an application exceeds the allocated amount, the operating systems lets the application know by giving it a memory warning. Memory warnings are passed into the ofApp via the <code>gotMemoryWarning()</code> method at which point the application needs to free up some memory otherwise the operating system can terminate the application.</p>
+<pre><code>void deviceOrientationChanged(int newOrientation);</code></pre>
+<p>iOS dispatches orientation events when ever the device orientation changes. Orientation events are passed into the ofApp through <code>deviceOrientationChanged()</code> method. It is then up to the user to handle these orientation changes as they see fit. iosOrientationExample inside examples/ios/ folder demonstrates how the orientation events can be used.</p>
+<h3 id="opengl-es-and-ios">OpenGL ES and iOS</h3>
+<ul>
+<li>Intro &gt; lead to types</li>
+<li>iOS Support for ES 1.1</li>
+<li>iOS Support for ES 2.0</li>
+<li><p>iOS Support for ES 2.0 &gt; Lead to Hardware</p></li>
+<li>Apple Devices Hardware Limitations (A7 VS PowerVR)
+<ul>
+<li>PowerVR</li>
+<li>A7 &gt; Lead to Device Specific Limitions</li>
+</ul></li>
+<li>Device Specific Texture Limitations
+<ul>
+<li>Ref Apple Docs https://developer.apple.com/library/ios/documentation/DeviceInformation/Reference/iOSDeviceCompatibility/OpenGLESPlatforms/OpenGLESPlatforms.html</li>
+</ul></li>
+<li><p>Conclusion &gt; Lead to Shaders and Crossovers.</p></li>
+</ul>
+<hr/>
+<ul>
+<li>Shaders using ES2. Crossover between web ES2 shaders and iOS ES2 shaders.</li>
+<li>https://www.khronos.org/webgl/wiki/WebGL_and_OpenGL_Differences</li>
+</ul>
+<h2 id="ofuikit">OF &amp; UIKit</h2>
+<ul>
+<li>Adding UIViews to an OF app, above and below the OF glView.</li>
+<li>openFrameworks as part of a larger app, several openFrameworks apps in one iOS app</li>
+<li>addons for ofxiOS</li>
+<li>dispatching on main queue from OF to UIKIT using blocks.</li>
+</ul>
+<p>http://www.creativeapplications.net/iphone/integrating-native-uikit-to-your-existing-openframeworks-ios-project/</p>
+<h2 id="mediaplaybackandcapture">Media Playback and Capture</h2>
+<p>A large chunk of ofxiOS support is media playback and capture. ofxiOS has good support for video playback, sound playback, camera capature and sound input. All Obj-C code that makes these features possible is wrapped and abstracted so a regular OF user can continue using the OF API the same way across all supported platforms.</p>
+<p>For example, lets say you have a very simple ofApp that plays a video. To achieve this you would use the <code>ofVideoPlayer</code> class, create a object instance of the class, call the <code>loadMovie()</code> method to load the video file and then call the <code>play()</code> method to begin playback of the video. Now to do this across desktop OF apps or iOS OF apps, the code is exactly the same. This is because we are using the <code>ofVideoPlayer</code> API which is common across all supported OF platforms. Although the thing to know here is that even though the code works the same way across the different platforms, the actual code used to play a video on OSX and iOS (for example) is very different.</p>
+<h3 id="ofxiosvideoplayer">ofxiOSVideoPlayer</h3>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/ios/images/ofxiOS_moviePlayerExample_sml.png" target="_blank"><img alt="Figure 1: OF on iPhone." src="../images/ios/images/ofxiOS_moviePlayerExample_sml.png" title="Figure 2: ofxiOS XCode."/></a></div><div class="caption">Figure 1: OF on iPhone.</div>
+</div></div>
+<p><code>ofxiOSVideoPlayer</code> is the video player class used for video playback inside ofxiOS. When you're using <code>ofVideoPlayer</code> inside a iOS OF project, you are actually using <code>ofxiOSVideoPlayer</code>. OF automatically selects the correct video player class to use depending on the platform you are using.</p>
+<p>A iOS example that demonstrates the use of the video player on iOS can be found in the folder, examples/ios/moviePlayerExample</p>
+<p>When looking inside the ofApp header file you will notice that we are using the <code>ofxiOSVideoPlayer</code> class instead the generic <code>ofVideoPlayer</code> class. You can use both but it's probably better to use the <code>ofxiOSVideoPlayer</code> class instead. The reason being is that <code>ofxiOSVideoPlayer</code> has a few extra methods which are specific to iOS, which you may or may not want to use, but it's always good to have that option.</p>
+<p>Let go through some of the basic functionality.</p>
+<p>To load and play a video it's exactly the same as using the <code>ofVideoPlayer</code>.</p>
+<pre><code>void ofApp::setup() {
+	video.loadMovie("hands.m4v");
+	video.play();
+}</code></pre>
+<p>On every single frame we need to update the video player.</p>
+<pre><code>void ofApp::update(){
+    video.update();
+}</code></pre>
+<p>And to draw the video to screen, we need to first get a reference to the video texture and call draw on the texture object.</p>
+<pre><code>void ofApp::draw(){
+    video.getTexture()-&gt;draw(0, 0);
+}</code></pre>
+<p>Now for those extra iOS specific methods.</p>
+<p>If you poke around inside <code>ofxiOSVideoPlayer</code> you will see a method called <code>getAVFoundationVideoPlayer()</code> which is responsible for returning a reference of the underlaying <code>AVFoundationVideoPlayer</code>. <code>AVFoundationVideoPlayer</code> is the Obj-C implementation for the iOS video player and is the class that sits below <code>ofxiOSVideoPlayer</code> and pretty much does all the work. Now, some reasons you may want have accesss to the <code>AVFoundationVideoPlayer</code> is that you want to work directly with the Obj-C code to get the most out of iOS video player features or you want to display the video inside a UIView instead of rendering it to OpenGL.</p>
+<p>Here we are getting a pointer reference to the <code>AVFoundationVideoPlayer</code> which also happens to extends a <code>UIView</code>. This means we can add the video player to a UIView hiarchy and display the video natively.</p>
+<pre><code>AVFoundationVideoPlayer * avVideoPlayer;
+avVideoPlayer = (AVFoundationVideoPlayer *)video.getAVFoundationVideoPlayer();
+[avVideoPlayer setVideoPosition:CGPointMake(0, 240)];
+[ofxiOSGetGLParentView() insertSubview:avVideoPlayer.playerView belowSubview:controls.view];</code></pre>
+<h3 id="ofxiosvideograbber">ofxiOSVideoGrabber</h3>
+<h3 id="ofxiossoundplayer-and-ofxopenalsoundplayer">ofxiOSSoundPlayer and ofxOpenALSoundPlayer</h3>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/ios/images/ofxiOS_soundPlayerExample_sml.png" target="_blank"><img alt="Figure 1: OF on iPhone." src="../images/ios/images/ofxiOS_soundPlayerExample_sml.png" title="Figure 2: ofxiOS XCode."/></a></div><div class="caption">Figure 1: OF on iPhone.</div>
+</div></div>
+<h3 id="ofxiossoundstream">ofxiOSSoundStream</h3>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/ios/images/ofxiOS_audioInputExample_sml.png" target="_blank"><img alt="Figure 1: OF on iPhone." src="../images/ios/images/ofxiOS_audioInputExample_sml.png" title="Figure 2: ofxiOS XCode."/></a></div><div class="caption">Figure 1: OF on iPhone.</div>
+</div></div>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/ios/images/ofxiOS_audioOutputExample_sml.png" target="_blank"><img alt="Figure 1: OF on iPhone." src="../images/ios/images/ofxiOS_audioOutputExample_sml.png" title="Figure 2: ofxiOS XCode."/></a></div><div class="caption">Figure 1: OF on iPhone.</div>
+</div></div>
+<h2 id="lifehacks">Life Hacks</h2>
+<ul>
+<li>ofxiOS utils, ofxiOSExtras, ofxiOSImagePicker, ofxiOSMapKit etc.</li>
+</ul>
+<h2 id="appstore">App Store</h2>
+<ul>
+<li>App distribution, preparing your OF app for the app store.</li>
+<li>examples of OF iOS apps already in the app store.</li>
+</ul>
+<h2 id="casestudies">Case Studies</h2>
+<p>https://itunes.apple.com/au/app/john-lennon-the-bermuda-tapes/id731652276?mt=8</p>
+<p>https://itunes.apple.com/au/app/sadly-by-your-side/id687252928?mt=8</p>
+<p>https://itunes.apple.com/us/app/swipin-safari/id635434195?mt=8</p>
+<p>https://itunes.apple.com/au/app/tunetrace/id638180873?mt=8</p>
+<p>https://itunes.apple.com/au/app/hana/id556557031?mt=8</p>
+<p>https://itunes.apple.com/gb/app/starry-night-interactive-animation/id511943282</p>
+<p>https://itunes.apple.com/au/app/snake-the-planet!/id528414021?mt=8</p>
+<p>https://itunes.apple.com/au/app/horizons/id391748891?mt=8</p>
+<p>https://itunes.apple.com/us/app/spelltower/id476500832?mt=8</p>
+<div class="footer">
+<div id="prev_chapter"><a href="math.html">&lt; Math: From 1D to 4D</a></div>
+<div id="next_chapter"><a href="version_control_with_git.html">Version control with Git &gt;</a></div>
+</div>
+<div id="help"><i>please note that this book / chapter is a work in progress.  Feel free to suggest edits / corrections <a href="https://github.com/openframeworks/ofbook" target="_blank">here</a></i></div>
+</div>
+</div>
+</body>
+</html>

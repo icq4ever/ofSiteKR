@@ -1,0 +1,420 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="pandoc" name="generator"/>
+<title>ofBook - Advanced graphics</title>
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+<link href="../style/bootstrap.min.css" rel="stylesheet">
+<link href="../style/style.css" rel="stylesheet" type="text/css"/>
+<link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Merriweather:400,300,300italic,400italic,700,900,700italic,900italic" rel="stylesheet" type="text/css">
+<script src="../javascript/jquery-1.8.3.min.js"></script>
+<script src="../javascript/bootstrap.min.js"></script>
+<script src="../javascript/navbar.js"></script>
+</link></link></head>
+<body>
+<div class="banner">
+<div class="content-wrapper">
+<b>Work in progress!</b>
+        This is a preliminary version of ofBook, a collaboratively written book about openFrameworks.  Please post any issues, suggestions, comments on our <a href="https://github.com/openframeworks/ofBook/" target="_blank">repo</a>.
+    </div>
+</div>
+<div class="content-wrapper">
+<nav role="navigation">
+<ul id="nav-parts"><li class="group"><div class="groupTitle">Foreword</div><ul><li class="chapter"><div class="chapterTitle"><a href="foreword.html">foreword</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#책에관하여" target="_top">책에 관하여</a></li><li class="section"><a href="#credits" target="_top">Credits</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Basics</div><ul><li class="chapter"><div class="chapterTitle"><a href="of_philosophy.html">Philosophy</a></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="cplusplus_basics.html">C++ Language Basics</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#lookalive" target="_top">Look Alive!</a></li><li class="section"><a href="#iteration" target="_top">Iteration</a></li><li class="section"><a href="#compilingmyfirstapp" target="_top">Compiling My First App</a></li><li class="section"><a href="#beyondhelloworld" target="_top">Beyond Hello World</a></li><li class="section"><a href="#functions" target="_top">Functions</a></li><li class="section"><a href="#customfunctions" target="_top">Custom Functions</a></li><li class="section"><a href="#encapsulationofcomplexity" target="_top">Encapsulation of Complexity</a></li><li class="section"><a href="#variablespart1" target="_top">Variables (part 1)</a></li><li class="section"><a href="#conclusion" target="_top">Conclusion</a></li><li class="section"><a href="#ps" target="_top">PS.</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="setup_and_project_structure.html">oF structure</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#firstthingsfirst" target="_top">First things first</a></li><li class="section"><a href="#welcometoyournewkitchen" target="_top">Welcome to your new kitchen</a></li><li class="section"><a href="#runningexamples" target="_top">Running examples</a></li><li class="section"><a href="#offolderstructure" target="_top">oF folder structure</a></li><li class="section"><a href="#theofpantry" target="_top">The oF Pantry</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="intro_to_graphics.html">Graphics</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#brusheswithbasicshapes" target="_top">Brushes with Basic Shapes</a></li><li class="section"><a href="#brushesfromfreeformshapes" target="_top">Brushes from Freeform Shapes</a></li><li class="section"><a href="#movingtheworld" target="_top">Moving The World</a></li><li class="section"><a href="#nextsteps" target="_top">Next Steps</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#overview" target="_top">Overview</a></li><li class="section"><a href="#whatisobjectorientedprogramming" target="_top">What is Object Oriented Programming</a></li><li class="section"><a href="#howtobuildyourownclassessimpleclass" target="_top">How to build your own Classes (simple Class)</a></li><li class="section"><a href="#makeanobjectfromyourclass" target="_top">Make an Object from your Class</a></li><li class="section"><a href="#makeobjectsfromyourclass" target="_top">Make objects from your Class</a></li><li class="section"><a href="#makemoreobjectsfromyourclass" target="_top">Make more Objects from your Class</a></li><li class="section"><a href="#makeevenmoreobjectsfromyourclasspropertiesandconstructors" target="_top">Make even more Objects from your Class: properties and constructors</a></li><li class="section"><a href="#makeobjectsonthefly" target="_top">Make Objects on the fly</a></li><li class="section"><a href="#makinganddeleteasyouwishusingvectors" target="_top">Making and delete as you wish - using vectors</a></li><li class="section"><a href="#quickintrotopolymorphisminheritance" target="_top">Quick intro to polymorphism (inheritance)</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="how_of_works.html">how OF works</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#오픈프레임웍스코드의일반적인패턴설명" target="_top">오픈프레임웍스 코드의 일반적인 패턴 설명</a></li><li class="section"><a href="#setupupdatedraw" target="_top">setup, update, draw</a></li><li class="section"><a href="#클래스" target="_top">클래스</a></li><li class="section"><a href="#함수" target="_top">함수</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Approaches</div><ul><li class="chapter"><div class="chapterTitle"><a href="animation.html">Animation</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#background" target="_top">Background</a></li><li class="section"><a href="#animationinofusefulconcepts" target="_top">Animation in oF / useful concepts:</a></li><li class="section"><a href="#linearmovement" target="_top">Linear movement</a></li><li class="section"><a href="#functionbasedmovement" target="_top">Function based movement</a></li><li class="section"><a href="#simulation" target="_top">Simulation</a></li><li class="section"><a href="#wheretogofurther" target="_top">Where to go further</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="game_design.html">Experimental Game Development</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#howdogamedevelopersactuallymakegames" target="_top">How do game developers actually make games?</a></li><li class="section"><a href="#sowhatisoscanyway" target="_top">So what is OSC, anyway?</a></li><li class="section"><a href="#ourbasicgameandmakingitnotsobasic" target="_top">Our basic game–and making it not so basic</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="image_processing_computer_vision.html">image processing and computer vision</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#maybethereisamagicbullet" target="_top">Maybe There is a Magic Bullet</a></li><li class="section"><a href="#preliminariestoimageprocessing" target="_top">Preliminaries to Image Processing</a></li><li class="section"><a href="#이미지처리를얘기하기전에알아두어야할것들" target="_top">이미지처리를 얘기하기 전에 알아두어야 할것들</a></li><li class="section"><a href="#pointprocessingoperationsonimages" target="_top">Point Processing Operations on Images</a></li><li class="section"><a href="#acompleteworkflowbackgroundsubtraction" target="_top">A Complete Workflow: Background Subtraction</a></li><li class="section"><a href="#refinements" target="_top">Refinements</a></li><li class="section"><a href="#suggestionsforfurtherexperimentation" target="_top">Suggestions for Further Experimentation</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">I/O</div><ul><li class="chapter"><div class="chapterTitle"><a href="hardware.html">Hardware</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introduction" target="_top">introduction</a></li><li class="section"><a href="#소개" target="_top">소개</a></li><li class="section"><a href="#gettingstartedwithserialcommunication" target="_top">getting started with serial communication</a></li><li class="section"><a href="#시리얼통신시작하기" target="_top">시리얼 통신 시작 하기</a></li><li class="section"><a href="#digitalandanalogcommunication" target="_top">digital and analog communication</a></li><li class="section"><a href="#디지털과아날로그통신" target="_top">디지털과 아날로그 통신</a></li><li class="section"><a href="#usingserialforcommunicationbetweenarduinoandopenframeworks" target="_top">using serial for communication between arduino and openframeworks</a></li><li class="section"><a href="#lightsoncontrollinghardwareviadmx" target="_top">Lights On - controlling hardware via DMX</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="sound.html">Sound</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#gettingstartedwithsoundfiles" target="_top">Getting Started With Sound Files</a></li><li class="section"><a href="#gettingstartedwiththesoundstream" target="_top">Getting Started With the Sound Stream</a></li><li class="section"><a href="#why1to1" target="_top">Why -1 to 1?</a></li><li class="section"><a href="#timedomainvsfrequencydomain" target="_top">Time Domain vs Frequency Domain</a></li><li class="section"><a href="#reactingtoliveaudio" target="_top">Reacting to Live Audio</a></li><li class="section"><a href="#synthesizingaudio" target="_top">Synthesizing Audio</a></li><li class="section"><a href="#audiogotchas" target="_top">Audio Gotchas</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="network.html">Network</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#tcpvsudp" target="_top">TCP vs UDP</a></li><li class="section"><a href="#osc" target="_top">OSC</a></li></ul></div></li></ul></li><li class="group selected"><div class="groupTitle">Graphics</div><ul><li class="chapter"><div class="chapterTitle"><a href="openGL.html">Introducing OpenGL for OF</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introducing" target="_top">Introducing</a></li><li class="section"><a href="#vertices" target="_top">Vertices</a></li><li class="section"><a href="#meshes" target="_top">Meshes</a></li><li class="section"><a href="#vbos" target="_top">VBOs</a></li><li class="section"><a href="#abasic3dscene" target="_top">A Basic 3D Scene</a></li><li class="section"><a href="#matrices" target="_top">Matrices</a></li><li class="section"><a href="#textures" target="_top">Textures</a></li><li class="section"><a href="#cameras" target="_top">Cameras</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="lines.html">drawing lines</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#소개" target="_top">소개 ...</a></li><li class="section"><a href="#선그리기" target="_top">선 그리기</a></li><li class="section"><a href="#약간의노이즈abitofnoise" target="_top">약간의 노이즈A bit of noise</a></li><li class="section"><a href="#aweboflines" target="_top">A web of lines</a></li><li class="section"><a href="#makeasmoothlineinmovementina3dspace" target="_top">Make a smooth line in movement in a 3D space</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="generativemesh.html">Basics of Generating Meshes from an Image</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#basicsofgeneratingmeshesfromanimage1" target="_top">Basics of Generating Meshes from an Image</a></li><li class="section"><a href="#basicsworkingwithofmesh" target="_top">Basics: Working with ofMesh</a></li><li class="section"><a href="#generativemeshusinganimagetodrivethecreationofamesh" target="_top">Generative Mesh: Using an image to drive the creation of a mesh</a></li><li class="section"><a href="#manipulationsaddingeffectsthatmodifythemesh" target="_top">Manipulations: Adding effects that modify the mesh</a></li><li class="section"><a href="#nextsteps" target="_top">Next Steps</a></li></ul></div></li></ul><ul><li class="chapter selected"><div class="chapterTitle selected"><a href="advanced_graphics.html">Advanced graphics</a></div><div class="chapterContents selected"><ul><li class="section selected"><a href="#dimmediatemodevsofpolylineofpath" target="_top">2D, immediate mode vs ofPolyline/ofPath</a></li><li class="section"><a href="#d" target="_top">3D</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="shaders.html">Introducing Shaders</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introducing" target="_top">introducing</a></li><li class="section"><a href="#yourfirstshader" target="_top">Your first shader!</a></li><li class="section"><a href="#addinguniforms" target="_top">Adding Uniforms</a></li><li class="section"><a href="#addingsomeinteractivity" target="_top">Adding some interactivity</a></li><li class="section"><a href="#addingtextures" target="_top">Adding Textures</a></li><li class="section"><a href="#alphamasking" target="_top">Alpha Masking</a></li><li class="section"><a href="#multipletextures" target="_top">Multiple Textures</a></li><li class="section"><a href="#offbo" target="_top">ofFbo</a></li><li class="section"><a href="#texturesasdataegdisplacement" target="_top">Textures as Data (e.g. Displacement)</a></li><li class="section"><a href="#theendcongrats" target="_top">The End, Congrats!</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">C++</div><ul><li class="chapter"><div class="chapterTitle"><a href="threads.html">threads</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#쓰레드란무엇이고언제사용해야하는가" target="_top">쓰레드란 무엇이고 언제 사용해야 하는가</a></li><li class="section"><a href="#ofthread" target="_top">ofThread</a></li><li class="section"><a href="#스레드와opengl" target="_top">스레드와 openGL</a></li><li class="section"><a href="#ofmutex" target="_top">ofMutex</a></li><li class="section"><a href="#externalthreadsanddoublebuffering" target="_top">External threads and double buffering</a></li><li class="section"><a href="#ofscopedlock" target="_top">ofScopedLock</a></li><li class="section"><a href="#pococondition" target="_top">Poco::Condition</a></li><li class="section"><a href="#conclusion" target="_top">Conclusion</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="memory.html">memory of C++</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#컴퓨터메모리와변수" target="_top">컴퓨터 메모리와 변수</a></li><li class="section"><a href="#스택변수함수내의변수vs오브젝트내의변수" target="_top">스택 변수, 함수내의 변수 vs 오브젝트내의 변수</a></li><li class="section"><a href="#포인터와레퍼런스" target="_top">포인터와 레퍼런스</a></li><li class="section"><a href="#힙heap영역에서의변수들" target="_top">힙(heap) 영역에서의 변수들</a></li><li class="section"><a href="#메모리구조배열과vector" target="_top">메모리 구조, 배열과 vector</a></li><li class="section"><a href="#다른메모리구조리스트와맵" target="_top">다른 메모리 구조, 리스트와 맵</a></li><li class="section"><a href="#스마트포인터" target="_top">스마트 포인터</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="stl_vector.html">Introduction to vectors</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#quickreview" target="_top">Quick Review:</a></li><li class="section"><a href="#declaringavector" target="_top">Declaring a vector</a></li><li class="section"><a href="#addingelementstoavector" target="_top">Adding elements to a vector</a></li><li class="section"><a href="#resize" target="_top">resize</a></li><li class="section"><a href="#assign" target="_top">assign</a></li><li class="section"><a href="#accessingelementsofavector" target="_top">Accessing elements of a vector</a></li><li class="section"><a href="#erasingelementsofavector" target="_top">Erasing elements of a vector</a></li><li class="section"><a href="#iterators" target="_top">Iterators</a></li><li class="section"><a href="#sortingandshufflingavector" target="_top">Sorting and shuffling a vector</a></li><li class="section"><a href="#vectorsofobjects" target="_top">Vectors of objects</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="stl_map.html">let's play with Map, std::map</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#소개map이무엇인가요" target="_top">소개 : map이 무엇인가요?</a></li><li class="section"><a href="#map에값삽입하기" target="_top">map에 값 삽입하기</a></li><li class="section"><a href="#map에서요소삭제하기" target="_top">map에서 요소 삭제하기</a></li><li class="section"><a href="#map을훑기" target="_top">map을 훑기</a></li><li class="section"><a href="#map에서요소찾기" target="_top">map에서 요소 찾기</a></li><li class="section"><a href="#map에오브젝트저장하기" target="_top">map에 오브젝트 저장하기</a></li><li class="section"><a href="#multimap이란무엇인가요" target="_top">multimap이란 무엇인가요?</a></li><li class="section"><a href="#다른유용한메소드들" target="_top">다른 유용한 메소드들</a></li><li class="section"><a href="#추가참고자료역자에의해추가됨" target="_top">추가 참고 자료 (역자에 의해 추가됨)</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="c++11.html">C++ 11</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introduction" target="_top">Introduction</a></li><li class="section"><a href="#auto" target="_top">auto</a></li><li class="section"><a href="#forthingthings" target="_top">for (thing : things)</a></li><li class="section"><a href="#override" target="_top">override</a></li><li class="section"><a href="#lambdafunctions" target="_top">Lambda functions</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Advanced topics</div><ul><li class="chapter"><div class="chapterTitle"><a href="math.html">Math: From 1D to 4D</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#onedimensionusingchange" target="_top">One Dimension: Using Change</a></li><li class="section"><a href="#moredimensionssomelinearalgebra" target="_top">More Dimensions: Some Linear Algebra</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Platforms</div><ul><li class="chapter"><div class="chapterTitle"><a href="ios.html">ofxiOS</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#openframeworksoniosdevices" target="_top">OpenFrameworks on iOS devices.</a></li><li class="section"><a href="#intro" target="_top">Intro</a></li><li class="section"><a href="#introtoobjectivec" target="_top">Intro to Objective-C</a></li><li class="section"><a href="#underthehood" target="_top">Under the Hood</a></li><li class="section"><a href="#ofuikit" target="_top">OF &amp; UIKit</a></li><li class="section"><a href="#mediaplaybackandcapture" target="_top">Media Playback and Capture</a></li><li class="section"><a href="#lifehacks" target="_top">Life Hacks</a></li><li class="section"><a href="#appstore" target="_top">App Store</a></li><li class="section"><a href="#casestudies" target="_top">Case Studies</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Tools</div><ul><li class="chapter"><div class="chapterTitle"><a href="version_control_with_git.html">Version control with Git</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#whatisversioncontrolandwhyshouldyouuseit" target="_top">What is version control, and why should you use it?</a></li><li class="section"><a href="#differentversioncontrolsystems" target="_top">Different version control systems</a></li><li class="section"><a href="#introductiontogit" target="_top">Introduction to Git</a></li><li class="section"><a href="#popularguiclients" target="_top">Popular GUI clients</a></li><li class="section"><a href="#conclusion" target="_top">Conclusion</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="ofSketch.html">ofSketch</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#whatisofsketch" target="_top">What is ofSketch?</a></li><li class="section"><a href="#download" target="_top">Download</a></li><li class="section"><a href="#sketchformat" target="_top">Sketch Format</a></li><li class="section"><a href="#remotecoding" target="_top">Remote Coding</a></li><li class="section"><a href="#future" target="_top">Future</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="installation_up_4evr_macosx.html">Installation up 4evr</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#step1prepyoursoftwareandthecomputer" target="_top">Step 1: Prep your software and the computer</a></li><li class="section"><a href="#step2bootintoyoursoftware" target="_top">Step 2: Boot into your software</a></li><li class="section"><a href="#step3keepitupchamp" target="_top">Step 3: Keep it up (champ!)</a></li><li class="section"><a href="#step4rebootperiodically" target="_top">Step 4: Reboot periodically</a></li><li class="section"><a href="#step5checkinonitfromafar" target="_top">Step 5: Check in on it from afar.</a></li><li class="section"><a href="#step6testtesttest" target="_top">Step 6: Test, test, test.</a></li><li class="section"><a href="#additionaltipslogging" target="_top">Additional Tips: Logging</a></li><li class="section"><a href="#memoryleakmurderer" target="_top">Memory leak murderer</a></li><li class="section"><a href="#alternateresources" target="_top">Alternate resources:</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="installation_up_4evr_linux.html">installation up4ever - linux</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#몇가지추가적인팁" target="_top">몇가지 추가적인 팁:</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Case studies</div><ul><li class="chapter"><div class="chapterTitle"><a href="project_eva.html">Choreographies for Humans and Stars</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#projectoverview" target="_top">Project Overview</a></li><li class="section"><a href="#ideationandprototyping" target="_top">Ideation and Prototyping</a></li><li class="section"><a href="#findingthetechnicalsolutions" target="_top">Finding the Technical Solutions</a></li><li class="section"><a href="#developingthevisualizationsoftware" target="_top">Developing the Visualization Software</a></li><li class="section"><a href="#failsafesanddirtyfixes" target="_top">Fail-safes and dirty fixes</a></li><li class="section"><a href="#resultsandreception" target="_top">Results and Reception</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="project_joel.html">Anthropocene</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#theproject" target="_top">The Project</a></li><li class="section"><a href="#development" target="_top">Development</a></li><li class="section"><a href="#showtime" target="_top">Show time</a></li><li class="section"><a href="#postevent" target="_top">Post Event</a></li><li class="section"><a href="#teamandcredits" target="_top">Team and Credits</a></li><li class="section"><a href="#hardwareselection" target="_top">Hardware selection</a></li></ul></div></li></ul></li></ul>
+</nav>
+<div class="chapter-content">
+<h1 id="advanced-graphics">Advanced graphics</h1>
+<p><em>by <a href="http://arturocastro.net" target="_blank">Arturo Castro</a></em></p>
+<p><em>corrections by <a href="http://brannondorsey.com" target="_blank">Brannon Dorsey</a></em></p>
+<h2 id="dimmediatemodevsofpolylineofpath">2D, immediate mode vs ofPolyline/ofPath</h2>
+<p>Traditionally, in frameworks like openFrameworks or processing, the way of drawing things has been something like:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> ofApp::draw(){
+    ofFill();
+    ofSetColor(<span class="dv">255</span>,<span class="dv">0</span>,<span class="dv">0</span>);
+    ofBeginShape();
+    ofVertex(<span class="dv">20</span>,<span class="dv">20</span>);
+    ofVertex(<span class="dv">40</span>,<span class="dv">20</span>);
+    ofVertex(<span class="dv">40</span>,<span class="dv">40</span>);
+    ofVertex(<span class="dv">20</span>,<span class="dv">40</span>);
+    ofEndShape(<span class="kw">true</span>);
+}</code></pre>
+<p><code>openFrameworks version</code></p>
+<p>Which will draw a red square of side 20 at 20,20. For simple primitives like a rectangle we can use <code>ofRect()</code>, but if we want to draw more complex shapes the above method is common. This kind of syntax comes from the openGL equivalent:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> ofApp::draw(){
+    glColor4f(<span class="fl">1.0</span>,<span class="fl">0.0</span>,<span class="fl">0.0</span>,<span class="fl">1.0</span>);
+    glBegin(GL_TRIANGLE_FAN);
+    glVertex2i(<span class="dv">20</span>,<span class="dv">20</span>);
+    glVertex2i(<span class="dv">40</span>,<span class="dv">20</span>);
+    glVertex2i(<span class="dv">40</span>,<span class="dv">40</span>);
+    glVertex2i(<span class="dv">20</span>,<span class="dv">40</span>);
+    glEnd();
+}</code></pre>
+<p><code>GL version</code></p>
+<p>However, that method is deprecated since OpenGL 3. The openFrameworks version actually does something else. This is because while drawing a rectangle like that works in triangle fan mode, if we try to draw something more complex (mostly any concave shape), it won't work. Because OpenGL only knows how to draw triangles, drawing a concave shape needs one more step called tessellation. The tessellation process involves converting a shape into several triangles before sending to the graphics card.</p>
+<p>As we've said the GL syntax is now actually deprecated in openFrameworks if you are using since OpenGL 3, through the programmable renderer, or if you are using openGL ES (Android, iPhone, or ARM Linux in openFrameworks).</p>
+<p>The openFrameworks version continues to work but it's ineffective depending on what we are doing. Internally, the openFrameworks version is tessellating the shape, then storing all the triangles in an ofMesh, and then drawing that ofMesh. If you are using openGL 3+ instead of an ofMesh that will be drawn through a VBO using an ofVboMesh, since that's the only possible way of drawing in newer openGL.</p>
+<p>Tessellation is kind of slow, but also depending on the number of vertices our shape has it doesn't make much sense to send them to the graphics card every frame. The paradigm that newer versions of openGL use is something like this: create the shape once, upload it to the graphics card, and then draw it every frame without having to reupload again, this is usually don through some kind of buffer in the graphics card, usually vbo's.</p>
+<p>In openFrameworks, the ofPolyline and ofPath classes do this in 2D and ofVboMesh for 3D.</p>
+<h3 id="ofpolyline">ofPolyline</h3>
+<p>ofPolyline, allows us to represent the contour of a shape. The equivalent to the previous example using a polyline would be something like:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//ofApp.h</span>
+
+ofPolyline polyline;
+
+<span class="co">//ofApp.cpp</span>
+
+<span class="dt">void</span> ofApp::setup(){
+    polyline.lineTo(<span class="dv">20</span>,<span class="dv">20</span>);
+    polyline.lineTo(<span class="dv">40</span>,<span class="dv">20</span>);
+    polyline.lineTo(<span class="dv">40</span>,<span class="dv">40</span>);
+    polyline.lineTo(<span class="dv">20</span>,<span class="dv">40</span>);
+    polyline.close();
+}
+
+<span class="dt">void</span> ofApp::draw(){
+    polyline.draw();
+}</code></pre>
+<p>Now, instead of calculating the vertices every frame, we are creating them once in setup and drawing them every frame.</p>
+<p>However, an ofPolyline still sends its vertices to the graphics card. ofPolyline is really a class meant to be used to do operations over polylines, like simplifications, smoothing... Also ofPolyline can only draw outlines, not filled shapes. ofPath is the recommended way of drawing shapes.</p>
+<h3 id="ofpath">ofPath</h3>
+<p>ofPath is a complex class internally, it would be the equivalent of an ofImage for 2D geometry. The same way that an ofImage holds a copy of the image in RAM as an ofPixels and a copy in the GPU as an ofTexture, an ofPath contains several representations of the geometry. It's use is simple, and pretty similar to ofPolyline. It follows the same paradigm of creating the shape once and drawing it multiple times:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//ofApp.h</span>
+
+ofPath path;
+
+<span class="co">//ofApp.cpp</span>
+
+<span class="dt">void</span> ofApp::setup(){
+    path.moveTo(<span class="dv">20</span>,<span class="dv">20</span>);
+    path.lineTo(<span class="dv">40</span>,<span class="dv">20</span>);
+    path.lineTo(<span class="dv">40</span>,<span class="dv">40</span>);
+    path.lineTo(<span class="dv">20</span>,<span class="dv">40</span>);
+    path.close();
+}
+
+<span class="dt">void</span> ofApp::draw(){
+    path.draw();
+}</code></pre>
+<p>Unlike ofPolyline, ofPath draws filled shapes by default. As you may have noticed by now, ofFill/NoFill doesn't effect ofPolyline or ofPath. That's because they also follow the more modern openGL paradigm where most global state values are deprecated. For example if you use openGL 3+, <code>glColor4f</code> or <code>glLineWidth</code> don't exist anymore. Instead, you can set the color per vertex on every shape or use a shader to specify a color or line thickness. We'll see this when tallking about ofMesh.</p>
+<p>ofPath allows us to specify if we want to draw it with outline, fill, color, and width per path, so those properties are local to each path instead of specifying them globally:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//ofApp.h</span>
+
+ofPath path;
+
+<span class="co">//ofApp.cpp</span>
+
+<span class="dt">void</span> ofApp::setup(){
+    path.moveTo(<span class="dv">20</span>,<span class="dv">20</span>);
+    path.lineTo(<span class="dv">40</span>,<span class="dv">20</span>);
+    path.lineTo(<span class="dv">40</span>,<span class="dv">40</span>);
+    path.lineTo(<span class="dv">20</span>,<span class="dv">40</span>);
+    path.close();
+    path.setStrokeColor(ofColor::blue);
+    path.setFillColor(ofColor::red);
+    path.setFilled(<span class="kw">true</span>);
+    path.setStrokeWidth(<span class="dv">2</span>);
+}
+
+<span class="dt">void</span> ofApp::draw(){
+    path.draw();
+}</code></pre>
+<p>This avoids several problems, for example when using global colors, a function needs to store the current color, draw something, and then restore the previous color. Storing the color of a shape in the same object makes it easier to draw several things without having to care about the global color or keeping the global state as it was.</p>
+<p>Globals in programming are usually a bad idea, and the way openGL has worked untill now was heavily based on globals. Associating every attribute of a shape to the object that represents it solves several problems and is a more object oriented way of doing things.</p>
+<p>ofPath packages even more interesting stuff. For example, when we draw a path the first time, ofPath internally calculates it's tessellation and stores it in an ofVboMesh, keeping its vertices in the GPU. If the vertices haven't changed when we draw an ofPath the next time, the vertices don't need to be uploaded again to the graphics card. This makes things really fast.</p>
+<p>You can actually access that tessellation using:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//ofApp.h</span>
+
+ofPath path;
+ofVboMesh tessellation;
+
+<span class="co">//ofApp.cpp</span>
+
+<span class="dt">void</span> ofApp::setup(){
+    path.moveTo(<span class="dv">20</span>,<span class="dv">20</span>);
+    path.lineTo(<span class="dv">40</span>,<span class="dv">20</span>);
+    path.lineTo(<span class="dv">40</span>,<span class="dv">40</span>);
+    path.lineTo(<span class="dv">20</span>,<span class="dv">40</span>);
+    path.close();
+    path.setStrokeColor(ofColor::blue);
+    path.setFillColor(ofColor::red);
+    path.setFilled(<span class="kw">true</span>);
+    path.setStrokeWidth(<span class="dv">2</span>);
+    tessellation = path.getTessellation();
+}
+
+<span class="dt">void</span> ofApp::draw(){
+    tessellation.drawWireframe();
+}</code></pre>
+<p>The tessellation only represents the fill of our shape. If the path has no fill, it'll return an empty mesh.</p>
+<p>We can also access the outlines of an ofPath as a vector of ofPolylines using <code>path.getOutline()</code></p>
+<blockquote>
+<p>Advanced note: ofPath works with similar API to other formats and libraries for 2D drawing, like SVG, cairo, or nvidia's path rendering openGL extension. That makes it easier to use it not only to draw to the screen using openGL but also to other formats like vectorial formats like PDF or SVG through the cairo renderer in openFrameworks. The use of the cairo renderer is outside of the scope of this chapter, but the important thing to know is that ofPath stores primitives in their original format as ofPath::Commands. Those commands are things like lineTo, bezierTo... and usually end up decomposed in polylines, and later on tesselated if we want to draw them as filled shapes. That's mainly because openGL doesn't know how to decompose things like a bezier into line segments or tessellate a shape but other formats like an SVG or PDF do. When rendering through the cairo renderer ofPath won't decompose or tessellate shapes. Instead it will just send the original primitives to the renderer which will later scale well no matter how big or small we want to show them. Usually we don't need to be aware of this, since openFrameworks will know internally which kind of representation of ofPath it's better to use. If you are working with openGL only there's a flag that can be activated <code>path.setMode(ofPath::POLYLINES)</code> which will make that path override the creation of primitives and work directly with ofPolylines which can be slightly faster in certain cases, mostly if you are creating a really high number of paths and modifying them frequently.</p>
+</blockquote>
+<h2 id="d">3D</h2>
+<p>The same way that we have objects to create 2D shapes and draw them later, there's similar classes to work with 3D like ofMesh, ofVboMesh, and of3dPrimitive. Before looking at them, let's see a another topic related to how things are done in the newest versions of openGL and learn the openFrameworks equivalent.</p>
+<h3 id="transformation-matrices">Transformation matrices</h3>
+<p>If you've worked with processing, openFrameworks or similar frameworks you are probably used to position things in the screen doing something like:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">ofTranslate(<span class="dv">20</span>,<span class="dv">20</span>);
+ofRotate(<span class="dv">45</span>);
+ofDrawRectangle(<span class="dv">20</span>,<span class="dv">20</span>,<span class="dv">20</span>,<span class="dv">20</span>);</code></pre>
+<p>This draws a square rotated 45 degrees around it's top-left corner. Usually you would enclose that between <code>ofPush/PopMatrix</code> so later drawings won't be affected by the transformations that we've just applied.</p>
+<p>This comes from the openGL equivalent:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">glTranslatef(<span class="dv">20</span>,<span class="dv">20</span>);
+glRotatef(<span class="dv">45</span>);
+ofDrawRectangle(<span class="dv">20</span>,<span class="dv">20</span>,<span class="dv">20</span>,<span class="dv">20</span>);</code></pre>
+<p>This is also deprecated since openGL 3. What!? "I can't do use translate/rotate/scale anymore?", you might ask. Well, in openFrameworks you can still use the equivalent <code>ofTranslate/Rotate/Scale</code> if you want, but that has a number of problems and that's why they've been deprecated. Let's see why:</p>
+<p>We've seen how, when drawing things in most modern versions of openGL, the paradigm is to create the shape once and then draw it several times with transformations. Each call to ofTranslate, Rotate, Scale, or the gl equivalents for that matter, are doing a multiplication of 4x4 matrices. This is not really that slow, unless you are doing it tons of times. But we can avoid it somehow. Instead of doing all of the multiplications of the matrices every frame, we can use an ofMatrix4x4 for each shape we use, do all of that shape's transformations once (or every time the shape moves), and apply them later when we want to draw that frame:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//ofApp.h</span>
+ofPath path
+ofMatrix4x4 m;
+
+<span class="co">//ofApp.cpp</span>
+<span class="dt">void</span> ofApp::setup(){
+    path.moveTo(<span class="dv">20</span>,<span class="dv">20</span>);
+    path.lineTo(<span class="dv">40</span>,<span class="dv">20</span>);
+    path.lineTo(<span class="dv">40</span>,<span class="dv">40</span>);
+    path.lineTo(<span class="dv">20</span>,<span class="dv">40</span>);
+    path.close();
+    m.rotate(<span class="dv">45</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>);
+    m.translate(<span class="dv">20</span>,<span class="dv">20</span>,<span class="dv">0</span>);
+}
+
+<span class="dt">void</span> ofApp::draw(){
+    ofMultMatrix(m);
+    path.draw();
+}</code></pre>
+<p>Now we are avoiding 1 matrix multiplications every frame. That's not much really, and probably for something like this is just easier to keep using ofTranslate and ofRotate, but you get the idea. If we have hundreds of transformations, storing them only when they change makes things faster.</p>
+<p>Also if we encapsulate each geometry with it's transformation by having objects that contain an ofPath and an ofMatrix4x4 we'll avoid confusing global states. Each shape sets it's transformations before drawing.</p>
+<p>In openFrameworks, the classes that apply transformations still return the matrix to it's original state so things will work as before.</p>
+<p>If you want to know more about how transformation matrices work you should check out the chapter on mathematics. The purpose of this chapter is not so much to show how they work, but rather the newest paradigms in the latest versions of openGL.</p>
+<p>In openFrameworks, there's a utility class called ofNode, that allows you to apply complex transformations like set an object to look to another, set a hierarchy of nodes... When working with 3D it's useful to keep an ofNode along with every mesh that represents it's transformations, so when you draw each mesh, instead of using ofTranslate, rotate, scale you can just apply the transformation of it's node using <code>node.transformGL()</code>. This will multiply the current matrix by the one in the node. When you are done you can use <code>node.restoreTransformGL()</code>to go back to the previous state.</p>
+<p>The most important idea of this section is that when working with complex transformations, instead of using ofTranslate/Rotate/Scale, it is usually easier to implement an ofNode associated to each mesh or shape that you draw. This is also much easier for readability. For meshes, there's a new class in openFrameworks since 0.8.0 called of3dPrimitive, that internally has an ofVboMesh and an ofNode so you can use this pattern in an easy way.</p>
+<h3 id="ofcamera">ofCamera</h3>
+<p>When using openGL, we always have a perspective matrix that affects how 3D objects are projected into the 2d surface, that is the screen, to give appearance of 3D. There's several ways to setup that matrix, but usually we need to know the FOV. The FOV, or field of view, is the angle that the virtual camera, that we are looking through, can see. We also need the near and far clip planes. These define the distance at which things begin and end to be drawn. Finally, we need the width and height of the viewport. All of those parameters define a frustrum, a 6 sides polyhedra that defines the bounding box of things that will appear in the screen as well as how they'll be projected from 3D into 2D.</p>
+<p>We also have a second matrix, called the model view, which defines the location of the virtual camera through which we look at the scene. The view matrix is actually the inverse of the matrix that defines the position of the camera, so when we alter it we actually transform the position, rotation and scale of things being drawn. It's this matrix that gets modified by default when we use ofTranslate, ofRotate and ofScale. Again there's more information about this in the maths chapter.</p>
+<p>By default, openFrameworks sets a projection matrix with a FOV of 60, width and height of the screen, and clip planes automatically calculated from the other parameters. It then calculates a model view that "moves the virtual camera" back from 0,0 to a position where the top left of the screen matches with 0,0 and the bottom right with width,height.</p>
+<p>In openGL however, by default, those matrices are set to the identity matrix which makes the center of the screen (0,0), the top left corner (1,-1) and the bottom right corner (-1,1). You might have noticed that, in openGL, the y coordinate grows upward while in openFrameworks, it grows downwards. This is to avoid confusion and make it easier to work with images or mouse coordinates in openFrameworks, as they also grow downwards. Other libraries we use also follow that convention. Since 0.8.0 you can change that by calling: <code>ofSetOrientation(OF_ORIENTATION_DEFAULT,false)</code> being false a false vertical flip so y will grow upwards.</p>
+<p>So most of the time, especially when working with 2D, these perspective settings are enough. We can draw things and the coordinates will match nicely with the size of the screen in pixels. When working with 3D though, we might need something more complex, like moving the camera along a scene or changing the field of view... That's what ofCamera allows.</p>
+<p>ofCamera is actually an ofNode, so you can do with it anything that you might do with an ofNode. For instance, you can set it to look to another object, or you could add it in a hierarchy of nodes so that when its parent moves it moves relatively to its parent position... the ofNode in the end defines where the camera is and where it's looking at, which in turn is the inverse of the view matrix that will get uploaded to openGL.</p>
+<p>On top of that, ofCamera allows you to set a perspective matrix. That's the matrix that defines how things will be projected to the 2D screen. To use it, usually we set it up like so:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">//ofApp.h</span>
+ofCamera camera;
+
+<span class="co">// ofApp.cpp</span>
+
+<span class="dt">void</span> ofApp::setup(){
+    camera.setFov(<span class="dv">60</span>);  <span class="co">// this will actually do nothing since 60 is the default</span>
+}
+
+<span class="dt">void</span> ofApp::draw(){
+    camera.begin();
+    <span class="co">// draw something</span>
+    camera.end();
+}</code></pre>
+<p>When using an ofCamera, 0,0 will be at the center of the screen, and y will grow upwards. With the default settings, the top,left of the screen will be (-w/2,h/2) and the bottom,right (w/2,-h/2).</p>
+<p>As we see in the example to draw things as if they were looked at from the camera we call <code>camera.begin()</code> draw them and then call <code>camera.end()</code> to stop using that camera and go back to the perspective that openFrameworks sets by default, or whatever we had setup before.</p>
+<p>While our application runs, we can tweak the camera parameters in update to move it, make it look at some object, rotate it, or even change the fov which will look like changing the "zoom" of a real camera.</p>
+<h3 id="ofmesh">ofMesh</h3>
+<p>In openFrameworks, the ofMesh class allows us to represent a 3D model. Internally, it's just a bunch of vectors. Each vector represents one mesh attribute. Those attributes are: vertices, colors, texture coordinates and normals. Each mesh should usually have the same number of each of those attributes unless it's not using one of them in which case it'll be empty.</p>
+<p>For example to define a mesh that draws a red square we can do:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// ofApp.h</span>
+
+ofMesh mesh;
+
+<span class="co">// ofApp.cpp</span>
+
+<span class="dt">void</span> ofApp::setup(){
+    mesh.addVertex(ofVec3f(<span class="dv">20</span>,<span class="dv">20</span>));
+    mesh.addColor(ofColor::red);
+    mesh.addVertex(ofVec3f(<span class="dv">40</span>,<span class="dv">20</span>));
+    mesh.addColor(ofColor::red);
+    mesh.addVertex(ofVec3f(<span class="dv">40</span>,<span class="dv">40</span>));
+    mesh.addColor(ofColor::red);
+    mesh.addVertex(ofVec3f(<span class="dv">20</span>,<span class="dv">40</span>));
+    mesh.addColor(ofColor::red);
+    mesh.setMode(OF_PRIMITIVE_TRIANGLE_FAN);
+}
+
+<span class="dt">void</span> ofApp::draw(){
+    mesh.draw();
+}</code></pre>
+<p>or</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// ofApp.h</span>
+
+ofMesh mesh;
+
+<span class="co">// ofApp.cpp</span>
+
+<span class="dt">void</span> ofApp::setup(){
+    mesh.addVertex(ofVec3f(<span class="dv">20</span>,<span class="dv">20</span>));
+    mesh.addVertex(ofVec3f(<span class="dv">40</span>,<span class="dv">20</span>));
+    mesh.addVertex(ofVec3f(<span class="dv">40</span>,<span class="dv">40</span>));
+    mesh.addVertex(ofVec3f(<span class="dv">20</span>,<span class="dv">40</span>));
+    mesh.addColor(ofColor::red);
+    mesh.addColor(ofColor::red);
+    mesh.addColor(ofColor::red);
+    mesh.addColor(ofColor::red);
+    mesh.setMode(OF_PRIMITIVE_TRIANGLE_FAN);
+}
+
+<span class="dt">void</span> ofApp::draw(){
+    mesh.draw();
+}</code></pre>
+<p>Remember that the mesh is just several vectors, one per attribute of the vertices so every color we add is applied to the vertex in the same position, that way we can do things like define gradients:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// ofApp.h</span>
+
+ofMesh mesh;
+
+<span class="co">// ofApp.cpp</span>
+
+<span class="dt">void</span> ofApp::setup(){
+    mesh.addVertex(ofVec3f(<span class="dv">20</span>,<span class="dv">20</span>));
+    mesh.addColor(ofColor::red);
+    mesh.addVertex(ofVec3f(<span class="dv">40</span>,<span class="dv">20</span>));
+    mesh.addColor(ofColor::red);
+    mesh.addVertex(ofVec3f(<span class="dv">40</span>,<span class="dv">40</span>));
+    mesh.addColor(ofColor::blue);
+    mesh.addVertex(ofVec3f(<span class="dv">20</span>,<span class="dv">40</span>));
+    mesh.addColor(ofColor::blue);
+    mesh.setMode(OF_PRIMITIVE_TRIANGLE_FAN);
+}
+
+<span class="dt">void</span> ofApp::draw(){
+    mesh.draw();
+}</code></pre>
+<p>Same goes for texture coordinates and normals. Each of them applies, again, to the vertex in the same position:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// ofApp.h</span>
+
+ofMesh mesh;
+ofImage img;
+
+<span class="co">// ofApp.cpp</span>
+
+<span class="dt">void</span> ofApp::setup(){
+    mesh.addVertex(ofVec3f(<span class="dv">20</span>,<span class="dv">20</span>));
+    mesh.addTexCoord(ofVec2f(<span class="dv">0</span>,<span class="dv">0</span>));
+    mesh.addVertex(ofVec3f(<span class="dv">40</span>,<span class="dv">20</span>));
+    mesh.addTexCoord(ofVec2f(<span class="dv">20</span>,<span class="dv">0</span>));
+    mesh.addVertex(ofVec3f(<span class="dv">40</span>,<span class="dv">40</span>));
+    mesh.addTexCoord(ofVec2f(<span class="dv">20</span>,<span class="dv">20</span>));
+    mesh.addVertex(ofVec3f(<span class="dv">20</span>,<span class="dv">40</span>));
+    mesh.addTexCoord(ofVec2f(<span class="dv">0</span>,<span class="dv">20</span>));
+    mesh.setMode(OF_PRIMITIVE_TRIANGLE_FAN);
+    img.load(<span class="st">"some20x20img.png"</span>);
+}
+
+<span class="dt">void</span> ofApp::draw(){
+    img.bind();
+    mesh.draw();
+    img.unbind();
+}</code></pre>
+<p>When we add texture coordinates, we probably want to use a texture while drawing that mesh, to use a texture we use <code>bind()</code> on an ofImage or ofTexture and call <code>unbind()</code> when we are done using it. We can even draw several meshes that use the same texture by calling bind/unbind once and drawing all of them in between and it's actually recomended since changing the openGL state, the binded texture in this case, it's relatively slow.</p>
+<p>We could even combine color and texture tinting the texture with the color we apply to each vertex.</p>
+<p>There's more information about how ofMesh works in this <a href="http://openframeworks.cc/tutorials/graphics/opengl.html" target="_blank">tutorial</a>.</p>
+<h3 id="ofvbomesh">ofVboMesh</h3>
+<p>ofVboMesh is a simple class that encapsulates a vbo and inherits from ofMesh. That means that we can use it exactly the same as an ofMesh, that it is actually an ofMesh, but when it's drawn, instead of uploading all the vertices to the graphics card every time call draw on it, it uploads them once when we draw for the first time and only uploads them again if they change. Usually when working with openGL it is advised to use ofVboMesh instead of ofMesh.</p>
+<p>There's a case where using an ofVboMesh might be slower, and that's if we want to draw an ofVboMesh, modify it's vertices and then draw it again in the same frame. The problem here is that openGL doesn't really draw things as soon as we tell it to draw. Instead, it stores all the drawing commands and then draws all of them at once and in parallel with the execution of our program. When we try to draw a vbo, modify it's contents and then draw it again in the same frame, openGL would need to really draw the vbo at that exact moment, which means drawing everything else up to that point. That would slow things down a lot. If you need to do something like this, make a copy of the vbo and modify the copy instead of the original. In general don't draw, modify and redraw a vbo in the same frame:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// ofApp.h</span>
+
+ofVboMesh mesh;
+
+<span class="co">// ofApp.cpp</span>
+
+<span class="dt">void</span> ofApp::setup(){
+    mesh.addVertex(ofVec3f(<span class="dv">20</span>,<span class="dv">20</span>));
+    mesh.addVertex(ofVec3f(<span class="dv">40</span>,<span class="dv">20</span>));
+    mesh.addVertex(ofVec3f(<span class="dv">40</span>,<span class="dv">40</span>));
+    mesh.addVertex(ofVec3f(<span class="dv">20</span>,<span class="dv">40</span>));
+    mesh.setMode(OF_PRIMITIVE_TRIANGLE_FAN);
+}
+
+<span class="dt">void</span> ofApp::draw(){
+    mesh.draw();
+    mesh.getVertices()[<span class="dv">1</span>].x+=<span class="fl">0.1</span>;
+    mesh.draw(); <span class="co">// slow!!</span>
+}</code></pre>
+<p>instead do:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// ofApp.h</span>
+
+ofVboMesh mesh;
+ofVboMesh mesh2;
+
+<span class="co">// ofApp.cpp</span>
+
+<span class="dt">void</span> ofApp::setup(){
+    mesh.addVertex(ofVec3f(<span class="dv">20</span>,<span class="dv">20</span>));
+    mesh.addVertex(ofVec3f(<span class="dv">40</span>,<span class="dv">20</span>));
+    mesh.addVertex(ofVec3f(<span class="dv">40</span>,<span class="dv">40</span>));
+    mesh.addVertex(ofVec3f(<span class="dv">20</span>,<span class="dv">40</span>));
+    mesh.setMode(OF_PRIMITIVE_TRIANGLE_FAN);
+    mesh2 = mesh;
+}
+
+<span class="dt">void</span> ofApp::update(){
+    mesh.getVertices()[<span class="dv">1</span>].x+=<span class="fl">0.1</span>;
+    mesh2.getVertices()[<span class="dv">1</span>].x=mesh.getVertices()[<span class="dv">1</span>].x + <span class="fl">0.1</span>;
+}
+
+<span class="dt">void</span> ofApp::draw(){
+    mesh.draw();
+    mesh2.draw(); <span class="co">// fast!!</span>
+}</code></pre>
+<h3 id="of3dprimitive">of3dPrimitive</h3>
+<p>As we've mentioned before, of3dPrimitive is a helper class that encapsulates an ofVboMesh and inherits from ofNode. You can call any method you would call on an ofNode, because of how inheritance works, it is actually an ofNode so we can change it's position, rotate it, make it look to some other node, add it to a node hierarchy... And when you call <code>draw</code> on it, it'll draw the mesh it contains applying the transformation defined by it's node.</p>
+<p>There's several predefined 3D primitives, like <code>ofPlanePrimitive</code>, <code>ofSpherePrimitive</code>, <code>ofIcoSpherePrimitive</code> or <code>ofCylinderPrimitive</code> which know about the particulars of the geometry of the mesh they contain. This makes it easy to apply textures to it or change the resolution of the mesh...</p>
+<p>Or you can create your own using <code>of3dPrimitive</code> directly:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// ofApp.h</span>
+
+of3dPrimitive primitive;
+
+<span class="co">// ofApp.cpp</span>
+
+<span class="dt">void</span> ofApp::setup(){
+    primitive.getMesh().addVertex(ofVec3f(<span class="dv">20</span>,<span class="dv">20</span>));
+    primitive.getMesh().addVertex(ofVec3f(<span class="dv">40</span>,<span class="dv">20</span>));
+    primitive.getMesh().addVertex(ofVec3f(<span class="dv">40</span>,<span class="dv">40</span>));
+    primitive.getMesh().addVertex(ofVec3f(<span class="dv">20</span>,<span class="dv">40</span>));
+    primitive.getMesh().setMode(OF_PRIMITIVE_TRIANGLE_FAN);
+}
+
+<span class="dt">void</span> ofApp::update(){
+    primitive.move(ofVec3f(<span class="dv">10</span>,<span class="dv">0</span>,<span class="dv">0</span>));
+}
+
+<span class="dt">void</span> ofApp::draw(){
+    primitive.draw();
+}</code></pre>
+<blockquote>
+<p>Note: While the example above aims to show how to use of3dPrimitive to create custom geometries while being simple enough to fit in this context, usually is not a good idea to use of3dPrimitive for simple primitives like the one above. Calculating the transformations of an ofNode is kind of expensive in terms of CPU usage. For primitives with lots of vertices it's the way to go, but for something like the previous example it is usually just faster to recalculate all the points in their new position using an ofVboMesh</p>
+</blockquote>
+<div class="footer">
+<div id="prev_chapter"><a href="generativemesh.html">&lt; Basics of Generating Meshes from an Image</a></div>
+<div id="next_chapter"><a href="shaders.html">Introducing Shaders &gt;</a></div>
+</div>
+<div id="help"><i>please note that this book / chapter is a work in progress.  Feel free to suggest edits / corrections <a href="https://github.com/openframeworks/ofbook" target="_blank">here</a></i></div>
+</div>
+</div>
+</body>
+</html>

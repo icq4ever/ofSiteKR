@@ -1,0 +1,611 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="pandoc" name="generator"/>
+<title>ofBook - Introducing OpenGL for OF</title>
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+<link href="../style/bootstrap.min.css" rel="stylesheet">
+<link href="../style/style.css" rel="stylesheet" type="text/css"/>
+<link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Merriweather:400,300,300italic,400italic,700,900,700italic,900italic" rel="stylesheet" type="text/css">
+<script src="../javascript/jquery-1.8.3.min.js"></script>
+<script src="../javascript/bootstrap.min.js"></script>
+<script src="../javascript/navbar.js"></script>
+</link></link></head>
+<body>
+<div class="banner">
+<div class="content-wrapper">
+<b>Work in progress!</b>
+        This is a preliminary version of ofBook, a collaboratively written book about openFrameworks.  Please post any issues, suggestions, comments on our <a href="https://github.com/openframeworks/ofBook/" target="_blank">repo</a>.
+    </div>
+</div>
+<div class="content-wrapper">
+<nav role="navigation">
+<ul id="nav-parts"><li class="group"><div class="groupTitle">Foreword</div><ul><li class="chapter"><div class="chapterTitle"><a href="foreword.html">foreword</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#책에관하여" target="_top">책에 관하여</a></li><li class="section"><a href="#credits" target="_top">Credits</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Basics</div><ul><li class="chapter"><div class="chapterTitle"><a href="of_philosophy.html">Philosophy</a></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="cplusplus_basics.html">C++ Language Basics</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#lookalive" target="_top">Look Alive!</a></li><li class="section"><a href="#iteration" target="_top">Iteration</a></li><li class="section"><a href="#compilingmyfirstapp" target="_top">Compiling My First App</a></li><li class="section"><a href="#beyondhelloworld" target="_top">Beyond Hello World</a></li><li class="section"><a href="#functions" target="_top">Functions</a></li><li class="section"><a href="#customfunctions" target="_top">Custom Functions</a></li><li class="section"><a href="#encapsulationofcomplexity" target="_top">Encapsulation of Complexity</a></li><li class="section"><a href="#variablespart1" target="_top">Variables (part 1)</a></li><li class="section"><a href="#conclusion" target="_top">Conclusion</a></li><li class="section"><a href="#ps" target="_top">PS.</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="setup_and_project_structure.html">oF structure</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#firstthingsfirst" target="_top">First things first</a></li><li class="section"><a href="#welcometoyournewkitchen" target="_top">Welcome to your new kitchen</a></li><li class="section"><a href="#runningexamples" target="_top">Running examples</a></li><li class="section"><a href="#offolderstructure" target="_top">oF folder structure</a></li><li class="section"><a href="#theofpantry" target="_top">The oF Pantry</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="intro_to_graphics.html">Graphics</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#brusheswithbasicshapes" target="_top">Brushes with Basic Shapes</a></li><li class="section"><a href="#brushesfromfreeformshapes" target="_top">Brushes from Freeform Shapes</a></li><li class="section"><a href="#movingtheworld" target="_top">Moving The World</a></li><li class="section"><a href="#nextsteps" target="_top">Next Steps</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#overview" target="_top">Overview</a></li><li class="section"><a href="#whatisobjectorientedprogramming" target="_top">What is Object Oriented Programming</a></li><li class="section"><a href="#howtobuildyourownclassessimpleclass" target="_top">How to build your own Classes (simple Class)</a></li><li class="section"><a href="#makeanobjectfromyourclass" target="_top">Make an Object from your Class</a></li><li class="section"><a href="#makeobjectsfromyourclass" target="_top">Make objects from your Class</a></li><li class="section"><a href="#makemoreobjectsfromyourclass" target="_top">Make more Objects from your Class</a></li><li class="section"><a href="#makeevenmoreobjectsfromyourclasspropertiesandconstructors" target="_top">Make even more Objects from your Class: properties and constructors</a></li><li class="section"><a href="#makeobjectsonthefly" target="_top">Make Objects on the fly</a></li><li class="section"><a href="#makinganddeleteasyouwishusingvectors" target="_top">Making and delete as you wish - using vectors</a></li><li class="section"><a href="#quickintrotopolymorphisminheritance" target="_top">Quick intro to polymorphism (inheritance)</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="how_of_works.html">how OF works</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#오픈프레임웍스코드의일반적인패턴설명" target="_top">오픈프레임웍스 코드의 일반적인 패턴 설명</a></li><li class="section"><a href="#setupupdatedraw" target="_top">setup, update, draw</a></li><li class="section"><a href="#클래스" target="_top">클래스</a></li><li class="section"><a href="#함수" target="_top">함수</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Approaches</div><ul><li class="chapter"><div class="chapterTitle"><a href="animation.html">Animation</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#background" target="_top">Background</a></li><li class="section"><a href="#animationinofusefulconcepts" target="_top">Animation in oF / useful concepts:</a></li><li class="section"><a href="#linearmovement" target="_top">Linear movement</a></li><li class="section"><a href="#functionbasedmovement" target="_top">Function based movement</a></li><li class="section"><a href="#simulation" target="_top">Simulation</a></li><li class="section"><a href="#wheretogofurther" target="_top">Where to go further</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="game_design.html">Experimental Game Development</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#howdogamedevelopersactuallymakegames" target="_top">How do game developers actually make games?</a></li><li class="section"><a href="#sowhatisoscanyway" target="_top">So what is OSC, anyway?</a></li><li class="section"><a href="#ourbasicgameandmakingitnotsobasic" target="_top">Our basic game–and making it not so basic</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="image_processing_computer_vision.html">image processing and computer vision</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#maybethereisamagicbullet" target="_top">Maybe There is a Magic Bullet</a></li><li class="section"><a href="#preliminariestoimageprocessing" target="_top">Preliminaries to Image Processing</a></li><li class="section"><a href="#이미지처리를얘기하기전에알아두어야할것들" target="_top">이미지처리를 얘기하기 전에 알아두어야 할것들</a></li><li class="section"><a href="#pointprocessingoperationsonimages" target="_top">Point Processing Operations on Images</a></li><li class="section"><a href="#acompleteworkflowbackgroundsubtraction" target="_top">A Complete Workflow: Background Subtraction</a></li><li class="section"><a href="#refinements" target="_top">Refinements</a></li><li class="section"><a href="#suggestionsforfurtherexperimentation" target="_top">Suggestions for Further Experimentation</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">I/O</div><ul><li class="chapter"><div class="chapterTitle"><a href="hardware.html">Hardware</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introduction" target="_top">introduction</a></li><li class="section"><a href="#소개" target="_top">소개</a></li><li class="section"><a href="#gettingstartedwithserialcommunication" target="_top">getting started with serial communication</a></li><li class="section"><a href="#시리얼통신시작하기" target="_top">시리얼 통신 시작 하기</a></li><li class="section"><a href="#digitalandanalogcommunication" target="_top">digital and analog communication</a></li><li class="section"><a href="#디지털과아날로그통신" target="_top">디지털과 아날로그 통신</a></li><li class="section"><a href="#usingserialforcommunicationbetweenarduinoandopenframeworks" target="_top">using serial for communication between arduino and openframeworks</a></li><li class="section"><a href="#lightsoncontrollinghardwareviadmx" target="_top">Lights On - controlling hardware via DMX</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="sound.html">Sound</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#gettingstartedwithsoundfiles" target="_top">Getting Started With Sound Files</a></li><li class="section"><a href="#gettingstartedwiththesoundstream" target="_top">Getting Started With the Sound Stream</a></li><li class="section"><a href="#why1to1" target="_top">Why -1 to 1?</a></li><li class="section"><a href="#timedomainvsfrequencydomain" target="_top">Time Domain vs Frequency Domain</a></li><li class="section"><a href="#reactingtoliveaudio" target="_top">Reacting to Live Audio</a></li><li class="section"><a href="#synthesizingaudio" target="_top">Synthesizing Audio</a></li><li class="section"><a href="#audiogotchas" target="_top">Audio Gotchas</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="network.html">Network</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#tcpvsudp" target="_top">TCP vs UDP</a></li><li class="section"><a href="#osc" target="_top">OSC</a></li></ul></div></li></ul></li><li class="group selected"><div class="groupTitle">Graphics</div><ul><li class="chapter selected"><div class="chapterTitle selected"><a href="openGL.html">Introducing OpenGL for OF</a></div><div class="chapterContents selected"><ul><li class="section selected"><a href="#introducing" target="_top">Introducing</a></li><li class="section"><a href="#vertices" target="_top">Vertices</a></li><li class="section"><a href="#meshes" target="_top">Meshes</a></li><li class="section"><a href="#vbos" target="_top">VBOs</a></li><li class="section"><a href="#abasic3dscene" target="_top">A Basic 3D Scene</a></li><li class="section"><a href="#matrices" target="_top">Matrices</a></li><li class="section"><a href="#textures" target="_top">Textures</a></li><li class="section"><a href="#cameras" target="_top">Cameras</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="lines.html">drawing lines</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#소개" target="_top">소개 ...</a></li><li class="section"><a href="#선그리기" target="_top">선 그리기</a></li><li class="section"><a href="#약간의노이즈abitofnoise" target="_top">약간의 노이즈A bit of noise</a></li><li class="section"><a href="#aweboflines" target="_top">A web of lines</a></li><li class="section"><a href="#makeasmoothlineinmovementina3dspace" target="_top">Make a smooth line in movement in a 3D space</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="generativemesh.html">Basics of Generating Meshes from an Image</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#basicsofgeneratingmeshesfromanimage1" target="_top">Basics of Generating Meshes from an Image</a></li><li class="section"><a href="#basicsworkingwithofmesh" target="_top">Basics: Working with ofMesh</a></li><li class="section"><a href="#generativemeshusinganimagetodrivethecreationofamesh" target="_top">Generative Mesh: Using an image to drive the creation of a mesh</a></li><li class="section"><a href="#manipulationsaddingeffectsthatmodifythemesh" target="_top">Manipulations: Adding effects that modify the mesh</a></li><li class="section"><a href="#nextsteps" target="_top">Next Steps</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="advanced_graphics.html">Advanced graphics</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#dimmediatemodevsofpolylineofpath" target="_top">2D, immediate mode vs ofPolyline/ofPath</a></li><li class="section"><a href="#d" target="_top">3D</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="shaders.html">Introducing Shaders</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introducing" target="_top">introducing</a></li><li class="section"><a href="#yourfirstshader" target="_top">Your first shader!</a></li><li class="section"><a href="#addinguniforms" target="_top">Adding Uniforms</a></li><li class="section"><a href="#addingsomeinteractivity" target="_top">Adding some interactivity</a></li><li class="section"><a href="#addingtextures" target="_top">Adding Textures</a></li><li class="section"><a href="#alphamasking" target="_top">Alpha Masking</a></li><li class="section"><a href="#multipletextures" target="_top">Multiple Textures</a></li><li class="section"><a href="#offbo" target="_top">ofFbo</a></li><li class="section"><a href="#texturesasdataegdisplacement" target="_top">Textures as Data (e.g. Displacement)</a></li><li class="section"><a href="#theendcongrats" target="_top">The End, Congrats!</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">C++</div><ul><li class="chapter"><div class="chapterTitle"><a href="threads.html">threads</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#쓰레드란무엇이고언제사용해야하는가" target="_top">쓰레드란 무엇이고 언제 사용해야 하는가</a></li><li class="section"><a href="#ofthread" target="_top">ofThread</a></li><li class="section"><a href="#스레드와opengl" target="_top">스레드와 openGL</a></li><li class="section"><a href="#ofmutex" target="_top">ofMutex</a></li><li class="section"><a href="#externalthreadsanddoublebuffering" target="_top">External threads and double buffering</a></li><li class="section"><a href="#ofscopedlock" target="_top">ofScopedLock</a></li><li class="section"><a href="#pococondition" target="_top">Poco::Condition</a></li><li class="section"><a href="#conclusion" target="_top">Conclusion</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="memory.html">memory of C++</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#컴퓨터메모리와변수" target="_top">컴퓨터 메모리와 변수</a></li><li class="section"><a href="#스택변수함수내의변수vs오브젝트내의변수" target="_top">스택 변수, 함수내의 변수 vs 오브젝트내의 변수</a></li><li class="section"><a href="#포인터와레퍼런스" target="_top">포인터와 레퍼런스</a></li><li class="section"><a href="#힙heap영역에서의변수들" target="_top">힙(heap) 영역에서의 변수들</a></li><li class="section"><a href="#메모리구조배열과vector" target="_top">메모리 구조, 배열과 vector</a></li><li class="section"><a href="#다른메모리구조리스트와맵" target="_top">다른 메모리 구조, 리스트와 맵</a></li><li class="section"><a href="#스마트포인터" target="_top">스마트 포인터</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="stl_vector.html">Introduction to vectors</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#quickreview" target="_top">Quick Review:</a></li><li class="section"><a href="#declaringavector" target="_top">Declaring a vector</a></li><li class="section"><a href="#addingelementstoavector" target="_top">Adding elements to a vector</a></li><li class="section"><a href="#resize" target="_top">resize</a></li><li class="section"><a href="#assign" target="_top">assign</a></li><li class="section"><a href="#accessingelementsofavector" target="_top">Accessing elements of a vector</a></li><li class="section"><a href="#erasingelementsofavector" target="_top">Erasing elements of a vector</a></li><li class="section"><a href="#iterators" target="_top">Iterators</a></li><li class="section"><a href="#sortingandshufflingavector" target="_top">Sorting and shuffling a vector</a></li><li class="section"><a href="#vectorsofobjects" target="_top">Vectors of objects</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="stl_map.html">let's play with Map, std::map</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#소개map이무엇인가요" target="_top">소개 : map이 무엇인가요?</a></li><li class="section"><a href="#map에값삽입하기" target="_top">map에 값 삽입하기</a></li><li class="section"><a href="#map에서요소삭제하기" target="_top">map에서 요소 삭제하기</a></li><li class="section"><a href="#map을훑기" target="_top">map을 훑기</a></li><li class="section"><a href="#map에서요소찾기" target="_top">map에서 요소 찾기</a></li><li class="section"><a href="#map에오브젝트저장하기" target="_top">map에 오브젝트 저장하기</a></li><li class="section"><a href="#multimap이란무엇인가요" target="_top">multimap이란 무엇인가요?</a></li><li class="section"><a href="#다른유용한메소드들" target="_top">다른 유용한 메소드들</a></li><li class="section"><a href="#추가참고자료역자에의해추가됨" target="_top">추가 참고 자료 (역자에 의해 추가됨)</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="c++11.html">C++ 11</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introduction" target="_top">Introduction</a></li><li class="section"><a href="#auto" target="_top">auto</a></li><li class="section"><a href="#forthingthings" target="_top">for (thing : things)</a></li><li class="section"><a href="#override" target="_top">override</a></li><li class="section"><a href="#lambdafunctions" target="_top">Lambda functions</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Advanced topics</div><ul><li class="chapter"><div class="chapterTitle"><a href="math.html">Math: From 1D to 4D</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#onedimensionusingchange" target="_top">One Dimension: Using Change</a></li><li class="section"><a href="#moredimensionssomelinearalgebra" target="_top">More Dimensions: Some Linear Algebra</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Platforms</div><ul><li class="chapter"><div class="chapterTitle"><a href="ios.html">ofxiOS</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#openframeworksoniosdevices" target="_top">OpenFrameworks on iOS devices.</a></li><li class="section"><a href="#intro" target="_top">Intro</a></li><li class="section"><a href="#introtoobjectivec" target="_top">Intro to Objective-C</a></li><li class="section"><a href="#underthehood" target="_top">Under the Hood</a></li><li class="section"><a href="#ofuikit" target="_top">OF &amp; UIKit</a></li><li class="section"><a href="#mediaplaybackandcapture" target="_top">Media Playback and Capture</a></li><li class="section"><a href="#lifehacks" target="_top">Life Hacks</a></li><li class="section"><a href="#appstore" target="_top">App Store</a></li><li class="section"><a href="#casestudies" target="_top">Case Studies</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Tools</div><ul><li class="chapter"><div class="chapterTitle"><a href="version_control_with_git.html">Version control with Git</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#whatisversioncontrolandwhyshouldyouuseit" target="_top">What is version control, and why should you use it?</a></li><li class="section"><a href="#differentversioncontrolsystems" target="_top">Different version control systems</a></li><li class="section"><a href="#introductiontogit" target="_top">Introduction to Git</a></li><li class="section"><a href="#popularguiclients" target="_top">Popular GUI clients</a></li><li class="section"><a href="#conclusion" target="_top">Conclusion</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="ofSketch.html">ofSketch</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#whatisofsketch" target="_top">What is ofSketch?</a></li><li class="section"><a href="#download" target="_top">Download</a></li><li class="section"><a href="#sketchformat" target="_top">Sketch Format</a></li><li class="section"><a href="#remotecoding" target="_top">Remote Coding</a></li><li class="section"><a href="#future" target="_top">Future</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="installation_up_4evr_macosx.html">Installation up 4evr</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#step1prepyoursoftwareandthecomputer" target="_top">Step 1: Prep your software and the computer</a></li><li class="section"><a href="#step2bootintoyoursoftware" target="_top">Step 2: Boot into your software</a></li><li class="section"><a href="#step3keepitupchamp" target="_top">Step 3: Keep it up (champ!)</a></li><li class="section"><a href="#step4rebootperiodically" target="_top">Step 4: Reboot periodically</a></li><li class="section"><a href="#step5checkinonitfromafar" target="_top">Step 5: Check in on it from afar.</a></li><li class="section"><a href="#step6testtesttest" target="_top">Step 6: Test, test, test.</a></li><li class="section"><a href="#additionaltipslogging" target="_top">Additional Tips: Logging</a></li><li class="section"><a href="#memoryleakmurderer" target="_top">Memory leak murderer</a></li><li class="section"><a href="#alternateresources" target="_top">Alternate resources:</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="installation_up_4evr_linux.html">installation up4ever - linux</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#몇가지추가적인팁" target="_top">몇가지 추가적인 팁:</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Case studies</div><ul><li class="chapter"><div class="chapterTitle"><a href="project_eva.html">Choreographies for Humans and Stars</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#projectoverview" target="_top">Project Overview</a></li><li class="section"><a href="#ideationandprototyping" target="_top">Ideation and Prototyping</a></li><li class="section"><a href="#findingthetechnicalsolutions" target="_top">Finding the Technical Solutions</a></li><li class="section"><a href="#developingthevisualizationsoftware" target="_top">Developing the Visualization Software</a></li><li class="section"><a href="#failsafesanddirtyfixes" target="_top">Fail-safes and dirty fixes</a></li><li class="section"><a href="#resultsandreception" target="_top">Results and Reception</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="project_joel.html">Anthropocene</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#theproject" target="_top">The Project</a></li><li class="section"><a href="#development" target="_top">Development</a></li><li class="section"><a href="#showtime" target="_top">Show time</a></li><li class="section"><a href="#postevent" target="_top">Post Event</a></li><li class="section"><a href="#teamandcredits" target="_top">Team and Credits</a></li><li class="section"><a href="#hardwareselection" target="_top">Hardware selection</a></li></ul></div></li></ul></li></ul>
+</nav>
+<div class="chapter-content">
+<h1 id="introducing-opengl-for-of">Introducing OpenGL for OF</h1>
+<p><em>by <a href="http://twitter.com/fctry2/" target="_blank">Joshua Noble</a></em></p>
+<h2 id="introducing">Introducing</h2>
+<p>First things first, OpenGL stands for Open Graphics Language but no one ever calls it that, they call it OpenGL, so we're going to do that too. Secondly, at a very high level, OpenGL is how your program on the CPU talks to the program on your GPU. What are those you ask? Well, the thing is that your computer is actually made out of a few different devices that compute, the Central Processing Unit and Graphics Processing Unit among them. The CPU is what runs most of what you think of as your OF application, starting up, keeping track of time passing, loading data from the file system, talking to cameras or the sound card, and so on. However, the CPU doesn't know how to draw stuff on the screen. CPUs used to draw things to screen (and still do on some very miniaturized devices) but people realized that it was far faster and more elegant to have another computational device that just handled loading images, handling shaders, and actually drawing stuff to the screen. The thing is that talking from one device to another is kinda hard and weird. Luckily, there's OpenGL to make it slightly easier, and OF to handle a lot of the stuff in OpenGL that sucks.</p>
+<p>OpenGL’s main job is to help a programmer create code that creates points, lines, and polygons, and then convert those objects into pixels. The conversion of objects into pixels is called the "pipeline" of the OpenGL renderer and how that pipeline works at a high level is actually pretty important to understanding how to make OF do what you want it to and do it quickly. OF uses OpenGL for all of its graphics drawing but most of the calls are hidden. It actually uses an implementation of OpenGL called GLFW by default. All graphics calls in the ofGraphics class use calls to common OpenGL methods, which you can see if you open the class and take a look at what goes on in some of the methods. So, let's say you want to call OF line. Well, that actually calls ofGLRenderer::drawLine() which contains the following lines:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">	linePoints[<span class="dv">0</span>].set(x1,y1,z1);
+	linePoints[<span class="dv">1</span>].set(x2,y2,z2);
+
+	<span class="co">// use smoothness, if requested:</span>
+	<span class="kw">if</span> (bSmoothHinted) startSmoothing();
+
+	glEnableClientState(GL_VERTEX_ARRAY);
+	glVertexPointer(<span class="dv">3</span>, GL_FLOAT, <span class="kw">sizeof</span>(ofVec3f), &amp;linePoints[<span class="dv">0</span>].x);
+	glDrawArrays(GL_LINES, <span class="dv">0</span>, <span class="dv">2</span>);
+
+	<span class="co">// use smoothness, if requested:</span>
+	<span class="kw">if</span> (bSmoothHinted) endSmoothing();</code></pre>
+<p>Now, what's going on in there looks pretty weird, but it's actually fairly straight forward. Don't worry too much about the calls that are going on below, just check out the notes alongside them because, while the methods and variable names are kinda tricky, the fundamental ideas are not. So, we've got two points representing the beginning and end of our line, so we set those with the values we passed into ofDrawLine():</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">	linePoints[<span class="dv">0</span>].set(x1,y1,z1);
+	linePoints[<span class="dv">1</span>].set(x2,y2,z2);</code></pre>
+<p>If we're doing smoothing, let's go ahead and do it:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">		<span class="co">// use smoothness, if requested:</span>
+	<span class="kw">if</span> (bSmoothHinted) startSmoothing();</code></pre>
+<p>Alright, onto the tricky part:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">	glEnableClientState(GL_VERTEX_ARRAY); <span class="co">// #1</span>
+	glVertexPointer(<span class="dv">3</span>, GL_FLOAT, <span class="kw">sizeof</span>(ofVec3f), &amp;linePoints[<span class="dv">0</span>].x); <span class="co">// #2</span>
+	glDrawArrays(GL_LINES, <span class="dv">0</span>, <span class="dv">2</span>); <span class="co">// #3</span></code></pre>
+<p>What we're doing is saying:</p>
+<ol style="list-style-type: decimal">
+<li>Hey, GPU, I'm about to send you an array and that array is the vertices of something I want you to draw.</li>
+<li>Ok, GPU, you're all ready for the array, here it is. There's 3 values in each point (x,y,z), the values are each floating point numbers, each object I'm sending over is the size of an ofVec3f object, and here's a pointer to the beginning of the first one.</li>
+<li>Ok GPU, now with the vertices that I just sent over, draw a line starting at the first item in the array, that's made up of two vertices.</li>
+</ol>
+<p>That's kinda gnarly but comprehensible, right? The thing is though, that even though it's a bit weird, it's really fast. openFrameworks code uses something called Vertex Arrays (note the "glEnableClientState(GL_VERTEX_ARRAY)") to draw points to the screen. The particulars of how these work is not super important to understand in order to draw in 3-D, but the general idea is important to understand; pretty much everything that you're drawing revolves around passing some vertices to the graphics card so that you can tell OpenGL where something begins and ends. That "something" could be just a line, it could be a texture from a video, it could be a point in a 3D model of a bunny rabbit, but it's all going to have some points in space passed in using an array of one kind of another. There are all kinds of extra things you can tell OpenGL about your vertices but you pretty much always need to make some vertices and pass them along.</p>
+<p>Alright, so that's what some OpenGL looks like, how does this all work? Take a look at the following diagram.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/openGL/images/pipeline.png" target="_blank"><img alt="pipeline" src="../images/openGL/images/pipeline.png"/></a></div><div class="caption">pipeline</div>
+</div></div>
+<p>For those of your who've read other OpenGL tutorials you may be wondering: why do these all look the same? Answer: because there's really no other way to describe it. You start with vertices and you end up with rastered pixels. Much like other inevitable things in life, that's all there is to it.</p>
+<h2 id="vertices">Vertices</h2>
+<p>Vertices define points in 3d space that are going to be used to place textures, create meshes, draw lines, and set the locations of almost any other drawing operation in openFrameworks. Generally speaking, you make some vertices and then later decide what you're going to do with them. Drawing a line rectangle is just making 4 points in space and connecting them with lines. Drawing an ofImage is defining 4 points in 3D space and then saying that you're going to fill the space in between them with the texture data that the ofImage uses. Drawing a 3D sphere is, unsurprisingly, just calculating where all the vertices for a sphere would need to go, defining those in an array, and then uploading that array to the graphics card so they can be drawn when sphere.draw() is called. Every time your OF application does any drawing, it's secretly creating vertices and uploading those to the graphics card using what's called a vertex array that gets uploaded to the graphics card. In some cases, like when you call ofDrawRectangle(), the vertices are hidden from you. In other cases, like when you create an ofPolyline, you're participating in generating those vertices explicitly. Let's take a closer look at how that works. You call</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">line.addVertex(x, y);</code></pre>
+<p>Underneath, that just adds that point as a new ofVec2f to the ofPolyline instance. When it comes time to draw them, we have the ofGLRenderer calling:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">if</span>(!poly.getVertices().empty()) {
+    <span class="co">// use smoothness, if requested:</span>
+    <span class="kw">if</span> (bSmoothHinted) startSmoothing();
+
+    glEnableClientState(GL_VERTEX_ARRAY);
+    glVertexPointer(<span class="dv">3</span>, GL_FLOAT, <span class="kw">sizeof</span>(ofVec3f), &amp;poly.getVertices()[<span class="dv">0</span>].x);
+    glDrawArrays(poly.isClosed()?GL_LINE_LOOP:GL_LINE_STRIP, <span class="dv">0</span>, poly.size());
+
+    <span class="co">// use smoothness, if requested:</span>
+    <span class="kw">if</span> (bSmoothHinted) endSmoothing();
+  }</code></pre>
+<p>So, really what you're doing is storing vertices and depending on whether you want OpenGL to close your application for you or not, you tell it in the glDrawArrays() method to either a) GL_LINE_LOOP close them all up or b) GL_LINE_STRIP don't close them all up. Again, like before, exactly what's going on there isn't super important, but it is good to understand that lines, rectangles, even meshes are all just vertices. Since I just mentioned meshes, lets talk about those! If you want some <a href="http://www.opengl.org/wiki/Vertex_Specification" target="_blank">more info</a>.</p>
+<h2 id="meshes">Meshes</h2>
+<p>The ofMesh is, like the ofPolyline, lots of vertices with some attendant information around them. In the case of a mesh though, there's a lot more information for some interesting reasons. An ofMesh represents a set of vertices in 3D spaces, and normals at those points, colors at those points, and texture coordinates at those points. Each of these different properties is stored in a vector. Vertices are passed to your graphics card and your graphics card fill in the spaces in between them in a processing usually called the rendering pipeline. The rendering pipeline goes more or less like this:</p>
+<ol style="list-style-type: decimal">
+<li><p>Say how you're going to connect all the points.</p></li>
+<li><p>Make some points.</p></li>
+<li><p>Say that you're done making points.</p></li>
+</ol>
+<p>You may be thinking: I'll just make eight vertices and voila: a cube. Not so quick. There's a hitch and that hitch is that the OpenGL renderer has different ways of connecting the vertices that you pass to it and none are as efficient as to only need eight vertices to create a cube. You've probably seen a version of the following image somewhere before.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/openGL/images/gl_vertices_options.jpg" target="_blank"><img alt="PRIMATIVES" src="../images/openGL/images/gl_vertices_options.jpg"/></a></div><div class="caption">PRIMATIVES</div>
+</div></div>
+<p>Generally you have to create your points to fit the drawing mode that you've selected. A vertex gets connected to another vertex in the order that the mode does its winding and this means that you might need multiple vertices in a given location to create the shape you want. The cube, for example, requires eighteen vertices, not the eight that you would expect. If you note the order of vertices in the GL chart above you'll see that all of them use their vertices slightly differently (in particular you should make note of the GL_TRIANGLE_STRIP above). Drawing a shape requires that you keep track of which drawing mode is being used and which order your vertices are declared in.</p>
+<p>If you're thinking: it would be nice if there were an abstraction layer for this you're thinking right. Enter the mesh, which is really just an abstraction of the vertex and drawing mode that we started with but which has the added bonus of managing the draw order for you. That may seem insignificant at first, but it provides some real benefits when working with complex geometry. You still do need to be able to think about how your vertices work. For instance, let's say we want to draw a square. Well, a square is 4 points, so we've got it figured out, right?</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">
+    ofMesh quad;
+
+    quad.addVertex(ofVec3f(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>));
+    quad.addVertex(ofVec3f(<span class="dv">500</span>, <span class="dv">0</span>, <span class="dv">1</span>));
+    quad.addVertex(ofVec3f(<span class="dv">500</span>, <span class="dv">389</span>, <span class="dv">1</span>));
+    quad.addVertex(ofVec3f(<span class="dv">0</span>, <span class="dv">389</span>, <span class="dv">1</span>));
+
+    quad.draw();</code></pre>
+<p>And then we get:</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/openGL/images/vertices_not_working.png" target="_blank"><img alt="vertices_not_working.png" src="../images/openGL/images/vertices_not_working.png"/></a></div><div class="caption">vertices_not_working.png</div>
+</div></div>
+<p>That's not right. What you need to remember is that the default setting of the mesh is to make triangles out of everything, so you need to make two triangles. What you've given OpenGL is interpreted like so:</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/openGL/images/vertices.png" target="_blank"><img alt="vertices.png" src="../images/openGL/images/vertices.png"/></a></div><div class="caption">vertices.png</div>
+</div></div>
+<p>You can use other drawing modes if you want but it's really best to stick with triangles (connected triangles to be precise) because they're so much more flexible than other modes and because they're best supported across different devices. Points and wires are also supported everywhere, quads for example, are not. Anyhow, let's draw our mesh correctly:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">    ofMesh quad;
+
+    <span class="co">// first triangle</span>
+    quad.addVertex(ofVec3f(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>));
+    quad.addVertex(ofVec3f(<span class="dv">500</span>, <span class="dv">0</span>, <span class="dv">1</span>));
+    quad.addVertex(ofVec3f(<span class="dv">500</span>, <span class="dv">389</span>, <span class="dv">1</span>));
+
+    <span class="co">// second triangle</span>
+    quad.addVertex(ofVec3f(<span class="dv">500</span>, <span class="dv">389</span>, <span class="dv">1</span>));
+    quad.addVertex(ofVec3f(<span class="dv">0</span>, <span class="dv">389</span>, <span class="dv">1</span>));
+    quad.addVertex(ofVec3f(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>));
+
+    <span class="co">// first triangle</span>
+    quad.addTexCoord(ofVec2f(<span class="dv">0</span>, <span class="dv">0</span>));
+    quad.addTexCoord(ofVec2f(<span class="dv">500</span>, <span class="dv">0</span>));
+    quad.addTexCoord(ofVec2f(<span class="dv">500</span>, <span class="dv">389</span>));
+
+    <span class="co">// second triangle</span>
+    quad.addTexCoord(ofVec2f(<span class="dv">500</span>, <span class="dv">389</span>));
+    quad.addTexCoord(ofVec2f(<span class="dv">0</span>, <span class="dv">389</span>));
+    quad.addTexCoord(ofVec2f(<span class="dv">0</span>, <span class="dv">0</span>));
+
+    quad.draw(); <span class="co">// now you'll see a square</span></code></pre>
+<p>And now we have a mesh, albeit a really simple one. Ok, actually, that's wrong, but it's wrong on purpose. As you can see, we have exactly duplicated some of our addVertex calls above. In a tiny little square it doesn't matter if we use a few extra vertices - but when you're modelling a giant particle blob or something like that, it'll matter a lot.</p>
+<p>That's where the index comes in. Indices are just a way of describing which sets of vertices in our vertex array go together to make triangles. The first 3 indices in the index array describe the vertices of the first triangle, the second 3 describe the second triangle, and so on. It's pretty rad and it saves you having to make and store more vertices than necessary. A more typical usage is something like the following:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span> width = <span class="dv">10</span>, height = <span class="dv">10</span>;
+ofMesh mesh;
+<span class="kw">for</span> (<span class="dt">int</span> y = <span class="dv">0</span>; y &lt; height; y++){
+    <span class="kw">for</span> (<span class="dt">int</span> x = <span class="dv">0</span>; x &lt; width; x++){
+        mesh.addVertex(ofPoint(x*<span class="dv">20</span>, y*<span class="dv">20</span>, <span class="dv">0</span>)); <span class="co">// make a new vertex</span>
+        mesh.addColor(ofFloatColor(<span class="dv">0</span>,<span class="dv">0</span>, <span class="dv">0</span>));  <span class="co">// add a color at that vertex</span>
+    }
+}
+
+<span class="co">// what this is basically doing is figuring out based on the way we inserted vertices</span>
+<span class="co">// into our vertex array above, which array indices of the vertex array go together</span>
+<span class="co">// to make triangles. the numbers commented show the indices added in the first run of</span>
+<span class="co">// this loop - notice here that we are re-using indices 1 and 10</span>
+<span class="kw">for</span> (<span class="dt">int</span> y = <span class="dv">0</span>; y &lt; height<span class="dv">-1</span>; y++){
+    <span class="kw">for</span> (<span class="dt">int</span> x=<span class="dv">0</span>; x &lt; width<span class="dv">-1</span>; x++){
+        mesh.addIndex(x+y*width);         <span class="co">// 0</span>
+        mesh.addIndex((x<span class="dv">+1</span>)+y*width);     <span class="co">// 1</span>
+        mesh.addIndex(x+(y<span class="dv">+1</span>)*width);     <span class="co">// 10</span>
+
+        mesh.addIndex((x<span class="dv">+1</span>)+y*width);     <span class="co">// 1</span>
+        mesh.addIndex((x<span class="dv">+1</span>)+(y<span class="dv">+1</span>)*width); <span class="co">// 11</span>
+        mesh.addIndex(x+(y<span class="dv">+1</span>)*width);     <span class="co">// 10</span>
+    }
+}
+ofTranslate(<span class="dv">20</span>, <span class="dv">20</span>);
+mesh.drawWireframe();</code></pre>
+<p>As we mentioned earlier when you’re using a mesh, drawing a square actually consists of drawing two triangles and then assembling them into a single shape. You can avoid needing to add multiple vertices by using 6 indices to connect the 4 vertices. That gets more complex when you start working with 3-D. You’re going to draw an icosahedron and to do that you’ll need to know how each of the vertices are connected to all of the others and add those indices. When you create your ofMesh instance, you’re going to add all the vertices first and then add all of the indices. Each vertex will be given a color so that it can be easily differentiated, but the bulk of the tricky stuff is in creating the vertices and indices that the icosahedron will use.</p>
+<p>This is the icosahedron.h header file:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">
+<span class="ot">#pragma once</span>
+<span class="ot">#include "ofMain.h"</span>
+
+<span class="dt">const</span> <span class="dt">int</span> X = <span class="dv">158</span>;
+<span class="dt">const</span> <span class="dt">int</span> Z = <span class="dv">256</span>;
+
+<span class="co">//This is the data for the vertices, which keeps the data as simple as possible:</span>
+<span class="dt">static</span> GLfloat vdata[<span class="dv">12</span>][<span class="dv">3</span>] = {
+{-X, <span class="fl">0.0</span>, Z}, {X, <span class="fl">0.0</span>, Z}, {-X, <span class="fl">0.0</span>, -Z}, {X, <span class="fl">0.0</span>, -Z},
+{<span class="fl">0.0</span>, Z, X}, {<span class="fl">0.0</span>, Z, -X}, {<span class="fl">0.0</span>, -Z, X}, {<span class="fl">0.0</span>, -Z, -X},
+{Z, X, <span class="fl">0.0</span>}, {-Z, X, <span class="fl">0.0</span>}, {Z, -X, <span class="fl">0.0</span>}, {-Z, -X, <span class="fl">0.0</span>} };
+
+<span class="co">//data for the indices, representing the index of the vertices</span>
+<span class="co">//that are to be connected into the triangle.</span>
+<span class="co">//You’ll notice that for 12 vertices you need 20 indices of 3 vertices each:</span>
+<span class="dt">static</span> GLint indices[<span class="dv">20</span>][<span class="dv">3</span>] = {
+{<span class="dv">0</span>,<span class="dv">4</span>,<span class="dv">1</span>}, {<span class="dv">0</span>,<span class="dv">9</span>,<span class="dv">4</span>}, {<span class="dv">9</span>,<span class="dv">5</span>,<span class="dv">4</span>}, {<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">8</span>}, {<span class="dv">4</span>,<span class="dv">8</span>,<span class="dv">1</span>}, {<span class="dv">8</span>,<span class="dv">10</span>,<span class="dv">1</span>}, {<span class="dv">8</span>,<span class="dv">3</span>,<span class="dv">10</span>}, {<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">8</span>}, {<span class="dv">5</span>,<span class="dv">2</span>,<span class="dv">3</span>}, {<span class="dv">2</span>,<span class="dv">7</span>,<span class="dv">3</span>}, {<span class="dv">7</span>,<span class="dv">10</span>,<span class="dv">3</span>}, {<span class="dv">7</span>,<span class="dv">6</span>,<span class="dv">10</span>}, {<span class="dv">7</span>,<span class="dv">11</span>,<span class="dv">6</span>}, {<span class="dv">11</span>,<span class="dv">0</span>,<span class="dv">6</span>}, {<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">6</span>}, {<span class="dv">6</span>,<span class="dv">1</span>,<span class="dv">10</span>}, {<span class="dv">9</span>,<span class="dv">0</span>,<span class="dv">11</span>}, {<span class="dv">9</span>,<span class="dv">11</span>,<span class="dv">2</span>}, {<span class="dv">9</span>,<span class="dv">2</span>,<span class="dv">5</span>}, {<span class="dv">7</span>,<span class="dv">2</span>,<span class="dv">11</span>}
+};
+
+<span class="kw">class</span> icosahedron : <span class="kw">public</span> ofBaseApp{
+
+<span class="kw">public</span>:
+  <span class="dt">float</span> ang;
+  ofMesh mesh;
+  <span class="dt">void</span> setup();
+  <span class="dt">void</span> update();
+  <span class="dt">void</span> draw();
+};</code></pre>
+<p>And now the cpp file:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="ot">#include "icosahedron.h"</span>
+
+<span class="dt">void</span> icosahedron::setup()
+{
+  ofColor color(<span class="dv">255</span>, <span class="dv">0</span>, <span class="dv">0</span>); <span class="dt">float</span> hue = <span class="fl">254.f</span>;
+
+  <span class="co">//Here’s where we finally add all the vertices to our mesh and add a color at each vertex:</span>
+  <span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i&lt;<span class="dv">12</span>; ++i)
+  {
+    mesh.addVertex( ofVec3f( vdata[i][<span class="dv">0</span>], vdata[i][<span class="dv">1</span>], vdata[i][<span class="dv">2</span>] ));
+    mesh.addColor(color);
+    color.setHue( hue );
+    hue -= <span class="fl">20.f</span>;
+  }
+
+  <span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i&lt;<span class="dv">20</span>; ++i)
+  {
+    mesh.addIndex(indices[i][<span class="dv">0</span>]);
+    mesh.addIndex(indices[i][<span class="dv">1</span>]);
+    mesh.addIndex(indices[i][<span class="dv">2</span>]);
+  }
+}
+
+<span class="co">// give it a little spin</span>
+<span class="dt">void</span> icosahedron::update(){
+  ang+=<span class="fl">0.1</span>;
+}
+
+<span class="dt">void</span> icosahedron::draw()
+{
+  ofBackground(<span class="dv">122</span>,<span class="dv">122</span>,<span class="dv">122</span>);
+  ofPushMatrix();
+  ofTranslate(<span class="dv">400</span>, <span class="dv">400</span>, <span class="dv">0</span>);
+  ofRotate(ang, <span class="fl">1.0</span>, <span class="fl">1.0</span>, <span class="fl">1.0</span>);
+  <span class="co">//Now it’s time to draw the mesh. The ofMesh has three drawing methods: drawFaces(),</span>
+  <span class="co">//which draws all the faces of the mesh filled; drawWireframe(), which draws lines</span>
+  <span class="co">//along each triangle; and drawVertices(), which draws a point at each vertex.</span>
+  <span class="co">//Since we want to see the colors we’re drawing, we’ll draw all the faces:</span>
+  mesh.drawFaces();
+  ofPopMatrix();
+}</code></pre>
+<p>The order that you add the indices is vital to creating the right object because, I know this sounds repetitive, it's really important to tell things what order they're supposed to be connected in so that they get turned from points in space into planes in space into objects. There's a reason the ofMesh has a drawWireframe() mode and that reason is that you can always just tell the OpenGL renderer "hey, I don't care about connecting these up, just show me the points". Otherwise, when you want proper faces and shades and the ability to wrap textures on things, you need to make sure that your vertices are connected correctly.</p>
+<h2 id="vbos">VBOs</h2>
+<p>A VBO is a way of storing all of the data of vertex data on the graphics card. You’ve perhaps heard of Vertex Arrays and Display Lists and the VBO is similar to both of these, but with a few advantages that we’ll go over very quickly. Vertex Arrays just let you store all the vertex data in an array on the client side, that is, on the CPU side and then send it to the graphics card when you’re ready to draw it. The downside of that is that you’re still storing the data on the client side and sending it over to the graphics card. So, instead of making all of our vertex data in what’s called “immediate mode”, which means between a glBegin() and glEnd() pair (which you might remember) you can just store vertex data in arrays and you can draw stuff by dereferencing the array elements with array indices. The Display List is a similar technique, using an array to store the created geometry, with the crucial difference that a Display List lives solely on the graphics card. That's a little better because we're not shipping things from one processor to another 60 times a second. This means that once you’ve created the vertex data for geometry, you can send it the graphics card and draw it simply by referencing the id of the stored data. The downside is that display lists can’t be modified. Once they’ve been sent to the card, you need to load them from the card, modify them, and then resend them to the card to see your changes applied. Since one of the conveniences of moving things to the graphics card is reducing the amount of traffic between the graphics card and the rest of your system. The VBO operates quite similarly to the Display List, with the advantage of allowing you to modify the geometry data on the graphics card without downloading all of it at once. So you make something, you store it on the graphics card, and when you're ready to upload it, you simply push the newly updated values leaving all the other ones intact and in the right place.</p>
+<p>So, in OF we use the ofVboMesh to represent all the vertices, how they're connected, any colors to be drawn at those vertices, and texture coordinates. Because it extends ofMesh, everything you learned about ofMesh applies here too. You create some points in space, you give indices to the mesh so that it knows which points in space should be connected, colors if you want each vertex to contain a color, and finally texture coordinates for when you want to apply textures to that VBO, and you should be good to go. Creating an ofVboMesh is really easy, you can, for example, just make an ofSpherePrimitive and load it into a mesh:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">    ofSpherePrimitive sphere;
+    sphere.set(<span class="dv">100</span>, <span class="dv">50</span>);
+    mesh = sphere.getMesh();</code></pre>
+<p>Adding colors is very easy:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">for</span>( <span class="dt">int</span> i = <span class="dv">0</span>; i &lt; mesh.getVertices().size(); i++ )
+{
+    mesh.addColor(ofFloatColor( <span class="dt">float</span>(i)/mesh.getVertices().size(), <span class="dv">0</span>, <span class="fl">1.0</span> - (<span class="dt">float</span>(i)/mesh.getVertices().size()) ));
+}</code></pre>
+<p>There's a few new tricks to VBOs that you can leverage if you have a new enough graphics card, for instance, the ability to draw a single VBO many many times and position them in the vertex shader. This is called instancing and it's available in the ofVboMesh in the drawInstanced() method. You can see an example of this being used in the vboMeshDrawInstancedExample in examples/gl. Generally speaking, if you have something that you know you're going to keep around for a long time and that you're going to draw lots of times in lots of different places, you'll get a speed increase from using a VBO. This isn't always true, but it's true enough of the time.</p>
+<p>Although that's nowhere close to everything about vertices and meshes, we're going to move on to another frequently misunderstood but vital part of OpenGL: matrices.</p>
+<h2 id="abasic3dscene">A Basic 3D Scene</h2>
+<p>Now take a breath. Before we go further and start dig into matrices, let's set up a simple scene that you can use as reference while reading the next part of this dense tutorial. Since OF version 0.9, you need 5 things to set up a 3D scene: a window, a camera, a material, a light and an object. Let's start from the window.</p>
+<p>Create a new project using the ProjectGenerator and edit the main.cpp file as follows. Since OF 0.9, that is the way to set up a window that uses the programmable pipeline. If you want to read in detail what was introduced with the 0.9 version, on the blog there is a <a href="http://blog.openframeworks.cc/post/133400454159/openframeworks-090-opengl-45" target="_blank">detailed review</a>, but for now it is not necessary.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">
+<span class="ot">#include "ofMain.h"</span>
+<span class="ot">#include "ofApp.h"</span>
+
+<span class="co">//========================================================================</span>
+<span class="dt">int</span> main( ){
+    ofGLFWWindowSettings settings;
+    settings.setGLVersion(<span class="dv">3</span>, <span class="dv">2</span>);
+    settings.width = <span class="dv">1280</span>;
+    settings.height = <span class="dv">720</span>;
+    ofCreateWindow(settings);
+    ofRunApp(<span class="kw">new</span> ofApp());
+}</code></pre>
+<p>Here you have defined the dimensions of our window and which OpenGL version we want to use.</p>
+<p>The second thing that you need is a camera and a light. Later on this tutorial you will see how to get full controll over your camera, for now let's do something really basic. Edit your App.cpp and App.h as follow</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">
+<span class="co">// Add this in the App.h</span>
+ofLight light;
+ofEasyCam cam;
+
+<span class="co">// add these lines to the setup and to the draw method in the App.cpp</span>
+<span class="dt">void</span> ofApp::setup(){
+    light.setup();
+    light.setPosition(-<span class="dv">100</span>, <span class="dv">200</span>,<span class="dv">0</span>);
+    ofEnableDepthTest();
+}
+
+<span class="dt">void</span> ofApp::draw(){
+    cam.begin();
+    <span class="co">// here you will draw your object</span>
+    cam.end();
+}</code></pre>
+<p>With this code you have accomplished two important things. It's a bit like making a movie, you have first to position the light, to turn it on, and then you have to put your camera in the right position. Now the set of our movie is ready for our first scene. If you run this code, you will see a gray screen. That is obvious, there is nothing under our camera. Let's put an actor (a simple box) under the reflectors.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">
+<span class="co">// add this to your App.h file</span>
+ofBoxPrimitive box;
+ofMaterial boxMaterial;
+
+<span class="co">// edit your App.cpp file and add these lines</span>
+<span class="dt">void</span> ofApp::setup(){
+    <span class="co">//...</span>
+    boxMaterial.setDiffuseColor(ofFloatColor::red);
+    boxMaterial.setShininess(<span class="fl">0.02</span>);
+}
+
+<span class="dt">void</span> ofApp::draw(){
+    cam.begin();
+        boxMaterial.begin();
+          box.draw();
+        boxMaterial.end();
+    cam.end();
+}</code></pre>
+<p>In this chunk of code you have added 2 things. The box, our main actor in this movie, and the material, that defines the color of the box and how it reacts to the light. If you run the code you will see a red box in the middle of your screen. In the next part we will see how to move things around using the incredible properties of the ofNode class, which simplifies all the matrices operations needed in a every 3D scene.</p>
+<h2 id="matrices">Matrices</h2>
+<p>Matrices are collections of vertices that are used to move things around. This is a very simplified definition, but for now take it as it is. In the previous example with the red box, OF automatically put the box in the center of the screen. But what if we want to position our box a bit on the right and a bit away from the camera? We have to use the <code>move</code> method. A method that internally applies a Matrix to our object and moves the object at the position that we want. The coordinates, in this example, are relative to the middle of the screen, in this case 0,0,0. But let's see how the position of our box changes.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">
+<span class="dt">void</span> ofApp::setup(){
+    <span class="co">//...</span>
+    box.move(<span class="dv">200</span>, <span class="dv">0</span>, -<span class="dv">200</span>);
+}</code></pre>
+<p>What if we want to define the position of an object not relative to the center of the screen, but relative to the position of another object? Think about drawing a car. You draw the body of the car, and then you draw the headlamp of the car, the wheels, and all the other parts that compose a car. If you define the position of all these object relative to the center of the screen (that in this case is the origin of the axes) you have to calculate the distance of every element from the center. But what if the car moves? you will have to recalculate all the positions of all the objects relative to the center, for each single element of the car. That would be terrible! To solve this problem, you have to define the position of each element composing the car not to be relative to the origin of the axis, but to be relative to the body of the car. In this way, moving the car will move all the parts that compose the car. What is happening under the hood, is a bunch of matrix operations. There is a first matrix that it is applied to the car, and that defines the position of the car relative to the center of the screen, and then there are other matrices, each for every element composing the car, that define the position of each element relative to the body of the car. You can find this example in the examples folder, under <code>examples/3d/ofNodeExample</code>.</p>
+<p>Let's add a sphere positioned 100 pixels left from the our box</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">
+<span class="co">//In your App.h file</span>
+ofSpherePrimitive sphere;
+
+<span class="co">// In your App.cpp file</span>
+<span class="dt">void</span> ofApp::setup(){
+    <span class="co">//...</span>
+    box.move(<span class="dv">200</span>, <span class="dv">0</span>, -<span class="dv">200</span>);
+    sphere.setParent(box);
+    sphere.move(-<span class="dv">100</span>,<span class="dv">0</span>,<span class="dv">0</span>);
+}
+
+<span class="dt">void</span> ofApp::draw(){
+    cam.begin();
+        box.draw();
+        sphere.draw();
+    cam.end();
+}</code></pre>
+<p>openFrameworks allows us to do matrix operations in an easy way. Under the hood, there are these 3 matrices that are defining how we see our object on the screen. We'll lay them all out really quickly (not because they're not important but because OF relieves you of having to do a ton of messing with them).</p>
+<p><em>The Model matrix</em></p>
+<p>A model, like our <code>box</code>, is defined by a set of vertices, which you can think of as ofVec3f objects, but are really just X,Y,Z coordinates of these vertices which are defined relative to the center point where the drawing started. You can think of this as the 0,0,0 of your "world space". Imagine someone saying "I'm 10 meters north". If you don't know where they started from, that's not super helpful, but if you did know where they started from, it's pretty handy. That's what the Model matrix is. For OF, this is the upper left hand corner of your window. Really these aren't super meaningful without a view onto them, which is why usually in OpenGL we're talking about the ModelView matrix. That's just the Model matrix time the View matrix, and that begs the question: what's the view matrix?</p>
+<p><em>The View matrix</em></p>
+<p>Little known fact: cameras don't move, when you want to look at something new, the world moves around the camera. If I'm standing in Paris and I want to take a picture of a different side of the Eiffel Tower, I just walk around to the other side. Imagine if instead I just made the entire earth spin around so I could see a different side of the Eiffel tower. Totally not practical in real life but really simple and handy in OpenGL.</p>
+<p>So initially your openFrameworks camera, an ofEasyCam instance let's say, is just at 0,0,0. To move the camera, you move the whole world, which is fairly easy because the location and orientation of our world is just matrices. So our <code>box</code> that thinks it's at 100,100, might actually be at 400,100 because of where our camera is located and it never needs to change its actual values. We just multiply everything by the location of the view matrix and voila: it's in the right place. That means this whole "moving the whole world" is really just moving a matrix over by doing a translate. We're going to dig into what that looks like in a second, right now we just want to get to the bottom of what the "camera" is: it's a matrix. And the relationship between a camera and where everything is getting drawn is called the ModelViewMatrix. Super important? Not really, but you're going to run into it now and again and it's good to know what it generally means.</p>
+<p><em>The Projection matrix</em></p>
+<p>Ok, so know what the world space is and what the view space is, how does that end up on the screen? Well, another thing that the camera has, in addition to a location and a thing that it's looking at (aka View Matrix) is the space that it sees. Just like a movie screen, you've got to at some point turn everything into a 2D screen. A vertex that happens to be at 0, 0 should be rendered at the center of the screen. But! We can’t just use the x and y coordinates to figure out where something should be on screen. We also need to figure out its Z depth because something in front of something should be drawn (and the thing behind it shouldn't). For two vertices with similar x and y coordinates, the vertex with the biggest z coordinate will be more on the center of the screen than the other. This is called a perspective projection and every ofCamera has a perspective transform that it applies to the ModelView matrix that makes it represent not only how to turn a vertex from world space plus camera space but also to add in how a vertex should be shown in the projection that the camera is making. Ok, so before projection, we’ve got stuff in Camera Space:</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/openGL/images/OF_GL_tutorial.jpg" target="_blank"><img alt="img" src="../images/openGL/images/OF_GL_tutorial.jpg"/></a></div><div class="caption">img</div>
+</div></div>
+<p>Now here's what that projection matrix does to it.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/openGL/images/OF_GL_tutorial1.jpg" target="_blank"><img alt="img" src="../images/openGL/images/OF_GL_tutorial1.jpg"/></a></div><div class="caption">img</div>
+</div></div>
+<p>Looks wrong, right? But when you look at through the camera, it will look right and <em>that</em> is the secret of the projection matrix: multiplying everything by it makes it all look correct. The frustum is cube and objects that are near to the camera are big and things far away are smaller.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/openGL/images/OF_GL_tutorial2.jpg" target="_blank"><img alt="img" src="../images/openGL/images/OF_GL_tutorial2.jpg"/></a></div><div class="caption">img</div>
+</div></div>
+<p>That reminds me of a <a href="http://www.youtube.com/watch?v=vh5kZ4uIUC0" target="_blank">Father Ted joke</a>. Unlike the toy cows, the projection matrix actually makes things far away small. Lots of times in OpenGL stuff we talk about either the ModelViewMatrix or the ModelViewProjectionMatrix. Both of those are just the different matrices multiplied by one another to get "where things are" and "where things are <em>on the screen</em>". Matrices themselves are the subject of a million different tutorials and explanations which range from awesome to useless but there is one thing that I want to put in here to explain a quick way to read and understand them in OpenFrameworks and OpenGL in general. There's a trick that I've learned to understand matrices which I'm going borrowing from Steve Baker for your edification. Here's an OpenGL matrix:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">float</span> m[<span class="dv">16</span>];</code></pre>
+<p>It's a 4x4 array like this:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">m[<span class="dv">0</span>]  m[<span class="dv">4</span>]  m[ <span class="dv">8</span>]  m[<span class="dv">12</span>]
+m[<span class="dv">1</span>]  m[<span class="dv">5</span>]  m[ <span class="dv">9</span>]  m[<span class="dv">13</span>]
+m[<span class="dv">2</span>]  m[<span class="dv">6</span>]  m[<span class="dv">10</span>]  m[<span class="dv">14</span>]
+m[<span class="dv">3</span>]  m[<span class="dv">7</span>]  m[<span class="dv">11</span>]  m[<span class="dv">15</span>]</code></pre>
+<p>If you're not scaling, shearing, squishing, or otherwise deforming your shapes, then you're going to be using the last row, m[3], m[7], m[11] will all be 0 and and m[15] will be one, so we'll skip it for a moment. and focus on the rest. m[12],m[13] and m[14] tell you the translation, i.e. where something is, so that's easy, and the rest tell you the rotation.</p>
+<p>So, this is the way that I always visualize this: imagine what happens to four points near to the origin after they are transformed by the matrix:</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/openGL/images/rotation1.png" target="_blank"><img alt="img" src="../images/openGL/images/rotation1.png"/></a></div><div class="caption">img</div>
+</div></div>
+<p>These are four vertices on a unit cube (i.e. what that's 1 x 1 x 1) that has one corner at the origin. So, what we can do is pull apart the matrix and use different elements to move that little cube around and get a better picture of what that matrix is actually representing.</p>
+<p>Skipping the translation part (the bottom row, 3, 7, 11), then the rotation part simply describes the new location of the points on the cube. So with no rotation at all, we just have:</p>
+<pre><code>(1,0,0)  ---&gt;  ( m[0], m[1], m[2] )
+(0,1,0)  ---&gt;  ( m[4], m[5], m[6] )
+(0,0,1)  ---&gt;  ( m[8], m[9], m[10])
+(0,0,0)  ---&gt;  ( 0, 0, 0 )</code></pre>
+<p>After that, you just add the translation onto each point so you get:</p>
+<pre><code>(1,0,0)  ---&gt;  ( m[0], m[1], m[2] ) + ( m[12], m[13], m[14] )
+(0,1,0)  ---&gt;  ( m[4], m[5], m[6] ) + ( m[12], m[13], m[14] )
+(0,0,1)  ---&gt;  ( m[8], m[9], m[10]) + ( m[12], m[13], m[14] )
+(0,0,0)  ---&gt;  ( 0, 0, 0 ) + ( m[12], m[13], m[14] )</code></pre>
+<p>That may seem a bit abstract but just imagine little cube at the origin. Think about where the cube ends up as the matrix changes. For example, looking at this matrix:</p>
+<pre><code>0.707, -0.707, 0,  0
+0.707,  0.707, 0,  0
+0    ,  0    , 1,  0
+0    ,  0    , 0,  1</code></pre>
+<p>When we draw that out, the X axis of our cube is now pointing somewhere between the X and Y axes, the Y axis is pointing somewhere between Y and negative X and the Z axis hasn't moved at all. The entire cube has been moved 1 units in X direction and 0 in the Y and Z:</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/openGL/images/rotation2.png" target="_blank"><img alt="img" src="../images/openGL/images/rotation2.png"/></a></div><div class="caption">img</div>
+</div></div>
+<p>What you'll tend to see in your ModelView matrix is a lot of rotation and translation to account for the position of your camera and of world space (that is, stuff in the rotation and translation parts of the matrix), what you'll tend to see in your projection matrix is some translation but mostly a lot of skewing (m[3], m[7], m[11]) to show how the camera deforms the world to make it look right on the screen. We're going to come back to matrices a little bit later in this article when we talk about cameras.</p>
+<p>There's tons more to know about matrices but we've got to move on to textures!</p>
+<h2 id="textures">Textures</h2>
+<p>So, really, a texture is a block of pixels on your GPU. That's different and importantly different, than a block of pixels stored on your CPU (i.e. in your OF application). You can't loop over the pixels in a texture because it's stored on the GPU, which is not where your program runs but you can loop over the pixels in an ofPixels object because those are stored on the CPU, which is where your OF application runs. OF has two ways of talking about bitmap data: ofPixels, stored on your CPU and ofTexture, stored on your GPU. An ofImage has both of these, which is why you can mess with the pixels and draw it to the screen.</p>
+<p>There are three important characteristics of a texture, each of the defining part of those constraints: the texture type, texture size, and the image format used for images in the texture. The texture type defines the arrangement of images within the texture. The size defines the size of the images in the texture. And the image format defines the format that all of these images share.</p>
+<p>You’ve already used textures without knowing it because the ofImage class actually contains a texture that is drawn to the screen when you call the draw() method. Though it might seem that a texture is just a bitmap, it’s actually a little different. Textures are how bitmaps get drawn to the screen; the bitmap is loaded into a texture that then can be used to draw into a shape defined in OpenGL. I’ve always thought of textures as being like wrapping paper: they don’t define the shape of the box, but they do define what you see when you look at the box. Most of the textures that we’ve looked at so far are used in a very simple way only, sort of like just holding up a square piece of wrapping paper.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">ofImage myImage;
+<span class="co">// allocate space in ram, then decode the jpg, and finally load the pixels into</span>
+<span class="co">// the ofTexture object that the ofImage contains.</span>
+myImage.loadImage(<span class="st">"sample.jpg"</span>);
+myImage.draw(<span class="dv">100</span>,<span class="dv">100</span>);</code></pre>
+<p>The ofImage object loads images from files using loadImage() and images from the screen using the grabScreen() method. Both of these load data into the internal texture that the ofImage class contains. When you call the draw() method of the ofImage class, you’re simply drawing the texture to the screen. If you wanted to change the pixels on the screen, you would also use an ofImage class to capture the image and then load the data into an array using the getPixels() method. After that, you could manipulate the array and then load it back into the image using setFromPixels():</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">ofImage theScreen; <span class="co">// declare variable</span>
+theScreen.grabScreen(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1024</span>,<span class="dv">768</span>); <span class="co">// grab at 0,0 a rect of 1024×768.</span>
+<span class="co">// similar to loadPixels();</span>
+<span class="dt">unsigned</span> <span class="dt">char</span> * screenPixels = theScreen.getPixels();
+<span class="co">// do something here to edit pixels in screenPixels</span>
+<span class="co">// ...</span>
+<span class="co">// now load them back into theScreen</span>
+theScreen.setFromPixels(screenPixels, theScreen.width, theScreen.height, OF_IMAGE_COLOR, <span class="kw">true</span>);
+theScreen.update();
+<span class="co">// now you can draw them</span>
+theScreen.draw(<span class="dv">0</span>,<span class="dv">0</span>);</code></pre>
+<p>Textures in openFrameworks are contained inside the ofTexture object. This can be used to create textures from bitmap data that can then be used to fill other drawn objects, like a bitmap fill on a circle. Though it may seem difficult, earlier examples in this chapter used it without explaining it fully; it’s really just a way of storing all the data for a bitmap. If you understand how a bitmap can also be data, that is, an array of unsigned char values, then you basically understand the ofTexture already.</p>
+<p>There are three basic ways to get data into a texture:</p>
+<ol style="list-style-type: decimal">
+<li>load the data in using ofImage</li>
+</ol>
+<p>allocate(int w, int h, int internalGlDataType)</p>
+<p>This method allocates space for the OpenGL texture. The width (w) and height (h) do not necessarily need to be powers of two, but they do need to be large enough to contain the data you will upload to the texture. The internal datatype describes how OpenGL will store this texture internally. For example, if you want a grayscale texture, you can use GL_LUMINANCE. You can upload whatever type of data you want (using loadData()), but internally, OpenGL will store the information as grayscale. Other types include GL_RGB and GL_RGBA.</p>
+<p>loadData(unsigned char * data, int w, int h, int glDataType) / loadPixels()</p>
+<p>This method loads the array of unsigned chars (data) into the texture, with a given width (w) and height (h). You also pass in the format that the data is stored in (GL_LUMINANCE, GL_RGB, GL_RGBA). For example, to upload a 200 × 100 pixels wide RGB array into an already allocated texture, you might use the following:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">unsigned</span> <span class="dt">char</span> pixels[<span class="dv">200</span>*<span class="dv">100</span>*<span class="dv">3</span>];
+<span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; <span class="dv">200</span>*<span class="dv">100</span>*<span class="dv">3</span>; i++){
+	pixels[i] = (<span class="dt">int</span>)(<span class="dv">255</span> * ofRandomuf());
+}
+myTexture.loadData(pixels, <span class="dv">200</span>, <span class="dv">100</span>, GL_RGB); <span class="co">// random-ish noise</span></code></pre>
+<p>Finally, we can just use:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">ofLoadImage(theTex, <span class="st">"path/toAnImage.png"</span>);</code></pre>
+<p>When we actually draw the texture what we're doing is, surprise, putting some vertices on the screen that say where the texture should show up and say: we're going to use this ofTexture to fill in the spaces in between our vertices. The vertices are used to define locations in space where that texture will be used. Voila, textures on the screen. The way that we actually say "this is the texture that should show up in between all the vertices that we're drawing" is by using the bind() method. Now, you don't normally need to do this. The draw() method of both the ofImage and the ofTexture object take care of all of this for you, but this tutorial is all about explaining some of the underlying OpenGL stuff and underneath, those draw() methods call bind() to start drawing the texture, ofDrawRectangle() to put some vertices in place, and unbind() when it's done. It's just like this:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">tex.bind(); <span class="co">// start using our texture</span>
+quad.draw(); <span class="co">// quad is just a rectangle, like we made in the ofMesh section</span>
+tex.unbind(); <span class="co">// all done with our texture</span></code></pre>
+<p>Every texture that's loaded onto the GPU gets an ID that can be used to identify it and this is in essence what the bind() method does: say which texture we're using when we define some vertices to be filled in. The thing that's important in this is that each vertex has not only a location in space, but a location in the texture. Let's say you have a 500x389 pixel image. Since OF uses what are called ARB texture coordinates, that means that 0,0 is the upper left corner of the image and 500,389 is the lower right corner. If you were using "normalized" coordinates then 0,0, would be the upper left and 1,1 would be the lower right. Sidenote: normalized coordinates can be toggled with "ofEnableNormalizedTexCoords()". Anyhow, you have an image and you're going to draw it onto an ofPlanePrimitive:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">
+<span class="co">// our 500x389 pixel image</span>
+bikers.loadImage(<span class="st">"images/bikers.jpg"</span>);
+
+<span class="co">// make the plane the same size:</span>
+planeHalf.set(<span class="dv">500</span>, <span class="dv">389</span>, <span class="dv">2</span>, <span class="dv">2</span>);
+<span class="co">// now set the texture coordinates to go from</span>
+<span class="co">// 0,0 to 250, 194, so we'll see the upper left corner</span>
+planeHalf.mapTexCoords(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">250</span>, <span class="dv">194</span>);</code></pre>
+<p>Now we'll make a plane with texture coordinates that cover the whole image.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">planeFull.set(<span class="dv">500</span>, <span class="dv">389</span>, <span class="dv">2</span>, <span class="dv">2</span>);
+planeFull.mapTexCoords(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">500</span>, <span class="dv">389</span>);</code></pre>
+<p>Now to draw this:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> testApp::draw(){
+  ofSetColor(<span class="dv">255</span>);
+
+    ofTranslate(<span class="dv">250</span>, <span class="dv">196</span>);
+
+    bikers.bind();
+    planeHalf.draw();
+    ofTranslate(<span class="dv">505</span>, <span class="dv">0</span>); <span class="co">// 5px padding</span>
+    planeFull.draw();
+    bikers.unbind();
+}</code></pre>
+<p>We should see this:</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/openGL/images/texture_coords.png" target="_blank"><img alt="img" src="../images/openGL/images/texture_coords.png"/></a></div><div class="caption">img</div>
+</div></div>
+<p>Take note that anything we do moving the modelView matrix around, for example that call to ofTranslate(), doesn't affect the images texture coordinates, only their screen position. What about when we go past the end of a texture?</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/openGL/images/past_last_texcoord.png" target="_blank"><img alt="img" src="../images/openGL/images/past_last_texcoord.png"/></a></div><div class="caption">img</div>
+</div></div>
+<p>Eww, right? Well, we can call:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">    ofLoadImage(bikers, <span class="st">"images/bikers.jpg"</span>);
+    bikers.setTextureWrap(GL_CLAMP_TO_BORDER, GL_CLAMP_TO_BORDER);</code></pre>
+<p>Now we get:</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/openGL/images/past_tex_border.png" target="_blank"><img alt="img" src="../images/openGL/images/past_tex_border.png"/></a></div><div class="caption">img</div>
+</div></div>
+<p>Since we're not using power of two textures, i.e. textures that are strange sizes, we can't use the classic GL_REPEAT, but that's fine, it's not really that useful anyways, honestly.</p>
+<p><em>Depth v Alpha</em></p>
+<p>What happens if you draw a texture at 100, 100, 100 and then another at 100, 100, 101? Good question. The answer however, is confusing, if you've got alpha blending on, then, em, it's going to look wrong.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">bikers.draw(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">101</span>); <span class="co">// supposed to up front</span>
+tdf.draw(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">100</span>); <span class="co">// getting drawn last</span></code></pre>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/openGL/images/depth.png" target="_blank"><img alt="img" src="../images/openGL/images/depth.png"/></a></div><div class="caption">img</div>
+</div></div>
+<p>Enable depth test to get it to work:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">ofEnableDepthTest();
+bikers.draw(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">101</span>);
+tdf.draw(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">100</span>);</code></pre>
+<p>Ok, so let's say we made our weird TDF image and bike image PNGs with alpha channel, chopped a hole out of the middle and loaded them in.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">bikers.draw(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>);
+tdf.draw(<span class="dv">100</span>, <span class="dv">0</span>, -<span class="dv">50</span>); <span class="co">// should be 50 pix behind bikers.</span></code></pre>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/openGL/images/alpha_enabled.png" target="_blank"><img alt="img" src="../images/openGL/images/alpha_enabled.png"/></a></div><div class="caption">img</div>
+</div></div>
+<p>Well, we get the visibility, but the TDF is in from of the bikers, which it shouldn't be, let's turn on depth testing:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">ofEnableDepthTest();
+bikers.draw(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>);
+tdf.draw(<span class="dv">100</span>, <span class="dv">0</span>, -<span class="dv">50</span>); <span class="co">// should be 50 pix behind bikers.</span></code></pre>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/openGL/images/depth_enabled.png" target="_blank"><img alt="img" src="../images/openGL/images/depth_enabled.png"/></a></div><div class="caption">img</div>
+</div></div>
+<p>That's not right either. What's happening? Turns out in OpenGL alpha and depth just don't get along. You can have which pixels selected according to their alpha values or you can have things placed according to their position in z-space. If you want to do both you need to do multiple render passes or other trickery to get it to work, which is a little out of the scope of this tutorial. Suffice to say, that it's a little bit tricky and that you might need to think carefully about how you're going to work with 3D objects and textures that have alpha enabled because it can induce some serious headaches. Alright, enough of that, this part of this tutorial has gone on long enough.</p>
+<h2 id="cameras">Cameras</h2>
+<p>OpenFrameworks has two cameras: ofEasyCam and ofCamera. What's a camera you ask? Well, conceptually, it's a movie camera, and actually, it's a matrix. Yep, math strikes again. It's basically a matrix that encapsulates a few attributes, such as:</p>
+<ul>
+<li>Camera position</li>
+<li>Camera orientation (direction)</li>
+<li>Zoom (field of view)</li>
+<li>Maximum and minimum viewing distances (near and far planes)</li>
+<li>The aspect ratio of the viewport/window</li>
+</ul>
+<p>And that's about it, you're just making a list of how to figure out what's in front of the camera and how to transform everything in front of the camera. You always have "a camera" because you always have a view, projection, and model matrix (remember those?) but the camera lets you keep different versions of those to use whenever you want, turning them on and off with the flick of a switch, like so:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">cam.begin();
+<span class="co">// draw everything!</span>
+cam.end();</code></pre>
+<p>So, we always have a camera? Yep, and it has a location in space too. Just imagine this:</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/openGL/images/camera.png" target="_blank"><img alt="img" src="../images/openGL/images/camera.png"/></a></div><div class="caption">img</div>
+</div></div>
+<p>What's that -7992 and 79? Well, those are just a guess at a 1024x768 sized window, from the renderers setupScreenPerspective() method:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">
+  <span class="dt">float</span> viewW = currentViewport.width;
+  <span class="dt">float</span> viewH = currentViewport.height;
+
+  <span class="dt">float</span> eyeX = viewW / <span class="dv">2</span>;
+  <span class="dt">float</span> eyeY = viewH / <span class="dv">2</span>;
+  <span class="dt">float</span> halfFov = PI * fov / <span class="dv">360</span>;
+  <span class="dt">float</span> theTan = tanf(halfFov);
+  <span class="dt">float</span> dist = eyeY / theTan;
+  <span class="dt">float</span> aspect = (<span class="dt">float</span>) viewW / viewH;
+
+  <span class="kw">if</span>(nearDist == <span class="dv">0</span>) nearDist = dist / <span class="fl">10.</span>0f;
+  <span class="kw">if</span>(farDist == <span class="dv">0</span>) farDist = dist * <span class="fl">10.</span>0f;
+
+  matrixMode(OF_MATRIX_PROJECTION);
+  ofMatrix4x4 persp;
+  persp.makePerspectiveMatrix(fov, aspect, nearDist, farDist);
+  loadMatrix( persp );
+
+  matrixMode(OF_MATRIX_MODELVIEW);
+  ofMatrix4x4 lookAt;
+  lookAt.makeLookAtViewMatrix( ofVec3f(eyeX, eyeY, dist),  ofVec3f(eyeX, eyeY, <span class="dv">0</span>),  ofVec3f(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>) );
+  loadMatrix(lookAt);
+</code></pre>
+<p>There's a bit of math in there to say: make it so the the view of the camera is relatively proportional to the size of the window. You'll see the same thing in the camera setupPerspective() method:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">  ofRectangle orientedViewport = ofGetNativeViewport();
+  <span class="dt">float</span> eyeX = orientedViewport.width / <span class="dv">2</span>;
+  <span class="dt">float</span> eyeY = orientedViewport.height / <span class="dv">2</span>;
+  <span class="dt">float</span> halfFov = PI * fov / <span class="dv">360</span>;
+  <span class="dt">float</span> theTan = tanf(halfFov);
+  <span class="dt">float</span> dist = eyeY / theTan;
+
+  <span class="kw">if</span>(nearDist == <span class="dv">0</span>) nearDist = dist / <span class="fl">10.</span>0f;
+  <span class="kw">if</span>(farDist == <span class="dv">0</span>) farDist = dist * <span class="fl">10.</span>0f;
+
+  setFov(fov); <span class="co">// how wide is our view?</span>
+  setNearClip(nearDist); <span class="co">// what's the closest thing we can see?</span>
+  setFarClip(farDist); <span class="co">// what's the furthest thing we can see?</span>
+  setLensOffset(lensOffset);
+  setForceAspectRatio(<span class="kw">false</span>);  <span class="co">// what's our aspect ratio?</span>
+
+  setPosition(eyeX,eyeY,dist); <span class="co">// where are we?</span>
+  lookAt(ofVec3f(eyeX,eyeY,<span class="dv">0</span>),ofVec3f(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>)); <span class="co">// what are we looking at?</span></code></pre>
+<p>We get the size of the viewport, figure out what the farthest thing we can see is, what the nearest thing we can see is, what the aspect ratio should be, and what the field of view is, and off we go. Once you get a camera set up so that it knows what it can see, it's time to position it so that you can move it around. Just like in people, there are 3 controls that dictate what a camera can see: location, orientation, and heading. You can kind of separate what a camera is looking at from what it's pointing at but you shouldn't, stick with always looking ahead, the ofEasyCam does. Because a ofCamera extends a ofNode, it's pretty easy to move it around.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">cam.setPosition(ofVec3f(<span class="dv">0</span>, <span class="dv">100</span>, <span class="dv">100</span>));</code></pre>
+<p>it's also pretty easy to set the heading:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">cam.lookAt(ofVec3f(<span class="dv">100</span>, <span class="dv">100</span>, <span class="dv">100</span>));</code></pre>
+<p>You'll notice that the signature of that method is actually</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> lookAt(<span class="dt">const</span> ofVec3f&amp; lookAtPosition, ofVec3f upVector = ofVec3f(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>));</code></pre>
+<p>That second vector is so that you know what direction is up. While for a person it's pretty hard to imagine forgetting that you're upside-down, but for a camera, it's an easy way to get things wrong. So as you're moving the camera around you're really just modifying the matrix that the ofCamera contains and when you call begin(), that matrix is uploaded to the graphics card. When you call end(), that matrix is un-multiplied from the OpenGL state card. There's more to the cameras in OF but looking at the examples in examples/gl and at the documentation for ofEasyCam. To finish up, lets check out the way that the ofEasyCam works, since that's a good place to start when using a camera.</p>
+<p>So, as mentioned earlier, there are two camera classes in OF, ofCamera and ofEasyCam. ofCamera is really a stripped down matrix manipulation tool for advanced folks who know exactly what they need to do. ofEasyCam extends ofCamera and provides extra interactivity like setting up mouse dragging to rotate the camera which you can turn on/off with ofEasyCam::enableMouseInput() and ofEasyCam::disableMouseInput(). There's not a huge difference between the two, but ofEasyCam is probably what you're looking for if you want to quickly create a camera and get it moving around boxes, spheres, and other stuff that you're drawing.</p>
+<p>Onto using these things: both of those classes provide a really easy method for setting a target to go to and look at:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> setTarget(<span class="dt">const</span> ofVec3f&amp; target);
+<span class="dt">void</span> setTarget(ofNode&amp; target);</code></pre>
+<p>These methods both let you set what a camera is looking at and since you can always count on them to allow you to track something moving through space, pretty handy. In ofCamera there are other methods for doing this and more but I'll let you discover those on your own. One last thing that's tricky to do on your own sometimes is how do you figure out what where something in space will be relative to a given camera? Like, say, where a 3D point will be on the screen? Voila, worldToScreen()!</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">ofVec3f worldToScreen(ofVec3f WorldXYZ, ofRectangle viewport = ofGetCurrentViewport()) <span class="dt">const</span>;</code></pre>
+<p>How do you figure out where something on the screen will be relative to the world? Like, say, where the mouse is pointing in 3d space?</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">ofVec3f screenToWorld(ofVec3f ScreenXYZ, ofRectangle viewport = ofGetCurrentViewport()) <span class="dt">const</span>;</code></pre>
+<p>How do you figure out where something on the screen will be relative to the camera?</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">ofVec3f worldToCamera(ofVec3f WorldXYZ, ofRectangle viewport = ofGetCurrentViewport()) <span class="dt">const</span>;</code></pre>
+<p>How do you figure out where something relative to the camera will be in the world?</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">ofVec3f cameraToWorld(ofVec3f CameraXYZ, ofRectangle viewport = ofGetCurrentViewport()) <span class="dt">const</span>;</code></pre>
+<p>As with everything else, there's a ton more to learn, but this tutorial is already pushing the bounds of acceptability, so we'll wrap it up here. A few further resources before we go though:</p>
+<ul>
+<li><a href="http://www.opengl-tutorial.org" target="_blank">OpenGL Tutorials</a></li>
+<li><a href="http://www.opengl-tutorial.org/beginners-tutorials/tutorial-3-matrices/" target="_blank">OpenGL Tutorials (matrices)</a></li>
+<li><a href="http://tomdalling.com/blog/modern-opengl" target="_blank">Modern OpenGL</a></li>
+<li><a href="http://www.swiftless.com" target="_blank">Swiftless Tutorials</a></li>
+</ul>
+<p>Have fun, ask questions on the forum, and read our <a href="shaders.html" target="_blank">shader tutorial</a> if you want to keep learning more.</p>
+<div class="footer">
+<div id="prev_chapter"><a href="network.html">&lt; Network</a></div>
+<div id="next_chapter"><a href="lines.html">drawing lines &gt;</a></div>
+</div>
+<div id="help"><i>please note that this book / chapter is a work in progress.  Feel free to suggest edits / corrections <a href="https://github.com/openframeworks/ofbook" target="_blank">here</a></i></div>
+</div>
+</div>
+</body>
+</html>

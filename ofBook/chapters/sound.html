@@ -1,0 +1,421 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="pandoc" name="generator"/>
+<title>ofBook - Sound</title>
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+<link href="../style/bootstrap.min.css" rel="stylesheet">
+<link href="../style/style.css" rel="stylesheet" type="text/css"/>
+<link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Merriweather:400,300,300italic,400italic,700,900,700italic,900italic" rel="stylesheet" type="text/css">
+<script src="../javascript/jquery-1.8.3.min.js"></script>
+<script src="../javascript/bootstrap.min.js"></script>
+<script src="../javascript/navbar.js"></script>
+</link></link></head>
+<body>
+<div class="banner">
+<div class="content-wrapper">
+<b>Work in progress!</b>
+        This is a preliminary version of ofBook, a collaboratively written book about openFrameworks.  Please post any issues, suggestions, comments on our <a href="https://github.com/openframeworks/ofBook/" target="_blank">repo</a>.
+    </div>
+</div>
+<div class="content-wrapper">
+<nav role="navigation">
+<ul id="nav-parts"><li class="group"><div class="groupTitle">Foreword</div><ul><li class="chapter"><div class="chapterTitle"><a href="foreword.html">foreword</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#책에관하여" target="_top">책에 관하여</a></li><li class="section"><a href="#credits" target="_top">Credits</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Basics</div><ul><li class="chapter"><div class="chapterTitle"><a href="of_philosophy.html">Philosophy</a></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="cplusplus_basics.html">C++ Language Basics</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#lookalive" target="_top">Look Alive!</a></li><li class="section"><a href="#iteration" target="_top">Iteration</a></li><li class="section"><a href="#compilingmyfirstapp" target="_top">Compiling My First App</a></li><li class="section"><a href="#beyondhelloworld" target="_top">Beyond Hello World</a></li><li class="section"><a href="#functions" target="_top">Functions</a></li><li class="section"><a href="#customfunctions" target="_top">Custom Functions</a></li><li class="section"><a href="#encapsulationofcomplexity" target="_top">Encapsulation of Complexity</a></li><li class="section"><a href="#variablespart1" target="_top">Variables (part 1)</a></li><li class="section"><a href="#conclusion" target="_top">Conclusion</a></li><li class="section"><a href="#ps" target="_top">PS.</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="setup_and_project_structure.html">oF structure</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#firstthingsfirst" target="_top">First things first</a></li><li class="section"><a href="#welcometoyournewkitchen" target="_top">Welcome to your new kitchen</a></li><li class="section"><a href="#runningexamples" target="_top">Running examples</a></li><li class="section"><a href="#offolderstructure" target="_top">oF folder structure</a></li><li class="section"><a href="#theofpantry" target="_top">The oF Pantry</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="intro_to_graphics.html">Graphics</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#brusheswithbasicshapes" target="_top">Brushes with Basic Shapes</a></li><li class="section"><a href="#brushesfromfreeformshapes" target="_top">Brushes from Freeform Shapes</a></li><li class="section"><a href="#movingtheworld" target="_top">Moving The World</a></li><li class="section"><a href="#nextsteps" target="_top">Next Steps</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#overview" target="_top">Overview</a></li><li class="section"><a href="#whatisobjectorientedprogramming" target="_top">What is Object Oriented Programming</a></li><li class="section"><a href="#howtobuildyourownclassessimpleclass" target="_top">How to build your own Classes (simple Class)</a></li><li class="section"><a href="#makeanobjectfromyourclass" target="_top">Make an Object from your Class</a></li><li class="section"><a href="#makeobjectsfromyourclass" target="_top">Make objects from your Class</a></li><li class="section"><a href="#makemoreobjectsfromyourclass" target="_top">Make more Objects from your Class</a></li><li class="section"><a href="#makeevenmoreobjectsfromyourclasspropertiesandconstructors" target="_top">Make even more Objects from your Class: properties and constructors</a></li><li class="section"><a href="#makeobjectsonthefly" target="_top">Make Objects on the fly</a></li><li class="section"><a href="#makinganddeleteasyouwishusingvectors" target="_top">Making and delete as you wish - using vectors</a></li><li class="section"><a href="#quickintrotopolymorphisminheritance" target="_top">Quick intro to polymorphism (inheritance)</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="how_of_works.html">how OF works</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#오픈프레임웍스코드의일반적인패턴설명" target="_top">오픈프레임웍스 코드의 일반적인 패턴 설명</a></li><li class="section"><a href="#setupupdatedraw" target="_top">setup, update, draw</a></li><li class="section"><a href="#클래스" target="_top">클래스</a></li><li class="section"><a href="#함수" target="_top">함수</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Approaches</div><ul><li class="chapter"><div class="chapterTitle"><a href="animation.html">Animation</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#background" target="_top">Background</a></li><li class="section"><a href="#animationinofusefulconcepts" target="_top">Animation in oF / useful concepts:</a></li><li class="section"><a href="#linearmovement" target="_top">Linear movement</a></li><li class="section"><a href="#functionbasedmovement" target="_top">Function based movement</a></li><li class="section"><a href="#simulation" target="_top">Simulation</a></li><li class="section"><a href="#wheretogofurther" target="_top">Where to go further</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="game_design.html">Experimental Game Development</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#howdogamedevelopersactuallymakegames" target="_top">How do game developers actually make games?</a></li><li class="section"><a href="#sowhatisoscanyway" target="_top">So what is OSC, anyway?</a></li><li class="section"><a href="#ourbasicgameandmakingitnotsobasic" target="_top">Our basic game–and making it not so basic</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="image_processing_computer_vision.html">image processing and computer vision</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#maybethereisamagicbullet" target="_top">Maybe There is a Magic Bullet</a></li><li class="section"><a href="#preliminariestoimageprocessing" target="_top">Preliminaries to Image Processing</a></li><li class="section"><a href="#이미지처리를얘기하기전에알아두어야할것들" target="_top">이미지처리를 얘기하기 전에 알아두어야 할것들</a></li><li class="section"><a href="#pointprocessingoperationsonimages" target="_top">Point Processing Operations on Images</a></li><li class="section"><a href="#acompleteworkflowbackgroundsubtraction" target="_top">A Complete Workflow: Background Subtraction</a></li><li class="section"><a href="#refinements" target="_top">Refinements</a></li><li class="section"><a href="#suggestionsforfurtherexperimentation" target="_top">Suggestions for Further Experimentation</a></li></ul></div></li></ul></li><li class="group selected"><div class="groupTitle">I/O</div><ul><li class="chapter"><div class="chapterTitle"><a href="hardware.html">Hardware</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introduction" target="_top">introduction</a></li><li class="section"><a href="#소개" target="_top">소개</a></li><li class="section"><a href="#gettingstartedwithserialcommunication" target="_top">getting started with serial communication</a></li><li class="section"><a href="#시리얼통신시작하기" target="_top">시리얼 통신 시작 하기</a></li><li class="section"><a href="#digitalandanalogcommunication" target="_top">digital and analog communication</a></li><li class="section"><a href="#디지털과아날로그통신" target="_top">디지털과 아날로그 통신</a></li><li class="section"><a href="#usingserialforcommunicationbetweenarduinoandopenframeworks" target="_top">using serial for communication between arduino and openframeworks</a></li><li class="section"><a href="#lightsoncontrollinghardwareviadmx" target="_top">Lights On - controlling hardware via DMX</a></li></ul></div></li></ul><ul><li class="chapter selected"><div class="chapterTitle selected"><a href="sound.html">Sound</a></div><div class="chapterContents selected"><ul><li class="section selected"><a href="#gettingstartedwithsoundfiles" target="_top">Getting Started With Sound Files</a></li><li class="section"><a href="#gettingstartedwiththesoundstream" target="_top">Getting Started With the Sound Stream</a></li><li class="section"><a href="#why1to1" target="_top">Why -1 to 1?</a></li><li class="section"><a href="#timedomainvsfrequencydomain" target="_top">Time Domain vs Frequency Domain</a></li><li class="section"><a href="#reactingtoliveaudio" target="_top">Reacting to Live Audio</a></li><li class="section"><a href="#synthesizingaudio" target="_top">Synthesizing Audio</a></li><li class="section"><a href="#audiogotchas" target="_top">Audio Gotchas</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="network.html">Network</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#tcpvsudp" target="_top">TCP vs UDP</a></li><li class="section"><a href="#osc" target="_top">OSC</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Graphics</div><ul><li class="chapter"><div class="chapterTitle"><a href="openGL.html">Introducing OpenGL for OF</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introducing" target="_top">Introducing</a></li><li class="section"><a href="#vertices" target="_top">Vertices</a></li><li class="section"><a href="#meshes" target="_top">Meshes</a></li><li class="section"><a href="#vbos" target="_top">VBOs</a></li><li class="section"><a href="#abasic3dscene" target="_top">A Basic 3D Scene</a></li><li class="section"><a href="#matrices" target="_top">Matrices</a></li><li class="section"><a href="#textures" target="_top">Textures</a></li><li class="section"><a href="#cameras" target="_top">Cameras</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="lines.html">drawing lines</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#소개" target="_top">소개 ...</a></li><li class="section"><a href="#선그리기" target="_top">선 그리기</a></li><li class="section"><a href="#약간의노이즈abitofnoise" target="_top">약간의 노이즈A bit of noise</a></li><li class="section"><a href="#aweboflines" target="_top">A web of lines</a></li><li class="section"><a href="#makeasmoothlineinmovementina3dspace" target="_top">Make a smooth line in movement in a 3D space</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="generativemesh.html">Basics of Generating Meshes from an Image</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#basicsofgeneratingmeshesfromanimage1" target="_top">Basics of Generating Meshes from an Image</a></li><li class="section"><a href="#basicsworkingwithofmesh" target="_top">Basics: Working with ofMesh</a></li><li class="section"><a href="#generativemeshusinganimagetodrivethecreationofamesh" target="_top">Generative Mesh: Using an image to drive the creation of a mesh</a></li><li class="section"><a href="#manipulationsaddingeffectsthatmodifythemesh" target="_top">Manipulations: Adding effects that modify the mesh</a></li><li class="section"><a href="#nextsteps" target="_top">Next Steps</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="advanced_graphics.html">Advanced graphics</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#dimmediatemodevsofpolylineofpath" target="_top">2D, immediate mode vs ofPolyline/ofPath</a></li><li class="section"><a href="#d" target="_top">3D</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="shaders.html">Introducing Shaders</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introducing" target="_top">introducing</a></li><li class="section"><a href="#yourfirstshader" target="_top">Your first shader!</a></li><li class="section"><a href="#addinguniforms" target="_top">Adding Uniforms</a></li><li class="section"><a href="#addingsomeinteractivity" target="_top">Adding some interactivity</a></li><li class="section"><a href="#addingtextures" target="_top">Adding Textures</a></li><li class="section"><a href="#alphamasking" target="_top">Alpha Masking</a></li><li class="section"><a href="#multipletextures" target="_top">Multiple Textures</a></li><li class="section"><a href="#offbo" target="_top">ofFbo</a></li><li class="section"><a href="#texturesasdataegdisplacement" target="_top">Textures as Data (e.g. Displacement)</a></li><li class="section"><a href="#theendcongrats" target="_top">The End, Congrats!</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">C++</div><ul><li class="chapter"><div class="chapterTitle"><a href="threads.html">threads</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#쓰레드란무엇이고언제사용해야하는가" target="_top">쓰레드란 무엇이고 언제 사용해야 하는가</a></li><li class="section"><a href="#ofthread" target="_top">ofThread</a></li><li class="section"><a href="#스레드와opengl" target="_top">스레드와 openGL</a></li><li class="section"><a href="#ofmutex" target="_top">ofMutex</a></li><li class="section"><a href="#externalthreadsanddoublebuffering" target="_top">External threads and double buffering</a></li><li class="section"><a href="#ofscopedlock" target="_top">ofScopedLock</a></li><li class="section"><a href="#pococondition" target="_top">Poco::Condition</a></li><li class="section"><a href="#conclusion" target="_top">Conclusion</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="memory.html">memory of C++</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#컴퓨터메모리와변수" target="_top">컴퓨터 메모리와 변수</a></li><li class="section"><a href="#스택변수함수내의변수vs오브젝트내의변수" target="_top">스택 변수, 함수내의 변수 vs 오브젝트내의 변수</a></li><li class="section"><a href="#포인터와레퍼런스" target="_top">포인터와 레퍼런스</a></li><li class="section"><a href="#힙heap영역에서의변수들" target="_top">힙(heap) 영역에서의 변수들</a></li><li class="section"><a href="#메모리구조배열과vector" target="_top">메모리 구조, 배열과 vector</a></li><li class="section"><a href="#다른메모리구조리스트와맵" target="_top">다른 메모리 구조, 리스트와 맵</a></li><li class="section"><a href="#스마트포인터" target="_top">스마트 포인터</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="stl_vector.html">Introduction to vectors</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#quickreview" target="_top">Quick Review:</a></li><li class="section"><a href="#declaringavector" target="_top">Declaring a vector</a></li><li class="section"><a href="#addingelementstoavector" target="_top">Adding elements to a vector</a></li><li class="section"><a href="#resize" target="_top">resize</a></li><li class="section"><a href="#assign" target="_top">assign</a></li><li class="section"><a href="#accessingelementsofavector" target="_top">Accessing elements of a vector</a></li><li class="section"><a href="#erasingelementsofavector" target="_top">Erasing elements of a vector</a></li><li class="section"><a href="#iterators" target="_top">Iterators</a></li><li class="section"><a href="#sortingandshufflingavector" target="_top">Sorting and shuffling a vector</a></li><li class="section"><a href="#vectorsofobjects" target="_top">Vectors of objects</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="stl_map.html">let's play with Map, std::map</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#소개map이무엇인가요" target="_top">소개 : map이 무엇인가요?</a></li><li class="section"><a href="#map에값삽입하기" target="_top">map에 값 삽입하기</a></li><li class="section"><a href="#map에서요소삭제하기" target="_top">map에서 요소 삭제하기</a></li><li class="section"><a href="#map을훑기" target="_top">map을 훑기</a></li><li class="section"><a href="#map에서요소찾기" target="_top">map에서 요소 찾기</a></li><li class="section"><a href="#map에오브젝트저장하기" target="_top">map에 오브젝트 저장하기</a></li><li class="section"><a href="#multimap이란무엇인가요" target="_top">multimap이란 무엇인가요?</a></li><li class="section"><a href="#다른유용한메소드들" target="_top">다른 유용한 메소드들</a></li><li class="section"><a href="#추가참고자료역자에의해추가됨" target="_top">추가 참고 자료 (역자에 의해 추가됨)</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="c++11.html">C++ 11</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introduction" target="_top">Introduction</a></li><li class="section"><a href="#auto" target="_top">auto</a></li><li class="section"><a href="#forthingthings" target="_top">for (thing : things)</a></li><li class="section"><a href="#override" target="_top">override</a></li><li class="section"><a href="#lambdafunctions" target="_top">Lambda functions</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Advanced topics</div><ul><li class="chapter"><div class="chapterTitle"><a href="math.html">Math: From 1D to 4D</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#onedimensionusingchange" target="_top">One Dimension: Using Change</a></li><li class="section"><a href="#moredimensionssomelinearalgebra" target="_top">More Dimensions: Some Linear Algebra</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Platforms</div><ul><li class="chapter"><div class="chapterTitle"><a href="ios.html">ofxiOS</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#openframeworksoniosdevices" target="_top">OpenFrameworks on iOS devices.</a></li><li class="section"><a href="#intro" target="_top">Intro</a></li><li class="section"><a href="#introtoobjectivec" target="_top">Intro to Objective-C</a></li><li class="section"><a href="#underthehood" target="_top">Under the Hood</a></li><li class="section"><a href="#ofuikit" target="_top">OF &amp; UIKit</a></li><li class="section"><a href="#mediaplaybackandcapture" target="_top">Media Playback and Capture</a></li><li class="section"><a href="#lifehacks" target="_top">Life Hacks</a></li><li class="section"><a href="#appstore" target="_top">App Store</a></li><li class="section"><a href="#casestudies" target="_top">Case Studies</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Tools</div><ul><li class="chapter"><div class="chapterTitle"><a href="version_control_with_git.html">Version control with Git</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#whatisversioncontrolandwhyshouldyouuseit" target="_top">What is version control, and why should you use it?</a></li><li class="section"><a href="#differentversioncontrolsystems" target="_top">Different version control systems</a></li><li class="section"><a href="#introductiontogit" target="_top">Introduction to Git</a></li><li class="section"><a href="#popularguiclients" target="_top">Popular GUI clients</a></li><li class="section"><a href="#conclusion" target="_top">Conclusion</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="ofSketch.html">ofSketch</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#whatisofsketch" target="_top">What is ofSketch?</a></li><li class="section"><a href="#download" target="_top">Download</a></li><li class="section"><a href="#sketchformat" target="_top">Sketch Format</a></li><li class="section"><a href="#remotecoding" target="_top">Remote Coding</a></li><li class="section"><a href="#future" target="_top">Future</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="installation_up_4evr_macosx.html">Installation up 4evr</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#step1prepyoursoftwareandthecomputer" target="_top">Step 1: Prep your software and the computer</a></li><li class="section"><a href="#step2bootintoyoursoftware" target="_top">Step 2: Boot into your software</a></li><li class="section"><a href="#step3keepitupchamp" target="_top">Step 3: Keep it up (champ!)</a></li><li class="section"><a href="#step4rebootperiodically" target="_top">Step 4: Reboot periodically</a></li><li class="section"><a href="#step5checkinonitfromafar" target="_top">Step 5: Check in on it from afar.</a></li><li class="section"><a href="#step6testtesttest" target="_top">Step 6: Test, test, test.</a></li><li class="section"><a href="#additionaltipslogging" target="_top">Additional Tips: Logging</a></li><li class="section"><a href="#memoryleakmurderer" target="_top">Memory leak murderer</a></li><li class="section"><a href="#alternateresources" target="_top">Alternate resources:</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="installation_up_4evr_linux.html">installation up4ever - linux</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#몇가지추가적인팁" target="_top">몇가지 추가적인 팁:</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Case studies</div><ul><li class="chapter"><div class="chapterTitle"><a href="project_eva.html">Choreographies for Humans and Stars</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#projectoverview" target="_top">Project Overview</a></li><li class="section"><a href="#ideationandprototyping" target="_top">Ideation and Prototyping</a></li><li class="section"><a href="#findingthetechnicalsolutions" target="_top">Finding the Technical Solutions</a></li><li class="section"><a href="#developingthevisualizationsoftware" target="_top">Developing the Visualization Software</a></li><li class="section"><a href="#failsafesanddirtyfixes" target="_top">Fail-safes and dirty fixes</a></li><li class="section"><a href="#resultsandreception" target="_top">Results and Reception</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="project_joel.html">Anthropocene</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#theproject" target="_top">The Project</a></li><li class="section"><a href="#development" target="_top">Development</a></li><li class="section"><a href="#showtime" target="_top">Show time</a></li><li class="section"><a href="#postevent" target="_top">Post Event</a></li><li class="section"><a href="#teamandcredits" target="_top">Team and Credits</a></li><li class="section"><a href="#hardwareselection" target="_top">Hardware selection</a></li></ul></div></li></ul></li></ul>
+</nav>
+<div class="chapter-content">
+<h1 id="sound">Sound</h1>
+<p><em>by <a href="http://adamcarlucci.com" target="_blank">Adam Carlucci</a></em></p>
+<p>This chapter will demonstrate how to use the sound features that you'll find in openFrameworks, as well as some techniques you can use to generate and process sound.</p>
+<p>Here's a quick overview of the classes you can use to work with sound in openFrameworks:</p>
+<p><code>ofSoundPlayer</code> provides simple access to sound files, allowing you to easily load and play sounds, add sound effects to an app and extract some data about the file's sound as it's playing.</p>
+<p><code>ofSoundStream</code> gives you access to the computer's sound hardware, allowing you to generate your own sound as well as react to sound coming into your computer from something like a microphone or line-in jack.</p>
+<p><code>ofSoundBuffer</code> is used to store a sequence of audio samples and perform audio-related things on said samples (like resampling). This is new in openFrameworks 0.9.0.</p>
+<h2 id="gettingstartedwithsoundfiles">Getting Started With Sound Files</h2>
+<p>Playing a sound file is only a couple lines of code in openFrameworks. Just point an <code>ofSoundPlayer</code> at a file stored in your app's data folder and tell it to play.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> ofApp : <span class="kw">public</span> ofBaseApp {
+  <span class="co">// ... other things ...</span>
+  ofSoundPlayer soundPlayer;
+};
+
+<span class="dt">void</span> ofApp::setup() {
+  soundPlayer.loadSound(<span class="st">"song.mp3"</span>);
+  soundPlayer.play();
+}</code></pre>
+<p>This is fine for adding some background music or ambiance to your app, but ofSoundPlayer comes with a few extra features that are particularly handy for handling sound effects.</p>
+<p>"Multiplay" allows you to have a file playing several times simultaneously. This is great for any sound effect which might end up getting triggered rapidly, so you don't get stuck with an unnatural cutoff as the player's playhead abruptly jumps back to the beginning of the file. Multiplay isn't on by default. Use <code>soundPlayer.setMultiPlay(true)</code> to enable it. Then you can get natural sound effect behaviour with dead-simple trigger logic like this:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">if</span> ( thingHappened ) {
+  soundPlayer.play();
+}</code></pre>
+<p>Another feature built-in to ofSoundPlayer is speed control. If you set the speed faster than normal, the sound's pitch will rise accordingly, and vice-versa (just like a vinyl record). Playback speed is defined relative to "1", so "0.5" is half speed and "2" is double speed.</p>
+<p>Speed control and multiplay are made for each other. Making use of both simultaneously can really extend the life of a single sound effect file. Every time you change a sound player's playback speed with multiplay enabled, previously triggered sound effects continue on unaffected. So, by extending the above trigger logic to something like...</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">if</span>( thingHappened ) {
+  soundPlayer.setSpeed(ofRandom(<span class="fl">0.8</span>, <span class="fl">1.2</span>));
+  soundPlayer.play();
+}</code></pre>
+<p>...you'll introduce a bit of unique character to each instance of the sound.</p>
+<p>One other big feature of ofSoundPlayer is easy spectrum access. On the desktop platforms, you can make use of ofSoundGetSpectrum() to get the <em>frequency domain</em> representation of the sound coming from all of the currently active ofSoundPlayers in your app. An explanation of the frequency domain is coming a little later in this chapter, but running the openFrameworks <em>soundPlayerFFTExample</em> will give you the gist.</p>
+<p>Ultimately, ofSoundPlayer is a tradeoff between ease-of-use and control. You get access to multiplay and pitch-shifted playback but you don't get extremely precise control or access to the individual samples in the sound file. For this level of control, ofSoundStream is the tool for the job.</p>
+<h2 id="gettingstartedwiththesoundstream">Getting Started With the Sound Stream</h2>
+<p>ofSoundStream is the gateway to the audio hardware on your computer, such as the microphone and the speakers. If you want to have your app react to live audio input or generate sound on the fly, this is the section for you!</p>
+<p>You may never have to use the ofSoundStream directly, but it's the object that manages the resources needed to trigger <code>audioOut()</code> and <code>audioIn()</code> on your app. These two functions are optional members of your ofApp, like <code>keyPressed()</code>, <code>windowResized()</code> and <code>mouseMoved()</code>. They will start being called once you implement them and initiate the sound stream. Here's the basic structure for a sound-producing openFrameworks app:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> ofApp : <span class="kw">public</span> ofBaseApp {
+  <span class="co">// ... other things ...</span>
+  <span class="dt">void</span> audioOut( <span class="dt">float</span> * output, <span class="dt">int</span> bufferSize, <span class="dt">int</span> nChannels );
+  <span class="dt">double</span> phase;
+};
+
+<span class="dt">void</span> ofApp::setup() {
+  phase = <span class="dv">0</span>;
+  ofSoundStreamSetup(<span class="dv">2</span>, <span class="dv">0</span>); <span class="co">// 2 output channels (stereo), 0 input channels</span>
+}
+
+<span class="dt">void</span> ofApp::audioOut( <span class="dt">float</span> * output, <span class="dt">int</span> bufferSize, <span class="dt">int</span> nChannels ) {
+  <span class="kw">for</span>(<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; bufferSize * nChannels; i += <span class="dv">2</span>) {
+    <span class="dt">float</span> sample = sin(phase); <span class="co">// generating a sine wave sample</span>
+    output[i] = sample; <span class="co">// writing to the left channel</span>
+    output[i<span class="dv">+1</span>] = sample; <span class="co">// writing to the right channel</span>
+    phase += <span class="fl">0.05</span>;
+  }
+}</code></pre>
+<p>When producing or receiving audio, the format is floating point numbers between -1 and 1 (the reason for this is coming a little later in this chapter). The sound will arrive in your app in the form of <em>buffers</em>. Buffers are just arrays, but the term "buffer" implies that each time you get a new one, it represents the chunk of time after the previous buffer. The reason openFrameworks asks you for buffers (instead of individual samples) is due to the overhead involved in shuttling data from your program to the audio hardware, and is a little outside the scope of this book.</p>
+<p>The buffer size is adjustable, but it's usually a good idea to leave it at the default. The default isn't any number in particular, but will usually be whatever the hardware on your computer prefers. In practice, this is probably about 512 samples per buffer (256 and 1024 are other common buffer sizes).</p>
+<p>Sound buffers in openFrameworks are <em>interleaved</em> meaning that the samples for each channel are right next to each other, like:</p>
+<pre><code>[Left] [Right] [Left] [Right] ...</code></pre>
+<p>This means you access individual sound channels in much the same way as accessing different colours in an ofPixels object (i.e. <code>buffer[i]</code> for the left channel, <code>buffer[i + 1]</code> for the right channel). The total size of the buffer you get in <code>audioIn()</code> / <code>audioOut()</code> can be calculated with <code>bufferSize * nChannels</code>.</p>
+<p>An important caveat to keep in mind when dealing with ofSoundStream is that audio callbacks like <code>audioIn()</code> and <code>audioOut()</code> will be called on a seperate <em>thread</em> from the standard <code>setup()</code>, <code>update()</code>, <code>draw()</code> functions. This means that if you'd like to share any data between (for example) <code>update()</code> and <code>audioOut()</code>, you need to make use of an <code>ofMutex</code> to keep both threads from getting in each others' way. You can see this in action a little later in this chapter, or check out the threads chapter for a more in-depth explanation.</p>
+<p>In openFrameworks 0.9.0, there's a new class <em>ofSoundBuffer</em> that can be used in <code>audioOut()</code> instead of the <code>float * output, int bufferSize, int channels</code> form. In this case, the <code>audioOut()</code> function above can be rewritten to the simpler form:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> ofApp::audioOut(ofSoundBuffer &amp;outBuffer) {
+	<span class="kw">for</span>(<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; outBuffer.size(); i += <span class="dv">2</span>) {
+		<span class="dt">float</span> sample = sin(phase); <span class="co">// generating a sine wave sample</span>
+		outBuffer[i] = sample; <span class="co">// writing to the left channel</span>
+		outBuffer[i + <span class="dv">1</span>] = sample; <span class="co">// writing to the right channel</span>
+		phase += <span class="fl">0.05</span>;
+	}
+}</code></pre>
+<h2 id="why1to1">Why -1 to 1?</h2>
+<p>In order to understand <em>why</em> openFrameworks chooses to represent sound as a continuous stream of <code>float</code> values ranging from -1 to 1, it'll be helpful to know how sound is created on a physical level.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/sound/images/speaker.png" target="_blank"><img alt="Speaker Mechanics" src="../images/sound/images/speaker.png" title="simplified diagram of a speaker, showing the push/pull dynamics of its magnet"/></a></div><div class="caption">Speaker Mechanics</div>
+</div></div>
+<p>At the most basic level, a speaker consists of a cone and an electromagnet. The electromagnet pushes and pulls the cone to create vibrations in air pressure. These vibrations make their way to your ears, where they are interpreted as sound. When the electromagnet is off, the cone is simply "at rest", neither pulled in or pushed out. A basic microphone works much the same way: allowing air pressure to vibrate an object held in place by a magnet, thereby creating an electrical signal.</p>
+<p>From the perspective of an openFrameworks app, it's not important what the sound hardware's specific voltages are. All that really matters is that the speaker cone is being driven between its "fully pushed out" and "fully pulled in" positions, which are represented as 1 and -1. This is similar to the notion of "1" as a representation of 100% as described in the animation chapter, though sound introduces the concept of -100%.</p>
+<p>Some other systems use an integer-based representation, moving between something like -65535 and +65535 with 0 still being the representation of "at rest". The Web Audio API provides an unsigned 8-bit representation, which ranges between 0 and 255 with 127 being "at rest".</p>
+<p>A major way that sound differs from visual content is that there isn't really a "static" representation of sound. For example, if you were dealing with an OpenGL texture which represents 0 as "black" and 1 as "white", you could fill the texture with all 0s or all 1s and end up with a static image of "black" or "white" respectively. This is not the case with sound. If you were to create a sound buffer of all 0s, all 1s, all -1s, or any single number, they would all sound like exactly the same thing: nothing at all.</p>
+<blockquote>
+<p>Technically, you'd probably hear a pop right at the beginning as the speaker moves from the "at rest" position to whatever number your buffer is full of, but the remainder of your sound buffer would just be silence.</p>
+</blockquote>
+<p>This is because what you actually hear is the <em>changes</em> in values over time. Any individual sample in a buffer doesn't really have a sound on its own. What you hear is the <em>difference</em> between the sample and the one before it. For instance, a sound's "loudness" isn't necessarily related to how "big" the individual numbers in a buffer are. A sine wave which oscillates between 0.9 and 1.0 is going to be much much quieter than one that oscillates between -0.5 and 0.5.</p>
+<h2 id="timedomainvsfrequencydomain">Time Domain vs Frequency Domain</h2>
+<p>When representing sound as a continuous stream of values between -1 and 1, you're working with sound in what's known as the "Time Domain". This means that each value you're dealing with is referring to a specific moment in time. There is another way of representing sound which can be very helpful when you're using sound to drive some other aspect of your app. That representation is known as the "Frequency Domain".</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/sound/images/time-vs-freq.png" target="_blank"><img alt="Time vs Frequency domain" src="../images/sound/images/time-vs-freq.png" title="two graphs, one showing a signal represented in the time domain and the other showing the same signal in the frequency domain"/></a></div><div class="caption">Time vs Frequency domain</div>
+</div></div>
+<p>In the frequency domain, you'll be able to see how much of your input signal lies in various frequencies, split into separate "bins" (see above image).</p>
+<p>You can transform a signal from the time domain to the frequency domain by a ubiquitous algorithm called the Fast Fourier Transform. You can get an openFrameworks-ready implementation of the FFT (along with examples!) in either the ofxFFT or ofxFft addons (by Lukasz Karluk and Kyle McDonald respectively).</p>
+<p>In an FFT sample, bins in the higher indexes will represent higher pitched frequencies (i.e. treble) and the lower ones will represent bassy frequencies. Exactly <em>which</em> frequency is represented by each bin depends on the number of time-domain samples that went into the transform. You can calculate this as follows:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">frequency = (binIndex * sampleRate) / totalSampleCount</code></pre>
+<p>So, if you were to run an FFT on a buffer of 1024 time domain samples at 44100Hz, bin 3 would represent 129.2Hz ( <code>(3 * 44100) / 1024 ≈ 129.2</code> ). This calculation demonstrates a property of the FFT that is very useful to keep in mind: the more time domain samples you use to calculate the FFT, the better frequency resolution you'll get (as in, each subsequent FFT bin will represent frequencies that are closer together). The tradeoff for increasing the frequency resolution this way is that you'll start losing track of time, since your FFT will be representing a bigger portion of the signal.</p>
+<p>Note: A raw FFT sample will typically represent its output as <a href="http://en.wikipedia.org/wiki/Complex_number" target="_blank">Complex numbers</a>, though this probably isn't what you're after if you're attempting to do something like audio visualization. A more intuitive representation is the <em>magnitude</em> of each complex number, which is calculated as:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">magnitude = sqrt( pow(complex.real, <span class="dv">2</span>) + pow(complex.imaginary, <span class="dv">2</span>) )</code></pre>
+<p>If you're working with an FFT implementation that gives you a simple array of float values, it's most likely already done this calculation for you.</p>
+<p>You can also transform a signal from the frequency domain <em>back</em> to the time domain, using an Inverse Fast Fourier Transform (aka IFFT). This is less common, but there is an entire genre of audio synthesis called Additive Synthesis which is built around this principle (generating values in the frequency domain then running an IFFT on them to create synthesized sound).</p>
+<p>The frequency domain is useful for many things, but one of the most straightforward is isolating particular elements of a sound by frequency range, such as instruments in a song. Another common use is analyzing the character or timbre of a sound, in order to drive complex audio-reactive visuals.</p>
+<p>The math behind the Fourier transform is a bit tricky, but it is fairly straightforward once you get the concept. I felt that <a href="http://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform/" target="_blank">this explanation of the Fourier Transform</a> does a great job of demonstrating the underlying math, along with some interactive visual examples.</p>
+<h2 id="reactingtoliveaudio">Reacting to Live Audio</h2>
+<h3 id="rms">RMS</h3>
+<p>One of the simplest ways to add audio-reactivity to your app is to calculate the RMS of incoming buffers of audio data. RMS stands for "root mean square" and is a pretty straightforward calculation that serves as a good approximation of "loudness" (much better than something like averaging the buffer or picking the maximum value). The "square" step of the algorithim will ensure that the output will always be a positive value. This means you can ignore the fact that the original audio may have had "negative" samples (since they'd sound just as loud as their positive equivalent, anyway). You can see RMS being calculated in the <em>audioInputExample</em>.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// modified from audioInputExample</span>
+<span class="dt">float</span> rms = <span class="fl">0.0</span>;
+<span class="dt">int</span> numCounted = <span class="dv">0</span>;
+
+<span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; bufferSize; i++){
+    <span class="dt">float</span> leftSample = input[i * <span class="dv">2</span>] * <span class="fl">0.5</span>;
+    <span class="dt">float</span> rightSample = input[i * <span class="dv">2</span> + <span class="dv">1</span>] * <span class="fl">0.5</span>;
+    
+    rms += leftSample * leftSample;
+    rms += rightSample * rightSample;
+    numCounted += <span class="dv">2</span>;
+}
+
+rms /= (<span class="dt">float</span>)numCounted;
+rms = sqrt(rms);
+<span class="co">// rms is now calculated</span></code></pre>
+<h3 id="onset-detection-aka-beat-detection">Onset Detection (aka Beat Detection)</h3>
+<p>Onset detection algorithms attempt to locate moments in an audio stream where an <em>onset</em> occurs, which is usually something like an instrument playing a note or the impulse of a drum hit. There are many onset detection algorithms available at various levels of complexity and accuracy, some fine-tuned for speech as opposed to music, some working in the frequency domain instead of the time domain, some made for offline processing as opposed to realtime, etc.</p>
+<p>A simple realtime onset detection algorithm can be built on top of the RMS calculation above.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> ofApp : <span class="kw">public</span> ofBaseApp {
+    <span class="co">// ... other members from audioInputExample ...</span>
+
+    <span class="dt">float</span> threshold;
+    <span class="dt">float</span> minimumThreshold;
+    <span class="dt">float</span> decayRate;
+};
+
+<span class="dt">void</span> ofApp::setup() {
+    <span class="co">// ... the contents of setup() from audioInputExample ...</span>
+
+    decayRate = <span class="fl">0.05</span>;
+    minimumThreshold = <span class="fl">0.1</span>;
+    threshold = minimumThreshold;
+}
+
+<span class="dt">void</span> ofApp::audioIn(<span class="dt">float</span> * input, <span class="dt">int</span> bufferSize, <span class="dt">int</span> nChannels) {
+    <span class="co">// ... the contents of audioIn() from audioInputExample ...</span>
+    
+    threshold = ofLerp(threshold, minimumThreshold, decayRate);
+
+    <span class="kw">if</span>(rms &gt; threshold) {
+        <span class="co">// onset detected!</span>
+        threshold = rms;
+    }
+}</code></pre>
+<p>This will probably work fine on an isolated drum track, sparse music or for something like detecting whether or not someone's speaking into a microphone. However, in practice you'll likely find that this won't really cut it for reliable audio visualization or more intricate audio work.</p>
+<p>You could of course grab an external onset detection algorithm (there's quite a few addons available for it), but if you'd like to experiment, try incorporating the FFT into your algorithm. For instance, try swapping the RMS for the average amplitude of a range of FFT bins.</p>
+<p>If you'd like to dig into the world of onset detection algorithms (and the larger ecosystem of what's known as "music information retrieval" algorithms), the <a href="http://www.music-ir.org/mirex/wiki/MIREX_HOME" target="_blank">Music Information Retrieval Evaluation eXchange wiki</a> is a great source. On this wiki, you'll find the results of annual competitions comparing algorithms for things like onset detection, musical key detection, melody extraction, tempo estimation and so on.</p>
+<h3 id="fft">FFT</h3>
+<p>Running an FFT on your input audio will give you back a buffer of values representing the input's frequency content. A straight up FFT <em>won't</em> tell you which notes are present in a piece of music, but you will be able to use the data to take the input's sonic "texture" into account. For instance, the FFT data will let you know how much "bass" / "mid" / "treble" there is in the input at a pretty fine granularity (a typical FFT used for realtime audio-reactive work will give you something like 512 to 4096 individual frequency bins to play with).</p>
+<p>When using the FFT to analyze music, you should keep in mind that the FFT's bins increment on a <em>linear</em> scale, whereas humans interpret frequency on a <em>logarithmic</em> scale. So, if you were to use an FFT to split a musical signal into 512 bins, the lowest bins (bin 0 through bin 40 or so) will probably contain the bulk of the data, and the remaining bins will mostly just be high frequency content. If you were to isolate the sound on a bin-to-bin basis, you'd be able to easily tell the difference between the sound of bins 3 and 4, but bins 500 and 501 would probably sound exactly the same. Unless you had robot ears.</p>
+<p>There's another transform called the <em>Constant Q Transform</em> (aka CQT) that is similar in concept to the FFT, but spaces its bins out logarithmically, which is much more intuitive when dealing with music. For instance you can space out the result bins in a CQT such that they represent C, C#, D... in order. As of this writing I'm not aware of any openFrameworks-ready addons for the CQT, but it's worth keeping in mind if you feel like pursuing other audio visualization options beyond the FFT. I've had good results with <a href="https://code.soundsoftware.ac.uk/projects/constant-q-cpp" target="_blank">this Constant-Q implementation</a>, which is part of the <a href="http://www.vamp-plugins.org/" target="_blank">Vamp</a> collection of plugins and tools.</p>
+<h2 id="synthesizingaudio">Synthesizing Audio</h2>
+<p>This section will walk you through the creation of a basic musical synthesizer. A full blown instrument is outside the scope of this book, but here you'll be introduced to the basic building blocks of synthesized sound.</p>
+<p>A simple synthesizer can be implemented as a <em>waveform</em> modulated by an <em>envelope</em>, forming a single <em>oscillator</em>. A typical "real" synthesizer will have several oscillators and will also introduce <em>filters</em>, but many synthesizers at their root are variations on the theme of a waveform + envelope combo.</p>
+<h3 id="waveforms">Waveforms</h3>
+<p>Your synthesizer's waveform will define the oscillator's "timbre". The closer the waveform is to a sine wave, the more "pure" the resulting tone will be. A waveform can be made of just about anything, and many <a href="http://en.wikipedia.org/wiki/Category:Sound_synthesis_types" target="_blank">genres of synthesis</a> revolve around techniques for generating and manipulating waveforms.</p>
+<p>A common technique for implementing a waveform is to create a <em>Lookup Table</em> containing the full waveform at a certain resolution. A <em>phase</em> index is used to scan through the table, and the speed that the phase index is incremented determines the pitch of the oscillator.</p>
+<p>Here's a starting point for a synthesizer app that we'll keep expanding upon during this section. It demonstrates the lookup table technique for storing a waveform, and also visualizes the waveform and resulting audio output. You can use the mouse to change the resolution of the lookup table as well as the rendered frequency.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> ofApp : <span class="kw">public</span> ofBaseApp {
+<span class="kw">public</span>:
+    <span class="dt">void</span> setup();
+    <span class="dt">void</span> update();
+    <span class="dt">void</span> draw();
+    
+    <span class="dt">void</span> updateWaveform(<span class="dt">int</span> waveformResolution);
+    <span class="dt">void</span> audioOut(<span class="dt">float</span> * output, <span class="dt">int</span> bufferSize, <span class="dt">int</span> nChannels);
+    
+    std::vector&lt;<span class="dt">float</span>&gt; waveform; <span class="co">// this is the lookup table</span>
+    <span class="dt">double</span> phase;
+    <span class="dt">float</span> frequency;
+
+    ofMutex waveformMutex;
+    ofPolyline waveLine;
+    ofPolyline outLine;
+};
+
+<span class="dt">void</span> ofApp::setup() {
+    phase = <span class="dv">0</span>;
+    updateWaveform(<span class="dv">32</span>);
+    ofSoundStreamSetup(<span class="dv">1</span>, <span class="dv">0</span>); <span class="co">// mono output</span>
+}
+
+<span class="dt">void</span> ofApp::update() {
+    ofScopedLock waveformLock(waveformMutex);
+    updateWaveform(ofMap(ofGetMouseX(), <span class="dv">0</span>, ofGetWidth(), <span class="dv">3</span>, <span class="dv">64</span>, <span class="kw">true</span>));
+    frequency = ofMap(ofGetMouseY(), <span class="dv">0</span>, ofGetHeight(), <span class="dv">60</span>, <span class="dv">700</span>, <span class="kw">true</span>);
+}
+
+<span class="dt">void</span> ofApp::draw() {
+    ofBackground(ofColor::black);
+    ofSetLineWidth(<span class="dv">5</span>);
+    ofSetColor(ofColor::lightGreen);
+    outLine.draw();
+    ofSetColor(ofColor::cyan);
+    waveLine.draw();
+}
+
+<span class="dt">void</span> ofApp::updateWaveform(<span class="dt">int</span> waveformResolution) {
+    waveform.resize(waveformResolution);
+    waveLine.clear();
+    
+    <span class="co">// "waveformStep" maps a full oscillation of sin() to the size </span>
+    <span class="co">// of the waveform lookup table</span>
+    <span class="dt">float</span> waveformStep = (M_PI * <span class="dv">2</span>.) / (<span class="dt">float</span>) waveform.size();
+    
+    <span class="kw">for</span>(<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; waveform.size(); i++) {
+        waveform[i] = sin(i * waveformStep);
+        
+        waveLine.addVertex(ofMap(i, <span class="dv">0</span>, waveform.size() - <span class="dv">1</span>, <span class="dv">0</span>, ofGetWidth()),
+                           ofMap(waveform[i], -<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, ofGetHeight()));
+    }
+}
+
+<span class="dt">void</span> ofApp::audioOut(<span class="dt">float</span> * output, <span class="dt">int</span> bufferSize, <span class="dt">int</span> nChannels) {
+    ofScopedLock waveformLock(waveformMutex);
+    
+    <span class="dt">float</span> sampleRate = <span class="dv">44100</span>;
+    <span class="dt">float</span> phaseStep = frequency / sampleRate;
+    
+    outLine.clear();
+    
+    <span class="kw">for</span>(<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; bufferSize * nChannels; i += nChannels) {
+        phase += phaseStep;
+        <span class="dt">int</span> waveformIndex = (<span class="dt">int</span>)(phase * waveform.size()) % waveform.size();
+        output[i] = waveform[waveformIndex];
+        
+        outLine.addVertex(ofMap(i, <span class="dv">0</span>, bufferSize - <span class="dv">1</span>, <span class="dv">0</span>, ofGetWidth()),
+                          ofMap(output[i], -<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, ofGetHeight()));
+    }
+}</code></pre>
+<p>Once you've got this running, try experimenting with different ways of filling up the waveform table (the line with <code>sin(...)</code> in it inside <code>updateWaveform(...)</code>). For instance, a fun one is to replace that line with:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">waveform[i] = ofSignedNoise(i * waveformStep, ofGetElapsedTimef());</code></pre>
+<p>This will get you a waveform that naturally evolves over time. Be careful to keep your waveform samples in the range -1 to 1, though, lest you explode your speakers and / or brain.</p>
+<h3 id="envelopes">Envelopes</h3>
+<p>We've got a drone generator happening now, but adding some volume modulation into the mix will really bring the sound to life. This will let the waveform be played like an instrument, or otherwise let it sound like it's a living being that reacts to events.</p>
+<p>We can create a simple (but effective) envelope with <code>ofLerp(...)</code> by adding the following to our app:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> ofApp : <span class="kw">public</span> ofBaseApp {
+    <span class="co">// ... the same members as the earlier app ...</span>
+    
+    <span class="dt">float</span> volume;
+};
+
+<span class="dt">void</span> ofApp::setup() {
+    <span class="co">// ... the rest of setup() from before ...</span>
+    
+    volume = <span class="dv">0</span>;
+}
+
+<span class="dt">void</span> ofApp::update() {
+    <span class="co">// ... the rest of update() from before ...</span>
+    
+    <span class="kw">if</span>(ofGetKeyPressed()) {
+        volume = ofLerp(volume, <span class="dv">1</span>, <span class="fl">0.8</span>); <span class="co">// jump quickly to 1</span>
+    } <span class="kw">else</span> {
+        volume = ofLerp(volume, <span class="dv">0</span>, <span class="fl">0.1</span>); <span class="co">// fade slowly to 0</span>
+    }    
+}
+
+<span class="dt">void</span> ofApp::audioOut(<span class="dt">float</span> * output, <span class="dt">int</span> bufferSize, <span class="dt">int</span> nChannels) {
+    <span class="co">// ... change the "output[i] = " line from before into this:</span>
+
+    output[i] = waveform[waveformIndex] * volume;
+}</code></pre>
+<p>Now, whenever you press a key the oscillator will spring to life, fading out gradually after the key is released.</p>
+<p>The standard way of controlling an envelope is with a relatively simple state machine called an ADSR, for "Attack, Decay, Sustain, Release".</p>
+<ul>
+<li><strong>Attack</strong> is how fast the volume reaches its peak after a note is triggered</li>
+<li><strong>Decay</strong> is how long it takes the volume to fall from the peak</li>
+<li><strong>Sustain</strong> is the resting volume of the envelope, which stays constant until the note is released</li>
+<li><strong>Release</strong> is how long it takes the volume to drop back to 0 after the note is released</li>
+</ul>
+<p>A full ADSR implementation is left as an exercise for the reader, though <a href="http://www.earlevel.com/main/2013/06/03/envelope-generators-adsr-code/" target="_blank">this example from earlevel.com</a> is a nice reference.</p>
+<h3 id="frequency-control">Frequency Control</h3>
+<p>You can probably tell where we're going, here. Now that the app is responding to key presses, we can use those key presses to determine the oscillator's frequency. We'll introduce a bit more <code>ofLerp(...)</code> here too to get a nice <em>legato</em> effect.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="kw">class</span> ofApp : <span class="kw">public</span> ofBaseApp {
+    <span class="co">// ... the same members as the earlier app ...</span>
+    
+    <span class="dt">void</span> keyPressed(<span class="dt">int</span> key);
+    <span class="dt">float</span> frequencyTarget;
+};
+
+<span class="dt">void</span> ofApp::setup() {
+    <span class="co">// ... the rest of setup() from before ...</span>
+    
+    frequency = <span class="dv">0</span>;
+    frequencyTarget = frequency;
+}
+
+<span class="dt">void</span> ofApp::update() {
+    <span class="co">// ... replace the "frequency = " line from earlier with this:</span>
+    frequency = ofLerp(frequency, frequencyTarget, <span class="fl">0.4</span>);
+}
+
+<span class="dt">void</span> ofApp::keyPressed(<span class="dt">int</span> key) {
+    <span class="kw">if</span>(key == 'z') {
+        frequencyTarget = <span class="fl">261.63</span>; <span class="co">// C</span>
+    } <span class="kw">else</span> <span class="kw">if</span>(key == 'x') {
+        frequencyTarget = <span class="fl">293.67</span>; <span class="co">// D</span>
+    } <span class="kw">else</span> <span class="kw">if</span>(key == 'c') {
+        frequencyTarget = <span class="fl">329.63</span>; <span class="co">// E</span>
+    } <span class="kw">else</span> <span class="kw">if</span>(key == 'v') {
+        frequencyTarget = <span class="fl">349.23</span>; <span class="co">// F</span>
+    } <span class="kw">else</span> <span class="kw">if</span>(key == 'b') {
+        frequencyTarget = <span class="fl">392.00</span>; <span class="co">// G</span>
+    } <span class="kw">else</span> <span class="kw">if</span>(key == 'n') {
+        frequencyTarget = <span class="fl">440.00</span>; <span class="co">// A</span>
+    } <span class="kw">else</span> <span class="kw">if</span>(key == 'm') {
+        frequencyTarget = <span class="fl">493.88</span>; <span class="co">// B</span>
+    }
+}</code></pre>
+<p>Now we've got a basic, useable instrument!</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/sound/images/synthesis-example.png" target="_blank"><img alt="Synthesis" src="../images/sound/images/synthesis-example.png" title="screenshot of the synthesizer built in this section, clearly showing the aliasing effect of a low-resolution waveform"/></a></div><div class="caption">Synthesis</div>
+</div></div>
+<p>A few things to try, if you'd like to explore further:</p>
+<ul>
+<li>Instead of using <code>keyPressed(...)</code> to determine the oscillator's frequency, use ofxMidi to respond to external MIDI messages. If you want to get fancy, try implementing pitch bend or use MIDI CC messages to control the frequency lerp rate.</li>
+<li>Instead of "snapping" to the nearest sample in the waveform lookup table, try interpolating between neighbouring values to reduce the noisy artifacts a low-resolution lookup table produces</li>
+<li>Try filling the waveform table with data from an image, or from a live camera (<code>ofMap(...)</code> will be handy to keep your data in the -1 to 1 range)</li>
+<li>Implement a <em>polyphonic</em> synthesizer. This is one which uses multiple oscillators to let you play more than one note at a time.</li>
+<li>Keep several copies of the <code>phase</code> index, and use <code>ofSignedNoise(...)</code> to slightly modify the frequency they represent. Add each of the waveforms together in <code>output</code>, but average the result by the number of phases you're tracking.</li>
+</ul>
+<p>For example:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> ofApp::audioOut(<span class="dt">float</span> * output, <span class="dt">int</span> bufferSize, <span class="dt">int</span> nChannels) {
+    ofScopedLock waveformLock(waveformMutex);
+
+    <span class="dt">float</span> sampleRate = <span class="dv">44100</span>;
+    <span class="dt">float</span> t = ofGetElapsedTimef();
+    <span class="dt">float</span> detune = <span class="dv">5</span>;
+
+    <span class="kw">for</span>(<span class="dt">int</span> phaseIndex = <span class="dv">0</span>; phaseIndex &lt; phases.size(); phaseIndex++) {
+        <span class="dt">float</span> phaseFreq = frequency + ofSignedNoise(phaseIndex, t) * detune;
+        <span class="dt">float</span> phaseStep = phaseFreq / sampleRate;
+
+        <span class="kw">for</span>(<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; bufferSize * nChannels; i += nChannels) {
+            phases[phaseIndex] += phaseStep;
+            <span class="dt">int</span> waveformIndex = (<span class="dt">int</span>)(phases[phaseIndex] * waveform.size()) % waveform.size();
+            output[i] += waveform[waveformIndex] * volume;
+        }
+    }
+    
+    outLine.clear();
+    <span class="kw">for</span>(<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; bufferSize * nChannels; i+= nChannels) {
+        output[i] /= phases.size();
+        outLine.addVertex(ofMap(i, <span class="dv">0</span>, bufferSize - <span class="dv">1</span>, <span class="dv">0</span>, ofGetWidth()),
+                          ofMap(output[i], -<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, ofGetHeight()));
+    }
+}</code></pre>
+<h2 id="audiogotchas">Audio Gotchas</h2>
+<h3 id="popping">"Popping"</h3>
+<p>When starting or ending playback of synthesized audio, you should try to quickly fade in / out the buffer, instead of starting or stopping abruptly. If you start playing back a buffer that begins like <code>[1.0, 0.9, 0.8...]</code>, the first thing the speaker will do is jump from the "at rest" position of 0 immediately to 1.0. This is a <em>huge</em> jump, and will probably result in a "pop" that's quite a bit louder than you were expecting (based on your computer's current volume).</p>
+<p>Usually, fading in / out over the course of about 30ms is enough to eliminate these sorts of pops.</p>
+<p>If you're getting pops in the middle of your playback, you can diagnose it by trying to find reasons why the sound might be very briefly cutting out (i.e. jumping to 0, resulting in a pop if the waveform was previously at a non-zero value).</p>
+<h3 id="clipping-distortion">"Clipping" / Distortion</h3>
+<p>If your samples begin to exceed the range of -1 to 1, you'll likely start to hear what's known as "clipping", which generally sounds like a grating, unpleasant distortion. Some audio hardware will handle this gracefully by allowing you a bit of leeway outside of the -1 to 1 range, but others will "clip" your buffers.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/sound/images/clipped-sinewave.png" target="_blank"><img alt="Clipping" src="../images/sound/images/clipped-sinewave.png" title="diagram showing two sine waves, one demonstrating clipping by extending beyond the upper and lower bounds"/></a></div><div class="caption">Clipping</div>
+</div></div>
+<p>Assuming this isn't your intent, you can generally blame clipping on a misbehaving addition or subtraction in your code. A multiplication of any two numbers between -1 and 1 will always result in another number between -1 and 1.</p>
+<p>If you <em>want</em> distortion, it's much more common to use a <a href="http://music.columbia.edu/cmc/musicandcomputers/chapter4/04_06.php" target="_blank">waveshaping algorithm</a> instead of trying to find a way to make clipping sound good.</p>
+<h3 id="latency">Latency</h3>
+<p>No matter what, sound you produce in your app will arrive at the speakers sometime after the event that triggered the sound. The total time of this round trip, from the event to your app to the speakers is referred to as <em>latency</em>.</p>
+<p>In practice, this usually isn't a big deal unless you're working on something like a musical instrument with very tight reaction time requirements (a drum instrument, for instance). If you're finding that your app's sound isn't responsive enough, you can try lowering the buffer size of your ofSoundStream. Be careful, though! The default buffer size is typically the default because it's determined to be the best tradeoff between latency and reliability. If you use a smaller buffer size, you might experience "popping" (as explained above) if your app can't keep up with the extra-strict audio deadlines.</p>
+<div class="footer">
+<div id="prev_chapter"><a href="hardware.html">&lt; Hardware</a></div>
+<div id="next_chapter"><a href="network.html">Network &gt;</a></div>
+</div>
+<div id="help"><i>please note that this book / chapter is a work in progress.  Feel free to suggest edits / corrections <a href="https://github.com/openframeworks/ofbook" target="_blank">here</a></i></div>
+</div>
+</div>
+</body>
+</html>

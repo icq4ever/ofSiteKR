@@ -1,0 +1,1085 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="pandoc" name="generator"/>
+<title>ofBook - image processing and computer vision</title>
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+<link href="../style/bootstrap.min.css" rel="stylesheet">
+<link href="../style/style.css" rel="stylesheet" type="text/css"/>
+<link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Merriweather:400,300,300italic,400italic,700,900,700italic,900italic" rel="stylesheet" type="text/css">
+<script src="../javascript/jquery-1.8.3.min.js"></script>
+<script src="../javascript/bootstrap.min.js"></script>
+<script src="../javascript/navbar.js"></script>
+</link></link></head>
+<body>
+<div class="banner">
+<div class="content-wrapper">
+<b>Work in progress!</b>
+        This is a preliminary version of ofBook, a collaboratively written book about openFrameworks.  Please post any issues, suggestions, comments on our <a href="https://github.com/openframeworks/ofBook/" target="_blank">repo</a>.
+    </div>
+</div>
+<div class="content-wrapper">
+<nav role="navigation">
+<ul id="nav-parts"><li class="group"><div class="groupTitle">Foreword</div><ul><li class="chapter"><div class="chapterTitle"><a href="foreword.html">foreword</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#책에관하여" target="_top">책에 관하여</a></li><li class="section"><a href="#credits" target="_top">Credits</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Basics</div><ul><li class="chapter"><div class="chapterTitle"><a href="of_philosophy.html">Philosophy</a></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="cplusplus_basics.html">C++ Language Basics</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#lookalive" target="_top">Look Alive!</a></li><li class="section"><a href="#iteration" target="_top">Iteration</a></li><li class="section"><a href="#compilingmyfirstapp" target="_top">Compiling My First App</a></li><li class="section"><a href="#beyondhelloworld" target="_top">Beyond Hello World</a></li><li class="section"><a href="#functions" target="_top">Functions</a></li><li class="section"><a href="#customfunctions" target="_top">Custom Functions</a></li><li class="section"><a href="#encapsulationofcomplexity" target="_top">Encapsulation of Complexity</a></li><li class="section"><a href="#variablespart1" target="_top">Variables (part 1)</a></li><li class="section"><a href="#conclusion" target="_top">Conclusion</a></li><li class="section"><a href="#ps" target="_top">PS.</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="setup_and_project_structure.html">oF structure</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#firstthingsfirst" target="_top">First things first</a></li><li class="section"><a href="#welcometoyournewkitchen" target="_top">Welcome to your new kitchen</a></li><li class="section"><a href="#runningexamples" target="_top">Running examples</a></li><li class="section"><a href="#offolderstructure" target="_top">oF folder structure</a></li><li class="section"><a href="#theofpantry" target="_top">The oF Pantry</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="intro_to_graphics.html">Graphics</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#brusheswithbasicshapes" target="_top">Brushes with Basic Shapes</a></li><li class="section"><a href="#brushesfromfreeformshapes" target="_top">Brushes from Freeform Shapes</a></li><li class="section"><a href="#movingtheworld" target="_top">Moving The World</a></li><li class="section"><a href="#nextsteps" target="_top">Next Steps</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#overview" target="_top">Overview</a></li><li class="section"><a href="#whatisobjectorientedprogramming" target="_top">What is Object Oriented Programming</a></li><li class="section"><a href="#howtobuildyourownclassessimpleclass" target="_top">How to build your own Classes (simple Class)</a></li><li class="section"><a href="#makeanobjectfromyourclass" target="_top">Make an Object from your Class</a></li><li class="section"><a href="#makeobjectsfromyourclass" target="_top">Make objects from your Class</a></li><li class="section"><a href="#makemoreobjectsfromyourclass" target="_top">Make more Objects from your Class</a></li><li class="section"><a href="#makeevenmoreobjectsfromyourclasspropertiesandconstructors" target="_top">Make even more Objects from your Class: properties and constructors</a></li><li class="section"><a href="#makeobjectsonthefly" target="_top">Make Objects on the fly</a></li><li class="section"><a href="#makinganddeleteasyouwishusingvectors" target="_top">Making and delete as you wish - using vectors</a></li><li class="section"><a href="#quickintrotopolymorphisminheritance" target="_top">Quick intro to polymorphism (inheritance)</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="how_of_works.html">how OF works</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#오픈프레임웍스코드의일반적인패턴설명" target="_top">오픈프레임웍스 코드의 일반적인 패턴 설명</a></li><li class="section"><a href="#setupupdatedraw" target="_top">setup, update, draw</a></li><li class="section"><a href="#클래스" target="_top">클래스</a></li><li class="section"><a href="#함수" target="_top">함수</a></li></ul></div></li></ul></li><li class="group selected"><div class="groupTitle">Approaches</div><ul><li class="chapter"><div class="chapterTitle"><a href="animation.html">Animation</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#background" target="_top">Background</a></li><li class="section"><a href="#animationinofusefulconcepts" target="_top">Animation in oF / useful concepts:</a></li><li class="section"><a href="#linearmovement" target="_top">Linear movement</a></li><li class="section"><a href="#functionbasedmovement" target="_top">Function based movement</a></li><li class="section"><a href="#simulation" target="_top">Simulation</a></li><li class="section"><a href="#wheretogofurther" target="_top">Where to go further</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="game_design.html">Experimental Game Development</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#howdogamedevelopersactuallymakegames" target="_top">How do game developers actually make games?</a></li><li class="section"><a href="#sowhatisoscanyway" target="_top">So what is OSC, anyway?</a></li><li class="section"><a href="#ourbasicgameandmakingitnotsobasic" target="_top">Our basic game–and making it not so basic</a></li></ul></div></li></ul><ul><li class="chapter selected"><div class="chapterTitle selected"><a href="image_processing_computer_vision.html">image processing and computer vision</a></div><div class="chapterContents selected"><ul><li class="section selected"><a href="#maybethereisamagicbullet" target="_top">Maybe There is a Magic Bullet</a></li><li class="section"><a href="#preliminariestoimageprocessing" target="_top">Preliminaries to Image Processing</a></li><li class="section"><a href="#이미지처리를얘기하기전에알아두어야할것들" target="_top">이미지처리를 얘기하기 전에 알아두어야 할것들</a></li><li class="section"><a href="#pointprocessingoperationsonimages" target="_top">Point Processing Operations on Images</a></li><li class="section"><a href="#acompleteworkflowbackgroundsubtraction" target="_top">A Complete Workflow: Background Subtraction</a></li><li class="section"><a href="#refinements" target="_top">Refinements</a></li><li class="section"><a href="#suggestionsforfurtherexperimentation" target="_top">Suggestions for Further Experimentation</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">I/O</div><ul><li class="chapter"><div class="chapterTitle"><a href="hardware.html">Hardware</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introduction" target="_top">introduction</a></li><li class="section"><a href="#소개" target="_top">소개</a></li><li class="section"><a href="#gettingstartedwithserialcommunication" target="_top">getting started with serial communication</a></li><li class="section"><a href="#시리얼통신시작하기" target="_top">시리얼 통신 시작 하기</a></li><li class="section"><a href="#digitalandanalogcommunication" target="_top">digital and analog communication</a></li><li class="section"><a href="#디지털과아날로그통신" target="_top">디지털과 아날로그 통신</a></li><li class="section"><a href="#usingserialforcommunicationbetweenarduinoandopenframeworks" target="_top">using serial for communication between arduino and openframeworks</a></li><li class="section"><a href="#lightsoncontrollinghardwareviadmx" target="_top">Lights On - controlling hardware via DMX</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="sound.html">Sound</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#gettingstartedwithsoundfiles" target="_top">Getting Started With Sound Files</a></li><li class="section"><a href="#gettingstartedwiththesoundstream" target="_top">Getting Started With the Sound Stream</a></li><li class="section"><a href="#why1to1" target="_top">Why -1 to 1?</a></li><li class="section"><a href="#timedomainvsfrequencydomain" target="_top">Time Domain vs Frequency Domain</a></li><li class="section"><a href="#reactingtoliveaudio" target="_top">Reacting to Live Audio</a></li><li class="section"><a href="#synthesizingaudio" target="_top">Synthesizing Audio</a></li><li class="section"><a href="#audiogotchas" target="_top">Audio Gotchas</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="network.html">Network</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#tcpvsudp" target="_top">TCP vs UDP</a></li><li class="section"><a href="#osc" target="_top">OSC</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Graphics</div><ul><li class="chapter"><div class="chapterTitle"><a href="openGL.html">Introducing OpenGL for OF</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introducing" target="_top">Introducing</a></li><li class="section"><a href="#vertices" target="_top">Vertices</a></li><li class="section"><a href="#meshes" target="_top">Meshes</a></li><li class="section"><a href="#vbos" target="_top">VBOs</a></li><li class="section"><a href="#abasic3dscene" target="_top">A Basic 3D Scene</a></li><li class="section"><a href="#matrices" target="_top">Matrices</a></li><li class="section"><a href="#textures" target="_top">Textures</a></li><li class="section"><a href="#cameras" target="_top">Cameras</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="lines.html">drawing lines</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#소개" target="_top">소개 ...</a></li><li class="section"><a href="#선그리기" target="_top">선 그리기</a></li><li class="section"><a href="#약간의노이즈abitofnoise" target="_top">약간의 노이즈A bit of noise</a></li><li class="section"><a href="#aweboflines" target="_top">A web of lines</a></li><li class="section"><a href="#makeasmoothlineinmovementina3dspace" target="_top">Make a smooth line in movement in a 3D space</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="generativemesh.html">Basics of Generating Meshes from an Image</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#basicsofgeneratingmeshesfromanimage1" target="_top">Basics of Generating Meshes from an Image</a></li><li class="section"><a href="#basicsworkingwithofmesh" target="_top">Basics: Working with ofMesh</a></li><li class="section"><a href="#generativemeshusinganimagetodrivethecreationofamesh" target="_top">Generative Mesh: Using an image to drive the creation of a mesh</a></li><li class="section"><a href="#manipulationsaddingeffectsthatmodifythemesh" target="_top">Manipulations: Adding effects that modify the mesh</a></li><li class="section"><a href="#nextsteps" target="_top">Next Steps</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="advanced_graphics.html">Advanced graphics</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#dimmediatemodevsofpolylineofpath" target="_top">2D, immediate mode vs ofPolyline/ofPath</a></li><li class="section"><a href="#d" target="_top">3D</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="shaders.html">Introducing Shaders</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introducing" target="_top">introducing</a></li><li class="section"><a href="#yourfirstshader" target="_top">Your first shader!</a></li><li class="section"><a href="#addinguniforms" target="_top">Adding Uniforms</a></li><li class="section"><a href="#addingsomeinteractivity" target="_top">Adding some interactivity</a></li><li class="section"><a href="#addingtextures" target="_top">Adding Textures</a></li><li class="section"><a href="#alphamasking" target="_top">Alpha Masking</a></li><li class="section"><a href="#multipletextures" target="_top">Multiple Textures</a></li><li class="section"><a href="#offbo" target="_top">ofFbo</a></li><li class="section"><a href="#texturesasdataegdisplacement" target="_top">Textures as Data (e.g. Displacement)</a></li><li class="section"><a href="#theendcongrats" target="_top">The End, Congrats!</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">C++</div><ul><li class="chapter"><div class="chapterTitle"><a href="threads.html">threads</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#쓰레드란무엇이고언제사용해야하는가" target="_top">쓰레드란 무엇이고 언제 사용해야 하는가</a></li><li class="section"><a href="#ofthread" target="_top">ofThread</a></li><li class="section"><a href="#스레드와opengl" target="_top">스레드와 openGL</a></li><li class="section"><a href="#ofmutex" target="_top">ofMutex</a></li><li class="section"><a href="#externalthreadsanddoublebuffering" target="_top">External threads and double buffering</a></li><li class="section"><a href="#ofscopedlock" target="_top">ofScopedLock</a></li><li class="section"><a href="#pococondition" target="_top">Poco::Condition</a></li><li class="section"><a href="#conclusion" target="_top">Conclusion</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="memory.html">memory of C++</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#컴퓨터메모리와변수" target="_top">컴퓨터 메모리와 변수</a></li><li class="section"><a href="#스택변수함수내의변수vs오브젝트내의변수" target="_top">스택 변수, 함수내의 변수 vs 오브젝트내의 변수</a></li><li class="section"><a href="#포인터와레퍼런스" target="_top">포인터와 레퍼런스</a></li><li class="section"><a href="#힙heap영역에서의변수들" target="_top">힙(heap) 영역에서의 변수들</a></li><li class="section"><a href="#메모리구조배열과vector" target="_top">메모리 구조, 배열과 vector</a></li><li class="section"><a href="#다른메모리구조리스트와맵" target="_top">다른 메모리 구조, 리스트와 맵</a></li><li class="section"><a href="#스마트포인터" target="_top">스마트 포인터</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="stl_vector.html">Introduction to vectors</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#quickreview" target="_top">Quick Review:</a></li><li class="section"><a href="#declaringavector" target="_top">Declaring a vector</a></li><li class="section"><a href="#addingelementstoavector" target="_top">Adding elements to a vector</a></li><li class="section"><a href="#resize" target="_top">resize</a></li><li class="section"><a href="#assign" target="_top">assign</a></li><li class="section"><a href="#accessingelementsofavector" target="_top">Accessing elements of a vector</a></li><li class="section"><a href="#erasingelementsofavector" target="_top">Erasing elements of a vector</a></li><li class="section"><a href="#iterators" target="_top">Iterators</a></li><li class="section"><a href="#sortingandshufflingavector" target="_top">Sorting and shuffling a vector</a></li><li class="section"><a href="#vectorsofobjects" target="_top">Vectors of objects</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="stl_map.html">let's play with Map, std::map</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#소개map이무엇인가요" target="_top">소개 : map이 무엇인가요?</a></li><li class="section"><a href="#map에값삽입하기" target="_top">map에 값 삽입하기</a></li><li class="section"><a href="#map에서요소삭제하기" target="_top">map에서 요소 삭제하기</a></li><li class="section"><a href="#map을훑기" target="_top">map을 훑기</a></li><li class="section"><a href="#map에서요소찾기" target="_top">map에서 요소 찾기</a></li><li class="section"><a href="#map에오브젝트저장하기" target="_top">map에 오브젝트 저장하기</a></li><li class="section"><a href="#multimap이란무엇인가요" target="_top">multimap이란 무엇인가요?</a></li><li class="section"><a href="#다른유용한메소드들" target="_top">다른 유용한 메소드들</a></li><li class="section"><a href="#추가참고자료역자에의해추가됨" target="_top">추가 참고 자료 (역자에 의해 추가됨)</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="c++11.html">C++ 11</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introduction" target="_top">Introduction</a></li><li class="section"><a href="#auto" target="_top">auto</a></li><li class="section"><a href="#forthingthings" target="_top">for (thing : things)</a></li><li class="section"><a href="#override" target="_top">override</a></li><li class="section"><a href="#lambdafunctions" target="_top">Lambda functions</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Advanced topics</div><ul><li class="chapter"><div class="chapterTitle"><a href="math.html">Math: From 1D to 4D</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#onedimensionusingchange" target="_top">One Dimension: Using Change</a></li><li class="section"><a href="#moredimensionssomelinearalgebra" target="_top">More Dimensions: Some Linear Algebra</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Platforms</div><ul><li class="chapter"><div class="chapterTitle"><a href="ios.html">ofxiOS</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#openframeworksoniosdevices" target="_top">OpenFrameworks on iOS devices.</a></li><li class="section"><a href="#intro" target="_top">Intro</a></li><li class="section"><a href="#introtoobjectivec" target="_top">Intro to Objective-C</a></li><li class="section"><a href="#underthehood" target="_top">Under the Hood</a></li><li class="section"><a href="#ofuikit" target="_top">OF &amp; UIKit</a></li><li class="section"><a href="#mediaplaybackandcapture" target="_top">Media Playback and Capture</a></li><li class="section"><a href="#lifehacks" target="_top">Life Hacks</a></li><li class="section"><a href="#appstore" target="_top">App Store</a></li><li class="section"><a href="#casestudies" target="_top">Case Studies</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Tools</div><ul><li class="chapter"><div class="chapterTitle"><a href="version_control_with_git.html">Version control with Git</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#whatisversioncontrolandwhyshouldyouuseit" target="_top">What is version control, and why should you use it?</a></li><li class="section"><a href="#differentversioncontrolsystems" target="_top">Different version control systems</a></li><li class="section"><a href="#introductiontogit" target="_top">Introduction to Git</a></li><li class="section"><a href="#popularguiclients" target="_top">Popular GUI clients</a></li><li class="section"><a href="#conclusion" target="_top">Conclusion</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="ofSketch.html">ofSketch</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#whatisofsketch" target="_top">What is ofSketch?</a></li><li class="section"><a href="#download" target="_top">Download</a></li><li class="section"><a href="#sketchformat" target="_top">Sketch Format</a></li><li class="section"><a href="#remotecoding" target="_top">Remote Coding</a></li><li class="section"><a href="#future" target="_top">Future</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="installation_up_4evr_macosx.html">Installation up 4evr</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#step1prepyoursoftwareandthecomputer" target="_top">Step 1: Prep your software and the computer</a></li><li class="section"><a href="#step2bootintoyoursoftware" target="_top">Step 2: Boot into your software</a></li><li class="section"><a href="#step3keepitupchamp" target="_top">Step 3: Keep it up (champ!)</a></li><li class="section"><a href="#step4rebootperiodically" target="_top">Step 4: Reboot periodically</a></li><li class="section"><a href="#step5checkinonitfromafar" target="_top">Step 5: Check in on it from afar.</a></li><li class="section"><a href="#step6testtesttest" target="_top">Step 6: Test, test, test.</a></li><li class="section"><a href="#additionaltipslogging" target="_top">Additional Tips: Logging</a></li><li class="section"><a href="#memoryleakmurderer" target="_top">Memory leak murderer</a></li><li class="section"><a href="#alternateresources" target="_top">Alternate resources:</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="installation_up_4evr_linux.html">installation up4ever - linux</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#몇가지추가적인팁" target="_top">몇가지 추가적인 팁:</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Case studies</div><ul><li class="chapter"><div class="chapterTitle"><a href="project_eva.html">Choreographies for Humans and Stars</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#projectoverview" target="_top">Project Overview</a></li><li class="section"><a href="#ideationandprototyping" target="_top">Ideation and Prototyping</a></li><li class="section"><a href="#findingthetechnicalsolutions" target="_top">Finding the Technical Solutions</a></li><li class="section"><a href="#developingthevisualizationsoftware" target="_top">Developing the Visualization Software</a></li><li class="section"><a href="#failsafesanddirtyfixes" target="_top">Fail-safes and dirty fixes</a></li><li class="section"><a href="#resultsandreception" target="_top">Results and Reception</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="project_joel.html">Anthropocene</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#theproject" target="_top">The Project</a></li><li class="section"><a href="#development" target="_top">Development</a></li><li class="section"><a href="#showtime" target="_top">Show time</a></li><li class="section"><a href="#postevent" target="_top">Post Event</a></li><li class="section"><a href="#teamandcredits" target="_top">Team and Credits</a></li><li class="section"><a href="#hardwareselection" target="_top">Hardware selection</a></li></ul></div></li></ul></li></ul>
+</nav>
+<div class="chapter-content">
+<h1 id="image-processing-and-computer-vision">image processing and computer vision</h1>
+<p><a href="http://www.flong.com/" target="_blank">Golan Levin</a> 작성<br/> <a href="http://brannondorsey.com" target="_blank">Brannon Dorsey</a> 편집</p>
+<p>This chapter introduces some basic techniques for manipulating and analyzing images in openFrameworks. As it would be impossible to treat this field comprehensively, we limit ourselves to a discussion of how images relate to computer memory, and work through an example of background subtraction, a popular operation for detecting people in video. This chapter is not a comprehensive guide to computer vision; for that, we refer you to excellent resources such as Richard Szeliski's <a href="http://szeliski.org/Book/" target="_blank"><em>Computer Vision: Algorithms and Applications</em></a> or Gary Bradski's <a href="http://cs.haifa.ac.il/~dkeren/ip/OReilly-LearningOpenCV.pdf" target="_blank"><em>Learning OpenCV</em></a>.</p>
+<p>이 챕터에서는 오픈프레임웍스에서의 이미지 조작과 분석을 위한 몇가지 기본적인 테크닉을 소개합니다. 이 분야를 포괄적으로 다루는것은 불가능하므로, 여기서 다루는 주제들은 비디오에서 사람을 인식하기 위한 대표적인 방법인 배경제거의 예제를 통해 이미지가 어떻게 컴퓨터 메모리와 연관이 있는지로 한정합니다. 이 챕터는 컴퓨터 비전을 다루는 가이드는 아닙니다. 혹시 기대하셨다면 대신 Richard Szeliski의 <a href="http://szeliski.org/Book/" target="_blank"><em>Computer Vision: Algorithms and Applications</em></a>와 Gary Bradski의 <a href="http://cs.haifa.ac.il/~dkeren/ip/OReilly-LearningOpenCV.pdf" target="_blank"><em>Learning OpenCV</em></a>를 추천해 드립니다.</p>
+<p>We introduce the subject "from scratch", and there's a lot to learn, so before we get started, it's worth checking to see whether there may already be a tool that happens to do exactly what you want. In the first section, we point to a few free tools that tidily encapsulate some vision workflows that are especially popular in interactive art and design.</p>
+<h2 id="maybethereisamagicbullet">Maybe There is a Magic Bullet</h2>
+<p>Computer vision allows you to make assertions about what's going on in images, video, and camera feeds. It's fun (and hugely educational) to create your own vision software, but it's not always <em>necessary</em> to implement such techniques yourself. Many of the most common computer vision workflows have been encapsulated into apps that can detect the stuff you want—and transmit the results over OSC to your openFrameworks app! Before you dig in to this chapter, consider whether you can instead sketch a prototype with one of these time-saving vision tools.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/image_processing_computer_vision/images/tsps_ccv.png" target="_blank"><img alt="TSPS (left) and Community Core Vision (right)" src="../images/image_processing_computer_vision/images/tsps_ccv.png"/></a></div><div class="caption">TSPS (left) and Community Core Vision (right)</div>
+</div></div>
+<p><em>TSPS (left) and Community Core Vision (right) are richly-featured toolkits for performing computer vision tasks that are common in interactive installations. They transmit summaries of their analyses over OSC, a signalling protocol that is widely used in the media arts.</em></p>
+<ul>
+<li><a href="http://opentsps.com/" target="_blank">Toolkit for Sensing People in Spaces (TSPS)</a>: A powerful toolkit for tracking bodies in video.</li>
+<li><a href="http://ccv.nuigroup.com/" target="_blank">Community Core Vision</a>: Another full-featured toolkit for a wide range of tracking tasks.</li>
+<li><a href="https://github.com/kylemcdonald/ofxFaceTracker/releases/" target="_blank">FaceOSC</a>: An app which tracks faces (and face parts, like eyes and noses) in video, and transmits this data over OSC.</li>
+<li><a href="http://reactivision.sourceforge.net/" target="_blank">Reactivision TUIO</a>: A system which uses fiducial markers to track the positions and orientations of objects, and transmits this data over OSC.</li>
+<li><a href="https://github.com/downloads/kylemcdonald/AppropriatingNewTechnologies/EyeOSC.zip" target="_blank">EyeOSC</a> (.zip): An experimental, webcam-based eyetracker that transmits the viewer's fixation point over OSC.</li>
+<li><a href="http://synapsekinect.tumblr.com/post/6610177302/synapse" target="_blank">Synapse for Kinect</a>: A Kinect-based skeleton tracker with OSC.</li>
+<li><a href="https://github.com/ofTheo/kinectArmTracker" target="_blank">DesignIO kinectArmTracker</a>: A lightweight OSC app for tracking arm movements with the Kinect.</li>
+<li><a href="http://www.davidlubl.in/projects/#/ocr-osc/" target="_blank">OCR-OSC</a> A lightweight kit for performing optical character recognition (OCR) on video streams.</li>
+</ul>
+<p>This book's <a href="https://github.com/openframeworks/ofBook/blob/master/chapters/game_design/chapter.md" target="_blank">chapter on Game Design</a> gives a good overview of how you can create openFrameworks apps that make use of the OSC messages generated by such tools. Of course, if these tools don't do what you need, then it's time to start reading about...</p>
+<h2 id="preliminariestoimageprocessing">Preliminaries to Image Processing</h2>
+<h2 id="이미지처리를얘기하기전에알아두어야할것들">이미지처리를 얘기하기 전에 알아두어야 할것들</h2>
+<h3 id="digital-image-acquisition-and-data-structures">Digital image acquisition and data structures</h3>
+<h3 id="디지털-이미지-포착-및-데이터-구조">디지털 이미지 포착, 및 데이터 구조</h3>
+<p>This chapter introduces techniques for manipulating (and extracting certain kinds of information from) <em>raster images</em>. Such images are sometimes also known as <em>bitmap images</em> or <em>pixmap images</em>, though we'll just use the generic term <strong>image</strong> to refer to any array (or <em>buffer</em>) of numbers that represent the color values of a rectangular grid of <em>pixels</em> ("picture elements"). In openFrameworks, such buffers come in a variety of flavors, and are used within (and managed by) a wide variety of convenient container objects, as we shall see.</p>
+<p>이 챕터에서는 <em>래스터 이미지</em>를 다루는(그리고 래스터 이미지에서 특정 정보를 추출하는) 기법을 소개합니다. 비록 일반적인 용어로 <strong>이미지</strong>를 사용하지만, 이것은 종종 <em>비트맵 이미지</em> 혹은 <em>픽스맵 이미지</em>라고도 알려져 있는데, 각 사각 <em>픽셀</em> 그리드의 컬러값을 표현하는 숫자들의 배열(혹은 <em>버퍼</em>)입니다. 오픈프레임웍스에서, 버퍼는 앞으로 보게 되겠지만, 널리 사용되는 편리한 컨테이너 오브젝트입니다.</p>
+<h4 id="loading-and-displaying-an-image">Loading and Displaying an Image</h4>
+<h4 id="이미지를-불러와-보여주기">이미지를 불러와 보여주기</h4>
+<p>Image processing begins with, well, <em>an image</em>. Happily, loading and displaying an image is very straightforward in oF. Let's start with this tiny, low-resolution (12x16 pixel) grayscale portrait of Abraham Lincoln: 이미지 처리의 시작은 당연히 <em>이미지</em>입니다. 편리하게도 오픈프레임웍스에서 이미지를 보여주는것은 아주 직관적입니다. 자 아주 조그만한, 낮은 해상도(12x16픽셀)인 링컨의 흑백 초상화로 시작해보죠.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/image_processing_computer_vision/images/lincoln.png" target="_blank"><img alt="A small image of Lincoln" src="../images/image_processing_computer_vision/images/lincoln.png"/></a></div><div class="caption">A small image of Lincoln</div>
+</div></div>
+<p>아래의 이미지를 불러와 표시하는 아주 간단한 어플리케이션은, 예제의 <em>imageLoaderExample</em>와 아주 흡사합니다. 프로그램의 헤더파일인, <em>ofApp.h</em>에서, <code>ofImage</code>오브젝트의 인스턴스인 <em>myImage</em>를 선언합니다.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Example 1: Load and display an image.</span>
+<span class="co">// This is ofApp.h</span>
+
+<span class="ot">#pragma once</span>
+<span class="ot">#include "ofMain.h"</span>
+
+<span class="kw">class</span> ofApp : <span class="kw">public</span> ofBaseApp{
+	<span class="kw">public</span>:
+		<span class="dt">void</span> setup();
+		<span class="dt">void</span> draw();
+		
+		<span class="co">// Here in the header (.h) file, we declare an ofImage:</span>
+		ofImage myImage;
+};</code></pre>
+<p>Below is our complete <em>ofApp.cpp</em> file. The Lincoln image is <em>loaded</em> from our hard drive (once) in the <code>setup()</code> function; then we <em>display</em> it (many times per second) in our <code>draw()</code> function. As you can see from the filepath provided to the <code>loadImage()</code> function, the program assumes that the image <em>lincoln.png</em> can be found in a directory called "data" alongside your executable: 아래는 최종 <em>ofApp.cpp</em> 파일내용입니다. 링컨 이미지는 <code>setup()</code>함수에 의해 하드드라이브에서 (한번) <em>불러와집니다</em>. 그리고 나서 이것을 <code>draw()</code>함수에서 (1초에 여러번) <em>그려냅니다</em>. <code>loadImage()</code>함수의 파일경로에서 볼 수 있읏이, 이 프로그램은 실행파일과 같은 경로에 있는 "data" 디렉토리에서 <em>lincoln.png</em>를 취합니다.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Example 1: Load and display an image.</span>
+<span class="co">// This is ofApp.cpp</span>
+
+<span class="ot">#include "ofApp.h"</span>
+
+<span class="dt">void</span> ofApp::setup(){
+	<span class="co">// We load an image from our "data" folder into the ofImage:</span>
+	myImage.loadImage(<span class="st">"lincoln.png"</span>);
+	myImage.setImageType(OF_IMAGE_GRAYSCALE);
+}
+
+<span class="dt">void</span> ofApp::draw(){
+	ofBackground(<span class="dv">255</span>);
+	ofSetColor(<span class="dv">255</span>);
+
+	<span class="co">// We fetch the ofImage's dimensions and display it 10x larger.  </span>
+	<span class="dt">int</span> imgWidth = myImage.width;
+	<span class="dt">int</span> imgHeight = myImage.height;
+	myImage.draw(<span class="dv">10</span>, <span class="dv">10</span>, imgWidth * <span class="dv">10</span>, imgHeight * <span class="dv">10</span>);
+}</code></pre>
+<p>위의 프로그램을 컴파일하고 실행하면 캔버스에 이 (쪼만한) 이미지를 10배 키워서, 좌측상단의 위치를 (10, 10)로 하여 그려냅니다. 이미지의 위치지정과 크기조절은 <code>myImage.draw()</code> 명령에 의해 수행됩니다. 이미지는 "흐리게" 보여지는데, 오픈프레임웍스는 확대된 이미지를 그려낼 때에 기본적으로 <a href="http://en.wikipedia.org/wiki/Linear_interpolation" target="_blank">linear interpolation</a>를 사용하기 떄문입니다.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/image_processing_computer_vision/images/lincoln-displayed.jpg" target="_blank"><img alt="The small Lincoln image, scaled up large in an openFrameworks app" src="../images/image_processing_computer_vision/images/lincoln-displayed.jpg"/></a></div><div class="caption">The small Lincoln image, scaled up large in an openFrameworks app</div>
+</div></div>
+<p>If you're new to working with images in oF, it's worth pointing out that you should try to avoid loading images in the <code>draw()</code> or <code>update()</code> functions, if possible. Why? Well, reading data from disk is one of the slowest things you can ask a computer to do. In many circumstances, you can simply load all the images you'll need just once, when your program is first initialized, in <code>setup()</code>. By contrast, if you're repeatedly loading an image in your <code>draw()</code> loop — the same image, again and again, 60 times per second — you're hurting the performance of your app, and potentially even risking damage to your hard disk.</p>
+<p>만약 오픈프레임웍스에서 이미지를 처음 다루는 분들이라면, 가능한 한 <code>draw()</code>나 <code>update()</code>함수에서 이미지를 불러오면 안된다라는 사실을 알고 계셔야 합니다. 왜냐구요? 디스크에서 데이터를 불러오는것은 가장 느린 작업이기 떄문입니다. 대부분 필요한 모든 이미지는 프로그램이 초기화되는 <code>setup()</code>함수에서 단 한번만에 불러오면 됩니다. 이와 반대로, 만약 <code>draw()</code> 루프에서 같은 이미지를 1초에 60번 반복하여 불러오면, 어플리케이션의 성능이 떨어질 뿐만 아니라, 심지어 하드디스크의 손상을 가져올 수도 있습니다.</p>
+<!-- #### Where (Else) Images Come From -->
+<h4 id="이미지들은-어디서-오는거죠">이미지들은 어디서 오는거죠 ?</h4>
+<p>In openFrameworks, raster images can come from a wide variety of sources, including (but not limited to): 오픈프레임웍스에서, 래스터 이미지들은 다양한 소스에서 올 수 있습니다. 아래의 포맷들이 있죠 (하지만 이에 한정된다는 것은 아닙니다) :</p>
+<ul>
+<li>하드디스크에서 <code>ofImage</code>로 불러져 압축해제되는 이미지 파일 (.JPEG, .PNG, .TIFF, 또는 .GIF 와 같이 일반적으로 사용되는 저장 포맷)</li>
+<li>웹캠 또는 다른 비디오 카메라들에서 볼려진 실시간 이미지 스트림 (<code>ofVideoGrabber</code> 사용)</li>
+<li>디지털 비디오 파일에서 불려진 프레임의 시퀀스 (<code>ofVideoPlayer</code> 사용)</li>
+<li>`ofImage::grabScreen()을 사용하여 캡쳐된, 이미 화면에 출력된 것들을 취한 픽셀들의 버퍼</li>
+<li><code>ofFBO</code>에서 얻은, 혹은 <code>ofPixels</code>나 <code>ofTexture</code>오브젝트에 저장된, 생성된 컴퓨터 그래픽 렌더링.</li>
+<li>a real-time video from a more specialized variety of camera, such as a 1394b Firewire camera (via <code>ofxLibdc</code>), a networked Ethernet camera (via <code>ofxIpCamera</code>), a Canon DSLR (using <code>ofxCanonEOS</code>), or with the help of a variety of other community-contributed addons like <code>ofxQTKitVideoGrabber</code>, <code>ofxRPiCameraVideoGrabber</code>, etc.</li>
+<li>perhaps more exotically, a <em>depth image</em>, in which pixel values represent <em>distances</em> instead of colors. Depth images can be captured from real-world scenes with special cameras (such as a Microsoft Kinect via the <code>ofxKinect</code> addon), or extracted from CGI scenes using (for example) <code>ofFBO::getDepthTexture()</code>.</li>
+</ul>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/image_processing_computer_vision/images/kinect_depth_image.png" target="_blank"><img alt="A Kinect depth image (left) and corresponding RGB image (right)" src="../images/image_processing_computer_vision/images/kinect_depth_image.png"/></a></div><div class="caption">A Kinect depth image (left) and corresponding RGB image (right)</div>
+</div></div>
+<p><em>An example of a depth image (left) and a corresponding RGB color image (right), captured simultaneously with a Microsoft Kinect. In the depth image, the brightness of a pixel represents its proximity to the camera. (Note that these two images, presented in a raw state, are not yet "calibrated" to each other, meaning that there is not an exact pixel-for-pixel correspondence between a pixel's color and its corresponding depth.)</em></p>
+<p>Incidentally, oF makes it easy to <strong>load images directly from the Internet</strong>, by using a URL as the filename argument, as in</p>
+<pre><code>myImage.loadImage("http://en.wikipedia.org/wiki/File:Example.jpg");</code></pre>
+<p>Keep in mind that doing this will load the remotely-stored image <em>synchronously</em>, meaning your program will "block" (or freeze) while it waits for all of the data to download from the web. For an improved user experience, you could instead load Internet images <em>asynchronously</em> (in a background thread), using the response provided by <code>ofLoadURLAsync()</code>; a sample implementation of this can be found in the openFrameworks <em>imageLoaderWebExample</em> graphics example (and check out the <em>threadedImageLoaderExample</em> as well). Now that you can load images stored on the Internet, you can fetch images <em>computationally</em> using fun APIs (like those of <a href="https://temboo.com/library/" target="_blank">Temboo</a>, <a href="http://instagram.com/developer/" target="_blank">Instagram</a> or <a href="https://www.flickr.com/services/api/" target="_blank">Flickr</a>), or from dynamic online sources such as live traffic cameras.</p>
+<h4 id="acquiring-and-displaying-a-webcam-image">Acquiring and Displaying a Webcam Image</h4>
+<p>The procedure for <strong>acquiring a video stream</strong> from a live webcam or digital movie file is no more difficult than loading an <code>ofImage</code>. The main conceptual difference is that the image data contained within an <code>ofVideoGrabber</code> or <code>ofVideoPlayer</code> object happens to be continually refreshed, usually about 30 times per second (or at the framerate of the footage). Each time you ask this object to render its data to the screen, as in <code>myVideoGrabber.draw()</code> below, the pixels will contain freshly updated values.</p>
+<p>The following program (which you can find elaborated in the oF <em>videoGrabberExample</em>) shows the basic procedure. In this example below, for some added fun, we also retrieve the buffer of data that contains the <code>ofVideoGrabber</code>'s pixels, then arithmetically "invert" this data (to generate a "photographic negative") and display this with an <code>ofTexture</code>.</p>
+<p>The header file for our app declares an <code>ofVideoGrabber</code>, which we will use to acquire video data from our computer's default webcam. We also declare a buffer of unsigned chars to store the inverted video frame, and the <code>ofTexture</code> which we'll use to display it:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Example 2. An application to capture, display,</span>
+<span class="co">// and invert live video from a webcam.</span>
+<span class="co">// This is ofApp.h</span>
+
+<span class="ot">#pragma once</span>
+<span class="ot">#include "ofMain.h"</span>
+
+<span class="kw">class</span> ofApp : <span class="kw">public</span> ofBaseApp{
+	<span class="kw">public</span>:
+	
+		<span class="dt">void</span> setup();
+		<span class="dt">void</span> update();
+		<span class="dt">void</span> draw();
+
+		ofVideoGrabber myVideoGrabber;
+		ofTexture myTexture;
+
+		<span class="dt">unsigned</span> <span class="dt">char</span>* invertedVideoData;
+		<span class="dt">int</span> camWidth;
+		<span class="dt">int</span> camHeight;
+};</code></pre>
+<p>Does the <code>unsigned char*</code> declaration look unfamiliar? It's very important to recognize and understand, because this is a nearly universal way of storing and exchanging image data. The <code>unsigned</code> keyword means that the values which describe the colors in our image are exclusively positive numbers. The <code>char</code> means that each color component of each pixel is stored in a single 8-bit number—a byte, with values ranging from 0 to 255—which for many years was also the data type in which <em>char</em>acters were stored. And the asterisk (<code>*</code>) means that the data named by this variable is not just a single unsigned char, but rather, an <em>array</em> of unsigned chars (or more accurately, a <em>pointer</em> to a buffer of unsigned chars). For more information about such datatypes, see the <em>Memory in C++</em> chapter.</p>
+<p>Below in Example 2 is the complete code of our webcam-grabbing .cpp file. As you might expect, the <code>ofVideoGrabber</code> object provides many more methods and settings, not shown here. These allow you to do things like listing and selecting available camera devices; setting your capture dimensions and framerate; and (depending on your hardware and drivers) adjusting parameters like camera exposure and contrast.</p>
+<p>Note that the example segregates our heavy computation into the <code>update()</code> method, and the rendering of our graphics into <code>draw()</code>. This is a recommended pattern for structuring your code.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Example 2. An application to capture, invert,</span>
+<span class="co">// and display live video from a webcam.</span>
+<span class="co">// This is ofApp.cpp</span>
+
+<span class="ot">#include "ofApp.h"</span>
+
+<span class="dt">void</span> ofApp::setup(){
+
+	<span class="co">// Set capture dimensions of 320x240, a common video size.</span>
+	camWidth = <span class="dv">320</span>;
+	camHeight = <span class="dv">240</span>;
+
+	<span class="co">// Open an ofVideoGrabber for the default camera</span>
+	myVideoGrabber.initGrabber (camWidth,camHeight);
+
+	<span class="co">// Create resources to store and display another copy of the data</span>
+	invertedVideoData = <span class="kw">new</span> <span class="dt">unsigned</span> <span class="dt">char</span> [camWidth * camHeight * <span class="dv">3</span>];
+	myTexture.allocate (camWidth,camHeight, GL_RGB);
+}
+
+<span class="dt">void</span> ofApp::update(){
+
+	<span class="co">// Ask the grabber to refresh its data.</span>
+	myVideoGrabber.update();
+
+	<span class="co">// If the grabber indeed has fresh data,</span>
+	<span class="kw">if</span>(myVideoGrabber.isFrameNew()){
+
+		<span class="co">// Obtain a pointer to the grabber's image data.</span>
+		<span class="dt">unsigned</span> <span class="dt">char</span>* pixelData = myVideoGrabber.getPixels();
+		
+		<span class="co">// Reckon the total number of bytes to examine. </span>
+		<span class="co">// This is the image's width times its height,</span>
+		<span class="co">// times 3 -- because each pixel requires 3 bytes</span>
+		<span class="co">// to store its R, G, and B color components.  </span>
+		<span class="dt">int</span> nTotalBytes = camWidth * camHeight * <span class="dv">3</span>;
+		
+		<span class="co">// For every byte of the RGB image data,</span>
+		<span class="kw">for</span>(<span class="dt">int</span> i=<span class="dv">0</span>; i&lt;nTotalBytes; i++){
+
+			<span class="co">// pixelData[i] is the i'th byte of the image;</span>
+			<span class="co">// subtract it from 255, to make a "photo negative"</span>
+			invertedVideoData[i] = <span class="dv">255</span> - pixelData[i];
+		}
+
+		<span class="co">// Now stash the inverted data in an ofTexture</span>
+		myTexture.loadData (invertedVideoData, camWidth,camHeight, GL_RGB);
+	}
+}
+
+<span class="dt">void</span> ofApp::draw(){
+	ofBackground(<span class="dv">100</span>,<span class="dv">100</span>,<span class="dv">100</span>);
+	ofSetColor(<span class="dv">255</span>,<span class="dv">255</span>,<span class="dv">255</span>);
+
+	<span class="co">// Draw the grabber, and next to it, the "negative" ofTexture.</span>
+	myVideoGrabber.draw(<span class="dv">10</span>,<span class="dv">10</span>);
+	myTexture.draw(<span class="dv">340</span>, <span class="dv">10</span>);
+}</code></pre>
+<p>This application continually displays the live camera feed, and also presents a live, "filtered" (photo negative) version. Here's the result, using my laptop's webcam:</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/image_processing_computer_vision/images/videograbber.png" target="_blank"><img alt="Webcam video grabbing (left) and pixelwise inversion (at right)" src="../images/image_processing_computer_vision/images/videograbber.png"/></a></div><div class="caption">Webcam video grabbing (left) and pixelwise inversion (at right)</div>
+</div></div>
+<p>Acquiring frames from a Quicktime movie or other digital video file stored on disk is an almost identical procedure. See the oF <em>videoPlayerExample</em> implementation or <code>ofVideoGrabber</code> <a href="http://openframeworks.cc/documentation/video/ofVideoGrabber.html" target="_blank">documentation</a> for details.</p>
+<p>A common pattern among developers of interactive computer vision systems is to enable easy switching between a pre-stored "sample" video of your scene, and video from a live camera grabber. That way, you can test and refine your processing algorithms in the comfort of your hotel room, and then switch to "real" camera input when you're back at the installation site. A hacky if effective example of this pattern can be found in the openFrameworks <em>opencvExample</em>, in the addons example directory, where the "switch" is built using a <code>#define</code> <a href="http://www.cplusplus.com/doc/tutorial/preprocessor/" target="_blank">preprocessor directive</a>:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">    <span class="co">//...</span>
+	<span class="ot">#ifdef _USE_LIVE_VIDEO</span>
+        myVideoGrabber.initGrabber(<span class="dv">320</span>,<span class="dv">240</span>);
+	<span class="ot">#else</span>
+        myVideoPlayer.loadMovie(<span class="st">"pedestrians.mov"</span>);
+        myVideoPlayer.play();
+	<span class="ot">#endif</span>
+	<span class="co">//...</span></code></pre>
+<p>Uncommenting the <code>//#define _USE_LIVE_VIDEO</code> line in the .h file of the <em>opencvExample</em> forces the compiler to attempt to use a webcam instead of the pre-stored sample video.</p>
+<h4 id="pixels-in-memory">Pixels in Memory</h4>
+<p>To begin our study of image processing and computer vision, we'll need to do more than just load and display images; we'll need to <em>access, manipulate and analyze the numeric data represented by their pixels</em>. It's therefore worth reviewing how pixels are stored in computer memory. Below is a simple illustration of the grayscale image buffer which stores our image of Abraham Lincoln. Each pixel's brightness is represented by a single 8-bit number, whose range is from 0 (black) to 255 (white):</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/image_processing_computer_vision/images/lincoln_pixel_values.png" target="_blank"><img alt="Pixel data diagram. At left, our image of Lincoln; at center, the pixels labeled with numbers from 0-255, representing their brightness; and at right, these numbers by themselves." src="../images/image_processing_computer_vision/images/lincoln_pixel_values.png"/></a></div><div class="caption">Pixel data diagram. At left, our image of Lincoln; at center, the pixels labeled with numbers from 0-255, representing their brightness; and at right, these numbers by themselves.</div>
+</div></div>
+<p>In point of fact, pixel values are almost universally stored, at the hardware level, in a <em>one-dimensional array</em>. For example, the data from the image above is stored in a manner similar to this long list of unsigned chars:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">{<span class="dv">157</span>, <span class="dv">153</span>, <span class="dv">174</span>, <span class="dv">168</span>, <span class="dv">150</span>, <span class="dv">152</span>, <span class="dv">129</span>, <span class="dv">151</span>, <span class="dv">172</span>, <span class="dv">161</span>, <span class="dv">155</span>, <span class="dv">156</span>,
+ <span class="dv">155</span>, <span class="dv">182</span>, <span class="dv">163</span>,  <span class="dv">74</span>,  <span class="dv">75</span>,  <span class="dv">62</span>,  <span class="dv">33</span>,  <span class="dv">17</span>, <span class="dv">110</span>, <span class="dv">210</span>, <span class="dv">180</span>, <span class="dv">154</span>,
+ <span class="dv">180</span>, <span class="dv">180</span>,  <span class="dv">50</span>,  <span class="dv">14</span>,  <span class="dv">34</span>,   <span class="dv">6</span>,  <span class="dv">10</span>,  <span class="dv">33</span>,  <span class="dv">48</span>, <span class="dv">106</span>, <span class="dv">159</span>, <span class="dv">181</span>,
+ <span class="dv">206</span>, <span class="dv">109</span>,   <span class="dv">5</span>, <span class="dv">124</span>, <span class="dv">131</span>, <span class="dv">111</span>, <span class="dv">120</span>, <span class="dv">204</span>, <span class="dv">166</span>,  <span class="dv">15</span>,  <span class="dv">56</span>, <span class="dv">180</span>,
+ <span class="dv">194</span>,  <span class="dv">68</span>, <span class="dv">137</span>, <span class="dv">251</span>, <span class="dv">237</span>, <span class="dv">239</span>, <span class="dv">239</span>, <span class="dv">228</span>, <span class="dv">227</span>,  <span class="dv">87</span>,  <span class="dv">71</span>, <span class="dv">201</span>,
+ <span class="dv">172</span>, <span class="dv">105</span>, <span class="dv">207</span>, <span class="dv">233</span>, <span class="dv">233</span>, <span class="dv">214</span>, <span class="dv">220</span>, <span class="dv">239</span>, <span class="dv">228</span>,  <span class="dv">98</span>,  <span class="dv">74</span>, <span class="dv">206</span>,
+ <span class="dv">188</span>,  <span class="dv">88</span>, <span class="dv">179</span>, <span class="dv">209</span>, <span class="dv">185</span>, <span class="dv">215</span>, <span class="dv">211</span>, <span class="dv">158</span>, <span class="dv">139</span>,  <span class="dv">75</span>,  <span class="dv">20</span>, <span class="dv">169</span>,
+ <span class="dv">189</span>,  <span class="dv">97</span>, <span class="dv">165</span>,  <span class="dv">84</span>,  <span class="dv">10</span>, <span class="dv">168</span>, <span class="dv">134</span>,  <span class="dv">11</span>,  <span class="dv">31</span>,  <span class="dv">62</span>,  <span class="dv">22</span>, <span class="dv">148</span>,
+ <span class="dv">199</span>, <span class="dv">168</span>, <span class="dv">191</span>, <span class="dv">193</span>, <span class="dv">158</span>, <span class="dv">227</span>, <span class="dv">178</span>, <span class="dv">143</span>, <span class="dv">182</span>, <span class="dv">106</span>,  <span class="dv">36</span>, <span class="dv">190</span>,
+ <span class="dv">205</span>, <span class="dv">174</span>, <span class="dv">155</span>, <span class="dv">252</span>, <span class="dv">236</span>, <span class="dv">231</span>, <span class="dv">149</span>, <span class="dv">178</span>, <span class="dv">228</span>,  <span class="dv">43</span>,  <span class="dv">95</span>, <span class="dv">234</span>,
+ <span class="dv">190</span>, <span class="dv">216</span>, <span class="dv">116</span>, <span class="dv">149</span>, <span class="dv">236</span>, <span class="dv">187</span>,  <span class="dv">86</span>, <span class="dv">150</span>,  <span class="dv">79</span>,  <span class="dv">38</span>, <span class="dv">218</span>, <span class="dv">241</span>,
+ <span class="dv">190</span>, <span class="dv">224</span>, <span class="dv">147</span>, <span class="dv">108</span>, <span class="dv">227</span>, <span class="dv">210</span>, <span class="dv">127</span>, <span class="dv">102</span>,  <span class="dv">36</span>, <span class="dv">101</span>, <span class="dv">255</span>, <span class="dv">224</span>,
+ <span class="dv">190</span>, <span class="dv">214</span>, <span class="dv">173</span>,  <span class="dv">66</span>, <span class="dv">103</span>, <span class="dv">143</span>,  <span class="dv">96</span>,  <span class="dv">50</span>,   <span class="dv">2</span>, <span class="dv">109</span>, <span class="dv">249</span>, <span class="dv">215</span>,
+ <span class="dv">187</span>, <span class="dv">196</span>, <span class="dv">235</span>,  <span class="dv">75</span>,   <span class="dv">1</span>,  <span class="dv">81</span>,  <span class="dv">47</span>,   <span class="dv">0</span>,   <span class="dv">6</span>, <span class="dv">217</span>, <span class="dv">255</span>, <span class="dv">211</span>,
+ <span class="dv">183</span>, <span class="dv">202</span>, <span class="dv">237</span>, <span class="dv">145</span>,   <span class="dv">0</span>,   <span class="dv">0</span>,  <span class="dv">12</span>, <span class="dv">108</span>, <span class="dv">200</span>, <span class="dv">138</span>, <span class="dv">243</span>, <span class="dv">236</span>,
+ <span class="dv">195</span>, <span class="dv">206</span>, <span class="dv">123</span>, <span class="dv">207</span>, <span class="dv">177</span>, <span class="dv">121</span>, <span class="dv">123</span>, <span class="dv">200</span>, <span class="dv">175</span>,  <span class="dv">13</span>,  <span class="dv">96</span>, <span class="dv">218</span>};</code></pre>
+<p>This way of storing image data may run counter to your expectations, since the data certainly <em>appears</em> to be two-dimensional when it is displayed. Yet, this is the case, since computer memory consists simply of an ever-increasing linear list of address spaces.</p>
+<p>Note how this data includes no details about the image's width and height. Should this list of values be interpreted as a grayscale image which is 12 pixels wide and 16 pixels tall, or 8x24, or 3x64? Could it be interpreted as a color image? Such 'meta-data' is specified elsewhere — generally in a container object like an <code>ofImage</code>.</p>
+<h4 id="grayscale-pixels-and-array-indices">Grayscale Pixels and Array Indices</h4>
+<p>It's important to understand how pixel data is stored in computer memory. Each pixel has an <em>address</em>, indicated by a number (whose counting begins with zero):</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/image_processing_computer_vision/images/pixels_in_memory.png" target="_blank"><img alt="How pixels are stored in memory." src="../images/image_processing_computer_vision/images/pixels_in_memory.png"/></a></div><div class="caption">How pixels are stored in memory.</div>
+</div></div>
+<p>Observe how a one-dimensional list of values in memory can be arranged into successive rows of a two-dimensional grid of pixels, and vice versa.</p>
+<p>It frequently happens that you'll need to determine the array-index of a given pixel <em>(x,y)</em> in an image that is stored in an <code>unsigned char*</code> buffer. This little task comes up often enough that it's worth committing the following pattern to memory:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Given:</span>
+<span class="co">// unsigned char *buffer, an array storing a one-channel image</span>
+<span class="co">// int x, the horizontal coordinate (column) of your query pixel</span>
+<span class="co">// int y, the vertical coordinate (row) of your query pixel</span>
+<span class="co">// int imgWidth, the width of your image</span>
+
+<span class="dt">int</span> arrayIndex = y*imgWidth + x;
+
+<span class="co">// Now you can GET values at location (x,y), e.g.:</span>
+<span class="dt">unsigned</span> <span class="dt">char</span> pixelValueAtXY = buffer[arrayIndex];
+
+<span class="co">// And you can also SET values at that location, e.g.:</span>
+buffer[arrayIndex] = pixelValueAtXY;</code></pre>
+<p>Likewise, you can also fetch the x and y locations of a pixel corresponding to a given array index:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Given:</span>
+<span class="co">// A one-channel (e.g. grayscale) image</span>
+<span class="co">// int arrayIndex, an index in that image's array of pixels</span>
+<span class="co">// int imgWidth, the width of the image</span>
+
+<span class="dt">int</span> y = arrayIndex / imgWidth; <span class="co">// NOTE, this is integer division!</span>
+<span class="dt">int</span> x = arrayIndex % imgWidth; <span class="co">// The friendly modulus operator.</span></code></pre>
+<h4 id="low-level-vs.-high-level-pixel-access-methods">Low-Level vs. High-Level Pixel Access Methods</h4>
+<p>Most of the time, you'll be working with image data that is stored in a higher-level container object, such as an <code>ofImage</code>. There are <em>two</em> ways to get the values of pixel data stored in such a container. In the "low-level" method, we can ask the image for a pointer to its array of raw, unsigned char pixel data, using <code>.getPixels()</code>, and then extract the value we want from this array. This involves some array-index calculation using the pattern described above. (And incidentally, most other openFrameworks image containers, such as <code>ofVideoGrabber</code>, support such a <code>.getPixels()</code> function.)</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">int</span> arrayIndex = (y * imgWidth) + x;
+<span class="dt">unsigned</span> <span class="dt">char</span>* myImagePixelBuffer = myImage.getPixels();
+<span class="dt">unsigned</span> <span class="dt">char</span> pixelValueAtXY = myImagePixelBuffer[arrayIndex];</code></pre>
+<p>The second method is a high-level function that returns the <em>color</em> stored at a given pixel location:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">ofColor colorAtXY = myImage.getColor(x, y);
+<span class="dt">float</span> brightnessOfColorAtXY = colorAtXY.getBrightness();</code></pre>
+<h4 id="finding-the-brightest-pixel-in-an-image">Finding the Brightest Pixel in an Image</h4>
+<p>Using what we know now, we can write a simple program that locates the brightest pixel in an image. This elementary concept was used to great artistic effect by the artist collective, Graffiti Research Lab (GRL), in the openFrameworks application they built for their 2007 project <a href="http://www.graffitiresearchlab.com/blog/projects/laser-tag/" target="_blank"><em>L.A.S.E.R Tag</em></a>. The concept of <em>L.A.S.E.R Tag</em> was to allow people to draw projected graffiti onto a large building facade, by means of a laser pointer. The bright spot from the laser pointer was tracked by code similar to that shown below, and used as the basis for creating interactive, projected graphics.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/image_processing_computer_vision/images/laser_tag.jpg" target="_blank"><img alt="L.A.S.E.R. Tag by the Graffiti Research Lab (GRL), 2007" src="../images/image_processing_computer_vision/images/laser_tag.jpg"/></a></div><div class="caption">L.A.S.E.R. Tag by the Graffiti Research Lab (GRL), 2007</div>
+</div></div>
+<p>The .h file for our app loads an ofImage (<code>laserTagImage</code>) of someone pointing a laser at the building. (In the real application, a live camera was used.)</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Example 3. Finding the Brightest Pixel in an Image</span>
+<span class="co">// This is ofApp.h</span>
+
+<span class="ot">#pragma once</span>
+<span class="ot">#include "ofMain.h"</span>
+
+<span class="kw">class</span> ofApp : <span class="kw">public</span> ofBaseApp{
+	<span class="kw">public</span>:
+		<span class="dt">void</span> setup();
+		<span class="dt">void</span> draw();
+		
+		<span class="co">// Replace this ofImage with live video, eventually</span>
+		ofImage laserTagImage;
+};</code></pre>
+<p>Here's the .cpp file:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Example 3. Finding the Brightest Pixel in an Image</span>
+<span class="co">// This is ofApp.cpp</span>
+
+<span class="ot">#include "ofApp.h"</span>
+
+<span class="co">//---------------------</span>
+<span class="dt">void</span> ofApp::setup(){
+	laserTagImage.loadImage(<span class="st">"images/laser_tag.jpg"</span>);
+}
+
+<span class="co">//---------------------</span>
+<span class="dt">void</span> ofApp::draw(){
+	ofBackground(<span class="dv">255</span>);
+
+	<span class="dt">int</span> w = laserTagImage.getWidth();
+	<span class="dt">int</span> h = laserTagImage.getHeight();
+
+	<span class="dt">float</span> maxBrightness = <span class="dv">0</span>; <span class="co">// these are used in the search</span>
+	<span class="dt">int</span> maxBrightnessX = <span class="dv">0</span>; <span class="co">// for the brightest location</span>
+	<span class="dt">int</span> maxBrightnessY = <span class="dv">0</span>;
+
+	<span class="co">// Search through every pixel. If it is brighter than any</span>
+	<span class="co">// we've seen before, store its brightness and coordinates.</span>
+	<span class="co">// After testing every pixel, we'll know which is brightest!</span>
+	<span class="kw">for</span>(<span class="dt">int</span> y=<span class="dv">0</span>; y&lt;h; y++) {
+		<span class="kw">for</span>(<span class="dt">int</span> x=<span class="dv">0</span>; x&lt;w; x++) {
+			ofColor colorAtXY = laserTagImage.getColor(x, y);
+			<span class="dt">float</span> brightnessOfColorAtXY = colorAtXY.getBrightness();
+			<span class="kw">if</span>(brightnessOfColorAtXY &gt; maxBrightness){
+				maxBrightness = brightnessOfColorAtXY;
+				maxBrightnessX = x;
+				maxBrightnessY = y;
+			}
+		}
+	}
+
+	<span class="co">// Draw the image.</span>
+	ofSetColor (<span class="dv">255</span>);
+	laserTagImage.draw(<span class="dv">0</span>,<span class="dv">0</span>);
+
+	<span class="co">// Draw a circle at the brightest location.</span>
+	ofNoFill();
+	ofDrawEllipse (maxBrightnessX, maxBrightnessY, <span class="dv">40</span>,<span class="dv">40</span>);
+}</code></pre>
+<p>Our little application locates the bright spot of the laser (which, luckily for us, is the brightest part of the scene) and draws a circle around it. To reproduce <em>L.A.S.E.R Tag</em>, we would store the location of these points and render a light-colored trail, suitable for projection. Of course, now that we know where the brightest (or darkest) spot is, we can can develop many other interesting applications, such as sun trackers, turtle trackers...</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/image_processing_computer_vision/images/laser_tag_result.jpg" target="_blank"><img alt="L.A.S.E.R. Tag by GRL, with the laser point highlighted" src="../images/image_processing_computer_vision/images/laser_tag_result.jpg"/></a></div><div class="caption">L.A.S.E.R. Tag by GRL, with the laser point highlighted</div>
+</div></div>
+<p>Being able to locate the brightest pixel in an image has other uses, too. For example, in a <em>depth image</em> (such as produced by a Kinect sensor), the brightest pixel corresponds to the <em>foremost point</em>—or the nearest object to the camera. This can be extremely useful if you're making an interactive installation that tracks a user's hand.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/image_processing_computer_vision/images/kinect-forepoint.jpg" target="_blank"><img alt="The foremost point, or 'fore-point', in a Kinect depth image" src="../images/image_processing_computer_vision/images/kinect-forepoint.jpg"/></a></div><div class="caption">The foremost point, or 'fore-point', in a Kinect depth image</div>
+</div></div>
+<p><em>The brightest pixel in a depth image corresponds to the nearest object to the camera. In the configuration shown here, the "nearest point" is almost certain to be the user's hand.</em></p>
+<p>Unsurprisingly, tracking <em>more than one</em> bright point requires more sophisticated forms of processing. If you're able to design and control the tracking environment, one simple yet effective way to track up to three objects is to search for the reddest, greenest and bluest pixels in the scene. Zachary Lieberman used a technique similar to this in his <a href="https://vimeo.com/5233789" target="_blank"><em>IQ Font</em></a> collaboration with typographers Pierre &amp; Damien et al., in which letterforms were created by tracking the movements of a specially-marked sports car.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/image_processing_computer_vision/images/iq_font.jpg" target="_blank"><img alt="The IQ Font overhead camera view" src="../images/image_processing_computer_vision/images/iq_font.jpg"/></a></div><div class="caption">The IQ Font overhead camera view</div>
+</div></div>
+<p>More generally, you can create a system that tracks a (single) spot with a <em>specific</em> color. A very simple way to achieve this is to find the pixel whose color has the shortest Euclidean distance (in "RGB space") to the target color. Here is a code fragment which shows this.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Code fragment for tracking a spot with a certain target color. </span>
+<span class="co">// Our target color is CSS LightPink: #FFB6C1 or (255, 182, 193)</span>
+<span class="dt">float</span> rTarget = <span class="dv">255</span>; 
+<span class="dt">float</span> gTarget = <span class="dv">182</span>;
+<span class="dt">float</span> bTarget = <span class="dv">193</span>; 
+
+<span class="co">// these are used in the search for the location of the pixel </span>
+<span class="co">// whose color is the closest to our target color.</span>
+<span class="dt">float</span> leastDistanceSoFar = <span class="dv">255</span>; 
+<span class="dt">int</span> xOfPixelWithClosestColor = <span class="dv">0</span>; 
+<span class="dt">int</span> yOfPixelWithClosestColor = <span class="dv">0</span>;
+
+<span class="kw">for</span> (<span class="dt">int</span> y=<span class="dv">0</span>; y&lt;h; y++) {
+	<span class="kw">for</span> (<span class="dt">int</span> x=<span class="dv">0</span>; x&lt;w; x++) {
+	
+		<span class="co">// Extract the color components of the pixel at (x,y)</span>
+		<span class="co">// from myVideoGrabber (or some other image source)</span>
+		ofColor colorAtXY = myVideoGrabber.getColor(x, y);
+		<span class="dt">float</span> rAtXY = colorAtXY.r; 
+		<span class="dt">float</span> gAtXY = colorAtXY.g; 
+		<span class="dt">float</span> bAtXY = colorAtXY.b;
+		
+		<span class="co">// Compute the difference between those (r,g,b) values </span>
+		<span class="co">// and the (r,g,b) values of our target color</span>
+		<span class="dt">float</span> rDif = rAtXY - rTarget; <span class="co">// difference in reds </span>
+		<span class="dt">float</span> gDif = gAtXY - gTarget; <span class="co">// difference in greens </span>
+		<span class="dt">float</span> bDif = bAtXY - bTarget; <span class="co">// difference in blues </span>
+		
+		<span class="co">// The Pythagorean theorem gives us the Euclidean distance.</span>
+		<span class="dt">float</span> colorDistance = 
+			sqrt (rDif*rDif + gDif*gDif + bDif*bDif); 
+			
+		<span class="kw">if</span>(colorDistance &lt; leastDistanceSoFar){
+			leastDistanceSoFar = colorDistance;
+			xOfPixelWithClosestColor = x;
+			yOfPixelWithClosestColor = y;
+		}
+	}
+}
+
+<span class="co">// At this point, we now know the location of the pixel </span>
+<span class="co">// whose color is closest to our target color: </span>
+<span class="co">// (xOfPixelWithClosestColor, yOfPixelWithClosestColor)</span></code></pre>
+<p>This technique is often used with an "eyedropper-style" interaction, in which the user selects the target color interactively (by clicking). Note that there are more sophisticated ways of measuring "<a href="http://en.wikipedia.org/wiki/Color_difference" target="_blank">color distance</a>", such as the <em>Delta-E</em> <a href="http://colormine.org/delta-e-calculator/" target="_blank">calculation</a> in the CIE76 color space, that are much more robust to variations in lighting and also have a stronger basis in human color perception.</p>
+<h4 id="three-channel-rgb-images.">Three-Channel (RGB) Images.</h4>
+<p>Our Lincoln portrait image shows an 8-bit, 1-channel, "<a href="http://en.wikipedia.org/wiki/Grayscale" target="_blank">grayscale</a>" image. Each pixel uses a single round number (technically, an unsigned char) to represent a single luminance value. But other data types and formats are possible.</p>
+<p>For example, it is common for color images to be represented by 8-bit, <em>3-channel</em> images. In this case, each pixel brings together 3 bytes' worth of information: one byte each for red, green and blue intensities. In computer memory, it is common for these values to be interleaved R-G-B. As you can see, RGB color images necessarily contain three times as much data.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/image_processing_computer_vision/images/interleaved_1.png" target="_blank"><img alt="Interleaved RGB pixels" src="../images/image_processing_computer_vision/images/interleaved_1.png"/></a></div><div class="caption">Interleaved RGB pixels</div>
+</div></div>
+<p>Take a very close look at your LCD screen, and you'll see how this way of storing the data is directly motivated by the layout of your display's phosphors:</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/image_processing_computer_vision/images/rgb-screen.jpg" target="_blank"><img alt="Magnified photograph of an LCD screen's pixels" src="../images/image_processing_computer_vision/images/rgb-screen.jpg"/></a></div><div class="caption">Magnified photograph of an LCD screen's pixels</div>
+</div></div>
+<p>Because the color data are interleaved, accessing pixel values in buffers containing RGB data is slightly more complex. Here's how you can retrieve the values representing the individual red, green and blue components of an RGB pixel at a given <em>(x,y)</em> location:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Code fragment for accessing the colors located at a given (x,y) </span>
+<span class="co">// location in an RGB color image. </span>
+
+<span class="co">// Given:</span>
+<span class="co">// unsigned char *buffer, an array storing an RGB image</span>
+<span class="co">// (assuming interleaved data in RGB order!)</span>
+<span class="co">// int x, the horizontal coordinate (column) of your query pixel</span>
+<span class="co">// int y, the vertical coordinate (row) of your query pixel</span>
+<span class="co">// int imgWidth, the width of the image</span>
+
+<span class="dt">int</span> rArrayIndex = (y*imgWidth*<span class="dv">3</span>) + (x*<span class="dv">3</span>);
+<span class="dt">int</span> gArrayIndex = (y*imgWidth*<span class="dv">3</span>) + (x*<span class="dv">3</span>) + <span class="dv">1</span>;
+<span class="dt">int</span> bArrayIndex = (y*imgWidth*<span class="dv">3</span>) + (x*<span class="dv">3</span>) + <span class="dv">2</span>;
+
+<span class="co">// Now you can get and set values at location (x,y), e.g.:</span>
+<span class="dt">unsigned</span> <span class="dt">char</span> redValueAtXY   = buffer[rArrayIndex];
+<span class="dt">unsigned</span> <span class="dt">char</span> greenValueAtXY = buffer[gArrayIndex];
+<span class="dt">unsigned</span> <span class="dt">char</span> blueValueAtXY  = buffer[bArrayIndex];</code></pre>
+<p>This is, then, the three-channel "RGB version" of the basic <code>index = y*width + x</code> pattern we employed earlier to fetch pixel values from monochrome images.</p>
+<p>Note that you may occasionally encounter external libraries or imaging hardware which deliver RGB bytes in a different order, such as BGR.</p>
+<h4 id="varieties-of-image-formats">Varieties of Image Formats</h4>
+<p>8-bit 1-channel (grayscale) and 8-bit 3-channel (RGB) images are the most common image formats you'll find. In the wide world of image processing algorithms, however, you'll eventually encounter an exotic variety of other types of images, including: - 8-bit <em>palettized</em> images, in which each pixel stores an index into an array of (up to) 256 possible colors; - 16-bit (unsigned short) images, in which each channel uses <em>two</em> bytes to store each of the color values of each pixel, with a number that ranges from 0-65535; - 32-bit (float) images, in which each color channel's data is represented by floating point numbers.</p>
+<p>For a practical example, consider once again Microsoft's popular Kinect sensor, whose XBox 360 version produces a depth image whose values range from 0 to 1090. Clearly, that's wider than the range of 8-bit values (from 0 to 255) that one typically encounters in image data; in fact, it's approximately 11 bits of resolution. To accommodate this, the <code>ofxKinect</code> addon employs a 16-bit image to store this information without losing precision. Likewise, the precision of 32-bit floats is almost mandatory for computing high-quality video composites.</p>
+<p>You'll also find:</p>
+<ul>
+<li>2-channel images (commonly used for luminance plus transparency);</li>
+<li>3-channel images (generally for RGB data, but occasionally used to store images in other color spaces, such as HSB or YUV);</li>
+<li>4-channel images (commonly for RGBA images, but occasionally for CMYK);</li>
+<li><a href="https://en.wikipedia.org/wiki/Bayer_filter" target="_blank"><em>Bayer images</em></a>, in which the RGB color channels are not interleaved R-G-B-R-G-B-R-G-B... but instead appear in a unique checkerboard pattern.</li>
+</ul>
+<p>It gets even more exotic. <a href="https://www.mapbox.com/blog/putting-landsat-8-bands-to-work/" target="_blank">"Hyperspectral" imagery from the Landsat 8 satellite</a>, for example, has 11 channels, including bands for ultraviolet, near infrared, and thermal (deep) infrared!</p>
+<h4 id="varieties-of-of-image-containers-data-structures">Varieties of oF Image Containers (Data Structures)</h4>
+<p>Whereas image <em>formats</em> differ in the kinds of image data that they represent (e.g. 8-bit grayscale imagery vs. RGB images), image <em>container classes</em> are library-specific or data structures that allow their image data to be used (captured, displayed, manipulated, analyzed, and/or stored) in different ways and contexts. Some of the more common containers you may encounter in openFrameworks are:</p>
+<ul>
+<li><strong>unsigned char</strong>* An array of unsigned chars, this is the raw, old-school, C-style format used for storing buffers of pixel data. It's not very "smart"—it has no special functionality or metadata for managing <em>image</em> data—but it's often useful for exchanging data between different libraries. Many image processing textbooks will assume your data is stored this way.</li>
+<li><strong>ofPixels</strong> This is an openFrameworks container for pixel data which lives inside each ofImage, as well as other classes like <code>ofVideoGrabber</code>. It's a wrapper around a buffer that includes additional information like width and height.</li>
+<li><strong>ofImage</strong> The <code>ofImage</code> is the most common object for loading, saving and displaying static images in openFrameworks. Loading a file into the ofImage allocates an internal <code>ofPixels</code> object to store the image data. <code>ofImage</code> objects are not merely containers, but also include internal methods and objects (such as an <code>ofTexture</code>) for displaying their pixel data to the screen.</li>
+<li><strong>ofxCvImage</strong> This is a container for image data used by the ofxOpenCV addon for openFrameworks, which supports a range of functionality from the popular OpenCV library for filtering, thresholding, and other image manipulations.</li>
+<li><strong>ofTexture</strong> This container stores image data in the texture memory of your computer's graphics card (GPU). Many other classes, including <code>ofImage</code>, <code>ofxCvImage</code>, <code>ofVideoPlayer</code>, <code>ofVideoGrabber</code>, <code>ofFbo</code>, and <code>ofKinect</code>, maintain an internal <code>ofTexture</code> object to render their data to the screen.</li>
+<li><strong>ofFBO</strong> This is a GPU "frame buffer object", a container for textures and an optional depth buffer. It can be loosely understood as another renderer—a canvas to which you can draw 3D or 2D scenes—whose resulting pixels can themselves be treated like an image. Ultimately the <code>ofFBO</code> is an object stored on the graphics card that represents a rendered drawing pass.</li>
+<li><strong>cv::Mat</strong> This is the data structure used by OpenCV to store image information. It's not used in openFrameworks, but if you work a lot with OpenCV, you'll often find yourself placing and extracting data from this format.</li>
+<li><strong>IplImage</strong> This is an older data container (from the <a href="https://www.safaribooksonline.com/library/view/learning-opencv/9780596516130/ch03s03.html" target="_blank">Intel Image Processing Library</a>) that plays well with OpenCV. Note that you generally won't have to worry about IplImages unless (or until) you do much more sophisticated things with OpenCV; the ofxCvImage should give you everything you need to get its data in and out.</li>
+</ul>
+<p>To the greatest extent possible, the designers of openFrameworks (and addons for image processing, like ofxOpenCV and Kyle McDonald's <a href="https://github.com/kylemcdonald/ofxCv" target="_blank">ofxCv</a>) have provided simple operators to help make it easy to exchange data between these containers.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/image_processing_computer_vision/images/two-image-types.png" target="_blank"><img alt="Simplified diagrams of ofImage (left) and ofxCvImage (right)" src="../images/image_processing_computer_vision/images/two-image-types.png"/></a></div><div class="caption">Simplified diagrams of ofImage (left) and ofxCvImage (right)</div>
+</div></div>
+<p>The diagram above shows a simplified representation of the two most common oF image formats you're likely to see. At left, we see an <code>ofImage</code>, which at its core contains an array of unsigned chars. An <code>ofPixels</code> object wraps up this array, along with some helpful metadata which describes it, such as its width, height, and format (RGB, RGBA, etc.). The <code>ofImage</code> then wraps this <code>ofPixels</code> object up together with an <code>ofTexture</code>, which provides functionality for rendering the image to the screen. The <code>ofxCvImage</code> at right is very similar, but stores the image data in IplImages. All of these classes provide a variety of methods for moving image data into and out of them.</p>
+<p>It's important to point out that image data may be stored in very different parts of your computer's memory. Good old-fashioned unsigned chars, and image data in container classes like <code>ofPixels</code> and <code>ofxCvImage</code>, are maintained in your computer's main RAM; that's handy for image processing operations by the CPU. By contrast, the <code>ofTexture</code> class, as indicated above, stores its data in GPU memory, which is ideal for rendering it quickly to the screen. It may also be helpful to know that there's generally a performance penalty for moving image data back-and-forth between the CPU and GPU, such as the <code>ofImage::grabScreen()</code> method, which captures a portion of the screen from the GPU and stores it in an <code>ofImage</code>, or the <code>ofTexture::readToPixels()</code> and <code>ofFBO::readToPixels()</code> methods, which copy image data to an <code>ofPixels</code>.</p>
+<h4 id="rgb-to-grayscale-conversion-and-its-role-in-computer-vision">RGB to Grayscale Conversion, and its Role in Computer Vision</h4>
+<p>Many computer vision algorithms (though not all) are commonly performed on one-channel (i.e. grayscale or monochrome) images. Whether or not your project uses color imagery at some point, you'll almost certainly still use grayscale pixel data to represent and store many of the intermediate results in your image processing chain. The simple fact is that working with one-channel image buffers (whenever possible) can significantly improve the speed of image processing routines, because it reduces both the number of calculations as well as the amount of memory required to process the data.</p>
+<p>For example, if you're calculating a "blob" to represent the location of a user's body, it's common to store that blob in a one-channel image; typically, pixels containing 255 (white) designate the foreground blob, while pixels containing 0 (black) are the background. Likewise, if you're using a special image to represent the amount of motion in different parts of the video frame, it's enough to store this information in a grayscale image (where 0 represents stillness and 255 represents lots of motion). We'll discuss these operations more in later sections; for now, it's sufficient to state this rule of thumb: if you're using a buffer of pixels to store and represent a one-dimensional quantity, do so in a one-channel image buffer. Thus, except where stated otherwise, <em>all of the examples in this chapter expect that you're working with monochrome images</em>.</p>
+<p>Let's suppose that your raw source data is color video (as is common with webcams). For many image processing and computer vision applications, your first step will involve <em>converting this to monochrome</em>. Depending on your application, you'll either clobber your color data to grayscale directly, or create a grayscale copy for subsequent processing.</p>
+<p>The simplest method to convert a color image to grayscale is to modify its data by changing its openFrameworks image type to <code>OF_IMAGE_GRAYSCALE</code>. Note that this causes the image to be reallocated and any ofTextures to be updated, so it can be an expensive operation if done frequently. It's also a "destructive operation", in the sense that the image's original color information is lost in the conversion.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">ofImage myImage; 
+myImage.loadImage (<span class="st">"colorful.jpg"</span>); <span class="co">// Load a colorful image.</span>
+myImage.setImageType (OF_IMAGE_GRAYSCALE); <span class="co">// Poof! Now it's grayscale. </span></code></pre>
+<p>The ofxOpenCV addon library provides several methods for converting color imagery to grayscale. For example, the <code>convertToGrayscalePlanarImage()</code> and <code>setFromColorImage()</code> functions create or set an <code>ofxCvGrayscaleImage</code> from color image data stored in an <code>ofxCvColorImage</code>. But the easiest way is simply to assign the grayscale version from the color one; the addon takes care of the conversion for you:</p>
+<pre><code>// Given a color ofxOpenCv image, already filled with RGB data:
+// ofxCvColorImage kittenCvImgColor; 
+
+// And given a declared ofxCvGrayscaleImage:
+ofxCvGrayscaleImage kittenCvImgGray;
+	
+// The color-to-gray conversion is then performed by this assignment.
+// NOTE: This uses "operator overloading" to customize the meaning of
+// the '=' operator for ofxOpenCV images. 
+kittenCvImgGray = kittenCvImgColor;</code></pre>
+<p>Although oF provides the above utilities to convert color images to grayscale, it's worth taking a moment to understand the subtleties of the conversion process. There are three common techniques for performing the conversion:</p>
+<ul>
+<li><strong>Extracting just one of the R,G, or B color channels,</strong> as a proxy for the luminance of the image. For example, one might fetch only the green values as an approximation to an image's luminance, discarding its red and blue data. For a typical color image whose bytes are interleaved R-G-B, this can be done by fetching every 3rd byte. This method is computationally fast, but it's also perceptually inaccurate, and it tends to produce noisier results for images of natural scenes.</li>
+<li><strong>Taking the average of the R,G, and B color channels.</strong> A slower but more perceptually accurate method approximates luminance (often written <em>Y</em>) as a straight average of the red, green and blue values for every pixel: <code>Y = (R+G+B)/3;</code>. This not only produces a better representation of the image's luminance across the visible color spectrum, but it also diminishes the influence of noise in any one color channel.</li>
+<li><strong>Computing the luminance with colorimetric coefficients</strong>. The most perceptually accurate methods for computing grayscale from color images employ a specially-weighted "colorimetric" average of the RGB color data. These methods are marginally more expensive to compute, as each color channel must be multiplied by its own perceptual weighting factor. The CCIR 601 imaging specification, which is used in the OpenCV <a href="http://docs.opencv.org/modules/imgproc/doc/miscellaneous_transformations.html#cvtcolor" target="_blank">cvtColor</a> function, itself used in the ofxOpenCV addon, employs the formula <code>Y = 0.299*R + 0.587*G + 0.114*B</code> (with the further assumption that the RGB values have been gamma-corrected). According to <a href="http://en.wikipedia.org/wiki/Luma_(video)" target="_blank">Wikipedia</a>, "these coefficients represent the measured intensity perception of typical trichromat humans; in particular, human vision is most sensitive to green and least sensitive to blue."</li>
+</ul>
+<p>Here's a code fragment for converting from color to grayscale, written "from scratch" in C/C++, using the averaging method described above. This code also shows, more generally, how the pixelwise computation of a 1-channel image can be based on a 3-channel image.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Code fragment to convert color to grayscale (from "scratch")</span>
+
+<span class="co">// Load a color image, fetch its dimensions, </span>
+<span class="co">// and get a pointer to its pixel data. </span>
+ofImage myImage; 
+myImage.loadImage (<span class="st">"colorful.jpg"</span>);
+<span class="dt">int</span> imageWidth = myImage.getWidth();
+<span class="dt">int</span> imageHeight = myImage.getHeight();
+<span class="dt">unsigned</span> <span class="dt">char</span>* rgbPixelData = myImage.getPixels(); 
+
+<span class="co">// Allocate memory for storing a grayscale version.</span>
+<span class="co">// Since there's only 1 channel of data, it's just w*h. </span>
+<span class="dt">int</span> nBytesGrayscale = imageWidth * imageHeight; 
+<span class="dt">unsigned</span> <span class="dt">char</span>* grayPixelData = <span class="kw">new</span> <span class="dt">unsigned</span> <span class="dt">char</span> [nBytesGrayscale];
+
+<span class="co">// For every pixel in the grayscale destination image, </span>
+<span class="kw">for</span>(<span class="dt">int</span> indexGray=<span class="dv">0</span>; indexGray&lt;nBytesGrayscale; indexGray++){
+
+	<span class="co">// Compute the index of the corresponding pixel in the color image,</span>
+	<span class="co">// remembering that it has 3 times as much data as the gray one. </span>
+	<span class="dt">int</span> indexColor = (indexGray * <span class="dv">3</span>); 
+
+	<span class="co">// Fetch the red, green and blue bytes for that color pixel. </span>
+	<span class="dt">unsigned</span> <span class="dt">char</span> R = rgbPixelData[indexColor  ]; 
+	<span class="dt">unsigned</span> <span class="dt">char</span> G = rgbPixelData[indexColor<span class="dv">+1</span>]; 
+	<span class="dt">unsigned</span> <span class="dt">char</span> B = rgbPixelData[indexColor<span class="dv">+2</span>]; 
+	
+	<span class="co">// Compute and assign the luminance (here, as an average of R,G,B).</span>
+	<span class="co">// Alternatively, you could use colorimetric coefficients.  </span>
+	<span class="dt">unsigned</span> <span class="dt">char</span> Y = (R+G+B)/<span class="dv">3</span>; 
+	grayPixelData[indexGray] = Y;
+}</code></pre>
+<h2 id="pointprocessingoperationsonimages">Point Processing Operations on Images</h2>
+<p>In this section, we consider image processing operations that are precursors to a wide range of further analysis and decision-making. In particular, we will look at <em>point processing</em> operations, namely image arithmetic and thresholding.</p>
+<p>We begin with <em>image arithmetic</em>, a core part of the workflow of computer vision. These are the basic mathematical operations we all know—addition, subtraction, multiplication, and division—but as they are applied to images. Developers use such operations constantly, and for a wide range of reasons.</p>
+<h3 id="image-arithmetic-with-constants">Image Arithmetic with Constants</h3>
+<p>Some of the simplest operations in image arithmetic transform the values in an image by a constant. In the example below, we add the constant value, <strong>10</strong>, to an 8-bit monochrome image. Observe how the value is added <em>pixelwise</em>: each pixel in the resulting destination image stores a number which is 10 more (i.e. 10 gray-levels brighter) than its corresponding pixel in the source image. Because each pixel is processed in isolation, without regard to its neighbors, this kind of image math is sometimes called <em>point processing</em>.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/image_processing_computer_vision/images/image_arithmetic_1b.png" target="_blank"><img alt="Pixelwise image arithmetic: adding 10 to an image, i.e., adding 10 to every pixel value. But what value should go in the red square?" src="../images/image_processing_computer_vision/images/image_arithmetic_1b.png"/></a></div><div class="caption">Pixelwise image arithmetic: adding 10 to an image, i.e., adding 10 to every pixel value. But what value should go in the red square?</div>
+</div></div>
+<p>Adding a constant makes an image uniformly brighter, while subtracting a constant makes it uniformly darker.</p>
+<p>In the code below, we implement point processing "from scratch", by directly manipulating the contents of pixel buffers. Although practical computer vision projects will often accomplish this with higher-level libraries (such as OpenCV), we do this here to show what's going on underneath.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Example 4: Add a constant value to an image.</span>
+<span class="co">// This is done from "scratch", without OpenCV.</span>
+<span class="co">// This is ofApp.h</span>
+
+<span class="ot">#pragma once</span>
+<span class="ot">#include "ofMain.h"</span>
+
+<span class="kw">class</span> ofApp : <span class="kw">public</span> ofBaseApp{
+	<span class="kw">public</span>:
+	<span class="dt">void</span> setup();
+	<span class="dt">void</span> draw();
+	
+	ofImage lincolnOfImageSrc; <span class="co">// The source image</span>
+	ofImage lincolnOfImageDst; <span class="co">// The destination image</span>
+};</code></pre>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Example 4. Add a constant value to an image.</span>
+<span class="co">// This is ofApp.cpp</span>
+<span class="ot">#include "ofApp.h"</span>
+
+<span class="dt">void</span> ofApp::setup(){
+	
+	<span class="co">// Load the image and ensure we're working in monochrome.</span>
+	<span class="co">// This is our source ("src") image. </span>
+	lincolnOfImageSrc.loadImage(<span class="st">"images/lincoln_120x160.png"</span>);
+	lincolnOfImageSrc.setImageType(OF_IMAGE_GRAYSCALE);
+	
+	<span class="co">// Construct and allocate a new image with the same dimensions. </span>
+	<span class="co">// This will store our destination ("dst") image. </span>
+	<span class="dt">int</span> imgW = lincolnOfImageSrc.width;
+	<span class="dt">int</span> imgH = lincolnOfImageSrc.height;
+	lincolnOfImageDst.allocate(imgW, imgH, OF_IMAGE_GRAYSCALE);
+	
+	<span class="co">// Acquire pointers to the pixel buffers of both images. </span>
+	<span class="co">// These images use 8-bit unsigned chars to store gray values. </span>
+	<span class="co">// Note the convention 'src' and 'dst' -- this is very common.</span>
+	<span class="dt">unsigned</span> <span class="dt">char</span>* srcArray = lincolnOfImageSrc.getPixels();
+	<span class="dt">unsigned</span> <span class="dt">char</span>* dstArray = lincolnOfImageDst.getPixels();
+	
+	<span class="co">// Loop over all of the destination image's pixels. </span>
+	<span class="co">// Each destination pixel will be 10 gray-levels brighter</span>
+	<span class="co">// than its corresponding source pixel.</span>
+	<span class="dt">int</span> nPixels = imgW * imgH; 
+	<span class="kw">for</span>(<span class="dt">int</span> i=<span class="dv">0</span>; i&lt;nPixels; i++) {
+		<span class="dt">unsigned</span> <span class="dt">char</span> srcValue = srcArray[i];
+		dstArray[i] = srcValue + <span class="dv">10</span>; 
+	}
+	
+	<span class="co">// Don't forget this!</span>
+	<span class="co">// We tell the ofImage to refresh its texture (stored on the GPU)</span>
+	<span class="co">// from its pixel buffer (stored on the CPU), which we have modified.</span>
+	lincolnOfImageDst.update();
+}
+
+<span class="co">//---------------------</span>
+<span class="dt">void</span> ofApp::draw(){
+	ofBackground(<span class="dv">255</span>);
+	ofSetColor(<span class="dv">255</span>);
+
+	lincolnOfImageSrc.draw ( <span class="dv">20</span>,<span class="dv">20</span>, <span class="dv">120</span>,<span class="dv">160</span>);
+	lincolnOfImageDst.draw (<span class="dv">160</span>,<span class="dv">20</span>, <span class="dv">120</span>,<span class="dv">160</span>);
+}</code></pre>
+<h3 id="a-warning-about-integer-overflow">A Warning about Integer Overflow</h3>
+<p>Image arithmetic is simple! But there's a lurking peril when arithmetic operations are applied to the values stored in pixels: <em><a href="http://en.wikipedia.org/wiki/Integer_overflow" target="_blank">integer overflow</a></em>.</p>
+<p>Consider what happens when we add 10 to the specially-marked pixel in the bottom row of the illustration above. Its initial value is 251—but the largest number we can store in an unsigned char is 255! What should the resulting value be? More generally, what happens if we attempt to assign a pixel value that's too large to be represented by our pixel's data type?</p>
+<p>The answer is: <em>it depends which libraries or programming techniques you're using</em>, and it can have very significant consequences! Some image-processing libraries, like OpenCV, will clamp or constrain all arithmetic to the data's desired range; thus, adding 10 to 251 will result in a maxed-out value of 255 (a solution sometimes known as "saturation"). In other situations, such as with our direct editing of unsigned chars in the code above, we risk "rolling over" the data, wrapping around zero like a car's odometer. Without the ability to carry, only the least significant bits are retained. In the land of unsigned chars, adding 10 to 251 gives... 6!</p>
+<p>The perils of integer overflow are readily apparent in the illustration below. I have used the code above to lighten a source image of Abraham Lincoln, by adding a constant to all of its pixel values. Without any preventative measures in place, many of the light-colored pixels have "wrapped around" and become dark.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/image_processing_computer_vision/images/numeric_overflow.png" target="_blank"><img alt="Numeric overflow in an image of Lincoln" src="../images/image_processing_computer_vision/images/numeric_overflow.png"/></a></div><div class="caption">Numeric overflow in an image of Lincoln</div>
+</div></div>
+<p>In the example above, integer overflow can be avoided by promoting the added numbers to integers, and including a saturating constraint, before assigning the new pixel value:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// The 'min' prevents values from exceeding 255, avoiding overflow.</span>
+dstArray[index] = min(<span class="dv">255</span>, (<span class="dt">int</span>)srcValue + <span class="dv">10</span>);</code></pre>
+<p>Integer overflow can also present problems with other arithmetic operations, such as multiplication and subtraction (when values go negative).</p>
+<h3 id="image-arithmetic-with-the-ofxopencv-addon">Image Arithmetic with the ofxOpenCv Addon</h3>
+<p>The OpenCV computer vision library offers fast, easy-to-use and high-level implementations of image arithmetic. Here's the same example as above, re-written using the ofxOpenCV addon library, which comes with the openFrameworks core download. Note the following:</p>
+<ul>
+<li>ofxOpenCv provides convenient methods for copying data between images.</li>
+<li>ofxOpenCv provides convenient operators for performing image arithmetic.</li>
+<li>ofxOpenCv's arithmetic operations saturate, so integer overflow is not a concern.</li>
+<li>ofxOpenCv does not currently provide methods for loading images, so we employ an <code>ofImage</code> as an intermediary for doing so.</li>
+<li>As with all addons, it's important to import the ofxOpenCV addon properly into your project. (Simply adding <code>#include "ofxOpenCv.h"</code> in your app's header file isn't sufficient!) The openFrameworks <a href="https://www.youtube.com/watch?v=4k2ZcvC0YEA" target="_blank">ProjectGenerator</a> is designed to help you with this, and makes it easy to add an addon into a new (or pre-existing) project.</li>
+</ul>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Example 5: Add a constant value to an image, with ofxOpenCv.</span>
+<span class="co">// Make sure to use the ProjectGenerator to include the ofxOpenCv addon.</span>
+<span class="co">// This is ofApp.h</span>
+<span class="ot">#pragma once</span>
+
+<span class="ot">#include "ofMain.h"</span>
+<span class="ot">#include "ofxOpenCv.h"</span>
+
+<span class="kw">class</span> ofApp : <span class="kw">public</span> ofBaseApp{
+	<span class="kw">public</span>:
+		<span class="dt">void</span> setup();
+		<span class="dt">void</span> draw();
+		ofxCvGrayscaleImage lincolnCvImageSrc;
+		ofxCvGrayscaleImage lincolnCvImageDst;
+};</code></pre>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Example 5: Add a constant value to an image, with ofxOpenCv.</span>
+<span class="co">// This is ofApp.cpp</span>
+<span class="ot">#include "ofApp.h"</span>
+
+<span class="dt">void</span> ofApp::setup(){
+	
+	<span class="co">// ofxOpenCV doesn't have image loading.</span>
+	<span class="co">// So first, load the .png file into a temporary ofImage.</span>
+	ofImage lincolnOfImage;
+	lincolnOfImage.loadImage(<span class="st">"lincoln_120x160.png"</span>);
+	lincolnOfImage.setImageType(OF_IMAGE_GRAYSCALE);
+	
+	<span class="co">// Set the lincolnCvImage from the pixels of this ofImage.</span>
+	<span class="dt">int</span> imgW = lincolnOfImage.getWidth();
+	<span class="dt">int</span> imgH = lincolnOfImage.getHeight();
+	<span class="dt">unsigned</span> <span class="dt">char</span> *lincolnPixels = lincolnOfImage.getPixels();
+	lincolnCvImageSrc.setFromPixels( lincolnPixels, imgW, imgH);
+	
+	<span class="co">// Make a copy of the source image into the destination.</span>
+	lincolnCvImageDst = lincolnCvImageSrc;
+	
+	<span class="co">// ofxOpenCV has handy operators for in-place image arithmetic.</span>
+	lincolnCvImageDst += <span class="dv">60</span>;
+}
+
+<span class="co">//---------------------</span>
+<span class="dt">void</span> ofApp::draw(){
+	ofBackground(<span class="dv">255</span>);
+	ofSetColor(<span class="dv">255</span>);
+	
+	lincolnCvImageSrc.draw ( <span class="dv">20</span>,<span class="dv">20</span>, <span class="dv">120</span>,<span class="dv">160</span>);
+	lincolnCvImageDst.draw (<span class="dv">160</span>,<span class="dv">20</span>, <span class="dv">120</span>,<span class="dv">160</span>);
+}</code></pre>
+<p>Here's the result. Note how the high values (light areas) have saturated instead of overflowed.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/image_processing_computer_vision/images/image_lightening.png" target="_blank"><img alt="Image arithmetic with saturation" src="../images/image_processing_computer_vision/images/image_lightening.png"/></a></div><div class="caption">Image arithmetic with saturation</div>
+</div></div>
+<h3 id="arithmetic-with-two-images-absolute-differencing">Arithmetic with Two Images: Absolute Differencing</h3>
+<p>Image arithmetic is especially useful when applied to two images. As you would expect, it is possible to add two images, multiply two images, subtract one image from another, and divide one image by another. When performing an arithmetic operation (such as addition) on two images, the operation is done "pixelwise": the first pixel of image <em>A</em> is added to the first pixel of image <em>B</em>, the second pixel of <em>A</em> is added to the second pixel of <em>B</em>, and so forth. For the purposes of this discussion, we'll assume that <em>A</em> and <em>B</em> are both monochromatic, and have the same dimensions.</p>
+<p>Many computer vision applications depend on being able to compare two images. At the basis of doing so is the arithmetic operation of <em>absolute differencing</em>, illustrated below. This operation is equivalent to taking the absolute value of the results when one image is subtracted from the other: <em>|A-B|</em>. As we shall see, absolute differencing is a key step in common workflows like <em>frame differencing</em> and <em>background subtraction</em>.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/image_processing_computer_vision/images/absolute-difference.png" target="_blank"><img alt="Diagram of absolute differencing. The image at right contains values which are the absolute difference of the corresponding pixels in the left and center images" src="../images/image_processing_computer_vision/images/absolute-difference.png"/></a></div><div class="caption">Diagram of absolute differencing. The image at right contains values which are the absolute difference of the corresponding pixels in the left and center images</div>
+</div></div>
+<p>In the illustration above, we have used absolute differencing to compare two 5x5 pixel images. From this, it's clear that the greatest difference occurs in their lower-right pixels.</p>
+<p>Absolute differencing is accomplished in just a line of code, using the ofxOpenCv addon:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Given: </span>
+<span class="co">// ofxCvGrayscaleImage myCvImageA;    // the minuend image</span>
+<span class="co">// ofxCvGrayscaleImage myCvImageB;    // the subtrahend image</span>
+<span class="co">// ofxCvGrayscaleImage myCvImageDiff; // their absolute difference</span>
+
+<span class="co">// The absolute difference of A and B is placed into myCvImageDiff:</span>
+myCvImageDiff.absDiff (myCvImageA, myCvImageB);</code></pre>
+<h3 id="thresholding">Thresholding</h3>
+<p>In computer vision programs, we frequently have the task of determining which pixels represent something of interest, and which do not. Key to building such discriminators is the operation of <em>thresholding</em>.</p>
+<p>Thresholding poses a <em>pixelwise conditional test</em>—that is, it asks "<code>if</code>" the value stored in each pixel <em>(x,y)</em> of a source image meets a certain criterion. In return, thresholding produces a destination image, which represents where and how the criterion is (or is not) met in the original's corresponding pixels. As we stated earlier, pixels which satisfy the criterion are conventionally assigned 255 (white), while those which don't are assigned 0 (black). And as we shall see, the white blobs which result from such thresholding are ideally suited for further analysis by <em>contour tracers</em>.</p>
+<p>Here's an example, a photomicrograph (left) of light-colored cells. We'd like to know which pixels represent a cell, and which do not. For our criterion, we test for pixels whose grayscale brightness is greater than some constant, the <em>threshold value</em>. In this illustration, we test against a threshold value of 127, the middle of the 0-255 range:</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/image_processing_computer_vision/images/thresholded_cells.png" target="_blank"><img alt="Thresholding, also called binarization" src="../images/image_processing_computer_vision/images/thresholded_cells.png"/></a></div><div class="caption">Thresholding, also called binarization</div>
+</div></div>
+<p>And below is the complete openFrameworks program for thresholding the image—although here, instead of using a constant (127), we instead use the <code>mouseX</code> as the threshold value. This has the effect of placing the thresholding operation under interactive user control.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Example 6: Thresholding </span>
+<span class="co">// This is ofApp.h</span>
+<span class="ot">#pragma once</span>
+
+<span class="ot">#include "ofMain.h"</span>
+<span class="ot">#include "ofxOpenCv.h"</span>
+
+<span class="kw">class</span> ofApp : <span class="kw">public</span> ofBaseApp{
+	<span class="kw">public</span>:
+		<span class="dt">void</span> setup();
+		<span class="dt">void</span> draw();
+		ofxCvGrayscaleImage myCvImageSrc;
+		ofxCvGrayscaleImage myCvImageDst;
+};</code></pre>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Example 6: Thresholding </span>
+<span class="co">// This is ofApp.cpp</span>
+<span class="ot">#include "ofApp.h"</span>
+
+<span class="co">//---------------------</span>
+<span class="dt">void</span> ofApp::setup(){
+	
+	<span class="co">// Load the cells image</span>
+	ofImage cellsOfImage;
+	cellsOfImage.loadImage(<span class="st">"cells.jpg"</span>);
+	cellsOfImage.setImageType(OF_IMAGE_GRAYSCALE);
+	
+	<span class="co">// Set the myCvImageSrc from the pixels of this ofImage.</span>
+	<span class="dt">int</span> imgW = cellsOfImage.getWidth();
+	<span class="dt">int</span> imgH = cellsOfImage.getHeight();
+	<span class="dt">unsigned</span> <span class="dt">char</span> *cellsPixels = cellsOfImage.getPixels();
+	myCvImageSrc.setFromPixels (cellsPixels, imgW, imgH);
+}
+
+<span class="co">//---------------------</span>
+<span class="dt">void</span> ofApp::draw(){
+	ofBackground(<span class="dv">255</span>);
+	ofSetColor(<span class="dv">255</span>);
+	
+	<span class="co">// Copy the source image into the destination:</span>
+	myCvImageDst = myCvImageSrc;
+	
+	<span class="co">// Threshold the destination image. </span>
+	<span class="co">// Our threshold value is the mouseX, </span>
+	<span class="co">// but it could be a constant, like 127.</span>
+	myCvImageDst.threshold (mouseX); 
+	
+	myCvImageSrc.draw ( <span class="dv">20</span>,<span class="dv">20</span>,  <span class="dv">320</span>,<span class="dv">240</span>);
+	myCvImageDst.draw (<span class="dv">360</span>,<span class="dv">20</span>,  <span class="dv">320</span>,<span class="dv">240</span>);
+}</code></pre>
+<h2 id="acompleteworkflowbackgroundsubtraction">A Complete Workflow: Background Subtraction</h2>
+<p>We now have all the pieces we need to understand and implement a popular and widely-used workflow in computer vision: <em>contour extraction and blob tracking from background subtraction</em>. This workflow produces a set of (x,y) points that represent the boundary of (for example) a person's body that has entered the camera's view.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/image_processing_computer_vision/images/opencvExample.png" target="_blank"><img alt="Screenshot of the opencvExample" src="../images/image_processing_computer_vision/images/opencvExample.png"/></a></div><div class="caption">Screenshot of the opencvExample</div>
+</div></div>
+<p>In this section, we'll base our discussion around the standard openFrameworks <em>opencvExample</em>, which can be found in the <code>examples/addons/opencvExample</code> directory of your openFrameworks installation. When you compile and run this example, you'll see a video of a hand casting a shadow—and, at the bottom right of our window, the contour of this hand, rendered as a cyan polyline. This polyline is <em>our prize:</em> using it, we can obtain all sorts of information about our visitor. So how did we get here?</p>
+<p>The code below is a slightly simplified version of the standard <em>opencvExample</em>; for example, we have here omitted some UI features, and we have omitted the <code>#define _USE_LIVE_VIDEO</code> (mentioned earlier) which allows for switching between a live video source and a stored video file.</p>
+<p>In the discussion that follows, we separate the inner mechanics into five steps, and discuss how they are performed and displayed:</p>
+<ol style="list-style-type: decimal">
+<li>Video Acquisition</li>
+<li>Color to Grayscale Conversion</li>
+<li>Storing a "Background Image"</li>
+<li>Thresholded Absolute Differencing</li>
+<li>Contour Tracing</li>
+</ol>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Example 7: Background Subtraction </span>
+<span class="co">// This is ofApp.h</span>
+
+<span class="ot">#pragma once</span>
+<span class="ot">#include "ofMain.h"</span>
+<span class="ot">#include "ofxOpenCv.h"</span>
+
+<span class="kw">class</span> ofApp : <span class="kw">public</span> ofBaseApp{
+	<span class="kw">public</span>:
+		<span class="dt">void</span> setup();
+		<span class="dt">void</span> update();
+		<span class="dt">void</span> draw();
+		<span class="dt">void</span> keyPressed(<span class="dt">int</span> key);
+	
+		ofVideoPlayer			vidPlayer;
+	
+		ofxCvColorImage			colorImg;
+		ofxCvGrayscaleImage 	grayImage;
+		ofxCvGrayscaleImage 	grayBg;
+		ofxCvGrayscaleImage 	grayDiff;
+		ofxCvContourFinder		contourFinder;
+
+		<span class="dt">int</span>						thresholdValue;
+		<span class="dt">bool</span>					bLearnBackground;
+};</code></pre>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Example 7: Background Subtraction </span>
+<span class="co">// This is ofApp.cpp</span>
+<span class="ot">#include "ofApp.h"</span>
+
+<span class="co">//---------------------</span>
+<span class="dt">void</span> ofApp::setup(){
+	vidPlayer.load(<span class="st">"fingers.mov"</span>);
+	vidPlayer.play();
+
+	colorImg.allocate(<span class="dv">320</span>,<span class="dv">240</span>);
+	grayImage.allocate(<span class="dv">320</span>,<span class="dv">240</span>);
+	grayBg.allocate(<span class="dv">320</span>,<span class="dv">240</span>);
+	grayDiff.allocate(<span class="dv">320</span>,<span class="dv">240</span>);
+
+	bLearnBackground = <span class="kw">true</span>;
+	thresholdValue = <span class="dv">80</span>;
+}
+
+<span class="co">//---------------------</span>
+<span class="dt">void</span> ofApp::update(){
+	
+	<span class="co">// Ask the video player to update itself.</span>
+	vidPlayer.update();
+	
+	<span class="kw">if</span> (vidPlayer.isFrameNew()){ <span class="co">// If there is fresh data...</span>
+		
+		<span class="co">// Copy the data from the video player into an ofxCvColorImage</span>
+		colorImg.setFromPixels(vidPlayer.getPixels());
+		
+		<span class="co">// Make a grayscale version of colorImg in grayImage</span>
+		grayImage = colorImg;
+		
+		<span class="co">// If it's time to learn the background;</span>
+		<span class="co">// copy the data from grayImage into grayBg</span>
+		<span class="kw">if</span> (bLearnBackground == <span class="kw">true</span>){
+			grayBg = grayImage; <span class="co">// Note: this is 'operator overloading'</span>
+			bLearnBackground = <span class="kw">false</span>; <span class="co">// Latch: only learn it once.</span>
+		}
+
+		<span class="co">// Take the absolute value of the difference </span>
+		<span class="co">// between the background and incoming images.</span>
+		grayDiff.absDiff(grayBg, grayImage);
+		
+		<span class="co">// Perform an in-place thresholding of the difference image.</span>
+		grayDiff.threshold(thresholdValue);
+
+		<span class="co">// Find contours whose areas are betweeen 20 and 25000 pixels.</span>
+		<span class="co">// "Find holes" is true, so we'll also get interior contours.</span>
+		contourFinder.findContours(grayDiff, <span class="dv">20</span>, <span class="dv">25000</span>, <span class="dv">10</span>, <span class="kw">true</span>);
+	}
+}
+
+<span class="co">//---------------------</span>
+<span class="dt">void</span> ofApp::draw(){
+	ofBackground(<span class="dv">100</span>,<span class="dv">100</span>,<span class="dv">100</span>);
+
+	ofSetHexColor(<span class="bn">0xffffff</span>);
+	colorImg.draw(<span class="dv">20</span>,<span class="dv">20</span>);    <span class="co">// The incoming color image</span>
+	grayImage.draw(<span class="dv">360</span>,<span class="dv">20</span>);  <span class="co">// A gray version of the incoming video</span>
+	grayBg.draw(<span class="dv">20</span>,<span class="dv">280</span>);     <span class="co">// The stored background image</span>
+	grayDiff.draw(<span class="dv">360</span>,<span class="dv">280</span>);  <span class="co">// The thresholded difference image</span>
+
+	ofNoFill();
+	ofDrawRectangle(<span class="dv">360</span>,<span class="dv">540</span>,<span class="dv">320</span>,<span class="dv">240</span>);
+
+	<span class="co">// Draw each blob individually from the blobs vector</span>
+	<span class="dt">int</span> numBlobs = contourFinder.nBlobs;
+	<span class="kw">for</span> (<span class="dt">int</span> i=<span class="dv">0</span>; i&lt;numBlobs; i++){
+		contourFinder.blobs[i].draw(<span class="dv">360</span>,<span class="dv">540</span>);
+	}
+}
+
+<span class="co">//---------------------</span>
+<span class="dt">void</span> ofApp::keyPressed(<span class="dt">int</span> key){
+	bLearnBackground = <span class="kw">true</span>;
+}</code></pre>
+<p><strong>Step 1. Video Acquisition.</strong> <br/> In the upper-left of our screen display is the raw, unmodified video of a hand creating a shadow. Although it's not very obvious, this is actually a color video; it just happens to be showing a mostly black-and-white scene.</p>
+<p>In <code>setup()</code>, we initialize some global-scoped variables (declared in ofApp.h), and allocate the memory we'll need for a variety of globally-scoped <code>ofxCvImage</code> image buffers. We also load the hand video from from its source file into <code>vidPlayer</code>, a globally-scoped instance of an <code>ofVideoPlayer</code>.</p>
+<p>It's quite common in computer vision workflows to maintain a large number of image buffers, each of which stores an intermediate state in the image-processing chain. For optimal performance, it's best to <code>allocate()</code> these only once, in <code>setup()</code>; otherwise, the operation of reserving memory for these images can hurt your frame rate.</p>
+<p>Here, the <code>colorImg</code> buffer (an <code>ofxCvColorImage</code>) stores the unmodified color data from <code>vidPlayer</code>; whenever there is a fresh frame of data from the player, in <code>update()</code>, <code>colorImg</code> receives a copy. Note the commands by which the data is extracted from <code>vidPlayer</code> and then assigned to <code>colorImg</code>:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">colorImg.setFromPixels(vidPlayer.getPixels());</code></pre>
+<p>In the full code of opencvExample (not shown here) a <code>#define</code> near the top of ofApp.h allows you to swap out the <code>ofVideoPlayer</code> for an <code>ofVideoGrabber</code>—a live webcam.</p>
+<p><strong>Step 2. Color to Grayscale Conversion.</strong> <br/> In the upper-right of the window is the same video, converted to grayscale. Here it is stored in the <code>grayImage</code> object, which is an instance of an <code>ofxCvGrayscaleImage</code>.</p>
+<p>It's easy to miss the grayscale conversion; it's done implicitly in the assignment <code>grayImage = colorImg;</code> using operator overloading of the <code>=</code> sign. All of the subsequent image processing in <em>opencvExample</em> is done with grayscale (rather than color) images.</p>
+<p><strong>Step 3. Storing a "Background Image".</strong> <br/> In the middle-left of the screen is a view of the <em>background image</em>. This is a grayscale image of the scene that was captured, once, when the video first started playing—before the hand entered the frame.</p>
+<p>The background image, <code>grayBg</code>, stores the first valid frame of video; this is performed in the line <code>grayBg = grayImage;</code>. A boolean latch (<code>bLearnBackground</code>) prevents this from happening repeatedly on subsequent frames. However, this latch is reset if the user presses a key.</p>
+<p>It is absolutely essential that your system "learn the background" when your subject (such as the hand) is <em>out of the frame</em>. Otherwise, your subject will be impossible to detect properly!</p>
+<p><strong>Step 4. Thresholded Absolute Differencing.</strong> <br/> 4. In the middle-right of the screen is an image that shows the <em>thresholded absolute difference</em> between the current frame and the background frame. The white pixels represent regions that are significantly different from the background: the hand!</p>
+<p>The absolute differencing and thresholding take place in two separate operations, whose code is shown below. The <code>absDiff()</code> operation computes the absolute difference between <code>grayBg</code> and <code>grayImage</code> (which holds the current frame), and places the result into <code>grayDiff</code>.</p>
+<p>The subsequent thresholding operation ensures that this image is <em>binarized</em>, meaning that its pixel values are either black (0) or white (255). The thresholding is done as an <em>in-place operation</em> on <code>grayDiff</code>, meaning that the <code>grayDiff</code> image is clobbered with a thresholded version of itself.</p>
+<p>The variable <code>thresholdValue</code> is set to 80, meaning that a pixel must be at least 80 gray-levels different than the background in order to be considered foreground. In the official example, a keypress permits the user to adjust this number.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Take the absolute value of the difference </span>
+<span class="co">// between the background and incoming images.</span>
+grayDiff.absDiff(grayBg, grayImage);
+
+<span class="co">// Perform an in-place thresholding of the difference image.</span>
+grayDiff.threshold(thresholdValue);</code></pre>
+<p>This example uses thresholding to distinguish dark objects from a light background. But it's worth pointing out that thresholding can be applied to any image whose brightness quantifies a variable of interest.</p>
+<p>If you're using a webcam instead of the provided "fingers.mov" demo video, note that automatic gain control can sometimes interfere with background subtraction. You may need to increase the value of your threshold, or use a more sophisticated background subtraction technique.</p>
+<p><strong>Step 5. Contour Tracing.</strong> <br/> 5. The final steps are displayed in the bottom right of the screen. Here, an <code>ofxCvContourFinder</code> has been tasked to <code>findContours()</code> in the binarized image. It does this by identifying contiguous blobs of white pixels, and then tracing the contours of those blobs into an <code>ofxCvBlob</code> outline comprised of (x,y) points.</p>
+<p>Internally, the <code>ofxCvContourFinder</code> first performs a pixel-based operation called <a href="https://en.wikipedia.org/wiki/Connected-component_labeling" target="_blank"><em>connected component labeling</em></a>, in which contiguous areas are identified as uniquely-labeled blobs. It then extracts the boundary of each blob, which it stores in an <code>ofPolyline</code>, using a process known as a <a href="http://www.mind.ilstu.edu/curriculum/chain_codes_intro/chain_codes_intro.php" target="_blank"><em>chain code algorithm</em></a>.</p>
+<p>Some of the parameters to the <code>findContours()</code> method allow you to select only those blobs which meet certain minimum and maximum area requirements. This is useful if you wish to discard very tiny blobs (which can result from noise in the video) or extremely large blobs (which can result from sudden changes in lighting).</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Find contours whose areas are betweeen 20 and 25000 pixels.</span>
+<span class="co">// "Find holes" is set to true, so we'll also get interior contours.</span>
+contourFinder.findContours(grayDiff, <span class="dv">20</span>, <span class="dv">25000</span>, <span class="dv">10</span>, <span class="kw">true</span>);</code></pre>
+<p>In <code>draw()</code>, the app then displays the contour of each blob in cyan, and also shows the bounding rectangle of those points in magenta.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Draw each blob individually from the blobs vector</span>
+<span class="dt">int</span> numBlobs = contourFinder.nBlobs;
+<span class="kw">for</span> (<span class="dt">int</span> i=<span class="dv">0</span>; i&lt;numBlobs; i++){
+   contourFinder.blobs[i].draw(<span class="dv">360</span>,<span class="dv">540</span>);
+}</code></pre>
+<h3 id="frame-differencing">Frame Differencing</h3>
+<p>Closely related to background subtraction is <em>frame differencing</em>. If background subtraction is useful for detecting <em>presence</em> (by comparing a scene before and after someone entered it), frame differencing is useful for detecting <em>motion</em>.</p>
+<p>The difference between background subtraction and frame differencing can be described as follows:</p>
+<ul>
+<li>Background subtraction compares the current frame with a previously-stored background image</li>
+<li>Frame differencing compares the current frame with the immediately previous frame of video.</li>
+</ul>
+<p>As with background subtraction, it's customary to threshold the difference image, in order to discriminate signals from noise. Using frame differencing, it's possible to quantify <em>how much motion</em> is happening in a scene. This can be done by counting up the white pixels in the thresholded difference image.</p>
+<p>In practice, background subtraction and frame differencing are often used together. For example, background subtraction can tell us that someone is in the room, while frame differencing can tell us how much they are moving around. In a common solution that combines the best of both approaches, motion detection (from frame differencing) and presence detection (from background subtraction) can be combined to create a generalized detector. A simple trick for doing so is to take a weighted average of their results, and use that as the basis for further thresholding.</p>
+<h3 id="contour-games">Contour Games</h3>
+<p>Blob contours are a <em>vector-based</em> representation, comprised of a series of (x,y) points. Once obtained, a contour can be used for all sorts of exciting geometric play.</p>
+<p>A good illustration of this is the following project by Cyril Diagne, in which the body's contour is triangulated by <a href="https://github.com/obviousjim/ofxTriangle" target="_blank">ofxTriangle</a>, and then used as the basis for simulated physics interactions using <a href="https://github.com/vanderlin/ofxBox2d" target="_blank">ofxBox2D</a>. The user of Diagne's project can "catch" the bouncy circular "balls" with their silhouette.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/image_processing_computer_vision/images/ofx-kikko.jpg" target="_blank"><img alt="Screenshots of ofx-kikko by Cyril Diagne" src="../images/image_processing_computer_vision/images/ofx-kikko.jpg"/></a></div><div class="caption">Screenshots of ofx-kikko by Cyril Diagne</div>
+</div></div>
+<p>One of the flags to the <code>ofxCvContourFinder::findContours()</code> function allows you to search specifically for <em>interior</em> contours, also known as <a href="https://en.wikipedia.org/wiki/Negative_space" target="_blank"><em>negative space</em></a>. An interactive artwork which uses this to good effect is <em>Shadow Monsters</em> by Philip Worthington, which interprets interior contours as the boundaries of lively, animated eyeballs.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/image_processing_computer_vision/images/shadowmonsters_jefrouner.jpg" target="_blank"><img alt="Screenshots of Philip Worthington's Shadow Monsters. Photo by Jef Rouner" src="../images/image_processing_computer_vision/images/shadowmonsters_jefrouner.jpg"/></a></div><div class="caption">Screenshots of Philip Worthington's Shadow Monsters. Photo by Jef Rouner</div>
+</div></div>
+<p>The original masterwork of contour play was Myron Krueger’s landmark interactive artwork, <a href="https://www.youtube.com/watch?v=dmmxVA5xhuo" target="_blank"><em>Videoplace</em></a>, which was developed continuously between 1970 and 1989, and which premiered publicly in 1974. The <em>Videoplace</em> project comprised at least two dozen profoundly inventive scenes which comprehensively explored the design space of full-body camera-based interactions with virtual graphics — including telepresence applications and (as pictured here, in the “Critter” scene) interactions with animated artificial creatures.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/image_processing_computer_vision/images/krueger.jpg" target="_blank"><img alt="Photographs of Myron Krueger's VideoPlace" src="../images/image_processing_computer_vision/images/krueger.jpg"/></a></div><div class="caption">Photographs of Myron Krueger's VideoPlace</div>
+</div></div>
+<p>Here's a quick list of some fun and powerful things you can do with contours extracted from blobs:</p>
+<ul>
+<li>A blob's contour is represented as a <code>ofPolyline</code>, and can be smoothed and simplified with <code>ofPolyline::getSmoothed()</code>. Try experimenting with extreme smoothing, to create ultra-filtered versions of captured geometry.</li>
+<li>If you have too many (or too few) points in your contour, consider using <code>ofPolyline::getResampledBySpacing()</code> or <code>getResampledByCount()</code> to reduce (or increase) its number of points.</li>
+<li><code>ofPolyline</code> provides methods for computing the area, perimeter, centroid, and bounding box of a contour; consider mapping these to audiovisual or other interactive properties. For example, you could map the area of a shape to its mass (in a physics simulation), or to its color.</li>
+<li>You can identify "special" points on a shape (such as the corners of a square, or an extended fingertip on a hand) by searching through a contour for points with high local curvature. The function <code>ofPolyline::getAngleAtIndex()</code> can be helpful for this.</li>
+<li>The mathematics of <a href="http://what-when-how.com/biomedical-image-analysis/spatial-domain-shape-metrics-biomedical-image-analysis/" target="_blank"><em>shape metrics</em></a> can provide powerful tools for contour analysis and even recognition. One simple shape metric is <a href="https://en.wikipedia.org/wiki/Aspect_ratio" target="_blank"><em>aspect ratio</em></a>, which is the ratio of a shape's width to its height. Another elegant shape metric is <em>compactness</em> (also called the <a href="https://en.wikipedia.org/wiki/Isoperimetric_ratio" target="_blank"><em>isoperimetric ratio</em></a>), which the ratio of a shape's perimeter-squared to its area. You can use these metrics to distinguish between (for example) cardboard cutouts of animals or numbers.</li>
+<li>The ID numbers (array indices) assigned to blobs by the <code>ofxCvContourFinder</code> are based on the blobs' sizes and locations. If you need to <em>track</em> multiple blobs whose positions and areas change over time, see the <a href="https://github.com/kylemcdonald/ofxCv/tree/master/example-contours-tracking" target="_blank"><em>example-contours-tracking</em></a> example in Kyle McDonald's addon, <a href="https://github.com/kylemcdonald/ofxCv/" target="_blank">ofxCv</a>.</li>
+</ul>
+<h2 id="refinements">Refinements</h2>
+<p>In this section we briefly discuss several important refinements that can be made to improve the quality and performance of computer vision programs.</p>
+<ul>
+<li>Cleaning Up Thresholded Images: Erosion and Dilation</li>
+<li>Automatic Thresholding and Dynamic Thresholding</li>
+<li>Adaptive Background Subtraction</li>
+<li>ROI Processing</li>
+</ul>
+<h4 id="cleaning-up-thresholded-images-erosion-and-dilation">Cleaning Up Thresholded Images: Erosion and Dilation</h4>
+<p>Sometimes thresholding leaves noise, which can manifest as fragmented blobs or unwanted speckles. If altering your threshold value doesn't solve this problem, you'll definitely want to know about <a href="http://homepages.inf.ed.ac.uk/rbf/HIPR2/erode.htm" target="_blank"><em>erosion</em></a> and <a href="http://homepages.inf.ed.ac.uk/rbf/HIPR2/dilate.htm" target="_blank"><em>dilation</em></a>, which are types of <em>morphological operators</em> for binarized images. Simply put,</p>
+<ul>
+<li>Erosion <em>removes</em> a layer of pixels from every blob in the scene.</li>
+<li>Dilation <em>adds</em> a layer of pixels to every blob in the scene.</li>
+</ul>
+<p>In the example below, one pass of erosion is applied to the image at left. This eliminates all of the isolated specks of noise:</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/image_processing_computer_vision/images/erosion_in_use.png" target="_blank"><img alt="Original image (left), after one pass of erosion (right)" src="../images/image_processing_computer_vision/images/erosion_in_use.png"/></a></div><div class="caption">Original image (left), after one pass of erosion (right)</div>
+</div></div>
+<p>By contrast, observe how dilation is used in the person-detecting pipeline below:</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/image_processing_computer_vision/images/full_pipeline.png" target="_blank"><img alt="A complete image-processing pipeline, including" src="../images/image_processing_computer_vision/images/full_pipeline.png"/></a></div><div class="caption">A complete image-processing pipeline, including</div>
+</div></div>
+<ol style="list-style-type: decimal">
+<li>Live video is captured and converted to grayscale. A background image is acquired at a time when nobody is in the scene. (Sometimes, a running average of the camera feed is used as the background, especially for outdoor scenes subject to changing lighting conditions.)</li>
+<li>A person walks into the frame.<br/></li>
+<li>The live video image is compared with the background image. The absolute difference of Images (1) and (2) is computed.</li>
+<li>Image (3), the absolute difference, is thresholded. Unfortunately, the person's body is fragmented into pieces, because some pixels were insufficiently different from the background.</li>
+<li>Two passes of dilation are applied to Image (4) the thresholded image. This fills in the cracks between the pieces, creating a single, contiguous blob.</li>
+<li>The contour tracer identifies just one blob instead of several.</li>
+</ol>
+<p>OpenCV makes erosion and dilation easy. See <code>ofxCvImage::erode()</code> and <code>ofxCvImage::dilate()</code> for methods that provide access to this functionality.</p>
+<p>Other operations which may be helpful in removing noise is <code>ofxCvImage::blur()</code> and <code>ofxCvImage:: blurGaussian()</code>. These should be applied <em>before</em> the thresholding operation, rather than after.</p>
+<h4 id="adaptive-background-subtraction">Adaptive Background Subtraction</h4>
+<p>In situations with fluctuating lighting conditions, such as outdoor scenes, it can be difficult to perform background subtraction. One common solution is to slowly adapt the background image over the course of the day, accumulating a running average of the background.</p>
+<p>The overloaded operators for <code>ofxCvImage</code> make such running averages straightforward. In the code fragment below, the background image is continually but slowly reassigned to be a combination of 99% of what it was a moment ago, with 1% of new information. This is also known as an <em>adaptive background</em>.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp">grayBg = <span class="fl">0.99</span>*grayBg + <span class="fl">0.01</span>*grayImage;</code></pre>
+<h4 id="automatic-thresholding-and-dynamic-thresholding">Automatic Thresholding and Dynamic Thresholding</h4>
+<p>Sometimes it's difficult to know in advance exactly what the threshold value should be. Camera conditions change, lighting conditions change, scene conditions change; all affect the value which we hope to use to distinguish light from dark.</p>
+<p>To resolve this, you could make this a manually adjusted setting, as we did in Example 6 (above) when we used the <code>mouseX</code> as the threshold value. But there are also <em>automatic thresholding</em> techniques that can compute an "ideal" threshold based on an image's luminance histogram. There are dozens of great techniques for this, including <a href="https://en.wikipedia.org/wiki/Otsu%27s_method" target="_blank">Otsu's Method</a>, Gaussian Mixture Modeling, IsoData Thresholding, and Maximum Entropy thresholding. For an amazing overview of such techniques, check out <a href="http://imagej.nih.gov/ij/" target="_blank">ImageJ</a>, an open-source (Java) computer vision toolkit produced by the US National Institute of Health.</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/image_processing_computer_vision/images/thresholds.png" target="_blank"><img alt="An image histogram, and four possible thresholds. The histogram shows a hump of dark pixels (with a large peak at 28/255), and a shallower hump of bright pixels (with a peak at 190). The vertical gray lines represent possible threshold values, automatically determined by four different methods." src="../images/image_processing_computer_vision/images/thresholds.png"/></a></div><div class="caption">An image histogram, and four possible thresholds. The histogram shows a hump of dark pixels (with a large peak at 28/255), and a shallower hump of bright pixels (with a peak at 190). The vertical gray lines represent possible threshold values, automatically determined by four different methods.</div>
+</div></div>
+<p>Below is code for the <em>Isodata</em> method, one of the simpler (and shorter) methods for automatically computing an ideal threshold. Note that the function takes as input the image's <em>histogram</em>: an array of 256 integers that contain the count, for each gray-level, of how many pixels are colored with that gray-level.</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">/*</span>
+<span class="co">From: http://www.ph.tn.tudelft.nl/Courses/FIP/frames/fip-Segmenta.html</span>
+<span class="co">This iterative technique for choosing a threshold was developed by </span>
+<span class="co">Ridler and Calvard. The histogram is initially segmented into two parts</span>
+<span class="co">using a starting threshold value such as th0 = 127, half the maximum</span>
+<span class="co">dynamic range for an 8-bit image. The sample mean (mf,0) of the gray </span>
+<span class="co">values associated with the foreground pixels and the sample mean (mb,0) </span>
+<span class="co">of the gray values associated with the background pixels are computed. </span>
+<span class="co">A new threshold value th1 is now computed as the average of these two </span>
+<span class="co">sample means. The process is repeated, based upon the new threshold, </span>
+<span class="co">until the threshold value does not change any more. </span>
+
+<span class="co">Input: imageHistogram, an array of 256 integers, each of which represents </span>
+<span class="co">the count of pixels that have that particular gray-level. For example,</span>
+<span class="co">imageHistogram[56] contains the number of pixels whose gray-level is 56.</span>
+<span class="co">Output: an integer (between 0-255) indicating an ideal threshold.</span>
+<span class="co">*/</span>
+
+<span class="dt">int</span> ofApp::getThresholdIsodata (<span class="dt">int</span> *imageHistogram){
+	<span class="dt">int</span> theThreshold = <span class="dv">127</span>; <span class="co">// our output</span>
+	
+	<span class="kw">if</span> (input != NULL){ <span class="co">// sanity check</span>
+		<span class="dt">int</span> thresh = theThreshold;
+		<span class="dt">int</span> tnew = thresh;
+		<span class="dt">int</span> thr  = <span class="dv">0</span>;
+		<span class="dt">int</span> sum  = <span class="dv">0</span>;
+		<span class="dt">int</span> mean1, mean2;
+		<span class="dt">int</span> ntries = <span class="dv">0</span>;
+		
+		<span class="kw">do</span> {
+			thr = tnew;
+			sum = mean1 = mean2 = <span class="dv">0</span>;
+
+			<span class="kw">for</span> (<span class="dt">int</span> i=<span class="dv">0</span>; i&lt;thr; i++){
+				mean1 += (imageHistogram[i] * i);
+				sum   += (imageHistogram[i]);
+			}     
+			<span class="kw">if</span> (sum != <span class="dv">0</span>){ mean1 = mean1 / sum;}
+
+			sum = <span class="dv">0</span>;
+			<span class="kw">for</span> (<span class="dt">int</span> i=thr; i&lt;<span class="dv">255</span>; i++){
+				mean2 += (imageHistogram[i] * i);
+				sum   += (imageHistogram[i]);
+			}
+
+			<span class="kw">if</span> (sum != <span class="dv">0</span>){ mean2 = mean2 / sum;}
+			tnew = (mean1 + mean2) / <span class="dv">2</span>;
+			ntries++;
+
+		} <span class="kw">while</span> ((tnew != thr) &amp;&amp; (ntries &lt; <span class="dv">64</span>));
+		theThreshold = tnew;
+	}
+	<span class="kw">return</span> theThreshold;
+}</code></pre>
+<p>In some situations, such as images with strong gradients, a single threshold may be unsuitable for the entire image field. Instead, it may be preferable to implement some form of <em>per-pixel thresholding</em>, in which a different threshold is computed for every pixel (i.e. a "threshold image").</p>
+<p>As you can see below, a single threshold fails for this particular source image, a page of text. Instead of using a single number, the threshold is established for each pixel by taking an average of the brightness values in its neighborhood (minus a constant!).</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/image_processing_computer_vision/images/hipr-adaptive.jpg" target="_blank"><img alt="Adaptive Thresholding. From the Hypertext Image Processing Reference." src="../images/image_processing_computer_vision/images/hipr-adaptive.jpg"/></a></div><div class="caption">Adaptive Thresholding. From the Hypertext Image Processing Reference.</div>
+</div></div>
+<p>The name for this technique is <em>adaptive thresholding</em>, and an excellent discussion can be found in the online <a href="http://homepages.inf.ed.ac.uk/rbf/HIPR2/adpthrsh.htm" target="_blank">Hypertext Image Processing Reference</a>.</p>
+<h4 id="roi-processing">ROI Processing</h4>
+<p>Many image processing and computer vision operations can be sped up by performing calculations only within a sub-region of the main image, known as a <em>region of interest</em> or ROI.</p>
+<p>The relevant function is <code>ofxCvImage::setROI()</code>, which sets the ROI in the image. Region of Interest is a rectangular area in an image, to segment object for further processing. Once the ROI is defined, OpenCV functions will operate on the ROI, reducing the number of pixels that the operation will examine and modify.</p>
+<h2 id="suggestionsforfurtherexperimentation">Suggestions for Further Experimentation</h2>
+<p>There's tons more to explore! We strongly recommend you try out all of the openCV examples that come with openFrameworks. (An audience favorite is the <em>opencvHaarFinderExample</em>, which implements the classic Viola-Jones face detector!) When you're done with those, check out the examples that come with Kyle McDonald's <a href="https://github.com/kylemcdonald/ofxCv" target="_blank">ofxCv</a> addon.</p>
+<p>I sometimes assign my students the project of copying a well-known work of interactive new-media art. Reimplementing projects such as the ones below can be highly instructive, and test the limits of your attention to detail. Such copying provides insights which cannot be learned from any other source. <em>I recommend you build...</em></p>
+<h4 id="a-slit-scanner.">A Slit-Scanner.</h4>
+<p><em>Slit-scanning</em> — a type of spatiotemporal or "time-space imaging" — has been a common trope in interactive video art for more than twenty years. Interactive slit-scanners have been developed by some of the most revered pioneers of new media art (Toshio Iwai, Paul de Marinis, Steina Vasulka) as well as by <a href="http://www.flong.com/texts/lists/slit_scan/" target="_blank">literally dozens</a> of other highly regarded practitioners. The premise remains an open-ended format for seemingly limitless experimentation, whose possibilities have yet to be exhausted. It is also a good exercise in managing image data, particularly in extracting and copying image subregions.</p>
+<p>In digital slit-scanning, thin slices are extracted from a sequence of video frames, and concatenated into a new image. The result is an image which succinctly reveals the history of movements in a video or camera stream. In <a href="http://www.smoothware.com/danny/timescan.html" target="_blank"><em>Time Scan Mirror</em></a> (2004) by Danny Rozin, for example, a image is composed from thin vertical slices of pixels that have been extracted from the center of each frame of incoming video, and placed side-by-side. Such a slit-scanner can be built in fewer than 20 lines of code—try it!</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/image_processing_computer_vision/images/rozin_timescan.jpg" target="_blank"><img alt="Daniel Rozin, Time Scan Mirror (2004)" src="../images/image_processing_computer_vision/images/rozin_timescan.jpg"/></a></div><div class="caption">Daniel Rozin, Time Scan Mirror (2004)</div>
+</div></div>
+<h4 id="a-cover-of-text-rain-by-utterback-achituv-1999.">A cover of <em>Text Rain</em> by Utterback &amp; Achituv (1999).</h4>
+<p><em><a href="http://camilleutterback.com/projects/text-rain/" target="_blank">Text Rain</a></em> by Camille Utterback and Romy Achituv is a now-classic work of interactive art in which virtual letters appear to "fall" on the visitor's "silhouette". Utterback writes: "In the <em>Text Rain</em> installation, participants stand or move in front of a large projection screen. On the screen they see a mirrored video projection of themselves in black and white, combined with a color animation of falling letters. Like rain or snow, the letters appears to land on participants’ heads and arms. The letters respond to the participants’ motions and can be caught, lifted, and then let fall again. The falling text will 'land' on anything darker than a certain threshold, and 'fall' whenever that obstacle is removed."</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/image_processing_computer_vision/images/text-rain.jpg" target="_blank"><img alt="Camille Utterback and Romy Achituv, Text Rain (1999)" src="../images/image_processing_computer_vision/images/text-rain.jpg"/></a></div><div class="caption">Camille Utterback and Romy Achituv, Text Rain (1999)</div>
+</div></div>
+<p><em>Text Rain</em> can be implemented in about 30 lines of code, and involves many of the topics we've discussed in this chapter, such as fetching the brightness of a pixel at a given location. It can also be an ideal project for ensuring that you understand how to make objects (to store the positions and letters of the falling particles) and arrays of objects.</p>
+<p>========================================================<br/>## Bibliography</p>
+<p>This chapter has introduced a few introductory image processing and computer vision techniques. But computer vision is a huge and constantly evolving field. For more information, we highly recommend the following books and online resources.</p>
+<ul>
+<li>Bradski, Gary. <a href="http://cs.haifa.ac.il/~dkeren/ip/OReilly-LearningOpenCV.pdf" target="_blank">Learning OpenCV</a> (PDF)</li>
+<li>Cardoso, Jorge. <a href="http://www.slideshare.net/jorgecardoso/computer-vision-techniques-for-interactive-art" target="_blank">Computer vision techniques for interactive art</a></li>
+<li>Fisher, Robert, et. al. <a href="http://homepages.inf.ed.ac.uk/rbf/HIPR2/index.htm" target="_blank">HIPR2, The Hypertext Image Processing Reference</a></li>
+<li><a href="http://what-when-how.com/category/introduction-to-video-and-image-processing/" target="_blank">Introduction to Video and Image Processing</a></li>
+<li>Levin, Golan. <a href="http://www.flong.com/texts/essays/essay_cvad/" target="_blank">Computer Vision for Artists and Designers</a></li>
+<li>Szeliski &amp; Zisserman. <a href="http://www.frontiersincomputervision.com/slides/FCV_Core_Szeliski_Zisserman.pdf" target="_blank">20 techniques that every computer vision researcher should know</a> (PDF)</li>
+<li>Szeliski, Richard. <a href="http://szeliski.org/Book/" target="_blank">Computer Vision: Algorithms and Applications</a></li>
+<li><a href="http://docs.opencv.org/opencv2refman.pdf" target="_blank">The OpenCV Reference Manual</a> (PDF)</li>
+</ul>
+<div class="footer">
+<div id="prev_chapter"><a href="game_design.html">&lt; Experimental Game Development</a></div>
+<div id="next_chapter"><a href="hardware.html">Hardware &gt;</a></div>
+</div>
+<div id="help"><i>please note that this book / chapter is a work in progress.  Feel free to suggest edits / corrections <a href="https://github.com/openframeworks/ofbook" target="_blank">here</a></i></div>
+</div>
+</div>
+</body>
+</html>

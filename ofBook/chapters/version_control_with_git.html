@@ -1,0 +1,557 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="pandoc" name="generator"/>
+<title>ofBook - Version control with Git</title>
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+<link href="../style/bootstrap.min.css" rel="stylesheet">
+<link href="../style/style.css" rel="stylesheet" type="text/css"/>
+<link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Merriweather:400,300,300italic,400italic,700,900,700italic,900italic" rel="stylesheet" type="text/css">
+<script src="../javascript/jquery-1.8.3.min.js"></script>
+<script src="../javascript/bootstrap.min.js"></script>
+<script src="../javascript/navbar.js"></script>
+</link></link></head>
+<body>
+<div class="banner">
+<div class="content-wrapper">
+<b>Work in progress!</b>
+        This is a preliminary version of ofBook, a collaboratively written book about openFrameworks.  Please post any issues, suggestions, comments on our <a href="https://github.com/openframeworks/ofBook/" target="_blank">repo</a>.
+    </div>
+</div>
+<div class="content-wrapper">
+<nav role="navigation">
+<ul id="nav-parts"><li class="group"><div class="groupTitle">Foreword</div><ul><li class="chapter"><div class="chapterTitle"><a href="foreword.html">foreword</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#책에관하여" target="_top">책에 관하여</a></li><li class="section"><a href="#credits" target="_top">Credits</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Basics</div><ul><li class="chapter"><div class="chapterTitle"><a href="of_philosophy.html">Philosophy</a></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="cplusplus_basics.html">C++ Language Basics</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#lookalive" target="_top">Look Alive!</a></li><li class="section"><a href="#iteration" target="_top">Iteration</a></li><li class="section"><a href="#compilingmyfirstapp" target="_top">Compiling My First App</a></li><li class="section"><a href="#beyondhelloworld" target="_top">Beyond Hello World</a></li><li class="section"><a href="#functions" target="_top">Functions</a></li><li class="section"><a href="#customfunctions" target="_top">Custom Functions</a></li><li class="section"><a href="#encapsulationofcomplexity" target="_top">Encapsulation of Complexity</a></li><li class="section"><a href="#variablespart1" target="_top">Variables (part 1)</a></li><li class="section"><a href="#conclusion" target="_top">Conclusion</a></li><li class="section"><a href="#ps" target="_top">PS.</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="setup_and_project_structure.html">oF structure</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#firstthingsfirst" target="_top">First things first</a></li><li class="section"><a href="#welcometoyournewkitchen" target="_top">Welcome to your new kitchen</a></li><li class="section"><a href="#runningexamples" target="_top">Running examples</a></li><li class="section"><a href="#offolderstructure" target="_top">oF folder structure</a></li><li class="section"><a href="#theofpantry" target="_top">The oF Pantry</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="intro_to_graphics.html">Graphics</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#brusheswithbasicshapes" target="_top">Brushes with Basic Shapes</a></li><li class="section"><a href="#brushesfromfreeformshapes" target="_top">Brushes from Freeform Shapes</a></li><li class="section"><a href="#movingtheworld" target="_top">Moving The World</a></li><li class="section"><a href="#nextsteps" target="_top">Next Steps</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="OOPs!.html">Ooops! = Object Oriented Programming + Classes</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#overview" target="_top">Overview</a></li><li class="section"><a href="#whatisobjectorientedprogramming" target="_top">What is Object Oriented Programming</a></li><li class="section"><a href="#howtobuildyourownclassessimpleclass" target="_top">How to build your own Classes (simple Class)</a></li><li class="section"><a href="#makeanobjectfromyourclass" target="_top">Make an Object from your Class</a></li><li class="section"><a href="#makeobjectsfromyourclass" target="_top">Make objects from your Class</a></li><li class="section"><a href="#makemoreobjectsfromyourclass" target="_top">Make more Objects from your Class</a></li><li class="section"><a href="#makeevenmoreobjectsfromyourclasspropertiesandconstructors" target="_top">Make even more Objects from your Class: properties and constructors</a></li><li class="section"><a href="#makeobjectsonthefly" target="_top">Make Objects on the fly</a></li><li class="section"><a href="#makinganddeleteasyouwishusingvectors" target="_top">Making and delete as you wish - using vectors</a></li><li class="section"><a href="#quickintrotopolymorphisminheritance" target="_top">Quick intro to polymorphism (inheritance)</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="how_of_works.html">how OF works</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#오픈프레임웍스코드의일반적인패턴설명" target="_top">오픈프레임웍스 코드의 일반적인 패턴 설명</a></li><li class="section"><a href="#setupupdatedraw" target="_top">setup, update, draw</a></li><li class="section"><a href="#클래스" target="_top">클래스</a></li><li class="section"><a href="#함수" target="_top">함수</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Approaches</div><ul><li class="chapter"><div class="chapterTitle"><a href="animation.html">Animation</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#background" target="_top">Background</a></li><li class="section"><a href="#animationinofusefulconcepts" target="_top">Animation in oF / useful concepts:</a></li><li class="section"><a href="#linearmovement" target="_top">Linear movement</a></li><li class="section"><a href="#functionbasedmovement" target="_top">Function based movement</a></li><li class="section"><a href="#simulation" target="_top">Simulation</a></li><li class="section"><a href="#wheretogofurther" target="_top">Where to go further</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="game_design.html">Experimental Game Development</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#howdogamedevelopersactuallymakegames" target="_top">How do game developers actually make games?</a></li><li class="section"><a href="#sowhatisoscanyway" target="_top">So what is OSC, anyway?</a></li><li class="section"><a href="#ourbasicgameandmakingitnotsobasic" target="_top">Our basic game–and making it not so basic</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="image_processing_computer_vision.html">image processing and computer vision</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#maybethereisamagicbullet" target="_top">Maybe There is a Magic Bullet</a></li><li class="section"><a href="#preliminariestoimageprocessing" target="_top">Preliminaries to Image Processing</a></li><li class="section"><a href="#이미지처리를얘기하기전에알아두어야할것들" target="_top">이미지처리를 얘기하기 전에 알아두어야 할것들</a></li><li class="section"><a href="#pointprocessingoperationsonimages" target="_top">Point Processing Operations on Images</a></li><li class="section"><a href="#acompleteworkflowbackgroundsubtraction" target="_top">A Complete Workflow: Background Subtraction</a></li><li class="section"><a href="#refinements" target="_top">Refinements</a></li><li class="section"><a href="#suggestionsforfurtherexperimentation" target="_top">Suggestions for Further Experimentation</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">I/O</div><ul><li class="chapter"><div class="chapterTitle"><a href="hardware.html">Hardware</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introduction" target="_top">introduction</a></li><li class="section"><a href="#소개" target="_top">소개</a></li><li class="section"><a href="#gettingstartedwithserialcommunication" target="_top">getting started with serial communication</a></li><li class="section"><a href="#시리얼통신시작하기" target="_top">시리얼 통신 시작 하기</a></li><li class="section"><a href="#digitalandanalogcommunication" target="_top">digital and analog communication</a></li><li class="section"><a href="#디지털과아날로그통신" target="_top">디지털과 아날로그 통신</a></li><li class="section"><a href="#usingserialforcommunicationbetweenarduinoandopenframeworks" target="_top">using serial for communication between arduino and openframeworks</a></li><li class="section"><a href="#lightsoncontrollinghardwareviadmx" target="_top">Lights On - controlling hardware via DMX</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="sound.html">Sound</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#gettingstartedwithsoundfiles" target="_top">Getting Started With Sound Files</a></li><li class="section"><a href="#gettingstartedwiththesoundstream" target="_top">Getting Started With the Sound Stream</a></li><li class="section"><a href="#why1to1" target="_top">Why -1 to 1?</a></li><li class="section"><a href="#timedomainvsfrequencydomain" target="_top">Time Domain vs Frequency Domain</a></li><li class="section"><a href="#reactingtoliveaudio" target="_top">Reacting to Live Audio</a></li><li class="section"><a href="#synthesizingaudio" target="_top">Synthesizing Audio</a></li><li class="section"><a href="#audiogotchas" target="_top">Audio Gotchas</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="network.html">Network</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#tcpvsudp" target="_top">TCP vs UDP</a></li><li class="section"><a href="#osc" target="_top">OSC</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Graphics</div><ul><li class="chapter"><div class="chapterTitle"><a href="openGL.html">Introducing OpenGL for OF</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introducing" target="_top">Introducing</a></li><li class="section"><a href="#vertices" target="_top">Vertices</a></li><li class="section"><a href="#meshes" target="_top">Meshes</a></li><li class="section"><a href="#vbos" target="_top">VBOs</a></li><li class="section"><a href="#abasic3dscene" target="_top">A Basic 3D Scene</a></li><li class="section"><a href="#matrices" target="_top">Matrices</a></li><li class="section"><a href="#textures" target="_top">Textures</a></li><li class="section"><a href="#cameras" target="_top">Cameras</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="lines.html">drawing lines</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#소개" target="_top">소개 ...</a></li><li class="section"><a href="#선그리기" target="_top">선 그리기</a></li><li class="section"><a href="#약간의노이즈abitofnoise" target="_top">약간의 노이즈A bit of noise</a></li><li class="section"><a href="#aweboflines" target="_top">A web of lines</a></li><li class="section"><a href="#makeasmoothlineinmovementina3dspace" target="_top">Make a smooth line in movement in a 3D space</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="generativemesh.html">Basics of Generating Meshes from an Image</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#basicsofgeneratingmeshesfromanimage1" target="_top">Basics of Generating Meshes from an Image</a></li><li class="section"><a href="#basicsworkingwithofmesh" target="_top">Basics: Working with ofMesh</a></li><li class="section"><a href="#generativemeshusinganimagetodrivethecreationofamesh" target="_top">Generative Mesh: Using an image to drive the creation of a mesh</a></li><li class="section"><a href="#manipulationsaddingeffectsthatmodifythemesh" target="_top">Manipulations: Adding effects that modify the mesh</a></li><li class="section"><a href="#nextsteps" target="_top">Next Steps</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="advanced_graphics.html">Advanced graphics</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#dimmediatemodevsofpolylineofpath" target="_top">2D, immediate mode vs ofPolyline/ofPath</a></li><li class="section"><a href="#d" target="_top">3D</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="shaders.html">Introducing Shaders</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introducing" target="_top">introducing</a></li><li class="section"><a href="#yourfirstshader" target="_top">Your first shader!</a></li><li class="section"><a href="#addinguniforms" target="_top">Adding Uniforms</a></li><li class="section"><a href="#addingsomeinteractivity" target="_top">Adding some interactivity</a></li><li class="section"><a href="#addingtextures" target="_top">Adding Textures</a></li><li class="section"><a href="#alphamasking" target="_top">Alpha Masking</a></li><li class="section"><a href="#multipletextures" target="_top">Multiple Textures</a></li><li class="section"><a href="#offbo" target="_top">ofFbo</a></li><li class="section"><a href="#texturesasdataegdisplacement" target="_top">Textures as Data (e.g. Displacement)</a></li><li class="section"><a href="#theendcongrats" target="_top">The End, Congrats!</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">C++</div><ul><li class="chapter"><div class="chapterTitle"><a href="threads.html">threads</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#쓰레드란무엇이고언제사용해야하는가" target="_top">쓰레드란 무엇이고 언제 사용해야 하는가</a></li><li class="section"><a href="#ofthread" target="_top">ofThread</a></li><li class="section"><a href="#스레드와opengl" target="_top">스레드와 openGL</a></li><li class="section"><a href="#ofmutex" target="_top">ofMutex</a></li><li class="section"><a href="#externalthreadsanddoublebuffering" target="_top">External threads and double buffering</a></li><li class="section"><a href="#ofscopedlock" target="_top">ofScopedLock</a></li><li class="section"><a href="#pococondition" target="_top">Poco::Condition</a></li><li class="section"><a href="#conclusion" target="_top">Conclusion</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="memory.html">memory of C++</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#컴퓨터메모리와변수" target="_top">컴퓨터 메모리와 변수</a></li><li class="section"><a href="#스택변수함수내의변수vs오브젝트내의변수" target="_top">스택 변수, 함수내의 변수 vs 오브젝트내의 변수</a></li><li class="section"><a href="#포인터와레퍼런스" target="_top">포인터와 레퍼런스</a></li><li class="section"><a href="#힙heap영역에서의변수들" target="_top">힙(heap) 영역에서의 변수들</a></li><li class="section"><a href="#메모리구조배열과vector" target="_top">메모리 구조, 배열과 vector</a></li><li class="section"><a href="#다른메모리구조리스트와맵" target="_top">다른 메모리 구조, 리스트와 맵</a></li><li class="section"><a href="#스마트포인터" target="_top">스마트 포인터</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="stl_vector.html">Introduction to vectors</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#quickreview" target="_top">Quick Review:</a></li><li class="section"><a href="#declaringavector" target="_top">Declaring a vector</a></li><li class="section"><a href="#addingelementstoavector" target="_top">Adding elements to a vector</a></li><li class="section"><a href="#resize" target="_top">resize</a></li><li class="section"><a href="#assign" target="_top">assign</a></li><li class="section"><a href="#accessingelementsofavector" target="_top">Accessing elements of a vector</a></li><li class="section"><a href="#erasingelementsofavector" target="_top">Erasing elements of a vector</a></li><li class="section"><a href="#iterators" target="_top">Iterators</a></li><li class="section"><a href="#sortingandshufflingavector" target="_top">Sorting and shuffling a vector</a></li><li class="section"><a href="#vectorsofobjects" target="_top">Vectors of objects</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="stl_map.html">let's play with Map, std::map</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#소개map이무엇인가요" target="_top">소개 : map이 무엇인가요?</a></li><li class="section"><a href="#map에값삽입하기" target="_top">map에 값 삽입하기</a></li><li class="section"><a href="#map에서요소삭제하기" target="_top">map에서 요소 삭제하기</a></li><li class="section"><a href="#map을훑기" target="_top">map을 훑기</a></li><li class="section"><a href="#map에서요소찾기" target="_top">map에서 요소 찾기</a></li><li class="section"><a href="#map에오브젝트저장하기" target="_top">map에 오브젝트 저장하기</a></li><li class="section"><a href="#multimap이란무엇인가요" target="_top">multimap이란 무엇인가요?</a></li><li class="section"><a href="#다른유용한메소드들" target="_top">다른 유용한 메소드들</a></li><li class="section"><a href="#추가참고자료역자에의해추가됨" target="_top">추가 참고 자료 (역자에 의해 추가됨)</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="c++11.html">C++ 11</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#introduction" target="_top">Introduction</a></li><li class="section"><a href="#auto" target="_top">auto</a></li><li class="section"><a href="#forthingthings" target="_top">for (thing : things)</a></li><li class="section"><a href="#override" target="_top">override</a></li><li class="section"><a href="#lambdafunctions" target="_top">Lambda functions</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Advanced topics</div><ul><li class="chapter"><div class="chapterTitle"><a href="math.html">Math: From 1D to 4D</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#onedimensionusingchange" target="_top">One Dimension: Using Change</a></li><li class="section"><a href="#moredimensionssomelinearalgebra" target="_top">More Dimensions: Some Linear Algebra</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Platforms</div><ul><li class="chapter"><div class="chapterTitle"><a href="ios.html">ofxiOS</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#openframeworksoniosdevices" target="_top">OpenFrameworks on iOS devices.</a></li><li class="section"><a href="#intro" target="_top">Intro</a></li><li class="section"><a href="#introtoobjectivec" target="_top">Intro to Objective-C</a></li><li class="section"><a href="#underthehood" target="_top">Under the Hood</a></li><li class="section"><a href="#ofuikit" target="_top">OF &amp; UIKit</a></li><li class="section"><a href="#mediaplaybackandcapture" target="_top">Media Playback and Capture</a></li><li class="section"><a href="#lifehacks" target="_top">Life Hacks</a></li><li class="section"><a href="#appstore" target="_top">App Store</a></li><li class="section"><a href="#casestudies" target="_top">Case Studies</a></li></ul></div></li></ul></li><li class="group selected"><div class="groupTitle">Tools</div><ul><li class="chapter selected"><div class="chapterTitle selected"><a href="version_control_with_git.html">Version control with Git</a></div><div class="chapterContents selected"><ul><li class="section selected"><a href="#whatisversioncontrolandwhyshouldyouuseit" target="_top">What is version control, and why should you use it?</a></li><li class="section"><a href="#differentversioncontrolsystems" target="_top">Different version control systems</a></li><li class="section"><a href="#introductiontogit" target="_top">Introduction to Git</a></li><li class="section"><a href="#popularguiclients" target="_top">Popular GUI clients</a></li><li class="section"><a href="#conclusion" target="_top">Conclusion</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="ofSketch.html">ofSketch</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#whatisofsketch" target="_top">What is ofSketch?</a></li><li class="section"><a href="#download" target="_top">Download</a></li><li class="section"><a href="#sketchformat" target="_top">Sketch Format</a></li><li class="section"><a href="#remotecoding" target="_top">Remote Coding</a></li><li class="section"><a href="#future" target="_top">Future</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="installation_up_4evr_macosx.html">Installation up 4evr</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#step1prepyoursoftwareandthecomputer" target="_top">Step 1: Prep your software and the computer</a></li><li class="section"><a href="#step2bootintoyoursoftware" target="_top">Step 2: Boot into your software</a></li><li class="section"><a href="#step3keepitupchamp" target="_top">Step 3: Keep it up (champ!)</a></li><li class="section"><a href="#step4rebootperiodically" target="_top">Step 4: Reboot periodically</a></li><li class="section"><a href="#step5checkinonitfromafar" target="_top">Step 5: Check in on it from afar.</a></li><li class="section"><a href="#step6testtesttest" target="_top">Step 6: Test, test, test.</a></li><li class="section"><a href="#additionaltipslogging" target="_top">Additional Tips: Logging</a></li><li class="section"><a href="#memoryleakmurderer" target="_top">Memory leak murderer</a></li><li class="section"><a href="#alternateresources" target="_top">Alternate resources:</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="installation_up_4evr_linux.html">installation up4ever - linux</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#몇가지추가적인팁" target="_top">몇가지 추가적인 팁:</a></li></ul></div></li></ul></li><li class="group"><div class="groupTitle">Case studies</div><ul><li class="chapter"><div class="chapterTitle"><a href="project_eva.html">Choreographies for Humans and Stars</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#projectoverview" target="_top">Project Overview</a></li><li class="section"><a href="#ideationandprototyping" target="_top">Ideation and Prototyping</a></li><li class="section"><a href="#findingthetechnicalsolutions" target="_top">Finding the Technical Solutions</a></li><li class="section"><a href="#developingthevisualizationsoftware" target="_top">Developing the Visualization Software</a></li><li class="section"><a href="#failsafesanddirtyfixes" target="_top">Fail-safes and dirty fixes</a></li><li class="section"><a href="#resultsandreception" target="_top">Results and Reception</a></li></ul></div></li></ul><ul><li class="chapter"><div class="chapterTitle"><a href="project_joel.html">Anthropocene</a></div><div class="chapterContents"><ul><li class="section selected"><a href="#theproject" target="_top">The Project</a></li><li class="section"><a href="#development" target="_top">Development</a></li><li class="section"><a href="#showtime" target="_top">Show time</a></li><li class="section"><a href="#postevent" target="_top">Post Event</a></li><li class="section"><a href="#teamandcredits" target="_top">Team and Credits</a></li><li class="section"><a href="#hardwareselection" target="_top">Hardware selection</a></li></ul></div></li></ul></li></ul>
+</nav>
+<div class="chapter-content">
+<h1 id="version-control-with-git">Version control with Git</h1>
+<p><em>by Christoph Buchner (<a href="https://github.com/bilderbuchi" target="_blank">bilderbuchi</a>)</em></p>
+<p>In this chapter, you will learn about version control and why you should use it. You will get a short introduction to Git, the version control system of choice for openFrameworks. The major concepts and keywords are explained, enabling you to easily dig deeper into the subject using available online resources. A number of tools for working with Git are presented. You will learn about Github, a web service for hosting Git repositories and one of the major platforms for "social coding". You will be shown how you can start hosting your own projects on Github and leverage its features. Finally, you will learn how you can build upon the things you just learned and where you can get help if you get stuck.</p>
+<h2 id="whatisversioncontrolandwhyshouldyouuseit">What is version control, and why should you use it?</h2>
+<p>How do you track the state of your projects over time? Have you ever made several copies of your project folder (or text document, Photoshop file,...)? Did you name them something like <code>Awesome_project_1</code>, <code>Awesome_project_may10</code>, <code>Awesome_project_final</code>, <code>Awesome_project_final2</code>, <code>Awesome_project_really_final</code>,...? Did you mail around zipped projects to collaborators, and had some trouble synchronizing the changes they (or you) made in the meantime? Have you run into problems when you had to go back to a previous version, change things, copy those changes to other version, or generally keep tabs on changes?</p>
+<p>If you nodded at some of these questions, you've come to the right place - version control is there to help you! <a href="http://en.wikipedia.org/wiki/Revision_control" target="_blank">Version control</a> (also called revision control) is the management of changes to documents, computer programs, large web sites, and other collections of information. It is used to easily, efficiently and reproducibly track changes to all kinds of information (like a really advanced "undo" function). Specifically, in programming it is (primarily) used to track changes to your source code, but it's generally applicable to most kinds of files on your computer. Version control also enables programmers to effectively collaborate in teams, because it offers methods to distribute changes, merge different development versions together, resolve conflicts if two (or more) programmers modified the same file, sync state between computers, etc.</p>
+<p>I hope you'll agree by now that it is a very good idea to use some manner of version control when developing your programs. In the next section, I'll talk a bit about the different choices you have when choosing a particular system.</p>
+<h2 id="differentversioncontrolsystems">Different version control systems</h2>
+<p>There is a number of version control systems out there, some of which you've maybe encountered already. They can be divided into two big camps: "centralized" and "distributed" systems.</p>
+<p>In <a href="http://en.wikipedia.org/wiki/Revision_control" target="_blank"><em>centralized version control systems</em></a>, a central server orchestrates the various tasks the version control system performs, and programmers synchronize with this server. Common operations often need a network connection to the central server. Typically, programmers only have a part of the whole project locally available. Some <a href="http://en.wikipedia.org/wiki/List_of_revision_control_software" target="_blank">popular centralized version control</a> systems are:</p>
+<ul>
+<li><a href="http://savannah.nongnu.org/projects/cvs" target="_blank">Concurrent Versions System (CVS)</a>, which has <a href="http://en.wikipedia.org/wiki/Concurrent_Versions_System#History_and_status" target="_blank">introduced the "branching" concept</a> into version control systems.</li>
+<li><a href="http://subversion.apache.org/" target="_blank">Subversion (SVN)</a>, a popular successor to CVS.</li>
+</ul>
+<p><a href="http://en.wikipedia.org/wiki/Distributed_revision_control" target="_blank"><em>Distributed version control systems</em></a>, on the other hand, take a peer-to-peer approach. There is no central server, and every (local) repository contains all files and history (thus acting as a backup, too!). Network access is only needed for syncing changes with other programmers. Distributed version control systems have recently gained much popularity. Some <a href="http://en.wikipedia.org/wiki/List_of_revision_control_software" target="_blank">notable systems</a> are:</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Git_%28software%29" target="_blank">Git</a> was initially designed and developed by Linus Torvalds for Linux kernel development. Its popularity has recently boomed.</li>
+<li><a href="http://bazaar.canonical.com/" target="_blank">Bazaar</a> is a distributed version control system created by Canonical (the company behind Ubuntu). It is primarily used on <a href="launchpad.net" target="_blank">Launchpad</a>, a code hosting platform primarily used for developing projects around Ubuntu.</li>
+<li><a href="http://mercurial.selenic.com/" target="_blank">Mercurial</a> was started around the same time as Git. It is <a href="http://stackoverflow.com/questions/35837/what-is-the-difference-between-mercurial-and-git" target="_blank">quite similar to Git</a>, especially to a newcomer.</li>
+</ul>
+<h2 id="introductiontogit">Introduction to Git</h2>
+<p>openFrameworks uses Git to version-control the code base, and relies on <a href="www.github.com" target="_blank">Github</a> as a hosting platform for the code and the issue tracker. In this section, I'll give you an introduction on how to use version control with your openFrameworks project, and introduce the relevant concepts and commands as they are encountered.</p>
+<p>Note that this chapter is only an introduction, and as such only touches the surface of Git's capabilities, both in the presented commands, and their options. Much more detailed information, including in-depth tutorials and a command reference, can be found online. Some links are collected at the end of the chapter, and most commands presented have a link to their online reference.</p>
+<p>In what follows, I'll explain the basic concepts of Git. After that, I'll show the typical operations involved in using Git with an openFrameworks project in a walk-through fashion. Then I will show you how to work with remote Git servers.</p>
+<h3 id="basic-concepts">Basic concepts</h3>
+<p>When you put your project (which is contained in a directory on your disk) under version control, Git creates a <strong>repository</strong> in your project directory. This means that the contents of that folder are tracked with Git. Most of the files associated with Git are in the <code>.git</code> folder in your project root (the leading dot means this folder is by probably hidden from view in your file browser by default).</p>
+<p>The basic element for tracking the history of the repository is the <strong>commit</strong>. This is basically a snapshot of the repository's state at the time of the commit, including a <strong>commit message</strong> and any parent commit(s). Think of it as a checkpoint for saving in a videogame. It has a unique identifier called the <strong>hash</strong> (or <strong>SHA</strong>). This is a checksum calculated from the commit's contents. It's impossible to change any part of the commit without the hash changing. Thus, a commit hash uniquely defines a commit and the whole history preceding it.</p>
+<p>As your work proceeds, you will be adding commits, describing the things you change. These commits will form a chain of commits, making up the project history. A chain of such commits is called a <strong>branch</strong>, and the default branch is called <code>master</code>. Branches can also be created when you decide to diverge from a line of development, and try something different (for example a new feature, or a bug fix) while preserving the state of the project. This new chain of commits, which <em>branches off</em> at a certain commit of the original branch, now forms its own branch.</p>
+<p>Branches can be <strong>merged</strong> into another branch. When this happens, Git analyzes the two different branches and merges their different histories/changes together.</p>
+<p>This figure visualizes how this looks like:</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/version_control_with_git/images/branch_diagram.png" target="_blank"><img alt="Simple Git branch diagram." src="../images/version_control_with_git/images/branch_diagram.png" title="Simple Git branch diagram."/></a></div><div class="caption">Simple Git branch diagram.</div>
+</div></div>
+<p>Finally, there are three different "areas" in Git, which you will encounter often when reading about Git:</p>
+<p>The <strong>repository</strong> in the <code>.git</code> directory contains all the commits. The <strong>HEAD</strong> points to the current commit of the branch you are currently on. This represents the <em>latest committed state</em> of your repository. If you create a new commit, it will become this commit's parent (and HEAD will be moved to the new commit).</p>
+<p>The <strong>working directory</strong> contains the files and folders under version control, the stuff you modify and work with when writing code for your project.</p>
+<p>When you prepare a commit, you first have to <strong>stage</strong> any changes you want that commit to contain. This means that these changes will be put into the <strong>index</strong> (or <strong>staging area</strong>).</p>
+<p>So, you modify your files in the working directory, you stage those modifications, putting them into the index, and then you <strong>create a commit</strong>, taking the files from the index and storing them in the repository. To get files <em>back</em> from the repository (i.e. restore the state as it was at some previous point), you <strong>check out</strong> files, putting them into the working directory. This is shown graphically in the following figure:</p>
+<div class="figure"><div class="inner">
+<div style="image"><a href="../images/version_control_with_git/images/git_areas.png" target="_blank"><img alt="The three areas of Git." src="../images/version_control_with_git/images/git_areas.png" title="The three areas of Git."/></a></div><div class="caption">The three areas of Git.</div>
+</div></div>
+<p>Armed with these basic facts, we can dive right in, and start working on our first project!</p>
+<h3 id="getting-started-project-setup">Getting started: project setup</h3>
+<p>You can follow along with this section by entering the given commands (in the line starting with <code>$</code>) into your terminal. You can also use a Git program with a GUI if you want (some will be presented later in the chapter), but you will have to figure out which actions correspond to the respective terminal commands.</p>
+<p>Much of what follows will be less tedious to achieve, and presented in a prettier way, if you're using a GUI to interact with Git. Nevertheless, I am presenting this intro with a terminal-based approach for several reasons:</p>
+<ul>
+<li>I think it's actually more instructive to follow some typed commands than pages after pages of (rapidly outdated) screenshots of a GUI app you probably don't even use (as there are quite a lot of them out there).</li>
+<li>Many GUI programs don't offer the full range of functions that Git provides, so you will probably have to drop down into a terminal sooner or later. At that point it's quite handy to know what your GUI does in the background.</li>
+<li>Most of the online documentation and advice on Git focus on the command-line interface.</li>
+</ul>
+<p>First, we have to set up Git itself for our operation system. This mainly involves <a href="http://git-scm.com/downloads" target="_blank">downloading and installing</a> and setting the username and email address. The instructions <a href="https://help.github.com/articles/set-up-git#platform-all" target="_blank">vary slightly depending on the operating system</a>.</p>
+<p>When we have successfully set up Git, we create a new, <strong>empty project</strong> with the OF project generator. We will end up with a project folder containing some C++ files and some IDE files depending on OS and chosen IDE (in my case: Linux and Code::Blocks). This will look similar to this:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">tree</span> -a --charset ascii
+<span class="kw">.</span>
+<span class="kw">|--</span> addons.make
+<span class="kw">|--</span> bin
+<span class="kw">|</span>   <span class="kw">`--</span> data
+<span class="kw">|</span>       <span class="kw">`--</span> .gitkeep
+<span class="kw">|--</span> config.make
+<span class="kw">|--</span> demoProject.cbp
+<span class="kw">|--</span> demoProject.workspace
+<span class="kw">|--</span> Makefile
+<span class="kw">`--</span> src
+    <span class="kw">|--</span> main.cpp
+    <span class="kw">|--</span> ofApp.cpp
+    <span class="kw">`--</span> ofApp.h
+
+<span class="kw">3</span> directories, 9 files</code></pre>
+<p>Now, it's time to create our Git repository, using the <code>git init</code> command:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">git</span> init
+<span class="kw">Initialised</span> empty Git repository in /home/bilderbuchi/demoProject/.git/</code></pre>
+<h4 id="gitignore"><code>.gitignore</code></h4>
+<p>One thing we should do right at the beginning is add a special Git file called <a href="http://git-scm.com/docs/gitignore" target="_blank"><code>.gitignore</code></a> to the root of our repository.</p>
+<p>It's important that the Git repository contains all files necessary to successfully compile our program, but no unnecessary stuff. Generally, this means that files we edit by hand (e.g. source and header files, Readme files, images,...) should be included in the repository, but files which are <em>generated from</em> our code (e.g. compiled binaries, pdfs generated from some source file, video files or image sequences created with our program) should stay out. Also, user-specific files like IDE files describing the location of windows in our IDE, or backup copies of our files that the OS creates, don't really belong in the repository.</p>
+<p>If we take care of this right at the beginning, we can easily make sure that only "proper" files end up in our repo. Git handles this file exclusion with the aforementioned <code>.gitignore</code> files (there can be several), which contains patterns describing which files are ignored by Git. Those ignored files will still exist in our working directory, that means we can still use them, but Git will not track them.</p>
+<p>If, later down the line, we see files appearing in our list of changes which should not be there, or if we can't seem to add a file that belongs in the repository, we don't force Git to do what it doesn't want to, rather fine-tune the <code>.gitignore</code> pattern to match our expectations. Note that the <code>.gitignore</code> pattern does <em>not</em> affect files that have already been committed.</p>
+<p>Because it can be daunting to come up with a generally useful <code>.gitignore</code> template, it's currently planned that the project generator will optionally add a pre-made <code>.gitignore</code> file when we create our project (the template can already be <a href="https://github.com/openframeworks/openFrameworks/blob/master/scripts/templates/gitignore/.gitignore" target="_blank">found at</a> <code>scripts/templates/gitignore/.gitignore</code>). This file will look similar to this (formatted into three columns for convenience):</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">pr</span> -tW84 -s<span class="st">"|"</span> -i<span class="st">" "</span>1 -3 .gitignore
+<span class="co">###########################|                   |.externalToolBuilders</span>
+<span class="co"># ignore generated binaries|# XCode            |</span>
+<span class="co"># but not the data folder  |*.pbxuser          |##################</span>
+<span class="co">###########################|*.perspective      |# operating system</span>
+                           <span class="kw">|*.perspectivev3</span>    <span class="kw">|</span>##################
+<span class="kw">/bin/*</span>                     <span class="kw">|*.mode1v3</span>          <span class="kw">|</span>
+!<span class="kw">/bin/data/</span>                <span class="kw">|*.mode2v3</span>          <span class="kw">|</span># <span class="kw">Linux</span>
+                           <span class="kw">|</span># <span class="kw">XCode</span> 4          <span class="kw">|*</span>~
+<span class="co">#########                  |xcuserdata         |# KDE</span>
+<span class="co"># general                  |*.xcworkspace      |.directory</span>
+<span class="co">#########                  |                   |.AppleDouble</span>
+                           <span class="kw">|</span># <span class="kw">Code</span>::Blocks     <span class="kw">|</span>
+[<span class="kw">Bb</span>]uild/                  <span class="kw">|*.depend</span>           <span class="kw">|</span># <span class="kw">OSX</span>
+[<span class="kw">Oo</span>]bj/                    <span class="kw">|*.layout</span>           <span class="kw">|.DS_Store</span>
+<span class="kw">*.o</span>                        <span class="kw">|</span>                   <span class="kw">|*.swp</span>
+[<span class="kw">Dd</span>]ebug*/                 <span class="kw">|</span># <span class="kw">Visual</span> Studio    <span class="kw">|*</span>~.nib
+[<span class="kw">Rr</span>]elease*/               <span class="kw">|*.sdf</span>              <span class="kw">|</span># <span class="kw">Thumbnails</span>
+<span class="kw">*.mode*</span>                    <span class="kw">|*.opensdf</span>          <span class="kw">|._*</span>
+<span class="kw">*.app/</span>                     <span class="kw">|*.suo</span>              <span class="kw">|</span>
+<span class="kw">*.pyc</span>                      <span class="kw">|*.pdb</span>              <span class="kw">|</span># <span class="kw">Windows</span>
+<span class="kw">.svn/</span>                      <span class="kw">|*.ilk</span>              <span class="kw">|</span># <span class="kw">Image</span> file caches
+<span class="kw">*.log</span>                      <span class="kw">|*.aps</span>              <span class="kw">|Thumbs.db</span>
+                           <span class="kw">|ipch/</span>              <span class="kw">|</span># <span class="kw">Folder</span> config file
+<span class="co">########################   |                   |Desktop.ini</span>
+<span class="co"># IDE files which should   |# Eclipse          |</span>
+<span class="co"># be ignored               |.metadata          |# Android</span>
+<span class="co">########################   |local.properties   |.csettings</span></code></pre>
+<p>This might look like magic to you, but let us just continue for now, you can always look up more information on the <code>.gitignore</code> syntax later, for example <a href="http://git-scm.com/docs/gitignore" target="_blank">here</a>.</p>
+<h4 id="git-status"><code>git status</code></h4>
+<p>A command which we will use very often is <a href="http://git-scm.com/docs/git-status" target="_blank"><code>git status</code></a>. This command enables us to see the current state of a repository at a glance. It offers some flags to fine-tune its output (like most Git commands).</p>
+<p>Alright, let's use <code>git status -u</code> to see what's going on in our repository. The <code>-u</code> flag makes sure we see <em>all</em> untracked files, even in subdirectories:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">git</span> status -u
+<span class="co"># On branch master</span>
+<span class="co">#</span>
+<span class="co"># Initial commit</span>
+<span class="co">#</span>
+<span class="co"># Untracked files:</span>
+<span class="co">#   (use "git add &lt;file&gt;..." to include in what will be committed)</span>
+<span class="co">#</span>
+<span class="co">#    .gitignore</span>
+<span class="co">#    Makefile</span>
+<span class="co">#    addons.make</span>
+<span class="co">#    bin/data/.gitkeep</span>
+<span class="co">#    config.make</span>
+<span class="co">#    demoProject.cbp</span>
+<span class="co">#    demoProject.workspace</span>
+<span class="co">#    src/main.cpp</span>
+<span class="co">#    src/ofApp.cpp</span>
+<span class="co">#    src/ofApp.h</span>
+<span class="kw">nothing</span> added to commit but untracked files present (use <span class="st">"git add"</span> to track)</code></pre>
+<p>The output tells us which branch we are currently on (<code>master</code>), that we haven't committed anything yet, and that there are a couple of untracked files (i.e. not yet known to Git) in the repository and, importantly, what we should do next. Using <code>git status -s</code> is an option to get more condensed output.</p>
+<p>The list of files looks correct, so far so good! You might have noticed the <code>.gitkeep</code> file in <code>bin/data/</code>. Git only tracks files, not directories, which means that empty directories are not visible to Git. A common technique to work around this, if you want to have empty directories (e.g. for future output files) in your repository, is to place an empty file there, which makes sure that that directory can be added to Git. Naming that file <code>.gitkeep</code> is just a convention, and has no special meaning to Git.</p>
+<p>If we compile the OF project now, some additional files will be created in the /bin folder. Because we added a <code>.gitignore</code> file in the previous step, these files will not be picked up by Git. We can check this by running <code>git status -u</code> again.</p>
+<h4 id="git-add"><code>git add</code></h4>
+<p>The next step is to <em>stage</em> the untracked files using <a href="http://git-scm.com/docs/git-add" target="_blank"><code>git add</code></a>. This will put those files into the <em>index</em>, as discussed <a href="#basic-concepts" target="_blank">previously</a>.</p>
+<p>We stage untracked files and modifications to files already in the repository with the command <code>git add &lt;filespec&gt;</code>, where <code>&lt;filespec&gt;</code> describes one or more files or directories, so could be for example <code>addons.make</code>, <code>src</code> or <code>*.cpp</code>.</p>
+<p>We can also add <em>all</em> files and modifications in the repository with <code>git add .</code>, but as this is a catch-all filespec, we will have to check the output of <code>git status -u</code> first, to make sure no unwanted files are missed by the <code>.gitignore</code> pattern and would slip into the repository! Since we just made sure our git status looks alright, let's do it:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">git</span> add .</code></pre>
+<p>You will notice a change when we run <code>git status</code> next:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">git</span> status
+<span class="co"># On branch master</span>
+<span class="co">#</span>
+<span class="co"># Initial commit</span>
+<span class="co">#</span>
+<span class="co"># Changes to be committed:</span>
+<span class="co">#   (use "git rm --cached &lt;file&gt;..." to unstage)</span>
+<span class="co">#</span>
+<span class="co">#    new file:   .gitignore</span>
+<span class="co">#    new file:   Makefile</span>
+<span class="co">#    new file:   addons.make</span>
+<span class="co">#    new file:   bin/data/.gitkeep</span>
+<span class="co">#    new file:   config.make</span>
+<span class="co">#    new file:   demoProject.cbp</span>
+<span class="co">#    new file:   demoProject.workspace</span>
+<span class="co">#    new file:   src/main.cpp</span>
+<span class="co">#    new file:   src/ofApp.cpp</span>
+<span class="co">#    new file:   src/ofApp.h</span>
+<span class="co">#</span></code></pre>
+<p>All those untracked files are now in the "Changes to be committed" section, and so will end up in the next commit we make (if we don't unstage them before that).</p>
+<p>To unstage changes we have accidentally staged, we use <code>git rm --cached &lt;file&gt;</code> (for newly added files) or <code>git reset HEAD &lt;file&gt;</code> (for modified files). As usual, <code>git status</code> reminds us of these commands where appropriate.</p>
+<h4 id="git-commit"><code>git commit</code></h4>
+<p>Now that we've prepared the staging area/index for our first commit, we can go ahead and do it. To this end we will use <a href="http://git-scm.com/docs/git-commit" target="_blank"><code>git commit</code></a>. We can supply a required commit message at the same time by using the <code>-m</code> flag, otherwise Git will open an editor where we can enter a message (and then save and exit to proceed).</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">git</span> commit -m <span class="st">"Add initial set of files."</span>
+[<span class="kw">master</span> (root-commit) <span class="kw">3ef08e9</span>] Add initial set of files.
+ <span class="kw">10</span> files changed, 388 insertions(+)
+ <span class="kw">create</span> mode 100644 .gitignore
+ <span class="kw">create</span> mode 100644 Makefile
+ <span class="kw">create</span> mode 100644 addons.make
+ <span class="kw">create</span> mode 100644 bin/data/.gitkeep
+ <span class="kw">create</span> mode 100644 config.make
+ <span class="kw">create</span> mode 100644 demoProject.cbp
+ <span class="kw">create</span> mode 100644 demoProject.workspace
+ <span class="kw">create</span> mode 100644 src/main.cpp
+ <span class="kw">create</span> mode 100644 src/ofApp.cpp
+ <span class="kw">create</span> mode 100644 src/ofApp.h</code></pre>
+<p>The first line of the output shows us the branch we are on (<code>master</code>), and that this was our first commit, creating the root of our commit tree. Also, we see the hash (i.e. the unique ID) of the commit we just created (<code>3ef08e9</code>) and the commit message. The hash is given in a short form, as it's often sufficient to only supply the first seven or so characters of the hash to uniquely identify a commit (Git will complain if that's not the case). The next line roughly describes the changes that were committed, how many files were changed and how many insertions and deletions were committed. The rest lists the files new to Git, the mysterious <code>mode 100644</code> is a unix-style description of the file permissions, <code>100644</code> is a regular, non-executable file (<code>100755</code> would be an executable file).</p>
+<p>Now, let's check our status to see what's going on in the repository:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">git</span> status
+<span class="co"># On branch master</span>
+<span class="kw">nothing</span> to commit, working directory clean</code></pre>
+<p>Hooray, that's the all-clear, all systems green message! It means that the working directory as it is right now is already committed to Git (with the exception of ignored files). It's often a good idea, whenever you start or stop working in a repository, to start from this state, as you will always be able to fall back to this point if things go wrong.</p>
+<p>Now that we have made our initial commit, we can make our first customizations to the OF project. Onwards!</p>
+<h3 id="first-edits">First edits</h3>
+<p>OK, we have a clean slate now, so let's start playing around with our OF project. A programming tutorial wouldn't be complete without saying hello to the world, so let's do that: Open <code>ofApp.cpp</code>, and in the implementation of <code>void ofApp::setup()</code>, add an appropriate message, e.g. <code>cout &lt;&lt; "Hello world";</code>, and save the file.</p>
+<p>We have just made a modification to a file that Git is tracking, so it should pick up on this, right? Let's check, using <code>git status</code> (you hopefully already guessed that part):</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">git</span> status
+<span class="co"># On branch master</span>
+<span class="co"># Changes not staged for commit:</span>
+<span class="co">#   (use "git add &lt;file&gt;..." to update what will be committed)</span>
+<span class="co">#   (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)</span>
+<span class="co">#</span>
+<span class="co">#    modified:   src/ofApp.cpp</span>
+<span class="co">#</span>
+<span class="kw">no</span> changes added to commit (use <span class="st">"git add"</span> and/or <span class="st">"git commit -a"</span>)</code></pre>
+<p>Alright, Git tells us it knows that we modified <code>ofApp.cpp</code>. Note that now the entry is in a section called "Changes not staged for commit", not "untracked files" as before. Again, <code>git status</code> offers instructions for what we could want to do next, very convenient.</p>
+<h4 id="git-diff"><code>git diff</code></h4>
+<p>Now, let's find out what exactly we changed in <code>ofApp.cpp</code>. For this, <a href="http://git-scm.com/docs/git-diff" target="_blank"><code>git diff</code></a> is used. It can be used to compare states between all kinds of areas (check out the examples section of the <a href="http://git-scm.com/docs/git-diff" target="_blank">man page</a>), but in its simplest form, <code>git diff</code>, allows us to view the changes we made relative to the index (staging area for the next commit). In other words, the differences are what we could tell Git to further add to the index but we still haven't." (from the <a href="http://git-scm.com/docs/git-diff" target="_blank"><code>man page</code></a>). (Use the <code>--staged</code> option to see the diff of <em>already staged</em> changes.) Let's check it out:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">git</span> diff
+<span class="kw">diff</span> --git a/src/ofApp.cpp b/src/ofApp.cpp
+<span class="kw">index</span> b182cce..8018cf7 100644
+<span class="kw">---</span> a/src/ofApp.cpp
+<span class="kw">+++</span> b/src/ofApp.cpp
+<span class="kw">@@</span> -3,6 +3,7 @@
+ <span class="kw">//--------------------------------------------------------------</span>
+ <span class="kw">void</span> ofApp::setup()<span class="kw">{</span>
+
+<span class="kw">+</span>    cout &lt;&lt; "Hello world!";
+ }
+
+ //--------------------------------------------------------------</code></pre>
+<p>This output shows the difference between two files in the <a href="http://en.wikipedia.org/wiki/Diff#Unified_format" target="_blank">unified diff format</a> (<code>diff</code> is a popular Unix tool for comparing text files). It looks pretty confusing, but let's pick it apart a bit to highlight the most useful parts.</p>
+<p>The first line denotes the two different files being compared, denoted as <code>a/...</code> and <code>b/...</code>. If we have not just renamed a file, those two will typically be identical.</p>
+<p>The next couple of lines further define what exactly is being compared, but that's not interesting to us until we come to the line starting with <code>@@</code>. This defines a so-called "hunk", which means it tells us what part of the file is being shown next. In the <em>original</em> state (prefixed by <code>-</code>), this section starts at line 3, and goes on for 6 lines. In the new state (prefix <code>+</code>), the section starts at line 3, and goes on for 7 lines.</p>
+<p>Next, we see the actual changes, with a couple of lines around it for context. Unchanged lines start with a space, added lines with a <code>+</code>, and removed lines with a <code>-</code>. A modified line will show up as a removed line, followed by an added line. We can see that one line containing a hello world message was added.</p>
+<p>Now that we have made some changes, we can compile and run the program to confirm it works as expected, and we didn't make a mistake. Then, we can prepare a commit with the modification, as before:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">git</span> add src/ofApp.cpp
+
+$ <span class="kw">git</span> status
+<span class="co"># On branch master</span>
+<span class="co"># Changes to be committed:</span>
+<span class="co">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
+<span class="co">#</span>
+<span class="co">#    modified:   src/ofApp.cpp</span>
+<span class="co">#</span></code></pre>
+<p>Before we commit again, a couple of words regarding commits and commit messages:</p>
+<p>First, a good mantra to remember is to <strong>"commit early, commit often"</strong>. This means you should create frequent small commits, whenever a somewhat <em>self-contained element of code</em> is finished (e.g. implementing a new function, fixing a small bug, refactoring something) as opposed to whole features (e.g. "Implement optical flow tracking for my installation.") or mixing different changes together ("Updated Readme, increased performance, removed unused Kinect interaction.") . The reasoning behind this is that it creates a fine-grained trail of changes, so when something breaks, it is easier to find out which (small) change caused the problem (e.g. with tools like <a href="http://git-scm.com/docs/git-bisect" target="_blank"><code>git bisect</code></a>), and fix it.</p>
+<p>Second, <strong>write good commit messages</strong>. This will make it easier for everybody else, and future you in a couple of months, to figure out what some commit does. A good, concise convention for how a good commit message looks can be found <a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html" target="_blank">here</a>. In short, you should have a short (about 50 characters or less), capitalized, imperative summary (e.g. "Fix bug in the file saving function"). If this is not enough, follow this with a blank line(!) and a more detailed summary, wrapping lines to about 72 characters. <em>(If your terminal supports this, omitting the second quotation mark allows you to enter multiple lines. Otherwise, omit the <code>-m</code> flag to compose the commit message in the editor.)</em></p>
+<p>Now that that is out of the way, we can commit the change we just added, and check the status afterwards:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">git</span> commit -m <span class="st">"Add welcome message"</span>
+[<span class="kw">master</span> e84ba14] Add welcome message
+ <span class="kw">1</span> file changed, 1 insertion(+)
+
+$ <span class="kw">git</span> status
+<span class="co"># On branch master</span>
+<span class="kw">nothing</span> to commit, working directory clean</code></pre>
+<h3 id="branches-and-merging">Branches and merging</h3>
+<p><a href="http://git-scm.com/book/en/Git-Branching" target="_blank">Branches and merging</a> are the bread and butter of Git, so you will be branching and merging a lot. Branching and merging often is a workflow encouraged by Git, as those are computationally cheap operations. We are getting into some slightly more-advanced stuff, so if you don't quite grasp it right away don't be worried.</p>
+<p>For example, if we want to create some new feature, or fix a bug in our program, it is prudent to start this work on a branch separated from the main branch. This has several advantages:</p>
+<ul>
+<li>Our work on is contained in this branch.</li>
+<li>We can quickly and easily switch to another topic of work if needed.</li>
+<li>The main branch is unaffected by our work as long as it's not merged, so normal operations can continue in the meantime (e.g. when we create an experimental addition to an OF addon other people are using).</li>
+</ul>
+<h4 id="git-branch-and-git-checkout"><code>git branch</code> and <code>git checkout</code></h4>
+<p>To get a list of the branches in a repository, we use <a href="http://git-scm.com/docs/git-branch" target="_blank"><code>git branch</code></a> without arguments (<code>*</code> denotes the current branch). Since we only have one branch for now, this is not very exciting:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">git</span> branch
+<span class="kw">*</span> master</code></pre>
+<p>To create a new branch, we use <code>git branch &lt;branchname&gt;</code>. To then check out that branch, to make it the current one, we use <a href="http://git-scm.com/docs/git-checkout" target="_blank"><code>git checkout &lt;branchname&gt;</code></a>. There is a shorter way to achieve both operations in one, using <code>git checkout -b &lt;branchname&gt;</code>, so let's use that to create <strong>and</strong> check out a new branch called <code>celebration</code>:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">git</span> checkout -b celebration
+<span class="kw">Switched</span> to a new branch <span class="st">'celebration'</span>
+
+$ <span class="kw">git</span> branch
+<span class="kw">*</span> celebration
+  <span class="kw">master</span></code></pre>
+<p>To celebrate, let's add a second message after the "Hello World", e.g. <code>cout &lt;&lt; "Yeah, it works";</code>. Let's confirm that Git has picked this up, using <code>git diff</code> as before:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">git</span> diff
+<span class="kw">diff</span> --git a/src/ofApp.cpp b/src/ofApp.cpp
+<span class="kw">index</span> 8018cf7..59d84fa 100644
+<span class="kw">---</span> a/src/ofApp.cpp
+<span class="kw">+++</span> b/src/ofApp.cpp
+<span class="kw">@@</span> -4,6 +4,7 @@
+ <span class="kw">void</span> ofApp::setup()<span class="kw">{</span>
+
+     <span class="kw">cout</span> &lt;&lt; "Hello world!";
++    cou<span class="kw">t</span> &lt;&lt; "\nYeah, i<span class="kw">t</span> <span class="kw">works</span>!<span class="st">";</span>
+<span class="st"> }</span>
+
+<span class="st"> //--------------------------------------------------------------</span></code></pre>
+<p>If we run <code>git status</code> again, it will show that we are on the <code>celebration</code> branch now:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">git</span> status
+<span class="co"># On branch celebration</span>
+<span class="co"># Changes not staged for commit:</span>
+<span class="co">#   (use "git add &lt;file&gt;..." to update what will be committed)</span>
+<span class="co">#   (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)</span>
+<span class="co">#</span>
+<span class="co">#    modified:   src/ofApp.cpp</span>
+<span class="co">#</span>
+<span class="kw">no</span> changes added to commit (use <span class="st">"git add"</span> and/or <span class="st">"git commit -a"</span>)</code></pre>
+<p>Because we have confirmed that the list of changes to be staged and committed is alright, we can take a little shortcut. Using the <code>-a</code> flag of <a href="http://git-scm.com/docs/git-commit" target="_blank"><code>git commit</code></a>, we can tell Git to automatically stage modified or deleted files (new files are not affected) when committing, so we can skip the <code>git add</code> step:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">git</span> commit -am <span class="st">"Let us celebrate!"</span>
+[<span class="kw">celebration</span> bc636f4] Let us celebrate!
+ <span class="kw">1</span> file changed, 1 insertion(+)
+
+$ <span class="kw">git</span> status
+<span class="co"># On branch celebration</span>
+<span class="kw">nothing</span> to commit, working directory clean</code></pre>
+<h4 id="merging-branches">Merging branches</h4>
+<p>Let us meanwhile add a feature on the <code>master</code> branch. First, we check out the <code>master</code> branch:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">git</span> checkout master
+<span class="kw">Switched</span> to branch <span class="st">'master'</span></code></pre>
+<p>Now, we can add some code to switch the background color if the space key is pressed. You should be able to recognize what I did by looking at the output of <code>git diff</code>. Try to approximately replicate these changes:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">git</span> diff
+<span class="kw">diff</span> --git a/src/ofApp.cpp b/src/ofApp.cpp
+<span class="kw">index</span> 8018cf7..f7e3dbc 100644
+<span class="kw">---</span> a/src/ofApp.cpp
+<span class="kw">+++</span> b/src/ofApp.cpp
+<span class="kw">@@</span> -18,12 +18,16 @@ void ofApp::draw()<span class="kw">{</span>
+
+ <span class="kw">//--------------------------------------------------------------</span>
+ <span class="kw">void</span> ofApp::keyPressed(int key)<span class="kw">{</span>
+<span class="kw">-</span>
+<span class="kw">+</span>    if (key == <span class="st">' '</span>) <span class="kw">{</span>
+<span class="kw">+</span>        ofBackground(255);
+<span class="kw">+</span>    <span class="kw">}</span>
+ <span class="kw">}</span>
+
+ <span class="kw">//--------------------------------------------------------------</span>
+ <span class="kw">void</span> ofApp::keyReleased(int key)<span class="kw">{</span>
+<span class="kw">-</span>
+<span class="kw">+</span>    if (key == <span class="st">' '</span>) <span class="kw">{</span>
+<span class="kw">+</span>        ofBackground(127);
+<span class="kw">+</span>    <span class="kw">}</span>
+ <span class="kw">}</span>
+
+ <span class="kw">//--------------------------------------------------------------</span></code></pre>
+<p>Next, we again commit quickly (as we already checked the modifications to be committed with <code>git diff</code>):</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">git</span> commit -am <span class="st">"Add background switching"</span>
+[<span class="kw">master</span> 7cc405c] Add background switching
+ <span class="kw">1</span> file changed, 6 insertions(+), <span class="kw">2</span> deletions(-)</code></pre>
+<h4 id="git-log"><code>git log</code></h4>
+<p>To show commit logs, we can use the <a href="http://git-scm.com/docs/git-log" target="_blank"><code>git log</code></a> command. In it's default form, <code>git log</code> shows a plain list of commits, printing their hashes, timestamp, author and commit message. Its output is heavily customizable, and one nice thing we can do is generate a primitive tree view with this incantation <em>(which you could save under an <a href="http://stackoverflow.com/questions/2553786/how-do-i-alias-commands-in-git" target="_blank">alias</a> to make it shorter, but this is out of scope for this tutorial)</em>:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">git</span> log --all --graph --decorate --oneline
+<span class="kw">*</span> bc636f4 (celebration) <span class="kw">Let</span> us celebrate!
+<span class="kw">|</span> <span class="kw">*</span> 7cc405c (HEAD, master) <span class="kw">Add</span> background switching
+<span class="kw">|/</span>
+<span class="kw">*</span> e84ba14 Add welcome message
+<span class="kw">*</span> 3ef08e9 Add initial set of files.</code></pre>
+<p>We see the whole history of the repository here, showing the branch structure, including brief commit messages. We can also see the branch tips in parentheses, and also the current branch (where <code>HEAD</code> points to). We realize that the "Let us celebrate" commit is not yet included in <code>master</code>, so let's do that now!</p>
+<h4 id="git-merge"><code>git merge</code></h4>
+<p>We can now merge the <code>celebration</code> branch back into our <code>master</code> branch to make our celebratory message available there too. This happens with the <a href="http://git-scm.com/docs/git-merge" target="_blank"><code>git merge</code></a> command. We use <code>git merge &lt;branchname&gt;</code> to merge another branch into the current branch, like so:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">git</span> merge celebration
+<span class="kw">Auto-merging</span> src/ofApp.cpp
+<span class="kw">Merge</span> made by the <span class="st">'recursive'</span> strategy.
+ <span class="kw">src/ofApp.cpp</span> <span class="kw">|</span> <span class="kw">1</span> +
+ <span class="kw">1</span> file changed, 1 insertion(+)</code></pre>
+<p>Git automatically figured out how to merge <code>ofApp.cpp</code> so that <code>master</code> now contains the modifications from both branches (go ahead and take a look at <code>ofApp.cpp</code> now).</p>
+<p>The tree view now looks like this:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">git</span> log --all --graph --decorate --oneline
+<span class="kw">*</span>   1c6d4aa (HEAD, master) <span class="kw">Merge</span> branch <span class="st">'celebration'</span>
+<span class="kw">|\</span>
+<span class="kw">|</span> <span class="kw">*</span> bc636f4 (celebration) <span class="kw">Let</span> us celebrate!
+<span class="kw">*</span> <span class="kw">|</span> <span class="kw">7cc405c</span> Add background switching
+<span class="kw">|/</span>
+<span class="kw">*</span> e84ba14 Add welcome message
+<span class="kw">*</span> 3ef08e9 Add initial set of files.</code></pre>
+<p>We can see that the two branches have been merged together successfully, so <code>master</code> now contains all our modifications. Also note that the <code>celebration</code> branch is unaffected by the merge, it's still pointing to its original commit.</p>
+<p>Next, we shall find out what happens if merging does <em>not</em> go so smoothly.</p>
+<h4 id="git-reset"><code>git reset</code></h4>
+<p>First, purely for demonstration purposes, we use <a href="http://git-scm.com/docs/git-reset" target="_blank"><code>git reset</code></a> to undo the merge commit we just made. This can be a dangerous command, because we can erase commits with it, so we have to be careful. It's always useful to do a <code>git status</code> immediately before <code>git reset</code>, just to make sure the repository is in the state we think it is. <code>git reset --hard HEAD~&lt;N&gt;</code> sets the current branch back by <code>&lt;N&gt;</code> commits, discarding the rest of the commits in the process if they are not part of another branch. <em>They can still be <a href="http://gitready.com/advanced/2009/01/17/restoring-lost-commits.html" target="_blank">recovered using <code>git reflog</code></a>, but that's a bit too complicated to show here. Generally, it's hard to really lose things you have previously committed, so if you accidentally deleted some important history, don't despair immediately. :-)</em></p>
+<p>In contrast, the <code>--soft</code> flag just moves the <code>HEAD</code> pointer to another commit, but leaves our working directory and index unchanged. This can be useful e.g. for <a href="http://stackoverflow.com/a/927386/599884" target="_blank">undoing commits</a>.</p>
+<p>Anyway, let's reset our <code>master</code> branch back one commit now:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">git</span> reset --hard HEAD~1
+<span class="kw">HEAD</span> is now at 68d2674 Add background switching</code></pre>
+<p>You can consult the tree view again to see that the merge commit has disappeared, and <code>master</code> is back at "Add background switching". Now, let's try to make a merge fail.</p>
+<h4 id="merge-conflicts">Merge conflicts</h4>
+<p>Git is pretty smart when merging branches together, but sometimes (typically when the same line of code was edited differently in both branches) it does not know how to merge properly, which will result in a <strong>merge conflict</strong>. It's up to us to resolve a merge conflict manually.</p>
+<p>Now, let's create a commit which will create a conflict. We just add a second output line after the "Hello world" statement. Since in the <code>celebration</code> branch, another statement was <em>also</em> added right after "Hello world", Git will not know how to correctly resolve this. Our <code>cout</code> statement looks like this:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">git</span> diff
+<span class="kw">diff</span> --git a/src/ofApp.cpp b/src/ofApp.cpp
+<span class="kw">index</span> f7e3dbc..6e232ba 100644
+<span class="kw">---</span> a/src/ofApp.cpp
+<span class="kw">+++</span> b/src/ofApp.cpp
+<span class="kw">@@</span> -4,6 +4,7 @@
+ <span class="kw">void</span> ofApp::setup()<span class="kw">{</span>
+
+     <span class="kw">cout</span> &lt;&lt; "Hello world!";
++    cou<span class="kw">t</span> &lt;&lt; "\nThis is no<span class="kw">t</span> <span class="kw">going</span> to end well!<span class="st">";</span>
+<span class="st"> }</span>
+
+<span class="st"> //--------------------------------------------------------------</span></code></pre>
+<p>Now we will create a commit (we are still on <code>master</code>):</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">git</span> commit -am <span class="st">"Trigger a conflict"</span>
+[<span class="kw">master</span> 2608b52] Trigger a conflict
+ <span class="kw">1</span> file changed, 1 insertion(+)</code></pre>
+<p>When we attempt to merge <code>celebration</code> into <code>master</code>, bad things happen:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">git</span> merge celebration
+<span class="kw">Auto-merging</span> src/ofApp.cpp
+<span class="kw">CONFLICT</span> (content)<span class="kw">:</span> Merge conflict in src/ofApp.cpp
+<span class="kw">Automatic</span> merge failed<span class="kw">;</span> <span class="kw">fix</span> conflicts and then commit the result.</code></pre>
+<p>When a conflict is detected by Git, it will stop the merging process and put <a href="http://git-scm.com/book/en/Git-Branching-Basic-Branching-and-Merging#Basic-Merge-Conflicts" target="_blank">"conflict markers"</a> into the conflicted files. Those markers look like this:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">head</span> -n 14 src/ofApp.cpp
+<span class="co">#include "ofApp.h"</span>
+
+<span class="kw">//--------------------------------------------------------------</span>
+<span class="kw">void</span> ofApp::setup()<span class="kw">{</span>
+
+    <span class="kw">cout</span> &lt;&lt; "Hello world!";
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+    cou<span class="kw">t</span> &lt;&lt; "\nThis is no<span class="kw">t</span> <span class="kw">going</span> to end well!<span class="st">";</span>
+<span class="st">=======</span>
+<span class="st">    cout &lt;&lt; "</span>\nYeah, it works!<span class="st">";</span>
+<span class="st">&gt;&gt;&gt;&gt;&gt;&gt;&gt; celebration</span>
+<span class="st">}</span>
+
+<span class="st">//--------------------------------------------------------------</span></code></pre>
+<p>The part between <code>&lt;&lt;&lt;</code> and <code>===</code> shows the file as it is in <code>HEAD</code>, the current branch we want to merge <em>into</em>. The part between <code>===</code> and <code>&gt;&gt;&gt;</code> shows the file as it is in the named branch, in our case <code>celebration</code>. What we have to do now next is resolve the conflict by implementing the conflicted section in a way which makes sense for our program, remove the conflict markers and save the file. For example, we can make the conflicted section look like this:</p>
+<pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="dt">void</span> ofApp::setup(){
+
+    cout &lt;&lt; <span class="st">"Conflict averted!"</span>;
+    cout &lt;&lt; <span class="st">"</span><span class="ch">\n</span><span class="st">Hello world!"</span>;
+    cout &lt;&lt; <span class="st">"</span><span class="ch">\n</span><span class="st">Yeah, it works!"</span>;
+
+}</code></pre>
+<p>After doing this, Git still knows that there has been a conflict, and <code>git status</code> again tells us what to do next:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">git</span> status
+<span class="co"># On branch master</span>
+<span class="co"># You have unmerged paths.</span>
+<span class="co">#   (fix conflicts and run "git commit")</span>
+<span class="co">#</span>
+<span class="co"># Unmerged paths:</span>
+<span class="co">#   (use "git add &lt;file&gt;..." to mark resolution)</span>
+<span class="co">#</span>
+<span class="co">#    both modified:      src/ofApp.cpp</span>
+<span class="co">#</span>
+<span class="kw">no</span> changes added to commit (use <span class="st">"git add"</span> and/or <span class="st">"git commit -a"</span>)</code></pre>
+<p>Obediently, we run <code>git add src/ofApp.cpp</code> to stage our conflict-free file and mark the conflict as resolved. Now, we can finish the merge. If we omit the <code>-m &lt;message&gt;</code> part, <code>git commit</code> will open an editor (which one depends on your setup) with a proposed commit message which mentions the files for which conflicts had occured. You can either try that way, or just create a self-made commit message directly, as usual:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">git</span> commit -m <span class="st">"Merge after resolving conflict"</span>
+[<span class="kw">master</span> 29d152e] Merge after resolving conflict</code></pre>
+<p>All that remains is to check if everything worked alright, and take a last look at our tree view:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">git</span> status
+<span class="co"># On branch master</span>
+<span class="kw">nothing</span> to commit, working directory clean
+
+$ <span class="kw">git</span> log --all --graph --decorate --oneline
+<span class="kw">*</span>   29d152e (HEAD, master) <span class="kw">Merge</span> after resolving conflict
+<span class="kw">|\</span>
+<span class="kw">|</span> <span class="kw">*</span> d9be50b (celebration) <span class="kw">Let</span> us celebrate!
+<span class="kw">*</span> <span class="kw">|</span> <span class="kw">2608b52</span> Trigger a conflict
+<span class="kw">*</span> <span class="kw">|</span> <span class="kw">e822ea4</span> Add background switching
+<span class="kw">|/</span>
+<span class="kw">*</span> 1964a43 Add welcome message
+<span class="kw">*</span> f6caa7b Add initial set of files.</code></pre>
+<p>Congratulations, you have just resolved your first merge conflict! This concludes the walk-through portion of this chapter, I will continue with more high-level explanations of Git features.</p>
+<h4 id="git-tag"><code>git tag</code></h4>
+<p>During your work, you will encounter special commits, which mark significant stations in your project's history, for example released versions, or the state of your code when it was installed somewhere, or handed off to your customer. You can do this easily with <a href="http://git-scm.com/docs/git-tag" target="_blank">Git tags</a>. Use <code>git tag somename</code> to put a tag on the current commit. This tag now permanently points to that commit, and you can (mostly) use it in Git commands just like commit hashes and branch names. For example, <code>git checkout v1.2</code> will check out the repository's state (if the tag exists) just like it was when you published version 1.2.</p>
+<h3 id="remote-repositories-and-github">Remote repositories and Github</h3>
+<p>An important aspect of your work may involve collaboration with others. With Git, this typically involves one or more remote repositories (short <strong>remotes</strong>), to which you <strong>push</strong> your modifications, and from which you <strong>fetch</strong> the modifications of others.</p>
+<p>One of several popular hosting platforms for Git repositories is <a href="www.github.com" target="_blank">Github</a>. Github offers repository hosting (public and private), project wiki pages, an issue tracker, social features, project web pages, etc. OpenFrameworks primarily uses Github to host its <a href="https://github.com/openframeworks" target="_blank">source code repositories</a> and the <a href="https://github.com/openframeworks/openFrameworks/issues" target="_blank">openFrameworks issue tracker</a>.</p>
+<p>Delving deeper into Github's features would lead too far here, so I'll just outline the typical operations you will deal with when interacting with Github repositories.</p>
+<h4 id="setting-up-and-remotes">Setting up and remotes</h4>
+<p>To start a project on Github, you have several options:</p>
+<ul>
+<li>If you want to have your own copy of the source code of a project that already lives online, you <a href="https://help.github.com/articles/fork-a-repo" target="_blank"><strong>fork</strong></a> that repository, including all history, ending up with a copy of it under your account.</li>
+<li>If you want to start a fresh project, you can <a href="https://help.github.com/articles/create-a-repo" target="_blank">create a new repository</a>. Github will display instructions for creating an empty local repository, or for connecting the new repository to an existing local one.</li>
+</ul>
+<p>If there's already a Git repository online somewhere, you can also <a href="https://help.github.com/articles/fork-a-repo#step-2-clone-your-fork" target="_blank">clone that repository</a> to get a copy of it on your local machine. This command is not limited to Github repositories, but can be used with all Git repositories, see the <a href="http://git-scm.com/docs/git-clone" target="_blank"><code>git clone</code> docs</a> for what you can do with <code>git clone</code>.</p>
+<p>The remote repositories are added as so-called <code>remotes</code> to your local repository's configuration (either automatically, or using <code>git remote add</code>). Think about it as a target identifier you supply to Git commands if you want to work with remote repositories. A remote is just an identifier that points to the Github (or other) URL where that repository lives.</p>
+<p>It is customary that a "parent" repository (i.e. the repository under your Github account) is called <code>origin</code>, and a repository you forked from is called <code>upstream</code>. You can get the list of current remotes using <a href="http://git-scm.com/docs/git-remote" target="_blank"><code>git remote</code></a> (add <code>-v</code> to see more info).</p>
+<h4 id="fetching-and-pulling">Fetching and pulling</h4>
+<p>Now that you have a remote repository configured, you can interact with it via <code>git push</code> and <code>git fetch</code>. As the names imply, <a href="http://git-scm.com/docs/git-fetch" target="_blank"><code>git fetch</code></a> fetches branches <em>from</em> a remote, so to get the latest version of the <code>master</code> branch of your Github repo, you'd do <code>git fetch origin master</code> (the syntax is <code>git fetch &lt;remote&gt; &lt;branchName&gt;</code>). If you wanted to obtain the newest modifications from your upstream remote, instead, you'd do <code>git fetch upstream master</code>. After this has finished, you'll have an additional branch called <code>origin/master</code> in your repository. You can check this with <code>git branch -a</code> - remote branches are listed with a <code>remotes/</code> prefix.</p>
+<p>To integrate the newest changes of this remote branch into your local <code>master</code>, you first do <code>git checkout master</code>, to be sure you're on the correct branch. Then, you should make sure that the state of the repository is in order, using <code>git status</code>. Next, you merge the remote branch, just like any other branch, using <code>git merge origin/master</code>. If all went well, you now have all the latest changes integrated into your <code>master</code> branch. If not, you'll probably have to fix some conflicts, as you already learned above.</p>
+<p>A commonly used shortcut for the subsequent operations <code>git fetch</code> and <code>git merge</code> is <a href="http://git-scm.com/docs/git-pull" target="_blank"><code>git pull</code></a> - you can use that instead if you like. Personally, I tend to use <code>fetch</code> and <code>merge</code> separately, as it gives you a bit more control over what happens.</p>
+<h4 id="pushing">Pushing</h4>
+<p>When you have commits or branches you want to share with others, you will push them onto your remote repository (e.g. on Github) using <a href="http://git-scm.com/docs/git-push" target="_blank"><code>git push</code></a>, for example with <code>git push origin awesome-feature</code>. If the branch does not exist yet, it gets created in the remote repository, else it gets updated. Others can then fetch the new branch from your remote repository to integrate into their repositories. Note that Git tags are only pushed to a remote if you supply the <code>--tags</code> flag.</p>
+<h4 id="pull-requests">Pull requests</h4>
+<p>A central feature of the Gitub collaboration model are <a href="https://help.github.com/articles/using-pull-requests" target="_blank"><strong>pull requests</strong></a>. Pull requests (or "PRs" for short) are ways to get your personal changes integrated into a repository you forked (it's important that you forked the repository into your own account instead of getting a copy by other means).</p>
+<p>Let's walk through this with an example: Say you found a bug in <a href="https://github.com/openframeworks/openFrameworks" target="_blank">openFrameworks</a>, and want to fix it. You have already forked openFrameworks to your account, created a local copy, and created a branch from <code>master</code>, called <code>fix-uglybug</code>, following our <a href="https://github.com/openframeworks/openFrameworks/blob/master/CONTRIBUTING.md" target="_blank">contribution guidelines</a> (ideally there's a bug report first where we discuss the proper way to fix the bug, but let's leave that part aside for now). To get the openFrameworks developers to review (and hopefully integrate) your bugfix, you push your branch to your remote (<code>git push origin fix-uglybug</code>), then switch to the freshly uploaded branch in the Github web interface, and click the green "compare, review, create a pull request" button. Following the instructions, you will be able to compare your branch to the target branch (typically openFrameworks' <code>master</code> branch), review the changes you made, type up a description of the pull request, and send it.</p>
+<p>A pull request enables an easy review of your changes and offers a discussion platform where the changes can be discussed, updated, and finally merged with one click, incorporating your changes into the upstream repository.</p>
+<h2 id="popularguiclients">Popular GUI clients</h2>
+<p>While working with the console commands offers the whole power of Git, it is sometimes more convenient to do at least part of the version control work in an application with a GUI. There are a couple of GUI applications available (depending on platform), and which one you use is often a matter of taste (and functionality of the individual programs), so I will just enumerate a couple of popular candidates. There's also a curated list of applications <a href="http://git-scm.com/downloads/guis" target="_blank">here</a>, and a pretty exhaustive list <a href="https://git.wiki.kernel.org/index.php/InterfacesFrontendsAndTools#Graphical_Interfaces" target="_blank">here</a>.</p>
+<ul>
+<li><a href="http://git-scm.com/docs/git-gui" target="_blank">git-gui</a> and <a href="http://git-scm.com/docs/gitk" target="_blank">gitk</a> are simple interfaces distributed with Git.</li>
+<li>Github offers clients for <a href="http://windows.github.com/" target="_blank">Windows</a> and <a href="http://mac.github.com/" target="_blank">Mac</a> which also offer integration with Github (not only Git).</li>
+<li><a href="https://wiki.gnome.org/Apps/Gitg" target="_blank">Gitg</a> is an open-source Git GUI for Linux.</li>
+<li><a href="http://www.git-tower.com/" target="_blank">Tower</a> is a Git GUI for Mac.</li>
+<li><a href="http://code.google.com/p/gitextensions/" target="_blank">GitExtensions</a> is an open-source Git GUI for Windows.</li>
+<li><a href="http://www.syntevo.com/smartgithg/" target="_blank">smartGit</a> runs on Windows, Mac, Linux.</li>
+</ul>
+<p>You should try a few of the options and use what you like best. Personally, I use a combination of console commands and Gitg on Linux. I use the GUI mainly for branch navigation, selecting and staging modifications, and committing, and the command line interface for working with remotes and more complicated operations.</p>
+<h2 id="conclusion">Conclusion</h2>
+<h3 id="tips-tricks">Tips &amp; tricks</h3>
+<p>This section contains a loose collection of tips and tricks around avoiding common pitfalls and working with Git:</p>
+<ul>
+<li>Collaborating with users using different operating systems can be tricky because MacOS/Linux and Windows use different characters to indicate a new line in files (<code>\n</code> and <code>\r\n</code>, respectively). You can configure Git according to <a href="https://help.github.com/articles/dealing-with-line-endings" target="_blank">existing guidelines</a> to avoid most problems.</li>
+<li>Some editors automatically remove trailing whitespace in files when saving. This can lead to commits containing unintentional modifications, which can make browsing a file's change history more confusing. Most relevant Git commands (e.g. <code>git diff</code>) accept the <code>-w</code> flag to ignore whitespace changes.</li>
+<li>When you realize that you want to add some more changes to your last commit, you can use the <code>--amend</code> flag when committing to add your staged changes to the last commit and adjust the commit message. This rewrites that commit, so only do that if you haven't pushed your commit yet!</li>
+<li>When you want to stage only part of the modifications in a file, you can use <code>git add -p &lt;file&gt;</code>. This switches to an interactive view where you can decide whether or not to add each change chunk.</li>
+<li>Git can be told to <a href="http://git-scm.com/book/en/Customizing-Git-Git-Configuration#Colors-in-Git" target="_blank">colorize the terminal output</a>, which is pretty helpful.</li>
+<li>Use <a href="http://git-scm.com/docs/git-rm" target="_blank"><code>git rm</code></a> and <a href="http://git-scm.com/docs/git-mv" target="_blank"><code>git mv</code></a> when removing or moving files, respectively. If you don't, the index does not get properly updated. You can run <code>git add -u</code> to update the index manually.</li>
+</ul>
+<h3 id="further-reading">Further reading</h3>
+<p>Now we are at the end of this quick introduction to Git, and while I have covered the most important things you need to know to get you up and running, I have only touched the surface of what Git can do.</p>
+<p>Probably the most important thing left now is to point out where you can learn more about Git, and where you can turn to when things don't work out as expected:</p>
+<ul>
+<li>Learning resources:
+<ul>
+<li><a href="http://gitref.org/" target="_blank">GitRef</a> is an awesome short primer on Git fundamentals.</li>
+<li>The <a href="[git-scm.com" target="_blank">Git home page</a> is probably the most unified but comprehensive online resource. Among others, it hosts:</li>
+<li>The free <a href="http://git-scm.com/book" target="_blank">ProGit book</a>, readable online. Awesome to get in-depth information about all things Git.</li>
+<li>The <a href="http://git-scm.com/docs" target="_blank">Git reference</a>, which has the documentation about all Git commands, their options and usage.</li>
+<li><a href="http://try.github.io/levels/1/challenges/1" target="_blank">Try Git</a> is an excellent interactive tutorial.</li>
+<li>Github offers a <a href="https://guides.github.com/activities/hello-world/" target="_blank">Hello World</a> introduction to Git and Github.</li>
+<li>There are some websites available which visualize/animate the workings of Git, see <a href="http://www.wei-wang.com/ExplainGitWithD3/" target="_blank">here</a>, <a href="http://pcottle.github.io/learnGitBranching/" target="_blank">here</a> or <a href="http://ndpsoftware.com/git-cheatsheet.html" target="_blank">here</a>.</li>
+<li>Gitignore patterns for a lot of different situations can be found e.g. <a href="http://github.com/github/gitignore" target="_blank">here</a> or at <a href="www.gitignore.io" target="_blank">gitignore.io</a>.</li>
+</ul></li>
+<li>Get help:
+<ul>
+<li><a href="https://www.google.com/" target="_blank">Google</a> the errors you get!</li>
+<li><a href="http://stackoverflow.com/" target="_blank">Stack Overflow</a> is an awesome resources to find answers to problems you encounter (probably someone had the same problem before), and to ask questions yourself! There's even <a href="http://stackoverflow.com/questions/tagged/git" target="_blank">a separate tag</a> for Git.</li>
+<li>If you're not successful with Stackoverflow, the openFrameworks forum has a separate <a href="http://forum.openframeworks.cc/category/revision-control" target="_blank">category called "revision control"</a> for questions around this topic.</li>
+</ul></li>
+</ul>
+<p>Finally, I hope that this chapter made you realize how useful it can be to integrate version control into your creative coding workflow, and that you will one day soon look fondly back on the days of zip files called <code>Awesome_project_really_final.zip</code>.</p>
+<div class="footer">
+<div id="prev_chapter"><a href="ios.html">&lt; ofxiOS</a></div>
+<div id="next_chapter"><a href="ofSketch.html">ofSketch &gt;</a></div>
+</div>
+<div id="help"><i>please note that this book / chapter is a work in progress.  Feel free to suggest edits / corrections <a href="https://github.com/openframeworks/ofbook" target="_blank">here</a></i></div>
+</div>
+</div>
+</body>
+</html>
